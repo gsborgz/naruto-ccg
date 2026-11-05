@@ -1,0 +1,33 @@
+# Dependências e build
+node_modules/
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# Ambiente: só o .env.example vai para o repositório
+.env
+.env*.local
+.vercel/
+
+# Imagens originais das cartas (PNG, ~1,7 GB): ficam só na máquina de quem importa coleções.
+# O app usa as versões otimizadas de public/cards, geradas por `npm run cards:images` (essas vão no Git).
+/cards/
+
+# Ferramentas internas de importação de coleções (scripts de dados, marca d'água, otimização de imagens,
+# extensão do slideshare): ficam só na máquina local, fora do repositório.
+/scripts/
+/tools/
+
+# Logs e lixo de sistema/ferramentas
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/
+coverage/

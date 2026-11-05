@@ -1,0 +1,33 @@
+{
+  "name": "naruto-ccg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Versão digital do Naruto CCG para jogar entre amigos no navegador",
+  "scripts": {
+    "dev": "npm run services:up && next dev",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\"",
+    "cards:images": "node scripts/optimize-card-images.mjs",
+    "services:up": "docker compose up -d",
+    "services:stop": "docker compose stop",
+    "services:down": "docker compose down"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.41.0",
+    "next": "^15.4.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "postcss": "^8.5.6",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.11",
+    "typescript": "5.8.3"
+  }
+}

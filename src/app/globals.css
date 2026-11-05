@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #12141a;
+  --color-surface: #1b1e27;
+  --color-surface-2: #252935;
+  --color-border: #333847;
+  --color-text: #eceef3;
+  --color-muted: #9aa1b2;
+  --color-accent: #f28a1b;
+  --color-accent-strong: #ff9d33;
+  --color-ok: #4cc38a;
+  --color-danger: #ef5b5b;
+
+  --color-el-lightning: #8b5cf6;
+  --color-el-fire: #ef6a2c;
+  --color-el-wind: #2b9fd1;
+  --color-el-water: #27b3b8;
+  --color-el-earth: #a07a45;
+  --color-el-void: #4a5675;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  summary,
+  select,
+  label[for],
+  input[type='checkbox'],
+  input[type='radio'],
+  input[type='submit'],
+  input[type='button'] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Barras de rolagem discretas (as colunas do montador rolam de forma independente). */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
