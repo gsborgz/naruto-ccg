@@ -25,6 +25,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Beginning of the Chunin Exam]",
       "When this Ninja is put in play, both players must discard in-play Ninjas until each player's total number of \"Genin\" and no Rank Ninjas is 3 or less.",
     ],
+    flavor: "\"Are there any in your squads you'd recommend? Who are ready for the exams despite their inexperience?\"",
     image: "s02-n-044",
   },
   {
@@ -45,6 +46,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Information Collection]",
       "When this Ninja is put in play, look at the top card of your Deck and return it to the top or bottom of the Deck.",
     ],
+    flavor: "\"These cards have been Chakra-encoded with everything I've learned over the past four years.\"",
     image: "s02-n-045",
   },
   {
@@ -65,6 +67,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Misplaced Anger]",
       "Valid: When there are no cards in your hand, this Ninja's Team and a Team Battling against this Ninja cannot perform a Mental Power Battle.",
     ],
+    flavor: "\"I don't quit and I don't run!\"",
     image: "s02-n-046",
   },
   {
@@ -85,6 +88,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[No. 1 Rookie]",
       "If the Blocker has 2 or more Teams, the Blocker must block this Ninja's Team, if possible.",
     ],
+    flavor: "\"You've heard of the Uchiha Clan, yet you're challenging me?\"",
     image: "s02-n-047",
   },
   {
@@ -102,6 +106,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 0, support: 0 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"Okay, focus, Sakura, focus. This is where you show your stuff.\"",
     image: "s02-n-048",
   },
   {
@@ -119,6 +124,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 2, support: 1 },
     attributes: ["Genjutsu"],
     text: [],
+    flavor: "\"Yeah, for us, but maybe not for them.\"",
     image: "s02-n-049",
   },
   {
@@ -136,6 +142,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 2, support: 1 },
     attributes: ["Genjutsu"],
     text: [],
+    flavor: "\"It looks like the exams are going to be fun this year..\"",
     image: "s02-n-050",
   },
   {
@@ -153,6 +160,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 2, support: 1 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"We're the best of the best, and you, my friend, are history.\"",
     image: "s02-n-051",
   },
   {
@@ -173,6 +181,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[First Proctor]",
       "When this Ninja is Battling against the opponent as the Attacker, this Ninja's Team and the opponent's Team perform a Mental Power Battle.",
     ],
+    flavor: "\"Anyone fool enough to be caught cheating by the sentinels doesn't deserve to be here.\"",
     image: "s02-n-052",
   },
   {
@@ -193,6 +202,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Master?]",
       "When this Ninja is put in play, you can move 1 Jutsu card with \"Requirements: 'Taijutsu' Combat Attribute\" from your Chakra area to your hand.",
     ],
+    flavor: "\"All right then, please come out, Guy Sensei.\"",
     image: "s02-n-053",
   },
   {
@@ -213,6 +223,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Puppet]",
       "Valid: This Ninja cannot be sent out in a Team without a Ninja with a \"Manipulation\" Combat Attribute.",
     ],
+    flavor: "\"We go with you to make sure you're not up to anything.\"",
     image: "s02-n-054",
   },
   {
@@ -233,6 +244,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Sonic Impact]",
       "When this Ninja is the Head Ninja, your opponent's Head Ninja Battling against this Ninja receives 1 Damage after the Showdown.",
     ],
+    flavor: "\"If you insult the Sound shinobi, you better be ready for the consequences.\"",
     image: "s02-n-055",
   },
   {
@@ -253,6 +265,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Wind Pressure]",
       "When your opponent's Ninja with a \"Weapon\" Combat Attribute is Battling against this Ninja, it gets -1/-1 during this turn.",
     ],
+    flavor: "\"You heard what he said about the Hidden Sound Village? He called us little.\"",
     image: "s02-n-056",
   },
   {
@@ -270,6 +283,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 0, support: 1 },
     attributes: ["Sound"],
     text: [],
+    flavor: "\"I say we teach this guy some manners.\"",
     image: "s02-n-057",
   },
   {
@@ -290,6 +304,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Auto Guard]",
       "Valid: If this Ninja receives Damage, reduce the Damage by 1. Then, discard 1 of your in-play Ninjas (except this Ninja).",
     ],
+    flavor: "\"Shut up! ... or I'll kill you!\"",
     image: "s02-n-058",
   },
   {
@@ -310,6 +325,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Puppet Master]",
       "Valid: 1 \"Puppet\" Ninja in this Ninja's Team is not included in the 3 Ninjas per Team limit.",
     ],
+    flavor: "\"You're annoying ... all of you.\"",
     image: "s02-n-059",
   },
   {
@@ -330,6 +346,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Violent Temper]",
       "If 1 of your opponent's Ninjas is injured by the Attack of this Ninja's Team, your opponent must select 1 of the cards in their hand and discard it.",
     ],
+    flavor: "\"Fine ... I'm not involved in any of this, okay?\"",
     image: "s02-n-060",
   },
   {
@@ -350,6 +367,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Strength in a Crisis]",
       "Valid: If this Ninja is blocked when it Attacks, it gets +2/+0 during this turn.",
     ],
+    flavor: "\"Eat this!\"",
     image: "s02-n-061",
   },
   {
@@ -370,6 +388,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Analysis of Competence]",
       "Valid: When this Ninja is Battling against a Team of only \"Genin\" Ninjas, it gets +1/+0 during this turn. When this Ninja is Battling against a Team which includes \"Jonin\" or higher Rank Ninjas, it gets -1/+0 during this turn.",
     ],
+    flavor: "\"Gotta hand it to you, you're quicker than the last one.\"",
     image: "s02-n-062",
   },
   {
@@ -390,6 +409,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Reward]",
       "When this Ninja is put in play, heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"Welllll, I was just thinking ... maybe after you clean this all up, I could take you out for some ramen. The good stuff.\"",
     image: "s02-n-063",
   },
   {
@@ -410,6 +430,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Early Settlement]",
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, it gets 1 Battle Reward. When it is Defeated or Completely Defeated, your opponent gets 1 Battle Reward.",
     ],
+    flavor: "\"How about we put an end to this now?\"",
     image: "s02-n-064",
   },
   {
@@ -430,6 +451,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Class Paper]",
       "When this Ninja is put in play, show the top card of your Deck to your opponent. If it is a Ninja, place it in your hand.",
     ],
+    flavor: "\"I'm Moegi, the sassiest Kunoichi in preschool! Check me out!\"",
     image: "s02-n-065",
   },
   {
@@ -450,6 +472,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Feature Article]",
       "When this Ninja is put in play, show the top card of your Deck to your opponent. If it is a Jutsu card, place it in your hand.",
     ],
+    flavor: "\"Call me Udon!\"",
     image: "s02-n-066",
   },
   {
@@ -470,6 +493,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Fragment of Power]",
       "This Ninja can be treated as Chakra with 2 \"Lightning\" symbols when placed in your Chakra area.",
     ],
+    flavor: "\"If you think I'm gonna end up a pile of snake waste in the woods, you're crazy!\"",
     image: "s02-n-067",
   },
   {
@@ -490,6 +514,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Power of the Curse Mark]",
       "During the Exchange of Jutsu, you can move 1 of your Battle Rewards to its original owner's Chakra area. Then, this Ninja gets +2/+0 during this turn.",
     ],
+    flavor: "\"In fact, I've never felt better.\"",
     image: "s02-n-068",
   },
   {
@@ -510,6 +535,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Determination]",
       "You can injure this Ninja during the Exchange of Jutsu to give it +2/+2 during this turn.",
     ],
+    flavor: "\"Okay ... No more caving ...\"",
     image: "s02-n-069",
   },
   {
@@ -530,6 +556,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Formation!]",
       "Valid: This Ninja gets +1/+1 when \"Shikamaru Nara\" and \"Choji Akimichi\" are in this Ninja's Team.",
     ],
+    flavor: "\"Formation Ino!\"",
     image: "s02-n-070",
   },
   {
@@ -550,6 +577,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Formation!]",
       "Valid: This Ninja gets +0/+2 when \"Ino Yamanaka\" and \"Choji Akimichi\" are in this Ninja's Team.",
     ],
+    flavor: "\"Shika!\"",
     image: "s02-n-071",
   },
   {
@@ -570,6 +598,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Formation!]",
       "Valid: This Ninja gets +2/+0 when \"Ino Yamanaka\" and \"Shikamaru Nara\" are in this Ninja's Team.",
     ],
+    flavor: "\"Cho!\"",
     image: "s02-n-072",
   },
   {
@@ -590,6 +619,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Report]",
       "Every time your opponent gets a Battle Reward, you can see the Battle Reward before it is placed in their Battle Reward area.",
     ],
+    flavor: "\"There is something I must tell you right away ...\"",
     image: "s02-n-073",
   },
   {
@@ -610,6 +640,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Discovery]",
       "When this Ninja is put in play, move 1 of your cards in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"That's no way to treat a buddha.\"",
     image: "s02-n-074",
   },
   {
@@ -631,6 +662,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Valid: This Ninja cannot be the user of a Jutsu card.",
       "Valid: When this Ninja is discarded after being in play, it is sent to the bottom of your Deck instead of the Discard Pile.",
     ],
+    flavor: "\"Hssss\"",
     image: "s02-n-075",
   },
   {
@@ -648,6 +680,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 0, support: 0 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"That was almost too easy!\"",
     image: "s02-n-076",
   },
   {
@@ -665,6 +698,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 1, support: 0 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"The nerve of those brats from the Village of Sand ...\"",
     image: "s02-n-077",
   },
   {
@@ -682,6 +716,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     injured: { combat: 0, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"How foolhardy ...\"",
     image: "s02-n-078",
   },
   {
@@ -702,6 +737,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Triune Shadow]",
       "When this Ninja is the Head Ninja, the Back Ninjas of its Team cannot receive any Damage in the Showdown.",
     ],
+    flavor: "\"I'm so glad there's time for a little taste of payback!\"",
     image: "s02-n-079",
   },
   {
@@ -722,6 +758,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Endless Genjutsu]",
       "When this Ninja is a Back Ninja and the Head Ninja of its Team receives 2 Damage in the Showdown, reduce the Damage by 1.",
     ],
+    flavor: "\"The night is young ...! Heh heh heh ...\"",
     image: "s02-n-080",
   },
   {
@@ -742,6 +779,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Endless Genjutsu]",
       "When this Ninja is a Back Ninja and the Head Ninja of its Team receives 2 Damage in the Showdown, reduce the Damage by 1.",
     ],
+    flavor: "\"I wonder how long they'll last ...\"",
     image: "s02-n-081",
   },
   {
@@ -762,6 +800,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Faceless Expert]",
       "Valid: This Ninja can be put in play even if there is a Ninja with the same name in your Village.",
     ],
+    flavor: "\"Fancy meeting you here.\"",
     image: "s02-n-082",
   },
   {
@@ -782,6 +821,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Forbidden Jutsu]",
       "When this Ninja becomes the user of a Jutsu card, \"Water\" symbols of the Jutsu cost can be paid by \"Lightning\" symbols instead.",
     ],
+    flavor: "\"Now then, let me just borrow your left hand.\"",
     image: "s02-n-083",
   },
   {
@@ -802,6 +842,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "[Reconnaissance]",
       "Valid: Move this Ninja to the bottom of your Deck at the beginning of your turn. This effect cannot be negated.",
     ],
+    flavor: "\"Yes, you'll do nicely.\"",
     image: "s02-n-084",
   },
   // ── JUTSU ──
@@ -818,6 +859,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target cannot add additional Power during this turn.",
     ],
+    flavor: "\"Dancing ... Leaf Shadow!\"",
     image: "s02-j-043",
   },
   {
@@ -833,6 +875,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: When the target is played and moved to the Chakra area, it is immediately moved back to its original owner's hand.",
     ],
+    flavor: "\"A'right, that's enough ... Lee!\"",
     image: "s02-j-044",
   },
   {
@@ -848,6 +891,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your Stand-By Ninjas",
       "Effect: Place the target as a Back Ninja in the user's Team. The number of Ninjas in the Team must be 2 when the target is placed.",
     ],
+    flavor: "\"He's got the biggest eyebrows yet! They're almost alive!\"",
     image: "s02-j-045",
   },
   {
@@ -864,6 +908,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's \"Genin\" Ninjas",
       "Effect: Move the target back to its original owner's hand. However, your opponent can negate this effect by discarding 1 card from their hand.",
     ],
+    flavor: "\"That's how you'll end up if you take the chunin exams.\"",
     image: "s02-j-046",
   },
   {
@@ -880,6 +925,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: All Teams with 0 or less Team Mental Power",
       "Effect: The target's Ninjas become Stand-By Ninjas.",
     ],
+    flavor: "\"Why don't you just give up now, before you get hurt?\"",
     image: "s02-j-047",
   },
   {
@@ -896,6 +942,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Jutsu card being played whose target is \"User\"",
       "Effect: Negate the target. Then, apply the target's effect to the user of this Jutsu card.",
     ],
+    flavor: "\"Genjutsu or Ninjutsu ... whatever 'magic' he's using ... I'll see it now!\"",
     image: "s02-j-048",
   },
   {
@@ -911,6 +958,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 and \"Clone status\" during this turn. X = the number of your opponent's in-play Ninjas.",
     ],
+    flavor: "\"Shadow Clone Jutsu ...... Kakashi-style!\"",
     image: "s02-j-049",
   },
   {
@@ -926,6 +974,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target gets \"Mental Power\" +2 during this turn.",
     ],
+    flavor: "\"Maybe I can help you kids out a little.\"",
     image: "s02-j-050",
   },
   {
@@ -941,6 +990,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets +1/+1 during this turn. OR, heal the target.",
     ],
+    flavor: "\"They can pierce deeply, but rarely kill unless they target a vital organ ... not in the neck. These senbon are modified from needles used for medical treatments like acupuncture.\"",
     image: "s02-j-051",
   },
   {
@@ -957,6 +1007,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin for each target; if it's heads, remove the target from the Team. The removed target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Thanks for the present. Hope you don't mind if I return it.\"",
     image: "s02-j-052",
   },
   {
@@ -973,6 +1024,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target gets -3/-3 during this turn.",
     ],
+    flavor: "\"Hang on, I saw it all - He dodged the attack. How did that happen?\"",
     image: "s02-j-053",
   },
   {
@@ -988,6 +1040,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Jutsu card being played by your opponent",
       "Effect: Negate the target and move it to your opponent's Chakra area. However, your opponent can negate this effect by discarding 2 cards in their Chakra area.",
     ],
+    flavor: "\"Wind Scythe Jutsu!\"",
     image: "s02-j-054",
   },
   {
@@ -1003,6 +1056,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute",
       "Effect: Search for 1 \"Puppet\" Ninja of your choice in your Deck and place it as a Back Ninja in the user's Team. Then, shuffle your Deck. The number of Ninjas in the Team must be 2 when the target is placed.",
     ],
+    flavor: "\"They haven't even noticed that there's one more sentinel than there used to be ...\"",
     image: "s02-j-055",
   },
   {
@@ -1019,6 +1073,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target gets \"Mental Power\" +X during this turn. X = the number of cards in your opponent's hand.",
     ],
+    flavor: "\"The opening of the third eye!\"",
     image: "s02-j-056",
   },
   {
@@ -1035,6 +1090,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target cannot receive any Damage during this turn.",
     ],
+    flavor: "\"Only Gaara has ever mastered the art. He draws the sand within the sphere of his own massive chakra ...\"",
     image: "s02-j-057",
   },
   {
@@ -1050,6 +1106,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 healthy Ninja",
       "Effect: Apply the target's injured status Combat value during this turn.",
     ],
+    flavor: "\"You're a long way from home and you're way out of your league.\"",
     image: "s02-j-058",
   },
   {
@@ -1065,6 +1122,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target gets +0/-1 during this turn.",
     ],
+    flavor: "\"Makibishi spikes.\"",
     image: "s02-j-059",
   },
   {
@@ -1081,6 +1139,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User's Team and the Team Battling against the user",
       "Effect: The target performs a Mental Power Battle during this turn.",
     ],
+    flavor: "\"Lee! When you can see it, adjust your headband.\"",
     image: "s02-j-060",
   },
   {
@@ -1096,6 +1155,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja in your Chakra area with the same name as the user",
       "Effect: Place the target as the Head Ninja in the user's Team. The target can be put in play even if there is a Ninja with the same name in your Village. Discard the target at the end of this turn.",
     ],
+    flavor: "\"Those aren't just illusions, they're solid clones! He's mastered an extremely advanced Jutsu!!\"",
     image: "s02-j-061",
   },
   {
@@ -1112,6 +1172,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target's effect is negated during this turn.",
     ],
+    flavor: "\"Just a little longer and it'll be all done.\"",
     image: "s02-j-062",
   },
   {
@@ -1128,6 +1189,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The user gets the same effect text as the target during this turn.",
     ],
+    flavor: "\"Let's finish this ... now!\"",
     image: "s02-j-063",
   },
   {
@@ -1143,6 +1205,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: (1) User's Team, (2) Every Back Ninja Battling against the user",
       "Effect: If target (1) wins a Victory (excluding an Outstanding Victory) during this turn, give 1 Damage to target (2).",
     ],
+    flavor: "\"Naruto ... isn't ... like that!\"",
     image: "s02-j-064",
   },
   {
@@ -1158,6 +1221,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Team",
       "Effect: The target skips the Showdown this turn.",
     ],
+    flavor: "\"I won't let you ...\"",
     image: "s02-j-065",
   },
   {
@@ -1173,6 +1237,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target cannot be the target of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Fake rocks? ... What's up with that?\"",
     image: "s02-j-066",
   },
   {
@@ -1188,6 +1253,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the target does not become the user of a Jutsu card during this turn, the target receives 1 Damage at the end of the Exchange of Jutsu.",
     ],
+    flavor: "\"This paper bomb explodes after a certain amount of time.\"",
     image: "s02-j-067",
   },
   {
@@ -1203,6 +1269,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: (1) 1 Jutsu card in your Chakra area, (2) User",
       "Effect: Discard target (1) and pay its Jutsu cost. Then, apply the effect of target (1) to target (2). However, the \"Requirements\" and \"Target\" of target (1) must be applicable.",
     ],
+    flavor: "\"Focus my chakra ...\"",
     image: "s02-j-068",
   },
   {
@@ -1219,6 +1286,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every \"Chunin\" or lower Rank Ninja in a Team",
       "Effect: The target's Power cannot be added to the Team Power during this turn.",
     ],
+    flavor: "\"Th-this looks like ... the Art of Paralysis!\"",
     image: "s02-j-069",
   },
   {
@@ -1234,6 +1302,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: (1) User, (2) 1 of your Teams being sent out to Battle",
       "Effect: Place target (1) as a Back Ninja in target (2).",
     ],
+    flavor: "\"Ohh ...\"",
     image: "s02-j-070",
   },
   {
@@ -1249,6 +1318,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin for each target; if it's heads, give 1 Damage to the Ninja.",
     ],
+    flavor: "\"Fire Style! Phoenix Flower Jutsu!\"",
     image: "s02-j-071",
   },
   {
@@ -1265,6 +1335,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Team Battling against the user",
       "Effect: When the user's Team wins a Victory or Outstanding Victory during this turn, you can change the order of the target's Ninjas as you desire before Damage is applied.",
     ],
+    flavor: "\"Incredible! A Sharingan Windmill Triple Attack!\"",
     image: "s02-j-072",
   },
   {
@@ -1281,6 +1352,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of the Ninjas Battling against the user",
       "Effect: Give 2 Damage to the target. When the target is \"Jonin\" or higher Rank, give 1 Damage.",
     ],
+    flavor: "\"Fire Style: Dragon Flame Jutsu!\"",
     image: "s02-j-073",
   },
   {
@@ -1296,6 +1368,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Requirements: \"Jonin\" or higher Rank",
       "Effect: Search for 1 \"Snake\" Ninja of your choice in your Deck and place it as the Head Ninja in the user's Team. Then, shuffle your Deck.",
     ],
+    flavor: "\"Summoning Jutsu!\"",
     image: "s02-j-074",
   },
   {
@@ -1311,6 +1384,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin twice; if you get heads at least once, give 1 Damage to the target.",
     ],
+    flavor: "\"You're completely surrounded. No gaps ... No blind spots.\"",
     image: "s02-j-075",
   },
   {
@@ -1327,6 +1401,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Stand-By Ninjas",
       "Effect: Place the target as the Head Ninja in the Team Battling against the user. (If the user is a Non-Battling Ninja, the target becomes a new Team of 1 Ninja.)",
     ],
+    flavor: "\"Yah! Striking Shadow Snake!\"",
     image: "s02-j-076",
   },
   {
@@ -1343,6 +1418,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User and 1 Ninja Battling against the user",
       "Effect: Discard the target.",
     ],
+    flavor: "\"Right ... It's over. You and I are going to die here ...\"",
     image: "s02-j-077",
   },
   {
@@ -1359,6 +1435,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. OR, the Power of the target becomes 0/0 during this turn.",
     ],
+    flavor: "\"Uhn! ... I can't move ...\"",
     image: "s02-j-078",
   },
   {
@@ -1375,6 +1452,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja",
       "Effect: Move the target back to its original owner's hand.",
     ],
+    flavor: "\"Yaaaaah!!\"",
     image: "s02-j-079",
   },
   {
@@ -1391,6 +1469,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Non-Battling Teams",
       "Effect: The target cannot win any Battle Rewards during this turn.",
     ],
+    flavor: "\"We've been very, very cautiously ...... running around in circles!\"",
     image: "s02-j-080",
   },
   {
@@ -1407,6 +1486,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Place a Ninja Blade coin symbolizing a \"Mist\" coin on the target. The target gets \"Clone status\" as long as it has a \"Mist\" coin on it. In addition, the target can reduce its Damage by 1 by removing the coin.",
     ],
+    flavor: "\"Heh heh ... You're all trapped like rats!\"",
     image: "s02-j-081",
   },
   {
@@ -1422,6 +1502,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: Select 1 of your Ninjas in your hand and send it to your Chakra area. The target's Power is changed to the same value as the selected Ninja during this turn.",
     ],
+    flavor: "\"There's nothing where their faces used to be, like they melted or something.\"",
     image: "s02-j-082",
   },
   {
@@ -1438,6 +1519,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target can use Jutsu cards with \"Requirements: 'Mind' Combat Attribute\", \"Requirements: 'Shadow' Combat Attribute\", and \"Requirements: 'Food' Combat Attribute\" without paying their Jutsu costs during this turn.",
     ],
+    flavor: "\"Okay, Team Ino, let's show these guys who's boss.\"",
     image: "s02-j-083",
   },
   {
@@ -1454,6 +1536,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Make the target your Battle Reward. However, your opponent can negate this effect by discarding 2 of their Battle Rewards to their original owner's Discard Pile.",
     ],
+    flavor: "\"I just gave him a little parting gift.\"",
     image: "s02-j-084",
   },
   // ── MISSION ──
@@ -1470,6 +1553,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Move your Turn Marker up by 1. You cannot move the Turn Marker up during your End Phase of the turn you apply this effect.",
     ],
+    flavor: "\"Stand up, idiot!\"",
     image: "s02-m-043",
   },
   {
@@ -1486,6 +1570,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Client",
       "Effect: Discard the target.",
     ],
+    flavor: "\"No-o-o-o!\"",
     image: "s02-m-044",
   },
   {
@@ -1502,6 +1587,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: You can discard 3 cards in your Chakra area at the beginning of your turn. Then, draw 1 card.",
     ],
+    flavor: "\"What is this energy?\"",
     image: "s02-m-045",
   },
   {
@@ -1518,6 +1604,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: All \"Genin\" Ninjas can neither be included in any Teams nor be sent out to Battle during the turn they are put in play.",
     ],
+    flavor: "\"It's too soon! They need more experience before they are tested.\"",
     image: "s02-m-046",
   },
   {
@@ -1535,6 +1622,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja of \"Chunin\" or higher Rank being deployed",
       "Effect: Move the target back to its original owner's hand. Your opponent cannot deploy a Ninja with the same name as the target during this turn.",
     ],
+    flavor: "\"Iruka needs to hear this. He needs to realize that they are not his students anymore. They are mine.\"",
     image: "s02-m-047",
   },
   {
@@ -1551,6 +1639,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: All Teams of only 1 \"Chunin\" or lower Rank Ninja cannot win any Battle Rewards.",
     ],
+    flavor: "\"You see, only groups of three are allowed to apply for and take the exam.\"",
     image: "s02-m-048",
   },
   {
@@ -1567,6 +1656,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja with the Entrance cost X",
       "Effect: Discard X number of your Battle Rewards to the original owner's Discard Pile and injure the target. (The minimum value of X is 1.)",
     ],
+    flavor: "\"They're from the Village Hidden in the Sound.\"",
     image: "s02-m-049",
   },
   {
@@ -1583,6 +1673,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: (1) 1 of your in-play Ninjas, (2) 1 of your injured Ninjas, except (1)",
       "Effect: Send target (1) to your Chakra area to heal target (2).",
     ],
+    flavor: "\"Well done, Haku.\"",
     image: "s02-m-050",
   },
   {
@@ -1599,6 +1690,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (3)",
       "Effect: Draw 1 card every time your opponent deploys a Ninja. This effect cannot be duplicated.",
     ],
+    flavor: "\"So this is the Chunin exam, huh? ...... It's a freak show.\"",
     image: "s02-m-051",
   },
   {
@@ -1615,6 +1707,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: (1) 1 of your \"Chunin\" or higher Rank Ninjas with a \"Water\" symbol, (2) 1 of your opponent's Ninjas or Clients",
       "Effect: Discard targets (1) and (2).",
     ],
+    flavor: "\"He ... he's the d-devil!\"",
     image: "s02-m-052",
   },
   {
@@ -1630,6 +1723,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: All Teams perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\"Not a written test, no waaaay!!\"",
     image: "s02-m-053",
   },
   {
@@ -1645,6 +1739,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Teams with 2 or less Team Mental Power cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"Five strikes and you're out. You just failed the test.\"",
     image: "s02-m-054",
   },
   {
@@ -1661,6 +1756,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (3)",
       "Effect: The Attacker may only send out X Teams. X = the number of Ninja Blade coins on this card.",
     ],
+    flavor: "\"Kankuro ... back off. You're an embarrassment to our village.\"",
     image: "s02-m-055",
   },
   {
@@ -1677,6 +1773,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target's Team cannot be blocked by a Team which includes a Ninja with a symbol different from the target.",
     ],
+    flavor: "\"You don't know what's going on, do you? We have permission.\"",
     image: "s02-m-056",
   },
   {
@@ -1692,6 +1789,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Select 1 symbol. Jutsu cards with the selected symbol cannot be used during this turn.",
     ],
+    flavor: "\"Lee! ... That last technique is forbidden, you know that!\"",
     image: "s02-m-057",
   },
   {
@@ -1708,6 +1806,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Both players' in-play \"Permanent\" Mission cards",
       "Effect: Send the target to their original owner's Chakra area.",
     ],
+    flavor: "\"A weirdo?\"",
     image: "s02-m-058",
   },
   {
@@ -1724,6 +1823,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (2)",
       "Effect: All Teams perform a Mental Power Battle.",
     ],
+    flavor: "\"Now, if we are ready we'll proceed to the first stage of the Chunin exam.\"",
     image: "s02-m-059",
   },
   {
@@ -1740,6 +1840,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (2)",
       "Effect: All Ninjas are deployed in injured status.",
     ],
+    flavor: "\"Man, what a mess. Scars and puncture wounds. Burn marks ... What he must have endured.\"",
     image: "s02-m-060",
   },
   {
@@ -1756,6 +1857,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: All \"Ninja Academy Students\" Ninjas get +0/+1.",
     ],
+    flavor: "\"When we're all together ... We are the Konohamaru Ninja Squad!!\"",
     image: "s02-m-061",
   },
   {
@@ -1772,6 +1874,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (1)",
       "Effect: Neither player can draw 1 card during their Start Phase.",
     ],
+    flavor: "\"Believe it, this is NO BIG DEAL!\"",
     image: "s02-m-062",
   },
   {
@@ -1787,6 +1890,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: You may deploy an additional Ninja this turn if you have fewer in-play Ninjas than your opponent after deploying 1 Ninja.",
     ],
+    flavor: "\"Here we all are, the nine rookies. This is gonna be fun.\"",
     image: "s02-m-063",
   },
   {
@@ -1802,6 +1906,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Both players move 1 \"Genin\" Ninja of their choice to the bottom of its original owner's Deck for every 3 \"Genin\" Ninjas in their Village.",
     ],
+    flavor: "\"That way at least ONE of you will end up tied to a post.\"",
     image: "s02-m-064",
   },
   {
@@ -1818,6 +1923,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja in your Discard Pile",
       "Effect: Send the target to your Chakra area.",
     ],
+    flavor: "\"I'm not going to lose out to Sasuke!\"",
     image: "s02-m-065",
   },
   {
@@ -1833,6 +1939,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Each player sends 1 or 2 cards (their choice) from the top of their Deck to their original owner's Chakra area.",
     ],
+    flavor: "\"I got rid of all your weeds! Pretty cool, huh?\"",
     image: "s02-m-066",
   },
   {
@@ -1849,6 +1956,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: You can discard this card and your \"Earth Scroll\" Mission card at the beginning of your turn (both cards must be in play when you discard them). Then, get 2 Battle Rewards.",
     ],
+    flavor: "\"Lucky us ... We needed the Heaven Scroll.\"",
     image: "s02-m-067",
   },
   {
@@ -1865,6 +1973,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: All your Ninjas",
       "Effect: When the target's Team wins a Battle Reward during this turn, heal all the Ninjas in the Team.",
     ],
+    flavor: "\"If qualities of heaven are your desire, acquire wisdom and knowledge to take your mind higher. If earthly qualities are what you lack, train your body in the fields and prepare to attack.\"",
     image: "s02-m-068",
   },
   {
@@ -1879,8 +1988,9 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     handCost: 1,
     text: [
       "Permanent",
-      "Effect: You may discard 2 cards in your Chakra area with same symbol at the beginning of your turn. Then, your opponent discards 1 card in their hand at random and draws 1 card.",
+      "Effect: You may discard 2 cards in your Chakra area with the same symbol at the beginning of your turn. Then, your opponent discards 1 card in their hand at random and draws 1 card.",
     ],
+    flavor: "\"Nothing makes dumplings go down like a little sweet red bean soup.\"",
     image: "s02-m-069",
   },
   {
@@ -1896,6 +2006,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Both players charge all cards in their hand to their Chakra area and then draw cards until they have 3 cards in their hand.",
     ],
+    flavor: "\"You ready for the second test? Good! Then let's go!\"",
     image: "s02-m-070",
   },
   {
@@ -1913,6 +2024,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets +1/+1. The target's Team cannot win any Battle Rewards. When this card is put in play, place a Ninja Blade coin symbolizing this effect on the target.",
     ],
+    flavor: "\"Don't worry. I'm all right. It's only the power flowing through me.\"",
     image: "s02-m-071",
   },
   {
@@ -1928,6 +2040,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Discard all cards in your hand (unless there are none). Then, search for 1 Ninja with \"Sharingan Eye\" in your Deck and show it to your opponent. Then, place it in your hand and shuffle your Deck.",
     ],
+    flavor: "\"If I haven't the courage to face this demon how can I ever hope to face him?\"",
     image: "s02-m-072",
   },
   {
@@ -1944,6 +2057,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (2)",
       "Effect: If a player sends out at least 1 Team to Battle, give 1 Damage to 1 of their Ninjas at the end of the turn. This effect cannot be duplicated.",
     ],
+    flavor: "\"The second part of the test has begun!\"",
     image: "s02-m-073",
   },
   {
@@ -1960,6 +2074,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: (1) X number of your Battle Rewards, (2) X number of your Ninjas",
       "Effect: Discard target (1) to the original owner's Discard Pile and heal target (2).",
     ],
+    flavor: "\"We'll strike a deal. I give you this scroll and you let us go.\"",
     image: "s02-m-074",
   },
   {
@@ -1975,6 +2090,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Select 1 symbol. All cards in your Chakra area are considered to have the selected symbol in addition to their original symbols during this turn.",
     ],
+    flavor: "\"Something about this Kabuto just ... bugs me!\"",
     image: "s02-m-075",
   },
   {
@@ -1992,6 +2108,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja",
       "Effect: The target cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"Looking in her eyes ... I saw the moment of my own death ... !\"",
     image: "s02-m-076",
   },
   {
@@ -2008,6 +2125,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Counter",
       "Effect: Your opponent cannot include Ninjas with different symbols in the same Team during this turn.",
     ],
+    flavor: "\"The question will be: 'When does a ninja strike?' And the response is ...\"",
     image: "s02-m-077",
   },
   {
@@ -2024,6 +2142,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Battle Rewards",
       "Effect: Flip a Ninja Blade coin; if it's heads, discard the target. If it's tails, your opponent draws 1 card.",
     ],
+    flavor: "\"Sorry. This is one test you fail.\"",
     image: "s02-m-078",
   },
   {
@@ -2040,6 +2159,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: You win the game when you win a total of 9 Battle Rewards instead of 10. This effect cannot be applied to your opponent. This card cannot be played if you have 5 or more Battle Rewards.",
     ],
+    flavor: "\"In just 97 minutes ... This is unprecedented!\"",
     image: "s02-m-079",
   },
   {
@@ -2056,6 +2176,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your healthy \"Female\" Ninjas",
       "Effect: Injure the target. Then, draw the same number of cards as the target's \"Mental Power\".",
     ],
+    flavor: "\"Now it's my turn to take the lead. And all of you can watch me from the background.\"",
     image: "s02-m-080",
   },
   {
@@ -2072,6 +2193,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: You may discard this card and your \"Heaven Scroll\" Mission card at the beginning of your turn (both cards must be in play when you discard them). Then, draw 2 cards.",
     ],
+    flavor: "\"We really lucked out ... The first people to fall into the trap we set were carrying the Earth Scroll we needed!\"",
     image: "s02-m-081",
   },
   {
@@ -2088,6 +2210,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent (1)",
       "Effect: No Ninjas can be sent out to Battle.",
     ],
+    flavor: "\"All right. That's enough resting up, I think ... The other teams will be calling it a day soon.\"",
     image: "s02-m-082",
   },
   {
@@ -2103,6 +2226,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Look at the top 5 cards of your Deck. If there are 1 or more \"Female\" Ninjas among the cards, select 1 \"Female\" Ninja of your choice, show it to your opponent and place it in your hand. Then, return the rest to your Deck and shuffle it.",
     ],
+    flavor: "\"This is Sakura.\"",
     image: "s02-m-083",
   },
   {
@@ -2119,6 +2243,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: Both players give 1 Damage to 1 of their Ninjas if they have 2 or less cards in their hand at the end of their turn. This effect cannot be duplicated.",
     ],
+    flavor: "\"I can't help it! I gotta eat!\"",
     image: "s02-m-084",
   },
   // ── CLIENT ──
@@ -2136,6 +2261,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: If your opponent has won a total of 7 or more Battle Rewards, you may draw cards until you have 6 cards in your hand.",
     ],
+    flavor: "\"Can I ... Can I be that strong too ... ? Father!\"",
     image: "s02-c-001",
   },
   {
@@ -2152,6 +2278,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: If your opponent wins more than 3 Battle Rewards in a turn, discard the Battle Rewards so they win only 3 Battle Rewards.",
     ],
+    flavor: "\"I'm building a bridge there that will change our world! I expect you to get me there safely even if it means giving up your life!\"",
     image: "s02-c-002",
   },
   {
@@ -2168,6 +2295,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: If you win 3 or more Battle Rewards in a turn, discard 1 of your opponent's Battle Rewards.",
     ],
+    flavor: "\"I put out big money for you ... Because you're supposed to be hot-shot assassins!\"",
     image: "s02-c-003",
   },
   {
@@ -2184,6 +2312,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: If you win 3 or more Battle Rewards in a turn, draw 1 card.",
     ],
+    flavor: "\"Ohhh! My poor little Tora! Mommy was so worried about her naughty little fuzzykins!\"",
     image: "s02-c-004",
   },
   {
@@ -2200,6 +2329,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: If you win 3 or more Battle Rewards in a turn, give 1 Damage to 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"Too bad ... You'll have to come with us. Now.\"",
     image: "s02-c-005",
   },
   {
@@ -2216,6 +2346,7 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: If you win 3 or more Battle Rewards in a turn, give 1 Damage to 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"What a waste ... I was in the mood to cut something.\"",
     image: "s02-c-006",
   },
 ];
