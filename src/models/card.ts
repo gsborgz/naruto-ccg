@@ -31,6 +31,8 @@ interface BaseCard {
   rarity?: string;
   /** Texto de efeito, uma linha por bloco impresso. */
   text: string[];
+  /** Frase impressa acima da caixa de texto (fala do anime), quando a carta tem. Opcional. */
+  flavor?: string;
   /** Nome do arquivo da imagem, sem extensão (ver `cardImageUrl`). */
   image: string;
 }

@@ -22,6 +22,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 3, support: 1 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"I'll never back down again and let someone else rescue me.\"",
     image: "s01-n-001",
   },
   {
@@ -39,6 +40,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 0, support: 0 },
     attributes: ["Flame"],
     text: [],
+    flavor: "\"I'm not like them.\"",
     image: "s01-n-002",
   },
   {
@@ -56,6 +58,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 0, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"Did you see that, Sasuke? ♥\"",
     image: "s01-n-003",
   },
   {
@@ -76,6 +79,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Love's Rival]",
       "When this Ninja is Battling against your opponent's \"Female\" Ninja, this Ninja gets +1/+1 during the turn.",
     ],
+    flavor: "\"I am again the winner, Sakura!\"",
     image: "s01-n-004",
   },
   {
@@ -96,6 +100,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Lazy Bum]",
       "Valid: This Ninja cannot be sent out to Battle by itself.",
     ],
+    flavor: "\"What a nuisance.\"",
     image: "s01-n-005",
   },
   {
@@ -116,6 +121,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Chubby]",
       "When this Ninja is sent out to Attack, it gets +1/+0 during the turn.",
     ],
+    flavor: "\"I'm NOT fat!\"",
     image: "s01-n-006",
   },
   {
@@ -136,6 +142,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Hokage's Grandson]",
       "Valid: All the Ninjas in your hand which are \"Jonin\" or higher Rank get -1 Entrance cost.",
     ],
+    flavor: "\"Old man! I challenge you-u-u!\"",
     image: "s01-n-007",
   },
   {
@@ -156,6 +163,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Devoted to Pupil]",
       "Valid: When the Head Ninja of this Ninja's Team is \"Genin\" and is sent out to Battle, this Ninja gets +0/+1 during the turn.",
     ],
+    flavor: "\"For him, I have nothing but respect. He's an excellent student.\"",
     image: "s01-n-008",
   },
   {
@@ -173,6 +181,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 2, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"You will never be accepted in this village!!\"",
     image: "s01-n-009",
   },
   {
@@ -190,6 +199,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 2, support: 2 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"As your elite ninja trainer I am never wrong, which means I'm always right!\"",
     image: "s01-n-010",
   },
   {
@@ -207,6 +217,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 3, support: 2 },
     attributes: ["Illusion"],
     text: [],
+    flavor: "\"I'll protect you with my life. All of you.\"",
     image: "s01-n-011",
   },
   {
@@ -227,6 +238,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Optimist]",
       "When you have more Battle Rewards than your opponent, a Team which includes this Ninja cannot be sent out to Battle.",
     ],
+    flavor: "\"Don't worry. We'll be busy again before you know it.\"",
     image: "s01-n-012",
   },
   {
@@ -247,6 +259,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Village Governor]",
       "At the beginning of your turn, you may discard 1 card in your Chakra area to heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"There's no longer any need to worry.\"",
     image: "s01-n-013",
   },
   {
@@ -264,6 +277,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 1, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"Hunh?\"",
     image: "s01-n-014",
   },
   {
@@ -281,6 +295,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 1, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"What?\"",
     image: "s01-n-015",
   },
   {
@@ -298,6 +313,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 1, support: 0 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"You're right. It was his last battle.\"",
     image: "s01-n-016",
   },
   {
@@ -315,6 +331,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 3, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"Well, I'm only a child.\"",
     image: "s01-n-017",
   },
   {
@@ -332,6 +349,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 4, support: 0 },
     attributes: ["Mist"],
     text: [],
+    flavor: "\"It's over!\"",
     image: "s01-n-018",
   },
   {
@@ -352,6 +370,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Imposter!]",
       "Valid: When this Ninja receives any Damage, flip a Ninja Blade coin; if it's heads, reduce the Damage by 1.",
     ],
+    flavor: "\"Heh-heh! You're over-confident, Sensei! That's why you weren't ready for a Shadow Clone Attack, my best jutsu!\"",
     image: "s01-n-019",
   },
   {
@@ -372,6 +391,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Individual Play]",
       "This Ninja cannot be sent out to Battle in the same Team as \"Genin\" or lower Rank Ninjas.",
     ],
+    flavor: "\"Groups of three... that'll just slow me down...\"",
     image: "s01-n-020",
   },
   {
@@ -392,6 +412,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Love Conquers Ninjutsu]",
       "When this Ninja is sent out to Battle in the same Team as a Ninja with both \"Genin\" and \"Male\", this Ninja gets +0/+1 during the turn.",
     ],
+    flavor: "\"Mind if I sit next to you?\"",
     image: "s01-n-021",
   },
   {
@@ -412,6 +433,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Scapegoat]",
       "Valid: When the Head Ninja of this Ninja's Team receives any Damage, you can reduce the Damage by 1. Then, Give 1 Damage to this Ninja.",
     ],
+    flavor: "\"Naruto! Get down!\"",
     image: "s01-n-022",
   },
   {
@@ -432,6 +454,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Copy Ninja]",
       "When your opponent's Ninja Battling against this Ninja gets additional Combat by the effects of Jutsu cards, this Ninja also receives the same amount of additional Combat during this turn.",
     ],
+    flavor: "\"How about we put an end to this now?\"",
     image: "s01-n-023",
   },
   {
@@ -452,6 +475,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Demon of Cloud Village]",
       "When this Ninja is the Head Ninja, discard all Ninjas that received Damage from this Ninja's Team.",
     ],
+    flavor: "\"I am Zabuza Momochi... 'The Demon of the Hidden Mist'!!\"",
     image: "s01-n-024",
   },
   {
@@ -472,6 +496,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Nine-Tailed Chakra]",
       "Valid: When this Ninja is in injured status and is sent out to Battle by itself, it gets +X/+0 during the turn. X = the number of cards in your hand.",
     ],
+    flavor: "\"I won't let you live...\"",
     image: "s01-n-025",
   },
   {
@@ -492,6 +517,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Open Your Eyes!]",
       "This Ninja cannot be the target of your opponent's Jutsu cards which require 2 or less Jutsu costs (specific symbols are counted as 1 as well).",
     ],
+    flavor: "\"Stay calm... Focus... Concentrate... See everything!!\"",
     image: "s01-n-026",
   },
   {
@@ -512,6 +538,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Ability for Adjustment]",
       "When this Ninja is sent out to Battle while you have 1 or less cards in your Chakra area, you can send 1 card from the top of your Deck to your Chakra area.",
     ],
+    flavor: "\"Hey, this is fun!\"",
     image: "s01-n-027",
   },
   {
@@ -532,6 +559,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Combination]",
       "Valid: When this Ninja is sent out to Battle with a Ninja with a \"Beast\" Combat Attribute in the same Team, this Ninja gets +1/+1 during the turn.",
     ],
+    flavor: "\"Let's go, Akamaru!!\"",
     image: "s01-n-028",
   },
   {
@@ -549,6 +577,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 0, support: 0 },
     attributes: ["Insect"],
     text: [],
+    flavor: "\"......\"",
     image: "s01-n-029",
   },
   {
@@ -569,6 +598,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Gentle Heart]",
       "At the beginning of your turn, you may discard 3 cards in your Chakra area. Then, heal 1 of your injured \"Genin\" Ninjas.",
     ],
+    flavor: "\"Naruto... you graduated after all! I'm so happy.\"",
     image: "s01-n-030",
   },
   {
@@ -589,6 +619,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[No Talent]",
       "Valid: This Ninja cannot be the user of a Jutsu card that requires specific symbols in its Jutsu cost.",
     ],
+    flavor: "\"I want to prove that you can become a splendid ninja even if you can't use Ninjutsu or Genjutsu!\"",
     image: "s01-n-031",
   },
   {
@@ -606,6 +637,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 1, support: 1 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"It's not like Lee to keep us waiting!\"",
     image: "s01-n-032",
   },
   {
@@ -623,6 +655,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 3, support: 0 },
     attributes: ["Kung Fu"],
     text: [],
+    flavor: "\"Hmph... I don't like it...\"",
     image: "s01-n-033",
   },
   {
@@ -643,6 +676,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Konohamaru Corps Formed!]",
       "Valid: When this Ninja's Team wins a Victory or Outstanding Victory in Battle, draw 1 card.",
     ],
+    flavor: "\"I appoint you as leader of the Konohamaru team!\"",
     image: "s01-n-034",
   },
   {
@@ -663,6 +697,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Relocation]",
       "Valid: When this Ninja is put in play, draw 1 card. When this Ninja is removed from your Village or Battlefield (except when sending out or returning Teams), discard 1 of the cards in your hand.",
     ],
+    flavor: "\"Yes. Because of my father's mission, I have to move to another village.\"",
     image: "s01-n-035",
   },
   {
@@ -683,6 +718,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Partner]",
       "Valid: When you have \"Kiba Inuzuka\" in play, this Ninja is not included in the \"1 Ninja card per turn\" restriction. This Ninja cannot be sent out to Battle by itself.",
     ],
+    flavor: "\"Arf!!\"",
     image: "s01-n-036",
   },
   {
@@ -703,6 +739,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Confidence in Subordinates]",
       "All Ninjas with both \"Leaf\" and \"Genin\" in this Ninja's Team get +0/+1 during the turn they are sent out to Battle.",
     ],
+    flavor: "\"You made a big mistake insulting these ninjas and calling them brats.\"",
     image: "s01-n-037",
   },
   {
@@ -720,6 +757,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     injured: { combat: 2, support: 3 },
     attributes: ["Illusion"],
     text: [],
+    flavor: "\"The only survivor from the Uchiha Clan.\"",
     image: "s01-n-038",
   },
   {
@@ -740,6 +778,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Fervent Words]",
       "When the Head Ninja of this Ninja's Team is a \"Genin\" with a \"Kung Fu\" Combat Attribute, this Ninja gets +0/+4 during the turn.",
     ],
+    flavor: "\"Ah, the exuberance of youth. All of you are full of it.\"",
     image: "s01-n-039",
   },
   {
@@ -760,6 +799,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Zero Visibility Thick Fog]",
       "When this Ninja is in Battle, all Ninjas in this Ninja's Team and all Ninjas Battling against the Team get -1/-1. Ninjas with a \"Mist\" Combat Attribute can negate this effect.",
     ],
+    flavor: "\"I am trained in silent killing. My genius lies in the ability to hunt by sound alone!\"",
     image: "s01-n-040",
   },
   {
@@ -780,6 +820,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Genius of Efforts]",
       "When this Ninja is sent out to Battle as a Head Ninja, put a Ninja Blade coin symbolizing +1/+0 on it at the end of the turn.",
     ],
+    flavor: "\"Let me prove it to you. This particular move of mine exceeds your genius... completely!\"",
     image: "s01-n-041",
   },
   {
@@ -801,6 +842,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "You may place 1 Ninja Blade coin (symbolizing a \"Tenketsu coin\") on each Ninja that received Damage from this Ninja's Team.",
       "Valid: Ninjas with a \"Tenketsu coin\" cannot be healed.",
     ],
+    flavor: "\"My eyes can already penetrate 'Tenketsu'...\"",
     image: "s01-n-042",
   },
   {
@@ -821,6 +863,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "[Kekkei Genkai: Bloodline Trait]",
       "Valid: Jutsu cards used by this Ninja cannot be negated.",
     ],
+    flavor: "\"I will show you what speed really means!\"",
     image: "s01-n-043",
   },
   // ── JUTSU ──
@@ -837,6 +880,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 during this turn.",
     ],
+    flavor: "\"Ugh!\"",
     image: "s01-j-001",
   },
   {
@@ -852,6 +896,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+0 during this turn.",
     ],
+    flavor: "\"Here goes nothing!\"",
     image: "s01-j-002",
   },
   {
@@ -868,6 +913,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 \"Male\" Ninja Battling against the user",
       "Effect: The user changes from \"Male\" to \"Female\". The target's Combat becomes 0 during this turn.",
     ],
+    flavor: "\"Aah, Ooh ♥\"",
     image: "s01-j-003",
   },
   {
@@ -884,6 +930,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every \"Male\" Ninja Battling against the user",
       "Effect: The user changes from \"Male\" to \"Female\". The target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"Gotcha! With my Harem Jutsu!\"",
     image: "s01-j-004",
   },
   {
@@ -899,6 +946,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +Y/+0 and \"Clone status\" during this turn. Y = X times 2.",
     ],
+    flavor: "\"Take your best shot, fool. I'll give it back to you a thousand-fold!\"",
     image: "s01-j-005",
   },
   {
@@ -915,6 +963,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Move the target back to the top of its original owner's Deck.",
     ],
+    flavor: "\"One ninja faced the Nine-Tailed Fox in mortal combat: he sacrificed his life to capture the beast and seal it in a human body.\"",
     image: "s01-j-006",
   },
   {
@@ -931,6 +980,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"Your technique worked on me once, but it won't work again.\"",
     image: "s01-j-007",
   },
   {
@@ -945,6 +995,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand. If they have 1 or more Ninjas in their hand, draw 1 card.",
     ],
+    flavor: "\"He's finally started down the path... to becoming a true ninja.\"",
     image: "s01-j-008",
   },
   {
@@ -960,6 +1011,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 card in the Battle Reward area",
       "Effect: Move the target to its original owner's Chakra area.",
     ],
+    flavor: "\"Leaf Village Secret Finger Jutsu!\"",
     image: "s01-j-009",
   },
   {
@@ -975,6 +1027,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target. It cannot give any Damage to Ninjas with a \"Flame\" Combat Attribute.",
     ],
+    flavor: "\"Horse! Tiger!!\" \"I'll pinpoint the target!\"",
     image: "s01-j-010",
   },
   {
@@ -991,6 +1044,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Stand-By Ninja",
       "Effect: Move the target back to its original owner's hand.",
     ],
+    flavor: "\"Do it!\"",
     image: "s01-j-011",
   },
   {
@@ -1006,6 +1060,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X and \"Clone status\" during this turn. The X Jutsu Cost must be paid with cards in your Chakra area with the \"Water\" Symbol.",
     ],
+    flavor: "\"I am not that easy to fool!\"",
     image: "s01-j-012",
   },
   {
@@ -1021,6 +1076,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Negate the target and move it back to its original owner's hand.",
     ],
+    flavor: "\"Ninja Art: Hidden Mist Jutsu.\"",
     image: "s01-j-013",
   },
   {
@@ -1037,6 +1093,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"As the name suggests... it happens in an instant without sound or warning of any kind.\"",
     image: "s01-j-014",
   },
   {
@@ -1052,6 +1109,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +1/+1 and \"Clone status\" during this turn.",
     ],
+    flavor: "\"Clone Jutsu!\"",
     image: "s01-j-015",
   },
   {
@@ -1067,6 +1125,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: Switch the numbers of the target's Combat and Support during this turn. In addition, the Combat Attribute of the target becomes \"Kung Fu\", \"Ninjutsu\", \"Illusion\" or \"Flame\" (your choice).",
     ],
+    flavor: "\"Transform!\"",
     image: "s01-j-016",
   },
   {
@@ -1082,6 +1141,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Team",
       "Effect: Switch the position of the target's Head Ninja and Back Ninja(s).",
     ],
+    flavor: "\"Another substitution!\"",
     image: "s01-j-017",
   },
   {
@@ -1097,6 +1157,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: The Team including the user and the Team Battling against the user",
       "Effect: The target skips the Showdown. No Damage is received by either Team.",
     ],
+    flavor: "\"Saw through my disguise, huh?\"",
     image: "s01-j-018",
   },
   {
@@ -1112,6 +1173,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your opponent's Ninjas Battling against the user",
       "Effect: The target gets -2/-2 during this turn. If the user has an \"Illusion\" Combat Attribute, the target gets an additional -1/-1.",
     ],
+    flavor: "\"Sa... Saku... ra... H-help... me...\"",
     image: "s01-j-019",
   },
   {
@@ -1127,6 +1189,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Negate any additions or subtractions to the target's Power.",
     ],
+    flavor: "\"I used the Escape Jutsu... no sweat, it's a very basic technique.\"",
     image: "s01-j-020",
   },
   {
@@ -1143,6 +1206,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: The Back Ninja(s) of the Team Battling against the user",
       "Effect: Remove the target from the Team. The target is considered to be a Stand-By Ninja.",
     ],
+    flavor: "\"It's Sasuke's head... it's been severed!!!\"",
     image: "s01-j-021",
   },
   {
@@ -1159,6 +1223,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja Battling against the user with 2 or less Power",
       "Effect: The target is considered to be a Stand-By Ninja. If you have no Ninjas with the same name as the target in play, move the target to your Village.",
     ],
+    flavor: "\"Ninja Art: Mind Transfer Jutsu!!\"",
     image: "s01-j-022",
   },
   {
@@ -1175,6 +1240,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The Power of the target is considered to be 0/0 during this turn.",
     ],
+    flavor: "\"I won't let you!\"",
     image: "s01-j-023",
   },
   {
@@ -1191,6 +1257,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn and cannot be the target of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Expansion Jutsu!\"",
     image: "s01-j-024",
   },
   {
@@ -1206,6 +1273,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets \"Clone status\" during this turn. Flip a Ninja Blade coin; if it's heads, the target gets +4/+0. If it's tails, the target gets +2/+0.",
     ],
+    flavor: "\"Ohhh. Shadow Clone Jutsu... And there's a quite a few of them.\"",
     image: "s01-j-025",
   },
   {
@@ -1222,6 +1290,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+0 during this turn.",
     ],
+    flavor: "\"Leaf Hurricane!!\"",
     image: "s01-j-026",
   },
   {
@@ -1238,6 +1307,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +0/+3 during this turn.",
     ],
+    flavor: "\"Leaf Whirlwind!!!\"",
     image: "s01-j-027",
   },
   {
@@ -1254,6 +1324,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets a \"Beast\" Combat Attribute and +X/+0 during this turn. X = the Combat of the target.",
     ],
+    flavor: "\"Get ready.\"",
     image: "s01-j-028",
   },
   {
@@ -1269,6 +1340,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. If the target has a \"Weapon\" Combat Attribute, the target gets an additional +1/+0.",
     ],
+    flavor: "\"Demon Wind Shuriken!!! Windmill of Shadows!!\"",
     image: "s01-j-029",
   },
   {
@@ -1285,6 +1357,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +7/+0 during this turn.",
     ],
+    flavor: "\"Lightning Blade!\"",
     image: "s01-j-030",
   },
   {
@@ -1301,6 +1374,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: Discard all the Ninjas which received Damage from the target's Team during this turn.",
     ],
+    flavor: "\"This time, I'll go personally... and this sword will be the last thing he ever sees.\"",
     image: "s01-j-031",
   },
   {
@@ -1316,6 +1390,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The Combat of the target becomes 0 during this turn.",
     ],
+    flavor: "\"Heh-heh-heh... That prison is inescapable. You're trapped.\"",
     image: "s01-j-032",
   },
   {
@@ -1332,6 +1407,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja that is being sent out to Battle",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"丑申卯子亥酉丑午酉子寅戌寅巳丑未巳亥未子壬申酉辰酉丑午未寅巳子申卯亥辰未子丑申酉壬子亥申!!\"",
     image: "s01-j-033",
   },
   {
@@ -1348,6 +1424,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Move the target back to its original owner's hand.",
     ],
+    flavor: "\"Water Jutsu: Giant Vortex Jutsu!!!\"",
     image: "s01-j-034",
   },
   {
@@ -1364,6 +1441,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"Hidden Jutsu: A Thousand Needles of Death!!\"",
     image: "s01-j-035",
   },
   {
@@ -1380,6 +1458,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target gets -X/-X during this turn. X = the number of cards in both players' hands.",
     ],
+    flavor: "\"They're... mirrors?\"",
     image: "s01-j-036",
   },
   {
@@ -1395,6 +1474,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: User",
       "Effect: The target gets the following text during this turn: \"The Jutsu cards used by this card cannot be negated.\"",
     ],
+    flavor: "\"A second shuriken in the shadow of the first shuriken!\"",
     image: "s01-j-037",
   },
   {
@@ -1410,6 +1490,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your Ninjas that is being sent out to Battle",
       "Effect: Remove the target from the Team. The target is considered to be a Stand-By Ninja.",
     ],
+    flavor: "\"Please excuse me, and farewell.\"",
     image: "s01-j-038",
   },
   {
@@ -1425,6 +1506,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Requirements: \"Insect\" Combat Attribute",
       "Effect: Select 3 cards at random from your opponent's Deck and discard them.",
     ],
+    flavor: "\"They are called 'parasitic insects,' which attack the target in a group and devour its chakra.\"",
     image: "s01-j-039",
   },
   {
@@ -1439,6 +1521,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Send 2 cards from the top of your Deck to your Chakra area.",
     ],
+    flavor: "\"This won't be any ordinary tree climbing.\" \"But, there's just one rule... No hand!!\"",
     image: "s01-j-040",
   },
   {
@@ -1454,6 +1537,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 or 2 \"Ninja Dog\" Ninja(s) in your Discard Pile",
       "Effect: Put the target in play and make it/them the Back Ninja(s) of the user's Team. The number of Ninjas in the Team cannot be more than 3.",
     ],
+    flavor: "\"I realized, if I couldn't see you, I'd have to smell you out...\"",
     image: "s01-j-041",
   },
   {
@@ -1469,6 +1553,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Requirements: \"Byakugan\"",
       "Effect: Look at the cards in your opponent's hand. Then, discard 1 Jutsu or Mission card in your opponent's hand.",
     ],
+    flavor: "\"Byakugan!!\"",
     image: "s01-j-042",
   },
   // ── MISSION ──
@@ -1486,6 +1571,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your injured Ninjas",
       "Effect: Heal the target.",
     ],
+    flavor: "\"You want another bowl?\"",
     image: "s01-m-001",
   },
   {
@@ -1502,6 +1588,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Permanent",
       "Effect: When your \"Naruto Uzumaki\" Ninja gives Damage to your opponent's Ninjas, put a Ninja Blade coin symbolizing +1/+1 on \"Naruto Uzumaki\".",
     ],
+    flavor: "\"My future dream is... to be the greatest Hokage! Then the whole village will stop disrespecting me and start treating me like I'm somebody! Somebody important! Believe it!\"",
     image: "s01-m-002",
   },
   {
@@ -1518,6 +1605,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 \"Genin\" Ninja in your Chakra area",
       "Effect: Move the target to your Village and put it in play. The Ninja is considered to be part of the \"1 Ninja card per turn\" restriction.",
     ],
+    flavor: "\"Congratulations... You graduate.\"",
     image: "s01-m-003",
   },
   {
@@ -1534,6 +1622,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every card in both players' Discard Piles",
       "Effect: Move the target to each player's Deck. The Decks are then shuffled.",
     ],
+    flavor: "\"Hey! Hey! Sensei!\"",
     image: "s01-m-004",
   },
   {
@@ -1550,6 +1639,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every Ninja",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Twelve years ago, a Nine-Tailed Fox suddenly appeared.\"",
     image: "s01-m-005",
   },
   {
@@ -1565,6 +1655,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Draw 1 card.",
     ],
+    flavor: "\"Can you verify ribbon on right ear?\"",
     image: "s01-m-006",
   },
   {
@@ -1581,6 +1672,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: When the target's Team wins an Outstanding Battle Reward or an Outstanding Victory during this turn, get an additional Battle Reward.",
     ],
+    flavor: "\"Don't let it bother you. With your weak attacks, it doesn't really matter if I'm reading or whatever.\"",
     image: "s01-m-007",
   },
   {
@@ -1597,6 +1689,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every Ninja",
       "Effect: The target cannot use Jutsu cards during this turn.",
     ],
+    flavor: "\"Ugh, rotten!\"",
     image: "s01-m-008",
   },
   {
@@ -1614,6 +1707,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 non-\"Permanent\" Mission card",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"I'm going to restore my clan... and destroy a certain person.\"",
     image: "s01-m-009",
   },
   {
@@ -1630,6 +1724,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every card in both players' Chakra areas",
       "Effect: Discard the target.",
     ],
+    flavor: "\"The finest hope of the Uchiha Clan doesn't seem too impressive.\"",
     image: "s01-m-010",
   },
   {
@@ -1645,6 +1740,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Look at the top 3 cards of your Deck. If there are 1 or more Ninjas among the cards, select 1 of the Ninjas and place it in your hand. Return the rest of the cards to your Deck and shuffle it.",
     ],
+    flavor: "\"Your profile was in our bingo book.\"",
     image: "s01-m-011",
   },
   {
@@ -1661,6 +1757,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: When the target is sent out to Battle during this turn, your opponent must send out a Team to block the target's Team, if possible.",
     ],
+    flavor: "\"I am Tazuna, a master bridge builder.\"",
     image: "s01-m-012",
   },
   {
@@ -1677,6 +1774,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Permanent",
       "Effect: Both players must discard 1 card of their choice in their Chakra areas every time they send a Team out to Battle.",
     ],
+    flavor: "\"Gato... is a well-respected tycoon of a famous company; that's true. But below the surface, he sells drugs and contraband using gangs and ninja...\"",
     image: "s01-m-013",
   },
   {
@@ -1693,6 +1791,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: All Teams with all \"Genin\" or lower Rank Ninjas",
       "Effect: The target cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"One shallow breath, one tiny movement of the eye, is enough to draw his attack. It's suffocating.\"",
     image: "s01-m-014",
   },
   {
@@ -1708,6 +1807,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Look at the top 4 cards of your Deck. Then, arrange the order of the 4 cards as you like and return them to the top of your Deck. Then, If you have \"Sakura Haruno\" in play, draw 1 card.",
     ],
+    flavor: "\"Cha!\"",
     image: "s01-m-015",
   },
   {
@@ -1723,6 +1823,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand.",
     ],
+    flavor: "\"All right! Next, we do some research on female beauty!\"",
     image: "s01-m-016",
   },
   {
@@ -1738,6 +1839,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: A Team with 3 Ninjas can only be blocked by another Team with 3 Ninjas.",
     ],
+    flavor: "\"All Genin will be grouped into three-man squads. Each squad will be led by a Jonin, an elite ninja.\"",
     image: "s01-m-017",
   },
   {
@@ -1753,6 +1855,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Draw 2 cards.",
     ],
+    flavor: "\"Sakuraaaa! Isn't it time for you to get going?\"",
     image: "s01-m-018",
   },
   {
@@ -1769,6 +1872,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 \"Permanent\" Mission card",
       "Effect: Discard the target.",
     ],
+    flavor: "\"You fail!\"",
     image: "s01-m-019",
   },
   {
@@ -1785,6 +1889,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 \"Genin\" Ninja in your hand",
       "Effect: Put the target in play.",
     ],
+    flavor: "\"Now everyone will review the Transformation Jutsu!\"",
     image: "s01-m-020",
   },
   {
@@ -1801,6 +1906,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: All of your injured Ninjas",
       "Effect: Heal the target.",
     ],
+    flavor: "\"That was your fault!\"",
     image: "s01-m-021",
   },
   {
@@ -1817,6 +1923,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Permanent",
       "Effect: Both players draw 1 extra card at the beginning of their turn.",
     ],
+    flavor: "\"Don't let it near the village!\"",
     image: "s01-m-022",
   },
   {
@@ -1834,6 +1941,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target gets \"Clone status\". When the target is put in play, put a Ninja Blade coin symbolizing \"Clone status\" on it.",
     ],
+    flavor: "\"That one's a clone, too!!\"",
     image: "s01-m-023",
   },
   {
@@ -1849,6 +1957,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Arrange the order of all the cards in your hand and return them to the bottom of your Deck. Then, draw the same number of cards from your Deck.",
     ],
+    flavor: "\"Upon this wound, I make this pledge! Believe it!\"",
     image: "s01-m-024",
   },
   {
@@ -1865,6 +1974,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Permanent",
       "Effect: All Ninjas in your hand with an Entrance cost of 1 or more get +1 Entrance cost. This effect cannot be duplicated.",
     ],
+    flavor: "\"You know how in stories the hero usually shows up at the last minute and then kicks butt? Well, that's what I'm going to do right now!\"",
     image: "s01-m-025",
   },
   {
@@ -1882,6 +1992,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target must be sent out to Battle during this turn, if possible.",
     ],
+    flavor: "\"Naruto's building a solid reputation as the most clueless ninja in history. The more he helps, the worse things get.\"",
     image: "s01-m-026",
   },
   {
@@ -1899,6 +2010,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target gets \"Sharingan Eye\". When the target is put in play, put a Ninja Blade coin symbolizing \"Sharingan Eye\" on it.",
     ],
+    flavor: "\"So... he, too, has a Kekkei Genkai, the power of a unique bloodline trait.\"",
     image: "s01-m-027",
   },
   {
@@ -1915,6 +2027,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: All Teams with 1 Ninja",
       "Effect: The target cannot block a Team with 6 or more Team Power during this turn.",
     ],
+    flavor: "\"I can't swim, and I'm scared!! I'm sorry, Poochie...\"",
     image: "s01-m-028",
   },
   {
@@ -1931,6 +2044,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of the cards in each player's Battle Reward areas",
       "Effect: Discard the target.",
     ],
+    flavor: "\"So, he can keep up with Haku's speed.\"",
     image: "s01-m-029",
   },
   {
@@ -1947,6 +2061,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Permanent",
       "Effect: You can play up to 2 Mission cards per turn.",
     ],
+    flavor: "\"Encountering suspicion, the ninja prepares quickly. Hesitation leads to disaster.\"",
     image: "s01-m-030",
   },
   {
@@ -1962,6 +2077,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Both players draw 1 card.",
     ],
+    flavor: "\"I'm sorry to have imposed on you.\"",
     image: "s01-m-031",
   },
   {
@@ -1977,6 +2093,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: If your opponent has 1 or more \"Jonin\" Ninjas in play, put a \"Jonin\" or lower Rank Ninja in play. This effect is included in the \"1 Ninja card per turn\" restriction.",
     ],
+    flavor: "\"That must be...\"",
     image: "s01-m-032",
   },
   {
@@ -1992,6 +2109,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Both players discard 1 card from their hand or from their in-play cards.",
     ],
+    flavor: "\"We have brought you here to witness his punishment. His punishment is execution!\"",
     image: "s01-m-033",
   },
   {
@@ -2008,6 +2126,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every card in your opponent's Battle Reward area",
       "Effect: Look at the target. If the cards include 1 or more \"Rogue Ninjas\", select 1 and show it to your opponent and put it in your hand.",
     ],
+    flavor: "\"......\"",
     image: "s01-m-034",
   },
   {
@@ -2023,6 +2142,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Look at all the cards in your Deck. Select 1 Mission card of your choice and show it to your opponent. Then, shuffle your Deck and return the selected Mission card to the top of your Deck.",
     ],
+    flavor: "\"Konohamaru... you've brought it for me.\"",
     image: "s01-m-035",
   },
   {
@@ -2039,6 +2159,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Remove the target from the Team.",
     ],
+    flavor: "\"Why didn't someone wake me???!!\"",
     image: "s01-m-036",
   },
   {
@@ -2056,6 +2177,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: All of your Ninjas",
       "Effect: Organize the target into new Teams.",
     ],
+    flavor: "\"Sakura! Protect Mr. Tazuna!!\"",
     image: "s01-m-037",
   },
   {
@@ -2072,6 +2194,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: Every Team",
       "Effect: The target must be sent out to Battle during this turn, if possible.",
     ],
+    flavor: "\"Those who stray from the path of justice have no courage, but under the wing of a strong leader, cowardice cannot survive.\"",
     image: "s01-m-038",
   },
   {
@@ -2087,6 +2210,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [
       "Effect: Every Ninja in your hand that has an Entrance cost of 2 or less gets -1 Entrance cost.",
     ],
+    flavor: "\"Can I... Can I... be strong, too?\"",
     image: "s01-m-039",
   },
   {
@@ -2104,6 +2228,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your \"Genin\" Ninjas",
       "Effect: The name of the target is considered to be the same as \"Shooting Star\". When the target is put in play, put a Ninja Blade coin symbolizing \"Shooting Star\" on it. When this card is removed from the Village, send the target to the Discard Pile.",
     ],
+    flavor: "\"Starting today, his name is Shooting Star... and he's MY dog now!!\"",
     image: "s01-m-040",
   },
   {
@@ -2120,6 +2245,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target cannot receive any Damage during this turn, even if you lose the Battle (including both a Defeat and a Complete Defeat).",
     ],
+    flavor: "\"Manji Battle Formation... Protect the Bridge Builder...\"",
     image: "s01-m-041",
   },
   {
@@ -2136,6 +2262,7 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
       "Target: 1 Ninja in your Discard Pile",
       "Effect: Move the target back to the top of your Deck.",
     ],
+    flavor: "\"That's enough! I'll do it...\"",
     image: "s01-m-042",
   },
 ];

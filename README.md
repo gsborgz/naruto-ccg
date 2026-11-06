@@ -6,7 +6,7 @@ Hoje o app tem o catálogo de cartas e o montador de decks: o jogador monta quan
 
 Publicado em <https://naruto-ccg.vercel.app> (deploy automático a cada push na `main`).
 
-Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`), o guia de publicação (`docs/DEPLOY.md`) e a especificação da próxima etapa, as salas de jogo (`docs/SALAS.md`).
+Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`), o guia de publicação (`docs/DEPLOY.md`), o processo de revisão das cartas contra as imagens e das frases (`docs/REVISAO-CARTAS.md`) e a especificação da próxima etapa, as salas de jogo (`docs/SALAS.md`).
 
 A ideia futuramente é ter um layout dinâmico para as cartas, com o sistema "montando" a carta virtualmente usando o layout + ícones + descrições + tipagens + efeitos. Por enquanto as cartas usam as imagens oficiais, com tipos, custos e efeitos cadastrados.
 
@@ -213,4 +213,4 @@ usando os scripts de scripts/import-set/ e scripts/watermark/ (não improvise ou
 - `src/lib/rooms/` e `src/app/api/rooms/` — salas de jogo (regras puras em `model.ts`, Redis em `store.ts`, navegador em `client.ts`/`useRoom.ts`).
 - `src/app/` — páginas: `/` (Meus decks), `/cards` (catálogo), `/decks/[id]` (montador), `/jogar` e `/salas/[id]` (salas). Componentes em `src/components/`.
 - `compose.yaml` — Redis local para desenvolvimento; `vercel.json` — região das funções (`gru1`, São Paulo).
-- `scripts/import-set/` — importação de coleções (ver "Importar uma coleção"); `scripts/watermark/` — remoção da marca d'água. **Só locais**, fora do Git.
+- `scripts/import-set/` — importação de coleções (ver "Importar uma coleção"); `scripts/review-set/` — revisão de coleções e frases (ver `docs/REVISAO-CARTAS.md`); `scripts/watermark/` — remoção da marca d'água. **Só locais**, fora do Git.
