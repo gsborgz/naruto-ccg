@@ -12,7 +12,8 @@ export type CombatAttribute = string;
 export interface Power {
   /** `'X'` quando a carta imprime X (ex.: S20 N-1062 "X/0"); o valor vem do texto da carta. */
   combat: number | 'X';
-  support: number;
+  /** `'X'` quando a carta imprime X (ex.: TP3 N-1205 Nagato "0/X"). */
+  support: number | 'X';
 }
 
 interface BaseCard {
@@ -52,7 +53,7 @@ export interface JutsuCostOption {
   generic: number | 'X';
   /**
    * Quantos ícones "X" estão impressos (ex.: "X | X" = 2). Ausente = 1.
-   * Todos os X têm o mesmo valor, e para cada X move-se essa quantidade de Chakras (REGRAS.md 3.5.3).
+   * Todos os X têm o mesmo valor, e para cada X move-se essa quantidade de Chakras (docs/REGRAS.md 3.5.3).
    */
   xCount?: number;
 }

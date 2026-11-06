@@ -28,11 +28,16 @@ import { S26_AVENGERS_WRATH } from './sets/s26-avengers-wrath.ts';
 import { S27_HEROS_ASCENSION } from './sets/s27-heros-ascension.ts';
 import { S28_ULTIMATE_NINJA_STORM_3 } from './sets/s28-ultimate-ninja-storm-3.ts';
 import { S29_SHINOBIS_DREAM } from './sets/s29-shinobis-dream.ts';
+import { TP1_TOURNAMENT_PACK_1 } from './sets/tp1-tournament-pack-1.ts';
+import { TP2_TOURNAMENT_PACK_2 } from './sets/tp2-tournament-pack-2.ts';
+import { TP3_TOURNAMENT_PACK_3 } from './sets/tp3-tournament-pack-3.ts';
+import { TP4_TOURNAMENT_PACK_4 } from './sets/tp4-tournament-pack-4.ts';
+import { PR_PROMOS } from './sets/pr-promos.ts';
 
 /**
  * Catálogo de cartas disponíveis, montado coleção por coleção (um arquivo por set em `./sets`).
  * Imagens em /cards/<set>/<id>.png (já sem marca d'água); versões otimizadas em /public/cards/<set> (`npm run cards:images`).
  */
-export const CARDS: Card[] = [...S01_THE_PATH_TO_HOKAGE, ...S02_COILS_OF_THE_SNAKE, ...S03_CURSE_OF_THE_SAND, ...S04_REVENGE_AND_REBIRTH, ...S05_THE_DREAM_LEGACY, ...S06_ETERNAL_RIVALRY, ...S07_QUEST_FOR_POWER, ...S08_BATTLE_OF_DESTINY, ...S09_THE_CHOSEN, ...S10_LINEAGE_OF_THE_LEGENDS, ...S11_APPROACHING_WIND, ...S12_A_NEW_CHRONICLE, ...S13_FATEFUL_REUNION, ...S14_EMERGING_ALLIANCE, ...S15_FORETOLD_PROPHECY, ...S16_BROKEN_PROMISE, ...S17_WILL_OF_FIRE, ...S18_FANGS_OF_THE_SNAKE, ...S19_PATH_OF_PAIN, ...S20_TALES_OF_THE_GALLANT_SAGE, ...S21_SHATTERED_TRUTH, ...S22_WEAPONS_OF_WAR, ...S23_INVASION, ...S24_SAGES_LEGACY, ...S25_KAGE_SUMMIT, ...S26_AVENGERS_WRATH, ...S27_HEROS_ASCENSION, ...S28_ULTIMATE_NINJA_STORM_3, ...S29_SHINOBIS_DREAM];
+export const CARDS: Card[] = [...S01_THE_PATH_TO_HOKAGE, ...S02_COILS_OF_THE_SNAKE, ...S03_CURSE_OF_THE_SAND, ...S04_REVENGE_AND_REBIRTH, ...S05_THE_DREAM_LEGACY, ...S06_ETERNAL_RIVALRY, ...S07_QUEST_FOR_POWER, ...S08_BATTLE_OF_DESTINY, ...S09_THE_CHOSEN, ...S10_LINEAGE_OF_THE_LEGENDS, ...S11_APPROACHING_WIND, ...S12_A_NEW_CHRONICLE, ...S13_FATEFUL_REUNION, ...S14_EMERGING_ALLIANCE, ...S15_FORETOLD_PROPHECY, ...S16_BROKEN_PROMISE, ...S17_WILL_OF_FIRE, ...S18_FANGS_OF_THE_SNAKE, ...S19_PATH_OF_PAIN, ...S20_TALES_OF_THE_GALLANT_SAGE, ...S21_SHATTERED_TRUTH, ...S22_WEAPONS_OF_WAR, ...S23_INVASION, ...S24_SAGES_LEGACY, ...S25_KAGE_SUMMIT, ...S26_AVENGERS_WRATH, ...S27_HEROS_ASCENSION, ...S28_ULTIMATE_NINJA_STORM_3, ...S29_SHINOBIS_DREAM, ...TP1_TOURNAMENT_PACK_1, ...TP2_TOURNAMENT_PACK_2, ...TP3_TOURNAMENT_PACK_3, ...TP4_TOURNAMENT_PACK_4, ...PR_PROMOS];
 
 export const CARDS_BY_ID: ReadonlyMap<string, Card> = new Map(CARDS.map((c) => [c.id, c]));

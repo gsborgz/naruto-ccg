@@ -29,4 +29,9 @@ export const SET_NAMES: Record<string, string> = {
   S27: "Hero's Ascension",
   S28: 'Ultimate Ninja Storm 3',
   S29: "Shinobi's Dream",
+  TP1: 'Tournament Pack 1',
+  TP2: 'Tournament Pack 2',
+  TP3: 'Tournament Pack 3',
+  TP4: 'Tournament Pack 4',
+  PR: 'Naruto CCG: Promos',
 };

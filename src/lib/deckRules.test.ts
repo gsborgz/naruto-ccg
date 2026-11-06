@@ -8,7 +8,7 @@ import { cannotAddReason, DECK_RULES, summarizeDeck, type DeckCards } from './de
 const lookup = (id: string) => CARDS_BY_ID.get(id);
 
 // Jutsus com custo impresso "0" (conferido na imagem); qualquer outro custo zerado é esquecimento.
-const ZERO_COST_JUTSU = new Set(['s04-j-141', 's08-j-235', 's11-j-350', 's14-j-510', 's14-j-512', 's14-j-515', 's14-j-533', 's14-j-534', 's16-j-619', 's21-j-814', 's24-j-917']);
+const ZERO_COST_JUTSU = new Set(['s04-j-141', 's08-j-235', 's11-j-350', 's14-j-510', 's14-j-512', 's14-j-515', 's14-j-533', 's14-j-534', 's16-j-619', 's21-j-814', 's24-j-917', 'tp3-j-838']);
 
 test('catálogo: ids únicos, imagem = id e custo de Jutsu preenchido', () => {
   const ids = new Set(CARDS.map((c) => c.id));
