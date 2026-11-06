@@ -24,6 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/cards" className="hover:text-text">
                 Cartas
               </Link>
+              <Link href="/jogar" className="hover:text-text">
+                Jogar
+              </Link>
             </div>
           </nav>
         </header>

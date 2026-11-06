@@ -6,7 +6,7 @@ Hoje o app tem o catálogo de cartas e o montador de decks: o jogador monta quan
 
 Publicado em <https://naruto-ccg.vercel.app> (deploy automático a cada push na `main`).
 
-Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`) e o guia de publicação (`docs/DEPLOY.md`).
+Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`), o guia de publicação (`docs/DEPLOY.md`) e a especificação da próxima etapa, as salas de jogo (`docs/SALAS.md`).
 
 A ideia futuramente é ter um layout dinâmico para as cartas, com o sistema "montando" a carta virtualmente usando o layout + ícones + descrições + tipagens + efeitos. Por enquanto as cartas usam as imagens oficiais, com tipos, custos e efeitos cadastrados.
 
@@ -18,7 +18,7 @@ Requer Node.js e Docker (para o Redis local).
 npm install
 cp .env.example .env.local   # só na primeira vez
 npm run dev                  # sobe o Redis local (Docker) e o app em http://localhost:3000
-npm test                     # regras de montagem, catálogo e validação do compartilhamento
+npm test                     # regras de montagem, catálogo, compartilhamento e salas
 npm run type-check
 npm run services:down        # derruba o Redis local
 ```
@@ -29,6 +29,7 @@ Publicação (Vercel + Upstash): ver [docs/DEPLOY.md](docs/DEPLOY.md).
 
 - **Cartas** (`/cards`): catálogo com busca por nome, característica ou efeito, filtros por coleção, tipo e elemento, ordenação e detalhe de cada carta.
 - **Meus decks** (`/`): criar, editar, duplicar, excluir, compartilhar e importar decks.
+- **Jogar** (`/jogar` e `/salas/<uuid>`): criar uma sala só com o apelido, enviar o código (ou o link) para um amigo e, dentro da sala, cada um escolhe o deck e marca **Pronto**. A partida em si ainda não existe: quando os dois estão prontos, a sala mostra "Partida iniciada". Detalhes em [docs/SALAS.md](docs/SALAS.md).
 - **Montador** (`/decks/<id>`): cartas disponíveis à esquerda, com +/− em cada uma, e o deck à direita (por tipo, com contagem e validação das regras).
   - As alterações ficam num rascunho e só são gravadas no botão **Salvar**.
   - Ao sair com alterações não salvas (links do app ou "voltar" do navegador), o app pergunta se quer **Salvar**, **Descartar** ou continuar editando. Ao fechar ou recarregar a aba, aparece o aviso padrão do navegador.
@@ -196,17 +197,20 @@ usando os scripts de scripts/import-set/ e scripts/watermark/ (não improvise ou
 
 - **MVP 1 (pronto)** — lista de cartas com filtros e montagem de decks salvos no localStorage.
 - **MVP 2 (pronto)** — compartilhamento por código (API + Redis, como no projeto pokedex): um deck ou a coleção inteira, importável em outro navegador.
-- **Depois** — partida entre amigos e cartas montadas dinamicamente.
+- **MVP 3 (pronto)** — salas de jogo: criar uma sala, enviar o código (UUID) para um amigo entrar e, dentro da sala, escolher os decks e marcar "Pronto". Especificação em [docs/SALAS.md](docs/SALAS.md).
+- **MVP 4 (próximo)** — a partida em si, dentro da sala (motor do jogo no servidor, cada jogador vê só o que pode ver).
+- **Depois** — cartas montadas dinamicamente.
 
 ## Estrutura
 
-- `docs/` — documentação: regras (`REGRAS.md`, `Regras Naruto CCG.md/.html`, manuais em PDF e imagens em `rules-img/`) e publicação (`DEPLOY.md`).
+- `docs/` — documentação: regras (`REGRAS.md`, `Regras Naruto CCG.md/.html`, manuais em PDF e imagens em `rules-img/`), publicação (`DEPLOY.md`) e especificação das salas de jogo (`SALAS.md`).
 - `src/data/cards.ts` — catálogo das cartas (junta os arquivos de `src/data/sets/`).
 - `src/lib/deckRules.ts` — regras de montagem do rulebook PT-BR (`docs/Naruto CCG - Rulebook PTBR.pdf`, p. 10 e 43–44): exatamente 50 cartas, qualquer quantidade de cada tipo, até 3 cartas com o mesmo nome. O nome é o impresso completo, com o que estiver entre parênteses; a característica `Name: X` não conta na montagem, só em jogo (`deckName` e `getInPlayNames` em `src/models/card.ts`).
 - `src/lib/cardFilters.ts` — busca, filtros e ordenação do catálogo.
 - `src/lib/deckStore.ts` — decks no localStorage (`naruto-ccg:decks`, com `version` para migrações); gravação só via `deckActions.save`.
 - `src/lib/useLeaveGuard.ts` — aviso de alterações não salvas ao sair do montador.
 - `src/lib/deckShare.ts`, `src/lib/shareClient.ts`, `src/lib/redis.ts` e `src/app/api/shares/` — compartilhamento por código.
-- `src/app/` — páginas: `/` (Meus decks), `/cards` (catálogo), `/decks/[id]` (montador). Componentes em `src/components/`.
+- `src/lib/rooms/` e `src/app/api/rooms/` — salas de jogo (regras puras em `model.ts`, Redis em `store.ts`, navegador em `client.ts`/`useRoom.ts`).
+- `src/app/` — páginas: `/` (Meus decks), `/cards` (catálogo), `/decks/[id]` (montador), `/jogar` e `/salas/[id]` (salas). Componentes em `src/components/`.
 - `compose.yaml` — Redis local para desenvolvimento; `vercel.json` — região das funções (`gru1`, São Paulo).
 - `scripts/import-set/` — importação de coleções (ver "Importar uma coleção"); `scripts/watermark/` — remoção da marca d'água. **Só locais**, fora do Git.
