@@ -25,6 +25,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Control of Power]",
       "Valid: During the Exchange of Jutsu, you can discard the top 2 cards of your Deck to give this Ninja +1/+0 during this turn. This effect can be used up to 3 times per turn.",
     ],
+    flavor: "\"Such a great amount of power .... It feels stronger than during the training!!\"",
     image: "s04-n-136",
   },
   {
@@ -45,6 +46,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Reason for the Late Arrival]",
       "While this Ninja is in your hand and neither player has any Battle Rewards, this Ninja gets +1 Entrance cost.",
     ],
+    flavor: "\"It's convenient ... because my technique also takes time to activate ...\"",
     image: "s04-n-137",
   },
   {
@@ -65,6 +67,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[IQ of 200 or higher]",
       "When this Ninja is sent out to Battle and opposed, you can discard 2 cards from your hand. In that case, this Ninja's Team and the Team Battling against it perform a Mental Power Battle during the turn.",
     ],
+    flavor: "\"You can avoid even this attack ......\"",
     image: "s04-n-138",
   },
   {
@@ -85,6 +88,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Serious Injuries]",
       "This Ninja is put in play in injured status. When this Ninja is put in play, draw 1 card.",
     ],
+    flavor: "\"Why do I feel ... so jealous ...?\"",
     image: "s04-n-139",
   },
   {
@@ -105,6 +109,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Another Method for Absolute Protection]",
       "While this Ninja is Battling against your opponent's Team of only Ninjas with an Entrance cost of 2 or less, this Ninja cannot receive any Damage.",
     ],
+    flavor: "\"Did you think you won?\"",
     image: "s04-n-140",
   },
   {
@@ -125,6 +130,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Why He Chose Death]",
       "You can discard this Ninja during your opponent's turn to prevent them from winning any Battle Rewards during the turn.",
     ],
+    flavor: "\"Please ... let me go.\"",
     image: "s04-n-141",
   },
   {
@@ -145,6 +151,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Spectator]",
       "While this Ninja is a Stand-By Ninja, you can discard the top card of your Deck to give +1/+0 to 1 of your Battling Ninjas.",
     ],
+    flavor: "\"I didn't think that kid would survive so far ...\"",
     image: "s04-n-142",
   },
   {
@@ -165,6 +172,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Spectator]",
       "While this Ninja is a Stand-By Ninja, you can discard the top card of your Deck to give +1/+0 to 1 of your Battling Ninjas.",
     ],
+    flavor: "\"Those who have survived merely with luck can't go any further, though.\"",
     image: "s04-n-143",
   },
   {
@@ -185,6 +193,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Proctor for the Official Exam]",
       "At the beginning of your turn, if you have no Clients in your Village, you can search for 1 Client in your Deck and deploy it. Then, shuffle your Deck.",
     ],
+    flavor: "\"Hold up your heads and show your faces to the guests.\"",
     image: "s04-n-144",
   },
   {
@@ -205,6 +214,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Conversation]",
       "When this Ninja is sent out to Battle and opposed, you can search for 1 \"Sand Cocoon\" Jutsu card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Don't be so angry with me ... Mom....\"",
     image: "s04-n-145",
   },
   {
@@ -225,6 +235,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Analytical Mind]",
       "While this Ninja is sent out to Battle and opposed, it gets +0/+X during the turn. X = the value of this Ninja's Mental Power.",
     ],
+    flavor: "\"But ... now I know how the Jutsu works!\"",
     image: "s04-n-146",
   },
   {
@@ -245,6 +256,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Request for a Delay]",
       "Valid: During your opponent's Mission Phase, you can discard this Ninja to skip the Battle Phase of the turn.",
     ],
+    flavor: "\"Could we wait ... just for another 10 minutes?\"",
     image: "s04-n-147",
   },
   {
@@ -265,6 +277,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Impenetrable Barrier]",
       "You can organize a Team of 4 Ninjas with other \"The Four Sound Ninja\" Ninjas including this Ninja. While this Ninja is sent out to Attack in this Team, none of your Ninjas can be the target of your opponent's Jutsu cards.",
     ],
+    flavor: "\"We can finally come in.\"",
     image: "s04-n-148",
   },
   {
@@ -285,6 +298,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Impenetrable Barrier]",
       "You can organize a Team of 4 Ninjas with other \"The Four Sound Ninja\" Ninjas including this Ninja. While this Ninja is sent out to Attack in this Team, none of your Ninjas can be the target of your opponent's Jutsu cards.",
     ],
+    flavor: "\"I'm totally frustrated!\"",
     image: "s04-n-149",
   },
   {
@@ -305,6 +319,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Impenetrable Barrier]",
       "You can organize a Team of 4 Ninjas with other \"The Four Sound Ninja\" Ninjas including this Ninja. While this Ninja is sent out to Attack in this Team, none of your Ninjas can be the target of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Stop it! We're a team.\"",
     image: "s04-n-150",
   },
   {
@@ -325,6 +340,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Impenetrable Barrier]",
       "You can organize a Team of 4 Ninjas with other \"The Four Sound Ninja\" Ninjas including this Ninja. While this Ninja is sent out to Attack in this Team, none of your Ninjas can be the target of your opponent's Jutsu cards.",
     ],
+    flavor: "\"You all smell sweaty!\"",
     image: "s04-n-151",
   },
   {
@@ -345,6 +361,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Covert Operative]",
       "Valid: This Ninja cannot be the target of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Because a rather demanding task is in store for me ...\"",
     image: "s04-n-152",
   },
   {
@@ -365,6 +382,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Old Disaster]",
       "When this Ninja is put in play, your opponent wins 2 Battle Rewards.",
     ],
+    flavor: "\"Come closer ... kid ...\"",
     image: "s04-n-153",
   },
   {
@@ -385,6 +403,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Naruto's Ninja Technique Journal]",
       "This Ninja can be deployed even when you already have \"Naruto Uzumaki\" in your Village. In that case, this Ninja is deployed in injured status and sent to your Chakra area at the end of the turn.",
     ],
+    flavor: "\"This is the opening of Naruto's Ninja Technique Journal!!\"",
     image: "s04-n-154",
   },
   {
@@ -405,6 +424,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Beyond the Limits]",
       "This Ninja can use the \"Chidori\" Jutsu card without paying its Jutsu cost.",
     ],
+    flavor: "\"As I thought, ... only Chidori is effective.\"",
     image: "s04-n-155",
   },
   {
@@ -425,6 +445,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Original Opponent]",
       "When this Ninja is sent out to Attack by itself, select 1 of your opponent's Teams. This Ninja's Team can only be blocked by the selected Team.",
     ],
+    flavor: "\"... Because I was his original opponent.\"",
     image: "s04-n-156",
   },
   {
@@ -442,6 +463,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     injured: { combat: 3, support: 1 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"It seems that one used the Genjutsu ...\"",
     image: "s04-n-157",
   },
   {
@@ -462,6 +484,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Instant Elimination]",
       "When this Ninja is put in play, discard every in-play \"Sound\" Ninja with an Entrance cost of 2 or less.",
     ],
+    flavor: "\"Good job, Shikamaru ...\"",
     image: "s04-n-158",
   },
   {
@@ -482,6 +505,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Detoxification]",
       "Valid: At the beginning of your turn, you can remove a Ninja Blade coin (symbolizing a Poison coin) from 1 of your Ninjas.",
     ],
+    flavor: "\"I've used my Parasitic Insects to remove the poison.\"",
     image: "s04-n-159",
   },
   {
@@ -502,6 +526,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Reunion of the Trio]",
       "Valid: This Ninja gets +1/+1 when it is in the same Team as a \"Jonin\" Ninja with a \"Shadow\" Combat Attribute and another \"Jonin\" Ninja with a \"Food\" Combat Attribute.",
     ],
+    flavor: "\"This reminds me of the good old days!\"",
     image: "s04-n-160",
   },
   {
@@ -522,6 +547,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Reunion of the Trio]",
       "Valid: This Ninja gets +1/+1 when it is in the same Team as a \"Jonin\" Ninja with a \"Mind\" Combat Attribute and another \"Jonin\" Ninja with a \"Food\" Combat Attribute.",
     ],
+    flavor: "\"The trio of Ino, Shika, Cho reunited ...\"",
     image: "s04-n-161",
   },
   {
@@ -542,6 +568,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Reunion of the Trio]",
       "Valid: This Ninja gets +1/+1 when it is in the same Team as a \"Jonin\" Ninja with a \"Mind\" Combat Attribute and another \"Jonin\" Ninja with a \"Shadow\" Combat Attribute.",
     ],
+    flavor: "\"Yeah!\"",
     image: "s04-n-162",
   },
   {
@@ -562,6 +589,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Addressing Past Wrongs]",
       "Valid: You can move 1 Ninja Battling against this Ninja to the bottom of its original owner's Deck. In that case, discard this Ninja at the end of this turn.",
     ],
+    flavor: "\"I'll destroy you to correct my old mistake!!\"",
     image: "s04-n-163",
   },
   {
@@ -582,6 +610,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Adamantine Nyoi Staff]",
       "Valid: This Ninja can only be sent out to Battle when you have \"The Third Hokage\" in play.",
     ],
+    flavor: "\"All right!!\"",
     image: "s04-n-164",
   },
   {
@@ -602,6 +631,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Ninja Dog's Sense of Smell]",
       "When this Ninja is sent out to Attack and is not Blocked, you can select 1 of your Battling Teams. In that case, place the Ninja(s) in this Ninja's Team in the selected Battling Team as a Back Ninja(s).",
     ],
+    flavor: "\"What's this smell ...?\"",
     image: "s04-n-165",
   },
   {
@@ -622,6 +652,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Eternal Youth and Life]",
       "When this Ninja is discarded after being in play, you can discard 1 of your in-play Ninjas to return this Ninja to its original owner's hand.",
     ],
+    flavor: "\"I'll gain a body with more youth, beauty, and strength ...\"",
     image: "s04-n-166",
   },
   {
@@ -642,6 +673,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[The Hokage Level]",
       "Valid: When this Ninja becomes the user of a Jutsu card with the \"Earth\" symbol, reduce 1 \"Earth\" in its Jutsu cost if there is one.",
     ],
+    flavor: "\"It's been a long time, Sarutobi ...\"",
     image: "s04-n-167",
   },
   {
@@ -662,6 +694,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[The Hokage Level]",
       "Valid: When this Ninja becomes the user of a Jutsu card with the \"Water\" symbol, reduce 1 \"Water\" in its Jutsu cost if there is one.",
     ],
+    flavor: "\"You've grown old, Sarutobi ...\"",
     image: "s04-n-168",
   },
   {
@@ -682,6 +715,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Masterpiece]",
       "At the end of your opponent's turn, you can discard 1 card from your hand to return 1 \"Sand\" Ninja in your Discard Pile to the top of its original owner's Deck.",
     ],
+    flavor: "\"That's why I dispatched Gaara's team.\"",
     image: "s04-n-169",
   },
   {
@@ -702,6 +736,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[First-Class Puppet Master]",
       "Valid: You can remove a Ninja Blade coin symbolizing +1/+1 from a \"Puppet\" Ninja in the same Team as this Ninja. In that case, give 1 Damage to 1 Ninja Battling against this Ninja.",
     ],
+    flavor: "\"It's a simple thing for a first-class puppet master like me.\"",
     image: "s04-n-170",
   },
   {
@@ -722,6 +757,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[Tactical Puppet]",
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute. When this Ninja is put in play, place a Ninja Blade coin symbolizing +1/+1 on it.",
     ],
+    flavor: "\"Creak\"",
     image: "s04-n-171",
   },
   {
@@ -742,6 +778,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "[The Most Powerful Pair of the Leaf Village]",
       "Valid: When this Ninja is sent out to Block, it gets +1/+1 during the turn.",
     ],
+    flavor: "\"Here we go!\" \"All right!!\"",
     image: "s04-n-172",
   },
   // ── JUTSU ──
@@ -758,6 +795,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. After applying this effect, you can move this card to the top of its original owner's Deck instead of your Chakra area.",
     ],
+    flavor: "\"Gaaah!\"",
     image: "s04-j-127",
   },
   {
@@ -773,6 +811,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Every Back Ninja in the user's Team",
       "Effect: In the calculation of the Team Power of the target's Team, apply the target's Combat value instead of its Support value during this turn.",
     ],
+    flavor: "\"That's using your head, Naruto. That ought to confuse him.\" \"Aaarrh!!\"",
     image: "s04-j-128",
   },
   {
@@ -787,6 +826,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Draw until you have 6 cards in your hand. Then, discard all the cards in your hand at the end of this turn.",
     ],
+    flavor: "\"It's the chakra of the Nine-Tailed Fox ... But when did this boy learn how to harness its strength?\"",
     image: "s04-j-129",
   },
   {
@@ -803,6 +843,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: (1) User, (2) 1 of your Ninjas",
       "Effect: Change the current Power of target (1) to the same values as the original Power of target (2) during this turn.",
     ],
+    flavor: "\"I encouraged Sasuke to visualize Lee's movements.\"",
     image: "s04-j-130",
   },
   {
@@ -819,6 +860,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn. Also, if the target's Team wins a Victory or an Outstanding Victory, give 1 additional Damage to every Ninja Battling against the target when Damage is applied.",
     ],
+    flavor: "\"That's why the technique is called ... 'Chidori'!\"",
     image: "s04-j-131",
   },
   {
@@ -835,6 +877,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: X number of Ninjas",
       "Effect: Heal the target.",
     ],
+    flavor: "\"Don't worry. I'm a doctor.\"",
     image: "s04-j-132",
   },
   {
@@ -851,6 +894,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja in your Discard Pile",
       "Effect: Place the target in the user's Team as a Head Ninja. The target can be put in play even if you already have a Ninja with the same name in play. Discard the target at the end of this turn.",
     ],
+    flavor: "\"This is the Dead Soul Jutsu, which manipulates a dead body by reviving its heart temporarily ...\"",
     image: "s04-j-133",
   },
   {
@@ -866,6 +910,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Every \"Genin\" or lower Rank Ninja being sent out to Battle",
       "Effect: Flip a Ninja Blade coin once for each target. The Power of every Ninja that got heads becomes 0/0 during the turn.",
     ],
+    flavor: "\"Wha, what's happening ...?\"",
     image: "s04-j-134",
   },
   {
@@ -882,6 +927,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Negate the target and return it to the top of its original owner's Deck. If you have all of \"Kidomaru,\" \"Jirobo,\" \"Sakon,\" and \"Tayuya\" in play, return this card to your hand.",
     ],
+    flavor: "\"They've generated an impenetrable barrier ...!\"",
     image: "s04-j-135",
   },
   {
@@ -897,6 +943,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target gets +0/+X or +X Mental Power during this turn. X (the Jutsu cost) can only be paid by Chakra(s) with the \"Wind\" symbol.",
     ],
+    flavor: "\"The next will be my last move ...\"",
     image: "s04-j-136",
   },
   {
@@ -913,6 +960,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the target is the only Ninja in its Team, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Yes, ... it was this attack that made all my weapons totally powerless ...\"",
     image: "s04-j-137",
   },
   {
@@ -929,6 +977,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: Return the target to your hand. Then, place a \"Gaara of the Desert\" from your hand in any position in the target's Team.",
     ],
+    flavor: "\"Gaara ... Don't tell me you mean to use that technique!\"",
     image: "s04-j-138",
   },
   {
@@ -945,6 +994,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: Place this card in any position in the user's Team as a Ninja with \"Power: 4/2.\" Move this card to your Chakra area at the end of this turn, or when it receives any Damage.",
     ],
+    flavor: "\"His Sand Shield has changed into a Sand Clone ...!!\"",
     image: "s04-j-139",
   },
   {
@@ -961,6 +1011,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Your opponent's Team(s) being sent out to Battle",
       "Effect: Reduce the target's Team Power by X. X = the value of the user's Mental Power.",
     ],
+    flavor: "\"You can't escape!\"",
     image: "s04-j-140",
   },
   {
@@ -977,6 +1028,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place a Ninja Blade coin (symbolizing a Curse Mark coin) on the target.",
     ],
+    flavor: "\"For generations, the main household of our clan has practiced a secret ninjutsu ...... known as the Curse Mark Jutsu.\"",
     image: "s04-j-141",
   },
   {
@@ -993,6 +1045,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Every Ninja with 1 or more Curse Mark coins",
       "Effect: Change the target to injured status. In addition, the player controlling the target must discard 2 cards from their hand. This effect cannot be duplicated.",
     ],
+    flavor: "\"We live with the fear that they will use this Curse Mark to turn our brains to jelly, anytime they wish.\"",
     image: "s04-j-142",
   },
   {
@@ -1009,6 +1062,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target cannot receive any Damage during this turn.",
     ],
+    flavor: "\"It's an ultimate defense, even more impenetrable than Gaara's shell of sand...\"",
     image: "s04-j-143",
   },
   {
@@ -1025,6 +1079,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin; if it's heads, give 1 Damage to the target. Then, keep selecting another target and applying this effect until you get tails.",
     ],
+    flavor: "\"You're in range of my 8 Trigrams Palms Rotation.\"",
     image: "s04-j-144",
   },
   {
@@ -1041,6 +1096,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Reveal X number of cards from the top of your Deck. Give 1 Damage to the target for each Ninja among the cards. Then, return the cards and shuffle your Deck.",
     ],
+    flavor: "\"Na! Ru! To! 2K Uzumaki Barrage!!\"",
     image: "s04-j-145",
   },
   {
@@ -1057,6 +1113,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. Then, flip a Ninja Blade coin until you get tails. The target gets an additional +2/+0 during this turn for every heads you get during the flips.",
     ],
+    flavor: "\"Experience my secret Ultimate Taijutsu!!\"",
     image: "s04-j-146",
   },
   {
@@ -1073,6 +1130,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Jutsu cards being played",
       "Effect: Apply the same \"Target\" and \"Effect\" as the target.",
     ],
+    flavor: "\"Shuriken Shadow Clone Jutsu!\"",
     image: "s04-j-147",
   },
   {
@@ -1089,6 +1147,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Let us begin!\"",
     image: "s04-j-148",
   },
   {
@@ -1104,6 +1163,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Requirements: \"The Third Hokage\" or \"The Fourth Hokage\"",
       "Effect: Select a card name. Look through your opponent's Deck and discard every card in your opponent's Deck that has the selected name. Then, the opponent shuffles their Deck.",
     ],
+    flavor: "\"This is Death ... which the Fourth Hokage said to be visible only to those who have entered into a contract for the technique!\"",
     image: "s04-j-149",
   },
   {
@@ -1120,6 +1180,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+5 during this turn.",
     ],
+    flavor: "\"The Snake Sword ...\"",
     image: "s04-j-150",
   },
   {
@@ -1136,6 +1197,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: (1) 1 of your Ninjas, (2) 1 Ninja in your Discard pile",
       "Effect: Discard target (1) to place target (2) in any position in the user's Team if you have no Ninjas with the same name as the target (2) in play.",
     ],
+    flavor: "\"It can't be! They are ...!!\"",
     image: "s04-j-151",
   },
   {
@@ -1151,6 +1213,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Each of your Ninjas",
       "Effect: The target cannot be the target of your opponent's Jutsu cards with the \"Fire\" symbol during this turn.",
     ],
+    flavor: "\"He can activate such an advanced Water-Style technique where there's no water!\"",
     image: "s04-j-152",
   },
   {
@@ -1167,6 +1230,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninja. However, if the target includes a \"Satoosa\" or \"Sannin\" or higher Rank Ninja, this effect is negated.",
     ],
+    flavor: "\"Water Style: Water Shock Wave!\"",
     image: "s04-j-153",
   },
   {
@@ -1183,6 +1247,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove every Ninja Blade coin symbolizing +1/+1 from the target. OR, place a Ninja Blade coin symbolizing -1/-1 on the target.",
     ],
+    flavor: "\"Oh, it's insects again!\"",
     image: "s04-j-154",
   },
   {
@@ -1199,6 +1264,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 \"Puppet\" Ninja",
       "Effect: Place a Ninja Blade coin symbolizing +1/+1 on the target.",
     ],
+    flavor: "\"I'll teach you the true horror of this tactical puppet, Crow!\"",
     image: "s04-j-155",
   },
   {
@@ -1215,6 +1281,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Place a Ninja Blade coin (symbolizing a Poison coin) on the target. A Ninja with a Poison coin cannot be sent out to Battle.",
     ],
+    flavor: "\"The needlepoint is covered with a generous amount of poison.\"",
     image: "s04-j-156",
   },
   {
@@ -1231,6 +1298,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Each Ninja except the user",
       "Effect: The target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"This darkness is dangerous ...\"",
     image: "s04-j-157",
   },
   {
@@ -1246,6 +1314,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Each of your Ninjas",
       "Effect: The target cannot receive any Damage from Jutsu cards during this turn.",
     ],
+    flavor: "\"Earth Style: Mud Wall!\"",
     image: "s04-j-158",
   },
   {
@@ -1261,6 +1330,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Requirements: \"The First Hokage\"",
       "Effect: Skip your opponent's next turn.",
     ],
+    flavor: "\"It's a secret technique only the First Hokage can use ...!\"",
     image: "s04-j-159",
   },
   {
@@ -1277,6 +1347,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target's Power is added to the Team Power of the user's Team instead of the target's Team during this turn.",
     ],
+    flavor: "\"I can't control my body ...!!\"",
     image: "s04-j-160",
   },
   {
@@ -1293,6 +1364,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target's Power becomes 0/0 during this turn. In addition, if the target's current status original Support value is the same as or lower than the user's current Support value, give 1 Damage to the target.",
     ],
+    flavor: "\"Then ... take this one too.\"",
     image: "s04-j-161",
   },
   {
@@ -1309,6 +1381,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: User",
       "Effect: The target gets +6/+0 during this turn. In addition, it is unaffected by your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Expansion Jutsu!!\"",
     image: "s04-j-162",
   },
   // ── MISSION ──
@@ -1326,6 +1399,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Flip a Ninja Blade coin; if it's heads, the target's Team cannot be blocked during this turn while the target remains the only Ninja in it's Team.",
     ],
+    flavor: "\"Those who conquer byways also conquer time!\"",
     image: "s04-m-133",
   },
   {
@@ -1342,6 +1416,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent",
       "Effect: When any of your Ninjas are sent out to Attack, you can move the top card of your Deck to your Chakra area.",
     ],
+    flavor: "\"Whatever happens, I will win!!\"",
     image: "s04-m-134",
   },
   {
@@ -1358,6 +1433,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: (1) 1 of your \"Naruto Uzumaki\" Ninja cards in play, (2) Every growth coin on your Ninjas",
       "Effect: Move target (2) onto target (1).",
     ],
+    flavor: "\"After becoming the Hokage ... I'll change the Hyuga Clan!!\"",
     image: "s04-m-135",
   },
   {
@@ -1373,6 +1449,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: If any Ninja in your Team(s) uses 3 or more Jutsu cards during this turn, that Ninja's Team wins an Outstanding Victory in the Showdown regardless of the result of the Battle.",
     ],
+    flavor: "\"Shikamaruuu! Knock her down with a combo of 16 hits!!!\"",
     image: "s04-m-136",
   },
   {
@@ -1389,6 +1466,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your in-play \"Permanent\" Mission cards",
       "Effect: Return the target to its original owner's Deck. Then, shuffle the Deck.",
     ],
+    flavor: "\"Do I know this person ...?\"",
     image: "s04-m-137",
   },
   {
@@ -1405,6 +1483,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent",
       "Effect: If you have 1 or more Ninjas with \"Sharingan Eye\" in play, you can discard 1 card from your hand at the beginning of your turn to draw 1 card.",
     ],
+    flavor: "\"What happened ...? Is that all you can do?\"",
     image: "s04-m-138",
   },
   {
@@ -1420,6 +1499,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: If you give a \"Sasuke Uchiha\" in your hand a +2 Entrance cost and deploy it or put it in play by the effect of \"Growth\" during this turn, draw 3 cards.",
     ],
+    flavor: "\"Your name?\" \"Sasuke ... Uchiha.\"",
     image: "s04-m-139",
   },
   {
@@ -1436,6 +1516,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent",
       "Effect: Each player must pay 1 additional Chakra of their choice every time their Ninja uses a Jutsu card.",
     ],
+    flavor: "\"This is ... my blood!!\"",
     image: "s04-m-140",
   },
   {
@@ -1451,6 +1532,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Everytime your Team(s) wins 1 or more Battle Rewards during this turn, discard the same number of your opponent's Battle Rewards instead.",
     ],
+    flavor: "\"The work is progressing smoothly on schedule.\"",
     image: "s04-m-141",
   },
   {
@@ -1467,6 +1549,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your opponent's \"Genin\" or lower Rank Ninjas",
       "Effect: Move the target to your Village unless you already have a Ninja with the same name as the target. If the target is still in play, return it to your opponent's Village at the end of the turn.",
     ],
+    flavor: "\"One night ... Lady Hinata was nearly abducted by an unknown enemy.\"",
     image: "s04-m-142",
   },
   {
@@ -1482,6 +1565,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Only 1 of your opponent's Ninjas can use up to 1 Jutsu card during this turn.",
     ],
+    flavor: "\"This is the maximum range of his attack!!\"",
     image: "s04-m-143",
   },
   {
@@ -1498,6 +1582,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target's Team cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"There have been some changes in the tournament.\"",
     image: "s04-m-144",
   },
   {
@@ -1515,6 +1600,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target to give it -1/-1. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"I think ... I should leave her alone at the moment ....\"",
     image: "s04-m-145",
   },
   {
@@ -1530,6 +1616,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Your opponent can organize their Teams. Only \"Genin\" Ninjas can be sent out to Battle during this turn.",
     ],
+    flavor: "\"You're gonna be the heroes of this official exam!\"",
     image: "s04-m-146",
   },
   {
@@ -1547,6 +1634,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Attach this card to the target. The target cannot be healed. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"You haven't recovered from the damage from the match ...!\"",
     image: "s04-m-147",
   },
   {
@@ -1564,6 +1652,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: If the target's Team wins a Victory or an Outstanding Victory during this turn, negate all Damage it gives in the Showdown. Then, place 1 growth coin on the target.",
     ],
+    flavor: "\"You got me. ... I give up!\"",
     image: "s04-m-148",
   },
   {
@@ -1581,6 +1670,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target. The original Mental Power of the target becomes 0. Place a Ninja Blade coin symbolizing +1 Mental Power on the target at the end of each of your turns.",
     ],
+    flavor: "\"His results were way beyond my expectations! He was an absolute genius with an IQ of 200 or higher!\"",
     image: "s04-m-149",
   },
   {
@@ -1599,6 +1689,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The target cannot be sent out to Battle. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"It's a symbol of one who is bound by an inescapable fate!\"",
     image: "s04-m-150",
   },
   {
@@ -1615,6 +1706,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent",
       "Effect: No Jutsu card with the word \"seal\" in its name can be used.",
     ],
+    flavor: "\"The Curse Mark is out of control again ......\"",
     image: "s04-m-151",
   },
   {
@@ -1630,6 +1722,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Draw the same number of cards as the number of all in-play \"Ninja Dog\" Ninjas.",
     ],
+    flavor: "\"On the contrary ... I can't resist playing with it!!\"",
     image: "s04-m-152",
   },
   {
@@ -1646,6 +1739,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent (2)",
       "Effect: When a Team with both \"Kakashi Hatake\" and \"Might Guy\" is sent out to Battle and opposed, that Team wins an Outstanding Victory in the Showdown regardless of the result of the Battle.",
     ],
+    flavor: "\"That's my rival!\"",
     image: "s04-m-153",
   },
   {
@@ -1662,6 +1756,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent (4)",
       "Effect: Every Attacking Team that has a Ninja with an Entrance cost of 8 or more can only be blocked by another Team that has a Ninja with an Entrance cost of 8 or more.",
     ],
+    flavor: "\"What an incredible battle they are fighting ...\"",
     image: "s04-m-154",
   },
   {
@@ -1678,6 +1773,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent (3)",
       "Effect: If a player discard a Ninja with an Entrance cost of 6 or more as the result of the Showdown, then that player loses the game at the end of the turn. If both players discard a Ninja with an Entrance cost of 6 or more as a result of the Showdown, the Attacker wins.",
     ],
+    flavor: "\"How ominous ...\"",
     image: "s04-m-155",
   },
   {
@@ -1695,6 +1791,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target. If the target wins a Victory or an Outstanding Victory, win 1 Battle Reward.",
     ],
+    flavor: "\"It's the first A-ranked mission since the one in the Land of Waves!!\"",
     image: "s04-m-156",
   },
   {
@@ -1710,6 +1807,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Each player must discard their in-play Ninja with the highest Entrance cost. (If a player has 2 or more Ninjas that have the highest Entrance cost, that player selects and discards 1 of them.)",
     ],
+    flavor: "\"Why didn't you ... dodge my attack ...?\"",
     image: "s04-m-157",
   },
   {
@@ -1725,6 +1823,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: If all your in-play Ninjas are \"Leaf\" Ninjas, draw until you have 6 cards in your hand.",
     ],
+    flavor: "\"I am the Third Hokage, the man who inherited the will of the Hidden Leaf Village from the First and Second Hokages!!!\"",
     image: "s04-m-158",
   },
   {
@@ -1741,6 +1840,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: Every Jutsu card in your Discard Pile",
       "Effect: Return the target to its original owner's Deck. Then, shuffle the Deck.",
     ],
+    flavor: "\"Heh-heh ... Finally, you tracked me down ...\"",
     image: "s04-m-159",
   },
   {
@@ -1757,6 +1857,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Permanent (3)",
       "Effect: Every in-play \"Leaf\" Ninja gets -1/-1.",
     ],
+    flavor: "\"Your life is going to end here ...\"",
     image: "s04-m-160",
   },
   {
@@ -1774,6 +1875,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The target cannot be the user of Jutsu cards. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"Old fossil! Give my arms back!!\"",
     image: "s04-m-161",
   },
   {
@@ -1790,6 +1892,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: (1) Your \"Gaara of the Desert\", (2) X number of your in-play Ninjas",
       "Effect: Discard target (2) to place X number of Ninja Blade coin(s) symbolizing +1/+1 on target (1).",
     ],
+    flavor: "\"Love only yourself, and fight only for yourself.\"",
     image: "s04-m-162",
   },
   {
@@ -1805,6 +1908,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Search for 1 \"Platoon\" Ninja in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"If you act in a team of more than 4, which exceeds the size of the basic platoon, you lose speed and cannot hide well ...\"",
     image: "s04-m-163",
   },
   {
@@ -1822,6 +1926,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: If the target is sent out to Attack this turn, the target's Team is considered to be a Battling Team during the Showdown.",
     ],
+    flavor: "\"Let me handle this.\"",
     image: "s04-m-164",
   },
   {
@@ -1839,6 +1944,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target. The target cannot receive 2 or more Damage except as a result of the Showdown.",
     ],
+    flavor: "\"My sister should have wanted to protect you, Gaara, even after her death ...\"",
     image: "s04-m-165",
   },
   {
@@ -1856,6 +1962,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target's Team can block 2 of your opponent's Teams during this turn. (The blocked Teams combine their Team Powers in the Showdown.)",
     ],
+    flavor: "\"By the way, this is the real source of those dog footprints.\"",
     image: "s04-m-166",
   },
   {
@@ -1872,6 +1979,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
       "Target: (1) 1 of your Ninjas with \"Byakugan\", (2) All your opponent's non-\"Leaf\" Ninjas with an Entrance cost of X or less",
       "Effect: Change target (2) to injured status. X = Target (1)'s Entrance cost - 2",
     ],
+    flavor: "\"The Hyuga Clan is the most powerful in the Hidden Leaf Village .... Remember that.\"",
     image: "s04-m-167",
   },
   {
@@ -1887,6 +1995,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Move 1 \"Jonin\" Ninja in your hand to your Village.",
     ],
+    flavor: "\"I've finally caught up with you ...\"",
     image: "s04-m-168",
   },
   // ── CLIENT ──
@@ -1904,6 +2013,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: When this Client is put in play while you have 2 or more \"Female\" Ninjas or Clients in your Village, you can look at all the cards in your opponent's hand to search for 1 Jutsu or Mission card and discard it.",
     ],
+    flavor: "\"Don't get so full of yourself!\"",
     image: "s04-c-015",
   },
   {
@@ -1920,6 +2030,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: If you play the \"Ichiraku Noodle Shop\" Mission card, you can heal 1 additional Ninja.",
     ],
+    flavor: "\"Here you go.\"",
     image: "s04-c-016",
   },
   {
@@ -1936,6 +2047,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: At the beginning of your turn, you can return a \"Ichiraku Noodle Shop\" Mission card in your Discard Pile to its original owner's Deck. Then, shuffle the Deck.",
     ],
+    flavor: "\"Thank you. Have a nice day!\"",
     image: "s04-c-017",
   },
   {
@@ -1952,6 +2064,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Everytime you put a Ninja in play by the effect of \"Growth,\" draw 1 card.",
     ],
+    flavor: "\"All right! Then, I'll be the Fifth Hokage!\"",
     image: "s04-c-018",
   },
   {
@@ -1968,6 +2081,7 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [
       "Effect: Everytime you heal 1 of your injured Ninjas, draw 1 card.",
     ],
+    flavor: "\"Someone precious?\"",
     image: "s04-c-019",
   },
 ];

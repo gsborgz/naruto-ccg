@@ -25,6 +25,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Fast Growth]",
       "When this Ninja is put in play by the effect of \"Growth,\" place an additional growth coin on top.",
     ],
+    flavor: "\"I've gotten stronger ...!\"",
     image: "s03-n-085",
   },
   {
@@ -45,6 +46,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Flowering Ability]",
       "Valid: During the Exchange of Jutsu, select 1 of the characteristics of an in-play Ninja and discard 1 Chakra to give this Ninja the selected characteristic during this turn.",
     ],
+    flavor: "\"From here on in ... it's all original.\"",
     image: "s03-n-086",
   },
   {
@@ -65,6 +67,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Kunoichi Pride]",
       "Valid: While this Ninja is Battling against a \"Female\" Ninja, you can charge 1 Chakra to draw 1 card.",
     ],
+    flavor: "\"When this goes on my forehead .. Then that's when I'll become a ... true shinobi who won't lose to you.\"",
     image: "s03-n-087",
   },
   {
@@ -85,6 +88,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Acting]",
       "You can negate 1 Jutsu card being used by this Ninja and return it to your hand. Then, move 1 of the cards in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Gotcha, Sakura!\"",
     image: "s03-n-088",
   },
   {
@@ -105,6 +109,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Smarty Pants]",
       "Valid: The value of this Ninja's \"Mental Power\" is considered to be the same as the number of cards in your hand, +1.",
     ],
+    flavor: "\"Look at that thread you're holding. Don't you find it a little strange that it would even cast a shadow at this height?\"",
     image: "s03-n-089",
   },
   {
@@ -125,6 +130,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Human Sphere]",
       "Valid: This Ninja's Power cannot be changed by the effect of your opponent's Jutsu cards.",
     ],
+    flavor: "\"This will protect my ears from his attacks.\"",
     image: "s03-n-090",
   },
   {
@@ -145,6 +151,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Ninja Art of Beast Mimicry]",
       "When this Ninja is sent out to Battle and opposed, look at the cards in your opponent's hand.",
     ],
+    flavor: "\"I told you it was gonna get serious.\"",
     image: "s03-n-091",
   },
   {
@@ -165,6 +172,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[True Ace in the Hole]",
       "When this Ninja is put in play by the effect of \"Growth,\" you can draw the bottom card from your Deck.",
     ],
+    flavor: "\"You see, while an ace in the hole is good ... two aces are better.\"",
     image: "s03-n-092",
   },
   {
@@ -185,6 +193,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[My Nindo]",
       "Valid: If this Ninja is in injured status and receives Damage, flip a Ninja Blade coin. If it's heads, negate the Damage.",
     ],
+    flavor: "\"Not in front of the person I admire most, who's finally seeing the real me!\"",
     image: "s03-n-093",
   },
   {
@@ -205,6 +214,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Releasing the Gates]",
       "Valid: During the Exchange of Jutsu, discard X number of your Chakras to give this Ninja +X/+0 during this turn. Then, discard this Ninja at the end of the turn.",
     ],
+    flavor: "\"Now is the time to prove and protect my Ninja Philosophy!!\"",
     image: "s03-n-094",
   },
   {
@@ -225,6 +235,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Attack on Chakra Point]",
       "Valid: 1 Head Ninja Battling against this Ninja cannot be the user of Jutsu cards.",
     ],
+    flavor: "\"So that's it, huh? That's all there is to the Main Branch's power?\"",
     image: "s03-n-095",
   },
   {
@@ -245,6 +256,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Never Missing the Target]",
       "This Ninja can use the \"Kunai\" Jutsu card without paying its Jutsu cost.",
     ],
+    flavor: "\"She must have dodged them somehow... But if I try a different approach ....\"",
     image: "s03-n-096",
   },
   {
@@ -265,6 +277,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Kunoichi Education]",
       "While this Ninja is Battling as the Blocker, this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
     ],
+    flavor: "\"Today's class is flower arranging.\"",
     image: "s03-n-097",
   },
   {
@@ -285,6 +298,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Medical Ninjutsu]",
       "Valid: When this Ninja is sent out to Attack, you can heal 1 of your Ninjas at the end of the turn.",
     ],
+    flavor: "\"Get her to the emergency room. Stat!!\"",
     image: "s03-n-098",
   },
   {
@@ -302,6 +316,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     injured: { combat: 3, support: 1 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"Then, you mean ...!\"",
     image: "s03-n-099",
   },
   {
@@ -322,6 +337,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Judgment]",
       "When another Ninja in this Ninja's Team is discarded as the result of the Showdown, send it to either the top or bottom of its original owner's Deck.",
     ],
+    flavor: "\"I might occasionally intervene if a match seems hopeless. To save as many lives as possible..\"",
     image: "s03-n-100",
   },
   {
@@ -342,6 +358,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Pervy Sage]",
       "While this Ninja is in your hand and your opponent's Village has a \"Female\" Ninja that is not \"Genin,\" this Ninja gets -1 Entrance cost.",
     ],
+    flavor: "\"Oh, please.\"",
     image: "s03-n-101",
   },
   {
@@ -363,6 +380,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Valid: This Ninja cannot be the user of Jutsu cards.",
       "Valid: If this Ninja is discarded after being in play, move it to the bottom of your Deck.",
     ],
+    flavor: "\"Croak.\"",
     image: "s03-n-102",
   },
   {
@@ -383,6 +401,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Sound Conduction]",
       "Valid: The Damage inflicted by this Ninja's Team at the Showdown cannot be reduced.",
     ],
+    flavor: "\"No ... it's over.\"",
     image: "s03-n-103",
   },
   {
@@ -403,6 +422,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Secret Weapon]",
       "Valid: If you have no cards in your hand when this Ninja is sent out to Battle, draw 1 card.",
     ],
+    flavor: "\"Like you said yourself ... always have an ace in the hole ... right?\"",
     image: "s03-n-104",
   },
   {
@@ -423,6 +443,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Hypnotic Sound]",
       "When you get a Ninja Blade coin flip effect by the effect of your own Jutsu card, draw 1 card. This effect can only be applied once per Ninja Blade coin flip effect.",
     ],
+    flavor: "\"It won't work. You can't block the sound out once it's inside your head. It's useless.\"",
     image: "s03-n-105",
   },
   {
@@ -443,6 +464,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Chakra Absorption]",
       "When this Ninja is sent out to Attack, you can discard 1 of your opponent's Chakras.",
     ],
+    flavor: "\"You're just noticing it now?\"",
     image: "s03-n-106",
   },
   {
@@ -463,6 +485,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Elasticity]",
       "Valid: During the Exchange of Jutsu, discard 1 of your Chakras to give this Ninja -1/+1 during the turn. This effect can be used up to twice per turn.",
     ],
+    flavor: "\"I dislocate every one of my joints, softening my body. Then with my Chakra, I can control it perfectly.\"",
     image: "s03-n-107",
   },
   {
@@ -483,6 +506,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Withdrawal]",
       "Valid: During your Mission Phase, you can move this Ninja to the top of the original owner's Deck to move 1 in-play \"Permanent\" Mission card to its original owner's Chakra area.",
     ],
+    flavor: "\"Wish I could stick around and play a little longer...\"",
     image: "s03-n-108",
   },
   {
@@ -503,6 +527,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Late Arrival]",
       "Valid: This Ninja can neither be included in any Teams nor be sent out to Battle during the turn it is put in play.",
     ],
+    flavor: "\"Hey, guys. Good morning. I, uh, kind of got lost on the road of life.\"",
     image: "s03-n-109",
   },
   {
@@ -523,6 +548,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Passionate Teacher]",
       "Valid: This Ninja can use Jutsu cards with \"Requirements: Rock Lee.\"",
     ],
+    flavor: "\"I'm gonna teach you a new technique ...\"",
     image: "s03-n-110",
   },
   {
@@ -543,6 +569,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Ninja Art of Beast Mimicry]",
       "Valid: When this Ninja is in the same Team as \"Kiba Inuzuka\" and is sent out to Attack, discard the top card of your opponent's Deck.",
     ],
+    flavor: "\"Woof!\"",
     image: "s03-n-111",
   },
   {
@@ -563,6 +590,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Overflowing Madness]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, you can give 1 Damage to 1 of the other Ninjas in this Ninja's Team to win 1 additional Battle Reward.",
     ],
+    flavor: "\"Heh-heh ...\"",
     image: "s03-n-112",
   },
   {
@@ -583,6 +611,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Audacious Grin]",
       "Valid: All \"Puppet\" Ninjas in this Ninja's Team gets +1/+1.",
     ],
+    flavor: "\"You're the one who's going to die here.\"",
     image: "s03-n-113",
   },
   {
@@ -603,6 +632,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Wind Charmer]",
       "In addition to paying the Jutsu cost, your opponent must discard 1 Chakra to make a Ninja in this Ninja's Team the target of Jutsu cards.",
     ],
+    flavor: "\"Wasn't much of a match ... Kinda boring..\"",
     image: "s03-n-114",
   },
   {
@@ -623,6 +653,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Self-Sacrificing Attack]",
       "If this Ninja's Team is Defeated, Completely Defeated, or draws, give 1 Damage to the Head Ninja that just Battled against this Ninja.",
     ],
+    flavor: "\"I had no fear of defeat right from the start of our match.\"",
     image: "s03-n-115",
   },
   {
@@ -643,6 +674,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Fire Style!]",
       "Valid: When this Ninja becomes the user of a Jutsu card with a \"Fire\" symbol, it gets +1/+1 during the turn.",
     ],
+    flavor: "\"Rat, Tiger, Dog, Ox, Hare, Tiger ...!\"",
     image: "s03-n-116",
   },
   {
@@ -663,6 +695,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Sand Barrier]",
       "Valid: This Ninja is unaffected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"Is that all you can do?\"",
     image: "s03-n-117",
   },
   {
@@ -683,6 +716,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Last Minute Success]",
       "Valid: While this Ninja is in injured status, it's Combat Attribute becomes \"Oil.\"",
     ],
+    flavor: "\"Yes... it's that chakra!\"",
     image: "s03-n-118",
   },
   {
@@ -703,6 +737,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Windmill of Shadows]",
       "Valid: If your opponent's Ninja uses a Jutsu card to negate a Jutsu card used by this Ninja, they must discard 2 Chakras in addition to paying their card's Jutsu cost.",
     ],
+    flavor: "\"Demon Wind Shuriken ...\"",
     image: "s03-n-119",
   },
   {
@@ -723,6 +758,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[A Sympathy Visit]",
       "When this Ninja is put in play, you can move the same number of cards in your Discard pile as your injured Ninjas to the top of your Deck. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'm hoping with all my heart that he'll feel better soon!\"",
     image: "s03-n-120",
   },
   {
@@ -744,6 +780,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "When this Ninja is put in play, draw 1 card.",
       "Valid: This Ninja's Team cannot win any Battle Rewards if your opponent has a \"Satoosa\" or higher Rank Ninja in play.",
     ],
+    flavor: "\"Aaagh!\"",
     image: "s03-n-121",
   },
   {
@@ -764,6 +801,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Detecting a Plan]",
       "During your opponent's Mission Phase, you can negate and discard 1 of the Mission cards being played. Then, discard this Ninja at the end of the turn.",
     ],
+    flavor: "\"I can't believe this ...!\"",
     image: "s03-n-122",
   },
   {
@@ -784,6 +822,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Energizing the Brain]",
       "When this Ninja is put in play, flip a Ninja Blade coin. If it's heads, place a growth coin on this Ninja.",
     ],
+    flavor: "\"... I've gotten out of shape.\"",
     image: "s03-n-123",
   },
   {
@@ -804,6 +843,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Barbecue]",
       "Valid: If your Team with only \"Genin\" Ninja(s) is sent out to Attack and is Defeated, Completely Defeated, or draws, you can draw 1 card.",
     ],
+    flavor: "\"Well ... he didn't win, but I'll treat him to a barbecue anyway.\"",
     image: "s03-n-124",
   },
   {
@@ -824,6 +864,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Daughter of the Main Branch]",
       "Valid: Any Ninja(s) with \"Byakugan\" in your hand gets -1 Entrance cost.",
     ],
+    flavor: "\"Yes, father.\"",
     image: "s03-n-125",
   },
   {
@@ -844,6 +885,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Secret Mark]",
       "Valid: You can discard 1 of your Chakras during your Mission Phase to make the Power of 1 of your opponent's Ninjas with \"Byakugan\" 0/0 during the turn. This effect cannot be used against \"Main Branch\" Ninjas.",
     ],
+    flavor: "\"Never forget your destiny ...!!\"",
     image: "s03-n-126",
   },
   {
@@ -864,6 +906,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Releasing the Seal]",
       "At the beginning of your turn, you can discard 1 of the cards in your hand to place 1 growth coin on a Ninja with \"Growth\" if it does not already have one.",
     ],
+    flavor: "\"Don't worry. I just stimulated some acupuncture points to relax your body.\"",
     image: "s03-n-127",
   },
   {
@@ -885,6 +928,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "This Ninja cannot be deployed without using the Jutsu card \"Summoning Jutsu\".",
       "Valid: This Ninja can only be sent out to Battle with Ninjas with an \"Oil\" Combat Attribute in the same Team.",
     ],
+    flavor: "\"Hey, kid! Do you know whose head you are running around on?\"",
     image: "s03-n-128",
   },
   {
@@ -925,6 +969,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Cleaning Up]",
       "If this Ninja is sent out to Attack and remains in your Village at the end of the turn, your opponent selects and discards 1 of their in-play Ninjas.",
     ],
+    flavor: "\"There is only one rat to get rid of. No sweat.\"",
     image: "s03-n-130",
   },
   {
@@ -945,6 +990,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Coward]",
       "Valid: This Ninja cannot be sent out to Attack.",
     ],
+    flavor: "\"I just succeeded my father ...\"",
     image: "s03-n-131",
   },
   {
@@ -965,6 +1011,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Easy Power]",
       "You can discard 1 of your Chakras to give this Ninja +2/+2 during the turn. Then, place a Ninja Blade coin symbolizing -1/-1 on this Ninja at the end of the turn.",
     ],
+    flavor: "\"I've finally got the Hero's Water!\"",
     image: "s03-n-132",
   },
   {
@@ -985,6 +1032,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Special Wire]",
       "If this Ninja's Team wins a Victory or an Outstanding Victory, place a Ninja Blade coin symbolizing -1/-1 on 1 Ninja that just Battled against this Ninja.",
     ],
+    flavor: "\"Don't think of escaping, or you'll have your arms slashed.\"",
     image: "s03-n-133",
   },
   {
@@ -1005,6 +1053,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Shrewd Man]",
       "While this Ninja is Battling against your opponent's Team that has 4 or less Team Power, it gets +1/+1 during the turn.",
     ],
+    flavor: "\"Well, let's see how strong our hero is!\"",
     image: "s03-n-134",
   },
   {
@@ -1025,6 +1074,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "[Smartest Ninja in the Hidden Rain Village]",
       "If this Ninja is the Head Ninja and Completely Defeated, you can select 1 of your Stand-By Ninjas and discard it to negate the Damage to this Ninja.",
     ],
+    flavor: "\"Hmmph. It's an old story ...\"",
     image: "s03-n-135",
   },
   // ── JUTSU ──
@@ -1042,6 +1092,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin X times. Count the number of times you get heads and give the same number of Damage to the target.",
     ],
+    flavor: "\"Na! Ru! To! Uzumaki Barrage!!\"",
     image: "s03-j-085",
   },
   {
@@ -1058,6 +1109,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin. If it's heads, discard the target.",
     ],
+    flavor: "\"Take this! Primary Lotus!\"",
     image: "s03-j-086",
   },
   {
@@ -1074,6 +1126,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: User",
       "Effect: The original value of the target's Combat is tripled during this turn. The target receives 1 Damage at the end of the Showdown.",
     ],
+    flavor: "\"The Third Gate, Gate of Life, Release!\"",
     image: "s03-j-087",
   },
   {
@@ -1089,6 +1142,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target gets +2/+2 during this turn and the next turn.",
     ],
+    flavor: "\"Hey! Isn't this considered 'doping?'\"",
     image: "s03-j-088",
   },
   {
@@ -1105,6 +1159,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target gets \"Animal\" during this turn.",
     ],
+    flavor: "\"Ninja Art of Beast Mimicry: Man Beast Clone!\"",
     image: "s03-j-089",
   },
   {
@@ -1121,6 +1176,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: Every \"Animal\" Ninja in the user's Team",
       "Effect: Discard the top 2 cards of your opponent's Deck for each target.",
     ],
+    flavor: "\"Now we gotcha! Man-Beast: Ultimate Taijutsu!!\"",
     image: "s03-j-090",
   },
   {
@@ -1137,6 +1193,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin 4 times. Give Damage to the target equal to the number of heads you get, -1.",
     ],
+    flavor: "\"I'm not done yet!!\"",
     image: "s03-j-091",
   },
   {
@@ -1152,6 +1209,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Return the target and all the cards in your opponent's hand to their original owner's Deck(s) and shuffle.",
     ],
+    flavor: "\"Five-Pronged ... Seal!\"",
     image: "s03-j-092",
   },
   {
@@ -1167,6 +1225,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets +1/+1 during this turn or gets + 1 \"Mental Power.\"",
     ],
+    flavor: "\"Heh! Oh please, not that old trick!\"",
     image: "s03-j-093",
   },
   {
@@ -1182,6 +1241,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin. If it's heads, the target gets -2 \"Mental Power\" during this turn. If it's tails, the target gets -1 \"Mental Power\" during this turn.",
     ],
+    flavor: "\"Those who hear the sound of my bells fall into that state.\"",
     image: "s03-j-094",
   },
   {
@@ -1196,6 +1256,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Select and discard up to 2 of your opponent's Chakras.",
     ],
+    flavor: "\"... You're ... feeding on my Chakra ...\"",
     image: "s03-j-095",
   },
   {
@@ -1211,6 +1272,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target gets -X/-X during this turn. The maximum value of X is the larger of either the user's Combat or Support value.",
     ],
+    flavor: "\"The more you struggle, the tighter I'll squeeze.\"",
     image: "s03-j-096",
   },
   {
@@ -1225,8 +1287,9 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute",
       "Target: All of your Battling Ninjas",
-      "Effect: The target cannot be the target of your opponent's Jutsu cards during this turn. In addition, the target gets \"Clone status\" during this turn.",
+      "Effect: The target cannot be the target of your opponent's Jutsu cards during this turn. In addition, the target gets \"Clone status.\"",
     ],
+    flavor: "\"Now it's our turn to show Ninjutsu!\"",
     image: "s03-j-097",
   },
   {
@@ -1243,6 +1306,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your opponent's Back Ninjas Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"They hide, using Earth Style, and attack while we are focused on their clones!\"",
     image: "s03-j-098",
   },
   {
@@ -1259,6 +1323,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: User",
       "Effect: Place a Ninja Blade coin (symbolizing an Armor coin) on the target. A Ninja with 1 or more Armor coins can reduce its Damage by 1 by removing 1 Armor coin.",
     ],
+    flavor: "\"Gaara can also wear the sand like armor, as a last line of defense.\"",
     image: "s03-j-099",
   },
   {
@@ -1275,6 +1340,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Discard the target.",
     ],
+    flavor: "\"There wasn't any pain. I crushed him with more force than necessary, so it was over quickly.\"",
     image: "s03-j-100",
   },
   {
@@ -1291,6 +1357,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Return the target to its original owner's hand.",
     ],
+    flavor: "\"I can take over your body and make you say that you're giving up on this match!\"",
     image: "s03-j-101",
   },
   {
@@ -1307,6 +1374,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: User",
       "Effect: If the target's Team wins a Victory or an Outstanding Victory during this turn, discard 2 of your opponent's Battle Rewards.",
     ],
+    flavor: "\"I'm just a little bit chubby, okay?\"",
     image: "s03-j-102",
   },
   {
@@ -1323,6 +1391,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets +2/+2 during this turn. In addition, if the target's Team wins a Victory or an Outstanding Victory, select 1 of the cards in your opponent's hand at random and discard it.",
     ],
+    flavor: "\"The Hyuga clan has a special Taijutsu that has been passed down from generation to generation.\"",
     image: "s03-j-103",
   },
   {
@@ -1337,6 +1406,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Search for any number of \"Kunai\" Jutsu cards in your Deck and move them to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"How about this?!\"",
     image: "s03-j-104",
   },
   {
@@ -1352,6 +1422,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: X number of \"Kunai\" Jutsu cards in your Chakra area",
       "Effect: Return the target to its original owner's hand. X (the Jutsu cost) can only be paid by Chakras with the \"Earth\" symbol.",
     ],
+    flavor: "\"Rising Twin Dragons!\"",
     image: "s03-j-105",
   },
   {
@@ -1368,6 +1439,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin. If it's heads, discard the target. If it's tails, give 1 Damage to the target.",
     ],
+    flavor: "\"His arm becomes as powerful as the sharpest blade that can sever anything.\"",
     image: "s03-j-106",
   },
   {
@@ -1384,6 +1456,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: All of your opponent's healthy Ninjas",
       "Effect: Flip a Ninja Blade coin for each target. If it's heads, turn the Ninja to injured status.",
     ],
+    flavor: "\"But, next time you see me ... will be the last time you see anything.\"",
     image: "s03-j-107",
   },
   {
@@ -1399,6 +1472,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Requirements: \"Byakugan\"",
       "Effect: Your opponent discards X number of cards from their hand at random. The maximum value of X is 3.",
     ],
+    flavor: "\"Their Byakugan... There are few things invisible to those eyes.\"",
     image: "s03-j-108",
   },
   {
@@ -1414,6 +1488,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Requirements: \"Oil\" Combat Attribute",
       "Effect: Search for 1 \"Ninja Toad\" Ninja in your Deck and place it in any position in the user's Team. (The Entrance cost of the Ninja has to be equal or less than your Turn Marker.) Then, shuffle your Deck.",
     ],
+    flavor: "\"Summoning Jutsu!\"",
     image: "s03-j-109",
   },
   {
@@ -1430,6 +1505,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 \"Male\" Ninja Battling against the user",
       "Effect: The user changes from \"Male\" to \"Female\" during the turn. Then, move the target to the back of the user's Team as a Back Ninja. Return the target to its original Team after the Showdown.",
     ],
+    flavor: "\"Then, you'll assist my training? ♥\"",
     image: "s03-j-110",
   },
   {
@@ -1446,6 +1522,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Your opponent flips a Ninja Blade coin twice. If they get heads both times, this effect is negated. If not, discard the target.",
     ],
+    flavor: "\"Hidden Lotus!\"",
     image: "s03-j-111",
   },
   {
@@ -1460,6 +1537,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Discard the top card of your opponent's Deck.",
     ],
+    flavor: "\"That's what he gets for coming late! Surpri-ise!\"",
     image: "s03-j-112",
   },
   {
@@ -1475,6 +1553,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: The target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"Leaf Village Secret Finger Jutsu! A Thousand Years of Death!\"",
     image: "s03-j-113",
   },
   {
@@ -1491,6 +1570,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin 3 times. If you get heads once, the target gets -2/-2 during this turn. If you get heads 2 or more times, give 1 Damage to the target .",
     ],
+    flavor: "\"Leaf Village Style ... Crescent Moon Dance!!\"",
     image: "s03-j-114",
   },
   {
@@ -1505,6 +1585,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Select 1 symbol. Search for 1 card with the selected symbol in your Deck and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"Walk on the hot water ... ?\"",
     image: "s03-j-115",
   },
   {
@@ -1520,6 +1601,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: User",
       "Effect: The target's Combat Attribute is changed to \"Sound\" during this turn. In addition, the target gets the following text during this turn: \"If the target's Team is Defeated or Completely Defeated, give 1 Damage to the Head Ninja that just Battled against the target.\"",
     ],
+    flavor: "\"Do you hear that?... This device amplifies the vibrations of the impact, transforming them into a wave of sound.\"",
     image: "s03-j-116",
   },
   {
@@ -1536,6 +1618,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 during the turn. X = the target's original \"Injured Status\" Combat.",
     ],
+    flavor: "\"Waterfall Village Style ... Water Cutting Blade!\"",
     image: "s03-j-117",
   },
   {
@@ -1551,6 +1634,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Jutsu card with the \"Fire\" symbol being played",
       "Effect: Negate and discard the target.",
     ],
+    flavor: "\"Agh!\"",
     image: "s03-j-118",
   },
   {
@@ -1565,6 +1649,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Select 1 card in your opponent's hand at random and discard it.",
     ],
+    flavor: "\"Shut up, brats!\"",
     image: "s03-j-119",
   },
   {
@@ -1580,6 +1665,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+5 during the turn. If the target is not a \"Satoosa\" or higher Rank Ninja, discard it at the end of this turn.",
     ],
+    flavor: "\"Drinking this increases the amount of Chakra by dozens of times.\"",
     image: "s03-j-120",
   },
   {
@@ -1595,6 +1681,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Return the target to its original owner's hand.",
     ],
+    flavor: "\"This is a carrier kite used by the Hidden Leaf Village.\"",
     image: "s03-j-121",
   },
   {
@@ -1609,6 +1696,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Flip a Ninja Blade coin. If it's heads, draw 2 cards. If it's tails, draw 1 card. Then, move the same number of cards that you drew to your Chakra area.",
     ],
+    flavor: "\"I didn't expect the cliff-climbing training to be so tough ...\"",
     image: "s03-j-122",
   },
   {
@@ -1624,6 +1712,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target. This Jutsu card cannot be negated.",
     ],
+    flavor: "\"No one can stop my wind blade ...\"",
     image: "s03-j-123",
   },
   {
@@ -1639,6 +1728,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: Your opponent's Battle Rewards",
       "Effect: Search for 1 Mission card in the target and send it to its original owner's Discard Pile.",
     ],
+    flavor: "\"You see, it wasn't meant for Naruto so much as for anybody who might happen to be nearby trying to eavesdrop on us.\"",
     image: "s03-j-124",
   },
   {
@@ -1654,6 +1744,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja with a lower Entrance cost than the user",
       "Effect: The target's Power cannot be added to the Team Power during this turn.",
     ],
+    flavor: "\"With such a difference between our levels, you're no match for me.\"",
     image: "s03-j-125",
   },
   {
@@ -1669,6 +1760,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 5 of your opponent's Battle Rewards",
       "Effect: Return the target to its original owner's hand. Then, discard until you have 6 or less cards in your hand.",
     ],
+    flavor: "\"Five Pronged Seal Release!\"",
     image: "s03-j-126",
   },
   // ── MISSION ──
@@ -1687,6 +1779,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Effect: You can add the following effect to your \"Shadow Clone Jutsu\" Jutsu card:",
       "\"Effect: Change the Combat Attribute of the user to the same one as another of your in-play Ninjas during this turn.\"",
     ],
+    flavor: "\"I got him; he totally fell for it!\"",
     image: "s03-m-085",
   },
   {
@@ -1702,6 +1795,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Select a card type (except Client). Then, look at 1 of the cards in your opponent's hand. If that card is not of the type you selected, move it to the original owner's Chakra area. If that card is of the type you selected, discard 1 card in your hand.",
     ],
+    flavor: "\"When you throw a stone without aiming at the target, you somehow hit it. This is an application of this law!\"",
     image: "s03-m-086",
   },
   {
@@ -1718,6 +1812,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Counter",
       "Effect: Skip the Organization Phase of this turn.",
     ],
+    flavor: "\"In case I forgot to mention it, from here on in, you fight as individuals ...\"",
     image: "s03-m-087",
   },
   {
@@ -1734,6 +1829,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Ninja in your Chakra area",
       "Effect: Move the target to your Village. The target is discarded at the end of this turn. However, you cannot select a Ninja as target if another Ninja in your Village has the same name.",
     ],
+    flavor: "\"Not even conscious, and still determined to show the world what you can do...\"",
     image: "s03-m-088",
   },
   {
@@ -1750,6 +1846,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Place X number of Ninja Blade coins symbolizing +1/+1 on the target. X = the number of \"Make-Out Paradise\" Mission cards in your Chakra area.",
     ],
+    flavor: "\"Hmm... Not bad.\"",
     image: "s03-m-089",
   },
   {
@@ -1767,6 +1864,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Effect: You can add the following effect to your \"Sharingan Eye\" Jutsu card:",
       "\"Effect: The user gets 1 of the characteristics of another of your in-play Ninjas during this turn.\"",
     ],
+    flavor: "\"You must have used your Sharingan to copy it when you fought with Rock Lee that time..\"",
     image: "s03-m-090",
   },
   {
@@ -1783,6 +1881,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent (2)",
       "Effect: Your opponent must play the game showing you all the cards in their hand.",
     ],
+    flavor: "\"Never underestimate a canine's olfactory acuity!\"",
     image: "s03-m-091",
   },
   {
@@ -1799,6 +1898,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: (1) Every healthy Ninja, (2) Every injured Ninja",
       "Effect: Injure target (1). Heal target (2).",
     ],
+    flavor: "\"Cuz I'm the... top dog around here.\"",
     image: "s03-m-092",
   },
   {
@@ -1815,6 +1915,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: Every Mission card in both players' hands gets +1 Entrance cost.",
     ],
+    flavor: "\"You know how it is in the game of chess ... some pieces must be sacrificed.\"",
     image: "s03-m-093",
   },
   {
@@ -1831,6 +1932,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: Every Mission card in both players' hands gets -1 Entrance cost.",
     ],
+    flavor: "\"This village that appeared so mysteriously ... The Sound Village - It's my creation.\"",
     image: "s03-m-094",
   },
   {
@@ -1846,6 +1948,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Your opponent cannot use any Mission cards during the next turn.",
     ],
+    flavor: "\"Don't use your Sharingan.\"",
     image: "s03-m-095",
   },
   {
@@ -1861,6 +1964,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Draw 2 cards. While this card is in your Chakra area, the original owner of this card cannot deploy any Ninjas.",
     ],
+    flavor: "\"Might blow my cover. Wouldn't be much use as a spy after that.\"",
     image: "s03-m-096",
   },
   {
@@ -1876,6 +1980,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Both player shuffle their Decks.",
     ],
+    flavor: "\"!!!\"",
     image: "s03-m-097",
   },
   {
@@ -1892,6 +1997,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent (2)",
       "Effect: All your Ninjas get +1 \"Mental Power.\"",
     ],
+    flavor: "\"The wise shinobi is the one who carefully scouts the physical layout of the battlefield....\"",
     image: "s03-m-098",
   },
   {
@@ -1908,6 +2014,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: Change the number of Battle Rewards required to win the game to 12. This card cannot be used if your opponent has 5 or more Battle Rewards.",
     ],
+    flavor: "\"We have to have a preliminary exam before we can move onto the real one.\"",
     image: "s03-m-099",
   },
   {
@@ -1924,6 +2031,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: (1) 1 of your Ninjas, (2) 1 of your opponent's Ninjas",
       "Effect: During this turn, if target (1) is sent out to Attack by itself, target (2) must block target (1), if possible.",
     ],
+    flavor: "\"The names of each pair of opponents are chosen completely at random. Before each match these names will appear on the display.\"",
     image: "s03-m-100",
   },
   {
@@ -1940,6 +2048,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: Every Ninja gets -1/-1. This effect cannot be duplicated.",
     ],
+    flavor: "\"Watch out. There's something weird about it..\"",
     image: "s03-m-101",
   },
   {
@@ -1957,6 +2066,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your injured Ninjas",
       "Effect: Heal the target.",
     ],
+    flavor: "\"Just take it from her, Naruto!\"",
     image: "s03-m-102",
   },
   {
@@ -1974,6 +2084,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Effect: You can add the following effect to the \"Byakugan\" Jutsu card:",
       "\"Effect: Look at the top 4 cards of your Deck and return them in any order you like.\"",
     ],
+    flavor: "\"My eyes can't be deceived.\"",
     image: "s03-m-103",
   },
   {
@@ -1990,6 +2101,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: (1) 1 of your Ninjas, (2) 1 Ninja with the same name as target (1)",
       "Effect: Return target (1) to its original owner's hand. Then, move target (2) to the top of its original owner's Deck.",
     ],
+    flavor: "\"Yes. Hmm... in the way a branch of a great tree is related to its trunk... They're more like cousins, technically.\"",
     image: "s03-m-104",
   },
   {
@@ -2006,6 +2118,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 Jutsu card in your Discard Pile",
       "Effect: Move the target to the top of your Deck.",
     ],
+    flavor: "\"Now ... It's my turn, so say goodbye.\"",
     image: "s03-m-105",
   },
   {
@@ -2021,6 +2134,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: When any of your Ninjas are discarded after being in play during this turn, you can move 1 \"Jonin\" Ninja from your hand to your Village.",
     ],
+    flavor: "\"Why are you and the other Jonin butting in?!\"",
     image: "s03-m-106",
   },
   {
@@ -2036,6 +2150,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Discard 1 Ninja in your hand to search for 1 non-\"Leaf\" Ninja in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"If you leave this place and come with me, I will make you strong, boy. Follow me.\"",
     image: "s03-m-107",
   },
   {
@@ -2052,6 +2167,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: X number of the cards in your Discard Pile",
       "Effect: Move the target to the top of your Deck in any order you like. This effect can be used only when you have 1 or more \"Female\" Ninjas in play. X = the number of your Chakras.",
     ],
+    flavor: "\"Stop... Please...\"",
     image: "s03-m-108",
   },
   {
@@ -2067,6 +2183,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Only \"Female\" Ninjas can be sent out to Battle during this turn. Your opponent can organize Teams when this card is played.",
     ],
+    flavor: "\"No holding back ... A fair fight!\"",
     image: "s03-m-109",
   },
   {
@@ -2083,6 +2200,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: Your \"Rock Lee\"",
       "Effect: Place 1 growth coin on the target.",
     ],
+    flavor: "\"You have the gift of perseverance. And that's what makes you a genius.\"",
     image: "s03-m-110",
   },
   {
@@ -2099,6 +2217,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your opponent's \"Rogue Ninjas\"",
       "Effect: Move the target to your Village unless you already have a Ninja with the same name as the target. Return the target to its original owner's Village at the end of the turn.",
     ],
+    flavor: "\"Think of me as but a weapon to be kept at your side and used as you see fit.\"",
     image: "s03-m-111",
   },
   {
@@ -2115,6 +2234,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: All Ninjas of the highest Rank that are currently in play get +1/+1. This effect cannot be duplicated.",
     ],
+    flavor: "\"Kakashi-sensei! ... He's alive!\"",
     image: "s03-m-112",
   },
   {
@@ -2131,6 +2251,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: During the Exchange of Jutsu, you can discard the top card of your Deck to change the position of the Ninjas in 1 of your Teams.",
     ],
+    flavor: "\"You see, buddy, that old-fashioned Taijutsu stuff won't work against us.\"",
     image: "s03-m-113",
   },
   {
@@ -2147,6 +2268,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: You can organize Teams with 4 Ninjas.",
     ],
+    flavor: "\"Squad seven, go!\"",
     image: "s03-m-114",
   },
   {
@@ -2163,6 +2285,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: No Ninja can be healed.",
     ],
+    flavor: "\"He'll never recover enough to resume his life as a Ninja ...\"",
     image: "s03-m-115",
   },
   {
@@ -2179,6 +2302,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: You can charge Chakra during the Exchange of Jutsu.",
     ],
+    flavor: "\"You've been living my body so long... Give me your chakra as a rent!\"",
     image: "s03-m-116",
   },
   {
@@ -2195,6 +2319,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: If any of your Ninjas are discarded after being in play, they are sent to their original owner's Chakra area instead of the Discard Pile.",
     ],
+    flavor: "\"He sacrificed his life to save our village\"",
     image: "s03-m-117",
   },
   {
@@ -2210,6 +2335,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: You can show 1 \"Ninja Toad\" Ninja in your hand to your opponent and move it to the bottom of your Deck to draw 3 cards.",
     ],
+    flavor: "\"I'll give you the answer! I am a sage associated with toad spirits from Mt. Myoboku and therefore generally known as 'Toad Sage'!!\"",
     image: "s03-m-118",
   },
   {
@@ -2225,6 +2351,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Search for 1 \"Sasuke Uchiha\" with \"Growth\" in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck. This effect cannot be used unless you have \"Sasuke Uchiha\" in play.",
     ],
+    flavor: "\"One more time, Sasuke ...\"",
     image: "s03-m-119",
   },
   {
@@ -2241,6 +2368,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: If your Team wins an Outstanding Victory by a difference of 8 or more in Team Power, discard every Ninja Battling against the Team.",
     ],
+    flavor: "\"She shut down Tenten's weapons attack like it was nothing!\"",
     image: "s03-m-120",
   },
   {
@@ -2257,6 +2385,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent (1)",
       "Effect: Neither player can deploy any Ninjas. This card cannot be used during the turn in which a Ninja has been deployed.",
     ],
+    flavor: "\"Since I've come this far I'll see it through.\"",
     image: "s03-m-121",
   },
   {
@@ -2273,6 +2402,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: Every injured Ninja",
       "Effect: Heal the target.",
     ],
+    flavor: "\"Phew. Nothing is better than a soak after training ...\"",
     image: "s03-m-122",
   },
   {
@@ -2289,6 +2419,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent (3)",
       "Effect: When your opponent uses a Mission card, the value of your opponent's Turn Marker is considered to be reduced by X. X = the number of coins on this card.",
     ],
+    flavor: "\"I'm trembling with ... excitement.\"",
     image: "s03-m-123",
   },
   {
@@ -2306,6 +2437,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: During this turn, if the target is the only Ninja sent out to block, none of the Attacker's Teams can win any Battle Rewards.",
     ],
+    flavor: "\"Don't lay a finger on people in our village .... Fight me!\"",
     image: "s03-m-124",
   },
   {
@@ -2321,6 +2453,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: You can use any number of Mission cards during this turn.",
     ],
+    flavor: "\"Is it possible for a Ninja like you ...?\"",
     image: "s03-m-125",
   },
   {
@@ -2337,6 +2470,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent",
       "Effect: Your Ninjas cannot receive any Damage by a draw.",
     ],
+    flavor: "\"So, you're finally waking up, huh?\"",
     image: "s03-m-126",
   },
   {
@@ -2353,6 +2487,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: 1 of your opponent's Clients",
       "Effect: Move the target to your Village if you do not have a Client in play in your Village.",
     ],
+    flavor: "\"Why does he have to be my teacher?!\"",
     image: "s03-m-127",
   },
   {
@@ -2369,6 +2504,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Counter",
       "Effect: The player with the most in-play Ninjas moves 2 Ninjas to their original owner's hand. The player with less in-play Ninjas moves 1 Ninja to the original owner's hand.",
     ],
+    flavor: "\"Once the treaty was signed, the stupid lords of the Land of Wind pressed forward with disarmament of the Hidden Sand Village ...\"",
     image: "s03-m-128",
   },
   {
@@ -2384,6 +2520,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: If you have \"Neji Hyuga\" in play, you can search for 1 Jutsu card with \"Requirements: 'Byakugan'\" in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"What a formidable talent ...\"",
     image: "s03-m-129",
   },
   {
@@ -2400,6 +2537,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Target: Any number of your injured Ninjas",
       "Effect: Move the target to the bottom of the original owner's Deck to move every Ninja in your hand with the same name as the target to your Village.",
     ],
+    flavor: "\"It's a noble flower that endures the winter cold in the hope of welcoming spring.\"",
     image: "s03-m-130",
   },
   {
@@ -2416,6 +2554,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent (4)",
       "Effect: Every time you flip a Ninja Blade coin, you can ignore the result and flip it again. If you need to flip a coin more than once, you can only redo one of the flips. This effect can only be applied once per \"Ninja Blade coin flip effect\" and cannot be duplicated.",
     ],
+    flavor: "\"And I'll make you acknowledge that I'm your master!\"",
     image: "s03-m-131",
   },
   {
@@ -2432,6 +2571,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Permanent (4)",
       "Effect: Every time your opponent flips a Ninja Blade coin, the result is considered be tails regardless of the result. If they need to flip a coin more than once, only 1 of the results of your choice is considered to be tails. This effect can only be applied once per \"Ninja Blade coin flip effect\" and cannot be duplicated.",
     ],
+    flavor: "\"Dog poop!!\"",
     image: "s03-m-132",
   },
   // ── CLIENT ──
@@ -2449,6 +2589,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: If you win 2 or more Battle Rewards in a turn, look at the top card of your Deck. Then return it either to the top or bottom of your Deck.",
     ],
+    flavor: "\"Listen, kid ... You sure you want me to take your picture like that?\"",
     image: "s03-c-008",
   },
   {
@@ -2465,6 +2606,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: During your Mission Phase, you can move this Client to your Chakra area. Then, select 1 of your Ninjas. That Ninja cannot be blocked by a Team with 1 Ninja during this turn.",
     ],
+    flavor: "\"The bridge isn't far now. We'll be in the Land of Waves ... very soon.\"",
     image: "s03-c-009",
   },
   {
@@ -2481,6 +2623,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: When this Client is put in play, you can move 1 of your opponent's \"Ninja Dog\" Ninjas to your Village, unless your Village already has a Ninja with the same name as the \"Ninja Dog\" Ninja.",
     ],
+    flavor: "\"Shooting Star is running away ... Get him!!\"",
     image: "s03-c-010",
   },
   {
@@ -2497,6 +2640,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: If you charge 3 or more Chakras in a turn, draw 1 card at the end of the turn.",
     ],
+    flavor: "\"Please?\"",
     image: "s03-c-011",
   },
   {
@@ -2513,6 +2657,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: If you win 3 or more Battle Rewards in a turn, move 1 of your discarded cards to your Chakra area.",
     ],
+    flavor: "\"We're gonna clean this place.\"",
     image: "s03-c-012",
   },
   {
@@ -2529,6 +2674,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: If you win 2 or more Battle Rewards in a turn, move 1 of your discarded cards to the bottom of your Deck.",
     ],
+    flavor: "\"I was told by my mother.\"",
     image: "s03-c-013",
   },
   {
@@ -2545,6 +2691,7 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [
       "Effect: Every \"Sand\" Ninja in your hand gets \"Growth.\"",
     ],
+    flavor: "\"Sure. Go ahead with our idea.\"",
     image: "s03-c-014",
   },
 ];
