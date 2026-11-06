@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { ImportDialog } from '@/components/ImportDialog';
+import { ReturnToRoom } from '@/components/ReturnToRoom';
 import { ShareDialog, type ShareRequest } from '@/components/ShareDialog';
 import { CARDS_BY_ID } from '@/data/cards';
 import { DECK_RULES, summarizeDeck } from '@/lib/deckRules';
@@ -24,6 +25,7 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-6">
+      <ReturnToRoom />
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold">Meus decks</h1>
@@ -95,6 +97,7 @@ export default function HomePage() {
                 <p className="text-sm text-muted">
                   {s.total}/{DECK_RULES.size} cartas · {s.byType.ninja} Ninja · {s.byType.jutsu} Jutsu ·{' '}
                   {s.byType.mission} Missão
+                  {s.reinforcement > 0 && ` · +${s.reinforcement} no Reforço`}
                 </p>
                 <div className="mt-auto flex gap-2 text-sm">
                   <Link

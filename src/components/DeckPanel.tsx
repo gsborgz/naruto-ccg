@@ -2,12 +2,17 @@
 
 import { useState } from 'react';
 import { CARDS_BY_ID } from '@/data/cards';
-import { DECK_RULES, type DeckSummary } from '@/lib/deckRules';
+import { DECK_RULES, deckPartOf, type DeckSummary } from '@/lib/deckRules';
 import { sortCost } from '@/lib/cardFilters';
 import type { Deck } from '@/lib/deckStore';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card, type CardType } from '@/models/card';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
+
+/** Abas do painel: uma por tipo de carta do Deck e uma para o Baralho de Reforço. */
+type Tab = CardType | 'reinforcement';
+const TABS: Tab[] = [...TYPES, 'reinforcement'];
+const TAB_LABEL: Record<Tab, string> = { ...CARD_TYPE_LABEL, reinforcement: 'Reforço' };
 
 const lookup = (id: string) => CARDS_BY_ID.get(id);
 
@@ -104,6 +109,42 @@ function DeckCard({
   );
 }
 
+/** Baixa um PDF A4 com as cartas do deck (como está na tela, mesmo sem salvar) para imprimir e recortar. */
+function PrintButton({ deck }: { deck: Deck }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function print() {
+    setBusy(true);
+    setError(null);
+    try {
+      // Carregado sob demanda: só quem imprime paga pelo código do PDF.
+      const { downloadDeckPdf } = await import('@/lib/print/printDeck');
+      await downloadDeckPdf(deck.name, deck.cards);
+    } catch (e) {
+      console.error(e);
+      setError('Não foi possível gerar o PDF.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="flex items-center gap-2">
+      {error && <span className="text-xs text-danger">{error}</span>}
+      <button
+        type="button"
+        onClick={print}
+        disabled={busy}
+        title="Gera um PDF em folhas A4 com as cartas em tamanho real (63 × 88 mm), 9 por folha, com marcas de corte"
+        className="rounded-md px-2 py-1 text-sm font-semibold text-accent transition-colors hover:bg-surface-2 disabled:cursor-wait disabled:opacity-60"
+      >
+        {busy ? 'Gerando PDF…' : '🖨 Imprimir deck'}
+      </button>
+    </div>
+  );
+}
+
 export function DeckPanel({
   deck,
   summary,
@@ -126,14 +167,16 @@ export function DeckPanel({
   onClear: () => void;
   onSave: () => void;
 }) {
-  const [tab, setTab] = useState<CardType>('ninja');
+  const [tab, setTab] = useState<Tab>('ninja');
 
   const entries = Object.entries(deck.cards)
     .map(([id, qty]) => ({ card: lookup(id), qty }))
     .filter((e): e is Entry => !!e.card && e.qty > 0);
 
   const group = entries
-    .filter((e) => e.card.type === tab)
+    .filter((e) =>
+      tab === 'reinforcement' ? deckPartOf(e.card) === 'reinforcement' : deckPartOf(e.card) === 'main' && e.card.type === tab,
+    )
     .sort((a, b) => sortCost(a.card) - sortCost(b.card) || a.card.name.localeCompare(b.card.name));
 
   return (
@@ -157,6 +200,14 @@ export function DeckPanel({
           </button>
         </div>
         <Meter value={summary.total} max={DECK_RULES.size} />
+        <p className="-mt-1.5 text-xs text-muted">
+          Baralho de Reforço (opcional):{' '}
+          <span
+            className={`font-mono font-semibold ${summary.reinforcement > DECK_RULES.reinforcementMax ? 'text-danger' : 'text-text'}`}
+          >
+            {summary.reinforcement}/{DECK_RULES.reinforcementMax}
+          </span>
+        </p>
         {summary.isValid ? (
           <p className="rounded-lg bg-ok/15 px-3 py-1.5 text-sm font-semibold text-ok">✓ Deck válido para jogar</p>
         ) : (
@@ -169,7 +220,7 @@ export function DeckPanel({
       </div>
 
       <div role="tablist" aria-label="Tipos de carta no deck" className="flex border-b border-border">
-        {TYPES.map((t) => {
+        {TABS.map((t) => {
           const selected = t === tab;
           return (
             <button
@@ -182,8 +233,10 @@ export function DeckPanel({
                 selected ? 'text-accent' : 'text-muted hover:bg-surface-2 hover:text-text'
               }`}
             >
-              <span className="text-xs font-semibold uppercase tracking-wider">{CARD_TYPE_LABEL[t]}</span>
-              <span className="font-mono text-lg font-bold leading-tight">{summary.byType[t]}</span>
+              <span className="text-xs font-semibold uppercase tracking-wider">{TAB_LABEL[t]}</span>
+              <span className="font-mono text-lg font-bold leading-tight">
+                {t === 'reinforcement' ? summary.reinforcement : summary.byType[t]}
+              </span>
               {selected && <span className="absolute inset-x-6 bottom-0 h-0.5 rounded-full bg-accent" />}
             </button>
           );
@@ -193,9 +246,11 @@ export function DeckPanel({
       <div role="tabpanel" className="min-h-48 flex-1 overflow-y-auto p-4">
         {group.length === 0 ? (
           <p className="py-10 text-center text-sm text-muted">
-            {entries.length === 0
-              ? 'Use o botão + nas cartas para montar seu deck.'
-              : `Nenhuma carta do tipo ${CARD_TYPE_LABEL[tab]} no deck.`}
+            {tab === 'reinforcement'
+              ? `Esquadrões [Squad] e Ninjas "Reinforcement" ficam aqui, fora do Deck: até ${DECK_RULES.reinforcementMax} cartas, até ${DECK_RULES.maxCopiesPerName} por nome. Eles entram em jogo por efeitos de cartas ou, os Esquadrões, ao serem formados na Fase de Missão.`
+              : entries.length === 0
+                ? 'Use o botão + nas cartas para montar seu deck.'
+                : `Nenhuma carta do tipo ${CARD_TYPE_LABEL[tab]} no deck.`}
           </p>
         ) : (
           <ul className="grid grid-cols-[repeat(auto-fill,minmax(7rem,1fr))] gap-x-3 gap-y-6 pb-3">
@@ -213,7 +268,7 @@ export function DeckPanel({
       </div>
 
       {entries.length > 0 && (
-        <div className="border-t border-border px-4 py-2.5">
+        <div className="flex items-center justify-between gap-3 border-t border-border px-4 py-2.5">
           <button
             type="button"
             onClick={() => confirm('Remover todas as cartas deste deck?') && onClear()}
@@ -221,6 +276,7 @@ export function DeckPanel({
           >
             Limpar deck
           </button>
+          <PrintButton deck={deck} />
         </div>
       )}
     </div>

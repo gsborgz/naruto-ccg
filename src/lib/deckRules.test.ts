@@ -176,3 +176,43 @@ test('filtro por coleção', async () => {
   const s02Clients = filterCards(CARDS, { ...INITIAL_FILTERS, set: 'S02', types: ['client'] });
   assert.equal(s02Clients.length, 6);
 });
+
+test('Baralho de Reforço: Esquadrões e Ninjas "Reinforcement" ficam fora do Deck', async () => {
+  const { deckPartOf } = await import('./deckRules.ts');
+  assert.equal(deckPartOf(lookup('s13-n-549')!), 'reinforcement'); // Squad: Neji Hyuga & Hinata Hyuga
+  assert.equal(deckPartOf(lookup('s17-n-784')!), 'reinforcement'); // Reinforcement: Hidan (Curse Mode)
+  assert.equal(deckPartOf(lookup('s01-n-001')!), 'main');
+
+  // Deck válido de 50 + Reforço: as cartas do Reforço não contam nas 50.
+  const base: DeckCards = {
+    's01-n-004': 3, 's01-n-005': 3, 's01-n-006': 3, 's01-n-009': 3, 's01-n-010': 3, 's01-n-012': 3, 's01-n-029': 3,
+    's01-j-001': 3, 's01-j-002': 3, 's01-j-015': 3, 's01-j-016': 3, 's01-j-020': 3,
+    's01-m-001': 3, 's01-m-006': 3, 's01-m-011': 3, 's01-m-019': 3, 's01-m-020': 2,
+  };
+  const s = summarizeDeck({ ...base, 's13-n-549': 3, 's17-n-784': 2 }, lookup);
+  assert.equal(s.total, 50);
+  assert.equal(s.reinforcement, 5);
+  assert.equal(s.byType.ninja, 21);
+  assert.equal(s.isValid, true, JSON.stringify(s.issues));
+
+  // Com o Deck cheio, ainda dá para adicionar ao Reforço.
+  assert.match(cannotAddReason(base, lookup('s01-n-001')!, lookup) ?? '', /50 cartas/);
+  assert.equal(cannotAddReason(base, lookup('s13-n-549')!, lookup), null);
+});
+
+test('Baralho de Reforço: até 15 cartas e até 3 por nome', () => {
+  // "Naruto Uzumaki & Jiraiya" existe no S15, S17 e S24: o limite de 3 é pelo nome.
+  assert.notEqual(cannotAddReason({ 's15-n-684': 2, 's17-n-816': 1 }, lookup('s24-n-1394')!, lookup), null);
+  const over = summarizeDeck({ 's15-n-684': 2, 's17-n-816': 2 }, lookup);
+  assert.ok(over.issues.some((i) => i.code === 'copies' && i.message.includes('Baralho de Reforço')));
+
+  // O limite de nome é separado do Deck: "Naruto Uzumaki" (promo Reinforcement) não soma com o do Deck.
+  assert.equal(cannotAddReason({ 's01-n-001': 3 }, lookup('promo-n-pr-100')!, lookup), null);
+
+  // 15 cartas no Reforço (5 nomes × 3): cheio. Com mais uma, fica inválido.
+  const fifteen: DeckCards = { 's13-n-549': 3, 's13-n-550': 3, 's13-n-551': 3, 's13-n-552': 3, 's13-n-572': 3 };
+  assert.match(cannotAddReason(fifteen, lookup('s13-n-573')!, lookup) ?? '', /Baralho de Reforço já tem 15/);
+  const sixteen = summarizeDeck({ ...fifteen, 's13-n-573': 1 }, lookup);
+  assert.equal(sixteen.reinforcement, 16);
+  assert.ok(sixteen.issues.some((i) => i.code === 'reinforcement-size'));
+});

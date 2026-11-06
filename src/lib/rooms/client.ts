@@ -10,6 +10,8 @@ interface PlayerIdentity {
   playerId: string;
   token: string;
   nickname: string;
+  /** Última sala em que o jogador está (para "Voltar para a sala" se ele saiu sem querer). */
+  lastRoomId?: string;
 }
 
 const IDENTITY_KEY = 'naruto-ccg:player';
@@ -22,7 +24,12 @@ export function getIdentity(): PlayerIdentity {
     const raw = localStorage.getItem(IDENTITY_KEY);
     const parsed = raw ? (JSON.parse(raw) as Partial<PlayerIdentity>) : null;
     if (parsed?.playerId && parsed.token) {
-      memoryIdentity = { playerId: parsed.playerId, token: parsed.token, nickname: parsed.nickname ?? '' };
+      memoryIdentity = {
+        playerId: parsed.playerId,
+        token: parsed.token,
+        nickname: parsed.nickname ?? '',
+        ...(parsed.lastRoomId ? { lastRoomId: parsed.lastRoomId } : {}),
+      };
       return memoryIdentity;
     }
   } catch {
@@ -47,6 +54,26 @@ export function rememberNickname(nickname: string) {
   saveIdentity();
 }
 
+/** Guarda a sala em que o jogador está agora. */
+export function rememberRoom(id: string) {
+  const identity = getIdentity();
+  if (identity.lastRoomId === id) return;
+  identity.lastRoomId = id;
+  saveIdentity();
+}
+
+/** Esquece a sala (saiu pelo botão Sair, ou ela não existe mais). */
+export function forgetRoom(id: string) {
+  const identity = getIdentity();
+  if (identity.lastRoomId !== id) return;
+  delete identity.lastRoomId;
+  saveIdentity();
+}
+
+export function lastRoomId(): string | null {
+  return getIdentity().lastRoomId ?? null;
+}
+
 export class RoomRequestError extends Error {
   readonly status: number;
   constructor(status: number, message: string) {
@@ -55,7 +82,7 @@ export class RoomRequestError extends Error {
   }
 }
 
-async function request(url: string, init?: RequestInit): Promise<RoomView> {
+async function request<T = RoomView>(url: string, init?: RequestInit): Promise<T> {
   let res: Response;
   try {
     res = await fetch(url, {
@@ -66,9 +93,9 @@ async function request(url: string, init?: RequestInit): Promise<RoomView> {
   } catch {
     throw new RoomRequestError(0, 'Sem conexão com o servidor. Verifique a internet.');
   }
-  const data = (await res.json().catch(() => ({}))) as RoomView & { message?: string };
-  if (!res.ok) throw new RoomRequestError(res.status, data.message ?? 'Erro inesperado. Tente de novo.');
-  return data;
+  const data = (await res.json().catch(() => null)) as (T & { message?: string }) | null;
+  if (!res.ok) throw new RoomRequestError(res.status, data?.message ?? 'Erro inesperado. Tente de novo.');
+  return data as T;
 }
 
 function seatBody(nickname: string) {
@@ -80,6 +107,9 @@ export const roomApi = {
   create: (nickname: string) => request('/api/rooms', { method: 'POST', body: seatBody(nickname) }),
   get: (id: string, ping: boolean) => request(`/api/rooms/${id}${ping ? '?ping=1' : ''}`),
   join: (id: string, nickname: string) => request(`/api/rooms/${id}/join`, { method: 'POST', body: seatBody(nickname) }),
+  /** `null` quando a ação apagou a sala (o último jogador saiu). */
   act: (id: string, action: RoomAction) =>
-    request(`/api/rooms/${id}/actions`, { method: 'POST', body: JSON.stringify(action) }),
+    request<RoomView | null>(`/api/rooms/${id}/actions`, { method: 'POST', body: JSON.stringify(action) }),
+  /** Conteúdo do seu deck (quantidade por carta, sem a ordem) para buscar uma carta. */
+  deck: (id: string) => request<{ cards: Record<string, number> }>(`/api/rooms/${id}/deck`),
 };

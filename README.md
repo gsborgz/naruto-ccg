@@ -29,7 +29,7 @@ Publicação (Vercel + Upstash): ver [docs/DEPLOY.md](docs/DEPLOY.md).
 
 - **Cartas** (`/cards`): catálogo com busca por nome, característica ou efeito, filtros por coleção, tipo e elemento, ordenação e detalhe de cada carta.
 - **Meus decks** (`/`): criar, editar, duplicar, excluir, compartilhar e importar decks.
-- **Jogar** (`/jogar` e `/salas/<uuid>`): criar uma sala só com o apelido, enviar o código (ou o link) para um amigo e, dentro da sala, cada um escolhe o deck e marca **Pronto**. A partida em si ainda não existe: quando os dois estão prontos, a sala mostra "Partida iniciada". Detalhes em [docs/SALAS.md](docs/SALAS.md).
+- **Jogar** (`/jogar` e `/salas/<uuid>`): criar uma sala só com o apelido, enviar o código (ou o link) para um amigo e, dentro da sala, cada um escolhe o deck e marca **Pronto**. Quando os dois estão prontos, a sala abre a **arena** com os decks embaralhados e a mão inicial: cada um arrasta as próprias cartas entre as zonas, compra, embaralha e busca cartas no deck (as regras de turno ainda não existem). Prévia local em `/arena`. Detalhes em [docs/SALAS.md](docs/SALAS.md).
 - **Montador** (`/decks/<id>`): cartas disponíveis à esquerda, com +/− em cada uma, e o deck à direita (por tipo, com contagem e validação das regras).
   - As alterações ficam num rascunho e só são gravadas no botão **Salvar**.
   - Ao sair com alterações não salvas (links do app ou "voltar" do navegador), o app pergunta se quer **Salvar**, **Descartar** ou continuar editando. Ao fechar ou recarregar a aba, aparece o aviso padrão do navegador.
@@ -205,7 +205,7 @@ usando os scripts de scripts/import-set/ e scripts/watermark/ (não improvise ou
 
 - `docs/` — documentação: regras (`REGRAS.md`, `Regras Naruto CCG.md/.html`, manuais em PDF e imagens em `rules-img/`), publicação (`DEPLOY.md`) e especificação das salas de jogo (`SALAS.md`).
 - `src/data/cards.ts` — catálogo das cartas (junta os arquivos de `src/data/sets/`).
-- `src/lib/deckRules.ts` — regras de montagem do rulebook PT-BR (`docs/Naruto CCG - Rulebook PTBR.pdf`, p. 10 e 43–44): exatamente 50 cartas, qualquer quantidade de cada tipo, até 3 cartas com o mesmo nome. O nome é o impresso completo, com o que estiver entre parênteses; a característica `Name: X` não conta na montagem, só em jogo (`deckName` e `getInPlayNames` em `src/models/card.ts`).
+- `src/lib/deckRules.ts` — regras de montagem do rulebook PT-BR (`docs/Naruto CCG - Rulebook PTBR.pdf`, p. 10 e 43–44): exatamente 50 cartas, qualquer quantidade de cada tipo, até 3 cartas com o mesmo nome. O nome é o impresso completo, com o que estiver entre parênteses; a característica `Name: X` não conta na montagem, só em jogo (`deckName` e `getInPlayNames` em `src/models/card.ts`). Também cuida do Baralho de Reforço (`docs/REGRAS.md` 4.17): cartas com a característica `Squad` ou `Reinforcement` (`isReinforcementCard`) vão para ele, não para o Deck; são até 15, com até 3 por nome, e não contam nas 50. As duas partes ficam no mesmo mapa `cards` do deck e `deckPartOf` diz a parte de cada carta.
 - `src/lib/cardFilters.ts` — busca, filtros e ordenação do catálogo.
 - `src/lib/deckStore.ts` — decks no localStorage (`naruto-ccg:decks`, com `version` para migrações); gravação só via `deckActions.save`.
 - `src/lib/useLeaveGuard.ts` — aviso de alterações não salvas ao sair do montador.

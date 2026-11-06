@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { NicknameForm } from '@/components/PlayerSetup';
+import { ReturnToRoom } from '@/components/ReturnToRoom';
 import { isValidShareId } from '@/lib/deckShare';
 import { roomApi } from '@/lib/rooms/client';
 
@@ -39,6 +40,7 @@ export default function PlayPage() {
 
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-6">
+      <ReturnToRoom />
       <div>
         <h1 className="text-2xl font-bold">Jogar</h1>
         <p className="text-sm text-muted">Crie uma sala e mande o código para um amigo, ou entre na sala de alguém.</p>

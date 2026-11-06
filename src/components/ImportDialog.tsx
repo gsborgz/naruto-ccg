@@ -86,6 +86,7 @@ export function ImportDialog({ open, onClose }: { open: boolean; onClose: () => 
                   <span className="truncate font-medium">{d.name}</span>
                   <span className="shrink-0 text-muted">
                     {s.total}/{DECK_RULES.size} cartas
+                    {s.reinforcement > 0 && ` + ${s.reinforcement} Reforço`}
                   </span>
                 </li>
               );

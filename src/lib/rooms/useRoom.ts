@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { RoomRequestError, roomApi } from './client';
+import { forgetRoom, rememberRoom, RoomRequestError, roomApi } from './client';
 import type { RoomAction, RoomView } from './model';
 
 /** Intervalo de consulta com a aba visível / em segundo plano, e de aviso de "online". */
@@ -32,13 +32,18 @@ export function useRoom(id: string): UseRoom {
   const lastJson = useRef('');
   const stopped = useRef(false);
 
-  /** Só re-renderiza se algo mudou de verdade. */
-  const apply = useCallback((next: RoomView) => {
-    const json = JSON.stringify(next);
-    if (json === lastJson.current) return;
-    lastJson.current = json;
-    setView(next);
-  }, []);
+  /** Só re-renderiza se algo mudou de verdade. Lembra a sala enquanto o jogador está nela. */
+  const apply = useCallback(
+    (next: RoomView | null) => {
+      if (!next) return;
+      if (next.you) rememberRoom(id);
+      const json = JSON.stringify(next);
+      if (json === lastJson.current) return;
+      lastJson.current = json;
+      setView(next);
+    },
+    [id],
+  );
 
   useEffect(() => {
     stopped.current = false;
@@ -58,12 +63,14 @@ export function useRoom(id: string): UseRoom {
         if (stopped.current) return;
         apply(next);
         setLoadError(null);
-        if (next.status === 'closed') return; // sala encerrada: para de consultar
       } catch (e) {
         if (stopped.current) return;
         const err = e as RoomRequestError;
         setLoadError(err);
-        if (err.status === 404 || err.status === 400) return; // não adianta insistir
+        if (err.status === 404 || err.status === 400) {
+          forgetRoom(id); // a sala não existe mais
+          return; // não adianta insistir
+        }
       }
       timer = setTimeout(tick, document.visibilityState === 'visible' ? POLL_VISIBLE_MS : POLL_HIDDEN_MS);
     };
@@ -85,7 +92,7 @@ export function useRoom(id: string): UseRoom {
   }, [id, apply]);
 
   const run = useCallback(
-    async (call: () => Promise<RoomView>) => {
+    async (call: () => Promise<RoomView | null>) => {
       setBusy(true);
       setActionError(null);
       try {
@@ -102,7 +109,17 @@ export function useRoom(id: string): UseRoom {
   );
 
   const join = useCallback((nickname: string) => run(() => roomApi.join(id, nickname)), [id, run]);
-  const act = useCallback((action: RoomAction) => run(() => roomApi.act(id, action)), [id, run]);
+  const act = useCallback(
+    async (action: RoomAction) => {
+      const ok = await run(() => roomApi.act(id, action));
+      if (ok && action.type === 'leave') {
+        stopped.current = true; // saiu de propósito: para de consultar e esquece a sala
+        forgetRoom(id);
+      }
+      return ok;
+    },
+    [id, run],
+  );
 
   return { view, loadError, actionError, busy, join, act };
 }

@@ -121,6 +121,23 @@ export function getInPlayNames(card: Card): string[] {
   return [card.name, ...extra];
 }
 
+/** Características que mandam a carta para o Baralho de Reforço em vez do Deck. */
+export const REINFORCEMENT_CHARACTERISTICS = ['Squad', 'Reinforcement'] as const;
+
+/**
+ * A carta fica no Baralho de Reforço [Reinforcement Deck], nunca no Deck (docs/REGRAS.md 4.17 e 6.8):
+ * - Esquadrões [Squad] (desde o S13): o rulebook diz que ficam no Baralho de Reforço e nunca vão para a mão;
+ * - Ninjas com a característica "Reinforcement" (desde o S17, ex.: "Hidan (Curse Mode)"): não estão no
+ *   rulebook, mas todos os efeitos que os citam os colocam em jogo "from your Reinforcement Deck"
+ *   (o rulebook já previa que "outros tipos podem vir a ser permitidos").
+ */
+export function isReinforcementCard(card: Card): boolean {
+  return (
+    'characteristics' in card &&
+    card.characteristics.some((c) => (REINFORCEMENT_CHARACTERISTICS as readonly string[]).includes(c))
+  );
+}
+
 export const CARD_TYPE_LABEL: Record<CardType, string> = {
   ninja: 'Ninja',
   jutsu: 'Jutsu',

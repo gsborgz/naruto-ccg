@@ -1,7 +1,10 @@
 import { randomUUID } from 'node:crypto';
 import { NextRequest, NextResponse } from 'next/server';
+import { CARDS_BY_ID } from '@/data/cards';
 import { createRoom, parseNickname, RoomError, toView } from '@/lib/rooms/model';
 import { insertRoom, parseIdentity, readJson, roomErrorResponse, touchSeen } from '@/lib/rooms/store';
+
+const lookup = (id: string) => CARDS_BY_ID.get(id);
 
 /** Cria uma sala com quem pediu como anfitrião. */
 export async function POST(request: NextRequest) {
@@ -15,7 +18,7 @@ export async function POST(request: NextRequest) {
     const room = createRoom(randomUUID(), { playerId, tokenHash, nickname }, now.toISOString());
     await insertRoom(room);
     await touchSeen(room.id, tokenHash, now.getTime());
-    return NextResponse.json(toView(room, 'host', { [tokenHash]: now.getTime() }, now.getTime()));
+    return NextResponse.json(toView(room, 'host', { [tokenHash]: now.getTime() }, now.getTime(), lookup));
   } catch (e) {
     return roomErrorResponse(e);
   }

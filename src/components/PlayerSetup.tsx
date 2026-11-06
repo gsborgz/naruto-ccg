@@ -39,7 +39,7 @@ export function DeckSelect({
   if (decks.length === 0) {
     return (
       <p className="rounded-lg bg-danger/10 px-3 py-2 text-sm text-danger">
-        Você não tem nenhum deck válido (50 cartas, até 3 por nome).{' '}
+        Você não tem nenhum deck válido (50 cartas, até 3 por nome; Reforço com até 15).{' '}
         <Link href="/" className="font-semibold underline">
           Monte um em Meus decks
         </Link>

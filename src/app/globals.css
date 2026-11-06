@@ -52,6 +52,49 @@ body {
   }
 }
 
+/*
+ * Altura que o "chrome" do app ocupa acima e abaixo do conteúdo: cabeçalho (3.5rem + 1px de borda)
+ * e padding vertical do <main> (1.5rem × 2). Telas de altura total usam calc(100dvh - var(--app-chrome)).
+ */
+:root {
+  --app-chrome: calc(6.5rem + 1px);
+}
+
+/* Tela cheia (F11): esconde o cabeçalho e encolhe o espaçamento para o jogo aproveitar a tela toda. */
+@media (display-mode: fullscreen) {
+  :root {
+    --app-chrome: 1.5rem;
+  }
+  .app-header {
+    display: none;
+  }
+  .app-main {
+    padding-block: 0.75rem;
+  }
+}
+:root[data-fullscreen] {
+  --app-chrome: 1.5rem;
+}
+:root[data-fullscreen] .app-header {
+  display: none;
+}
+:root[data-fullscreen] .app-main {
+  padding-block: 0.75rem;
+}
+
+/* Conteúdo que substitui o cabeçalho (escondido) em tela cheia; fora dela não aparece. */
+.fullscreen-only {
+  display: none !important;
+}
+@media (display-mode: fullscreen) {
+  .fullscreen-only {
+    display: flex !important;
+  }
+}
+:root[data-fullscreen] .fullscreen-only {
+  display: flex !important;
+}
+
 ::selection {
   background: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }

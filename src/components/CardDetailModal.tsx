@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { SET_NAMES } from '@/data/sets';
-import { CARD_TYPE_LABEL, cardImageUrl, type Card } from '@/models/card';
+import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { ElementBadge } from './ElementBadge';
 
@@ -105,6 +105,14 @@ export function CardDetailModal({ card, onClose, actions }: Props) {
                 </>
               )}
             </dl>
+
+            {isReinforcementCard(card) && (
+              <p className="rounded-lg bg-accent/10 px-3 py-2 text-sm">
+                <span className="font-semibold text-accent">Baralho de Reforço.</span> Esta carta fica fora do Deck
+                (não conta nas 50) e nunca vai para a mão. Entra em jogo por efeitos de cartas ou, se for um
+                Esquadrão [Squad], também ao ser formado na sua Fase de Missão.
+              </p>
+            )}
 
             <div className="space-y-2 rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
               {card.text.map((line, i) => (

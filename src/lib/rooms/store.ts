@@ -1,7 +1,9 @@
-import { createHash } from 'node:crypto';
+import { createHash, randomInt } from 'node:crypto';
 import { NextResponse } from 'next/server';
+import { CARDS_BY_ID } from '../../data/cards.ts';
+import { isReinforcementCard } from '../../models/card.ts';
 import { getRedis } from '../redis.ts';
-import { ROOM_TTL_SECONDS, RoomError, type Room, type SeenMap } from './model.ts';
+import { ROOM_TTL_SECONDS, RoomError, type Room, type RoomEnv, type SeenMap } from './model.ts';
 
 /**
  * Salas no Redis (docs/SALAS.md). O banco é compartilhado com o pokedex: toda chave começa com `naruto-ccg:`.
@@ -11,6 +13,20 @@ import { ROOM_TTL_SECONDS, RoomError, type Room, type SeenMap } from './model.ts
 
 const roomKey = (id: string) => `naruto-ccg:room:${id.toLowerCase()}`;
 const seenKey = (id: string) => `${roomKey(id)}:seen`;
+
+/**
+ * Dependências das ações no servidor: sorteio criptográfico (embaralhar) e o catálogo para saber
+ * quais cartas vão para o Baralho de Reforço.
+ */
+export const roomEnv: RoomEnv = {
+  // randomInt exige intervalo < 2^48: 2^47 valores bastam (embaralhar 50 cartas).
+  rng: () => randomInt(0, 2 ** 47) / 2 ** 47,
+  isReinforcement: (cardId) => {
+    const card = CARDS_BY_ID.get(cardId);
+    return !!card && isReinforcementCard(card);
+  },
+  isNinja: (cardId) => CARDS_BY_ID.get(cardId)?.type === 'ninja',
+};
 
 export function hashToken(token: string): string {
   return createHash('sha256').update(token).digest('hex');
@@ -40,7 +56,8 @@ export async function insertRoom(room: Room): Promise<void> {
 }
 
 /**
- * Grava `next` só se a sala ainda estiver na rev `expectedRev` (compare-and-set atômico) e renova a expiração.
+ * Grava `next` só se a sala ainda estiver na rev esperada (compare-and-set atômico) e renova a expiração.
+ * Com `next` vazio, apaga a sala e a presença (o último jogador saiu).
  * Lê a rev direto do JSON gravado (`"rev":N`, sempre escrito por `JSON.stringify` deste módulo).
  */
 const CAS_SCRIPT = `
@@ -48,6 +65,10 @@ local cur = redis.call('GET', KEYS[1])
 if not cur then return -1 end
 local rev = string.match(cur, '"rev":(%d+)')
 if tonumber(rev) ~= tonumber(ARGV[1]) then return 0 end
+if ARGV[2] == '' then
+  redis.call('DEL', KEYS[1], KEYS[2])
+  return 1
+end
 redis.call('SET', KEYS[1], ARGV[2], 'EX', ARGV[3])
 redis.call('EXPIRE', KEYS[2], ARGV[3])
 return 1
@@ -56,8 +77,12 @@ return 1
 /**
  * Lê a sala, aplica `mutate` e grava com compare-and-set. Se outra escrita passou na frente
  * (os dois jogadores clicaram ao mesmo tempo), relê e tenta de novo.
+ * `mutate` devolvendo `null` apaga a sala (resultado `room: null`).
  */
-export async function updateRoom(id: string, mutate: (room: Room) => Room): Promise<{ room: Room; seen: SeenMap }> {
+export async function updateRoom(
+  id: string,
+  mutate: (room: Room) => Room | null,
+): Promise<{ room: Room | null; seen: SeenMap }> {
   for (let attempt = 0; attempt < 4; attempt++) {
     const { room, seen } = await readRoom(id);
     if (!room) throw new RoomError(404, 'Sala não encontrada. Ela pode ter expirado.');
@@ -66,7 +91,7 @@ export async function updateRoom(id: string, mutate: (room: Room) => Room): Prom
     const result = await getRedis().eval<string[], number>(
       CAS_SCRIPT,
       [roomKey(id), seenKey(id)],
-      [String(room.rev), JSON.stringify(next), String(ROOM_TTL_SECONDS)],
+      [String(room.rev), next ? JSON.stringify(next) : '', String(ROOM_TTL_SECONDS)],
     );
     if (result === 1) return { room: next, seen };
     if (result === -1) throw new RoomError(404, 'Sala não encontrada. Ela pode ter expirado.');

@@ -2,10 +2,15 @@
 
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { ARENA_SCREEN, GameArena, type ArenaControls, type ArenaSide } from '@/components/arena/GameArena';
+import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
+import { HeaderSlot } from '@/components/HeaderSlot';
 import { DeckSelect, NicknameForm, useValidDecks } from '@/components/PlayerSetup';
 import { DECK_RULES } from '@/lib/deckRules';
-import type { PlayerView, RoomView } from '@/lib/rooms/model';
+import type { GameAction } from '@/lib/game/state';
+import { roomApi } from '@/lib/rooms/client';
+import type { PlayerView, RoomView, SeatName } from '@/lib/rooms/model';
 import { useRoom } from '@/lib/rooms/useRoom';
 
 const card = 'flex flex-col gap-4 rounded-xl border border-border bg-surface p-5';
@@ -80,7 +85,10 @@ function PlayerSlot({ player, isYou, label }: { player: PlayerView | undefined; 
         {isYou && <span className="text-sm font-normal text-muted">(você)</span>}
       </p>
       <p className="truncate text-sm text-muted">
-        {player.deckName ? `Deck: ${player.deckName} · ${player.deckSize}/${DECK_RULES.size}` : 'Ainda sem deck'}
+        {player.deckName
+          ? `Deck: ${player.deckName} · ${player.deckSize}/${DECK_RULES.size}` +
+            (player.reinforcementSize > 0 ? ` + ${player.reinforcementSize} Reforço` : '')
+          : 'Ainda sem deck'}
       </p>
       <p className={`text-sm font-semibold ${player.ready ? 'text-ok' : 'text-muted'}`}>
         {player.ready ? '✓ Pronto' : player.deckName ? 'Não está pronto' : 'Escolhendo o deck…'}
@@ -89,8 +97,109 @@ function PlayerSlot({ player, isYou, label }: { player: PlayerView | undefined; 
   );
 }
 
-function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom> }) {
+/** Botão "Sair da sala", com confirmação que explica o que acontece com a sala. */
+function LeaveButton({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom> }) {
   const router = useRouter();
+  const other = view.players.find((p) => p.seat !== view.you);
+  const leave = async () => {
+    const msg = other
+      ? `Sair da sala? ${other.nickname} continua nela${view.you === 'host' ? ' e vira o anfitrião' : ''}.`
+      : 'Sair da sala? Você é o último jogador, então a sala será apagada.';
+    if (!confirm(msg)) return;
+    if (await room.act({ type: 'leave' })) router.push('/jogar');
+  };
+  return (
+    <button
+      type="button"
+      onClick={leave}
+      disabled={room.busy}
+      className="rounded-lg px-4 py-2 text-sm text-muted ring-1 ring-border hover:bg-danger/15 hover:text-danger"
+    >
+      Sair da sala
+    </button>
+  );
+}
+
+/** Os dois prontos: a arena com as cartas da partida. Você move as suas; o servidor confere tudo. */
+function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom> }) {
+  const [searching, setSearching] = useState(false);
+  const game = view.game;
+  const you = view.you;
+  const opponentSeat: SeatName = you === 'host' ? 'guest' : 'host';
+  const me = view.players.find((p) => p.seat === you);
+  const opponent = view.players.find((p) => p.seat === opponentSeat);
+  const { act } = room;
+
+  const play = useCallback((action: GameAction) => act({ type: 'game', action }), [act]);
+  const loadDeck = useCallback(async () => (await roomApi.deck(view.id)).cards, [view.id]);
+
+  if (!game || !you) return <p className="text-muted">Carregando a partida…</p>;
+
+  const controls: ArenaControls = {
+    onMove: (uid, to) => play({ type: 'move', uid, to }),
+    onDraw: () => play({ type: 'draw' }),
+    onShuffle: () => play({ type: 'shuffle' }),
+    onSearch: () => setSearching(true),
+    onJoinTeam: (uid, target) => play({ type: 'joinTeam', uid, target }),
+    onMoveTeam: (uid, to) => play({ type: 'moveTeam', uid, to }),
+    onSetLeader: (uid) => play({ type: 'setLeader', uid }),
+    onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
+    busy: room.busy,
+  };
+  const side = (seat: SeatName, nickname: string | undefined): ArenaSide => ({
+    nickname: nickname ?? '…',
+    zones: game.players[seat],
+    turn: game.turn[seat],
+  });
+
+  const endGame = () => {
+    if (confirm('Encerrar a partida? Os dois voltam para a escolha de decks.')) act({ type: 'endGame' });
+  };
+
+  const players = (
+    <p className="text-sm text-muted">
+      <strong className="text-text">{me?.nickname}</strong> × <strong className="text-text">{opponent?.nickname}</strong>
+    </p>
+  );
+  const actions = (
+    <>
+      {room.actionError && <span className="text-sm text-danger">{room.actionError}</span>}
+      <button
+        type="button"
+        onClick={endGame}
+        disabled={room.busy}
+        className="rounded-lg px-4 py-2 text-sm text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text"
+      >
+        Encerrar partida
+      </button>
+      <LeaveButton view={view} room={room} />
+    </>
+  );
+
+  return (
+    <div className={ARENA_SCREEN}>
+      <HeaderSlot name="center">{players}</HeaderSlot>
+      <HeaderSlot name="actions">{actions}</HeaderSlot>
+      {/* Em tela cheia o cabeçalho some: a mesma barra aparece aqui. */}
+      <div className="fullscreen-only flex-wrap items-center justify-between gap-2">
+        {players}
+        <div className="flex items-center gap-2">{actions}</div>
+      </div>
+      <GameArena you={side(you, me?.nickname)} opponent={side(opponentSeat, opponent?.nickname)} controls={controls} />
+      <SearchDeckDialog
+        open={searching}
+        load={loadDeck}
+        onPick={(cardId) => {
+          setSearching(false);
+          play({ type: 'search', cardId });
+        }}
+        onClose={() => setSearching(false)}
+      />
+    </div>
+  );
+}
+
+function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom> }) {
   const decks = useValidDecks();
   const host = view.players.find((p) => p.seat === 'host');
   const guest = view.players.find((p) => p.seat === 'guest');
@@ -100,13 +209,6 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   const changeDeck = (deckId: string) => {
     const deck = decks?.find((d) => d.id === deckId);
     if (deck) room.act({ type: 'changeDeck', deck: { name: deck.name, cards: deck.cards } });
-  };
-
-  const leave = async () => {
-    const msg =
-      view.you === 'host' ? 'Encerrar a sala? Seu oponente também sai.' : 'Sair da sala? Você pode entrar de novo com o código.';
-    if (!confirm(msg)) return;
-    if (await room.act({ type: 'leave' })) router.push('/jogar');
   };
 
   return (
@@ -121,13 +223,6 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
               : 'Cada um escolhe o deck e marca Pronto.'}
         </p>
       </div>
-
-      {starting && (
-        <div className="rounded-xl bg-ok/15 px-5 py-4 text-ok">
-          <p className="font-semibold">Partida iniciada!</p>
-          <p className="text-sm">O jogo será implementado na próxima etapa.</p>
-        </div>
-      )}
 
       {view.you === 'host' && view.status === 'waiting' && (
         <section className={card}>
@@ -175,14 +270,7 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
       )}
 
       <div>
-        <button
-          type="button"
-          onClick={leave}
-          disabled={room.busy}
-          className="rounded-lg px-4 py-2 text-sm text-muted ring-1 ring-border hover:bg-danger/15 hover:text-danger"
-        >
-          {view.you === 'host' ? 'Encerrar sala' : 'Sair da sala'}
-        </button>
+        <LeaveButton view={view} room={room} />
       </div>
     </div>
   );
@@ -196,10 +284,6 @@ export default function RoomPage() {
   if (!view) {
     if (loadError && loadError.status !== 0) return <Notice title={loadError.message} />;
     return <p className="text-muted">{loadError ? loadError.message : 'Carregando sala…'}</p>;
-  }
-
-  if (view.status === 'closed') {
-    return <Notice title="Esta sala foi encerrada">O anfitrião saiu da sala. Crie uma nova para jogar.</Notice>;
   }
 
   if (!view.you) {
@@ -225,7 +309,7 @@ export default function RoomPage() {
           {loadError.message} Tentando reconectar…
         </p>
       )}
-      <Lobby view={view} room={room} />
+      {view.status === 'starting' ? <Match view={view} room={room} /> : <Lobby view={view} room={room} />}
     </>
   );
 }

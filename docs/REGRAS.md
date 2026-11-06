@@ -488,6 +488,7 @@ Nível de conhecimento e proficiência acadêmica do Ninja, usado em Batalhas Me
 Baralho extra de **até 15 cards** que fica fora do Painel de Jogo (o local é combinado antes da partida). Por enquanto **só cards de Esquadrão [Squad]** vão nele, mas outros tipos podem vir a ser permitidos.
 - Máximo **3 cópias de um Esquadrão com o mesmo nome**. Dá para combinar 3 Esquadrões diferentes de mesmo nome para chegar a esse total.
 - Cada jogador tem o seu. Os cards ficam **face para baixo** e só o controlador pode vê-los, mas **qualquer jogador pode contar** quantos cards há ali.
+- **No app:** além dos Esquadrões, os Ninjas com a Característica **Reinforcement** (a partir de *Will of Fire*, ex.: "Hidan (Curse Mode)") também ficam no Baralho de Reforço. Os rulebooks não citam essa Característica, mas todos os efeitos que se referem a esses cards os colocam em jogo "from your Reinforcement Deck". Eles seguem as mesmas regras do Baralho (até 15 cards no total, até 3 por nome) e não contam nas 50 cartas do Deck.
 
 ### 4.18 Área de Removidos de Jogo [Removed from Game Area]
 Área fora do Painel (o local é combinado antes da partida) para os cards **removidos do jogo**. Cada jogador tem a sua. Cards ali ficam **face para cima** e qualquer jogador pode conferi-los. Só voltam ao jogo naquela partida se algum efeito permitir.

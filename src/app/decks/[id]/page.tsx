@@ -77,9 +77,9 @@ export default function DeckBuilderPage() {
   }
 
   return (
-    // No desktop a tela ocupa a altura toda (abaixo do cabeçalho de 3.5rem e do padding de 1.5rem×2):
+    // No desktop a tela ocupa a altura toda (descontando cabeçalho e padding: --app-chrome em globals.css; em tela cheia o cabeçalho some):
     // cada coluna rola sozinha, como no TCG Live — cartas disponíveis à esquerda, deck à direita.
-    <div className="grid gap-6 lg:h-[calc(100dvh-6.5rem-1px)] lg:grid-cols-[minmax(0,1fr)_26rem] xl:grid-cols-[minmax(0,1fr)_minmax(30rem,38%)]">
+    <div className="grid gap-6 lg:h-[calc(100dvh-var(--app-chrome))] lg:grid-cols-[minmax(0,1fr)_26rem] xl:grid-cols-[minmax(0,1fr)_minmax(30rem,38%)]">
       <section className="flex min-w-0 flex-col gap-4 lg:-mr-2 lg:overflow-y-auto lg:pr-2" aria-label="Cartas disponíveis">
         <CardBrowser
           onSelect={setSelected}
@@ -114,6 +114,9 @@ export default function DeckBuilderPage() {
       >
         <span>
           {summary.total}/{DECK_RULES.size} cartas
+          {summary.reinforcement > 0 && (
+            <span className="font-normal"> + {summary.reinforcement} Reforço</span>
+          )}
         </span>
         <span className="text-sm">Ver deck ↓</span>
       </a>

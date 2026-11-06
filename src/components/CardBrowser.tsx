@@ -3,7 +3,7 @@
 import { memo, useDeferredValue, useMemo, useState } from 'react';
 import { CARDS } from '@/data/cards';
 import { filterCards, INITIAL_FILTERS } from '@/lib/cardFilters';
-import { CARD_TYPE_LABEL, cardImageUrl, type Card } from '@/models/card';
+import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFilters } from './CardFilters';
 import { QtyControls } from './QtyControls';
@@ -80,7 +80,15 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
           <p className="truncate text-sm font-medium" title={card.name}>
             {card.name}
           </p>
-          <p className="text-xs text-muted">{CARD_TYPE_LABEL[card.type]}</p>
+          <p className="text-xs text-muted">
+            {CARD_TYPE_LABEL[card.type]}
+            {isReinforcementCard(card) && (
+              <span className="text-accent" title="Vai para o Baralho de Reforço, fora do Deck">
+                {' '}
+                · Reforço
+              </span>
+            )}
+          </p>
         </div>
         <CardCost card={card} />
       </div>

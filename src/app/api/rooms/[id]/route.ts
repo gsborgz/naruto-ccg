@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { CARDS_BY_ID } from '@/data/cards';
 import { isValidShareId } from '@/lib/deckShare';
 import { RoomError, seatOf, toView } from '@/lib/rooms/model';
 import { hashToken, readRoom, roomErrorResponse, touchSeen } from '@/lib/rooms/store';
+
+const lookup = (id: string) => CARDS_BY_ID.get(id);
 
 /**
  * Estado da sala para quem consulta. Com `X-Player-Token`, mostra o lado do jogador;
@@ -24,7 +27,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       await touchSeen(id, tokenHash, nowMs);
       seen[tokenHash] = nowMs;
     }
-    return NextResponse.json(toView(room, you, seen, nowMs), { headers: { 'Cache-Control': 'no-store' } });
+    return NextResponse.json(toView(room, you, seen, nowMs, lookup), { headers: { 'Cache-Control': 'no-store' } });
   } catch (e) {
     return roomErrorResponse(e);
   }
