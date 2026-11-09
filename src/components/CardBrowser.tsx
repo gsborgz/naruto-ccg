@@ -3,6 +3,7 @@
 import { memo, useDeferredValue, useMemo, useState } from 'react';
 import { CARDS } from '@/data/cards';
 import { filterCards, INITIAL_FILTERS } from '@/lib/cardFilters';
+import { useCardLanguage } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFilters } from './CardFilters';
@@ -101,7 +102,12 @@ export function CardBrowser({ onSelect, countOf, blockedOf, onSetQty, gridClassN
   const [filters, setFilters] = useState(INITIAL_FILTERS);
   // Os filtros (e a contagem) atualizam na hora; a grade pesada segue logo depois, sem travar a digitação.
   const deferredFilters = useDeferredValue(filters);
-  const cards = useMemo(() => filterCards(CARDS, deferredFilters), [deferredFilters]);
+  const { language, translations } = useCardLanguage();
+  const searchTranslations = language === 'pt-BR' ? translations : null;
+  const cards = useMemo(
+    () => filterCards(CARDS, deferredFilters, searchTranslations),
+    [deferredFilters, searchTranslations],
+  );
 
   return (
     <div className="flex flex-col gap-4">

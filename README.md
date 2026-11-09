@@ -6,7 +6,7 @@ Hoje o app tem o catálogo de cartas e o montador de decks: o jogador monta quan
 
 Publicado em <https://naruto-ccg.vercel.app> (deploy automático a cada push na `main`).
 
-Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`), o guia de publicação (`docs/DEPLOY.md`), o processo de revisão das cartas contra as imagens e das frases (`docs/REVISAO-CARTAS.md`) e a especificação da próxima etapa, as salas de jogo (`docs/SALAS.md`).
+Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`), o guia de publicação (`docs/DEPLOY.md`), o processo de revisão das cartas contra as imagens e das frases (`docs/REVISAO-CARTAS.md`), as convenções da tradução PT-BR (`docs/TRADUCAO.md`) e a especificação da próxima etapa, as salas de jogo (`docs/SALAS.md`).
 
 A ideia futuramente é ter um layout dinâmico para as cartas, com o sistema "montando" a carta virtualmente usando o layout + ícones + descrições + tipagens + efeitos. Por enquanto as cartas usam as imagens oficiais, com tipos, custos e efeitos cadastrados.
 
@@ -53,6 +53,7 @@ O catálogo tem todas as coleções, com as imagens e a lista oficial do [CCG Tr
 
 - Imagens originais: `cards/<set>/<id>.png`, já sem marca d'água, onde o id é o código oficial em minúsculas (ex.: `cards/s01/s01-n-001.png` = set S01, Ninja 001). **Ficam só na máquina local** (fora do Git pelo `.gitignore`, ~1,7 GB); o repositório guarda apenas as versões otimizadas de `public/cards/`.
 - Dados: um arquivo por coleção em `src/data/sets/` (ex.: `s01-the-path-to-hokage.ts`), reunidos em `src/data/cards.ts`; nomes das coleções em `src/data/sets.ts`.
+- **Textos em PT-BR:** o seletor **EN | PT** do cabeçalho mostra efeitos, frases e características traduzidos. As traduções ficam em `src/data/ptbr/` (uma por coleção, só para exibição; as regras leem os dados em inglês) e seguem [docs/TRADUCAO.md](docs/TRADUCAO.md). Por enquanto só o S01 está traduzido; as outras cartas aparecem em inglês.
 - Se alguma imagem de `cards/` mudar, rode `npm run cards:images` para gerar os WebP em `public/cards/<set>/` (tamanho cheio, usado no detalhe da carta) e `public/cards/<set>/thumbs/` (miniatura, usada nas grades). O app monta o caminho com `cardImageUrl` (`src/models/card.ts`).
 - **Versão PT-BR em alta resolução (piloto):** [scripts/card-remaster/](scripts/card-remaster/README.md) apaga o texto em inglês, faz upscale 4× (Real-ESRGAN) e redesenha o texto traduzido a partir dos dados do `.ts`. Saída em `cards-ptbr/<set>/` (só local). Os ícones das cartas (custos, elementos e tipo) usam como referência as versões já remasterizadas de `card-icons/` (só local). Por enquanto cobre só Ninjas do S01 sem texto de efeito.
 
@@ -71,7 +72,8 @@ Coleções: **S01 — The Path to Hokage** (127 cartas), **S02 — Coils of the 
 - `docs/` — documentação: regras (`REGRAS.md`, `Regras Naruto CCG.md/.html`, manuais em PDF e imagens em `rules-img/`), publicação (`DEPLOY.md`) e especificação das salas de jogo (`SALAS.md`).
 - `src/data/cards.ts` — catálogo das cartas (junta os arquivos de `src/data/sets/`).
 - `src/lib/deckRules.ts` — regras de montagem do rulebook PT-BR (`docs/Naruto CCG - Rulebook PTBR.pdf`, p. 10 e 43–44): exatamente 50 cartas, qualquer quantidade de cada tipo, até 3 cartas com o mesmo nome. O nome é o impresso completo, com o que estiver entre parênteses; a característica `Name: X` não conta na montagem, só em jogo (`deckName` e `getInPlayNames` em `src/models/card.ts`). Também cuida do Baralho de Reforço (`docs/REGRAS.md` 4.17): cartas com a característica `Squad` ou `Reinforcement` (`isReinforcementCard`) vão para ele, não para o Deck; são até 15, com até 3 por nome, e não contam nas 50. As duas partes ficam no mesmo mapa `cards` do deck e `deckPartOf` diz a parte de cada carta.
-- `src/lib/cardFilters.ts` — busca, filtros e ordenação do catálogo.
+- `src/lib/cardFilters.ts` — busca, filtros e ordenação do catálogo (com PT-BR ativo, busca nos dois idiomas).
+- `src/data/ptbr/` — tradução PT-BR (por coleção + glossário); `src/lib/cardLanguage.tsx` guarda o idioma escolhido e carrega as traduções sob demanda; `src/lib/cardLocale.ts` monta os textos de cada carta.
 - `src/lib/deckStore.ts` — decks no localStorage (`naruto-ccg:decks`, com `version` para migrações); gravação só via `deckActions.save`.
 - `src/lib/useLeaveGuard.ts` — aviso de alterações não salvas ao sair do montador.
 - `src/lib/deckShare.ts`, `src/lib/shareClient.ts`, `src/lib/redis.ts` e `src/app/api/shares/` — compartilhamento por código.

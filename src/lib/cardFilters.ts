@@ -1,4 +1,6 @@
 import type { Card, CardType, ElementSymbol } from '../models/card.ts';
+import type { CardTranslations } from '../models/cardTranslation.ts';
+import { translateCharacteristic } from '../data/ptbr/glossary.ts';
 
 export type SortKey = 'type' | 'name' | 'cost';
 
@@ -45,13 +47,29 @@ function haystackOf(c: Card): string {
   return h;
 }
 
-export function filterCards(cards: Card[], f: CardFilterState): Card[] {
+/** Com PT-BR, a busca acha a carta pelo texto em inglês ou em português. Um cache por conjunto de traduções. */
+const ptHaystackCache = new WeakMap<CardTranslations, WeakMap<Card, string>>();
+function ptHaystackOf(c: Card, translations: CardTranslations): string {
+  let cache = ptHaystackCache.get(translations);
+  if (!cache) ptHaystackCache.set(translations, (cache = new WeakMap()));
+  let h = cache.get(c);
+  if (h === undefined) {
+    const characteristics = 'characteristics' in c ? c.characteristics.map(translateCharacteristic) : [];
+    const pt = normalize([...characteristics, ...(translations[c.id]?.text ?? [])].join(' '));
+    h = `${haystackOf(c)} ${pt}`;
+    cache.set(c, h);
+  }
+  return h;
+}
+
+/** `translations`: traduções PT-BR já carregadas, quando o jogador escolheu ver as cartas em português. */
+export function filterCards(cards: Card[], f: CardFilterState, translations?: CardTranslations | null): Card[] {
   const q = normalize(f.query.trim());
   const result = cards.filter((c) => {
     if (f.set && c.set !== f.set) return false;
     if (f.types.length && !f.types.includes(c.type)) return false;
     if (f.elements.length && !c.elements.some((e) => f.elements.includes(e))) return false;
-    if (q && !haystackOf(c).includes(q)) return false;
+    if (q && !(translations ? ptHaystackOf(c, translations) : haystackOf(c)).includes(q)) return false;
     return true;
   });
 
