@@ -25,6 +25,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[ENDLESS ARSENAL]",
       "At the start of your turn, you can discard a card. In that case, draw 1 card. If the card you discarded was not an Earth card, move the top 3 cards of your Deck to your Discard Pile.",
     ],
+    flavor: "\"Cut it out!\"",
     image: "tp4-n-1335",
   },
   {
@@ -46,6 +47,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "When this Ninja is put in play, name a Ninja.",
       "Valid: Activated effects of the named Ninja cannot be activated.",
     ],
+    flavor: "\"I get the feeling he's just bein' played with.\"",
     image: "tp4-n-1336",
   },
   {
@@ -86,6 +88,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[THE STRONGEST GENIN]",
       "Valid: While your opponent has 1 or more injured \"Genin\" Ninjas, this Ninja gets +1/+0.",
     ],
+    flavor: "\"I have my own path.\"",
     image: "tp4-n-1338",
   },
   {
@@ -107,6 +110,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "When this Ninja wins any Battle Reward, give 1 Damage to this Ninja.",
       "Valid: When this Ninja would be removed from play, move it to your hand instead.",
     ],
+    flavor: "\"Tobi's a good boy...\"",
     image: "tp4-n-1339",
   },
   {
@@ -147,6 +151,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[MASTER OF EFFORT]",
       "When this Ninja Attacks, you can move 1 Ninja card from your hand to your Chakra area. In that case, this Ninja gets +2/+0 during this turn. If the card was a \"Taijutsu\" Ninja card, this Ninja gets +3/+0 instead.",
     ],
+    flavor: "\"I was serious.\"",
     image: "tp4-n-1341",
   },
   {
@@ -167,6 +172,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[CARING SOUL]",
       "Valid: When 1 of your \"Genin\" Ninjas would receive any Damage, you can negate it and give 1 Damage to this Ninja instead.",
     ],
+    flavor: "\"Good luck.\"",
     image: "tp4-n-1342",
   },
   {
@@ -188,6 +194,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Valid: While you have a Naruto Uzumaki Ninja, this Ninja gets +1/+1.",
       "Valid: While you have a Sakura Haruno Ninja, this Ninja gets +2/+0.",
     ],
+    flavor: "\"...time for my real mission to begin.\"",
     image: "tp4-n-1343",
   },
   {
@@ -209,6 +216,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "While your opponent has 6 or more Battle Rewards, this Ninja card gets -6 Entrance cost.",
       "Valid: When this Ninja is put in play, if you have 3 or less cards in your hand, draw until you have 4 cards in your hand.",
     ],
+    flavor: "\"But you can't skip it.\"",
     image: "tp4-n-1344",
   },
   {
@@ -230,6 +238,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "When this Ninja is put in play, place a \"Flash\" coin on 1 of your Ninja.",
       "[Valid | EOJ] (0): Move this Ninja into the Team of a Ninja with a \"Flash\" coin on it in any position.",
     ],
+    flavor: "\"So I was thinking...\"",
     image: "tp4-n-1345",
   },
   {
@@ -250,6 +259,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[A CHILD TO PROTECT]",
       "Valid: When this Ninja is put in play or removed from play, you can discard 1 of your opponent's Chakra.",
     ],
+    flavor: "\"I figured out where to return home to.\"",
     image: "tp4-n-1346",
   },
   {
@@ -270,6 +280,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[PERFECTIONIST]",
       "At the end of your turn, you can pay (1). In that case, heal target injured Ninja.",
     ],
+    flavor: "\"...death will be the last of my worries.\"",
     image: "tp4-n-1347",
   },
   {
@@ -290,6 +301,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[PROTECTOR]",
       "[Mission][EOJ] (*): Target Ninja you control cannot be the target of your opponent's Ninja effects during this turn.",
     ],
+    flavor: "\"I thought you had already joined forces with them.\"",
     image: "tp4-n-1348",
   },
   {
@@ -310,6 +322,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[SONAR]",
       "[Mission] (0): Look at the top card of either player's Deck. This effect may be activated any number of times per turn.",
     ],
+    flavor: "\"You're sharp!\"",
     image: "tp4-n-1349",
   },
   {
@@ -350,6 +363,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[CONSTRICTION]",
       "When your opponent plays a Jutsu or Ninja, they may pay (1). If they do not, draw 1 card.",
     ],
+    flavor: "\"Well, well, well...\"",
     image: "tp4-n-1351",
   },
   {
@@ -370,6 +384,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[TEAM HEALER]",
       "Ninjas cannot win Battle Rewards during the turn they are put into play.",
     ],
+    flavor: "\"and this is from me.\"",
     image: "tp4-n-1352",
   },
   {
@@ -390,6 +405,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[WATER TRAINING]",
       "[Attacker | Mission| EOJ] (1): Search your Deck for a non-\"AMBUSH\" card and move it to your Chakra area. Shuffle your Deck afterwards.",
     ],
+    flavor: "\"If you can't even do this, you can't be my student.\"",
     image: "tp4-n-1353",
   },
   {
@@ -410,6 +426,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[GRANDSON'S GUARDIAN]",
       "When this Ninja is put in play, you can put in play a Konohamaru Ninja card from your hand.",
     ],
+    flavor: "\"It seems you've gotten too used to having your own way.\"",
     image: "tp4-n-1354",
   },
   {
@@ -450,6 +467,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[HOKAGE'S AIDE]",
       "Valid: When you put in play a \"Satoosa\" or higher rank Ninja, randomly move 1 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"What's wrong?\"",
     image: "tp4-n-1356",
   },
   {
@@ -470,6 +488,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[KAZEKAGE'S POWER]",
       "When this Ninja Attacks, you can reveal the top 3 cards of your Deck. In that case, move 1 revealed Wind Jutsu card or Wind Mission card to your hand, then return the rest to the top of your Deck in any order.",
     ],
+    flavor: "\"Very well.\"",
     image: "tp4-n-1357",
   },
   {
@@ -490,6 +509,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "[I CAN DO IT]",
       "[EOJ] If this Ninja is opposed, injure this Ninja: This Ninja's Team and the Team opposing this Ninja perform a Mental Power Battle.",
     ],
+    flavor: "\"Nothing works against this!\"",
     image: "tp4-n-pr-us010",
   },
   // ── JUTSU ──
@@ -505,6 +525,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
     text: [
       "Effect: If the user's Team has a \"Shadow\" Ninja, 1 Ninja opposing the user becomes 0/0 during this turn. If the user's Team has a \"Food\" Ninja, injure 1 Ninja opposing the user. If the user's Team has a \"Mind\" Ninja, 1 Ninja opposing the user becomes a Stand-by Ninja.",
     ],
+    flavor: "\"What's amazing are my friends who believe in me.\"",
     image: "tp4-j-890",
   },
   {
@@ -534,6 +555,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
     text: [
       "Effect: If the user is a \"Taijutsu\" Ninja, they get +5/+0 during the turn. Otherwise, the user gets +2/+0 and gains \"Taijutsu\" during this turn.",
     ],
+    flavor: "\"Not bad, eh?\"",
     image: "tp4-j-892",
   },
   {
@@ -549,6 +571,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Effect: Discard 3 of your opponent's Chakra.",
       "Expert [Kisame Hoshigaki]: Move the same number of cards you discarded due to this effect from your Discard Pile to your Chakra area. If you moved 3 or more cards this way, injure target opposing Ninja.",
     ],
+    flavor: "\"My long sword is called Samehada! It means sharkskin! It doesn't slice... it cuts you to ribbons!\"",
     image: "tp4-j-893",
   },
   {
@@ -564,6 +587,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Target: 1 Ninja",
       "Effect: Heal the target. Additionally, if the target would receive Damage from a Jutsu during this turn, give that Damage to the user of that Jutsu instead.",
     ],
+    flavor: "\"I'll fix your arms... but in return, lay off the village.\"",
     image: "tp4-j-894",
   },
   // ── MISSION ──
@@ -581,6 +605,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Permanent (3)",
       "Effect: Ninjas that share a name with another Ninja cannot be sent out to Attack.",
     ],
+    flavor: "\"You'll understand when you get older.\"",
     image: "tp4-m-847",
   },
   {
@@ -597,6 +622,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Search your Deck for a Ninja card with an Entrance cost less than or equal to X, reveal it, and move it to your hand. X = the target's Mental Power. If the target is Shikamaru Nara, search for any Ninja card instead. Then, draw 1 card if you searched for a \"Female\" Ninja.",
     ],
+    flavor: "\"Don't let what Asuma said get to you.\"",
     image: "tp4-m-848",
   },
   {
@@ -628,6 +654,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Permanent",
       "Effect: When a player's Turn Marker becomes 5 or higher, move this Mission to its owner's Chakra area, then that player draws 3 cards.",
     ],
+    flavor: "\"I won't give up until the very end!\"",
     image: "tp4-m-850",
   },
   {
@@ -644,6 +671,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "Target: 1 Ninja",
       "Effect: Draw 1 card, then move up to 3 cards from your Discard Pile to your Chakra area. The target gets +1/+1 during this turn for each card moved this way.",
     ],
+    flavor: "\"Konoha has the best dango.\"",
     image: "tp4-m-851",
   },
   {
@@ -676,6 +704,7 @@ export const TP4_TOURNAMENT_PACK_4: Card[] = [
       "When this Mission is put in play, draw 1 card.",
       "[Mission | EOJ] (1): 1 of your Ninjas gets -1/+1 or +1/-1 during this turn. You may use this effect as many times as you like.",
     ],
+    flavor: "\"You let your guard down.\"",
     image: "tp4-m-853",
   },
   {

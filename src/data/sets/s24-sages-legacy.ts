@@ -25,6 +25,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[ENDLESS STOMACH]",
       "Valid: When this Ninja Attacks, this Ninja gets +1/+0 during this turn for every 5 cards in your Discard Pile.",
     ],
+    flavor: "\"Then allow me to pick up the slack.\"",
     image: "s24-n-1358",
   },
   {
@@ -46,6 +47,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Valid: When this Ninja is put in play or is removed from play, move 3 cards from your Discard Pile to the top of your Deck, then shuffle it.",
       "When this Ninja is moved to your Chakra area due to the effect of GROWTH, you can place 1 Growth coin on target Ninja.",
     ],
+    flavor: "\"No way.\"",
     image: "s24-n-1359",
   },
   {
@@ -66,6 +68,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[ADAMANT SPIRIT]",
       "Valid: While your opponent has 4 or less cards in their hand, this Ninja gets +1/+1.",
     ],
+    flavor: "Here!",
     image: "s24-n-1360",
   },
   {
@@ -86,6 +89,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[GET WELL PRESENT]",
       "Valid: At the start of your opponent's Organization Phase, you can organize your Teams.",
     ],
+    flavor: "\"Looks like you know more about flowers, now.\"",
     image: "s24-n-1361",
   },
   {
@@ -106,6 +110,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[LOAN OF STEEL]",
       "[EOJ] (1): If this Ninja is not on the Battlefield, target Ninja gets +X/+0 during this turn, where X = this Ninja's Combat.",
     ],
+    flavor: "\"It seems he hasn't changed a bit.\"",
     image: "s24-n-1362",
   },
   {
@@ -126,6 +131,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[ADAPTABILITY]",
       "During the Showdown, if your opponent has 4 or more cards in their hand, this Ninja's Team and the Team opposing it perform a Mental Power Battle.",
     ],
+    flavor: "\"...I'm not in a position where I can just do whatever I like.\"",
     image: "s24-n-1363",
   },
   {
@@ -146,6 +152,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[MYSTERIOUS OBSERVER]",
       "[Blocker | Mission] (0): If target Ninja Attacks during this turn, its effect text is negated.",
     ],
+    flavor: "\"We must notify Tobi. Let's go.\"",
     image: "s24-n-1364",
   },
   {
@@ -187,6 +194,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[BODY TRANSFER TRAP]",
       "Valid: When this Ninja is discarded due to the Showdown while not in a Team by itself, you can move target Ninja with an Entrance cost less than this Ninja card to your Village.",
     ],
+    flavor: "\"It would be a stroke of luck if he falls for this.\"",
     image: "s24-n-1366",
   },
   {
@@ -227,6 +235,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[TIED DOWN]",
       "When this Ninja wins any Battle Reward, your opponent cannot send any Ninjas out to Attack during their next turn.",
     ],
+    flavor: "\"This spot should do nicely.\"",
     image: "s24-n-1368",
   },
   {
@@ -247,6 +256,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[CONTROLLED DEMOLITION]",
       "Valid: Players cannot play more than 1 Jutsu card during the Exchange of Jutsu.",
     ],
+    flavor: "\"What do you think of my artistic creation, hmmm?\"",
     image: "s24-n-1369",
   },
   {
@@ -288,6 +298,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[CURIOSITY]",
       "Valid: When a card is discarded from your Chakra area, this Ninja gets +1/+0 during this turn.",
     ],
+    flavor: "\"I don't recognize you guys.\"",
     image: "s24-n-1371",
   },
   {
@@ -308,6 +319,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[IMPOSTER]",
       "[EOJ] (1): This Ninja is considered to have the printed name of target Ninja during this turn.",
     ],
+    flavor: "\"I took his identity, and sent him and his wife, who had just given birth, into hiding.\"",
     image: "s24-n-1372",
   },
   {
@@ -328,6 +340,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[SOLO ATTITUDE]",
       "This Ninja can only be sent out to Battle by itself.",
     ],
+    flavor: "\"I'm not like them.\"",
     image: "s24-n-1373",
   },
   {
@@ -348,6 +361,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[SHARED INSTINCT]",
       "When this Ninja is put in play, you can search your Deck for an Akamaru Ninja card, reveal it, and move that card to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"I thought I recognized your scent!\"",
     image: "s24-n-1374",
   },
   {
@@ -368,6 +382,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[COMPANION]",
       "Valid: When this Ninja is sent out to Battle, if this Ninja is in the same Team as a Ninja with Inuzuka in its name, your opponent reveals their hand.",
     ],
+    flavor: "\"Woof!!\"",
     image: "s24-n-1375",
   },
   {
@@ -408,6 +423,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[PLACING THE EXPLOSIVES]",
       "[EOJ] Injure this Ninja: Place a -1/-1 coin on target opposing Ninja.",
     ],
+    flavor: "\"Yeah, I thought so.\"",
     image: "s24-n-1377",
   },
   {
@@ -428,6 +444,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[SHADOW OF EVIL]",
       "When this Ninja is put in play, place a -1/-1 counter on each of your opponent's Ninjas with a -1/-1 counter on it.",
     ],
+    flavor: "\"It looks like I don't have time to waste.\"",
     image: "s24-n-1378",
   },
   {
@@ -470,6 +487,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "When this Ninja is put in play, it gains the following effect during this turn:",
       "\"Valid: When this Ninja wins any Victory, you can draw 2 cards.\"",
     ],
+    flavor: "\"Heh... still the impatient one, eh...\"",
     image: "s24-n-1380",
   },
   {
@@ -490,6 +508,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[DANGEROUS PLAN]",
       "When this Ninja is put in play, search your Deck for any card and move it to your hand. Then, discard a card from your hand at random. Shuffle your Deck afterwards.",
     ],
+    flavor: "\"In order to survive, we cling to all we know and understand.\"",
     image: "s24-n-1381",
   },
   {
@@ -513,6 +532,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Valid: When this Ninja receives any Damage, both players win 1 Battle Reward.",
       "[Valid | Attacker | Mission] (2): Give 1 Damage to this Ninja.",
     ],
+    flavor: "\"Hurts good, doesn't it?!\"",
     image: "s24-n-1382",
   },
   {
@@ -554,6 +574,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Valid: When this Ninja is put in play or is removed from play, move the top card of your Deck to your Chakra area.",
       "When this Ninja is moved to your Chakra area due to the effect of GROWTH, you can place 1 Growth coin on target Ninja.",
     ],
+    flavor: "\"Sheesh! That Sasuke always acts arrogant!\"",
     image: "s24-n-1384",
   },
   {
@@ -574,6 +595,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[STEALING THE HIDDEN TRAIT]",
       "[Valid | Attacker | Mission | EOJ] Remove 1 Ninja card in any Discard Pile from the game: If that Ninja had \"Byakugan\" or \"Sharingan Eye\", this Ninja gains that Characteristic during this turn.",
     ],
+    flavor: "\"Are they coming after us?\"",
     image: "s24-n-1385",
   },
   {
@@ -616,6 +638,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[DARING ATTITUDE]",
       "Valid: While this Ninja is opposed by a Team that includes 1 or more Ninjas with an Entrance cost of 3 or more, this Ninja gets +2/+0.",
     ],
+    flavor: "\"Big brother is my rival!! So I'm not choosing an escape route!!\"",
     image: "s24-n-1387",
   },
   {
@@ -636,6 +659,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[WILD RAGE]",
       "Valid: When this Ninja receives any Damage or is injured, move the top 2 cards of your Deck to your Chakra area.",
     ],
+    flavor: "\"Grr...\"",
     image: "s24-n-1388",
   },
   {
@@ -656,6 +680,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[DEADLY COMBINATON]",
       "Valid: While you have Omoi, this Ninja gets +2/+0.",
     ],
+    flavor: "\"Shut up! Enough already.\"",
     image: "s24-n-1389",
   },
   {
@@ -677,6 +702,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "All your other \"Weapon\" Ninjas get +1/+1.",
       "Valid: While you have Karui, this Ninja gets +2/+0.",
     ],
+    flavor: "\"What if Lord Raikage is still crying and his tears are forming into a pond, and then into a lake? What if, by the time we return to the village, the place has become humid like the Hidden Rain? What'll we do then?\"",
     image: "s24-n-1390",
   },
   {
@@ -719,6 +745,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[KENJUTSU EXPERT]",
       "When a Jutsu that has \"Weapon\" in its Requirements resolves successfully, if this Ninja was the user, you can apply the effect of that Jutsu twice.",
     ],
+    flavor: "\"Come on, you two, we're just starting our mission.\"",
     image: "s24-n-1392",
   },
   {
@@ -803,6 +830,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Valid: When this Ninja is put in play, discard all other Ninjas.",
       "Valid: At the end of each turn, heal this Ninja.",
     ],
+    flavor: "\"GRRROOOWWR!!!\"",
     image: "s24-n-1396",
   },
   {
@@ -823,6 +851,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[BULLY]",
       "While this Ninja is opposed by an injured Ninja, this Ninja gets +2/+0.",
     ],
+    flavor: "\"That's cruel, Hibachi.\"",
     image: "s24-n-1397",
   },
   {
@@ -843,6 +872,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[SUMMONING]",
       "Valid: While you have an \"Animal\" Ninja, this Ninja gets +2/+1.",
     ],
+    flavor: "\"Give it up, Leaf brat.\"",
     image: "s24-n-1398",
   },
   {
@@ -863,6 +893,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[INFATUATION]",
       "At the end of your turn, you can pay (*|*). In that case, move 1 Water card from your Discard Pile to the top of your Deck.",
     ],
+    flavor: "\"What's wrong, Sasuke?\"",
     image: "s24-n-1399",
   },
   {
@@ -883,6 +914,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[CURSE MARK]",
       "When this Ninja is sent out to Battle, if you have no cards in your hand, draw 1 card.",
     ],
+    flavor: "\"The tough part is being unable to use our bodies for awhile...\"",
     image: "s24-n-1400",
   },
   {
@@ -903,6 +935,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[PROGENITOR]",
       "[Valid | EOJ] Discard 1 of your Battle Rewards: Target Ninja gets +4/+0 during this turn.",
     ],
+    flavor: "\"H-Hurry up and lock the door!!\"",
     image: "s24-n-1401",
   },
   {
@@ -923,6 +956,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[DEHYDRATED]",
       "[Attacker | Mission] (1): Target Ninja's effect text is negated during this turn.",
     ],
+    flavor: "\"Why are you dragging a team together?\"",
     image: "s24-n-1402",
   },
   {
@@ -943,6 +977,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[ICE MIRRORS]",
       "[Attacker | EOJ] (2): Target Ninja gets -1/-1 for each card in its controller's hand.",
     ],
+    flavor: "\"Your eyes will never see the truth.\"",
     image: "s24-n-1403",
   },
   {
@@ -1004,6 +1039,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[SHARK'S GRIN]",
       "When this Ninja is deployed, your opponent shuffles all cards in their Chakra area into their Deck, then moves the same amount from the top of their Deck to their Chakra area, minus 2.",
     ],
+    flavor: "\"I have no interest in fighting you...\"",
     image: "s24-n-1406",
   },
   {
@@ -1024,6 +1060,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[VICTORY BY ANY MEANS]",
       "[EOJ] (0): Discard any number of cards from your hand, then your opponent discards 1 card for every 2 cards you discarded this way.",
     ],
+    flavor: "\"Remember to whom you are speaking!\"",
     image: "s24-n-1407",
   },
   {
@@ -1084,6 +1121,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[MIND READING]",
       "When this Ninja is put in play, your opponent reveals their hand. In that case, if they revealed a Mission card, you can draw 1 card, then move 1 card in your hand to your Chakra area.",
     ],
+    flavor: "\"Are you a fool?\"",
     image: "s24-n-1410",
   },
   {
@@ -1104,6 +1142,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[RESEARCH]",
       "When this Ninja is put in play, you can look at the top 3 cards of your Deck, move any of those cards to the bottom, then the rest to the top of your Deck in any order.",
     ],
+    flavor: "\"What are you doing to the precious jofuku flowers?!\"",
     image: "s24-n-1411",
   },
   {
@@ -1124,6 +1163,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[INSECT SUBSTITUTION]",
       "When this Ninja receives Damage due to the Showdown, place a 0/0 Insect coin into play.",
     ],
+    flavor: "\"There's no way you'll survive an onslaught of this magnitude...\"",
     image: "s24-n-1412",
   },
   {
@@ -1144,6 +1184,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[CHERRY BLOSSOM]",
       "[EOJ] (0): Discard any number of cards from your hand, then injure target Ninja with an Entrance cost equal to the number of cards you discarded.",
     ],
+    flavor: "I can do this!",
     image: "s24-n-1413",
   },
   {
@@ -1164,6 +1205,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[DISCIPLE OF THE SAND]",
       "While you have another \"Sand\" Ninja in play, all of your \"Sand\" Ninjas get +1/+1.",
     ],
+    flavor: "\"Don't underestimate me.\"",
     image: "s24-n-1414",
   },
   {
@@ -1205,6 +1247,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[POISON NEEDLES]",
       "When this Ninja is put in play, you can name a number. In that case, during your opponent's next turn, if they put in play a Ninja with that Entrance cost, injure that Ninja.",
     ],
+    flavor: "\"You don't think my cell can handle it?\"",
     image: "s24-n-1416",
   },
   {
@@ -1225,6 +1268,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[NANO INSECTS]",
       "When a Ninja opposing this Ninja receives Damage due to the Showdown, discard that Ninja.",
     ],
+    flavor: "\"I'll extract them right away.\"",
     image: "s24-n-1417",
   },
   {
@@ -1246,6 +1290,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Valid: At the end of your turn, if your \"Puppet\" Ninjas have a combined Entrance cost of 10 or more, you win 2 Battle Rewards.",
       "[Attacker | Mission] (0): If you have 2 or less Chakra, move up to 2 \"Puppet\" Ninja cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"I wonder about that.\"",
     image: "s24-n-1418",
   },
   {
@@ -1266,6 +1311,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[CAPTURED SENSES]",
       "[Valid | Mission | EOJ] (1): Negate target activated effect.",
     ],
+    flavor: "\"I want to settle this in my own way.\"",
     image: "s24-n-1419",
   },
   {
@@ -1286,6 +1332,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "[MASTER OF PUPPETS]",
       "When 1 of your Ninjas uses a Jutsu that has \"Puppet\" in its Requirements, target Ninja opposing that Ninja becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Now, let's do this.\"",
     image: "s24-n-1420",
   },
   {
@@ -1344,6 +1391,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 \"REINFORCEMENT\" Ninja",
       "Effect: Remove the target from the game.",
     ],
+    flavor: "\"A sealing jutsu?!\"",
     image: "s24-j-895",
   },
   {
@@ -1374,6 +1422,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: If the user is blocking, the user gets +5/+0 and cannot receive Damage during this turn.",
     ],
+    flavor: "\"I'm here because I want to be.\"",
     image: "s24-j-897",
   },
   {
@@ -1406,6 +1455,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Give 1 Damage to the target. If the target is discarded due to that Damage, you may give 1 Damage to 1 other Ninja.",
     ],
+    flavor: "\"Mangekyo Sharingan... This eye is special...\"",
     image: "s24-j-899",
   },
   {
@@ -1453,6 +1503,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: If this card was played from the Discard Pile, give 1 Damage to the target, then remove this Jutsu from the game. Otherwise, give 2 Damage to the target.",
     ],
+    flavor: "\"It can't be!\"",
     image: "s24-j-902",
   },
   {
@@ -1486,6 +1537,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Effect: Give 2 Damage to the target",
       "Expert (Naruto (Sage Mode)): Give 1 Damage to 1 Ninja opposing the user.",
     ],
+    flavor: "\"Rasengan Barrage!\"",
     image: "s24-j-904",
   },
   {
@@ -1536,6 +1588,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Effect: Discard the target.",
       "Expert [Naruto Uzumaki (Sage Mode)]: Discard the target's Team.",
     ],
+    flavor: "\"Shut up!!!\"",
     image: "s24-j-907",
   },
   {
@@ -1552,6 +1605,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Look at the top X cards of your Deck, where X = the target's Entrance cost. Move any of them to the bottom of your Deck, then the rest to the top in any order, then injure the target. If Lightning was used to pay for this Jutsu, give 1 Damage to the target then draw 1 card.",
     ],
+    flavor: "\"Why don't we end this little charade?\"",
     image: "s24-j-908",
   },
   {
@@ -1567,6 +1621,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Injure the target. In that case, heal the user.",
     ],
+    flavor: "\"Striking Shadow Snake!\"",
     image: "s24-j-909",
   },
   {
@@ -1582,6 +1637,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Requirements: Entrance cost of 4 or more",
       "Effect: Move any amount of cards from your Discard Pile to your Chakra area. At the end of this turn, discard cards from your Chakra area until you have only 2.",
     ],
+    flavor: "\"My pain is far greater than yours!\"",
     image: "s24-j-910",
   },
   {
@@ -1597,6 +1653,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Effect: During this turn and the next turn, players cannot play Jutsu cards.",
       "Expert [\"Akatsuki\"]: Move 1 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"It will take three days. Prepare yourselves.\"",
     image: "s24-j-911",
   },
   {
@@ -1626,6 +1683,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Switch the target's Combat and Support values during this turn.",
     ],
+    flavor: "\"Aha...! This is impressive...\"",
     image: "s24-j-913",
   },
   {
@@ -1641,6 +1699,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Move the target and the user to their owner's hand.",
     ],
+    flavor: "\"Choji! Watch out!\"",
     image: "s24-j-914",
   },
   {
@@ -1656,6 +1715,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: Heal the target and draw 1 card.",
     ],
+    flavor: "\"His wounds are slow to heal...\"",
     image: "s24-j-915",
   },
   {
@@ -1672,6 +1732,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Attach this Jutsu to the target. While this Jutsu is attached, the target's Power is 0/0.",
     ],
+    flavor: "\"Has this tamed you a little, Nine-Tails?\"",
     image: "s24-j-916",
   },
   {
@@ -1686,6 +1747,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: All cards in your opponent's Chakra area have no Symbols during this turn and the next turn.",
     ],
+    flavor: "\"Pain is quite adept.\"",
     image: "s24-j-917",
   },
   {
@@ -1701,6 +1763,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Requirements: Void",
       "Effect: Discard up to 2 of your opponent's Chakra. The user gets +2/+0 for each card discarded this way.",
     ],
+    flavor: "What's happening? I'm losing power...",
     image: "s24-j-918",
   },
   {
@@ -1716,6 +1779,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Requirements: Pain (Deva Path)",
       "Effect: Move all of your opponent's Ninjas with an Entrance cost of X or less into 1 of their Teams on the Battlefield in any position. Then, the Power of every Ninja in that Team with X or less Entrance cost is 0/0 during this turn.",
     ],
+    flavor: "\"Catastrophic Planetary Construction!!\"",
     image: "s24-j-919",
   },
   {
@@ -1732,6 +1796,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: Every Ninja opposing the user",
       "Effect: Discard the target.",
     ],
+    flavor: "\"We're dead if that touches us!\"",
     image: "s24-j-920",
   },
   // ── MISSION ──
@@ -1766,6 +1831,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Permanent (1)",
       "Effect: Ninjas cannot be sent out to Battle.",
     ],
+    flavor: "\"Run! You can't win...\"",
     image: "s24-m-856",
   },
   {
@@ -1781,6 +1847,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: Your opponent selects one of their Ninjas and you gain control of it.",
     ],
+    flavor: "\"Because... I love you...\"",
     image: "s24-m-857",
   },
   {
@@ -1797,6 +1864,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Counter",
       "Effect: Name a Symbol. Your Ninjas cannot be the target of Jutsu or Mission cards with the named Symbol during this turn.",
     ],
+    flavor: "\"This is...!\"",
     image: "s24-m-858",
   },
   {
@@ -1831,6 +1899,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gains \"Taijutsu\" and \"Byakugan\". When the target wins any Battle Reward, your opponent discards 1 card from their hand.",
     ],
+    flavor: "\"I want to become a great ninja...strong like Father and kind like Mother.\"",
     image: "s24-m-860",
   },
   {
@@ -1863,6 +1932,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: Put in play 1 \"Animal\" Ninja card from your Discard Pile with an Entrance cost less than or equal to your Turn Marker.",
     ],
+    flavor: "\"So you're going to see Itachi after all?\"",
     image: "s24-m-862",
   },
   {
@@ -1895,6 +1965,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: Draw 4 cards, then randomly discard 2 cards.",
     ],
+    flavor: "\"Sasuke! You are my new light!\"",
     image: "s24-m-864",
   },
   {
@@ -1910,6 +1981,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: If you have deployed this turn, each player discards every Ninja they control except for 1.",
     ],
+    flavor: "\"One of the founders of Hidden Leaf Village. The man who first possessed the Mangekyo Sharingan.\"",
     image: "s24-m-865",
   },
   {
@@ -1942,6 +2014,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: Look at the top 5 cards of your Deck. You can reveal a non-Lightning card and move it to your hand. Then, move the other cards to the bottom of your Deck in any order.",
     ],
+    flavor: "\"But I have faith that there will come a time when people can truly understand one another.\"",
     image: "s24-m-867",
   },
   {
@@ -1958,6 +2031,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 2 Ninjas",
       "Effect: Draw 1 card, then place a +1/+1 counter on the target.",
     ],
+    flavor: "\"You shattered the Fourth Hokage's old record!\"",
     image: "s24-m-868",
   },
   {
@@ -1974,6 +2048,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target for each Ninja with the same name as it in its controller's Discard Pile or Chakra area.",
     ],
+    flavor: "\"Thinking back...I finally understand what Pervy Sage meant.\"",
     image: "s24-m-869",
   },
   {
@@ -1990,6 +2065,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "As an additional cost to play this card, pay X Chakra.",
       "Effect: Reveal the top X cards of your Deck. Move all Ninja cards revealed this way to your hand, then shuffle the rest into your Deck.",
     ],
+    flavor: "\"You're my son after all.\"",
     image: "s24-m-870",
   },
   {
@@ -2006,6 +2082,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja you control.",
       "Effect: Draw X cards then discard Y cards, where X = the target's Combat, and Y = the target's Support.",
     ],
+    flavor: "\"Gramps... Doesn't he remind you of the two?\"",
     image: "s24-m-871",
   },
   {
@@ -2023,6 +2100,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Effect: Remove the targets from their Teams. Both of the targets must be sent out to Battle during this turn by themselves and can only be opposed by each other.",
       "While this Mission card is in your Chakra, all your \"Tailed Beast\" Ninja cards get -1 Entrance cost.",
     ],
+    flavor: "\"Come here!! I'll rip you to shreds!!!\"",
     image: "s24-m-872",
   },
   {
@@ -2038,6 +2116,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: For each different Symbol among the cards in your opponent's Chakra area, they discard 1 card. Then, discard your opponent's Chakra until they have 2 cards in their Chakra area. If they have less than 2 cards in their Chakra area, discard all of their Chakra.",
     ],
+    flavor: "\"People approved of our efforts to build peace without the use of force.\"",
     image: "s24-m-873",
   },
   {
@@ -2054,6 +2133,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja your opponent controls",
       "Effect: Your opponent may injure the target. If they do not, draw 2 cards.",
     ],
+    flavor: "\"You! The red-haired one. Use that to kill Yahiko.\"",
     image: "s24-m-874",
   },
   {
@@ -2070,6 +2150,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Permanent",
       "Effect: When a Ninja is discarded, the owner of that Ninja card searches their Deck, hand, and Discard Pile for any card with the same name as that Ninja card and removes them from the game.",
     ],
+    flavor: "\"Good bye, Chibi.\"",
     image: "s24-m-875",
   },
   {
@@ -2086,6 +2167,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Ninja you control",
       "Effect: The next Ninja card you play this turn has its Entrance cost reduced by X, where X = the target's Entrance cost.",
     ],
+    flavor: "\"You are on your own from now on.\"",
     image: "s24-m-876",
   },
   {
@@ -2134,6 +2216,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Permanent",
       "[EOJ] (2): Injure 1 of your Healthy Ninjas, then heal an other Ninja.",
     ],
+    flavor: "\"She has already released her Mitotic Regeneration Jutsu and given all her Chakra to lady Katsuyu.\"",
     image: "s24-m-879",
   },
   {
@@ -2151,6 +2234,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Target: 1 Mission",
       "Effect: Negate and move the target to the top of its owner's Deck.",
     ],
+    flavor: "\"Sai valued this picture book...\"",
     image: "s24-m-880",
   },
   {
@@ -2166,6 +2250,7 @@ export const S24_SAGES_LEGACY: Card[] = [
     text: [
       "Effect: Both players, starting with you, move 1 Ninja card from their Discard Pile to their Village, ignoring Sacrifice. Repeat this effect until both players pass consecutively.",
     ],
+    flavor: "\"Nagato's ocular power is the jutsu that controls life and death.\"",
     image: "s24-m-881",
   },
   {
@@ -2183,6 +2268,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Effect: When you put this Mission in play, draw 1 card.",
       "Effect: When you Sacrifice a Ninja, move it to your Chakra area.",
     ],
+    flavor: "\"Pain will give rise to momentary peace.\"",
     image: "s24-m-882",
   },
   {
@@ -2200,6 +2286,7 @@ export const S24_SAGES_LEGACY: Card[] = [
       "Effect: When your opponent wins any Battle Rewards, place that many coins on this Mission.",
       "Effect: At the start of your turn, if this Mission has 4 or more coins on it, discard it. In that case, if you have 5 or less cards in your hand, draw until you have 6 cards in your hand.",
     ],
+    flavor: "\"Arghhhhhh!!!\"",
     image: "s24-m-883",
   },
 ];

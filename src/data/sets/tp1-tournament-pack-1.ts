@@ -25,6 +25,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[IMPOSTER!]",
       "Valid: When this Ninja would receive any Damage, flip a coin, if it's head's reduce the Damage by 1.",
     ],
+    flavor: "\"Heh-heh! You're over-confident, Sensei! That's why you weren't ready for a Shadow Clone Attack, my best jutsu!\"",
     image: "tp1-n-019",
   },
   {
@@ -45,6 +46,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[DEMON OF CLOUD VILLAGE]",
       "While this Ninja is the Head Ninja, discard all Ninjas that receive Damage from this Ninja's Team.",
     ],
+    flavor: "\"I am Zabuza Momochi...'The Demon of the Hidden Mist'!!\"",
     image: "tp1-n-024",
   },
   {
@@ -65,6 +67,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[WIND CHARMER]",
       "Your opponent's Jutsu cards that target a Ninja in this Ninja's Team cost (1) more to play.",
     ],
+    flavor: "\"Wasn't much of a match ... Kinda boring...\"",
     image: "tp1-n-114",
   },
   {
@@ -85,6 +88,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[DETECTING A PLAN]",
       "During your opponent's Mission Phase, you can negate and discard 1 Mission card being played. In that case, discard this Ninja at the end of the turn.",
     ],
+    flavor: "\"I can't believe this ...!\"",
     image: "tp1-n-122",
   },
   {
@@ -105,6 +109,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[MYSTERIOUS MAN FROM THE HIDDEN MIST VALLEY]",
       "Valid: When this Ninja is sent out to Attack, you can discard up to 2 of your opponent's Chakras at the end of the turn.",
     ],
+    flavor: "\"I'm Kisame Hoshigaki ... Glad to get acquainted with you.\"",
     image: "tp1-n-202",
   },
   {
@@ -126,6 +131,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is put in play, you can select up to 2 \"Ninja Dog\" Ninja cards from your Chakra area and/or Discard Pile and put them in play.",
       "When this Ninja is sent out to Battle, this Ninja gets +1/+1 for each of your \"Ninja Dog\" Ninjas during this turn.",
     ],
+    flavor: "\"Go!\"",
     image: "tp1-n-333",
   },
   {
@@ -146,6 +152,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[FIANCEE]",
       "At the end of your opponent's turn, you can move 1 \"Prisoner\" Ninja card from your Chakra area or Discard Pile to the top of its owner's Deck.",
     ],
+    flavor: "\"Please get your old self back... Mizuki...\"",
     image: "tp1-n-336",
   },
   {
@@ -167,6 +174,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Valid: When this Ninja's Team wins any Battle Reward, you can win 1 additional Battle Reward.",
       "Valid: While this Ninja is Injured, this Ninja's Team cannot be blocked by a Team with only 1 Ninja.",
     ],
+    flavor: "A young leader who sacrificed his life to protect the village from a disaster. His brave figure moved swiftly through the battleground like a flash.",
     image: "tp1-n-371",
   },
   {
@@ -187,6 +195,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[FROZEN TIME]",
       "When you win any Battle Reward due to this Ninja's Team, your opponent must discard 1 card from their hand.",
     ],
+    flavor: "\"I must start my brother's time again...\"",
     image: "tp1-n-382",
   },
   {
@@ -207,6 +216,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[RESCUE FROM THE SEABED]",
       "When this Ninja is sent out to Block, you can reveal the bottom card of your Deck. If it is a Ninja card, move it to your hand. Otherwise, return it and shuffle your Deck.",
     ],
+    flavor: "\"I just happened to be there...\"",
     image: "tp1-n-384",
   },
   {
@@ -227,6 +237,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[MEDICAL KUNOICHI]",
       "During your Mission Phase, you can discard the top card of your Deck. In that case, heal 1 of your injured Ninjas and this Ninja cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"Let me treat your wounds!\"",
     image: "tp1-n-451",
   },
   {
@@ -247,6 +258,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[INSECT WARRIORS]",
       "When this Ninja is put in play, put 1 coin (symbolizing an Insect coin) in play with the following: \"[Power: 0/0 (Healthy and Injured)] [Valid:This Ninja cannot be the user of Jutsu cards. This effect cannot be negated.]\"",
     ],
+    flavor: "\"If you fight me, you won't be able to recover. Forfeit and withdraw.\"",
     image: "tp1-n-511",
   },
   {
@@ -267,6 +279,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[LOOPY FIST]",
       "Valid: During the Mission Phase, you can flip a coin. If it's heads, double the printed Combat value (Healthy and Injured) of this Ninja during this turn. If it's tails, the printed Combat value (Healthy and Injured) of this Ninja becomes 0 during this turn.",
     ],
+    flavor: "\"Here I coooooome!!\"",
     image: "tp1-n-571",
   },
   {
@@ -287,6 +300,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[PRESSING]",
       "When this Ninja is put in play, you can reveal the top 2 cards of your Deck. If there are 1 or more Ninja cards among them, place 1 of them in your hand, return the rest, and shuffle the Deck. Otherwise, return them to the top or bottom of your Deck in any order.",
     ],
+    flavor: "\"Come on! He told us to hurry up!\"",
     image: "tp1-n-595",
   },
   {
@@ -307,6 +321,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[HARD-LINER]",
       "When this Ninja is put in play, your opponent moves all the cards in their hand to the bottom of their Deck in any order. Then, they draw cards equal to the amount moved minus one.",
     ],
+    flavor: "\"That's been taken care of.\"",
     image: "tp1-n-600",
   },
   {
@@ -327,6 +342,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[PUPIL OF OROCHIMARU]",
       "Valid: When this Ninja is discarded due to the Showdown, you can search for 1 \"Orochimaru\" Ninja card in your Deck, reveal it, and place it in your hand. Then, Shuffle the Deck.",
     ],
+    flavor: "\"Lord Orochimaru...\"",
     image: "tp1-n-622",
   },
   {
@@ -347,6 +363,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[ENTICEMENT]",
       "Your opponent's \"Male\" Ninjas with an Entrance cost of 2 or less get -2/+0.",
     ],
+    flavor: "\"Hi, there!.. I've been wanting to meet you for a really long time, Neji... So.. hi!\"",
     image: "tp1-n-631",
   },
   {
@@ -368,6 +385,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is put in play, you can remove 1 of your opponent's injured Ninjas from the game. In that case, draw 1 card.",
       "Valid: While this Ninja is in the same Team as 1 or more other Ninjas with a \"Taijutsu\" Combat Attribute, this Ninja gets +0/+5.",
     ],
+    flavor: "\"Noble Blue Beast of the Leaf Village!\"",
     image: "tp1-n-640",
   },
   {
@@ -388,6 +406,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[SNACK TIME]",
       "When this Ninja is sent out to Attack, you can move 1 card from your Discard Pile to the bottom of your Deck. In that case, this Ninja gets +1/+1 during this turn.",
     ],
+    flavor: "\"Hey, y'know I brought some snacks with me. You wanna share 'em?\"",
     image: "tp1-n-864",
   },
   {
@@ -408,6 +427,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[CUTE]",
       "Valid: When this Ninja is discarded due to the Showdown, move it to your Chakra area instead. In that case, randomly discard 1 card from your opponent's hand.",
     ],
+    flavor: "\"Huh??\"",
     image: "tp1-n-865",
   },
   {
@@ -428,6 +448,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[DREAMING OF THE DRIFTING CLOUDS]",
       "At the beginning of your turn, you can discard 1 card from your hand. In that case, draw 1 card at the end of this turn. If you did not discard a card with an Earth Symbol due to this effect, this Ninja cannot be sent out to Attack during this turn.",
     ],
+    flavor: "\"Hey...the clouds are pretty cool from down here, want to lie back and watch with me?\"",
     image: "tp1-n-866",
   },
   {
@@ -449,6 +470,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Valid: Your other \"Anbu\" Ninjas get +0/+1 and +1 Mental Power.",
       "Your opponent can't play Mission cards with an Entrance Cost less than the number of your in-play \"Anbu\" Ninjas.",
     ],
+    flavor: "\"Let's go, we have to backup Lord Hokage!. Beware of traps!\"",
     image: "tp1-n-867",
   },
   {
@@ -470,6 +492,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is deployed, you can discard all in-play non-Ninja cards.",
       "While this Ninja card is in your Discard Pile, if your opponent has more cards in their Discard Pile than in their Deck, you can deploy this Ninja card during your Mission Phase without paying it's Hand cost.",
     ],
+    flavor: "\"Foolish little bother, I almost pity you... Mangekyo Sharingan!\"",
     image: "tp1-n-868",
   },
   {
@@ -490,6 +513,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[PLAY TIME]",
       "When this Ninja is sent out to Attack, you can discard 2 cards from the top or bottom of your opponent's Deck. In that case, this Ninja gets +1/+0 during this turn.",
     ],
+    flavor: "\"Gee, thanks a lot, little guy.\"",
     image: "tp1-n-869",
   },
   {
@@ -511,6 +535,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is put in play, you can move up to X cards from your hand to your Chakra area. Then, move the same number of cards from the top of your Deck to your hand. X = the number of your Ninjas with a \"Lightning\" Symbol.",
       "Valid: While your opponent has less Chakras than you, this Ninja and your Turn Marker are unaffected by your opponent's Ninja and Jutsu effects.",
     ],
+    flavor: "\"I'm the wise and powerful Lord Gamabunta, the Chief Toad! .. And you're an idiot!\"",
     image: "tp1-n-870",
   },
   {
@@ -532,6 +557,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is put in play, reveal the top card of your Deck. Then, move that card to your hand.",
       "Valid: Other \"Leaf\" Ninjas in this Ninja's Team cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"Sexy Two-girl Jutsu!\" \"Are you all right, Konohamaru?!\" \"What are you doing in front of us ladies...?!\"",
     image: "tp1-n-871",
   },
   {
@@ -552,6 +578,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[MOTTO OF HARDWORK]",
       "Valid: While you have less Battle Rewards than your opponent, this Ninja gets +1/+1.",
     ],
+    flavor: "\"I want to show I can be a fun Ninja as well. Even if I do not have Ninjutsu or Genjutsu. I want to prove it to the whole world!\"",
     image: "tp1-n-872",
   },
   {
@@ -572,6 +599,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[RAIN OF SPIDERS]",
       "Valid: When this Ninja is discarded due to the Showdown, you can remove all coins from 1 Ninja or Mission card.",
     ],
+    flavor: "\"I warned you kid, however strong your defenses are I can find a way around them. Scatter!\"",
     image: "tp1-n-873",
   },
   {
@@ -593,6 +621,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "During the Exchange of Jutsu, you can discard 2 of your Ckakras with a Water Symbol. In that case, during this turn, when your opponent wins an Outstanding Victory/Outstanding Battle Reward, it becomes a Victory/Battle Reward instead, respectively.",
       "Valid: This Ninja cannot be sent out to Attack and cannot be included in a Team with any other Ninja.",
     ],
+    flavor: "\"Rashomon is our greatest defense for Lord Orochimaru.\"",
     image: "tp1-n-874",
   },
   {
@@ -614,6 +643,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja's Team wins any Victory, you can injure 1 opposing Back Ninja.",
       "When this Ninja's Team wins any Battle Reward, you can discard 1 in-play non-Ninja card.",
     ],
+    flavor: "\"Friendship, comfort, encouragement, I do not need these things, nor should you expect them from me.\"",
     image: "tp1-n-875",
   },
   {
@@ -635,6 +665,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is deployed, search your Deck for 1 Ninja card that includes \"Childhood\" in their name, reveal it, and place it in your hand. Then, shuffle your Deck.",
       "When you put a Ninja in play by \"Growth\", heal it.",
     ],
+    flavor: "\"I'm going to teach you how to walk...on water.\"",
     image: "tp1-n-876",
   },
   {
@@ -656,6 +687,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When this Ninja is put in play, draw 1 card.",
       "Valid: When this Ninja is discarded due to the Showdown, discard 1 card from your hand.",
     ],
+    flavor: "\"What does pain feel like? You see I've never actually been injured before, and I was wondering what it was like.\"",
     image: "tp1-n-877",
   },
   {
@@ -677,6 +709,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "When one of your opponent's Ninja would be discarded, you can discard X of your Chakras, where X is the Entrance cost of that Ninja. In that case, move that Ninja cards to your Village instead.",
       "Valid: During your Mission Phase, you can discard this Ninja, In that case, you can put in play 1 \"Puppet Master\" Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"Art is something that beautifully remains...extensively into the distant future. Eternal beauty is art!\"",
     image: "tp1-n-878",
   },
   {
@@ -697,6 +730,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[FOR THE ONE SHE ADMIRES]",
       "Valid: When your opponent searches or draws any cards due to an effect, your opponent discards 1 card from their hand. Then, you can draw 1 card and discard 1 card from your hand.",
     ],
+    flavor: "\"For a long time...I've trained as hard I could so Naruto would acknowledge my ability.\"",
     image: "tp1-n-879",
   },
   {
@@ -717,6 +751,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[THE POWER OF THE FIRST HOKAGE]",
       "While this Ninja is on the Battlefield, you can select 1 Battling Ninja. In that case, the selected Ninja becomes a Stand-By Ninja unless your opponent discards 1 card from their hand.",
     ],
+    flavor: "\"Sure you're ready for this? You just got out of the hospital yesterday.\"",
     image: "tp1-n-880",
   },
   {
@@ -737,6 +772,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[ORIGIN OF THE LEAF HEADBAND]",
       "At the end of your turn, if you have no Clients in your Village, you can search for 1 Client in your Deck and deploy it. Then, shuffle your Deck.",
     ],
+    flavor: "\"He who hones his concentration is truly a great ninja.\"",
     image: "tp1-n-881",
   },
   {
@@ -757,6 +793,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[AMBITIOUS YOUTH]",
       "Valid: When any of your Ninjas or Missions with a \"Lightning\" Symbol would be removed from play by your opponent's effects, you can move this Ninja to your Chakra area. In that case, move 1 of those cards to its owner's hand.",
     ],
+    flavor: "\"I'm going to become the Seventh Hokage.\"",
     image: "tp1-n-882",
   },
   {
@@ -777,6 +814,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[A DOUBLE PERSONALITY]",
       "During the Exchange of Jutsu, you can exchange all the cards in your hand with the same number of cards from the top of your Deck.",
     ],
+    flavor: "\"A girl's gotta be tough if she's going to survive something like this!\"",
     image: "tp1-n-us006",
   },
   {
@@ -797,6 +835,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[FLEXIBILITY]",
       "While you have 5 or more cards in your hand, this Ninja's Team and the Team Battling against it perform a Mental Power Battle. While you have 4 or less cards in your hand, this Ninja's Team and the Team Battling against it cannot perform a Mental Power Battle.",
     ],
+    flavor: "\"So, let's do it.\"",
     image: "tp1-n-us015",
   },
   {
@@ -817,6 +856,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[INSTRUCTION OF THE HIDDEN TECHNIQUE]",
       "During your Mission Phase, if you have \"Naruto Uzumaki\" in play, you can move 1 Jutsu card from your Discard Pile to your hand.",
     ],
+    flavor: "\"I'm going to teach you a killer technique.\"",
     image: "tp1-n-us027",
   },
   {
@@ -837,6 +877,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[CAMOUFLAGE]",
       "During the Mission Phase or the Exchange of Jutsu, you can injure another Ninja in this Ninja's Team. In that case, that Ninja cannot be the target of your opponent's Jutsu cards during this turn. Heal that injured Ninja at the end of the turn.",
     ],
+    flavor: "\"If I hadn't intervened, you'd be dead now ... that much is certain.\"",
     image: "tp1-n-us035",
   },
   {
@@ -858,6 +899,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Valid: During your Mission Phase, you can discard 2 of your Battle Rewards. In that case, you can put 1 \"Ninja Toad\" Ninja card from your hand in play ignoring Entrance requirements.",
       "Valid: This Ninja cannot be the user of Jutsu cards.",
     ],
+    flavor: "\"Well, whatever it is, I hope you brought along some treats.\"",
     image: "tp1-n-us072",
   },
   {
@@ -878,6 +920,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "[EXPERT OF GENJUTSU]",
       "While this Ninja is Battling, all Ninjas in this Ninja's Team and all Ninjas Battling against this Ninja get -1/-1 if they don't have a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "\"Alright... Let's end this!\"",
     image: "tp1-n-us106",
   },
   // ── JUTSU ──
@@ -894,6 +937,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 of your opponent's Battle Rewards",
       "Effect: Turn the target face up. Then, randomly discard up to X cards from your opponent's hand. X = the number of Symbols on the target. (The target remains face up)",
     ],
+    flavor: "\"I found them! There's one on a boulder about 500 meters northeast of here...\"",
     image: "tp1-j-696",
   },
   {
@@ -909,6 +953,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 Ninja with a Combat value less than or equal to the user's Combat value",
       "Effect: The target becomes a Stand-by Ninja. Then, If the user has an Earth Symbol, it is unaffected by your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Expansion Jutsu! Super Slap!\"",
     image: "tp1-j-697",
   },
   {
@@ -924,6 +969,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. Then, if the user has a Fire Symbol, discard 4 cards from the top or bottom of your opponent's Deck.",
     ],
+    flavor: "\"Rat, Tiger, Dog, Ox, Hare, Tiger! Fire Style: Fireball Jutsu!!\"",
     image: "tp1-j-698",
   },
   {
@@ -940,6 +986,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets -4/-4 during this turn. If the user's Team wins any Victory during this turn, you win 1 Battle Reward.",
     ],
+    flavor: "\"One after another, a new generation will succeed us.\"",
     image: "tp1-j-699",
   },
   {
@@ -970,6 +1017,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. The next Jutsu card the target uses during this turn cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"Severe Leaf Hurricane!\"",
     image: "tp1-j-701",
   },
   {
@@ -985,6 +1033,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: Jutsu card being played or 1 Ninja's effect text",
       "Effect: Your opponent flips a coin twice. If they get tails only once, negate the target. This Jutsu card can be used while it is in your Chakra area.",
     ],
+    flavor: "\"But your decision was the right one. I'm...powerful.\"",
     image: "tp1-j-702",
   },
   {
@@ -1000,6 +1049,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 Back Ninja Battling against the user",
       "Effect: The target's Power and Mental Power cannot be added to its Team during the Showdown of this turn. This Jutsu card can be used while it is in your Chakra area.",
     ],
+    flavor: "\"I can't move...\" \"I can't breathe...\"",
     image: "tp1-j-703",
   },
   {
@@ -1015,6 +1065,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Heal the target or draw 1 card. Then, If the user has a \"Medicine\" Combat Attribute, you can move 1 card from your Discard Pile to your hand.",
     ],
+    flavor: "\"It's a Ninjutsu that allows you to bring a dead person back to life in exchange for your own...\"",
     image: "tp1-j-704",
   },
   {
@@ -1030,6 +1081,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets +0/+3.",
     ],
+    flavor: "\"To activate it imagine your Chakra splitting in two...\"",
     image: "tp1-j-705",
   },
   // ── MISSION ──
@@ -1047,6 +1099,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target's Team and Team Battling against it performs a Mental Power Battle during this turn. At the end of this turn, if the target was sent out to Battle this turn and is still in your Village, draw 2 cards.",
     ],
+    flavor: "\"Heh! When you've played enough Shogi with someone, you learn how to read them like a book.\"",
     image: "tp1-m-665",
   },
   {
@@ -1062,6 +1115,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
     text: [
       "Effect: Search your Deck for 1 Ninja or Client card with an Entrance cost less than the number of cards in your Chakra area, reveal it, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"No way!!\"",
     image: "tp1-m-666",
   },
   {
@@ -1077,6 +1131,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
     text: [
       "Effect: The Combat, Support, and Mental Power of all Ninjas becomes 0 and cannot be changed by the effect of non-Jutsu cards during this turn. At the end of this turn, draw 1 card for each of your Teams that won a Victory or Battle Reward during this turn.",
     ],
+    flavor: "\"The truth is you and I are friends.\" \"It's not insignificant to me, there is no question, you were my closest friend.\"",
     image: "tp1-m-667",
   },
   {
@@ -1095,6 +1150,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Effect: Attach this card to the target. The effect text of the target is negated.",
       "Effect: When your opponent draws 1 or more cards due to an effect, draw 1 card.",
     ],
+    flavor: "\"Say, can we rest a bit?\"",
     image: "tp1-m-668",
   },
   {
@@ -1111,6 +1167,7 @@ export const TP1_TOURNAMENT_PACK_1: Card[] = [
       "Effect: Draw 2 cards. Then, move 1 card from your hand to your Chakra area.",
       "Effect: During your Mission Phase, if this card is in your Chakra area, you can remove it from game, In that case, place 1 Growth coin on a \"Sand\" or \"Leaf\" Ninja.",
     ],
+    flavor: "\"Gaara...\" \"Naruto...\"",
     image: "tp1-m-669",
   },
 ];

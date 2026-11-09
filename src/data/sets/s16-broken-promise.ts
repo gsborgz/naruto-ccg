@@ -26,6 +26,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is sent out to Attack, you can move 1 \"Chidori\" Jutsu card from your Chakra area or your Discard Pile to your hand.",
       "Valid: Your \"Obito Uchiha\" and/or \"Rin\" get +1/+1.",
     ],
+    flavor: "\"I've always wanted to test my new technique...!\"",
     image: "s16-n-709",
   },
   {
@@ -46,6 +47,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Prayer]",
       "When you put a \"Kakashi Hatake\" or \"Obito Uchiha\" in play, draw 1 card.",
     ],
+    flavor: "\"You're getting better. But, don't push yourself too hard. Or, the scar will reopen.\"",
     image: "s16-n-710",
   },
   {
@@ -67,6 +69,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: During the Exchange of Jutsu, you can discard 1 card from your hand. In that case, negate 1 Jutsu card being used by a Ninja with an Entrance cost of 3 or less.",
       "Valid: Your \"Kakashi Hatake\" and/or \"Rin\" get +1/+1.",
     ],
+    flavor: "\"This time...I'll protect my comrades!\"",
     image: "s16-n-711",
   },
   {
@@ -88,6 +91,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: During your Mission Phase, you can discard 2 of your Chakras. In that case, place a Ninja Blade coin symbolizing a \"Mark\" coin on 1 of your opponent's Ninjas.",
       "Valid: During the Exchange of Jutsu, you can place this Ninja in any of your other Battling Teams in any position. In that case, if there are 1 or more Ninjas with a \"Mark\" coin in the opposing Team, give 1 Damage to those Ninjas.",
     ],
+    flavor: "\"The marks have been set.\"",
     image: "s16-n-712",
   },
   {
@@ -108,6 +112,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Hidden Blades]",
       "When this Ninja is put in play, you can change 1 of your opponent's Ninjas with an Entrance cost of 2 to injured status.",
     ],
+    flavor: "\"Come on, crybaby! Let's end this now.\"",
     image: "s16-n-713",
   },
   {
@@ -128,6 +133,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Invisible Hunter]",
       "When this Ninja is put in play, you can change 1 of your opponent's Ninjas with an Entrance cost of 1 to injured status.",
     ],
+    flavor: "\"I'm taking her with me.\"",
     image: "s16-n-714",
   },
   {
@@ -148,6 +154,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Lightning Speed]",
       "When this Ninja is put in play, you can change 1 of your opponent's Ninjas with an Entrance cost of 0 to injured status.",
     ],
+    flavor: "\"Don't get carried away!!\"",
     image: "s16-n-715",
   },
   {
@@ -169,6 +176,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Your opponent cannot play any Permanent Mission cards.",
       "Valid: During your Mission Phase, you can remove this Ninja from game. In that case, discard 1 of your opponent's in-play Permanent Mission cards.",
     ],
+    flavor: "\"IT SEEMS LIKE THEY HAVE ARRIVED.\"",
     image: "s16-n-716",
   },
   {
@@ -189,6 +197,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Man of Mystery]",
       "During your Mission Phase, if this Ninja card is in your hand, you can reveal it to your opponent and move it to the bottom of your Deck. In that case, draw 2 cards and discard 1 card.",
     ],
+    flavor: "\"Ah I thought you were dead already.\"",
     image: "s16-n-717",
   },
   {
@@ -209,6 +218,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Shown Signs of the Legends]",
       "When your opponent plays a Mission card, any Hand cost of that Mission card is discarded. When your opponent's non-Permanent Mission card's effect is applied, that Mission card is discarded. When your opponent's Permanent Mission cards are removed from play, those Mission cards are discarded.",
     ],
+    flavor: "\"One of us will be tied to the log...\"",
     image: "s16-n-718",
   },
   {
@@ -230,6 +240,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: This Ninja gets +1/+1 for each of your other injured Ninjas.",
       "Valid: When your opponent deploys a Ninja card, you can move 1 card with a Lightning Symbol in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Let's do this!!\"",
     image: "s16-n-719",
   },
   {
@@ -250,6 +261,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Shown Signs of the Legends]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, you can randomly select up to 2 cards in your opponent's Reinforcement Deck and remove them(it) from game.",
     ],
+    flavor: "\"I think I won this bet.\"",
     image: "s16-n-720",
   },
   {
@@ -270,6 +282,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Virtue]",
       "When this Ninja is sent out to Block, you can select 1 of your injured Ninjas. In that case, during this turn, this Ninja gets +X/+0 while that injured Ninja is in your Village. X = the printed Combat of the selected Ninja.",
     ],
+    flavor: "\"I will take care of this. You stay here and support me.\"",
     image: "s16-n-721",
   },
   {
@@ -290,6 +303,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Veterinarian]",
       "When this Ninja is sent out to Attack in the same Team as 1 or more injured \"Animal\" Ninjas, change those Ninjas to healthy status.",
     ],
+    flavor: "\"Good. It might take some time to heal, but this is not a fatal injury or anything...\"",
     image: "s16-n-722",
   },
   {
@@ -311,6 +325,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: This Ninja (card) can be put in play or moved into a Village or Battlefield, even if that player already has 1 or more Ninjas with the same name in play.",
       "Valid: This Ninja gets +1/+1 for each other \"Haimaru Brothers\" Ninja in this Ninja's Team.",
     ],
+    flavor: "\"Arf!!\" \"Arf!!\"",
     image: "s16-n-723",
   },
   {
@@ -332,6 +347,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "While you have another Ninja that has \"Nara\" in its name in play, this Ninja gets +3 Mental Power.",
       "While this Ninja is Battling in the same Team with another Ninja that has \"Nara\" in its name, this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
     ],
+    flavor: "\"Only one 'Yes' is enough!\"",
     image: "s16-n-724",
   },
   {
@@ -352,6 +368,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Strong Bond]",
       "During the Exchange of Jutsu, you can discard this Ninja. In that case, each Ninja in your Battling Teams cannot become a Stand-By Ninja during this turn.",
     ],
+    flavor: "\"......\"",
     image: "s16-n-725",
   },
   {
@@ -373,6 +390,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: When this Ninja is put in play, if you have a \"Leaf Academy\" Mission card and/or 1 or more other \"Leaf Academy\" Ninjas in play, place 1 Growth coin on this Ninja.",
       "Valid: Growth coins on this Ninja cannot be removed by your opponent's effects.",
     ],
+    flavor: "\"No matter what it takes, I will be the Hokage.\"",
     image: "s16-n-726",
   },
   {
@@ -394,6 +412,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: When this Ninja is put in play, if you have a \"Leaf Academy\" Mission card and/or 1 or more other \"Leaf Academy\" Ninjas in play, place 1 Growth coin on this Ninja.",
       "Valid: Growth coins on this Ninja cannot be removed by your opponent's effects.",
     ],
+    flavor: "\"Humph.\"",
     image: "s16-n-727",
   },
   {
@@ -415,6 +434,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: When this Ninja is put in play, if you have a \"Leaf Academy\" Mission card and/or 1 or more other \"Leaf Academy\" Ninjas in play, place 1 Growth coin on this Ninja.",
       "Valid: Growth coins on this Ninja cannot be removed by your opponent's effects.",
     ],
+    flavor: "\"Naruto--! Sasuke--!!\"",
     image: "s16-n-728",
   },
   {
@@ -436,6 +456,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is put in play, your opponent can organize their Teams.",
       "Valid: During the turn that this Ninja is put in play, only \"Female\" Ninjas can be sent out to Battle.",
     ],
+    flavor: "\"This is lady Tsunade's order.\" \"Naruto, I'm glad to be assigned to the same mission.\"",
     image: "s16-n-729",
   },
   {
@@ -457,6 +478,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is put in play, you can search for 1 \"Intellectual Strategy\" Mission card in your Deck and put it in play. Then, shuffle your Deck.",
       "When this Ninja's Team wins a Victory or an Outstanding Victory in a Mental Power Battle, you win 1 Battle Reward. When it is Defeated or Completely Defeated in a Mental Power Battle, your opponent wins 1 Battle Reward.",
     ],
+    flavor: "\"Well then, shall we go, team Asuma?\"",
     image: "s16-n-730",
   },
   {
@@ -478,6 +500,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is put in play, if you have a \"Leaf Academy\" Mission card and/or 1 or more other \"Leaf Academy\" Ninjas in play, place 1 Growth coin on this Ninja.",
       "Valid: Growth coins on this Ninja cannot be removed by your opponent's effects.",
     ],
+    flavor: "\"Hi, everybody!\"",
     image: "s16-n-731",
   },
   {
@@ -498,6 +521,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Self-Sacrifice]",
       "During the Exchange of Jutsu, you can apply the following effect: Ninjas that are in the same Team as this Ninja cannot be removed from play by the effects of your opponent's Jutsu cards during this turn. If this effect was applied, at the end of the turn, if this Ninja still remains in play, discard this Ninja.",
     ],
+    flavor: "\"Sometimes, you need a sacrifice to protect your 'king' against the stronger players.\"",
     image: "s16-n-732",
   },
   {
@@ -518,6 +542,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Trap]",
       "Valid: During your Mission Phase or the Exchange of Jutsu, if this Ninja is in injured status, you can move this Ninja to your Chakra area. In that case, search your Deck for 1 \"Two Tails\" Ninja card and put it in play in the same place as this Ninja was. Then, shuffle your Deck.",
     ],
+    flavor: "\"I am the one who trapped you!\"",
     image: "s16-n-733",
   },
   {
@@ -538,6 +563,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Ferociousness]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, your opponent moves all the cards in their hand to the bottom of their Deck in any order. Then, they draw the same number of cards that they moved to the bottom of their Deck due to this effect minus one.",
     ],
+    flavor: "\"Grrrrrrrrrrrr\"",
     image: "s16-n-734",
   },
   {
@@ -558,6 +584,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Pure Evil]",
       "While this Ninja is on the Battlefield, when any of your opponent's injured Ninjas is sent out to Block, you can select 1 of them and give 1 Damage to it.",
     ],
+    flavor: "\"Is this Sasori's true form?\" \"You are so slow...\"",
     image: "s16-n-735",
   },
   {
@@ -578,6 +605,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Falling Out]",
       "While this Ninja is on the Battlefield, when any of your opponent's Teams with only 1 Ninja is sent out to Block, your opponent flips a Ninja Blade coin. If it's tails, discard that Ninja.",
     ],
+    flavor: "\"Senpai, you talk a lot...Hahaha.\" \"......\"",
     image: "s16-n-736",
   },
   {
@@ -598,6 +626,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Destructive Hallucination]",
       "When this Ninja is sent out to Attack in the same Team as 2 or more other \"Akatsuki\" Ninjas or Ninjas with a \"Genjutsu\" Combat Attribute, you can change 1 of your opponent's Ninjas to injured status.",
     ],
+    flavor: "\"It's time for you to come with us, Naruto.\"",
     image: "s16-n-737",
   },
   {
@@ -618,6 +647,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[I Won't Let You!]",
       "When this Ninja is sent out to Block, you can exchange all the cards in your hand with the same amount of cards from the top of your Deck. In that case, you can reveal 1 \"Puppet\" Ninja card in your hand with an Entrance cost equal to or less than your Turn Marker and place it in this Ninja's Team in any position.",
     ],
+    flavor: "\"I won't let you!\"",
     image: "s16-n-738",
   },
   {
@@ -639,6 +669,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is deployed, look at all the cards in your opponent's Reinforcement Deck, select and remove 1 \"Squad\" Ninja card from game.",
       "While this Ninja is in play, your opponent cannot put any \"Squad\" Ninja cards that have the same name as the selected \"Squad\" Ninja card in play.",
     ],
+    flavor: "\"I will go!\"",
     image: "s16-n-739",
   },
   {
@@ -660,6 +691,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "While this Ninja card is in your hand, when your \"Special Jonin\" and/or \"Anbu\" Ninja is discarded due to the Showdown, you can put this Ninja card in play.",
       "Valid: While you have 1 or more \"Special Jonin\" and/or \"Anbu\" Ninja cards in your Discard Pile, this Ninja gets +2/+0.",
     ],
+    flavor: "\"Kakashi-senpai, are you visiting Obito's grave? You should come earlier rather than coming up with excuses for being late.\"",
     image: "s16-n-740",
   },
   {
@@ -682,6 +714,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: This Ninja gets +1/+1 while you have a \"Obito Uchiha\" Ninja card in your Discard Pile.",
       "Valid: This Ninja gets +1/+1 while you have a \"Rin\" Ninja card in your Discard Pile.",
     ],
+    flavor: "\"I always come here early. But, this place fills me with regret.\"",
     image: "s16-n-741",
   },
   {
@@ -703,6 +736,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "During your Mission Phase, you can discard 1 of your other in-play \"Ninja Dog\" Ninjas or a \"Ninja Dog\" Ninja card from your hand. In that case, draw 1 card.",
       "Valid: This Ninja gets +1/+1 for each of your other in-play \"Ninja Dog\" Ninjas.",
     ],
+    flavor: "\"I'm counting on you, Pakkun!\" \"You got it.\"",
     image: "s16-n-742",
   },
   {
@@ -723,6 +757,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Keen Sense of Smell]",
       "When this Ninja is sent out to Attack in the same Team as 1 or more \"Ninja Dog\" Ninjas, you can randomly select 1 card in your opponent's Reinforcement Deck and remove it from game.",
     ],
+    flavor: "\"Here we come!\"",
     image: "s16-n-743",
   },
   {
@@ -743,6 +778,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Best Partner]",
       "When this Ninja is sent out to Attack, you can randomly select up to 2 cards in your opponent's Reinforcement Deck and remove them(it) from game.",
     ],
+    flavor: "\"Come on, Akamaru!\" \"Arf, Arf!\"",
     image: "s16-n-744",
   },
   {
@@ -763,6 +799,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Gene Manipulation]",
       "During the Exchange of Jutsu, when any of your opponent's Ninjas become a Stand-By Ninja, give 1 Damage to that Ninja.",
     ],
+    flavor: "The ones who create forest using a secret jutsu that is known only by a few.",
     image: "s16-n-745",
   },
   {
@@ -784,6 +821,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: This Ninja cannot be affected by the effects of your opponent's Mission cards.",
       "Valid: Players cannot play Counter Mission cards.",
     ],
+    flavor: "\"Give us back Gaara!!\"",
     image: "s16-n-746",
   },
   {
@@ -806,6 +844,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: During your Mission Phase, you can move any number of Growth coins from another Ninja you have in play to this Ninja.",
       "Valid: During your Mission Phase, you can remove a total of 2 Growth coins from this Ninja. In that case, give 1 Damage to 1 Ninja.",
     ],
+    flavor: "\"Don't call Sasuke's name like that! He is not your possession!! Got it?\"",
     image: "s16-n-747",
   },
   {
@@ -826,6 +865,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Freezing Eyes]",
       "When this Ninja is put in play, remove all Ninjas with an Entrance cost of 1 or less from game.",
     ],
+    flavor: "\"Oh yeah. No more chatting, right?\"",
     image: "s16-n-748",
   },
   {
@@ -847,6 +887,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Your \"Leaf\" Ninjas cannot be affected by the effects of your opponent's Mission cards.",
       "While this Ninja card is in your hand, if you have 4 or more \"Leaf\" Ninjas in play, this Ninja card gets -1 Entrance cost and -1 Hand cost.",
     ],
+    flavor: "\"Ninjas in this village have a will of fire.\"",
     image: "s16-n-749",
   },
   {
@@ -868,6 +909,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Your \"Sand\" Ninjas cannot be affected by the effects of your opponent's Mission cards.",
       "Valid: Your \"Sand\" Ninjas get \"Surge\".",
     ],
+    flavor: "\"Well done, Yura. I didn't know you had given an order to fortify the village before the meeting.\"",
     image: "s16-n-750",
   },
   {
@@ -888,6 +930,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Preparation for the Battle]",
       "When this Ninja is put in play, reveal the top 6 cards of your Deck and move all Jutsu cards among them that includes \"Requirements: Rock Lee\", \"Requirements: Byakugan\", \"Requirements: Neji Hyuga\" and/or \"Requirements: Taijutsu Combat Attribute\" to your hand. Then, return the rest, if there is any, and shuffle your Deck.",
     ],
+    flavor: "\"Ha!\" \"Here I come!!\"",
     image: "s16-n-751",
   },
   {
@@ -908,6 +951,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Easy-Going]",
       "Cards in your hand cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"Naruto-! Long time no see!\"",
     image: "s16-n-752",
   },
   {
@@ -928,6 +972,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Magnetic Force]",
       "When this Ninja is sent out to Attack, you can select 1 of your opponent's Ninjas with an Entrance cost of 1 or less. In that case, during the Exchange of Jutsu, if this Ninja's Team is not opposed, move the selected Ninja to the Battlefield as a Team of 1 Ninja Battling against this Ninja's Team.",
     ],
+    flavor: "\"Yeah, my ninjutsu is Ninja Art Magnet!!\"",
     image: "s16-n-753",
   },
   {
@@ -948,6 +993,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Dowsing]",
       "During your Mission Phase, you can reveal the top card of your Deck. If it is a Ninja card with \"Ambush\" and a Water Symbol, you can move it to your Chakra area. Then, shuffle your Deck. If not, or you decide not to, return it.",
     ],
+    flavor: "\"That won't work. Water gushes out from underground.\"",
     image: "s16-n-754",
   },
   {
@@ -968,6 +1014,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Power of Ice]",
       "This Ninja cannot receive any Damage while your Turn Marker is an even number. (0 is considered to be an even number.)",
     ],
+    flavor: "\"That's right. And this is just the beginning. My jutsu is beyond anything you could imagine.\"",
     image: "s16-n-755",
   },
   {
@@ -989,6 +1036,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "During your Mission Phase, you can discard 2 of your Chakras with a Water Symbol. In that case, place 1 Growth coin on this Ninja.",
       "Valid: At the end of your turn, if you have no cards in your Chakra area, discard this Ninja.",
     ],
+    flavor: "\"I won't let my guard down again. I'm calling on all my strength to crush you.",
     image: "s16-n-756",
   },
   {
@@ -1009,6 +1057,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Insanity]",
       "When this Ninja is sent out to Attack, you can select 1 of your opponent's Ninjas with an Entrance cost of 1 or less. In that case, move it to its owner's Chakra area.",
     ],
+    flavor: "\"Ranmaru, open your eyes. Take a look at the outside world.\"",
     image: "s16-n-757",
   },
   {
@@ -1029,6 +1078,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Special Eyes]",
       "Ninjas with a Water Symbol in this Ninja's Team cannot be affected by the effects of your opponent's Ninjas with a printed Entrance cost of 2 or less.",
     ],
+    flavor: "\"If it weren't for Raiga, I wouldn't be alive.\"",
     image: "s16-n-758",
   },
   {
@@ -1049,6 +1099,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Man of Tragedy]",
       "Valid: When this Ninja is discarded due to the Showdown, your opponent cannot draw any cards during their next turn.",
     ],
+    flavor: "\"...\"",
     image: "s16-n-759",
   },
   {
@@ -1069,6 +1120,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Intelligence]",
       "Valid: Each Ninja Battling against this Ninja gets -1 Mental Power.",
     ],
+    flavor: "\"Lady Toki!\"",
     image: "s16-n-760",
   },
   {
@@ -1089,6 +1141,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Threat of the Sea]",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas that do not have a \"Water\" Combat Attribute.",
     ],
+    flavor: "\"I'm the complete package. You wanna see?\"",
     image: "s16-n-761",
   },
   {
@@ -1109,6 +1162,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Secret Experiment]",
       "When this Ninja is put in play, you can put 1 Ninja card with an Entrance cost of 4 or less and a Water Symbol in play from your Discard Pile.",
     ],
+    flavor: "\"Lord Orochimaru...\" \"I'm going to teach you something very special today.\"",
     image: "s16-n-762",
   },
   {
@@ -1129,6 +1183,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Threat of the Sea]",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas that do not have a \"Water\" Combat Attribute.",
     ],
+    flavor: "\"Naruto...are you doing this for me?\"",
     image: "s16-n-763",
   },
   {
@@ -1151,6 +1206,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: This Ninja gets +2/+0 when it is sent out to Attack.",
       "Valid: This Ninja cannot be the user of Jutsu cards.",
     ],
+    flavor: "\"Grrrrrrr\"",
     image: "s16-n-764",
   },
   {
@@ -1171,6 +1227,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Delivery]",
       "During your Mission Phase, you can reveal the top 6 cards of your Deck. If there are 1 or more Ninja cards with an Entrance cost of 1 or less and a Lightning Symbol, you can discard this Ninja. In that case, put 1 of them in play and return the rest and shuffle your Deck.",
     ],
+    flavor: "\"Once a package has been entrusted to a messenger ninja, he is absolutely forbidden from ever opening it or examining its contents.\"",
     image: "s16-n-765",
   },
   {
@@ -1191,6 +1248,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[For the Future Generation]",
       "When this Ninja is discarded due to the Showdown, you can place 1 Growth coin on each of your \"Chunin\" or lower Rank Ninjas with no Growth coin.",
     ],
+    flavor: "\"Sumaru...\"",
     image: "s16-n-766",
   },
   {
@@ -1211,6 +1269,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[For the Future Generation]",
       "During your Mission Phase, you can remove 1 Growth coin from 1 of your Ninjas. In that case, draw 1 card.",
     ],
+    flavor: "\"Natsuhiboshi, why are your eyes so red? Because I had a bad dream last night.\"",
     image: "s16-n-767",
   },
   {
@@ -1232,6 +1291,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is put in play, place 1 Growth coin on each of your other Ninjas with a Lightning Symbol.",
       "During your Mission Phase, you can remove 1 Growth coin from 1 of your Ninjas. In that case, search for 1 \"A Piece of Star\" Mission card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"...\"",
     image: "s16-n-768",
   },
   {
@@ -1252,6 +1312,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Plunder]",
       "During the Exchange of Jutsu, you can move 1 Growth coin from 1 of your opponent's Ninjas Battling against this Ninja to this Ninja.",
     ],
+    flavor: "\"Does that mean she is still alive?\"",
     image: "s16-n-769",
   },
   {
@@ -1272,6 +1333,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Plunder]",
       "During the Exchange of Jutsu, you can move 1 Growth coin from 1 of your opponent's Ninjas Battling against this Ninja to this Ninja.",
     ],
+    flavor: "\"Are you saying that she took the star?\"",
     image: "s16-n-770",
   },
   {
@@ -1293,6 +1355,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Valid: This Ninja gets +1/+1 for each other Ninjas in this Ninjas Team with [Moving] effect.",
       "Valid: You can organize your Teams during your opponent's Mission Phase.",
     ],
+    flavor: "\"That Grandma. She is full of surprises.\"",
     image: "s16-n-771",
   },
   {
@@ -1314,6 +1377,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "This Ninja gets +1/+1 for each other Ninjas in this Ninjas Team with [Moving] effect.",
       "Valid: You can organize your Teams during your opponent's Mission Phase.",
     ],
+    flavor: "\"Our hokage gave us one more piece of identification so you can be absolutely sure we are who we say we are.\"",
     image: "s16-n-772",
   },
   {
@@ -1335,6 +1399,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "This Ninja gets +1/+1 for each other Ninjas in this Ninjas Team with [Moving] effect.",
       "Valid: You can organize your Teams during your opponent's Mission Phase.",
     ],
+    flavor: "What the heck is that?!",
     image: "s16-n-773",
   },
   {
@@ -1355,6 +1420,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Charm]",
       "When this Ninja is put in play, you can move 1 of your opponent's \"Male\" Ninjas with an Entrance cost of 0 to your Village. If that Ninja still remains in play at the end of that turn, return it to its owner's Village.",
     ],
+    flavor: "\"Just stick to the plan, OK?\"",
     image: "s16-n-774",
   },
   {
@@ -1376,6 +1442,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "When this Ninja is put in play, place 1 Growth coin on 1 of your \"Chunin\" or lower Rank Ninjas with a \"Taijutsu\" Combat Attribute.",
       "Valid: This Ninja can be put in play or moved into a Village or Battlefield, even if that player already has 1 or more Ninjas with the same name in play.",
     ],
+    flavor: "\"This is a perfect disguise. Even Lee can't tell that it's me.\"",
     image: "s16-n-775",
   },
   {
@@ -1397,6 +1464,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "While this Ninja card is in your hand, if you have 1 or more injured Ninjas, the deployment of this Ninja does not count towards the \"1 Ninja per turn\" restriction.",
       "Valid: This Ninja (card) can be put in play or moved into a Village or Battlefield, even if that player already has 1 or more Ninjas with the same name in play.",
     ],
+    flavor: "\"It doesn't concern you. Now, get going.\"",
     image: "s16-n-776",
   },
   {
@@ -1417,6 +1485,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[With a Monster Within]",
       "Your opponent's Ninjas with an Entrance cost of 2 or less that do not have a \"Genjutsu\" Combat Attribute get -2/-0.",
     ],
+    flavor: "\"She didn't want me to become a genjutsu user.\"",
     image: "s16-n-777",
   },
   {
@@ -1437,6 +1506,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Power to Save the Weak]",
       "Valid: When this Ninja is sent out to Battle in the same Team as 1 or more injured Ninjas with an Entrance cost of 3 or less, if this Ninja is injured, you can change this Ninja to healthy status.",
     ],
+    flavor: "\"I can't stand it any more.\"",
     image: "s16-n-778",
   },
   {
@@ -1457,6 +1527,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Dazzling Tone]",
       "Your opponent's Ninjas with an Entrance cost of 1 or less that do not have a \"Genjutsu\" Combat Attribute get -0/-2.",
     ],
+    flavor: "\"Naruto, I have something to tell you.\"",
     image: "s16-n-779",
   },
   {
@@ -1477,6 +1548,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[One on One Fight]",
       "When this Ninja is put in play, you can discard 1 of your Ninjas with an Entrance cost of 4 or less. In that case, you can move 1 of your opponent's Ninjas with the same Entrance cost as that of the discarded Ninja to its owner's Chakra area.",
     ],
+    flavor: "\"Two of you stay here and take care of those two. The rest of us will go one-on-one.\"",
     image: "s16-n-780",
   },
   {
@@ -1497,6 +1569,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[A Blast]",
       "When this Ninja is sent out to Attack, you can discard 2 of your Chakras with a Wind Symbol. In that case, you can look at all the cards in your opponent's hand. If there are 1 or more Jutsu cards among them, select 1 of them and move it to their Chakra area.",
     ],
+    flavor: "\"It's too late for regrets.\"",
     image: "s16-n-781",
   },
   {
@@ -1520,6 +1593,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "2) Make 1 \"Genin\" Ninja Battling against this Ninja a Stand-By Ninja.",
       "3) Change 1 Ninja Battling against this Ninja to injured status.",
     ],
+    flavor: "\"Too bad. Moving at my will is not the only ability this sword has.\"",
     image: "s16-n-782",
   },
   {
@@ -1540,6 +1614,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "[Assimilation of Chakra]",
       "When Your opponent plays a Mission card, you can select and discard up to 2 of your opponent's Chakras.",
     ],
+    flavor: "\"That's right. This armor absorbs chakra.\"",
     image: "s16-n-783",
   },
   // ── JUTSU ──
@@ -1556,6 +1631,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: Place 1 \"Ninja Dog\" Ninja card in the user's Team in any position from your Chakra area or Discard Pile. At the end of the turn, if that \"Ninja Dog\" Ninja is still in play, move it to your hand.",
     ],
+    flavor: "\"Hey Kakashi, long time no see.\" \"I guess we don't have time to chat here.\"",
     image: "s16-j-602",
   },
   {
@@ -1571,6 +1647,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: Place 1 \"The Fourth Hokage\" Ninja card from your hand, Chakra area or Discard Pile in the user's Team in any position. At the end of the turn, if that \"The Fourth Hokage\" is still in play, move it to your hand.",
     ],
+    flavor: "\"I'll give you this. My special kunai.\"",
     image: "s16-j-603",
   },
   {
@@ -1587,6 +1664,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. Additionally, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"That told me where you were hiding. It's my turn now.\"",
     image: "s16-j-604",
   },
   {
@@ -1602,6 +1680,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+3 during this turn. Additionally, if the user is \"Kakashi Hatake\", the user gets +2/+2 and cannot be affected by effects of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"This is a keepsake from my father.\"",
     image: "s16-j-605",
   },
   {
@@ -1617,6 +1696,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. Additionally, if the user has \"Sharingan Eye\", give 1 additional Damage to the target and move this Jutsu card to your hand.",
     ],
+    flavor: "\"Obito...you...\"",
     image: "s16-j-606",
   },
   {
@@ -1633,6 +1713,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Each of your opponent's \"Squad\" Ninjas",
       "Effect: Remove the target from game.",
     ],
+    flavor: "\"So long, Sasori.\"",
     image: "s16-j-607",
   },
   {
@@ -1649,6 +1730,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Place the target in your Battle Reward area face down.",
     ],
+    flavor: "\"No one can escape from my Tsukuyomi.\"",
     image: "s16-j-608",
   },
   {
@@ -1665,6 +1747,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja with an Entrance cost equal to or lower than the user's",
       "Effect: Change the target to injured status. Additionally, if the user has a \"Medicine\" Combat Attribute, move this Jutsu card to your hand.",
     ],
+    flavor: "\"Did he realize it? No. Then why?\"",
     image: "s16-j-609",
   },
   {
@@ -1681,6 +1764,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja with a Mental Power of 1 or less",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"This is the problem of this training that it doesn't give him only experience but also fatigue.\"",
     image: "s16-j-610",
   },
   {
@@ -1697,6 +1781,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: X number of your opponent's Ninjas",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Water Style: Water Dragon Jutsu!\"",
     image: "s16-j-611",
   },
   {
@@ -1712,6 +1797,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Requirements: \"Special Jonin\" or higher Rank",
       "Effect: Place 1 Ninja in your opponent's Discard Pile or Chakra area in the user's Team in any position. At the end of the turn, if that Ninja still remains in play, discard it.",
     ],
+    flavor: "\"Striking Shadow Snake!\"",
     image: "s16-j-612",
   },
   {
@@ -1728,6 +1814,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: Give 1 Damage to the user.",
     ],
+    flavor: "\"There!!\"",
     image: "s16-j-613",
   },
   {
@@ -1744,6 +1831,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every \"Male\" Ninja in the user's Team and the Team Battling against the user",
       "Effect: Give 1 Damage to the target. Additionally, if the user is \"Tsunade\", give 1 additional Damage to the target.",
     ],
+    flavor: "\"That sly old dog...\"",
     image: "s16-j-614",
   },
   {
@@ -1760,6 +1848,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: (1) 1 of your opponent's Stand-By Ninjas, (2) Each of your opponent's Stand-By Ninjas",
       "Effect: Target (1) cannot be sent out to Battle during the next turn and the following turn. Additionally, if the user has a \"Tree\" Combat Attribute, target (2) cannot be sent out to Battle during the next turn and the following turn.",
     ],
+    flavor: "\"Wood Style, Tree Bind Eternal Burial!\"",
     image: "s16-j-615",
   },
   {
@@ -1775,6 +1864,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The user gets +1/+1 during this turn. If the user's Team wins a Victory or an Outstanding Victory, change the target to injured status. Additionally, if the user has a \"Weapon\" Combat Attribute, randomly discard 1 card from your opponent's hand.",
     ],
+    flavor: "\"This is made of special metal that absorbs the user's chakra.\"",
     image: "s16-j-616",
   },
   {
@@ -1791,6 +1881,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 of your Stand-By Ninjas",
       "Effect: Move the target to the user's Team in any position. Then, move this Jutsu card to your hand.",
     ],
+    flavor: "\"Those eyes...he is extremely dangerous...!\"",
     image: "s16-j-617",
   },
   {
@@ -1807,6 +1898,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: Attach 1 non-\"Platoon\" Ninja card from your hand, Chakra area or Discard Pile to the target. In that case, the target gets the same effect texts as that Ninja's.",
     ],
+    flavor: "\"He looks a little different now...\"",
     image: "s16-j-618",
   },
   {
@@ -1822,6 +1914,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: During this turn, each of the specific cost Symbol of any Jutsu card, used by the target, are considered to be [generic Chakra icon]. While this Jutsu card is in your Chakra area, it is considered to be up to 2 Chakras, each with any Symbol.",
     ],
+    flavor: "\"Compress the chakra by spinning it at super high speeds.\"",
     image: "s16-j-619",
   },
   {
@@ -1837,6 +1930,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: During this turn, the target can use any Jutsu cards regardless of the Jutsu card's Requirements.",
     ],
+    flavor: "\"Change the nature of your chakra like an electric current, and change its shape like an electric discharge to decide the range and the power of the attack .\"",
     image: "s16-j-620",
   },
   {
@@ -1852,6 +1946,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X during this turn. X = the number of cards in your hand when this Jutsu card is used.",
     ],
+    flavor: "\"I will defeat you and bring Sasuke back to the Leaf Village!!\"",
     image: "s16-j-621",
   },
   {
@@ -1868,6 +1963,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Remove X number of Growth coins and/or Meteorite coins from your in-play Ninjas. In that case, give X Damage to the target.",
     ],
+    flavor: "\"Oh is that so? How can I lose when I possess the star?\"",
     image: "s16-j-622",
   },
   {
@@ -1884,6 +1980,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja with a printed Entrance cost of 2 or less",
       "Effect: Move the target to its owner's hand.",
     ],
+    flavor: "\"Is this the jutsu that defeated Kikunojo?\"",
     image: "s16-j-623",
   },
   {
@@ -1900,6 +1997,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 of your opponent's Stand-By Ninjas with an Entrance cost of 3 or less",
       "Effect: If the user is not opposed, move the target to the Battlefield as a Team of 1 Ninja Battling against the user's Team.",
     ],
+    flavor: "\"My magnetic sand interferes with electrical impulses in his brain.\"",
     image: "s16-j-624",
   },
   {
@@ -1916,6 +2014,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja in up to 2 of your opponent's Battling Teams",
       "Effect: Flip a Ninja Blade coin X times. Then, give 1 Damage to the target.",
     ],
+    flavor: "\"Rasengan!!\"",
     image: "s16-j-625",
   },
   {
@@ -1932,6 +2031,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja in the user's Team and the Team Battling against the user that do not have a \"Genjutsu\" Combat Attribute",
       "Effect: The target gets -2/-2 and -2 Mental Power during this turn.",
     ],
+    flavor: "\"when did he..? I can't believe he was able to cast genjutsu on me.\"",
     image: "s16-j-626",
   },
   {
@@ -1948,6 +2048,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja in the user's Team and the Team Battling against the user that do not have a \"Genjutsu\" Combat Attribute",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"What are you doing?\" \"What do you think of my work, sensei? Amazing isn't it?\"",
     image: "s16-j-627",
   },
   {
@@ -1963,6 +2064,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: (1) Every one of your opponent's Ninjas, (2) Every one of your Ninjas",
       "Effect: Negate the effect texts of target (1) during this turn. If the user does not have a \"Genjutsu\" Combat Attribute, negate the effect texts of target (1) & target (2) during this turn.",
     ],
+    flavor: "\"Canceling tone!\"",
     image: "s16-j-628",
   },
   {
@@ -1980,6 +2082,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "2) Make 1 \"Genin\" Ninja Battling against the user a Stand-By Ninja.",
       "3) Give 1 Damage to 1 Ninja Battling against the user.",
     ],
+    flavor: "\"Three headed dragons?\"",
     image: "s16-j-629",
   },
   {
@@ -1996,6 +2099,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target. Additionally, if the user has a \"Weapon\" Combat Attribute, discard the target. If not, move it to its owner's hand.",
     ],
+    flavor: "\"These swords change the wind direction depending on the attack and increase its power to the maximum level.\"",
     image: "s16-j-630",
   },
   {
@@ -2011,6 +2115,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and move it to its owner's Chakra area. Additionally, if the user is \"Temari\", change the user of the target to injured status.",
     ],
+    flavor: "\"Wind Scythe Jutsu\"",
     image: "s16-j-631",
   },
   {
@@ -2026,6 +2131,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: If the user's Team has 2 or more \"Four Celestials\" Ninjas, move the target to the top of the owner's Deck in any order you like.",
     ],
+    flavor: "\"Soaring Shot Sword!\"",
     image: "s16-j-632",
   },
   {
@@ -2042,6 +2148,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to its owner's hand. Then, move this Jutsu card to your hand.",
     ],
+    flavor: "\"All right!\"",
     image: "s16-j-633",
   },
   {
@@ -2058,6 +2165,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: X number of injured Ninjas Battling against the user",
       "Effect: Discard the target. You can only discard Chakras with a Water Symbol for X.",
     ],
+    flavor: "\"I see. He sharpened his sword with his chakra to paralyze my body after the attack...\"",
     image: "s16-j-634",
   },
   {
@@ -2074,6 +2182,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja with an Entrance cost less than the user's",
       "Effect: Discard the target.",
     ],
+    flavor: "\"Chidori Stream!\"",
     image: "s16-j-635",
   },
   {
@@ -2090,6 +2199,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: Reveal the top 5 cards of your Deck. The target gets +X/+X during the turn. X = the number of cards with a Water Symbol among the revealed cards. Then, return them and shuffle your Deck.",
     ],
+    flavor: "\"Take this! Water Style: Bubbling Water!\"",
     image: "s16-j-636",
   },
   {
@@ -2106,6 +2216,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give X Damage to the target. X = the number of Jutsu cards in your Discard Pile.",
     ],
+    flavor: "\"Take this! Flower Shuriken: Burning Petals and Fallen Leaves!\"",
     image: "s16-j-637",
   },
   {
@@ -2120,6 +2231,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Reveal all the cards in your Battle Reward area. If there are 1 or more Ninja cards among them, select 1 of them and place it in the user's Team in any position. Then, return the rest.",
     ],
+    flavor: "\"I found you!\"",
     image: "s16-j-638",
   },
   {
@@ -2134,6 +2246,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Reveal the top 4 cards of your Deck. If there are 1 or more Jutsu cards among them, move 1 of them to your hand. Then, return the rest and shuffle your Deck. If the user is \"Jonin\" or higher Rank, reveal the top 8 cards instead.",
     ],
+    flavor: "\"......\"",
     image: "s16-j-639",
   },
   {
@@ -2149,6 +2262,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninja. Additionally, if the user has a \"Genjutsu\" Combat Attribute, give 1 Damage to the target.",
     ],
+    flavor: "\"Noooooooo!!\"",
     image: "s16-j-640",
   },
   {
@@ -2165,6 +2279,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: User",
       "Effect: The target cannot be removed from play during the turn. Additionally, multiply the target's Power by X. X = the number of Ninjas Battling against the user plus one. When the user's Team wins a Victory, it becomes an Outstanding Victory. When the user's Team wins an Outstanding Victory, draw 2 cards.",
     ],
+    flavor: "\"Is that...?\" \"Yes...\" \"This is it!\"",
     image: "s16-j-641",
   },
   {
@@ -2180,6 +2295,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute",
       "Effect: Reveal the top 5 cards of your Deck. If there are 1 or more Ninja cards with an Entrance cost of 4 or less among them, select 1 of them and place it in the user's Team in any position. Then, return the rest and shuffle your Deck. At the end of the turn, if it still remains in play, move it to its owner's hand.",
     ],
+    flavor: "\"That's right. They are the very first puppets that you made.\"",
     image: "s16-j-642",
   },
   {
@@ -2196,6 +2312,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to its owner's hand. If the user's Team wins a Victory or an Outstanding Victory this turn, randomly discard 1 card from your opponent's hand.",
     ],
+    flavor: "\"Don't fool around with me!!\"",
     image: "s16-j-643",
   },
   {
@@ -2211,6 +2328,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Requirements: Ninja with \"Inuzuka\" in its name or \"Chunin\" or higher Rank",
       "Effect: Search your Deck for 1 \"Ninja Dog\" Ninja card with an Entrance cost of 1 or less and place it in the user's Team in any position. Then, shuffle your Deck.",
     ],
+    flavor: "\"Beast Mimicry Ninja Art: Man Beast Clone\"",
     image: "s16-j-644",
   },
   // ── MISSION ──
@@ -2227,6 +2345,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: If all of your Ninjas are \"Leaf\" and you have 3 or less cards in your hand, draw until you have 4 cards in your hand.",
     ],
+    flavor: "\"It seems like the will of fire has been succeeded successfully.\"",
     image: "s16-m-585",
   },
   {
@@ -2242,6 +2361,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: If you have 4 or more \"Female\" Ninjas with 1 or more Growth coins, draw 2 cards. If not, if you have 4 or more in-play \"Female\" Ninjas, each with a mental Power of 1 or more, place a Growth coin on each of them that have no Growth coin on them.",
     ],
+    flavor: "\"Let's go!!\"",
     image: "s16-m-586",
   },
   {
@@ -2258,6 +2378,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, designate a Symbol. In that case, cards in your hand and Chakra area are considered to have that Symbol in addition to the one(s) they have already.",
     ],
+    flavor: "\"This paper will tell you what chakra type you have.\"",
     image: "s16-m-587",
   },
   {
@@ -2274,6 +2395,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent (3)",
       "Effect: Each Ninja in a Team with only Ninjas with an Earth Symbol cannot be affected by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Earth Style: Rampart of Flowing Soil!!\"",
     image: "s16-m-588",
   },
   {
@@ -2290,6 +2412,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent (3)",
       "Effect: At the end of the turn that your opponent wins or gets 1 or more Battle Rewards, they discard 1 card from their hand.",
     ],
+    flavor: "\"All right! I will eat for Shikamaru as well!\"",
     image: "s16-m-589",
   },
   {
@@ -2305,6 +2428,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Exchange all the cards in your hand with the same amount of cards from the bottom of your Deck. Then, draw 1 card.",
     ],
+    flavor: "\"......\"",
     image: "s16-m-590",
   },
   {
@@ -2321,6 +2445,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent (4)",
       "Effect: When this Mission card's effect is applied, designate a name of a Jutsu card. In that case, Jutsu cards with the same name cannot be used.",
     ],
+    flavor: "\"You shouldn't use that Jutsu now, Sasuke\"",
     image: "s16-m-591",
   },
   {
@@ -2336,6 +2461,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Draw 3 cards. In that case, your opponent gets 2 Battle Rewards.",
     ],
+    flavor: "You are not alone. We will train harder and get stronger together...\"",
     image: "s16-m-592",
   },
   {
@@ -2351,6 +2477,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: During this turn, all Teams perform a Mental Power Battle. Players must send their Teams out to Battle if possible. At the end of this turn, draw 1 card for each of your Teams that won a Victory or an Outstanding Victory this turn.",
     ],
+    flavor: "\"Checkmate.\" \"Oh, no! I lost again!\"",
     image: "s16-m-593",
   },
   {
@@ -2367,6 +2494,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent (3)",
       "Effect: During your Mission Phase, you can reveal the top 2 cards of your Deck. If either or both of them have a Water Symbol, you can move it(one of them) to your Chakra area. If not, or you decide not to, return them and shuffle your Deck.",
     ],
+    flavor: "\"I have no interest in him. Help me train right now, Orochimaru...\"",
     image: "s16-m-594",
   },
   {
@@ -2382,6 +2510,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Reveal up to 7 cards from the top of your opponent's Deck and look at all the cards in your opponent's hand. If there are 1 or more cards in common, select 1 of them and discard all the cards that have the same name as the selected card. Then, return the rest of the revealed cards and your opponent shuffles it.",
     ],
+    flavor: "\"Infiltration must be quick and silent...\"",
     image: "s16-m-595",
   },
   {
@@ -2398,6 +2527,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Counter",
       "Effect: Discard all in-play Permanent Missions and/or Clients. If 2 or more cards are discarded due to this effect, draw 2 cards.",
     ],
+    flavor: "\"......\"",
     image: "s16-m-596",
   },
   {
@@ -2413,6 +2543,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's Battle Reward area. Move any number of them to your hand. In that case, move the same amount of cards from your hand to your opponent's Battle Reward area face down.",
     ],
+    flavor: "\"Let me hear your explanation.\"",
     image: "s16-m-597",
   },
   {
@@ -2429,6 +2560,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Counter",
       "Effect: Move both players' Turn Marker up by 1.",
     ],
+    flavor: "\"They are both smiling...\"",
     image: "s16-m-598",
   },
   {
@@ -2445,6 +2577,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent",
       "Effect: During the Exchange of Jutsu, you can discard 1 of your Chakras. In that case, select 1 of your Battling Teams and move it to your Village.",
     ],
+    flavor: "\"Let's go, shall we?\"",
     image: "s16-m-599",
   },
   {
@@ -2476,6 +2609,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Move up to 3 cards with a Lightning Symbol in your Discard Pile to your Chakra area. Additionally, if you have a \"Naruto Uzumaki\" in play, draw 2 cards.",
     ],
+    flavor: "\"Hehehe...\" \"That me over there did good job.\"",
     image: "s16-m-601",
   },
   {
@@ -2491,6 +2625,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: If you have 1 or more \"Messenger Ninja\" Ninja cards in your Discard Pile, draw 3 cards.",
     ],
+    flavor: "\"They will give their lives to deliver anything, anywhere. War, fun, fire, nothing can stop them.\"",
     image: "s16-m-602",
   },
   {
@@ -2507,6 +2642,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent (3)",
       "Effect: Ninjas with an Entrance cost of 1 or less cannot be sent out to Battle or moved to the Battlefield.",
     ],
+    flavor: "\"Natsuhiboshi, why are your eyes so red? Because I had a bad dream last night.\"",
     image: "s16-m-603",
   },
   {
@@ -2523,6 +2659,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent",
       "Effect: When you deploy a Ninja card, place a \"Showy Entrance\" coin on it. During your Mission Phase, you can remove a total of 3 \"Showy Entrance\" coins from your in-play Ninjas. In that case, move 1 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"What the heck is this?\" \"The music is getting louder.\"",
     image: "s16-m-604",
   },
   {
@@ -2540,6 +2677,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 of your \"Genin\" Ninjas",
       "Effect: When this Mission card's effect is applied, attach this Mission card to the target. While this Mission card is attached, the target gets the following effect text: During the Exchange of Jutsu, you can place this Ninja in 1 of your other Teams in any position.",
     ],
+    flavor: "\"Kurenai sensei...What on earth happened to you?\"",
     image: "s16-m-605",
   },
   {
@@ -2556,6 +2694,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent",
       "Effect: When 1 of your Ninjas with a \"Genjutsu\" Combat Attribute is removed from play, place a Growth coin on 1 of your Ninjas with a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "\"Darn, this is some good ramen!\"",
     image: "s16-m-606",
   },
   {
@@ -2573,6 +2712,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Effect: During your Mission Phase, you can apply the following effect:",
       "Each player reveals the top card of their Deck. If they are the same card type, you can move your Turn Marker up 1. Then, return them to the top of their owner's Deck.",
     ],
+    flavor: "\"I wanted to show this to my brother... the picture of our dreams...\"",
     image: "s16-m-607",
   },
   {
@@ -2590,6 +2730,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Each time the target is sent out to Attack with 2 or more other \"Chunin\" and/or \"Genin\" Ninjas, you can place 1 Growth coin on each Ninja in the target's Team if they don't have any.",
     ],
+    flavor: "\"Hey, Sai! The meeting for the next mission is starting soon!\"",
     image: "s16-m-608",
   },
   {
@@ -2608,6 +2749,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "1) Your opponent chooses 1 of their healthy status Ninjas and changes it to injured status.",
       "2) Your opponent chooses 1 of their Teams. In that case, that Team cannot be sent out to Battle this turn.",
     ],
+    flavor: "\"I have a favor to ask.\" \"A favor?\"",
     image: "s16-m-609",
   },
   {
@@ -2624,6 +2766,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: (1) All of your injured Ninjas, (2) All of your opponent's injured Ninjas.",
       "Effect: Heal target (1) or (2). Ninjas that were healed due to this effect cannot be sent out to Battle this turn.",
     ],
+    flavor: "\"Hi Kakashi.\" \"How are you feeling, Kakashi?\" \"Aren't you supposed to knock first, Asuma sensei?\"",
     image: "s16-m-610",
   },
   {
@@ -2641,6 +2784,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 \"Squad\" Ninja that was put in play this turn",
       "Effect: Remove the target from game.",
     ],
+    flavor: "\"Sai, you can't say that in front of Choji. Got it?\" \"?\"",
     image: "s16-m-611",
   },
   {
@@ -2657,6 +2801,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent",
       "Effect: During your Mission Phase, you can look at X number of cards from the top of your Deck and return them in any order. Additionally, if you have 3 or more Ninjas with \"Byakugan\" in play, draw 1 card. X = the number of your in-play Ninjas with \"Byakugan\".",
     ],
+    flavor: "\"Byakugan!!\"",
     image: "s16-m-612",
   },
   {
@@ -2673,6 +2818,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Permanent (2)",
       "Effect: At the end of the turn that 1 or more of your Ninjas were discarded, you can put 1 \"Jonin\" + \"Sharingan Eye\" Ninja card in play from your hand.",
     ],
+    flavor: "\"I will...give you...my sharingan. Whatever...they say...you are...an admirable jonin...\"",
     image: "s16-m-613",
   },
   {
@@ -2690,6 +2836,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "1) Draw 2 cards.",
       "2) Your opponent discards 2 cards from their hand.",
     ],
+    flavor: "\"......\" \"What's that supposed to mean? Why would I give you something?\"",
     image: "s16-m-614",
   },
   {
@@ -2709,6 +2856,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "* No characteristics and effect texts",
       "* 4/4 (healthy status) 3/3 (injured status) \"Genjutsu\" Combat Attribute",
     ],
+    flavor: "\"I could only stand and stare when I came across that hideous sight.\"",
     image: "s16-m-615",
   },
   {
@@ -2726,6 +2874,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Target: 1 of your injured status Ninja",
       "Effect: When this Mission card's effect is applied, attach this Mission card to the target. While this Mission card is attached, the target must be sent out to Battle and can only be sent out to Battle by itself. Additionally, when the target is discarded due to the Showdown, discard all Ninjas that battled against the target that turn.",
     ],
+    flavor: "\"So long, Naruto...\"",
     image: "s16-m-616",
   },
   {
@@ -2743,6 +2892,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Effect: Ninjas with \"Clone Status\" and your Ninja cards with \"Clone Status\" can be put in play, or moved into your Village or Battlefield, even if you already have 1 or more Ninjas with the same name in play.",
       "When you put a Ninja card with \"Clone Status\" in play, place a Growth coin on it.",
     ],
+    flavor: "\"Let's do this training using Shadow Clone Jutsu the whole time.\"",
     image: "s16-m-617",
   },
   {
@@ -2758,6 +2908,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Select up to 3 of your \"Male\" only Ninjas. Then, remove those Ninjas from their Teams. During this turn, those selected Ninjas cannot be Teamed with any other Ninja(s), and must be sent out to Battle, if possible. At the end of this turn, draw 1 card for each of those Ninjas that still remains in play and place 1 Growth coin on each of them. Additionally, at the end of this turn, if any of them are injured, you can change any or all of them to healthy status.",
     ],
+    flavor: "\"Let's save Rin now!\" \"Yeah!\"",
     image: "s16-m-618",
   },
   {
@@ -2773,6 +2924,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Move up to 4 cards with a Water Symbol in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Water Style: Waterfall Basin Jutsu!!\"",
     image: "s16-m-619",
   },
   {
@@ -2788,6 +2940,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Effect: Reveal up to X number of cards from the top of your Deck and return them in any order. Then, draw 1 card. X = the number of your in-play Ninjas with a Lightning Symbol.",
     ],
+    flavor: "\"Ninja Art: Super Beast Scroll!\"",
     image: "s16-m-620",
   },
   // ── CLIENT ──
@@ -2805,6 +2958,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Mission cards in your Chakra area are considered to be up to 2 Chakras with a Lightning Symbol.",
     ],
+    flavor: "\"Forgive me, Kikunojo...\"",
     image: "s16-c-052",
   },
   {
@@ -2821,6 +2975,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "When your opponent wins or gets any Battle Rewards, move those cards to your hand instead. In that case, move the same amount of cards from your hand to your opponent's Battle Reward area face down.",
     ],
+    flavor: "\"Ah, it's true. They must be who they say they are.\"",
     image: "s16-c-053",
   },
   {
@@ -2838,6 +2993,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "During your opponent's Mission Phase, if you have 4 or more \"Female\" Ninjas in play, you can discard this in-play Client. In that case, you can negate 1 Mission card being played.",
       "Your \"Female\" Ninjas get +1/+1 during the turn they are put in play.",
     ],
+    flavor: "\"I am so sorry for sorry, pretty lady. But, I suffer from a little low blood pressure.\"",
     image: "s16-c-054",
   },
   {
@@ -2854,6 +3010,7 @@ export const S16_BROKEN_PROMISE: Card[] = [
     text: [
       "Ninja cards in your hand with a \"Genjutsu\" Combat Attribute get -1 Entrance cost.",
     ],
+    flavor: "\"Yakumo...\"",
     image: "s16-c-055",
   },
 ];

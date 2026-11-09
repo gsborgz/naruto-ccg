@@ -25,6 +25,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[OUT TO LUNCH]",
       "When this Ninja is put in play, if your Turn Marker is 6 or higher, place 2 Growth coins on this Ninja and it gains the following effect: \"Valid: This Ninja cannot be the target of Water Jutsu cards.\"",
     ],
+    flavor: "\"I'm pleasingly plump!\"",
     image: "s22-n-1206",
   },
   {
@@ -46,6 +47,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "When you flip a coin due to 1 of your effects, if the result is heads, your opponent must discard 1 card. If tails, give 1 Damage to 1 of your Ninjas.",
     ],
+    flavor: "\"Ur...urm...\"",
     image: "s22-n-1207",
   },
   {
@@ -67,6 +69,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "Valid: When you flip a coin due to 1 of your effects, if the result is heads, draw 1 card then discard 1 card. If tails, move the top 3 cards of your Deck to your Discard Pile.",
     ],
+    flavor: "\"Cut it out!\"",
     image: "s22-n-1208",
   },
   {
@@ -88,6 +91,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "Valid: When you flip a coin due to 1 of your effects, if the result is heads, remove 1 Ninja with an Entrance cost of 1 or less from its Team. If tails, your opponent places a Growth coin on 1 of their Ninjas.",
     ],
+    flavor: "\"Thank goodness for that...\"",
     image: "s22-n-1209",
   },
   {
@@ -108,6 +112,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[ABSOLUTE VISION]",
       "Valid: Your opponent plays with the top card of their Deck revealed.",
     ],
+    flavor: "\"Ho ho...It's more fun this way anyway...\"",
     image: "s22-n-1210",
   },
   {
@@ -128,6 +133,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[SHADOW BARBS]",
       "[EOJ | Mission] (Earth): When target Ninja receives any Damage during this turn, reduce that Damage by 1.",
     ],
+    flavor: "\"Slowpokes.\"",
     image: "s22-n-1211",
   },
   {
@@ -149,6 +155,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, you can pay 2 Earth. In that case, place a Growth coin on this Ninja and this Ninja gets the following effect: \"This Ninja cannot be the target of Lightning Jutsu cards.\"",
       "Valid: When this Ninja is put in play, you can pay 2 Fire. In that case, injure 1 Ninja with an Entrance cost less than this Ninja's Entrance cost.",
     ],
+    flavor: "\"I'll go.\"",
     image: "s22-n-1212",
   },
   {
@@ -169,6 +176,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[LIMITLESS SIGHT]",
       "Valid: When this Ninja is put in play, choose a Symbol. Your opponent cannot play cards with that Symbol during this turn.",
     ],
+    flavor: "\"It's finally come.\"",
     image: "s22-n-1213",
   },
   {
@@ -189,6 +197,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[BOMB MAKER]",
       "Valid: At the start of each player's turn, that player discards 1 non-Reinforcement Ninja they control with 2 or more Symbols (if any).",
     ],
+    flavor: "\"You do it!\"",
     image: "s22-n-1214",
   },
   {
@@ -209,6 +218,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[REBUILD]",
       "Valid: When a Permanent Mission is put in play, draw 1 card.",
     ],
+    flavor: "\"I won't let you hurt them.\"",
     image: "s22-n-1215",
   },
   {
@@ -249,6 +259,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[TENACITY]",
       "Valid: At the end of your turn, if this Ninja was not sent out to Battle during this turn, your opponent moves the top card of their Deck to their Discard Pile.",
     ],
+    flavor: "\"Woof woof!!\"",
     image: "s22-n-1217",
   },
   {
@@ -269,6 +280,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[SHARP TACTICS]",
       "[Attacker | Mission] (Fire|1): Your opponent moves the top 5 cards of their Deck to their Discard Pile.",
     ],
+    flavor: "\"So this time, I'm not holding back!!\"",
     image: "s22-n-1218",
   },
   {
@@ -289,6 +301,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[OCULAR ABILITIES]",
       "When this Ninja is put in play, you can remove any coin on an in-play card from the game. In that case, draw 1 card.",
     ],
+    flavor: "\"Guess this is it...\"",
     image: "s22-n-1219",
   },
   {
@@ -309,6 +322,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[BRAINS OVER BRAWN]",
       "When your opponent moves any cards from the top of their Deck to their Discard Pile, if any of those cards is a non-Ninja card, they move an additional 1 card.",
     ],
+    flavor: "\"Don't you dare call me 'a cute little doggie'!\"",
     image: "s22-n-1220",
   },
   {
@@ -330,6 +344,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Non-Unique",
       "When this Ninja is put in play, move 1 of your Fire Ninjas to your hand.",
     ],
+    flavor: "\"Hayate...\"",
     image: "s22-n-1221",
   },
   {
@@ -350,6 +365,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[ETERNAL RIVAL]",
       "While you have 5 or more Chakra, Jutsu cards named Chidori used by this Ninja can be played for free.",
     ],
+    flavor: "\"I'll say it once more.\"",
     image: "s22-n-1222",
   },
   {
@@ -371,6 +387,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, you can pay 2 Fire. In that case, your opponent moves the top 5 cards of their Deck to their Discard Pile. For every Jutsu card moved this way, put 1 Growth coin on this Ninja.",
       "Valid: When this Ninja is put in play, you can pay 2 Wind. In that case, remove 1 other Ninja from the game. At the end of the turn, move that Ninja to its owner's Village.",
     ],
+    flavor: "\"Okay...let's go!\"",
     image: "s22-n-1223",
   },
   {
@@ -391,6 +408,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[JOKESTER]",
       "Valid: When this Ninja is put in play, you can reveal your hand. In that case, if you didn't reveal a Jutsu card, draw 1 card.",
     ],
+    flavor: "\"Now what shall we play next?\"",
     image: "s22-n-1224",
   },
   {
@@ -412,6 +430,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Sacrifice: 1 \"Sharingan Eye\" Ninja",
       "Valid: When this Ninja is put in play, place X Growth coins on this Ninja, where X = the Sacrificed Ninjas Entrance cost and this Ninja gets the Sacrificed Ninja's Characteristics.",
     ],
+    flavor: "\"Don't make fake smiles like that in front of me.\"",
     image: "s22-n-1225",
   },
   {
@@ -432,6 +451,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[CURSED EXISTENCE]",
       "[Valid | Attacker | Mission] (*|*): Give 1 Damage to this Ninja and injure target Ninja your opponent controls.",
     ],
+    flavor: "\"I wish someone would kill me already.\"",
     image: "s22-n-1226",
   },
   {
@@ -452,6 +472,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[REALIZED PAIN]",
       "[Attacker | Mission] Remove all -1/-1 coins from target Ninja: If you removed 1 or more -1/-1 coins, give 1 Damage to that Ninja.",
     ],
+    flavor: "\"You're done for.\"",
     image: "s22-n-1227",
   },
   {
@@ -473,6 +494,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "This Ninja cannot receive Damage while opposed by any Ninjas with any -1/-1 coins.",
       "[EOJ] (*): Target opposing Ninja gets -1/-1 during this turn for each coin on it.",
     ],
+    flavor: "\"So what do you want to know?\"",
     image: "s22-n-1228",
   },
   {
@@ -513,6 +535,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[SARUTOBI LINEAGE]",
       "Valid: At the end of your turn, if you have 8 or more Chakra, you can draw 1 card.",
     ],
+    flavor: "\"Your skills rival my own!!\"",
     image: "s22-n-1230",
   },
   {
@@ -533,6 +556,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[ETERNAL RIVAL]",
       "Valid: While you have 8 or more Chakra, Jutsu cards named Rasengan used by this Ninja can be played for free.",
     ],
+    flavor: "\"Charge!!\"",
     image: "s22-n-1231",
   },
   {
@@ -575,6 +599,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[DANCING LEAF]",
       "[Valid | EOJ] (2): This Ninja gets +3/+0 during this turn. You can use this effect as many times as you like.",
     ],
+    flavor: "\"Well...here we go!\"",
     image: "s22-n-1233",
   },
   {
@@ -596,6 +621,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Non-Unique",
       "When this Ninja is put in play, you can search your Deck for 1 Ninja card with \"Uzumaki\" in its name, reveal it, and move it to your hand. Shuffle your deck afterwards.",
     ],
+    flavor: "\"Spill it! Who are you?\"",
     image: "s22-n-1234",
   },
   {
@@ -617,6 +643,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, draw 1 card.",
       "When you deploy a Lightning Ninja, if this Ninja card is in your Discard Pile, you can pay 1 Lightning. In that case, move this Ninja card to your hand.",
     ],
+    flavor: "\"Go get 'em.\"",
     image: "s22-n-1235",
   },
   {
@@ -638,6 +665,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, you can pay 2 Lightning. In that case, place 1 Growth coin on this Ninja and move your Turn Marker up by 1.",
       "Valid: When this Ninja is put in play, you can pay 2 Earth. In that case, move 1 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"You're...pretty weak.\"",
     image: "s22-n-1236",
   },
   {
@@ -658,6 +686,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[DA EIGHTH]",
       "[Attacker | Mission] (0): Move 1 card from your Discard Pile to your Chakra area. If you have 8 or more Chakra, when this Ninja wins any Battle Reward during this turn, you win 1 Battle Reward.",
     ],
+    flavor: "♪\"Yo, first I'll squash y'all flat, splat-splat.\"♪",
     image: "s22-n-1237",
   },
   {
@@ -679,6 +708,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "Valid: When you flip a coin due to 1 of your effects, if the result is heads, place a Growth coin on 1 of your Ninjas. If tails, discard 2 of your Chakra.",
     ],
+    flavor: "\"You wouldn't want me to get in trouble, would you?\"",
     image: "s22-n-1238",
   },
   {
@@ -699,6 +729,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[CELERITY]",
       "When this Ninja is put in play, remove the bottom 5 cards of your Deck from the game. Any Jutsu cards with \"Requirements: \"Taijutsu\"\" removed this way can be played for free as though they were in your hand.",
     ],
+    flavor: "\"Hope you all can keep up with me!!\"",
     image: "s22-n-1239",
   },
   {
@@ -720,6 +751,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Senjutsu",
       "[Attacker | Mission] (0): If you have a Naruto Uzumaki, move 1 Lightning Jutsu card from your Discard Pile to the top of your Deck.",
     ],
+    flavor: "\"This could be bad...\"",
     image: "s22-n-1240",
   },
   {
@@ -761,6 +793,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Sacrifice: Killer Bee",
       "Valid: When a player's Ninja would be removed from play due to the Showdown, they move it to their opponent's Battle Reward area face down instead.",
     ],
+    flavor: "♪\"To spear my foes I was born, a glorious longhorn.\"♪",
     image: "s22-n-1242",
   },
   {
@@ -782,6 +815,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: This Ninja cannot be the user of Jutsu cards. This effect cannot be negated.",
       "Valid: When your opponents would win any number of Battle Rewards, deal that number of Damage to this Ninja instead.",
     ],
+    flavor: "\"Crazy old man!!\"",
     image: "s22-n-1243",
   },
   {
@@ -802,6 +836,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[DUPLICITY]",
       "[Mission] (0): Remove 1 card in each player's Chakra area from the game. Then, at the end of the turn, return the removed cards to their owners Chakra area.",
     ],
+    flavor: "\"Lord Orochimaru!!\"",
     image: "s22-n-1244",
   },
   {
@@ -822,6 +857,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[ABSORPTION]",
       "[Valid | EOJ | Mission] Move 1 card in your opponent's Discard Pile to their Chakra area: Heal 1 of your other Ninjas.",
     ],
+    flavor: "\"What a flashy diversion.\"",
     image: "s22-n-1245",
   },
   {
@@ -843,6 +879,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, you can pay 2 Water. In that case, draw 2 cards, then move 2 cards from your Hand to the top of your Deck in any order.",
       "Valid: When this Ninja is put in play, you can pay 2 Lightning. In that case, draw 1 card for every 2 Chakra you have.",
     ],
+    flavor: "\"Got you!\"",
     image: "s22-n-1246",
   },
   {
@@ -864,6 +901,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "When this Ninja Attacks, discard 1 of your opponent's Chakra.",
       "When this Ninja Blocks, look at the top card of your Deck and move it to the top or bottom of your Deck.",
     ],
+    flavor: "\"He's getting on my nerves...\"",
     image: "s22-n-1247",
   },
   {
@@ -884,6 +922,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[FULL POWER]",
       "Valid: While your opponent has 2 or less Chakra, this Ninja gets +2/+2.",
     ],
+    flavor: "\"Step back.\"",
     image: "s22-n-1248",
   },
   {
@@ -965,6 +1004,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "Valid: When you flip a coin due to 1 of your effects, if the result is heads, draw 1 card. If tails, this Ninja becomes a 0/0 during this turn.",
     ],
+    flavor: "\"Yes, milady?\"",
     image: "s22-n-1252",
   },
   {
@@ -985,6 +1025,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[PUPPET SWAP]",
       "Valid: When this Ninja is discarded due to the Showdown, move this Ninja card to your hand. In that case, search your Deck for a \"Puppet\" Ninja card, reveal it, and move it to your hand.",
     ],
+    flavor: "\"Heh...then come on!\"",
     image: "s22-n-1253",
   },
   {
@@ -1005,6 +1046,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[ASSISTANT'S PET]",
       "Valid: While you have 6 or more cards in your hand, this Ninja gets +0/+2.",
     ],
+    flavor: "\"Oink.\"",
     image: "s22-n-1254",
   },
   {
@@ -1025,6 +1067,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[SYMBIOTIC RELATIONSHIP]",
       "[EOJ | Mission] Remove 1 Growth coin from this Ninja: Place 1 Insect Ninja coin in play with the following: \"[Power: 0/0 (Healthy and Injured)] [Non-Unique]\".",
     ],
+    flavor: "\"And that, my friend, is a true backup plan.\"",
     image: "s22-n-1255",
   },
   {
@@ -1045,6 +1088,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[CHAKRA CONTROL]",
       "[Attacker | Mission] (Wind): Move 1 card from your Discard Pile to your Chakra area. If the moved card was a Wind card, heal 1 of your Ninjas.",
     ],
+    flavor: "\"If it is a trap... then we fight!\"",
     image: "s22-n-1256",
   },
   {
@@ -1066,6 +1110,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "Valid: When you flip a coin due to 1 of your effects, if the result is heads, all your \"Female\" Ninjas get +1/+1 during this turn. If tails, discard 1 of your \"Male\" Ninjas.",
     ],
+    flavor: "\"I'm here to serve you.\"",
     image: "s22-n-1257",
   },
   {
@@ -1086,6 +1131,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[GENJUTSU MASTER]",
       "[EOJ] (3): Change the target(s) of 1 Jutsu to different legal target(s). If at least 1 of the new target(s) is 1 of your Ninjas, draw 1 card.",
     ],
+    flavor: "\"That does make sense.\"",
     image: "s22-n-1258",
   },
   {
@@ -1127,6 +1173,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, flip a coin.",
       "Valid: When you flip a coin due to 1 of your effects, if the result is heads, all \"Male\" Ninjas cannot become the user of Jutsu cards during this turn. If tails, all players draw 1 card.",
     ],
+    flavor: "\"Good morning.\"",
     image: "s22-n-1260",
   },
   {
@@ -1148,6 +1195,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[Attacker | Mission] (1): Flip a coin.",
       "[Attacker | Mission] (0): If you have 3 or more other \"Female\" Ninjas, move 1 Wind Jutsu card from your Discard Pile to your hand.",
     ],
+    flavor: "\"Where do you think you're going?\"",
     image: "s22-n-1261",
   },
   {
@@ -1301,6 +1349,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Jutsu",
       "Effect: Negate the target. In that case, search your opponent's Discard Pile and Deck for all copies of the target and move them to their owner's Discard Pile.",
     ],
+    flavor: "\"I'll definitely find it!\"",
     image: "s22-j-839",
   },
   {
@@ -1315,6 +1364,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Name a Symbol. The user's Team cannot be affected by the effects of Jutsu cards with the named Symbol.",
     ],
+    flavor: "\"You thought you had me beat?\"",
     image: "s22-j-840",
   },
   {
@@ -1331,6 +1381,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Move the target into the user's Team in any position. At the end of the turn, move the target to your opponent's Village.",
       "Expert [\"Mind\"]: Move the target to your opponent's Village at the end of your next turn instead.",
     ],
+    flavor: "\"Take care of my body while I'm gone.\"",
     image: "s22-j-841",
   },
   {
@@ -1345,6 +1396,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: The user gets +2/+2 during this turn. If the user wins any Victory during this turn, your opponent moves 1 card from their hand to the top of their Deck.",
     ],
+    flavor: "\"Here I come, fatso.\"",
     image: "s22-j-842",
   },
   {
@@ -1360,6 +1412,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Reveal the top card of your Deck. If the target's Entrance cost is less than or equal to the revealed card, that Ninja's Power becomes 0/0 during this turn. (Jutsu cards are considered to have 0 Entrance cost.)",
     ],
+    flavor: "\"Just kidding.\"",
     image: "s22-j-843",
   },
   {
@@ -1375,6 +1428,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target gets -3/-3 during this turn.",
     ],
+    flavor: "*Fwip*",
     image: "s22-j-844",
   },
   {
@@ -1390,6 +1444,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. Then, if your opponent has 20 or more cards in their Discard Pile, give 1 Damage to the target.",
     ],
+    flavor: "*Fwunk*",
     image: "s22-j-845",
   },
   {
@@ -1406,6 +1461,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Jutsu",
       "Effect: Negate and remove the target from the game. If you paid the cost of this Jutsu with a Water Chakra, discard 2 of your opponent's Chakra.",
     ],
+    flavor: "\"Sharingan!\"",
     image: "s22-j-846",
   },
   {
@@ -1422,6 +1478,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target. Your opponent can negate this Jutsu while it is on the chain by giving you 1 Battle Reward.",
     ],
+    flavor: "*Shkeen*",
     image: "s22-j-847",
   },
   {
@@ -1437,6 +1494,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 2 Damage to the target and 1 Damage to the user.",
     ],
+    flavor: "\"You're relieved from duty!\"",
     image: "s22-j-848",
   },
   {
@@ -1451,6 +1509,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: The user gets +3/+3 during this turn.",
     ],
+    flavor: "\"I predict the Hidden Leaf shall emerge victorious from this battle.\"",
     image: "s22-j-849",
   },
   {
@@ -1466,6 +1525,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja",
       "Effect: The user gets +2/+2 and the target gets -2/-2 during this turn.",
     ],
+    flavor: "\"Will ya quit yakkin' in mah ear!\"",
     image: "s22-j-850",
   },
   {
@@ -1482,6 +1542,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: The user gets +3/+0 during this turn.",
       "Expert [Killer Bee]: Give 1 Damage to 1 Ninja opposing the user.",
     ],
+    flavor: "\"I'll give ya a taste of my hook.\"",
     image: "s22-j-851",
   },
   {
@@ -1499,6 +1560,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Injure the target. In that case, draw 2 cards.",
       "Expert [Killer Bee or A]: Give 2 Damage to 1 Ninja opposing the user.",
     ],
+    flavor: "\"Lariat!!!\"",
     image: "s22-j-852",
   },
   {
@@ -1515,6 +1577,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: Give 1 Damage to the target. Then move your Turn Marker up by 1.",
     ],
+    flavor: "\"Yo, I'm not letting y'all get away this late in the game, fools, ya fools!\"",
     image: "s22-j-853",
   },
   {
@@ -1530,6 +1593,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Requirements: \"Taijutsu\"",
       "Effect: The user gets +3/+0 during this turn. If the user wins any Victory during this turn, move your Turn Marker up by 1.",
     ],
+    flavor: "\"Master Guy!\"",
     image: "s22-j-854",
   },
   {
@@ -1544,6 +1608,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Attach this card to the user. The attached Ninja gets +1/+1 for each Water card in all Chakra areas. When the attached Ninja is removed from play, move this card to its owners Chakra area.",
     ],
+    flavor: "*Sploosh*",
     image: "s22-j-855",
   },
   {
@@ -1558,6 +1623,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Each player move the top card of their Deck to their Chakra area. If the card you moved has a higher Entrance cost than the card your opponent moved, search your Deck for a card and move it to your Chakra area.",
     ],
+    flavor: "\"See? Look, Sir Utakata!\"",
     image: "s22-j-856",
   },
   {
@@ -1591,6 +1657,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: Every Ninja opposing the user",
       "Effect: Move the target back to its owner's hand.",
     ],
+    flavor: "\"Splecchh.\"",
     image: "s22-j-858",
   },
   {
@@ -1606,6 +1673,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Discard 2 of your opponent's Chakra. Then, move up to 2 cards from your Discard Pile to your Chakra area.",
       "Expert [Jirobo]: If your opponent has 3 or less Chakra, draw 1 card.",
     ],
+    flavor: "\"I gotta get back my energy.\"",
     image: "s22-j-859",
   },
   {
@@ -1622,6 +1690,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja in the user's Team or the opposing Team",
       "Effect: Discard the target. The controller of the discarded Ninja places X Insect Ninja coins into play, where X = the Discarded Ninja's Support, with the following: \"[Power: 0/0 (Healthy and Injured)][Non-Unique]\".",
     ],
+    flavor: "\"We face them full strength!\"",
     image: "s22-j-860",
   },
   {
@@ -1637,6 +1706,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Look at the top 3 cards of your Deck, put any of them on the bottom of your Deck and the rest on the top of your Deck in any order.",
       "Expert [\"Medical\"]: You draw 1 card.",
     ],
+    flavor: "\"Back to the Past Jutsu.\"",
     image: "s22-j-861",
   },
   {
@@ -1652,6 +1722,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Jutsu with 2 or more specific Symbols in its cost",
       "Effect: Negate the target and discard it. Move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Tsunade-sama...\"",
     image: "s22-j-862",
   },
   {
@@ -1668,6 +1739,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Move the target into the user's Team in any position.",
       "Expert [\"Puppet Master\"]: Move this card back to your hand.",
     ],
+    flavor: "\"I'll make this short and sweet.\"",
     image: "s22-j-863",
   },
   {
@@ -1684,6 +1756,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target. If the target is discarded due to this effect, draw 1 card.",
     ],
+    flavor: "\"What's the matter?\"",
     image: "s22-j-864",
   },
   // ── MISSION ──
@@ -1701,6 +1774,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent",
       "[Blocker | EOJ] (0): Discard this Mission. Target Battling Ninja gets -2/-2 during this turn. If its Combat is 0 or less, discard it.",
     ],
+    flavor: "\"You must be joking!!\"",
     image: "s22-m-788",
   },
   {
@@ -1716,6 +1790,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Reveal the top 5 cards of your Deck. Your opponent selects 2 of the Ninjas revealed this way (if any). Choose 1 of those Ninja cards and move it to your hand. Move the rest of the revealed cards to the bottom of your Deck in any order.",
     ],
+    flavor: "\"We'd better get cracking.\"",
     image: "s22-m-789",
   },
   {
@@ -1747,6 +1822,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Each Player shuffle all cards in their hand, Chakra area, and Discard Pile into their Deck. Then, they both draw 6 cards and remove this Mission from the game.",
     ],
+    flavor: "\"I know.\"",
     image: "s22-m-791",
   },
   {
@@ -1764,6 +1840,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: When your opponent's Ninjas would win any Battle Reward, give that amount of Damage to 1 of your Ninjas instead.",
       "At the beginning of your turn, if you have no Ninjas, discard this Mission.",
     ],
+    flavor: "\"In order to protect a country, you need to protect the top, the Feudal Lord.\"",
     image: "s22-m-792",
   },
   {
@@ -1781,6 +1858,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja that was put in play this turn",
       "Effect: The target cannot be organized into a Team with other Ninjas during this turn.",
     ],
+    flavor: "\"That's not your toy ... you know ...\"",
     image: "s22-m-793",
   },
   {
@@ -1797,6 +1875,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent",
       "Effect: When any of your Ninjas would receive any Damage due to the Showdown, you can move this card to your Chakra area and reduce that Damage to 0 instead.",
     ],
+    flavor: "\"It's really soft and bouncy.\"",
     image: "s22-m-794",
   },
   {
@@ -1829,6 +1908,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: All \"Genin\" Ninjas",
       "Effect: Remove the target from its Team. The target cannot be organized into Teams, cannot receive Damage due to the Showdown, and must be sent out to Battle during this turn. Only the target can be sent out to Battle during this turn. When a Team wins any Victory during this turn, they win 1 Battle Reward and their controller draws 1 card.",
     ],
+    flavor: "\"That is why... there is meaning in defeating you.\"",
     image: "s22-m-796",
   },
   {
@@ -1862,6 +1942,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Players cannot play non-Ninja cards that share a name with a card in their Discard Pile.",
       "Effect: At the beginning of each players turn, that player removes 2 cards in their Discard Pile from the game.",
     ],
+    flavor: "\"They're my eyes... Mine...\"",
     image: "s22-m-798",
   },
   {
@@ -1877,6 +1958,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Search your Deck for 1 Ninja card with \"Uchiha\" in its name, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"We're not going to have as much time to ourselves.\"",
     image: "s22-m-799",
   },
   {
@@ -1892,6 +1974,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Move 1 Lightning card, 1 Fire card, and 1 Wind card from your Discard Pile and/or Chakra area to your hand.",
     ],
+    flavor: "\"What? Not more training!\"",
     image: "s22-m-800",
   },
   {
@@ -1908,6 +1991,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent",
       "[EOJ | Mission] Remove a card in your hand from the game: Move up to 2 cards that share at least 1 Symbol with the removed card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"I think this tale is wonderful.\"",
     image: "s22-m-801",
   },
   {
@@ -1923,6 +2007,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Search your Deck for 1 \"Cloud\" Ninja card, reveal it, and move it to your hand. Then, if you have a \"Cloud\" Ninja in play, move up to 3 cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Bit my tongue.\"",
     image: "s22-m-802",
   },
   {
@@ -1939,6 +2024,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent (1)",
       "Effect: When any Ninja receives Damage due to the Showdown, discard it.",
     ],
+    flavor: "\"What?!\"",
     image: "s22-m-803",
   },
   {
@@ -1954,6 +2040,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Draw 2 cards. Then, if you have a Ninja with an Entrance cost of 7 or more, draw 2 cards.",
     ],
+    flavor: "\"The Bijuu are mythical demon beasts with tails.\"",
     image: "s22-m-804",
   },
   {
@@ -1969,6 +2056,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Discard any number of your \"Animal\" and/or \"Tailed Beast\" Ninjas. In that case, search your Deck for 1 Ninja card with an Entrance cost less than the total Entrance cost of all the Ninjas discarded due to this effect, reveal it, and move it to your Village. Then, shuffle your Deck.",
     ],
+    flavor: "\"Doesn't he remind you of the two?\"",
     image: "s22-m-805",
   },
   {
@@ -1985,6 +2073,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target cannot be blocked by Ninjas with less Combat than its Combat during this turn.",
     ],
+    flavor: "\"What's up with those moves?!\"",
     image: "s22-m-806",
   },
   {
@@ -2001,6 +2090,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent",
       "[Attacker | Mission] (1): Look at the top 3 cards of your Deck and move any number of them to your Discard Pile. Then, return the rest to the top of your Deck in any order.",
     ],
+    flavor: "\"I don't have time to nap!\"",
     image: "s22-m-807",
   },
   {
@@ -2017,6 +2107,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 Ninja card in your Chakra area.",
       "Effect: The target gets AMBUSH (AMBUSH: During your Mission Phase, if a Ninja card with this Characteristic is in your Chakra area, you can deploy it. This counts as a deployment. Entrance and Hand costs must be met and the \"1 Ninja per turn\" rule applies).",
     ],
+    flavor: "\"They haven't found our exact location yet...\"",
     image: "s22-m-808",
   },
   {
@@ -2033,6 +2124,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 of your Water Ninjas with an Entrance cost of 3 or more",
       "Effect: Discard the target and 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"Maybe I should cut you up.\"",
     image: "s22-m-809",
   },
   {
@@ -2048,6 +2140,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     text: [
       "Effect: Draw 2 cards. Then, if your opponent has 2 or less Chakra, draw 1 card.",
     ],
+    flavor: "\"Even if the people in the village are not blood related...\"",
     image: "s22-m-810",
   },
   {
@@ -2065,6 +2158,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: When a Ninja is discarded due to the Showdown, the opponent of that Ninja's controller must discard 1 of their Ninjas.",
       "At the end of the turn, if there are no Ninjas in play, discard this Mission.",
     ],
+    flavor: "\"I was developing... a new technique.\"",
     image: "s22-m-811",
   },
   {
@@ -2081,6 +2175,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: If the target's Entrance cost is less than the number of cards in your hand, remove the target from its Team.",
     ],
+    flavor: "\"Wonder why he left it blank?\"",
     image: "s22-m-812",
   },
   {
@@ -2097,6 +2192,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent (3)",
       "Effect: Players can only send 1 Team out to Attack each turn.",
     ],
+    flavor: "\"You lowered your guard at the last moment.\"",
     image: "s22-m-813",
   },
   {
@@ -2113,6 +2209,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target cannot be sent out to Battle during this turn. Then, draw 1 card.",
     ],
+    flavor: "\"I also didn't notice it...\"",
     image: "s22-m-814",
   },
   {
@@ -2144,6 +2241,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Permanent",
       "Effect: When you put in play a \"Satoosa\" Ninja, search your Deck for 1 Jutsu card, reveal it, and move it to your hand.",
     ],
+    flavor: "\"I am the one who will run this village starting today...\"",
     image: "s22-m-816",
   },
 ];

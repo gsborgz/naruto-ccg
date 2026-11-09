@@ -25,6 +25,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[HYUGA LINEAGE]",
       "Valid: While your opponent has less cards in their hand than you, this Ninja gets +1/+1.",
     ],
+    flavor: "\"Uh...hi...\"",
     image: "tp3-n-1170",
   },
   {
@@ -45,6 +46,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[NARA CLAN SECRETS]",
       "Valid: When this Ninja is discarded due to the Showdown, you can search your Deck for 1 Permanent Mission card, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"What a pain in the butt.\"",
     image: "tp3-n-1171",
   },
   {
@@ -65,6 +67,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[ABSOLUTE DEFENSE]",
       "Valid: While your opponent has less cards in their hand than you, this Ninja cannot receive Damage due to the Showdown.",
     ],
+    flavor: "\"It all has a very sad sound to it.\"",
     image: "tp3-n-1172",
   },
   {
@@ -85,6 +88,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[CHAKRA BLADES]",
       "Valid: This Ninja gets +1/+1 for each Jutsu card with \"Weapon\" in its Requirements in your Discard Pile.",
     ],
+    flavor: "\"What a pest.\"",
     image: "tp3-n-1173",
   },
   {
@@ -105,6 +109,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[REGROWTH]",
       "Valid: When this Ninja or Ninja card would be moved to the Discard Pile, shuffle it into its owner's Deck instead.",
     ],
+    flavor: "\"No matter what the era...\"",
     image: "tp3-n-1174",
   },
   {
@@ -126,6 +131,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "While you have Naruto Uzumaki, this Ninja gets +1/+1.",
       "While you have Sakura Haruno, this Ninja gets +1/+1.",
     ],
+    flavor: "\"Just don't drag me down...\"",
     image: "tp3-n-1175",
   },
   {
@@ -146,6 +152,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[SHARINGAN COPY]",
       "Valid: When this Ninja is injured due to an effect, give 1 Damage to 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"My dreams for the future are none of your business...\"",
     image: "tp3-n-1176",
   },
   {
@@ -167,6 +174,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Valid: Your other \"Anbu\" Ninjas get +1/+1.",
       "Valid: At the start of your turn, if you have 5 or more \"Anbu\" Ninjas, you win 1 Battle Reward.",
     ],
+    flavor: "\"None at all.\"",
     image: "tp3-n-1177",
   },
   {
@@ -187,6 +195,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[THE HOKAGE LEVEL]",
       "Valid: When this Ninja uses a Fire Jutsu, that Jutsu gets the following: \"Expert [\"Satoosa\"]: Give 1 Damage to 1 opposing Ninja.\"",
     ],
+    flavor: "\"Now then...\"",
     image: "tp3-n-1178",
   },
   {
@@ -207,6 +216,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[SHADOW CLONE]",
       "Valid: When this Ninja Attacks, place 1 Shadow Clone Ninja coin in play with the following: \"[Power: 0/0 (Healthy and Injured)][Non-Unique]\".",
     ],
+    flavor: "\"This sucks!\"",
     image: "tp3-n-1179",
   },
   {
@@ -227,6 +237,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[TAIJUTSU SPECIALIST]",
       "At the start of your turn, you can look at the top card of your Deck, you may reveal it. If the revealed card is a \"Taijutsu\" Ninja card, place a Growth coin on this Ninja.",
     ],
+    flavor: "\"I'll protect you with my life.\"",
     image: "tp3-n-1180",
   },
   {
@@ -247,6 +258,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[ETERNAL BOND]",
       "Valid: When this Ninja is put in play, you can move up to 2 cards from the top of your Deck to your Chakra area.",
     ],
+    flavor: "\"It's a wonderful name.\"",
     image: "tp3-n-1181",
   },
   {
@@ -267,6 +279,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[TRANSFORMATION]",
       "Valid: When this Ninja is put in play, you can search your Deck for 1 Eight Tails Ninja card, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Here comes da eighth!\"",
     image: "tp3-n-1182",
   },
   {
@@ -287,6 +300,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[KIND WORDS?]",
       "Valid: All Jutsu cards cost (1) more to play.",
     ],
+    flavor: "\"I would like a word with you.\"",
     image: "tp3-n-1183",
   },
   {
@@ -327,6 +341,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[CRUSHING POWER]",
       "Valid: While this Ninja is Battling by itself, this Ninja's Injured Power is treated as its Healthy Power.",
     ],
+    flavor: "\"I'm counting on you.\"",
     image: "tp3-n-1185",
   },
   {
@@ -348,6 +363,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Sacrifice: Killer Bee",
       "Valid: At the start of the Showdown, if the difference in Team Power between this Ninja's Team and the opposing Team is 10 or more, you win 2 Battle Rewards.",
     ],
+    flavor: "♪\"Now look upon me as I make ya pee all in your pants, ya lil' ants.\"♪",
     image: "tp3-n-1186",
   },
   {
@@ -368,6 +384,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[WATER INCARNATE]",
       "Valid: While you have 2 or more Water Chakra, this Ninja gets +1/+1.",
     ],
+    flavor: "\"I've got it here.\"",
     image: "tp3-n-1187",
   },
   {
@@ -388,6 +405,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[PSYCHOTIC INFLUENCE]",
       "Valid: At the start of your turn, flip a coin. If heads, injure this Ninja, and this Ninja gains the following effect text during this turn: \"Valid: At the end of the turn, heal this Ninja\".",
     ],
+    flavor: "\"Bingo!\"",
     image: "tp3-n-1188",
   },
   {
@@ -408,6 +426,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[TRANSFERENCE]",
       "[EOJ] While this Ninja is on the Battlefield, give this Ninja -2/-2 during this turn: Target Ninja gets +2/+2 during this turn.",
     ],
+    flavor: "\"Hurry up and bite me.\"",
     image: "tp3-n-1189",
   },
   {
@@ -428,6 +447,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[AKATSUKI INITIATE]",
       "Valid: While this Ninja is Battling by itself, it gets +1/+1 for each of your Water Chakra.",
     ],
+    flavor: "\"Heh... I can't believe...\"",
     image: "tp3-n-1190",
   },
   {
@@ -448,6 +468,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[CURSED HEALING]",
       "[Valid | EOJ] Injure this Ninja: Heal target Ninja.",
     ],
+    flavor: "\"But just barely.\"",
     image: "tp3-n-1191",
   },
   {
@@ -468,6 +489,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[AWAKENED MANGEKYO]",
       "Valid: This Ninja can use Jutsu cards with \"Requirements: Itachi Uchiha\".",
     ],
+    flavor: "\"I do not want peace bought with Itachi's life.\"",
     image: "tp3-n-1192",
   },
   {
@@ -489,6 +511,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[Attacker | Mission] Discard 1 of your other Ninjas: Move this Ninja to your opponent's Village.",
       "Valid: At the start of your turn, your opponent wins 1 Battle Reward.",
     ],
+    flavor: "\"You are mine...\"",
     image: "tp3-n-1193",
   },
   {
@@ -511,6 +534,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "When this Ninja uses a Water Jutsu, discard 2 of your opponent's Chakra.",
       "When this Ninja uses a Fire Jutsu, give 1 Damage to target opposing Ninja.",
     ],
+    flavor: "\"The snake is prey because that bird is a hawk...\"",
     image: "tp3-n-1194",
   },
   {
@@ -531,6 +555,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[SCROUNGE TOOLS]",
       "Valid: When this Ninja is put in play, search your Deck for up to 2 Jutsu cards that includes \"Weapon\" in their Requirements, and move them to your Discard Pile. Then, shuffle your Deck.",
     ],
+    flavor: "\"The mission goal...\"",
     image: "tp3-n-1195",
   },
   {
@@ -551,6 +576,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[SAND COFFIN]",
       "When this Ninja is put in play, you can pay 1 Wind. In that case, injure target \"Genin\" Ninja with an Entrance cost of 1 or less.",
     ],
+    flavor: "\"Shut up...\"",
     image: "tp3-n-1196",
   },
   {
@@ -571,6 +597,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[ILLUSION]",
       "While this Ninja is Blocking, your opponent cannot play Jutsu cards with the same name as any Jutsu card in their Discard Pile.",
     ],
+    flavor: "\"Can we finish with this?\"",
     image: "tp3-n-1197",
   },
   {
@@ -591,6 +618,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[PAPER STORM]",
       "[Attacker | Mission] Remove X cards in your hand from the game: Remove target Ninja with an Entrance cost of X or less from its Team. At the end of the turn, move any cards removed from the game due to this effect to your hand.",
     ],
+    flavor: "\"Nagato...\"",
     image: "tp3-n-1198",
   },
   {
@@ -612,6 +640,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "[Attacker | Mission] Discard 1 card: Put in play target \"Rinnegan\" + \"Animal\" Ninja card from your Chakra area or Discard Pile (Entrance cost must be met).",
     ],
+    flavor: "\"Chikushodo.\"",
     image: "tp3-n-1199",
   },
   {
@@ -633,6 +662,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "Jutsu cards with specific Symbols in its cost cost (1) more to play.",
     ],
+    flavor: "\"Gakido.\"",
     image: "tp3-n-1200",
   },
   {
@@ -654,6 +684,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "Valid: The number of Battle Rewards needed for you to win the game is decreased by 1.",
     ],
+    flavor: "\"Jigokudo.\"",
     image: "tp3-n-1201",
   },
   {
@@ -675,6 +706,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "Valid: Your opponent plays with their hand revealed. The effect text of your opponent's in-play cards with the same name as any card in their hand is negated.",
     ],
+    flavor: "\"Ningendo.\"",
     image: "tp3-n-1202",
   },
   {
@@ -697,6 +729,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "[Valid][EOJ] Place X -1/-1 coins on this Ninja: Injure target opposing Ninja with Entrance cost equal to X.",
       "Valid: At the end of the turn, if this Ninja has 7 or more -1/-1 coins on it, discard it.",
     ],
+    flavor: "\"Shurado.\"",
     image: "tp3-n-1203",
   },
   {
@@ -718,6 +751,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "[EOJ] (1): If this Ninja is Battling by itself, target opposing Ninja becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Tendo.\"",
     image: "tp3-n-1204",
   },
   {
@@ -769,6 +803,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Effect: During the Showdown this turn, If the user is Battling by itself, the result of its Showdown is a Draw, regardless of Team Power or Team Mental Power.",
       "Expert [\"Byakugan\"]: The user cannot receive any Damage during this turn.",
     ],
+    flavor: "\"In the end, there is only one actual body.\"",
     image: "tp3-j-828",
   },
   {
@@ -800,6 +835,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target gets -2/-2 during this turn. Then, draw 1 card for each target with 0 Support.",
     ],
+    flavor: "\"Chidori: 1000 birds...?\"",
     image: "tp3-j-830",
   },
   {
@@ -816,6 +852,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Draw 1 card for each Symbol on the target. Then move the target to your Battle Reward area.",
     ],
+    flavor: "\"If I get hit with that... it'll be bad...\"",
     image: "tp3-j-831",
   },
   {
@@ -830,6 +867,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: During the next turn, when a Ninja would be put in play, if it has effect text, it is put in play injured instead.",
     ],
+    flavor: "\"Now that he's made himself invisible, we've got to use Barrier Battle Arts.\"",
     image: "tp3-j-832",
   },
   {
@@ -845,6 +883,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target's Support becomes 0 during this turn. If the user wins any Victory during this turn, move up to 2 cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Now I've got to take care of you guys right quick.\"",
     image: "tp3-j-833",
   },
   {
@@ -861,6 +900,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 2 Ninjas Battling against the user",
       "Effect: Your opponent gives 1 Damage to 1 of the targets and the Power of the other target becomes 0/0 during this turn.",
     ],
+    flavor: "\"I'm sorry to inform you, but this Sword of Raijin cuts through anything.\"",
     image: "tp3-j-834",
   },
   {
@@ -878,6 +918,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Effect: The target cannot become the user of Jutsu cards during this turn.",
       "Expert [\"Female\"]: The user gets +3/+3 during this turn.",
     ],
+    flavor: "\"This one finger'll be enough.\"",
     image: "tp3-j-835",
   },
   {
@@ -893,6 +934,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: If the target is injured, move it to its owner's hand.",
     ],
+    flavor: "\"You're afraid of blood, aren't you?\"",
     image: "tp3-j-836",
   },
   {
@@ -907,6 +949,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: Attach this card to the user. Jutsu cards that share a Symbol with the attached Ninja cost (1) less when used by the attached Ninja.",
     ],
+    flavor: "\"All right! I'm gonna do it!!\"",
     image: "tp3-j-837",
   },
   {
@@ -921,6 +964,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: Discard the user. In that case, reveal the top 6 cards of your Deck. If there are any Ninja cards with an Entrance cost up to 1 more than the user's among the revealed cards, move 1 of them to your Village. Then, discard the rest.",
     ],
+    flavor: "\"Go!\"",
     image: "tp3-j-838",
   },
   // ── MISSION ──
@@ -938,6 +982,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Permanent",
       "Effect: [EOJ] (2): Search your Deck for 1 Jutsu card that includes \"Weapon\" in its Requirements, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"No way!\"",
     image: "tp3-m-776",
   },
   {
@@ -953,6 +998,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: Discard 1 card. In that case, draw 3 cards.",
     ],
+    flavor: "\"Old man...\"",
     image: "tp3-m-777",
   },
   {
@@ -968,6 +1014,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: Discard the top 4 cards of your Deck. Then, draw 2 cards.",
     ],
+    flavor: "\"Hello, princess. Been a long time...\"",
     image: "tp3-m-778",
   },
   {
@@ -984,6 +1031,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place a -1/-1 coin on the target. Then, you can remove any number of -1/-1 coins from your opponent's Ninjas to draw the same number of cards.",
     ],
+    flavor: "\"...You must be the legendary Nine-Tailed Fox demon...\"",
     image: "tp3-m-779",
   },
   {
@@ -1017,6 +1065,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place a Growth coin on the target. Then, you can remove any number of Growth coins from your Ninjas to draw the same number of cards.",
     ],
+    flavor: "\"Oh... I get it!\"",
     image: "tp3-m-781",
   },
   {
@@ -1049,6 +1098,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: Your opponent reveals 2 cards at random from their hand. Then, you draw 1 card for each different Symbol among the cards revealed due to this effect.",
     ],
+    flavor: "\"I still don't get it...\"",
     image: "tp3-m-783",
   },
   {
@@ -1065,6 +1115,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove the target from its Team. Then, draw 1 card.",
     ],
+    flavor: "\"...What do you want...?\"",
     image: "tp3-m-784",
   },
   {
@@ -1113,6 +1164,7 @@ export const TP3_TOURNAMENT_PACK_3: Card[] = [
     text: [
       "Effect: Search your Deck for 1 Client card, reveal it, and move it to your hand. Then, shuffle your Deck and draw 1 card for each of your Clients.",
     ],
+    flavor: "\"What are you guys doing? I've got a lot of money, so save me!\"",
     image: "tp3-m-787",
   },
 ];

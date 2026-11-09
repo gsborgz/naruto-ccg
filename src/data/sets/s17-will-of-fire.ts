@@ -26,6 +26,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: When this Ninja receives any Damage, discard the same number of cards from the top of your Deck.",
       "Valid: This Ninja cannot be removed from play due to Damage.",
     ],
+    flavor: "\"You're already under my curse. Now! Let's savor the utmost of suffering together!\"",
     image: "s17-n-784",
   },
   {
@@ -48,6 +49,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: This Ninja cannot be removed from play due to Damage.",
       "Valid: When this Ninja is removed from play, move it to its owner's hand instead.",
     ],
+    flavor: "\"If they could kill me, I'd want them to.\"",
     image: "s17-n-785",
   },
   {
@@ -68,6 +70,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Multiple Hearts]",
       "At the beginning of your turn, you can remove a total of 4 Ninja cards, in your opponent's Discard Pile and/or Chakra area, from game. In that case, you can put 1 \"Soul\" Ninja card in play from your Reinforcement Deck.",
     ],
+    flavor: "\"But no one should be able to use such high-level Jutsu unless they are compatible with that person's own Chakra nature. And he uses earth, wind and lightning...\"",
     image: "s17-n-786",
   },
   {
@@ -88,6 +91,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Perfect Combination]",
       "When this Ninja is put in play, you can injure 1 of your opponent's healthy Ninjas with an Entrance cost of 3 or less. In that case, at the end of that turn, heal that Ninja.",
     ],
+    flavor: "\"You're mine!\"",
     image: "s17-n-787",
   },
   {
@@ -108,6 +112,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Perfect Combination]",
       "Ninjas cannot be sent out to Battle during the turn they are deployed in play.",
     ],
+    flavor: "\"What on earth...are we fighting\"",
     image: "s17-n-788",
   },
   {
@@ -128,6 +133,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Study]",
       "During your Mission Phase, you can look at the top 3 cards of your Deck. In that case, move all of them to the top or bottom of your Deck in any order.",
     ],
+    flavor: "\" I read it in a book. \"",
     image: "s17-n-789",
   },
   {
@@ -148,6 +154,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Waiting For Someone's Return]",
       "During the Battle Phase, your Ninjas cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"......\"",
     image: "s17-n-790",
   },
   {
@@ -168,6 +175,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Quick Wit]",
       "When this Ninja is sent out to Attack by itself, you can select 1 of your opponent's Ninjas. In that case, the selected Ninja's Team must Block this Ninja's Team, if possible. Additionally, during the Showdown, this Ninja's Team and the Team Battling against it perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\"Now...I will hand down judgement...\"",
     image: "s17-n-791",
   },
   {
@@ -188,6 +196,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Medical Ninjutsu]",
       "During the Exchange of Jutsu, you can discard 1 of your \"Earth\" Chakra. In that case, heal 1 injured Ninja in this Ninja's Team.",
     ],
+    flavor: "\"I'll take care of Asuma sensei's injury with my Medical Ninjutsu!\"",
     image: "s17-n-792",
   },
   {
@@ -208,6 +217,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Feeling Of Fullness]",
       "Valid: While you have 5 or more Chakras, this Ninja gets +2/+0.",
     ],
+    flavor: "\"I'm stuffed!!\"",
     image: "s17-n-793",
   },
   {
@@ -228,6 +238,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[High Potential]",
       "Valid: When this Ninja is discarded due to the Showdown, move this Ninja to its owner's Chakra area instead. In that case, you can move the top card of your Deck to your Chakra area.",
     ],
+    flavor: "\"Because you and I were too different, I felt so jealous, I decided all on my own that you were my rival.\"",
     image: "s17-n-794",
   },
   {
@@ -248,6 +259,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[High Potential]",
       "Valid: When this Ninja is discarded due to the Showdown, move this Ninja to its owner's Chakra area instead. In that case, discard 3 card from the top of either player's Deck.",
     ],
+    flavor: "\"Big brother...why do you always treat me like just a pest?\"",
     image: "s17-n-795",
   },
   {
@@ -268,6 +280,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[High Potential]",
       "Valid: When this Ninja is discarded due to the Showdown, move this Ninja to its owner's Chakra area instead. In that case, you can draw 1 card.",
     ],
+    flavor: "\"Say...Ino, why did you give me this ribbon?\"",
     image: "s17-n-796",
   },
   {
@@ -288,6 +301,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[In The Sunlight]",
       "\"Leaf\" Ninja cards with \"Growth\" in your hand can be put in play by the effect of \"Growth\" even if the in-play Ninja already has 1 or more Growth coins on it.",
     ],
+    flavor: "\"It's such a nice day...\"",
     image: "s17-n-797",
   },
   {
@@ -309,6 +323,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "When this Ninja is put in play, if your opponent has 4 or more Battle Rewards, you can injured this Ninja.",
       "Valid: While this Ninja is injured, it gets \"Name: 'The Nine-Tailed Fox Spirit'\". This effect cannot be negated.",
     ],
+    flavor: "\"This is my true power?\"",
     image: "s17-n-798",
   },
   {
@@ -329,6 +344,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Follower]",
       "When this Ninja is deployed, you can search your Deck for 1 \"Prisoner\" or \"Guren\" Ninja card, reveal it and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'll accompany you no matter where you go...\"",
     image: "s17-n-799",
   },
   {
@@ -350,6 +366,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "During the Exchange of Jutsu, you can remove 2 cards, with a \"Water\" Symbol, in your Discard Pile, from game. In that case, this Ninja gets either +2/-2, -2/+2, or +2 Mental Power during this turn.",
       "Valid: Jutsu cards used by this Ninja cannot be negated.",
     ],
+    flavor: "\"I promise you...I will never leave your side. I will always think of you.\"",
     image: "s17-n-800",
   },
   {
@@ -370,6 +387,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Smoke Screen]",
       "During your Mission Phase, you can select 1 of your opponent's Ninjas or Clients. In that case, the effect texts of the selected Ninja or Client are negated during this turn.",
     ],
+    flavor: "\"Multi Smoke Clone.\"",
     image: "s17-n-801",
   },
   {
@@ -390,6 +408,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Smoke Screen]",
       "During your Mission Phase, you can discard 1 of your opponent's Chakra. In that case, move the top card of your opponent's Deck to their Chakra area.",
     ],
+    flavor: "\"Dark Smoke Sphere!\"",
     image: "s17-n-802",
   },
   {
@@ -410,6 +429,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Viscous Liquid]",
       "During your Mission Phase, you can Charge 1 card with a \"Water\" Symbol. In that case, place a -1/-1 Ninja Blade coin on 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"Water Shield Shot!\"",
     image: "s17-n-803",
   },
   {
@@ -430,6 +450,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Detection]",
       "Both players play with their hand revealed.",
     ],
+    flavor: "\"I'd be happy to be the one reporting to Lord Orochimaru...\"",
     image: "s17-n-804",
   },
   {
@@ -451,6 +472,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: When this Ninja is discarded due to the Showdown, move it to your Chakra area instead. Then, discard 1 of your opponent's Chakra.",
       "Valid: \"Three Tails\" Ninja cards in your hand get -3 Entrance cost.",
     ],
+    flavor: "\"Is this where I'm supposed to go?\"",
     image: "s17-n-805",
   },
   {
@@ -473,6 +495,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "2+ ) Make 1 Ninja Battling against this Ninja a Stand-By Ninja.",
       "3+ ) Give 1 Damage to 1 Ninja battling against this Ninja.",
     ],
+    flavor: "\"A shinobi must abandon emotion if he's ever to obtain ultimate power, and power, power is the only truth in this world, as you're about to find out.\"",
     image: "s17-n-806",
   },
   {
@@ -493,6 +516,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Herculean Strength]",
       "When a Mission card is moved to your opponent's Chakra area, if this Ninja has less than 2 Growth coins on it, you can place 1 Growth coin on this Ninja.",
     ],
+    flavor: "\"You can't fully guard against my fist just by dodging.\"",
     image: "s17-n-807",
   },
   {
@@ -513,6 +537,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Labyrinth]",
       "During the Mission Phase, you can injure this Ninja. In that case, this Ninja gets the following effect text during that turn: \"Valid: Effect texts of your opponent's Ninjas that are sent out to Battle are negated.\"",
     ],
+    flavor: "\"There's no way you can escape from my masterpiece with a puny jutsu like that.\"",
     image: "s17-n-808",
   },
   {
@@ -533,6 +558,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Dawn]",
       "During your Mission Phase, you can discard 1 of your Chakras. In that case, put 1 Ninja card, with an Entrance cost of 1 or less, from your Discard Pile, in play.",
     ],
+    flavor: "\"Oh, how long I've waited for the dawn of the Land of Fire. This isn't the time for you guys to be dying.\"",
     image: "s17-n-809",
   },
   {
@@ -553,6 +579,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Absorbing The Soul]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, you can discard 1 of your opponent's Chakras. In that case, you can move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Nobody likes men who talk too much. Just get started.\"",
     image: "s17-n-810",
   },
   {
@@ -573,6 +600,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Ideology]",
       "During the Mission Phase, you can discard this Ninja. In that case, discard 1 of your opponent's \"Satoosa\" Ninjas.",
     ],
+    flavor: "\"Asuma!\"",
     image: "s17-n-811",
   },
   {
@@ -593,6 +621,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Spy]",
       "Valid: Before any cards are moved to either players Battle Reward area, they are revealed first.",
     ],
+    flavor: "\"Danzo, Tatsuji wasn't just your spy. He was sending us information as well...\"",
     image: "s17-n-812",
   },
   {
@@ -614,6 +643,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "When this Ninja is put in play, you can discard up to 5 cards from the top of your opponent's Deck.",
       "Valid: When this Ninja is sent out to Attack, you can discard up to 3 cards from the top of your opponent's Deck.",
     ],
+    flavor: "\"Jinchuriki for the Four-Tailed Monkey Spirit, Roshi combines Fire and Earth-based Chakra for his scorching Lava Style Ninjutsu.\"",
     image: "s17-n-813",
   },
   {
@@ -635,6 +665,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, you can discard 3 of your opponent's Chakras.",
       "Valid: When your opponent sends a Team out to Battle, that player discards 1 of their Chakras, if possible.",
     ],
+    flavor: "\"Wrecking havoc with torrential tidal waves and illusionary mist; you cannot out swim nor hope to hide from the fearsome Three-Tails.\"",
     image: "s17-n-814",
   },
   {
@@ -655,6 +686,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[True Allies]",
       "When this Ninja is deployed, you can discard a card. In that case, search your Deck for 1 \"Kakashi Hitake\" Ninja card with [TRUE ALLIES] effect, show it to your opponent and place it in your hand. Then, shuffle your Deck. During the Exchange of Jutsu, if you have another Ninja with [TRUE ALLIES] effect, you can move the top card of your deck to your Chakra area. In that case, this Ninja gets +1/+0 for each of your opponent's Ninjas during this turn.",
     ],
+    flavor: "\"I want to take this risk alone. If I can't beat this, I'll never be able to grow up. So please...please... don't take this path away from me.\"",
     image: "s17-n-815",
   },
   {
@@ -675,6 +707,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Master And Disciple]",
       "During the Exchange of Jutsu, you can select 1 of your opponent's Ninjas Battling against this Ninja and move a Ninja card that includes the name \"Jiraiya\", \"Naruto Uzumaki\", and/or \"The Fourth Hokage\" from your hand to your Chakra area. In that case, give 2 Damage to the selected Ninja.",
     ],
+    flavor: "\"This is an A-Rank technique; it's a highly advanced Ninjutsu kid.\" \"Rasengan!!\"",
     image: "s17-n-816",
   },
   {
@@ -695,6 +728,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Eight Inner Gates]",
       "At the beginning of your Battle Phase, if you do not have an in-play Ninja with an Entrance cost equal to your Turn Marker, this Ninja gets +2/+2 during this turn.",
     ],
+    flavor: "\"We must follow our Ninja way, and follow it all the way to the end! Fourth Gate of Pain, OPEN!!\"",
     image: "s17-n-817",
   },
   {
@@ -715,6 +749,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Sand Storm]",
       "At the beginning of the Showdown, if this Ninja was not the user of a Jutsu card during this turn, you can select 1 Ninja battling against this Ninja with an Entrance cost of 3 or less. In that case, injure the selected Ninja.",
     ],
+    flavor: "\"I'm Gaara of the Desert, wherever there's rock wherever there's earth I can make more sand.\"",
     image: "s17-n-818",
   },
   {
@@ -735,6 +770,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Leaf's Uncovered Elite]",
       "During the Exchange of Jutsu, you can remove a Ninja card, that includes \"Shikamaru Nara\" and/or \"Choji Akimichi\" in it's name, in your Reinforcement Deck, from game. In that case, this Ninja gets +3/+3 and +3 Mental Power during this turn.",
     ],
+    flavor: "\"Just as I thought, everyone's always thought that way about Choji. But me? I've always known the real truth. More than me or Neji, or any of us here - Choji's got strength.\"",
     image: "s17-n-819",
   },
   {
@@ -755,6 +791,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[For The One I Admire]",
       "When this Ninja is put in play, you can randomly select 1 card in your opponent's hand and reveal it. If it is a Ninja card, return it. If not, discard it.",
     ],
+    flavor: "\"If you really want to help me get better at this, come at me full force!\"",
     image: "s17-n-820",
   },
   {
@@ -775,6 +812,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Water Clone]",
       "When this Ninja is deployed from your hand, you can put a Ninja Blade coin in play. While that Ninja Blade coin is in play, it is considered to be a Ninja card that is a copy of this Ninja. At the end of that turn, if it still remains in play, discard it.",
     ],
+    flavor: "\"Water Clone Jutsu!\"",
     image: "s17-n-821",
   },
   {
@@ -796,6 +834,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "When this Ninja is deployed, you can move up to 3 of your Chakras to your hand.",
       "Valid: During your Mission Phase, you can move 1 card with a \"Water\" Symbol from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Beginning tomorrow, you are Hokage.\"",
     image: "s17-n-822",
   },
   {
@@ -816,6 +855,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[For The Next Generation]",
       "When this Ninja is put in play, search your Deck for 1 Ninja card that includes \"Shikamaru Nara\" in it's name, reveal it, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"You'll see it when the time comes...\"",
     image: "s17-n-823",
   },
   {
@@ -836,6 +876,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Parasite]",
       "During the Mission Phase, you can discard this Ninja. In that case, discard 1 in-play non-Ninja card.",
     ],
+    flavor: "\"Never turn your back on the enemy, the most basic rule of combat. You've cost yourself the battle.\"",
     image: "s17-n-824",
   },
   {
@@ -857,6 +898,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "When this Ninja is deployed, you can move up to 2 of your opponent's Battle Rewards to your hand.",
       "Valid: During your Mission Phase, you can move up to 4 cards from your Discard Pile to the bottom of your Deck in any order.",
     ],
+    flavor: "\"All these Villages are a part of me just as I'am a part of them.\"",
     image: "s17-n-825",
   },
   {
@@ -877,6 +919,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Passion]",
       "During the Exchange of Jutsu, if this Ninja card is in your hand, you can move this card to your Chakra area. In that case, select 1 of your Ninjas. The selected Ninja gets +3/+0 during this turn.",
     ],
+    flavor: "\"I can overcome anything with hot-blooded effort. With eyes on tomorrow, I STRIKE!!!\"",
     image: "s17-n-826",
   },
   {
@@ -897,6 +940,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Monster Hunter]",
       "Jutsu cards with a \"Lightning\" Symbol used by this Ninja are returned to the owner's hand after their effect has been applied.",
     ],
+    flavor: "\"When it comes to dealing with strange other worldly freaks and monsters, no ones better than the strange hermit Ninja.\"",
     image: "s17-n-827",
   },
   {
@@ -917,6 +961,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Recycling]",
       "During your Mission Phase, you can Charge 1 card with a \"Water\" Symbol. In that case, you can deploy 1 Ninja card from your Discard Pile during this turn.",
     ],
+    flavor: "\"You've thrown it all away! Dreams don't come true when you're dead!\"",
     image: "s17-n-828",
   },
   {
@@ -937,6 +982,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[The Only Motive To Fight]",
       "When this Ninja is sent out to Attack, you can discard the top card of your Deck. In that case, select 1 Ninja. The selected Ninja gets +0/-2 during this turn.",
     ],
+    flavor: "\"I'm not finished with you yet!!\"",
     image: "s17-n-829",
   },
   {
@@ -957,6 +1003,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Ingenious Schemes]",
       "When this Ninja is sent out to Attack, you can discard the top 2 cards of your opponent's Deck. If 1 or more of those cards are non-Ninja cards, discard up to an additional 3 cards.",
     ],
+    flavor: "\"This is a Jutsu activated by simultaneously creating both the Change in Chakra Nature and Change in Chakra Form.\"",
     image: "s17-n-830",
   },
   {
@@ -977,6 +1024,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Treasure House Of Weapons]",
       "When this Ninja is sent out to Attack in the same Team as 2 or more other \"Leaf\" Ninjas, you can place a Growth coin on this Ninja.",
     ],
+    flavor: "\"Whether you're a boy or girl means nothing on the battlefield.\"",
     image: "s17-n-831",
   },
   {
@@ -997,6 +1045,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Keen Nose]",
       "When this Ninja is deployed, you can reveal the top 5 card of your Deck. In that case, select 1 Mission card among them and move it to your hand, then return the rest and shuffle your Deck.",
     ],
+    flavor: "\"Yahoo! Akamaru, let's do this!\"",
     image: "s17-n-832",
   },
   {
@@ -1017,6 +1066,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Rescue]",
       "When 1 of your opponent's Ninjas becomes the user of a Jutsu with \"Target: User\", you can discard 1 of your Chakras with a \"Wind\" Symbol. In that case, select another one of your opponent's Battling Ninjas. That Ninja is considered to have used that Jutsu, ignoring any Requirements.",
     ],
+    flavor: "\"I'll see you next time you need to be rescued. Just let me know and I'll come, you big crybaby.\"",
     image: "s17-n-833",
   },
   {
@@ -1036,6 +1086,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Ambush: During your Mission Phase, if this Ninja card is in your Chakra area, you can deploy it.",
     ],
+    flavor: "\"I'm a member of the elite tracking unit of the Village Hidden in the Mist. It was to stop Zabuza.\"",
     image: "s17-n-834",
   },
   {
@@ -1056,6 +1107,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Awareness]",
       "During the Mission Phase, you can reveal 1 Jutsu card from your hand and move it to the bottom of your Deck. In that case, draw 1 card.",
     ],
+    flavor: "\"I saw how important your job was to the mission, the way everyone depended on you. I finally realized I want to be a Medical Ninja!\"",
     image: "s17-n-835",
   },
   {
@@ -1076,6 +1128,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Pang]",
       "Valid: During the Mission Phase, you can move this Ninja to your Chakra area. In that case, discard 1 in-play non-Ninja card.",
     ],
+    flavor: "\"Cause after all you're the one that taught me everything, right sensei?!",
     image: "s17-n-836",
   },
   {
@@ -1097,6 +1150,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "During your opponent's Mission Phase, you can select 1 of your opponent's Ninjas. In that case, that Ninja and this Ninja cannot be sent out to Battle during the turn.",
       "Valid: This Ninja cannot be sent out to Attack.",
     ],
+    flavor: "\"I will work hard, and connect to the people of this Village. Watching Naruto Uzumaki has brought me clarity.\"",
     image: "s17-n-837",
   },
   {
@@ -1117,6 +1171,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Supremacy]",
       "When your opponent's Ninja becomes the user of a Jutsu card, that Jutsu card gets the following additional text: \"The user gets -2/-2 during this turn.\"",
     ],
+    flavor: "\"I carry this title in trust, for those Hokages who came before and those who will come after, I am the 3rd Hokage!\"",
     image: "s17-n-838",
   },
   {
@@ -1137,6 +1192,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Motto]",
       "This Ninja gets +1/+0 for each of your other Ninjas with a \"Taijutsu\" Combat Attribute.",
     ],
+    flavor: "\"Stronger than you were yesterday!\"",
     image: "s17-n-839",
   },
   {
@@ -1158,6 +1214,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "During the turn that this Ninja is put in play, if you have only \"Female\" Ninjas, this Ninja's Team can only be blocked by a Team of \"Female\" only Ninjas.",
       "Valid: All of your other \"Female\" only Ninjas get +1/+1 and +1 Mental Power.",
     ],
+    flavor: "\"Didn't you know? Women have to be strong in order to survive!\"",
     image: "s17-n-840",
   },
   {
@@ -1180,6 +1237,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: Specific costs of Jutsus used by this Ninja can be paid for with any Symbol.",
       "Valid: This Ninja can become the user of any Jutsu cards ignoring their \"Requirements\".",
     ],
+    flavor: "\"Fire Style: Searing Migraine!\", \"Lightning Style: False Darkness!\", \"Wind Style: Pressure Damage!\" \"Earth Style: Earth Spear!\"",
     image: "s17-n-841",
   },
   {
@@ -1200,6 +1258,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Strong Measure]",
       "During the Exchange of Jutsu, you can discard 2 of your Chakras with an \"Earth\" Symbol. In that case, while this Ninja is in play, this Ninja's Team and the Team Battling against it skip the showdown during this turn.",
     ],
+    flavor: "\"Then, I will have to get you to talk by force.\"",
     image: "s17-n-842",
   },
   {
@@ -1221,6 +1280,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Jutsu cards used by your opponent's Ninjas that have \"Target: 1 Ninja\", must target this Ninja, if possible.",
       "Valid: When a Jutsu card is used that targets this Ninja, you can discard 2 of your Chakras with a \"Wind\" Symbol. In that case, negate that Jutsu and move it to the owner's hand.",
     ],
+    flavor: "\"This is the Big One... where I bet it all... where I put my life on the line.\"",
     image: "s17-n-843",
   },
   {
@@ -1241,6 +1301,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Rage]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, your opponent discards 1 card from their hand.",
     ],
+    flavor: "\"Stop messing around!\"",
     image: "s17-n-844",
   },
   {
@@ -1261,6 +1322,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Destructive Power]",
       "This Ninja gets -1/+0 for every card in your hand. This effect cannot be negated.",
     ],
+    flavor: "\"Raijin ever since I've known you, you've been a moron.\"",
     image: "s17-n-845",
   },
   {
@@ -1281,6 +1343,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Destructive Power]",
       "This Ninja gets -1/+0 for every card in your hand. This effect cannot be negated.",
     ],
+    flavor: "\"Big brother, big brother, I'm a lizard.\"",
     image: "s17-n-846",
   },
   {
@@ -1301,6 +1364,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Twisted Character]",
       "Valid: When this Ninja is discarded due to the Showdown, randomly select and move 1 card in your opponent's hand to the top of their Deck.",
     ],
+    flavor: "\"Well...I'd heard that Iruka's been feeling pretty down lately. I was worried so I thought I'd check on him.\"",
     image: "s17-n-847",
   },
   {
@@ -1321,6 +1385,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Poisonous Sting]",
       "Valid: When this Ninja is sent out to Attack, you can select 1 of your opponent's Ninjas. In that case, the effect texts of the selected Ninja are negated during this turn.",
     ],
+    flavor: "\"Suzumebachi's most powerful Bee ensnares its victims in honey and finishes of its foes with its deadly stinger.\"",
     image: "s17-n-848",
   },
   {
@@ -1342,6 +1407,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "When this Ninja is put in play, you can search your Deck for 1 \"Ghost Samurai\" Ninja card, reveal it and place it in your hand. Then, shuffle your Deck.",
       "Valid: When this Ninja is discarded due to the Showdown, move this card to its owner's hand instead.",
     ],
+    flavor: "\"It was you wasn't it? You killed him...\"",
     image: "s17-n-849",
   },
   {
@@ -1363,6 +1429,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: While your opponent has 1 or less Chakra with a \"Water\" Symbol, this Ninja cannot be sent out to Attack.",
       "Valid: \"Sea Monster\" Ninja cards in your hand and Chakra area get -1 Hand cost.",
     ],
+    flavor: "\"It draws its life from the vast waters of the ocean. You guys don't stand a ghost of a chance!\"",
     image: "s17-n-850",
   },
   {
@@ -1383,6 +1450,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Evil Tone]",
       "When this Ninja is put in play, you can move the top card of your Deck to your opponent's Battle Reward area. In that case, randomly move 1 card from your opponent's Battle Reward area to your hand.",
     ],
+    flavor: "\"You caught on too late ♪♫♪♫\"",
     image: "s17-n-851",
   },
   {
@@ -1403,6 +1471,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[For The Revenge]",
       "When this Ninja is sent out to Battle, you can remove 3 Ninja cards, with a \"Taijutsu\" Combat Attribute, in your Discard Pile, from game. In that case, give 1 Damage to 1 Ninja.",
     ],
+    flavor: "\"I would like...to fight with you again.\"",
     image: "s17-n-852",
   },
   {
@@ -1423,6 +1492,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[For The Revenge]",
       "When this Ninja is sent out to Battle, you can move 1 Ninja card with a \"Taijutsu\" Combat Attribute from your hand to your Chakra area. In that case, draw 1 card. Additionally, this Ninja gets +2/+2 during the turn.",
     ],
+    flavor: "\"Oh yes, he'll pay, Wooden Dummy Posses transfer Repossess Jutsu!\"",
     image: "s17-n-853",
   },
   {
@@ -1443,6 +1513,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[For The Revenge]",
       "During the Exchange of Jutsu, you can discard 2 Ninja cards with a \"Lightning\" Symbol from your Chakra area. In that case, every Ninja in this Ninja's Team, including this Ninja, cannot be affected by the effects of your opponent's Jutsu cards during the turn.",
     ],
+    flavor: "\"All right, it's revenge that we want. Be sure you make the dog pay!\"",
     image: "s17-n-854",
   },
   {
@@ -1463,6 +1534,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Probationer]",
       "During the Exchange of Jutsu, you can randomly select and reveal 1 card in your opponent's hand. In that case, if the selected card is a Jutsu card, this Ninja gets +1/+0 during the turn.",
     ],
+    flavor: "\"I want you to show me every secret technique that you've ever learned from Might Guy.\"",
     image: "s17-n-855",
   },
   {
@@ -1483,6 +1555,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Support]",
       "While this Ninja is in the same Team as 1 or more other Ninjas with a \"Taijutsu\" Combat Attribute, this Ninja gets +0/+2.",
     ],
+    flavor: "\"We've been waiting for the chance to even the score, to make you pay for what you did to him.\"",
     image: "s17-n-856",
   },
   {
@@ -1503,6 +1576,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[String]",
       "During your Mission Phase, you can discard 2 of your Chakras. In that case, discard 1 of your opponent's in-play Clients.",
     ],
+    flavor: "\"Ninja Art: Link and Slay!\"",
     image: "s17-n-857",
   },
   {
@@ -1523,6 +1597,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "[Firearms]",
       "When this Ninja is deployed, your opponent's Ninjas get -1/-1 during this turn.",
     ],
+    flavor: "\"My Jutsu isn't a Ninjutsu it's a deadly Jutsu. Ninja Art: Blood Rain!\"",
     image: "s17-n-858",
   },
   {
@@ -1540,6 +1615,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     injured: { combat: 0, support: 2 },
     attributes: ["Weapon"],
     text: [],
+    flavor: "\"My men and I will guard Gantetsu. I swear by the power of my sword!\"",
     image: "s17-n-859",
   },
   {
@@ -1561,6 +1637,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, you win 1 Battle Reward and draw 1 card.",
     ],
+    flavor: "\"Then...do you know who the King is?!\" \"Huh? The Hokage right?!\" \"That's what I thought until recently...But it's not like that.\"",
     image: "s17-n-860",
   },
   {
@@ -1582,6 +1659,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: When this Ninja is deployed, you can search your Deck or Discard Pile for 1 Mission card with a \"Lightning\" and/or \"Wind\" Symbol, reveal it, and place it in your hand. If you searched your Deck, shuffle your Deck.",
       "Valid: Your other \"Leaf\" Ninjas get +0/+1.",
     ],
+    flavor: "\"Even if I'm torn to shreds...I'll take Sasuke back!\"",
     image: "s17-n-861",
   },
   {
@@ -1604,6 +1682,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: At the end of the turn that you healed 1 or more of your injured Ninjas, you can draw 1 card.",
       "Valid: Your other \"Leaf\" Ninjas get +1/+0.",
     ],
+    flavor: "\"This time, I'm going to save them both!\"",
     image: "s17-n-862",
   },
   {
@@ -1625,6 +1704,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Valid: When this Ninja is deployed, place 1 Growth coin on up to 3 of your other \"Leaf\" Ninjas. If any of those are [RELIANCE] \"Leaf\" Ninjas, place 1 additional Growth coin on those [RELIANCE] \"Leaf\" Ninjas.",
       "Valid: Your other \"Leaf\" Ninjas get +1 Mental Power.",
     ],
+    flavor: "\"The next generation will always surpass the previous one. It's one of the never-ending cycles in life.\"",
     image: "s17-n-863",
   },
   // ── JUTSU ──
@@ -1642,6 +1722,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Remove the target from game. In that case, search your opponent's hand, Deck, Chakra area, and Discard Pile for Ninja cards with the same printed Name and remove them from the game. Then, injure the user.",
     ],
+    flavor: "\"This is the end!\"",
     image: "s17-j-645",
   },
   {
@@ -1657,6 +1738,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target gets +1/+1 during this turn. During the Showdown, if the user has a \"Taijutsu\" combat Attribute, the user's Team and the Team Battling against the user cannot perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\"Raigo!!\"",
     image: "s17-j-646",
   },
   {
@@ -1673,6 +1755,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: During this turn, the Jutsu cards used by the target are negated and moved to the Chakra area.",
     ],
+    flavor: "\"If combo and pin point attacks won't hit...\"",
     image: "s17-j-647",
   },
   {
@@ -1687,6 +1770,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Randomly select up to 2 cards from your opponent's hand and move them(it) to their Chakra area. Then, select the same amount of cards from their Chakra area and move them(it) to your opponent's hand.",
     ],
+    flavor: "\"So this is the Two-Tails monster cat known as the wraith...\"",
     image: "s17-j-648",
   },
   {
@@ -1702,6 +1786,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Back Ninja Battling against the user",
       "Effect: The target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"Too slow.\"",
     image: "s17-j-649",
   },
   {
@@ -1717,6 +1802,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: If you paid the cost of this Jutsu card with a Chakra that included an \"Earth\" Symbol, the target cannot receive any damage during this turn. If you paid the cost of this Jutsu with a Chakra that included an \"Water\" Symbol, injure 1 Ninja Battling against the user.",
     ],
+    flavor: "\"Hidan! Don't underestimate them.\"",
     image: "s17-j-650",
   },
   {
@@ -1733,6 +1819,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Injure the target. Then, if the user is \"Hidan\", you can give 1 damage to the user.",
     ],
+    flavor: "\"Just shut up and watch, Kakuzu.\"",
     image: "s17-j-651",
   },
   {
@@ -1748,6 +1835,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Heal the target. Then, if the user is \"Kakuzu\", heal all the injured Ninjas in the user's Team.",
     ],
+    flavor: "\"He is such a pushover.\"",
     image: "s17-j-652",
   },
   {
@@ -1762,6 +1850,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Injure 1 Ninja Battling against the user. Then, search your Deck for 1 \"Ritual\" Mission card, reveal it and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Their agony radiates through my body, and living through it is pure ecstasy!\"",
     image: "s17-j-653",
   },
   {
@@ -1776,6 +1865,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: During the Showdown, the user's Team and the Team Battling against the user perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\"The real battle won't begin until I grab him.\"",
     image: "s17-j-654",
   },
   {
@@ -1791,6 +1881,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Jutsu card being used with \"Target: User\"",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"Reach!\"",
     image: "s17-j-655",
   },
   {
@@ -1805,6 +1896,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Put a Ninja Blade coin in play in the user's Team in any position. While that coin is in play, it is considered to be a Ninja that is a copy of the user but with no effect text. At the end of the turn, if it still remains in play, discard it.",
     ],
+    flavor: "\"Your words cut deep, deeper than any blade.\"",
     image: "s17-j-656",
   },
   {
@@ -1820,6 +1912,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Oh man...\"",
     image: "s17-j-657",
   },
   {
@@ -1836,6 +1929,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and move it to the bottom its owner's Deck.",
     ],
+    flavor: "\"What the hell?!",
     image: "s17-j-658",
   },
   {
@@ -1851,6 +1945,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target gets +2/+1 during this turn.",
     ],
+    flavor: "\"A black sword!\"",
     image: "s17-j-659",
   },
   {
@@ -1867,6 +1962,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: During this turn, if the user receives any Damage, the target also receives the same amount of Damage.",
     ],
+    flavor: "\"It hurts, doesn't it?\"",
     image: "s17-j-660",
   },
   {
@@ -1882,6 +1978,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Negate the effect texts of the target during this turn. Additionally, if the user has a \"Shadow\" Combat Attribute, the target cannot be sent out to Battle during the next turn.",
     ],
+    flavor: "\"I'm finished if I get hit by that.\"",
     image: "s17-j-661",
   },
   {
@@ -1896,6 +1993,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Place 1 Growth coin on every other Ninja in the user's Team.",
     ],
+    flavor: "\"!!\"",
     image: "s17-j-662",
   },
   {
@@ -1912,6 +2010,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja in the user's Team",
       "Effect: The target gets +5/+5 during the turn.",
     ],
+    flavor: "\"Rasengan!!\"",
     image: "s17-j-663",
   },
   {
@@ -1926,6 +2025,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Discard up to 2 of your opponent's Chakras. Then, move up to the same amount of cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Reaper kiss.\" \"What? My chakra...\"",
     image: "s17-j-664",
   },
   {
@@ -1941,6 +2041,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If you paid the Jutsu cost of this card with 2 different Symbols, the target's Power becomes 0/0 during this turn. Otherwise, the target gets -2/-2 this turn. If any of the Chakra had more than 1 Symbol, you can choose 1 of them.",
     ],
+    flavor: "\"Water Style: Mouth of the Serpent!\" \"Lightning Style: Earth Slide!\"",
     image: "s17-j-665",
   },
   {
@@ -1956,6 +2057,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: While the target's Combat Value is 6 or more, the target cannot be affected by your opponent's effects and cannot be removed from play during this turn.",
     ],
+    flavor: "\"Rrrrrrrrrrrr!!!\"",
     image: "s17-j-666",
   },
   {
@@ -1970,6 +2072,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move up to 2 Ninja cards with a \"Water\" Symbol from your Discard Pile to your Chakra area. In that case, move 2 cards from your Chakra area to your Discard Pile.",
     ],
+    flavor: "\"Those definitely seem to be the stolen bodies.\"",
     image: "s17-j-667",
   },
   {
@@ -1986,6 +2089,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to its owner's hand.",
     ],
+    flavor: "\"Beast Wave: Palm Hurricane!!\"",
     image: "s17-j-668",
   },
   {
@@ -2002,6 +2106,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: At the end of this turn, injure the target. Additionally, the target cannot be sent out to Battle during the next turn.",
     ],
+    flavor: "\"Sai!!\"",
     image: "s17-j-669",
   },
   {
@@ -2018,6 +2123,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and discard it. Then, if the target's cost has 2 or more specific Symbols, the target's user gets -2/-2 during this turn.",
     ],
+    flavor: "\"I summoned the terrain I designed and created from a different spatial environment...You can't escape now.\"",
     image: "s17-j-670",
   },
   {
@@ -2034,6 +2140,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and discard it. Then, discard cards from the top of your opponent's Deck equal to the user's Entrance cost.",
     ],
+    flavor: "\"I will take you down!\"",
     image: "s17-j-671",
   },
   {
@@ -2048,6 +2155,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: During the Exchange of Jutsu, if a Jutsu card effect increases any of your opponent's Ninja's Power values during this turn, the increase is applied to this Jutsu card's user instead.",
     ],
+    flavor: "\"What is this place?\"",
     image: "s17-j-672",
   },
   {
@@ -2063,6 +2171,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: Move up to 3 cards from your Discard Pile to the top of your Deck in any order. In that case, the target gets +1/+0 for each card that was moved. Then, shuffle your Deck.",
     ],
+    flavor: "\"Super Expansion Jutsu!!\"",
     image: "s17-j-673",
   },
   {
@@ -2077,6 +2186,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: If the user has \"Byakugan\", look at your opponent's hand and discard 1 card from it. If not, randomly discard 1 card from your opponent's hand.",
     ],
+    flavor: "\"I cannot lose...there is a reason I cannot lose!!\"",
     image: "s17-j-674",
   },
   {
@@ -2092,6 +2202,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect : The target gets -2/-2. In that case, the user gets +2/+2 during the turn.",
     ],
+    flavor: "\"I'll completely release the sealing jutsu...Release!\"",
     image: "s17-j-675",
   },
   {
@@ -2108,6 +2219,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: Move up to 2 cards from your Discard Pile to your Chakra area. Then, the user gets +1/+0 for every card in your Chakra area with a \"Lightning\" Symbol.",
     ],
+    flavor: "\"Rrrrrrrrrrrrr!!\"",
     image: "s17-j-676",
   },
   {
@@ -2122,6 +2234,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move up to X number of cards from your Discard Pile to your Chakra area. X = The number of your opponent's Battle Rewards.",
     ],
+    flavor: "\"What is it now?\"",
     image: "s17-j-677",
   },
   {
@@ -2137,6 +2250,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target gets -2/-2 during this turn.",
     ],
+    flavor: "\"Did that do the trick?\"",
     image: "s17-j-678",
   },
   {
@@ -2153,6 +2267,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Each one of your Ninjas.",
       "Effect: The target gets +3/+0.",
     ],
+    flavor: "\"I'll break you over and over again.\"",
     image: "s17-j-679",
   },
   {
@@ -2168,6 +2283,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: The target gets +1/+1 for every card in your opponent's hand when this effect is applied.",
     ],
+    flavor: "\"Now I've got you!\"",
     image: "s17-j-680",
   },
   {
@@ -2183,6 +2299,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 during this turn. Additionally, if the user has an Entrance cost of 4 or more, you can move this Jutsu card to your hand after this card's effect is applied.",
     ],
+    flavor: "\"!!\"",
     image: "s17-j-681",
   },
   {
@@ -2198,6 +2315,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Each of your Ninja's with the same Symbol as the user.",
       "Effect: The target cannot be affected by the effects of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Watch closely Hanabi, there is no one in the Hyuga Clan who has inherited such a strong Kekkei Genkai. His is stronger than your older sisters. Perhaps even stronger than yours...\"",
     image: "s17-j-682",
   },
   {
@@ -2213,6 +2331,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Requirements: \"Leaf\"",
       "Effect: If the user is discarded due to the Showdown this turn, injure every Ninja Battling against the user.",
     ],
+    flavor: "\"What? No! It can't be!!\"",
     image: "s17-j-683",
   },
   {
@@ -2228,6 +2347,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+0 this turn.",
     ],
+    flavor: "\"!!\"",
     image: "s17-j-684",
   },
   {
@@ -2246,6 +2366,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "1) The target gets -5/-5 and -5 Mental Power during this turn.",
       "2) You draw 3 cards.",
     ],
+    flavor: "\"There's a reason Itachi let me live, a reason he chose me to be the one to track him down and kill him. I am an avenger!\"",
     image: "s17-j-685",
   },
   {
@@ -2261,6 +2382,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target.",
     ],
+    flavor: "\"He broke out the same Jutsu that I did!\"",
     image: "s17-j-686",
   },
   {
@@ -2276,6 +2398,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target gets -2/-2 during this turn.",
     ],
+    flavor: "\"The speed of his jutsu is incredible; I didn't even see a hand sign. The shuriken in his hand were just a ruse to distract me from his Water Style attack.\"",
     image: "s17-j-687",
   },
   {
@@ -2290,6 +2413,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Discard cards from the top of your opponent's Deck equal to the number of in-play cards with a \"Fire\" Symbol.",
     ],
+    flavor: "\"I've thought up another way of finding the treasure so I've no use for any of you now!\"",
     image: "s17-j-688",
   },
   {
@@ -2306,6 +2430,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Jutsu card being used with a printed cost of 2 or less. (specific Symbols count as '1')",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"♥-♥-♥-♥ OK! Now I'm curious!\"",
     image: "s17-j-689",
   },
   {
@@ -2320,6 +2445,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Discard 1 in-play Client or 1 in-play Permanent Mission.",
     ],
+    flavor: "\"!!\"",
     image: "s17-j-690",
   },
   {
@@ -2335,6 +2461,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: Every Ninja in a Team with only 1 Ninja",
       "Effect: Injure the target.",
     ],
+    flavor: "\"Needles that deliver a deadly poison, no matter how strong you may be, you already have one foot in the grave.\"",
     image: "s17-j-691",
   },
   {
@@ -2350,6 +2477,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 of your opponent's Stand-By Ninjas",
       "Effect: Injure the target.",
     ],
+    flavor: "\"Does he have eyes in the back of his head?!\"",
     image: "s17-j-692",
   },
   {
@@ -2365,6 +2493,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and move it to the owner's hand.",
     ],
+    flavor: "\"Earth Style: Stone Plate Coffin!!\"",
     image: "s17-j-693",
   },
   {
@@ -2379,6 +2508,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move 1 Ninja card, with an Entrance cost of 2 or less, from your opponent's Discard Pile to the user's Team in any position. At the end of the turn, if that Ninja still remains in play, remove it from game.",
     ],
+    flavor: "\"This is the ultimate Earth style jutsu, Soil Bodies!\"",
     image: "s17-j-694",
   },
   {
@@ -2394,6 +2524,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to another one of your opponent's Battling Teams. The target cannot become a new Team of only 1 Ninja.",
     ],
+    flavor: "\"Lightning Style: Earth Slide!\"",
     image: "s17-j-695",
   },
   {
@@ -2410,6 +2541,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Discard the target. In that case, you can discard 1 of your opponent's in-play non-Ninja cards.",
     ],
+    flavor: "\"Rasengan!!\"",
     image: "s17-j-696",
   },
   // ── MISSION ──
@@ -2426,6 +2558,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: If you paid the Hand cost of this card with a Ninja card, with an Entrance cost of 4 or more, draw 2 cards.",
     ],
+    flavor: "\"Hidan, anyone with a brain would know that the world revolves around money!\"",
     image: "s17-m-624",
   },
   {
@@ -2443,6 +2576,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Effect: When this Mission card's effect is applied, search your Deck for 1 \"Rogue Ninja\" Ninja card and move it to your Chakra area.",
       "Effect: \"Akatsuki\" and \"Rogue Ninja\" Ninja cards in your Chakra area get \"Ambush\".",
     ],
+    flavor: "\"The reason can be dealt with afterwards, but war will always happen...\"",
     image: "s17-m-625",
   },
   {
@@ -2460,6 +2594,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Effect: When your \"Hidan (Curse Mode)\" receives any Damage, you can give the same amount of Damage to every other injured Ninja.",
       "Effect: You can move your \"Hidan\" to your hand. In that case, put 1 \"Hidan (Curse Mode)\" Ninja card, from your Reinforcement Deck, in play.",
     ],
+    flavor: "\"Hold it. Before doing that....\"",
     image: "s17-m-626",
   },
   {
@@ -2476,6 +2611,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Counter",
       "Effect: Your opponent cannot move their Turn Marker during this turn.",
     ],
+    flavor: "\"Asuma!\"",
     image: "s17-m-627",
   },
   {
@@ -2491,6 +2627,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Discard your Deck. In that case, if you discarded 1 or more cards due to this effect, move 5 cards from your Discard Pile to the top of your Deck in any order.",
     ],
+    flavor: "\"Do you know why I'm telling you this, Naruto? It's because I believe you're the only Shinobi who can surpass the Fourth Hokage.\"",
     image: "s17-m-628",
   },
   {
@@ -2507,6 +2644,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 of your opponent's Ninjas.",
       "Effect: Deploy 1 Ninja card from your Discard Pile or Chakra area ignoring its Hand cost. In that case, that Ninja gets all of the target's effect text, in addition to its own, while both targets remain in play.",
     ],
+    flavor: "\"No matter what darkness lies ahead, I will pursue this path. Whatever happens, I will obtain power.\"",
     image: "s17-m-629",
   },
   {
@@ -2522,6 +2660,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Remove 1 Ninja (card), with a Hand cost of 1 or more, in your Village or hand, from game. In that case, randomly select and move up to 2 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"He still has a heart beat!\"",
     image: "s17-m-630",
   },
   {
@@ -2537,6 +2676,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Your opponent moves 1 of their Ninjas to its owner's Chakra area, if possible.",
     ],
+    flavor: "\"It's time to seal the Two-Tails...Come right away! This is the top priority.\"",
     image: "s17-m-631",
   },
   {
@@ -2554,6 +2694,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Mission card being played or 1 in-play Client",
       "Effect: If the target is a Mission card, negate it. Then, move the target to the top of its owner's Deck.",
     ],
+    flavor: "\"The smoke...gets in my eyes...\"",
     image: "s17-m-632",
   },
   {
@@ -2569,6 +2710,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Draw 2 cards.",
     ],
+    flavor: "\"What made me think \"How can you say that with a straight face?\" when you asked \"When will we meet again?\"\"",
     image: "s17-m-633",
   },
   {
@@ -2585,6 +2727,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 of your Ninjas with \"Clone Status\"",
       "Effect: Move the target to your Chakra area. In that case, search your Deck for 1 Ninja card with the same name as the target with \"Clone Status\", and an Entrance cost equal to or lower than your Turn Marker and put it in play in Healthy or Injured status.",
     ],
+    flavor: "\"YIKES! Don't say gross stuff out of the blue like that!\"",
     image: "s17-m-634",
   },
   {
@@ -2601,6 +2744,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Effect: Draw 2 cards. Then, if you have 3 or more Ninjas with the same Symbol, draw 1 card.",
       "(Symbol(s) are found in the top right corner of every card)",
     ],
+    flavor: "\"I entrust my dream to a shooting star.\"",
     image: "s17-m-635",
   },
   {
@@ -2617,6 +2761,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent",
       "Effect: Look at all of your opponent's Battle Rewards. Then, if there are 1 or more Ninja cards among them, you can reveal 1 of them, and place it in your hand. Then, return the rest.",
     ],
+    flavor: "\"Contact the twenty newly formed platoons immediately!\"",
     image: "s17-m-636",
   },
   {
@@ -2632,6 +2777,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Reveal the top X number of cards from your Deck and move up to 2 Ninja cards from among them to your hand. Then, return the rest and shuffle your Deck. X = your Turn Marker.",
     ],
+    flavor: "\"Well done. Now we can start development of your new original Jutsu.\"",
     image: "s17-m-637",
   },
   {
@@ -2648,6 +2794,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent",
       "Effect: During the Mission Phase, you can move this in-play Mission to your Chakra area. In that case, negate and discard 1 Mission card being played or discard 1 in-play Client.",
     ],
+    flavor: "\"You can only trust in money.\"",
     image: "s17-m-638",
   },
   {
@@ -2665,6 +2812,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Mission card being played",
       "Effect: Negate the target and move it to it's owner's hand.",
     ],
+    flavor: "\"If Shizune has asked for your advice...then you should know what my answer will be. No way!\"",
     image: "s17-m-639",
   },
   {
@@ -2680,6 +2828,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Search your Deck for 3 Ninja cards and reveal them. In that case, your opponent selects 1 of them. Then, move the selected card to your hand and discard the rest. Then, shuffle your deck.",
     ],
+    flavor: "\"Explain yourself, Danzo!\"",
     image: "s17-m-640",
   },
   {
@@ -2696,6 +2845,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent",
       "Effect: During the Mission Phase, you can move 1 card from your Discard Pile to the bottom of your Deck. In that case, each of your \"Leaf\" Ninjas gets +1 Mental Power during this turn.",
     ],
+    flavor: "\"You'll never let me join in.\" \"Hah...That wouldn't suit you, right?\"",
     image: "s17-m-641",
   },
   {
@@ -2712,6 +2862,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent (2)",
       "Effect: At the beginning of each player's turn, that player must give 1 Damage to 1 of their Ninjas.",
     ],
+    flavor: "\"Do it.\"",
     image: "s17-m-642",
   },
   {
@@ -2728,6 +2879,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent (2)",
       "Effect: During your Mission Phase, you can reveal the top card of your Deck. If it's a Ninja card with a \"Lightning\" Symbol, move your Turn Marker up by 1. Then, return the card and shuffle your Deck.",
     ],
+    flavor: "\"Why wasn't I invited to the 'meeting of fists under the sunset sky to develop the friendship of men'?!\"",
     image: "s17-m-643",
   },
   {
@@ -2743,6 +2895,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Search your Deck for 1 \"Jonin\" Ninja card, reveal it and place it in your hand. Then, shuffle your Deck. In that case, your opponent gets 2 Battle Rewards.",
     ],
+    flavor: "\"Now things have turned out this way, we need to once again solicit instruction from the Hokage.\"",
     image: "s17-m-644",
   },
   {
@@ -2758,6 +2911,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move up to 2 cards from your opponent's Chakra area to their Discard Pile. Then, draw 1 card.",
     ],
+    flavor: "\"We have received a message from the Fire Temple. It seems all four of the hidden tombs have been violated.\"",
     image: "s17-m-645",
   },
   {
@@ -2773,6 +2927,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Reveal the top 5 cards of your Deck and move any number of Jutsu cards from among them to your hand. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"Eat this!!\" \"Beast Wave: Palm Hurricane!!\"",
     image: "s17-m-646",
   },
   {
@@ -2790,6 +2945,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Mission card being played",
       "Effect: Negate the target and move it to the top of its owner's Deck. Then, shuffle their Deck.",
     ],
+    flavor: "\"What?!\"",
     image: "s17-m-647",
   },
   {
@@ -2805,6 +2961,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move 5 cards from your Discard Pile to your Deck. In that case, shuffle your Deck. Then draw 1 card.",
     ],
+    flavor: "\"These earrings are my congratulatory gifts to each of you. Don't ever forget that you were members of Team Ten!\"",
     image: "s17-m-648",
   },
   {
@@ -2821,6 +2978,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Counter Permanent (2)",
       "Effect: All Teams perform Mental Power Battles.",
     ],
+    flavor: "\"You are being unusually careless today.\"",
     image: "s17-m-649",
   },
   {
@@ -2836,6 +2994,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move all the cards in your hand to the bottom of your Deck in any order. Then, draw the same number of cards plus one.",
     ],
+    flavor: "\"Where's Shikamaru?\"",
     image: "s17-m-650",
   },
   {
@@ -2852,6 +3011,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent (3)",
       "Effect: Whenever 1 of your Teams is Defeated, Completely Defeated, or Draws, you can draw 1 card.",
     ],
+    flavor: "\"Asuma...\"",
     image: "s17-m-651",
   },
   {
@@ -2870,6 +3030,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "3+) Injure 1 of your opponent's Ninjas.",
       "4+) Get 1 Battle Reward.",
     ],
+    flavor: "\"The third step of our goal...We will......take over the world.\"",
     image: "s17-m-652",
   },
   {
@@ -2885,6 +3046,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Look at the top X number of cards of your Deck, reveal 1 Jutsu or Mission card from among them and place it in your hand. Then, move the rest to the top of your Deck in any order. X = the number of your in-play \"Female\" only Ninjas.",
     ],
+    flavor: "\"I'll pound you if you say anything else.\"",
     image: "s17-m-653",
   },
   {
@@ -2900,6 +3062,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Search for 1 Jutsu or Mission card in the top X number of cards of your Deck, reveal it and place it in your hand. Then, return the rest and shuffle your Deck. X = your Turn Marker.",
     ],
+    flavor: "\"By looking to the left...while looking to the right... This is what you mean, right?\"",
     image: "s17-m-654",
   },
   {
@@ -2915,6 +3078,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Move 1 of your Ninjas to your hand. In that case, your opponent must move 1 of their Ninjas with a Mental Power of 1 or less to their hand.",
     ],
+    flavor: "\"Captain Yamato, don't scare me like that!\"",
     image: "s17-m-655",
   },
   {
@@ -2930,6 +3094,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Discard 1 of your Ninjas with a Mental Power of 3 or more. In that case, your opponent discards 1 of their Ninjas with a Mental Power of 3 or more.",
     ],
+    flavor: "\"At the same time, they were making preparations to attack other lands.\"",
     image: "s17-m-656",
   },
   {
@@ -2946,6 +3111,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent",
       "Effect: When you win an Outstanding Victory or an Outstanding Battle Reward, place a Growth coin on 1 of your Ninjas.",
     ],
+    flavor: "\"Hooray!\" \"We did it. All their jutsu have ended!\"",
     image: "s17-m-657",
   },
   {
@@ -2962,6 +3128,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent (2)",
       "Effect: During the Mission Phase, when your opponent puts a Ninja in play, you can look at the top 2 cards of your Deck. In that case, place 1 of those cards in your hand and discard the other.",
     ],
+    flavor: "\"Shadow Possession Jutsu is a success!\"",
     image: "s17-m-658",
   },
   {
@@ -2979,6 +3146,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Mission card being played",
       "Effect: Remove 1 Growth coin from one of your Ninjas. In that case, negate the target and move it to the bottom of its owner's Deck.",
     ],
+    flavor: "\"Monster! Monster!\"",
     image: "s17-m-659",
   },
   {
@@ -2994,6 +3162,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Discard every card in both players Chakra area. Then, if you have \"Sasuke Uchiha\" in play, draw 1 card.",
     ],
+    flavor: "\"I don't have time to just sit around!\"",
     image: "s17-m-660",
   },
   {
@@ -3011,6 +3180,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Target: 1 Ninja being deployed",
       "Effect: Return the target to its owner's hand. In that case, your opponent can deploy another Ninja during this turn. Additionally, every Ninja card in your opponent's hand get +1 Entrance cost.",
     ],
+    flavor: "\"The smallest things can put you on their bad side, and always playing their little minds games with you trying to get you to do what they want.\"",
     image: "s17-m-661",
   },
   {
@@ -3027,6 +3197,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Counter",
       "Effect: Deploy 1 Ninja card from your hand. Then, you can organize your Teams.",
     ],
+    flavor: "\"I'll serve as captain for Team Ten.\"",
     image: "s17-m-662",
   },
   {
@@ -3043,6 +3214,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Permanent (2)",
       "Effect: ach of your Teams that only have \"Genjutsu\" Combat Attribute Ninjas gets +2 Team Power during the Showdown.",
     ],
+    flavor: "\"Whaaaaaaaaaaaa!\"",
     image: "s17-m-663",
   },
   {
@@ -3058,6 +3230,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: During this turn, every Ninja must be sent out to Battle, if possible.",
     ],
+    flavor: "\"Barrier Defense Seal Jutsu: Eight-Gate Lock Up!\"",
     image: "s17-m-664",
   },
   // ── CLIENT ──
@@ -3075,6 +3248,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: \"Male\" Ninjas get -1/-1 and -1 Mental Power.",
     ],
+    flavor: "\"We heard guest would be arriving from far away, so Lord Orochimaru instructed me to provide you with some entertainment.\"",
     image: "s17-c-056",
   },
   {
@@ -3091,6 +3265,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: When this Client is put in play, put 2 Ninja Blade coins on this Client. During your Mission Phase, you can remove 1 Ninja Blade coin from this Client. In that case, Mission cards in your hand get -1 Hand cost during this turn.",
     ],
+    flavor: "\"Lord Owashi is the trustful father of Lord Sagi and Lady Toki from the Land of Birds.\"",
     image: "s17-c-057",
   },
   {
@@ -3107,6 +3282,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [
       "Effect: Each of your Ninjas is considered to also have a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "Head of the Kurama Clan and father of Yakumo, he was unaware of the monstrous \"Ido\" personality within her.",
     image: "s17-c-058",
   },
   {
@@ -3124,6 +3300,7 @@ export const S17_WILL_OF_FIRE: Card[] = [
       "Effect: If an effect discards 2 or more cards from your Deck, reveal them, and move 1 of them to your hand. In that case, discard 1 card from your hand.",
       "Effect: Your Discard Pile cannot be affected by effects.",
     ],
+    flavor: "\"Summoned by \"The Trap Master\" Genno, this faithful Eagle dropped numerous blueprints all over the Leaf Village.\"",
     image: "s17-c-059",
   },
 ];

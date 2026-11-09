@@ -25,6 +25,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[GENIUS OF THE GENTLE FIST]",
       "Valid: When this Ninja is sent out to Battle, you can turn 1 of your opponent's Battle Rewards face up.",
     ],
+    flavor: "\"Does that fist your shaking in my direction... mean you want to fight me?\"",
     image: "tp2-n-1007",
   },
   {
@@ -45,6 +46,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[WHAT A DRAG]",
       "During your Mission Phase, you can discard this Ninja. In that case, Ninjas cannot be sent out to Battle during this turn and the next turn.",
     ],
+    flavor: "\"You're too annoying to live! Take this!\"",
     image: "tp2-n-1008",
   },
   {
@@ -65,6 +67,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[AKATSUKI'S EYES]",
       "Valid: During the Exchange of Jutsu, you can select 1 of your \"Akatsuki\" Ninjas. In that case, move the selected Ninja to your hand.",
     ],
+    flavor: "\"Understood.\"",
     image: "tp2-n-1009",
   },
   {
@@ -85,6 +88,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[AKATSUKI'S LEFT HAND]",
       "Valid: When this Ninja is put in play, you can reveal the bottom card of your Deck. In that case, if the revealed card is an \"Akatsuki\" Ninja card, move a Jutsu card from your Discard Pile to your hand.",
     ],
+    flavor: "\"Now, let's see... Which one is the host?\"",
     image: "tp2-n-1010",
   },
   {
@@ -105,6 +109,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[INTERROGATION]",
       "When this Ninja is put in play, select 2 cards in your opponent's hand. In that case your opponent reveals 1 of them. Select 1 of them and discard it.",
     ],
+    flavor: "\"Knowing that now isn't going to help you, is it?\"",
     image: "tp2-n-1011",
   },
   {
@@ -125,6 +130,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[SHADOW SCARS]",
       "During the Exchange of Jutsu, you can pay 2 Earth Chakra. In that case, all Battling Ninjas use their injured values when calculating Team Power during the Showdown this turn.",
     ],
+    flavor: "\"You're too annoying to live! Take this!\"",
     image: "tp2-n-1012",
   },
   {
@@ -146,6 +152,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "When 1 of your \"Akatsuki\" Ninjas is removed from play, you can place a -1/-1 coin on 1 of your opponent's Ninjas.",
       "Valid: When a Ninja with any -1/-1 coins would be removed from play, move those -1/-1 coins to another Ninja.",
     ],
+    flavor: "\"Quit driving the points in, will you? It hurts!\"",
     image: "tp2-n-1013",
   },
   {
@@ -166,6 +173,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[AKATSUKI'S HUMOR]",
       "Valid: During your Mission Phase, you can name a card type. In that case, reveal the top card of your Deck. If the revealed card is the named type, move the revealed card and a card in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"His teleportation jutsu makes him too fast for both of us!\"",
     image: "tp2-n-1014",
   },
   {
@@ -186,6 +194,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[AKATSUKI'S RIGHT HAND]",
       "During the Exchange of Jutsu, while this Ninja is on the Battlefield, you can pay 2 Chakra. In that case, put a copy of 1 Jutsu this Ninja is using on the chain (targets and user remain the same).",
     ],
+    flavor: "\"Long time no see...\"",
     image: "tp2-n-1015",
   },
   {
@@ -206,6 +215,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[CLENCHING JAWS]",
       "When this Ninja is sent out to Attack, this Ninja's Team must be Blocked, if possible.",
     ],
+    flavor: "\"We can take this guy, Akamaru!\"",
     image: "tp2-n-1016",
   },
   {
@@ -226,6 +236,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[HEIR TO THE UCHIHA]",
       "When this Ninja is sent out to Attack, you can discard the top card of your opponent's Deck. In that case, your opponent cannot play cards with the same printed name as the discarded card during this turn.",
     ],
+    flavor: "\"Come!\"",
     image: "tp2-n-1017",
   },
   {
@@ -246,6 +257,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[HOKAGE'S SHIELD]",
       "Valid: When your \"Sannin\" or \"Satoosa\" Ninja would receive any Damage, you can negate that Damage instead. In that case, give 1 Damage to this Ninja.",
     ],
+    flavor: "\"Are you all right?\"",
     image: "tp2-n-1018",
   },
   {
@@ -266,6 +278,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[CLONE SPECIALIST]",
       "Valid: When this Ninja is sent out to Battle, you can reveal the top 5 cards of your Deck. In that case, this Ninja gets +1/+1 for every \"Clone Status\" Ninja card revealed this way during this turn. Then, move the revealed cards to the bottom of your Deck in any order.",
     ],
+    flavor: "\"What?  You think I'm scared of you?\"",
     image: "tp2-n-1019",
   },
   {
@@ -286,6 +299,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[LESSON TWO: CLONE]",
       "Valid: During your Mission Phase, you can pay 2 Lightning Chakra. In that case, place a \"Clone\" Ninja coin into play with the same printed Power and Characteristics as this Ninja.",
     ],
+    flavor: "\"For your final exam, you must each generate a doppelganger!\"",
     image: "tp2-n-1020",
   },
   {
@@ -306,6 +320,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[UNPREDICTABLE NINJA]",
       "Valid: Cards you draw can be drawn from the top or bottom of your Deck.",
     ],
+    flavor: "\"I can't remember that stupid password!\"",
     image: "tp2-n-1021",
   },
   {
@@ -326,6 +341,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[INK DETECTION]",
       "During your Mission Phase, you can pay 2 Chakra. In that case, name a Ninja card. The named Ninja card gets the Void Symbol and has its effect text negated while in play during this turn.",
     ],
+    flavor: "\"Ah... Your smile was a fake...\"",
     image: "tp2-n-1022",
   },
   {
@@ -367,6 +383,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[TALE OF THE GALLANT]",
       "Valid: When this Ninja is put in play, move any number of Jutsu cards from your Discard Pile with Combination to the bottom of your Deck. Then, shuffle your Deck.",
     ],
+    flavor: "\"The most holy hermit sage of the Mount Myoboku toads!!\"",
     image: "tp2-n-1024",
   },
   {
@@ -387,6 +404,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[AKATSUKI'S BLADE]",
       "When a card is moved to your opponent's Chakra area, if it is not the first card moved there this turn, discard it.",
     ],
+    flavor: "\"It's payback time!\"",
     image: "tp2-n-1025",
   },
   {
@@ -408,6 +426,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "When this Ninja is sent out to Attack, you can remove a Ninja card in any Discard Pile or Chakra area from the game.",
       "Valid: This Ninja is considered to have the effect text of the last Ninja removed from the game by this Ninja's effect.",
     ],
+    flavor: "\"Hold on, I have to count the money...\"",
     image: "tp2-n-1026",
   },
   {
@@ -429,6 +448,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "Tracking",
       "When your opponent's Tracked Ninja is sent out to Attack, you can pay 2 Chakra. In that case, heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"Th-That's not it at all!\"",
     image: "tp2-n-1027",
   },
   {
@@ -449,6 +469,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[ONE HANDED HANDSIGNS]",
       "Valid: Water or Wind Jutsus used by this Ninja can be paid with any Chakra.",
     ],
+    flavor: "\"I hope you don't mind my interfering.\"",
     image: "tp2-n-1028",
   },
   {
@@ -469,6 +490,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[CURSED BONES]",
       "Valid: While you have no cards in your hand, you can reduce the cost of 1 of your Water Jutsu cards by 1 Water.",
     ],
+    flavor: "\"You manner is far too... direct.\"",
     image: "tp2-n-1029",
   },
   {
@@ -489,6 +511,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[INITIAL ATTACK]",
       "Valid: When this Ninja is put in play, search your Deck for 2 cards and move them to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"You'll be done for if you stay here.\"",
     image: "tp2-n-1030",
   },
   {
@@ -509,6 +532,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[COERCION]",
       "When this Ninja is put in play, you can remove 1 Ninja with an Entrance cost of 1 or less from its Team.",
     ],
+    flavor: "\"You're welcome to try, little fox!\"",
     image: "tp2-n-1031",
   },
   {
@@ -529,6 +553,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[MEDICAL WARRIOR]",
       "When this Ninja is put in play, you can move a Jutsu card with \"Requirements: Female\" or \"Requirements: Medical\" from your Discard Pile to your hand.",
     ],
+    flavor: "\"That means Tsunade... refused.\"",
     image: "tp2-n-1032",
   },
   {
@@ -549,6 +574,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[FIELD MEDIC]",
       "When this Ninja is put in play, you can heal a Ninja.",
     ],
+    flavor: "\"Okay guys, break it up.\"",
     image: "tp2-n-1033",
   },
   {
@@ -569,6 +595,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[BATTLE LUST]",
       "During the Exchange of Jutsu, if you have 3 or more Wind Ninjas, you can deploy this Ninja card into 1 of your Battling Teams in any position.When this Ninja is deployed, you can injure 1Ninja Battling against this Ninja.",
     ],
+    flavor: "\"It's quick... and painless.\"",
     image: "tp2-n-1034",
   },
   {
@@ -590,6 +617,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "When this Ninja is deployed, name a Ninja card. In that case, this Ninja is considered to have that name. Then, move this Ninja to your opponent's Village. Your opponent now controls this Ninja.",
       "Valid: This Ninja cannot be sent out to Battle by itself.",
     ],
+    flavor: "\"I can handle him on my own...\"",
     image: "tp2-n-1035",
   },
   {
@@ -610,6 +638,7 @@ export const TP2_TOURNAMENT_PACK_2: Card[] = [
       "[SLUG PRINCESS]",
       "During the Exchange of Jutsu, you can pay 2 Wind Chakra. In that case, put a \"Slug\" Ninja card from either your Discard Pile or Chakra area into any of your Battling Teams in any position.",
     ],
+    flavor: "\"Get out of the way!!\"",
     image: "tp2-n-1036",
   },
 ];

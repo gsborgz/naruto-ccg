@@ -25,6 +25,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Great Fool]",
       "Valid: While this Ninja is in injured status, neither player can discard or send any cards in the opponent's hand to their Chakra area by their effects.",
     ],
+    flavor: "\"If that is considered wise, I choose to be stupid for life...\"",
     image: "s09-n-307",
   },
   {
@@ -45,6 +46,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Divergent Paths]",
       "Valid: This Ninja cannot be sent out to Battle in the same Team as any \"Leaf\" Ninjas.",
     ],
+    flavor: "\"Then, I'll just break those ties!\"",
     image: "s09-n-308",
   },
   {
@@ -65,6 +67,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Leadership]",
       "Every \"Leaf + Genin\" Ninja in this Ninja's Team except this Ninja gets +1/+1.",
     ],
+    flavor: "\"Take it away, Choji!\"",
     image: "s09-n-309",
   },
   {
@@ -85,6 +88,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Reconciliation with the Main Household]",
       "Valid: Any Ninja(s) in this Ninja's Team including this Ninja cannot be affected by any of your opponent's Mission cards.",
     ],
+    flavor: "\"I won't stop... until I can see much further...\"",
     image: "s09-n-310",
   },
   {
@@ -105,6 +109,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Projectile Weapons]",
       "This Ninja can use a Jutsu with a Jutsu cost of 1 or 2 without paying the Jutsu cost.",
     ],
+    flavor: "\"Okay, if you insist... Remember, you asked for it.\"",
     image: "s09-n-311",
   },
   {
@@ -126,6 +131,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "When you are the Attacker, at the beginning of the Battle Phase, you may move this in-play Ninja into any of your Teams.",
       "When this Ninja's Team wins 1 or more Battle Rewards, you can select up to 1 of your opponent's Battle Rewards at random and return it to its original owner's hand.",
     ],
+    flavor: "\"Don't worry! They're close... This way!!\"",
     image: "s09-n-312",
   },
   {
@@ -146,6 +152,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Blocking the Ambition]",
       "When this Ninja is sent out to Attack as the Head Ninja, you can move 1 of your opponent's in-play \"Permanent\" Mission cards to their Chakra area.",
     ],
+    flavor: "\"You've got to be taken down, and it's only fitting that I'm the one to do it.\"",
     image: "s09-n-313",
   },
   {
@@ -166,6 +173,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Sword for Vengeance]",
       "Valid: When your Ninja with an Entrance cost of 3 or more is discarded after being in play, place 1 Growth coin on this Ninja. The maximum number of Growth coins this Ninja can have at any time due to this effect is 2.",
     ],
+    flavor: "\"Hayate...\"",
     image: "s09-n-314",
   },
   {
@@ -186,6 +194,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Excellent Medical Skills]",
       "While this Ninja is Battling as a Back Ninja, if the Head Ninja of this Ninja's Team receives any Damage during the Showdown, you can discard 1 of your Chakras with a \"Wind\" symbol. In that case, reduce the Damage to that Ninja by 1.",
     ],
+    flavor: "\"...He's out of critical condition!\"",
     image: "s09-n-315",
   },
   {
@@ -206,6 +215,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Gifted Ninja of the Leaf Village]",
       "Valid: If this Ninja becomes the user of 1 or more Jutsu cards, draw 1 card at the end of that turn.",
     ],
+    flavor: "\"Falling into my trap... You disappoint me.\"",
     image: "s09-n-316",
   },
   {
@@ -226,6 +236,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Ultimate Two-Step Strategy]",
       "Valid: If this Ninja's Team is Defeated, Completely Defeated or Draws, place 1 Growth coin on this Ninja.",
     ],
+    flavor: "\"Also, by doing the 500 laps, you can train yourself hard. Therefore this is the ultimate two-step strategy.\"",
     image: "s09-n-317",
   },
   {
@@ -246,6 +257,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Professor]",
       "Valid: When this Ninja is put in play, place 3 Ninja Blade coins symbolizing +1/+1 on it. At the beginning of each of your turns, you can discard 2 of your Chakras. If you do not, remove 1 of those coins.",
     ],
+    flavor: "\"I am still here .. talk about me in the present tense.\"",
     image: "s09-n-318",
   },
   {
@@ -266,6 +278,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Person of Endurance]",
       "This Ninja is unaffected by the effects of your opponent's Ninja, Mission, or Client cards.",
     ],
+    flavor: "\"A Ninja is someone who endures hardship.\"",
     image: "s09-n-319",
   },
   {
@@ -286,6 +299,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Master of every Jutsu]",
       "This Ninja can use any Jutsu card with a \"Water\" symbol and printed Jutsu cost of 3 or less regardless of the Jutsu card's Requirements. (Each specific symbol in the Jutsu cost also counts as 1.)",
     ],
+    flavor: "\"A Ninja's talent lies in the use and mastery of every Jutsu that exists in this world.\"",
     image: "s09-n-320",
   },
   {
@@ -306,6 +320,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Medical Expert]",
       "Valid: When this Ninja is sent out to Attack, you can discard 1 of your Chakras with a \"Wind\" symbol. In that case, heal 1 of your injured Ninjas in this Ninja's Team except this Ninja.",
     ],
+    flavor: "\"Here I come!\"",
     image: "s09-n-321",
   },
   {
@@ -326,6 +341,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Real Face behind the Mask]",
       "Valid: If this Ninja's Team would win 1 or more Battle Rewards, you can draw the same number of cards instead of winning those Battle Rewards.",
     ],
+    flavor: "\"It's difficult for me to act purely as a shinobi.\"",
     image: "s09-n-322",
   },
   {
@@ -346,6 +362,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Suicide Attack]",
       "Valid: When this Ninja is discarded as a result of the Showdown or by the effect of your opponent's Ninjas, give 2 Damage to 1 of your opponent's Ninjas that just Battled against this Ninja. This effect cannot be negated.",
     ],
+    flavor: "\"No, my friend, it's the other place we're going to. You and me both, Gato!\"",
     image: "s09-n-323",
   },
   {
@@ -366,6 +383,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Chakra Eater Sword]",
       "When this Ninja is put in play, you can select and discard up to 3 of your opponent's Chakras.",
     ],
+    flavor: "\"My Shark Skin cuts off your Chakra... and devours it!!\"",
     image: "s09-n-324",
   },
   {
@@ -386,6 +404,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Clue to Sasuke's Whereabouts]",
       "Valid: While this Ninja is in injured status, each time your opponent puts their Ninja with both a \"Water\" symbol and an Entrance cost of 3 or less in play, you can draw 1 card.",
     ],
+    flavor: "\"He might know something about Sasuke!\"",
     image: "s09-n-325",
   },
   {
@@ -406,6 +425,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Simple Provocation]",
       "When this Ninja's Team is Blocked, you can flip a Ninja Blade coin; If it's heads, switch the positions of the Head Ninja and 1 of the Back Ninjas of your opponent's Team Battling against this Ninja. The selected Back Ninja must be a \"Genin\" Ninja",
     ],
+    flavor: "\"You can't even scratch my forehead!\"",
     image: "s09-n-326",
   },
   {
@@ -426,6 +446,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Pupil]",
       "While this Ninja is in the same Team as another Ninja with a \"Medicine\" Combat Attribute, this Ninja gets the following effect text: At the end of your turn, you can discard 1 of your Chakras with a \"Wind\" symbol. In that case, heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"Please accept me as your pupil.\"",
     image: "s09-n-327",
   },
   {
@@ -446,6 +467,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Bond with Akamaru]",
       "When this Ninja is put in play, you can put 1 \"Akamaru\" Ninja card in your Discard Pile or your Chakra area in play.",
     ],
+    flavor: "\"I'll never let Akamaru suffer like that again...\"",
     image: "s09-n-328",
   },
   {
@@ -466,6 +488,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Secret Plan]",
       "All Mission cards in your opponent's hand get +1 Entrance cost.",
     ],
+    flavor: "\"Do you suppose I did nothing while we were captured?\"",
     image: "s09-n-329",
   },
   {
@@ -486,6 +509,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Overcoming the Weakness]",
       "Valid: When this Ninja is sent out to Battle in injured status, place 1 Growth coin on it at the end of the turn.",
     ],
+    flavor: "\"But... I have to be strong now!\"",
     image: "s09-n-330",
   },
   {
@@ -506,6 +530,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Full Recovery]",
       "Valid: At the beginning of your turn, if this Ninja is in injured status, flip a Ninja Blade coin; If it's heads, heal this Ninja.",
     ],
+    flavor: "\"Life is too short!!\"",
     image: "s09-n-331",
   },
   {
@@ -526,6 +551,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[The Future Elite]",
       "Mission cards cannot be negated.",
     ],
+    flavor: "\"I think we used a little too much gunpowder, you guys.\"",
     image: "s09-n-332",
   },
   {
@@ -547,6 +573,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "When this Ninja is put in play, you can select up to 2 of the \"Ninja Dog\" Ninjas from your Chakra area and/or Discard Pile and put it/them in play.",
       "When this Ninja is sent out to Battle, this Ninja gets +1/+1 for each of your in-play \"Ninja Dog\" Ninjas during the turn.",
     ],
+    flavor: "\"Go!\"",
     image: "s09-n-333",
   },
   {
@@ -568,6 +595,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "In order to send this Ninja out to Attack, you must flip a Ninja Blade coin; if it's tails, you cannot send this Ninja out to Attack during the turn unless you discard 1 of your Chakras.",
       "If this Ninja's Team wins a Victory, it becomes an Outstanding Victory.",
     ],
+    flavor: "\"Desk work isn't really my thing...\"",
     image: "s09-n-334",
   },
   {
@@ -588,6 +616,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Contact with Orochimaru]",
       "Valid: During the Exchange of Jutsu, you can discard 1 of your Chakras to place 3 Ninja Blade coins symbolizing +1/+1 on this Ninja. Each of the coins changes into a Ninja Blade coin symbolizing -1/-1 at the end of the turn.",
     ],
+    flavor: "\"I'm going to gain Lord Orochimaru's ultimate power and teach a lesson to everyone in this village!\"",
     image: "s09-n-335",
   },
   {
@@ -608,6 +637,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Fiancee]",
       "At the end of your opponent's turn, you can return 1 \"Prisoner\" Ninja in your Chakra area or Discard Pile to the top of its original owner's Deck.",
     ],
+    flavor: "\"Please get your old self back... Mizuki...\"",
     image: "s09-n-336",
   },
   {
@@ -628,6 +658,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Legendary Foolish Brothers]",
       "Valid: While you have \"Raijin\" in play, this Ninja gets +2/+0. While your opponent has 1 or more \"Satoosa\" or \"Sannin\" or higher Rank Ninjas in play, this Ninja gets -3/+0.",
     ],
+    flavor: "\"Are you aware that we're the famous brothers, Fujin and Raijin...?\"",
     image: "s09-n-337",
   },
   {
@@ -648,6 +679,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Legendary Foolish Brothers]",
       "Valid: While you have \"Fujin\" in play, this Ninja gets +2/+0. While your opponent has 1 or more \"Satoosa\" or \"Sannin\" or higher Rank Ninjas in play, this Ninja gets -3/+0.",
     ],
+    flavor: "\"You don't have a single offering for us...?\"",
     image: "s09-n-338",
   },
   {
@@ -668,6 +700,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Narrow Escape]",
       "While this Ninja is Battling, any Ninja in this Ninja's Team, including this Ninja, cannot become a Stand-By Ninja by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"It was really a narrow escape.\"",
     image: "s09-n-339",
   },
   {
@@ -688,6 +721,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Revival of the Kamizuru Clan]",
       "When this Ninja's Team wins 1 or more Battle Rewards, you can place 1 Growth coin on another in-play Ninja with a \"Bee\" Combat Attribute.",
     ],
+    flavor: "\"This is an opportunity to make a name for ourselves as the Kamizuru clan.\"",
     image: "s09-n-340",
   },
   {
@@ -708,6 +742,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Revival of the Kamizuru Clan]",
       "When this Ninja's Team wins 1 or more Battle Rewards, you can place 1 Growth coin on another in-play Ninja with a \"Bee\" Combat Attribute.",
     ],
+    flavor: "\"They say that the book explains various forbidden Jutsu for insect tamers...\"",
     image: "s09-n-341",
   },
   {
@@ -728,6 +763,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Revival of the Kamizuru Clan]",
       "When this Ninja's Team wins 1 or more Battle Rewards, you can place 1 Growth coin on another in-play Ninja with a \"Bee\" Combat Attribute.",
     ],
+    flavor: "\"Our first leader's secret book...\"",
     image: "s09-n-342",
   },
   {
@@ -748,6 +784,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[The Green Beast]",
       "While you have 1 or more other Ninjas with a \"Taijutsu\" Combat Attribute in play, this Ninja's healthy status Combat value becomes the same as its injured status Combat value.",
     ],
+    flavor: "\"Don't underestimate the green beast of the Leaf Village!\"",
     image: "s09-n-343",
   },
   {
@@ -768,6 +805,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Explosion of the Ultimate Jutsu]",
       "Valid: While this Ninja is Battling, you can reduce the cost of 1 \"Rasengan\" or \"Chidori\" Jutsu card used by this Ninja by 1 \"Lightning\" or 1 \"Fire\". Additionally, that Jutsu card cannot be negated.",
     ],
+    flavor: "\"Chidori!!\" \"Rasengan!!\"",
     image: "s09-n-us066",
   },
   {
@@ -788,6 +826,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[The Fellows to Fight Together]",
       "Valid: When you are the Attacker, at the beginning of the Battle Phase, you can move 1 of your in-play \"Ninja Dog\" Ninjas or 1 of your in-play \"Ninja Toad\" Ninjas into this Ninja's Team.",
     ],
+    flavor: "\"Now, I'll finish this with our new technique!\" \"Arf!\"",
     image: "s09-n-us067",
   },
   {
@@ -808,6 +847,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[The Genius and the Knucklehead]",
       "If this Ninja is put in play by sending your in-play \"Naruto Uzumaki\" to your Chakra area, you can send 1 of your opponent's Battle Rewards at random to your Chakra area face up. If this Ninja is put in play by sending your in-play \"Neji Hyuga\" to your Chakra area, draw 2 cards.",
     ],
+    flavor: "\"Now, go! I'll catch up to you later!\" \"I got it!\"",
     image: "s09-n-us068",
   },
   {
@@ -828,6 +868,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Formation of Sand]",
       "During your Mission Phase, you can select and move 1 card with a \"Wind\" symbol in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"I'm not a fool but you are. It's nothing for me to create the sand under the ground.\"",
     image: "s09-n-us069",
   },
   {
@@ -848,6 +889,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Sand Coffin]",
       "During your Mission Phase, you can discard 2 of your Chakras with a \"Wind\" symbol. In that case, select 1 of your opponent's Ninjas. The selected Ninja cannot Block this Ninja's Team this turn.",
     ],
+    flavor: "\"Sand Coffin!!\"",
     image: "s09-n-us070",
   },
   {
@@ -868,6 +910,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Optimistic Idea]",
       "During your Mission Phase, you can discard 2 of your Chakras with a \"Wind\" symbol. In that case, select and discard 1 in-play \"Permanent\" Mission card.",
     ],
+    flavor: "\"Do you really think that distance is safe for you?\"",
     image: "s09-n-us071",
   },
   {
@@ -889,6 +932,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Valid: During your Mission Phase, you can discard 2 of your Battle Rewards. In that case, you can put 1 \"Ninja Toad\" Ninja in your hand in play ignoring the Entrance requirements.",
       "Valid: This Ninja cannot be the user of Jutsu cards.",
     ],
+    flavor: "\"Well, whatever it is, I hope you brought along some treats.\"",
     image: "s09-n-us072",
   },
   {
@@ -909,6 +953,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Orochimaru's Right Hand]",
       "While this Ninja is in the same Team as \"Orochimaru\", that \"Orochimaru\" cannot receive any Damage during the Showdown.",
     ],
+    flavor: "\"Yes. She and I are from the medical corps. I could tell she was building up her Chakra for an attack.\"",
     image: "s09-n-us073",
   },
   {
@@ -929,6 +974,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Information Sources]",
       "At the end of your turn, you can reveal the top card of your Deck and place it in your hand. In that case, move 1 of the cards in your hand to the bottom of your Deck.",
     ],
+    flavor: "\"Maybe I can help you kids out a little...with my Ninja Info Cards.\"",
     image: "s09-n-us074",
   },
   {
@@ -949,6 +995,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Fear of the Puppets]",
       "During your Mission Phase, you can discard 2 of your Chakras. In that case, you can search for 1 \"Puppet\" Ninja card in your Deck, show it to your opponent and place it in your hand.",
     ],
+    flavor: "\"Imagine something more monstrous than your worst nightmare, only it's real.\"",
     image: "s09-n-us075",
   },
   {
@@ -969,6 +1016,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Toughness]",
       "Valid: While this Ninja is Battling in injured status and receives any Damage, flip a Ninja Blade coin twice; if you get heads at least once, negate the Damage.",
     ],
+    flavor: "\"I mean, a girl's gotta be tough if she's going to survive something like this!\" \"Cha!\"",
     image: "s09-n-us076",
   },
   {
@@ -989,6 +1037,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Expert of Medical Ninjutsu]",
       "At the beginning of your turn or at the end of your turn, you can discard 1 of your Chakras with a \"Wind\" symbol. In that case, heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"She combines unrivaled skills as a warrior, with the ability to heal others.\"",
     image: "s09-n-us077",
   },
   {
@@ -1010,6 +1059,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "When this Ninja is sent out to Attack and opposed, you can select and discard 1 of your opponent's Chakras.",
       "If this Ninja is sent out to Attack and not opposed, you can select and discard up to 2 of your opponent's Chakras at the end of the turn.",
     ],
+    flavor: "\"It doesn't slice! It cuts you to ribbons!!\"",
     image: "s09-n-us078",
   },
   {
@@ -1031,6 +1081,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Valid: Any \"Ninja Toad\" Ninja(s) in your hand gets -3 Entrance cost.",
       "Valid: Every in-play \"Ninja Toad\" Ninja except this Ninja gets +1/+1.",
     ],
+    flavor: "\"Gimme a break! I'm not old enough to make any kind of a deal yet!\" \"Aw, come on, Pops, don't be like that, why don't 'cha just settle down and hear the kid out?\"",
     image: "s09-n-us079",
   },
   {
@@ -1051,6 +1102,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[For the Mission to Accomplish]",
       "When this Ninja is put in play, you can move any number of \"Four Sound Ninja\" Ninja cards in your Discard Pile and/or in your Chakra area to the top of your Deck in any order you like.",
     ],
+    flavor: "\"The reason why I let you stay alive is because you still have a mission to accomplish here.\"",
     image: "s09-n-us080",
   },
   {
@@ -1071,6 +1123,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[The Weakness of the Strong]",
       "At the beginning of your turn, you can select 1 of your opponent's in-play Ninjas with an Entrance cost of 6 or more. In that case, all the effect texts of the selected Ninja are negated during the turn and the next turn.",
     ],
+    flavor: "\"Even the strongest of opponents...always has a weakness.\"",
     image: "s09-n-us081",
   },
   {
@@ -1091,6 +1144,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Radiation of Chakra from all over the Body]",
       "When this Ninja becomes the user of a Jutsu card, you can pay its Jutsu cost from your hand in addition to your Chakra area.",
     ],
+    flavor: "\"Special tip for you. I can radiate my chakra from any chakra points on my body.\"",
     image: "s09-n-us082",
   },
   {
@@ -1112,6 +1166,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "During your Mission Phase, you can discard 2 of your Chakras. In that case, search for 1 \"Monkey King Enma\" Ninja card in your Deck, show it to your opponent and place it in your hand.",
       "During the Exchange of Jutsu, you can discard 1 \"Monkey King Enma\" Ninja card from your hand to give this Ninja +5/+5 during the turn.",
     ],
+    flavor: "\"Quickly! Enma! Adamantine Nyoi!\"",
     image: "s09-n-us083",
   },
   {
@@ -1133,6 +1188,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "This Ninja can use the \"8 Trigrams Palms Rotation\" Jutsu card or \"Gentle Fist Style: 8 Trigrams 64 Palms\" Jutsu card without paying its Jutsu cost.",
       "Valid: This Ninja cannot be affected by any of your opponent's Mission cards.",
     ],
+    flavor: "\"You live only to protect Lady Hinata and to preserve the power of our clan's main household.\" \"I understand, Father.\"",
     image: "s09-n-us084",
   },
   {
@@ -1153,6 +1209,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Wits and Beauty]",
       "When this Ninja is put in play, you can discard 2 cards with a \"Wind\" symbol from your Chakra area. In that case, place 1 Growth coin on this Ninja.",
     ],
+    flavor: "\"Alright... Let's end this!\"",
     image: "s09-n-us085",
   },
   {
@@ -1173,6 +1230,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Great Ambition]",
       "While this Ninja is Battling, this Ninja gets +X/+X. X = the number of cards with a \"Water\" symbol in your Chakra area. The maximum value of X is 5. (Even if you have 6 or more cards with a \"Water\" symbol in your Chakra area, X cannot be more than 5.)",
     ],
+    flavor: "\"Once I've possession of the Kazahana fortune, our country can attain military superiority over the Five Great Nations!\"",
     image: "s09-n-us086",
   },
   {
@@ -1193,6 +1251,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Chubby]",
       "When this Ninja is sent out to Attack, it gets +1/+0 during the turn.",
     ],
+    flavor: "\"I'm NOT fat!\"",
     image: "s09-n-us087",
   },
   {
@@ -1213,6 +1272,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Village Governor]",
       "At the beginning of your turn, you can discard 1 card in your Chakra area to heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"There's no longer any need to worry.\"",
     image: "s09-n-us088",
   },
   {
@@ -1233,6 +1293,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Scapegoat]",
       "Valid: When the Head Ninja of this Ninja's Team receives any Damage, you can reduce the Damage by 1. In that case, Give 1 Damage to this Ninja.",
     ],
+    flavor: "\"Naruto! Get down!\"",
     image: "s09-n-us089",
   },
   {
@@ -1253,6 +1314,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Open Your Eyes!]",
       "This Ninja cannot be affected by any of your opponent's Jutsu cards that target it and have a printed Jutsu cost of 2 or less (specific symbols are counted as 1 as well).",
     ],
+    flavor: "\"Stay calm... Focus... Concentrate... See everything!!\"",
     image: "s09-n-us090",
   },
   {
@@ -1273,6 +1335,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Kekkei Genkai: Bloodline Trait]",
       "Valid: Jutsu cards used by this Ninja cannot be negated.",
     ],
+    flavor: "\"I will show you what speed really means!\"",
     image: "s09-n-us091",
   },
   {
@@ -1293,6 +1356,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "[Determination]",
       "During the Exchange of Jutsu, you can injure this Ninja. In that case, this Ninja gets +2/+2 during the turn.",
     ],
+    flavor: "\"Okay ... No more caving ...\"",
     image: "s09-n-us092",
   },
   // ── JUTSU ──
@@ -1311,6 +1375,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Effect: Look at the top 3 cards of your Deck and return them in any order you like to the top of the same Deck.",
       "While this Jutsu card is in your Chakra area, your in-play \"Naruto Uzumaki\" gets \"Clone Status\".",
     ],
+    flavor: "\"I name it Uzumaki Formation!\"",
     image: "s09-j-276",
   },
   {
@@ -1326,6 +1391,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: If the user is Battling as an Attacker, the target gets +2 \"Mental Power\" during this turn. If the user is Battling as a Blocker, the target gets +3 \"Mental Power\" during this turn.",
     ],
+    flavor: "\"When I suggested making a detour, you didn't say anything...\"",
     image: "s09-j-277",
   },
   {
@@ -1341,6 +1407,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin once for each target. Every Ninja that got heads gets -2/-2 during this turn.",
     ],
+    flavor: "\"Darn it... This is a trap!\"",
     image: "s09-j-278",
   },
   {
@@ -1357,6 +1424,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Reveal up to 4 cards from the top of your Deck. Give 1 Damage to the target for each Ninja among the cards you revealed by this effect. Then, return the revealed cards to your Deck and shuffle it.",
     ],
+    flavor: "\"Take this! Mad Dance of Infinity!\"",
     image: "s09-j-279",
   },
   {
@@ -1373,6 +1441,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja Battling against the user with an Entrance cost of X or lower",
       "Effect: Change the target to injured status. X = the Combat value of the user.",
     ],
+    flavor: "\"I can see... every movement!\"",
     image: "s09-j-280",
   },
   {
@@ -1389,6 +1458,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"You can't beat me...\"",
     image: "s09-j-281",
   },
   {
@@ -1404,6 +1474,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target gets \"Secret Pills\" and +3/+3 during this turn. At the end of the turn, place a Ninja Blade coin symbolizing -1/-1 on the target.",
     ],
+    flavor: "\"It's beautiful, isn't it...?\"",
     image: "s09-j-282",
   },
   {
@@ -1420,6 +1491,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+3 during this turn. Additionally, if the target's Team wins a Victory, it becomes an Outstanding Victory. Move the target to its original owner's Chakra area at the end of the turn.",
     ],
+    flavor: "\"Wh-what...?\"",
     image: "s09-j-283",
   },
   {
@@ -1436,6 +1508,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: Regardless of its Team Power or Team Mental Power, the target's Team wins a Victory during the Showdown of the current turn. However, this effect is negated if your opponent has 1 or more \"Satoosa\" or \"Sannin\" or higher Rank Ninjas in play.",
     ],
+    flavor: "\"Whoa!\"",
     image: "s09-j-284",
   },
   {
@@ -1451,6 +1524,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Requirements: \"Insect\" Combat Attribute",
       "Effect: You can look at the top 4 cards of your Deck and move any number of them to your Chakra area. Then, return the rest, if there is any, and shuffle your Deck.",
     ],
+    flavor: "\"Insect Attractant Jutsu...\"",
     image: "s09-j-285",
   },
   {
@@ -1467,6 +1541,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: During this turn, the target cannot receive any Damage or be changed to injured status except as a result of the Showdown.",
     ],
+    flavor: "\"Insect Wall Jutsu!\"",
     image: "s09-j-286",
   },
   {
@@ -1483,6 +1558,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target cannot be the target of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"I usually move sand, but I got on it this time. That's all...\"",
     image: "s09-j-287",
   },
   {
@@ -1499,6 +1575,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin. If it's heads, give 1 Damage to the target. If it's tails, give 2 Damage to it.",
     ],
+    flavor: "\"Sand Blade... Dual Attack!!\"",
     image: "s09-j-288",
   },
   {
@@ -1516,6 +1593,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "(2) 1 of the Back Ninjas Battling against the user",
       "Effect: Compare the current Combat values of target (1) and target (2). Give 1 Damage to the Ninja with the lower value.",
     ],
+    flavor: "\"It's a new Jutsu from Ino's spring collection.\"",
     image: "s09-j-289",
   },
   {
@@ -1532,6 +1610,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: The Head Ninja Battling against the user",
       "Effect: If the user is Battling as a Blocker, give 1 Damage to the target.",
     ],
+    flavor: "\"I...did it...!\"",
     image: "s09-j-290",
   },
   {
@@ -1548,6 +1627,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: If the user is Battling as a Blocker, the target gets +6/+6 during this turn. Additionally, the target cannot be the target of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"It can perfectly block attacks from any direction...\"",
     image: "s09-j-291",
   },
   {
@@ -1564,6 +1644,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target gets -2/-2 OR -2 \"Mental Power\" during this turn.",
     ],
+    flavor: "\"Thousand Bee Stings Jutsu!\"",
     image: "s09-j-292",
   },
   {
@@ -1580,6 +1661,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Flip a Ninja Blade coin twice; If you get heads at least once, give 1 Damage to the target.",
     ],
+    flavor: "\"Bee Bomb Jutsu!\"",
     image: "s09-j-293",
   },
   {
@@ -1596,6 +1678,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin 3 times. During this turn, the target gets -2/-2 for each heads you get. Additionally, if you get heads 2 or more times, give 1 Damage to the target.",
     ],
+    flavor: "\"That's honey. It sticks fast like an adhesive agent...\"",
     image: "s09-j-294",
   },
   {
@@ -1611,6 +1694,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Requirements: \"Bee\" Combat Attribute",
       "Effect: Place this Jutsu card in the user's Team as the Head Ninja with \"Power: 5/0.\" Move this card to your Chakra area when it receives any Damage or at the end of this turn.",
     ],
+    flavor: "\"Summoning Jutsu!\"",
     image: "s09-j-295",
   },
   {
@@ -1627,6 +1711,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target gets +8/+0 during this turn. Additionally, if the target's Team wins a Victory or an Outstanding Victory, return 1 of the Ninjas Battling against the target to the bottom of its original owner's Deck.",
     ],
+    flavor: "\"Go away!!!\"",
     image: "s09-j-296",
   },
   {
@@ -1643,6 +1728,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin 3 times. Give 1 Damage to the target for each heads.",
     ],
+    flavor: "\"Get out of my sight.\"",
     image: "s09-j-297",
   },
   {
@@ -1659,6 +1745,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: X number of Ninjas in 1 of your opponent's Teams",
       "Effect: Give 1 Damage to the target. X cannot exceed the number of cards in your hand - the number of cards in your opponent's hand.",
     ],
+    flavor: "\"Checkmate. Shadow of the Crushing Hand Jutsu!!\"",
     image: "s09-j-298",
   },
   {
@@ -1675,6 +1762,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: Reveal the top card of your Deck until you reveal a Jutsu or a Mission card, or your Deck is depleted. During this turn, the target gets +2/+2 for each card that was revealed by this effect. Then, return the card(s) to your Deck and shuffle it.",
     ],
+    flavor: "\"Have I managed to... change myself...?\"",
     image: "s09-j-299",
   },
   {
@@ -1691,6 +1779,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Head Ninja Battling against the user",
       "Effect: Give 1 Damage to the target and flip a Ninja Blade coin; If it's heads, give 1 additional Damage to the target.",
     ],
+    flavor: "\"There are no blind spots!\"",
     image: "s09-j-300",
   },
   {
@@ -1707,6 +1796,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: Flip a Ninja Blade coin 3 times. During this turn, the target gets +5/+0 for each heads you get during the flips. If you get tails 3 times, give 1 Damage to the target.",
     ],
+    flavor: "\"If I can't attack my opponent 100 times while he's falling, I'll do 200 push-ups!!\"",
     image: "s09-j-301",
   },
   {
@@ -1723,6 +1813,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: X number of Ninjas",
       "Effect: Give 1 Damage to the target. X = the total number of \"Parasitic Insects: Whirlwind\" Jutsu cards and Jutsu cards with \"Requirements: 'Insect' Combat Attribute\" in your Discard Pile.",
     ],
+    flavor: "\"Experience the power of my parasitic insects...\"",
     image: "s09-j-302",
   },
   {
@@ -1739,6 +1830,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn. Additionally, if the target's Team wins a Victory or an Outstanding Victory, select and discard 1 of the Ninjas Battling against the target.",
     ],
+    flavor: "\"Get ready for the raging flames.\"",
     image: "s09-j-303",
   },
   {
@@ -1756,6 +1848,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Effect: Flip a Ninja Blade coin 3 times. If you get heads 2 or more times, discard the target.",
       "Additionally, if you get heads at least once, the user gets +3/+0 during the turn.",
     ],
+    flavor: "\"Clench your teeth!\"",
     image: "s09-j-304",
   },
   {
@@ -1771,6 +1864,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The user gets +2/+2 during this turn. Additionally, during this turn, the user cannot receive any Damage except during the Showdown.",
     ],
+    flavor: "\"Akamaru, here's the food pill!\" \"Arf! ...Grrrrrrr...\"",
     image: "s09-j-us057",
   },
   {
@@ -1787,6 +1881,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every \"Male\" Ninja Battling against the user",
       "Effect: The user changes from \"Male\" to \"Female\" during this turn. The target's Mental Power becomes 0 during this turn.",
     ],
+    flavor: "\"I'll do it if you promise to stay like that the whole time.\"",
     image: "s09-j-us058",
   },
   {
@@ -1802,6 +1897,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The user gets +2/+2 during this turn. Additionally, if the target is in injured status at the end of this turn, heal the target.",
     ],
+    flavor: "\"An energy booster that's so powerful the troops who take it can fight for three days and nights without a break.\"",
     image: "s09-j-us059",
   },
   {
@@ -1817,6 +1913,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of the Ninjas with the lowest original printed Entrance cost in the Team Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"He attacked at the base of the tail, where the defense is weakest...\"",
     image: "s09-j-us060",
   },
   {
@@ -1831,6 +1928,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand and select and discard 1 Jutsu card with a \"Fire\" symbol, if they have any.",
     ],
+    flavor: "\"Sealing Jutsu: Fire Seal!!\"",
     image: "s09-j-us061",
   },
   {
@@ -1846,6 +1944,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Requirements: \"Byakugan\"",
       "Effect: Discard up to X number of cards in your opponent's hand at random. X = the number of cards with an \"Earth\" symbol in your Chakra area. The maximum value of X is 2.",
     ],
+    flavor: "\"I won't run away...Never again...No more hiding! Byakugan!\"",
     image: "s09-j-us062",
   },
   {
@@ -1861,6 +1960,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target cannot be the target of your opponent's Jutsu cards during this turn. Additionally, the target gets -2/-2 during this turn.",
     ],
+    flavor: "\"Sometimes I wish I was just a cloud... Just floatin' along...\"",
     image: "s09-j-us063",
   },
   {
@@ -1878,6 +1978,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "(2) Every Ninja Battling against the user",
       "Effect: Target (1) cannot be the target of your opponent's Jutsu cards during this turn. Additionally, Flip a Ninja Blade coin; if it's heads, give 1 Damage to target (2). If it's tails, target (2) becomes a Stand-By Ninja.",
     ],
+    flavor: "\"The Leaf Village's spirit is strong... You'd do well to remember.\"",
     image: "s09-j-us064",
   },
   {
@@ -1894,6 +1995,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn. Additionally, if the target's Team wins a Victory or an Outstanding Victory, give 1 Damage to 1 of your opponent's Healthy Stand-By Ninjas.",
     ],
+    flavor: "\"He chose me to be the one to kill him!\"",
     image: "s09-j-us065",
   },
   {
@@ -1910,6 +2012,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If your opponent has 5 or more Battle rewards, discard the target. If your opponent has 4 or less Battle rewards, give 1 Damage to the target. Additionally, the user gets +X/+X during this turn. X = the number of your opponent's Battle Rewards.",
     ],
+    flavor: "\"By attacking one you infect all. And you don't care. That is not the way of the Shinobi.\"",
     image: "s09-j-us066",
   },
   {
@@ -1925,6 +2028,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: During this turn, the next time that the target receives any Damage by your opponent's Jutsu cards, the user of those Jutsu cards receive the same amount of Damage. Additionally, the next time that the target receives any Damage by the effects of your opponent's Ninja cards during this turn, those Ninjas receive the same amount of Damage.",
     ],
+    flavor: "\"!!\"",
     image: "s09-j-us067",
   },
   {
@@ -1941,6 +2045,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your opponent's Ninjas with an original printed Entrance cost of 1 or less",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Huh?!? What..?\"",
     image: "s09-j-us068",
   },
   {
@@ -1955,6 +2060,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Move 2 cards in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"The whole time I thought I was keeping out of range of his shadow jutsu — when I was really walking right into it.\"",
     image: "s09-j-us069",
   },
   {
@@ -1970,6 +2076,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Jutsu card being used with \"Target: 1 Ninja\"",
       "Effect: Change the target of the target to another applicable target. The effect of the target is applied only to the new target.",
     ],
+    flavor: "\"Alright, listen, little girl! .. Don't you dare go around saying I'm just some cute puppy!\" \"But .. I didn't even say cute.\"",
     image: "s09-j-us070",
   },
   {
@@ -1985,6 +2092,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: User",
       "Effect: The target gets +3 Mental Power during this turn and the next turn.",
     ],
+    flavor: "\"Okay, focus, Sakura, focus. This is where you show your stuff.\"",
     image: "s09-j-us071",
   },
   {
@@ -2000,6 +2108,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Requirements: \"Gaara of the Desert\" + \"An Entrance cost of 2 or more\"",
       "Effect: Move the user to your Chakra area. In that case, put 1 \"Shukaku\" Ninja card from your hand in play in the same Team and in the same position as the user, ignoring the Entrance requirements.",
     ],
+    flavor: "\"You are my prey! My prey!!\"",
     image: "s09-j-us072",
   },
   {
@@ -2016,6 +2125,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "(2) 1 Ninja in the same Team as the user except target (1)",
       "Effect: During this turn, while target (1) is in play, if target (2) would receive any Damage, give that Damage to target (1) instead.",
     ],
+    flavor: "\"!\" \"Za-bu-za...\"",
     image: "s09-j-us073",
   },
   {
@@ -2030,6 +2140,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Select and discard X number of your opponent's Chakras.",
     ],
+    flavor: "\"The thing is Sasuke, Yoroi's unique skills are going to be disastrous for you.\"",
     image: "s09-j-us074",
   },
   {
@@ -2044,6 +2155,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: If your opponent draws 1 or more cards by the effect of their Jutsu cards and its effect is applied successfully during this turn, randomly select and discard the same amount of cards from your opponent's hand.",
     ],
+    flavor: "\"Nice try, but.....I'm not that easy to fool.\"",
     image: "s09-j-us075",
   },
   {
@@ -2059,6 +2171,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your Jutsu cards being used with \"Target: 1 Ninja Battling against the user\"",
       "Effect: Change the target of the target to \"Target: 1 Ninja\" and select the new applicable target of the target The effect of the target is applied only to the new target.",
     ],
+    flavor: "\"I can't even tell where the attacks are coming from!\"",
     image: "s09-j-us076",
   },
   // ── MISSION ──
@@ -2076,6 +2189,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter",
       "Effect: Look at the top 3 cards of your Deck and move any number of them to your Chakra area. Then, return the rest, if there is/are any, and shuffle your Deck.",
     ],
+    flavor: "\"We couldn't get any information concerning Orochimaru...\"",
     image: "s09-m-268",
   },
   {
@@ -2092,6 +2206,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (2)",
       "Effect: Every in-play Ninja's \"Mental Power\" is considered to be 0.",
     ],
+    flavor: "\"Think harder, Raijin. You can also use my hands, can't you?\" \"Oh, of course! You're so intelligent!\"",
     image: "s09-m-269",
   },
   {
@@ -2108,6 +2223,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter Permanent (2)",
       "Effect: Each of your opponent's in-play \"Prisoner\" Ninjas cannot be sent out to Battle.",
     ],
+    flavor: "\"Iruka, I have an urgent mission for you!\"",
     image: "s09-m-270",
   },
   {
@@ -2124,6 +2240,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter Permanent (2)",
       "Effect: Each time a player wins 1 or more Battle Rewards, they must discard the same amount of their Chakras if they have any. If the player has less Chakras than the Battle Rewards they won, they discard all of their Chakras.",
     ],
+    flavor: "\"It's no longer possible...\"",
     image: "s09-m-271",
   },
   {
@@ -2139,6 +2256,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Select either \"Ninja card\" or \"Jutsu or Mission card\" and reveal the top 4 cards of your Deck. If you have 1 or more selected type cards among the revealed cards, select 1 of the selected type cards among them and place it in your hand. If not, discard all the cards revealed by this effect.",
     ],
+    flavor: "\"This should be what Orochimaru was trying to do...\"",
     image: "s09-m-272",
   },
   {
@@ -2154,6 +2272,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Flip a Ninja Blade coin. If it's heads, you draw 2 cards. If it's tails, your opponent draws 1 card.",
     ],
+    flavor: "\"Shino, now!\"",
     image: "s09-m-273",
   },
   {
@@ -2170,6 +2289,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every in-play \"Permanent\" Mission card",
       "Effect: Return the target to its original owner's hand.",
     ],
+    flavor: "\"Our clan may be destined to perish some day...\"",
     image: "s09-m-274",
   },
   {
@@ -2185,6 +2305,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: You can search for any number of \"Prisoner\" Ninja cards in your Deck, show them to your opponent and place them in your hand. Then shuffle your Deck. In that case, your opponent randomly selects and discards the same amount of cards from your hand.",
     ],
+    flavor: "\"If this is a welcome party for us, you're rather too excited!\"",
     image: "s09-m-275",
   },
   {
@@ -2201,6 +2322,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your in-play \"Chunin\" or higher Rank Ninjas",
       "Effect: Discard the target to win 1 Battle Reward.",
     ],
+    flavor: "\"Unfortunately... those who're useless on the battlefield are nothing but drags.\"",
     image: "s09-m-276",
   },
   {
@@ -2217,6 +2339,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (1)",
       "Effect: Your opponent cannot draw any card(s) during their Start Phase. Additionally, all of your opponent's in-play Ninjas get +1/+1.",
     ],
+    flavor: "\"My lunch has been... squashed!\"",
     image: "s09-m-277",
   },
   {
@@ -2234,6 +2357,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja with an Entrance cost of 2 or less",
       "Effect: Attach this card to the target. While this card is attached, the target gets \"Medical\" and its Combat Attribute is changed to \"Medicine\". (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"She has improved so much with just three months of training...\"",
     image: "s09-m-278",
   },
   {
@@ -2250,6 +2374,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter Permanent (2)",
       "Effect: Any \"Female\" Ninja in the same Team as 1 or more \"Male\" Ninjas cannot be sent out to Attack.",
     ],
+    flavor: "\"Naruto is... Naruto is so close to me...\"",
     image: "s09-m-279",
   },
   {
@@ -2266,6 +2391,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: Each time a player wins an Outstanding Battle Reward, that player wins 1 Battle Reward instead.",
     ],
+    flavor: "\"I can give you the information.\"",
     image: "s09-m-280",
   },
   {
@@ -2281,6 +2407,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: If you have 1 or more Ninjas with an \"Insect\" Combat Attribute in play, put 2 Ninja Blade coins (each symbolizing an Insect coin) in play. Each Insect coin is considered to be a Ninja with \"Power: 0/1\" (Healthy and Injured status) While you have this Mission card in your Chakra area, you cannot deploy any Ninjas.",
     ],
+    flavor: "\"The unprecedented battle between insect tamers ended with the Aburame clan's victory...\"",
     image: "s09-m-281",
   },
   {
@@ -2296,6 +2423,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: During this turn, each of your Chakras that is discarded to pay a Jutsu cost may be counted as 1 or 2 Chakras with the same symbol. (If a card has 2 or more symbols, select 1 of them.)",
     ],
+    flavor: "\"I need to control my Chakra with more precision to find small things like insects.\"",
     image: "s09-m-282",
   },
   {
@@ -2312,6 +2440,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: Your opponent cannot win any Battle Rewards. However, during their Mission Phase, your opponent can discard 2 of the cards in their hand to discard this Mission card.",
     ],
+    flavor: "The kunoichi is with us...\"",
     image: "s09-m-283",
   },
   {
@@ -2328,6 +2457,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: At the end of your turn, you can flip a Ninja Blade coin twice. If you get heads both times, search for any Ninja card in your Deck, show it to your opponent, and place it in your hand. In that case, shuffle your Deck and discard this card.",
     ],
+    flavor: "\"How can you NOT see the differences from this?\"",
     image: "s09-m-284",
   },
   {
@@ -2344,6 +2474,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: At the beginning of of your opponent's turn, they must select and discard 1 of their Chakras if they have any.",
     ],
+    flavor: "\"The larvae in this hive love Chakra.\"",
     image: "s09-m-285",
   },
   {
@@ -2360,6 +2491,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every in-play \"Naruto Uzumaki\" with no Growth coins and \"Gaara of the Desert\" with no Growth coins",
       "Effect: Place 2 Growth coins on the target.",
     ],
+    flavor: "\"Show me your strength. Let me grind it into dust before your eyes.\"",
     image: "s09-m-us051",
   },
   {
@@ -2376,6 +2508,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent",
       "Effect: Each Growth coin on your non-platoon \"Leaf\" + \"Genin\" Ninja(s) in the same Team as 1 or more \"Leaf\" + \"Jonin\" is treated as a Growth coin symbolizing +2/+2.",
     ],
+    flavor: "\"Don't turn away. When you live like a warrior, this is how it ends.\"",
     image: "s09-m-us052",
   },
   {
@@ -2393,6 +2526,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your in-play \"Genin\" Ninjas",
       "Effect: Select 1 Combat Attribute. While this card is in play, the Combat Attribute of the target becomes the same Combat Attribute as you selected.",
     ],
+    flavor: "\"Until I become Hokage... I don't care what happens, I'm not gonna die!!\"",
     image: "s09-m-us053",
   },
   {
@@ -2410,6 +2544,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your non-platoon \"Chunin\" Ninjas",
       "Effect: When you are the Attacker, at the beginning of the Battle Phase, you may move the target into any of your Teams.",
     ],
+    flavor: "\"Ha ha ha, it doesn't look right on you.\" \"Don't laugh, OK?\"",
     image: "s09-m-us054",
   },
   {
@@ -2426,6 +2561,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent",
       "Effect: At the end of your turn, If you don't have any cards in your Chakra area, you can select and move 1 card in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"I will let nobody have the last bite!\" \"That's not funny at all, you idiot!\"",
     image: "s09-m-us055",
   },
   {
@@ -2442,6 +2578,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (2)",
       "Effect: While your Team with only \"Female\" Ninja(s) is Battling, the effect texts of any \"Male\" Ninja in your opponent's Team Battling against that Team are negated. Additionally, effect texts of any \"Female\" Ninjas in that Team cannot be negated.",
     ],
+    flavor: "\"Man! Since when did she get this strong!?\" \"I can do this! .. I know I can!\"",
     image: "s09-m-us056",
   },
   {
@@ -2459,6 +2596,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Each of your Ninjas with \"Proctor\"",
       "Effect: If the target is discarded due to the Showdown, after the Showdown, select and give 1 Damage to 1 Ninja that just Battled against the target's Team during the turn after the Showdown.",
     ],
+    flavor: "\"Who told you that you could fight? You want to fail before we've even begun?\"",
     image: "s09-m-us057",
   },
   {
@@ -2475,6 +2613,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter",
       "Effect: During this turn, only \"Genin\" Ninjas can be sent out to Battle.",
     ],
+    flavor: "\"You guys are the heroes of this final competition!\"",
     image: "s09-m-us058",
   },
   {
@@ -2491,6 +2630,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: At the end of each player's turn, that player must select and give 1 Damage to 1 of their in-play Ninjas with \"Mental Power\" of 0 or less if they have any.",
     ],
+    flavor: "\"Five strikes and you're out. You just failed the test.\"",
     image: "s09-m-us059",
   },
   {
@@ -2507,6 +2647,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (2)",
       "Effect: Cards in a player's Chakra area cannot be discarded by the opponent's effects.",
     ],
+    flavor: "\"What is this?! .. It's huge!\"",
     image: "s09-m-us060",
   },
   {
@@ -2524,6 +2665,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: After this card is played, if the target does not become the user of a Jutsu card before this Mission card is sent to your Chakra area by removing the last Ninja Blade coin on it, discard the target.",
     ],
+    flavor: "\"Hopeless!–Why do I waste my time with you?!\"",
     image: "s09-m-us061",
   },
   {
@@ -2540,6 +2682,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: Each of your Teams gets +1 Team Power and +1 Mental Power while it is Battling as a Blocker.",
     ],
+    flavor: "\"Sakura, I already told you...I will protect you until I die.\"",
     image: "s09-m-us062",
   },
   {
@@ -2555,6 +2698,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: If you have either \"Rock Lee\" or \"Might Guy\" in play, and the other one in your Discard Pile or in your Chakra area, move up to 1 copy of the one that is currently in your Discard Pile or in your Chakra area to your hand.",
     ],
+    flavor: "\"All right.. it's over.. You don't need to say any more.\" \"Senseiii!\"",
     image: "s09-m-us063",
   },
   {
@@ -2570,6 +2714,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: If you have 6 or more cards in your Chakra area, discard 5 of them and draw 3 cards.",
     ],
+    flavor: "\"Hey... It's the Pervy Sage's check book. One... Ten... One hundred...Luh- look at all those zeros!!\"",
     image: "s09-m-us064",
   },
   {
@@ -2585,6 +2730,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: This Mission card can only be played when you have 5 or more cards in your Chakra area. Discard X number of your Chakras. In that case, flip a Ninja Blade X times. Draw 1 card for each heads you got during the flip(s). The maximum value of X is 4.",
     ],
+    flavor: "\"Oh baby! That is one fat frog you've got! You're filthy rich!\"",
     image: "s09-m-us065",
   },
   {
@@ -2600,6 +2746,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: If 5 or more of your Chakras are discarded on a single occasion during this turn, select and move 2 of the cards in your Discard Pile to your hand at the end of the turn.",
     ],
+    flavor: "\"Gya ha ha! What can I say, I love the ladies!\"",
     image: "s09-m-us066",
   },
   {
@@ -2617,6 +2764,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Your opponent organizes a Team with only the target. Then, attach this card to the target and place 2 Growth coins on the target. After this card is attached, your opponent controls this card. While this card is attached, the target cannot be included in any other Team.",
     ],
+    flavor: "\"Sakura...thank you...\"",
     image: "s09-m-us067",
   },
   {
@@ -2633,6 +2781,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: Every Team with only 1 Ninja Battling against the opponent's Team with only 1 Ninja skips the Showdown.",
     ],
+    flavor: "\"Stop it!\"",
     image: "s09-m-us068",
   },
   {
@@ -2649,6 +2798,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (3)",
       "Effect: Every time your opponent flips a Ninja Blade coin(s) on a single occasion, each result is considered to be tails.",
     ],
+    flavor: "\"So, uh... What's this crazy nickname she's got?\" \"The Legendary... Sitting Duck!\"",
     image: "s09-m-us069",
   },
   {
@@ -2665,6 +2815,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Discard X number of your Battle Rewards. In that case, place X number of Ninja Blade coin(s) symbolizing \"Mental Power +2\" on the target. The maximum number of X is 2.",
     ],
+    flavor: "\"It's about time I learned the lesson...\"",
     image: "s09-m-us070",
   },
   {
@@ -2681,6 +2832,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter Permanent (3)",
       "Effect: At the end of each player's turn, that player flips a Ninja Blade coin. If it's tails, that player must select and give 1 Damage to 1 of their in-play Ninjas if they have any.",
     ],
+    flavor: "\"Lord Hokage's face is beginning to crack.\" \"That's ominous...\"",
     image: "s09-m-us071",
   },
   {
@@ -2698,6 +2850,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. If the target's Team is opposed by a Team with 1 or more injured Ninjas, the target's Team gets -3 Team Power during the turn. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\".........\"",
     image: "s09-m-us072",
   },
   {
@@ -2714,6 +2867,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Select 1 Ninja card with an Entrance cost of 4 or less in your Discard Pile. If you don't have a Ninja with the same name as the selected Ninja in play, the target is considered to be the same Ninja during this turn.",
     ],
+    flavor: "\"Remember this... to be Hokage, that is my dream!",
     image: "s09-m-us073",
   },
   {
@@ -2730,6 +2884,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Counter Permanent (2)",
       "Effect: Every time your opponent draws 1 or more cards due to their effect and its effect is applied successfully, randomly select and discard the same amount of cards from your opponent's hand.",
     ],
+    flavor: "\"......\"",
     image: "s09-m-us074",
   },
   {
@@ -2747,6 +2902,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 of your opponent's in-play Ninjas",
       "Effect: At the end of each of your opponent's turns. If the target was not sent out to Battle during that turn, give 1 Damage to the target.",
     ],
+    flavor: "\"What is that? That thing ...is the Reaper??\"",
     image: "s09-m-us075",
   },
   {
@@ -2763,6 +2919,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 in-play Permanent (X) Mission card",
       "Effect: Flip a Ninja Blade coin; If it's heads, place 2 Ninja Blade coins on the target. If it's tails, place 1 Ninja Blade coin on the target.",
     ],
+    flavor: "\"I'm sorry, Sasuke. Some other time, OK?\"",
     image: "s09-m-us076",
   },
   {
@@ -2778,6 +2935,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Reveal the top 4 cards of your Deck. Then, select 1 Ninja card among the cards, if there is any, show it to your opponent, and place it in your hand. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"What was that... I could'a sworn there was someone there...\"",
     image: "s09-m-us077",
   },
   {
@@ -2794,6 +2952,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every injured Ninja",
       "Effect: Your opponent may organize their Teams. The target cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"Naruto...\"",
     image: "s09-m-us078",
   },
   {
@@ -2810,6 +2969,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (1)",
       "Effect: Your opponent may organize their Teams when you play this Mission card. Teams with 2 or more different symbols cannot be sent out to Battle. (When a player organizes their Teams, a Ninja with 2 or more symbols is treated as a Ninja with only 1 of the symbols of the controller's choice during the turn.)",
     ],
+    flavor: "\"Heey! Ka- Kabuto?\" \"Naruto\" \"You've met this guy before, Naruto?\"",
     image: "s09-m-us079",
   },
   {
@@ -2825,6 +2985,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: Discard 2 cards from your hand. In that case, select and move up to 2 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"This is the plan that you're to carry out.\"",
     image: "s09-m-us080",
   },
   {
@@ -2841,6 +3002,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: Every Ninja",
       "Effect: Discard every Permanent (X) Mission card attached to the target.",
     ],
+    flavor: "\"I was feeling so sleepy .. But now it seems I'm finally awake.\"",
     image: "s09-m-us081",
   },
   {
@@ -2858,6 +3020,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. If the target is discarded while this card is attached, move the target, in Healthy status, to the opponent's Village instead. If that player already has a Ninja(s) with the same name in play, discard that Ninja(s). If moved in this way, the target cannot be sent out to Battle during the turn, and this card is sent to the Chakra area. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"Where...where is Sasuke?\" \"Time is up. We cannot wait any longer.\"",
     image: "s09-m-us082",
   },
   {
@@ -2874,6 +3037,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (2)",
       "Effect: Ninjas that are being sent out to Battle cannot become Stand-By Ninjas during the Exchange of Jutsu.",
     ],
+    flavor: "\"Those eyebrows can't be real! No-o-o! Your hairstyle is horrible, too... and those eyebrows are so bushy! You're such a weirdo!\"",
     image: "s09-m-us083",
   },
   {
@@ -2890,6 +3054,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (2)",
       "Effect: Positions of Ninjas in any Teams cannot be changed by the opponent's effects.",
     ],
+    flavor: "\"A good thing he arrived in time to see the evil intent hidden in those healing hands of yours.\"",
     image: "s09-m-us084",
   },
   {
@@ -2906,6 +3071,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent",
       "Effect: Each player can have 2 or more Clients in play in their Village.",
     ],
+    flavor: "\"Boys can be so pathetic.\"",
     image: "s09-m-us085",
   },
   {
@@ -2922,6 +3088,7 @@ export const S09_THE_CHOSEN: Card[] = [
       "Permanent (2)",
       "Effect: During your Mission Phase, you can exchange all the cards in your hand with the same amount of cards from the top of your Deck. In that case, shuffle your Deck and draw 1 card.",
     ],
+    flavor: "\"Eatin' chips and watchin' clouds... man, this is the best.\" \"Yep!\"",
     image: "s09-m-us086",
   },
   // ── CLIENT ──
@@ -2939,6 +3106,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: At the beginning of your turn, you can discard 1 of your Chakras with a \"Wind\" and/or \"Fire\" symbol. In that case, flip a Ninja Blade coin; If it's heads, you can move 1 Ninja card in your Discard Pile to the top of your Deck.",
     ],
+    flavor: "\"Buzz\"",
     image: "s09-c-037",
   },
   {
@@ -2955,6 +3123,7 @@ export const S09_THE_CHOSEN: Card[] = [
     text: [
       "Effect: When your opponent's Ninja uses a Jutsu card with 2 or more specific symbols, you can flip a Ninja Blade coin; if it's heads, negate and send the Jutsu card to its original owner's Chakra area and then send this Client to your Chakra area.",
     ],
+    flavor: "\"You mustn't give up!\"",
     image: "s09-c-us001",
   },
 ];

@@ -25,6 +25,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[SEAL]",
       "During your Mission Phase, you can remove this in-play Ninja from game. In that case, your opponent gets 3 Battle Rewards. In that case, select 1 of your opponent's Ninjas with an Entrance cost of 4 or less and remove it from game.",
     ],
+    flavor: "\"You and I...will disappear together..!\"",
     image: "s15-n-645",
   },
   {
@@ -46,6 +47,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "When this Ninja is put in play, heal all of your other Ninjas with [THE QUARTET] effect and place 1 Growth coin on each of them.",
       "At the end of the turn, if 1 or more of your Ninjas with [THE QUARTET] effect used 1 or more Jutsu cards with \"Requirements: 'Quartet'\", draw 1 card.",
     ],
+    flavor: "\"Don't screw up.\"",
     image: "s15-n-646",
   },
   {
@@ -66,6 +68,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[THE QUARTET]",
       "Valid: During the Exchange of Jutsu, you can discard 1 of your Chakras. In that case, your Ninjas with [THE QUARTET] effect get +1/+1 during the turn.",
     ],
+    flavor: "\"You'll have a tough time getting away from me!\"",
     image: "s15-n-647",
   },
   {
@@ -86,6 +89,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[THE QUARTET]",
       "Valid: During the Exchange of Jutsu, you can discard 1 of your Chakras. In that case, your Ninjas with [THE QUARTET] effect get +1/+1 during the turn.",
     ],
+    flavor: "\"Quite impressive... But how long do you think your Chakra will last?!\"",
     image: "s15-n-648",
   },
   {
@@ -106,6 +110,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[THE QUARTET]",
       "Valid: During the Exchange of Jutsu, you can discard 1 of your Chakras. In that case, your Ninjas with [THE QUARTET] effect get +1/+1 during the turn.",
     ],
+    flavor: "\"Pfeh. I could handle both of 'em myself.\"",
     image: "s15-n-649",
   },
   {
@@ -127,6 +132,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "When this Ninja is deployed, put 2 Ninja Blade coins symbolizing \"Evil Chakra coins\" on this Ninja. This effect can only be negated by [DRAWING OUT THE HIDDEN POWER] effect.",
       "Valid: At the beginning of your turn, remove 1 \"Evil Chakra coin\" from this Ninja. If you cannot, remove this Ninja from game. These \"Evil Chakra coins\" cannot be removed by other effects.",
     ],
+    flavor: "\"You need my power don't you?\"",
     image: "s15-n-650",
   },
   {
@@ -147,6 +153,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[DRAWING OUT THE HIDDEN POWER]",
       "Valid: When you put \"The Nine-Tailed Fox Spirit\" Ninja card in play. It's effect is negated. The effect texts of your in-play \"The Nine-Tailed Fox Spirit\" Ninja are negated.",
     ],
+    flavor: "\"I'm gonna save out Sasuke!\"",
     image: "s15-n-651",
   },
   {
@@ -167,6 +174,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[ARDENT SPIRIT]",
       "Valid: During your Mission Phase, if this Ninja is injured and has 1 or more Growth coins on it, you can change this Ninja to healthy status. In that case, this Ninja gets +2/+0 during that turn.",
     ],
+    flavor: "\"This time, we will...\"",
     image: "s15-n-652",
   },
   {
@@ -188,6 +196,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "During the Exchange of Jutsu, if this Ninja was sent out to Attack this turn, you can make 1 Ninja Battling against this Ninja's Team with printed Entrance cost of 2 or less a Stand-By Ninja.",
       "Valid: This Ninja is considered to have \"Jonin\".",
     ],
+    flavor: "\"That's why I severed it.\"",
     image: "s15-n-653",
   },
   {
@@ -208,6 +217,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[HEARTLESS EYES]",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas and Mission cards.",
     ],
+    flavor: "\"I don't have such things as feeling.\"",
     image: "s15-n-654",
   },
   {
@@ -229,6 +239,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "The effect texts of your opponent's Ninjas with lower printed Entrance cost than that of this Ninja's are negated.",
       "Valid: This Ninja can become the user of Jutsu cards with Requirements: The First Hokage\".",
     ],
+    flavor: "\"\"I am fine with putting you guys under my control with fear...\"",
     image: "s15-n-655",
   },
   {
@@ -250,6 +261,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "While this Ninja card is in your hand, when you deploy a \"Ninja Dog\" Ninja card, you can put this Ninja card in play from your hand.",
       "When this Ninja is sent out to Battle in the same Team with 1 or more other \"Animal\" Ninjas with no Growth coins, place 1 Growth coin on 1 of them.",
     ],
+    flavor: "\"I can't tell that because I'm always with him.\"",
     image: "s15-n-656",
   },
   {
@@ -270,6 +282,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[SILENCE]",
       "Your opponent cannot search for any cards.",
     ],
+    flavor: "\"......\"",
     image: "s15-n-657",
   },
   {
@@ -290,6 +303,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[RESERVED CHARACTER]",
       "When this Ninja is put in play, randomly select 1 card in your opponent hand and discard it.",
     ],
+    flavor: "\"He said to me, 'Just follow me'...\"",
     image: "s15-n-658",
   },
   {
@@ -310,6 +324,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[THE BEST SHINOBI OF THE CLAN]",
       "When this Ninja is sent out to Battle, you can discard 2 of your Chakras. In that case, your opponent must move up to X number of cards from their hand to the top of their Deck where X is the number of your other in-play Ninjas with a \"Byakugan\". Additionally, at the end of that turn, your opponent moves up to the same amount of cards from the top of their Deck to their hand.",
     ],
+    flavor: "\"The Leaf Village's spirit is strong... You'd do well to remember.\"",
     image: "s15-n-659",
   },
   {
@@ -330,6 +345,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[FAITHFUL NINJA DOG]",
       "When this Ninja is sent out to Attack in the same Team as 1 or more Ninjas that include \"Inuzuka\" in their names, discard 2 cards from the top of your opponent's Deck.",
     ],
+    flavor: "\"Arf!\"",
     image: "s15-n-660",
   },
   {
@@ -350,6 +366,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[RELIANCE]",
       "While you have 4 or more other \"Sand\" Ninjas in play, this Ninja gets +2/+2 and cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"This is....\"",
     image: "s15-n-661",
   },
   {
@@ -370,6 +387,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[RUSH]",
       "When this Ninja is deployed, your opponent randomly selects up to 2 cards in your hand and reveals them(it). If there are 1 or more \"Puppet\" Ninja cards among them, put them(it) in play.",
     ],
+    flavor: "\"You can't say that to me.\"",
     image: "s15-n-662",
   },
   {
@@ -390,6 +408,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[RETURN]",
       "When this Ninja is put in play, you can move up to 3 \"Puppet\" Ninja cards with an Entrance cost of 3 or less in your Discard Pile and/or your Chakra are to your hand.",
     ],
+    flavor: "\"Now, I'm back.\"",
     image: "s15-n-663",
   },
   {
@@ -411,6 +430,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "When your opponent wins any Battle Rewards, you can look at it(them). If there are 1 or more \"Puppet\" Ninja cards among them, you can reveal it(them) and move it(them) to your hand instead. Then, move the rest to their Battle Reward area normally.",
       "Valid: This Ninja cannot be the user of Jutsu cards with \"Requirements: \"Sasori\".",
     ],
+    flavor: "\"Granny Chiyo? Can we stop for a snack on the way back?\"",
     image: "s15-n-664",
   },
   {
@@ -432,6 +452,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "When this Ninja is put in play, you can place a total of 2 \"Bomb coins\" on your opponent's Ninjas in any way you like.",
       "Valid: You can play \"Art is an explosion!\" Mission cards without paying their Hand cost.",
     ],
+    flavor: "\"One more strike, and you are out...\"",
     image: "s15-n-665",
   },
   {
@@ -453,6 +474,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "When this Ninja is put in play, you can search for 1 Ninja card with both 5 Entrance cost and a Water Symbol in your Deck and move it to your Discard Pile. Then, shuffle your Deck.",
       "During your Mission Phase, if you don't have a Ninja with both 5 Entrance cost and a Water Symbol in play, you can remove from game 2 of your Chakras. In that case, put 1 Ninja card with both 5 Entrance cost and a Water Symbol in play from your Discard Pile.",
     ],
+    flavor: "\"Is that all you got?\"",
     image: "s15-n-666",
   },
   {
@@ -473,6 +495,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[STOCK]",
       "During the Exchange of Jutsu, you can remove 1 Ninja card from game from your Discard Pile. In that case, negate 1 Jutsu card being used by a Ninja Battling against this Ninja with printed Entrance cost equal to or lower than that of the removed Ninja card's.",
     ],
+    flavor: "\"\"I can't leave until every thing is in order.\"",
     image: "s15-n-667",
   },
   {
@@ -493,6 +516,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[FINISHING BLOW]",
       "During your Mission Phase, you can move this in-play Ninja card to your hand. In that case, change all of your opponent's Ninjas with 3 or less Entrance cost to injured status. You cannot put in play any Ninja cards that have \"Sasuke Uchiha\" in their names during that turn.",
     ],
+    flavor: "\"You are done...\"",
     image: "s15-n-668",
   },
   {
@@ -514,6 +538,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: If this Ninja is sent out to Attack in injured status, your opponent must block this Ninja's Team with a Team that has the most Ninjas among their Teams if possible.",
       "Valid: This Ninja gets +1/+0 for each of your injured Ninjas.",
     ],
+    flavor: "\"If I can't save one comrade, how can I be the Hokage?\"",
     image: "s15-n-669",
   },
   {
@@ -534,6 +559,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[LETHAL ATTACK]",
       "When any Ninja Battling against this Ninja's Team receives any Damage due to the Showdown, remove it from game after Damage is applied, even if that Damage is reduced to 0. This effect is negated if the Damage is negated.",
     ],
+    flavor: "\"You shouldn't have done that.\"",
     image: "s15-n-670",
   },
   {
@@ -554,6 +580,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[SINGLED OUT]",
       "While this Ninja card is in your hand, if your opponent has 5 or more Battle Rewards and you have 3 or more Ninjas with a \"Lightning\" Symbol in play, you can put this Ninja card in play.",
     ],
+    flavor: "\"They gave me credit for my ability and assigned this mission to me.\"",
     image: "s15-n-671",
   },
   {
@@ -574,6 +601,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[NONSTOP ATTACKS]",
       "When this Ninja is put in play, you can remove up to 2 in-play \"Puppet\" Ninjas with an Entrance cost equal to or lower than that of this Ninja's from game.",
     ],
+    flavor: "\"It's not done yet!!\"",
     image: "s15-n-672",
   },
   {
@@ -594,6 +622,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[THE CREATOR AND THE WARRIOR]",
       "When this Ninja is sent out to Attack and opposed, you can discard 2 of your Chakras. In that case, change all the Back Ninjas Battling against this Ninja's Team to injured status.",
     ],
+    flavor: "\"\"I admit. That was quite impressive.\"",
     image: "s15-n-673",
   },
   {
@@ -614,6 +643,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[SHARPNESS]",
       "While the Team Mental Power of this Ninja's Team is 8 or higher, this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
     ],
+    flavor: "\"This is going to be a pain.\"",
     image: "s15-n-674",
   },
   {
@@ -635,6 +665,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "When this Ninja is deployed, you can search for up to 2 cards in your Deck that include \"Make Out\" in their names and move them(it) to your Chakra area. Then, shuffle your Deck.",
       "Valid: During the Exchange of Jutsu, if you have 2 or more cards with \"Make Out\" in their names in your Discard Pile, you can move 1 of them to the bottom of your Deck. In that case, give 1 Damage to 1 Ninja Battling against this Ninja.",
     ],
+    flavor: "\"I'll take care of him.\"",
     image: "s15-n-675",
   },
   {
@@ -655,6 +686,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[ELITE OF THE CLAN]",
       "While you have a total of 5 or more Ninjas and/or Clients that include \"Uchiha\" in their names in play, the effect texts of Ninjas and Client that do not include \"Uchiha\" in their names are negated.",
     ],
+    flavor: "\"Good analysis...\"",
     image: "s15-n-676",
   },
   {
@@ -676,6 +708,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Your opponent cannot play any Mission cards.",
       "Valid: This Ninja can become the user of Jutsu cards with Requirements: The First Hokage\".",
     ],
+    flavor: "\"I won't let you hurt them.\"",
     image: "s15-n-677",
   },
   {
@@ -696,6 +729,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[ABLE BRAIN]",
       "When this Ninja is sent out to Attack, discard 1 of your opponent's Ninjas in a Team with only 1 Ninja.",
     ],
+    flavor: "\"We can have some skilled shinobi ready on our side too.\"",
     image: "s15-n-678",
   },
   {
@@ -716,6 +750,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[RUSH]",
       "While this Ninja card is in your hand, if you have 2 or more \"Sand\" Ninjas in play, this Ninja gets -1 Entrance cost.",
     ],
+    flavor: "\"We came back at out top speed, all right?.\"",
     image: "s15-n-679",
   },
   {
@@ -737,6 +772,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: This Ninja gets +1/+1 for each of your in-play \"Ninja Toad\" Ninjas.",
       "Valid: Your \"Ninja Toad\" Ninjas cannot be affected by your opponent's Jutsu cards.",
     ],
+    flavor: "\"Now, unless you want to make this frog really mad, you'll never bother us again!\"",
     image: "s15-n-680",
   },
   {
@@ -757,6 +793,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[BEST PARTNER]",
       "When this Ninja is deployed, you can search for 1 \"Katsuyu\" Ninja card in your Deck and remove it from game keeping it face up. In that case, at the beginning of your next turn, move that card to your hand.",
     ],
+    flavor: "\"Summoning Jutsu!\"",
     image: "s15-n-681",
   },
   {
@@ -779,6 +816,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: The effect texts of your \"Orochimaru's Forbidden Jutsu\" Mission cards are changed to the following:",
       "Effect: Put the target in your Village.",
     ],
+    flavor: "\"Enough with the family reunion. .. It's time that we got started.\"",
     image: "s15-n-682",
   },
   {
@@ -799,6 +837,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[INSATIABLE ASPIRATION]",
       "Valid: When your opponent wins any Battle Rewards, if this Ninja is injured, you can look at it(them). If there are 1 or more Mission cards among them, you can reveal it(them) and move it(them) to your hand instead. Then, move the rest to their Battle Reward area normally.",
     ],
+    flavor: "\"How about this one?\"",
     image: "s15-n-683",
   },
   {
@@ -819,6 +858,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[AFTER TWO AND HALF YEARS]",
       "Valid: When this Ninja is sent out to Attack, you can move 1 Jutsu or Mission card from your Discard Pile or Chakra area to your hand.",
     ],
+    flavor: "\"It's been about two and half years...\" \"That's right...\"",
     image: "s15-n-684",
   },
   {
@@ -839,6 +879,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[POWER OF KUNOICHI]",
       "Valid: While you have only \"Female\" Ninjas in play, each of your \"Female\" Ninjas, including this Ninja, cannot be affected by the effects of Jutsu cards used by your opponents \"Male\" Ninjas and effects of your opponent's \"Male\" Ninjas.",
     ],
+    flavor: "\"Sakura...\" \"Yes!\"",
     image: "s15-n-685",
   },
   {
@@ -861,6 +902,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: Your other injured Ninjas get +1/+1.",
       "Valid: This Ninja can become the user of Jutsu cards with Requirements: \"The First Hokage\".",
     ],
+    flavor: "\"We'll follow them right away!\" \"Got it!\"",
     image: "s15-n-686",
   },
   {
@@ -882,6 +924,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: When you win any Battle Rewards due to this Ninja's Team due to the Showdown, place 1 Growth coin on this Ninja.",
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, remove 1 Growth coin from this Ninja.",
     ],
+    flavor: "\"What?\" \"Don't you know what the word 'comrade' is?\"",
     image: "s15-n-687",
   },
   {
@@ -903,6 +946,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: When this Ninja card is put in play, designate a number.",
       "Valid: When your opponent puts a Ninja card with an Entrance cost with the designated number in play, remove that card from game instead.",
     ],
+    flavor: "\"You're going to die. Very soon.\" \"Haahh? What was that?? I'm sorry, I couldn't quite hear you there!!\"",
     image: "s15-n-688",
   },
   {
@@ -923,6 +967,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[UNAVOIDABLE FATE]",
       "When this Ninja is sent out to Attack, you can select 1 of your opponent's Ninjas. In that case, at the end of that turn, if that Ninja was not sent out to Battle that turn, give 1 Damage to that Ninja.",
     ],
+    flavor: "\"You can't change my prediction.\"",
     image: "s15-n-689",
   },
   {
@@ -943,6 +988,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[RETURN OF THE MORYO]",
       "During your Mission Phase, if your Turn Marker is 8 or greater and this Ninja has no Growth coins on it, you can place 2 Growth coins on this Ninja.",
     ],
+    flavor: "\"Reunited at last... with my body, of flesh...\"",
     image: "s15-n-690",
   },
   {
@@ -963,6 +1009,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[DIGNITY]",
       "When this Ninja is sent out to Attack, your opponent must select and discard 1 of their in-play Ninjas.",
     ],
+    flavor: "Sasoosa of the Hidden Village in the Sand. He is also the father of Kankuro, Temari and Gaara.",
     image: "s15-n-691",
   },
   {
@@ -983,6 +1030,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[BRING DOWN THE HOUSE JUTSU]",
       "When this Ninja is put in play, you can select and move 1 of your opponent's Ninjas with an Entrance cost of 3 or less to the bottom of its owner's Deck.",
     ],
+    flavor: "Giant Ninja Toad with whom Jiraiya signed a contract for summoning with his blood.",
     image: "s15-n-692",
   },
   {
@@ -1004,6 +1052,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Each of your other Ninjas with a \"Snake\" Combat Attribute gets +1/+1.",
       "Valid: This Ninja can be put in play or moved into a Village or Battlefield, even if that player already has 1 or more Ninjas with the same name in play.",
     ],
+    flavor: "Fierce wild snake with whom Orochimaru signed a contract for summoning with his blood.",
     image: "s15-n-693",
   },
   {
@@ -1024,6 +1073,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[ADORABLE PET]",
       "Your \"Female\" Ninjas get -1 Entrance cost.",
     ],
+    flavor: "In spite of the cute look, it has the courage just like its master Tsunade.",
     image: "s15-n-694",
   },
   {
@@ -1044,6 +1094,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[LESSON]",
       "Valid: Your other Ninjas with \"Taijutsu\" Combat Attribute get +1/+1.",
     ],
+    flavor: "\"Are you prepared to take the punishment for your actions?\"",
     image: "s15-n-695",
   },
   {
@@ -1064,6 +1115,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[WILD POWER]",
       "Valid: This Ninja gets +1/+1 for each of your other in-play \"Animal\" Ninjas.",
     ],
+    flavor: "Giant fierce tiger that lives in the death forest.",
     image: "s15-n-696",
   },
   {
@@ -1185,6 +1237,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "At the end of your opponent's Mission Phase, if they have 5 or more Ninja cards in play and you have 3 or more Ninjas with a \"Lightning\" Symbol in play, you can put this Ninja card in play from your hand in any of your Teams in any position.",
       "Valid: During the Exchange of Jutsu, if this Ninja is a Stand-By Ninja, you can place this Ninja in any of your Battling Teams.",
     ],
+    flavor: "The hero who saved the Hidden Village in the Leaves from the Nine-Tailed Fox Spirit. There are so many people who still miss him.",
     image: "s15-n-702",
   },
   {
@@ -1205,6 +1258,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[BLOOD RELATIONSHIP]",
       "Valid: While this Ninja is in the same Team with only Ninjas with a \"Byakugan\", this Ninja Combat value may be treated as its Support Value.",
     ],
+    flavor: "\"I understand, Father.\"",
     image: "s15-n-703",
   },
   {
@@ -1225,6 +1279,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[LEAF POLICE FORCE]",
       "While you have \"The Symbol of the Proud Clan\" Mission card in play, your opponent cannot put in play any Ninja cards except by deploying them.",
     ],
+    flavor: "\"We have our connections inside of Anbu Black Ops. You try and sweep this investigation under the rug and we're gonna know about it.\"",
     image: "s15-n-704",
   },
   {
@@ -1245,6 +1300,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[LEAF POLICE FORCE]",
       "While you have \"The Symbol of the Proud Clan\" Mission card in play, your opponent cannot search for any cards in their Deck.",
     ],
+    flavor: "\"I can't take this anymore! Please sir! Just give me the order!\"",
     image: "s15-n-705",
   },
   {
@@ -1265,6 +1321,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[LEAF POLICE FORCE]",
       "While you have \"The Symbol of the Proud Clan\" Mission card in play, your opponent cannot draw any cards by their effects.",
     ],
+    flavor: "\"Listen Itachi, if I find you've betrayed this clan I want you to know, You'll pay for your wrongs!\"",
     image: "s15-n-706",
   },
   {
@@ -1285,6 +1342,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "[ELDER OF THE CLAN]",
       "Valid: Your other Ninjas with a \"Byakugan\" get +1/+1 and cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"Just hold on, Hiashi! .. Please don't be so hasty!\"",
     image: "s15-n-707",
   },
   {
@@ -1322,6 +1380,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Back Ninja Battling against the user",
       "Effect: Support of the target cannot be added to the Team Power during the Showdown of this turn. Additionally, if you have a \"Master of the Weapons\" Mission card in play, change the target to injured status.",
     ],
+    flavor: "\"Are we equal in strength?\"",
     image: "s15-j-541",
   },
   {
@@ -1338,6 +1397,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X during this turn. X = the user's Entrance cost.",
     ],
+    flavor: "\"Dynamic Action!!\"",
     image: "s15-j-542",
   },
   {
@@ -1354,6 +1414,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Back Ninja Battling against the user",
       "Effect: Discard the target.",
     ],
+    flavor: "\"AHhhhhhh.....\"",
     image: "s15-j-543",
   },
   {
@@ -1370,6 +1431,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. Additionally, switch the positions of the target in any way you like.",
     ],
+    flavor: "\"What an impact!....he just swung his arm.\"",
     image: "s15-j-544",
   },
   {
@@ -1386,6 +1448,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja Battling against the user with printed Entrance cost of 4 or less",
       "Effect: Move the target to its owner's Chakra area.",
     ],
+    flavor: "\"Can we trust him?\"",
     image: "s15-j-545",
   },
   {
@@ -1401,6 +1464,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Sharingan Eye\"",
       "Effect: Look at all the cards in your opponent's hand and discard up to 2 Jutsu cards among them.",
     ],
+    flavor: "\"!!\"",
     image: "s15-j-546",
   },
   {
@@ -1417,6 +1481,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target. Additionally, the user can use \"Fire Style: Fire Ball Jutsu\" cards without paying their costs during this turn.",
     ],
+    flavor: "\"Here comes another one!\"",
     image: "s15-j-547",
   },
   {
@@ -1433,6 +1498,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target. Additionally, the user can use the next Jutsu card with a \"Fire\" Symbol without paying its cost during this turn.",
     ],
+    flavor: "Lightning Blade!!\"",
     image: "s15-j-548",
   },
   {
@@ -1448,6 +1514,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Jonin\" or higher Rank",
       "Effect: Search for X number of \"Snake\" Ninja cards in your Deck and put them in play in your Village. You can only discard Chakras with a \"Water\" Symbol for X.",
     ],
+    flavor: "\"Sir! I have a report! Giant boas have appeared near the eastern gate of the Leaf Village!\"",
     image: "s15-j-549",
   },
   {
@@ -1464,6 +1531,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: Search 1 Ninja card with the same name as the target in your Deck and discard it. In that case, the target cannot be removed from play during this turn. Additionally, if the target is injured, heal the target.",
     ],
+    flavor: "\"Is that all you can do using the power of 'Jinchuriki'?\"",
     image: "s15-j-550",
   },
   {
@@ -1480,6 +1548,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Injure the target and place it the Team Battling against the user in any position. If the user's Team wins a Victory or an Outstanding Victory this turn, give 1 Damage to 1 Ninja Battling against the user.",
     ],
+    flavor: "\"This is troublesome, hmmm?\"",
     image: "s15-j-551",
   },
   {
@@ -1496,6 +1565,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every one of your Ninjas",
       "Effect: The target cannot be affected by your opponent's effects during this turn. Additionally, skip the Showdown of this turn.",
     ],
+    flavor: "\"What a huge shield!\"",
     image: "s15-j-552",
   },
   {
@@ -1513,6 +1583,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "(2) Other Ninjas in the same Team as target (1).",
       "Effect: Give 2 Damage to target (1) and 1 Damage to target (2).",
     ],
+    flavor: "\"I'm not holding back!\"",
     image: "s15-j-553",
   },
   {
@@ -1528,6 +1599,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute + \"Printed Entrance cost of 3 or more\"",
       "Effect: Place 1 \"Puppet\" Ninja card in the user's Team in any position from your Chakra area or your Discard Pile.",
     ],
+    flavor: "\"Haaaa!!\"",
     image: "s15-j-554",
   },
   {
@@ -1543,6 +1615,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirement: \"Taijutsu\" Combat Attribute",
       "Effect: Put 1 Ninja card with a \"Taijutsu\" Combat Attribute in play in any position in the user's Team from your Chakra area and/or Discard Pile. At the end of the turn, if that Ninja still remains in play, move it to your hand.",
     ],
+    flavor: "\"Leeeeaf Hurricane!!\"",
     image: "s15-j-555",
   },
   {
@@ -1557,6 +1630,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: If you have a \"Priestess\" Ninja or \"Priestess\" Client in play, all Teams skip the Showdown of this turn. Additionally, your opponent cannot win any Battle Rewards this turn.",
     ],
+    flavor: "\"Here... Hold on to this at all times.\"",
     image: "s15-j-556",
   },
   {
@@ -1573,6 +1647,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: If the user is in injured status, remove the target from game. If not, change the target to injured status.",
     ],
+    flavor: "\"Chocolate... ...bomb!!\"",
     image: "s15-j-557",
   },
   {
@@ -1589,6 +1664,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Change the target to injured status. Additionally, if the user is injured status, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Hidden Lotus!\"",
     image: "s15-j-558",
   },
   {
@@ -1605,6 +1681,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: If you have a \"Priestess\" Ninja or \"Priestess\" Client in play, move the target to the bottom of its owner's Deck in any order you like. If not, give 1 Damage to the target.",
     ],
+    flavor: "\"Everything you're feeling..?! Just let it out!!!\"",
     image: "s15-j-559",
   },
   {
@@ -1619,6 +1696,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: If you have \"Taruho\" in play, you can remove it from game. In that case, put 1 Ninja card from your hand in play and place it in any of your Teams in any position.",
     ],
+    flavor: "\"So... This is the end.\"",
     image: "s15-j-560",
   },
   {
@@ -1634,6 +1712,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Quartet\"",
       "Effect: Search for 1 Ninja card with [THE QUARTET] effect in your Deck, show it to your opponent and place it in the user's Team in any position. Then, shuffle your Deck.",
     ],
+    flavor: "\"Now that is what I'm talkin' about!! Heheheh!!\"",
     image: "s15-j-561",
   },
   {
@@ -1650,6 +1729,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and move it to the top of its owner's Deck. Additionally, if the user is \"Shizuku\", discard the top card of your opponent's Deck.",
     ],
+    flavor: "\"Water Style... Surface Slicer!!!\"",
     image: "s15-j-562",
   },
   {
@@ -1666,6 +1746,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: If you have 2 or more other Ninjas with [THE QUARTET] effect in the user's Team, give 2 Damage to the target.",
     ],
+    flavor: "\"Bust out an earth, fire, and wind combo..!\"",
     image: "s15-j-563",
   },
   {
@@ -1682,6 +1763,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every one of your Ninjas with [THE QUARTET] effect",
       "Effect: Heal the target and place 1 Growth coin on it. Additionally, if the user is \"Kusuna\", the target gets +2/+2 during this turn.",
     ],
+    flavor: "\"Anesthetic Jutsu!\"",
     image: "s15-j-564",
   },
   {
@@ -1698,6 +1780,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status. Additionally, if the user is \"Setsuna\", move this Jutsu card to your hand.",
     ],
+    flavor: "\"He's controlling those shuriken with Wind Chakra..!\"",
     image: "s15-j-565",
   },
   {
@@ -1714,6 +1797,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every one of your Ninjas with [THE QUARTET] effect",
       "Effect: The target cannot be affected by your opponent's effects during this turn. Additionally, if the user is \"Gitai\", the target gets +3/+3.",
     ],
+    flavor: "\"This is boring...\"",
     image: "s15-j-566",
   },
   {
@@ -1730,6 +1814,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X and +X Mental Power where X is the number of your in-play Ninjas with a \"Taijutsu\" Combat Attribute. Additionally, the target cannot be affected by the effects of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Even stronger than I was yesterday!\"",
     image: "s15-j-567",
   },
   {
@@ -1746,6 +1831,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: Place 2 Ninja Blade coins (symbolizing \"Nine-Tail's Cloak\" coins) on the target. When the user would be removed from play, remove 1 Mysterious coin from it instead. In that case, it cannot be removed from play during the turn.",
     ],
+    flavor: "\"What is that chakra?\"",
     image: "s15-j-568",
   },
   {
@@ -1762,6 +1848,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Back Ninja Battling against the user",
       "Effect: Move the target to their Chakra area.",
     ],
+    flavor: "\"I'm not withering up yet!!\"",
     image: "s15-j-569",
   },
   {
@@ -1778,6 +1865,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give X Damage to the target. X = the number of your opponent's Battle Rewards.",
     ],
+    flavor: "\"GAAaaaaaaa!!\"",
     image: "s15-j-570",
   },
   {
@@ -1794,6 +1882,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: The user becomes a Stand-By Ninja. Additionally, during your next turn, the target's Team cannot be Blocked.",
     ],
+    flavor: "\"This is the start of the secret mission.\"",
     image: "s15-j-571",
   },
   {
@@ -1810,6 +1899,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target cannot become the user of Jutsu cards during this turn. Additionally, if the target receives any Damage during this turn, it is moved its owner's Chakra area instead.",
     ],
+    flavor: "\"W..why did you tie me up also!!\"",
     image: "s15-j-572",
   },
   {
@@ -1827,6 +1917,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Effect: Move the target to their Chakra area.",
       "This Jutsu card cannot be affected by your opponent's Jutsu cards.",
     ],
+    flavor: "\"This attack is impossible to guard.\"",
     image: "s15-j-573",
   },
   {
@@ -1844,6 +1935,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Effect: Move the target to the bottom of their Deck.",
       "This Jutsu card cannot be affected by your opponent's Jutsu cards.",
     ],
+    flavor: "Striking Multi Shadow Snakes!",
     image: "s15-j-574",
   },
   {
@@ -1860,6 +1952,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The Power of the target becomes 0/0 during this turn and the Mental Power of the target becomes 0 during this turn. Additionally, negate the effect texts of the target during this turn.",
     ],
+    flavor: "\"He generated the Chidori from all over his body!\"",
     image: "s15-j-575",
   },
   {
@@ -1876,6 +1969,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+3 during this turn. Additionally, if you have a \"Master of the Weapons\" Mission card in play, the target gets +2/+2 during this turn.",
     ],
+    flavor: "\"Ha!!\"",
     image: "s15-j-576",
   },
   {
@@ -1892,6 +1986,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. Additionally, if you have a \"Master of the Weapons\" Mission card in play, give 1 Damage to the target.",
     ],
+    flavor: "\"I'm falling behind them!!\"",
     image: "s15-j-577",
   },
   {
@@ -1907,6 +2002,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Medicine\" Combat Attribute",
       "Effect: Heal the user and it cannot be affected by the effects of your opponent's Ninja and Jutsu cards during this turn. Additionally, if you have 1 or more other Ninja with a \"Medicine\" Combat Attribute, heal all the other Ninjas in the user's Team and they cannot be affected by the effects of your opponent's Ninja and Jutsu cards during this turn.",
     ],
+    flavor: "\"I used an antidote.\"",
     image: "s15-j-578",
   },
   {
@@ -1923,6 +2019,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Switch the positions of the target in any way you like.",
     ],
+    flavor: "\"I never thought that the Jonin was the goal of my Ninja way!\"",
     image: "s15-j-579",
   },
   {
@@ -1938,6 +2035,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Sakura Haruno\" + \"Chunin\" or higher Rank or \"Tsunade\"",
       "Effect: If the user is injured, move 1 Ninja Battling against the user to it's owner's Chakra area. If not, move 1 Ninja Battling against the user with printed Entrance cost equal to or lower than that of the user's to its owner's hand.",
     ],
+    flavor: "\"ARE YOU KIDDING ME?!?!\"",
     image: "s15-j-580",
   },
   {
@@ -1954,6 +2052,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user with printed Entrance cost equal to or lower than that of the user's",
       "Effect: The target becomes a Stand-By Ninja and give 1 Damage to it.",
     ],
+    flavor: "\"Right? Above? Left? Behind? ...Only one place left...\"",
     image: "s15-j-581",
   },
   {
@@ -1970,6 +2069,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 2 of your opponent's Ninjas",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Take this!\"",
     image: "s15-j-582",
   },
   {
@@ -1986,6 +2086,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Back Ninja Battling against the user",
       "Effect: The target gets +0/-2 and -2 Mental Power during this turn.",
     ],
+    flavor: "\"Gentle Fist!\"",
     image: "s15-j-583",
   },
   {
@@ -2001,6 +2102,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Mental Power\" of 2 or more",
       "Effect: The user's Team and the Team Battling against it perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\"When is Gaara return?\"",
     image: "s15-j-584",
   },
   {
@@ -2017,6 +2119,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: If you paid the cost of this Jutsu with 1 or more Ninja cards with a \"Taijutsu\" Combat Attribute, the user gets +X/+X during the turn where X is the healthy status Combat value of 1 of them of your choice.",
     ],
+    flavor: "\"!!\"",
     image: "s15-j-585",
   },
   {
@@ -2032,6 +2135,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Iron\" Combat Attribute",
       "Effect: Place a total of 6 Ninja Blade coins symbolizing -2/-2 coins on your opponent's Ninjas in any way you like.",
     ],
+    flavor: "\"Then, how about this?\"",
     image: "s15-j-586",
   },
   {
@@ -2047,6 +2151,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Tree\" Combat Attribute",
       "Effect: Move up to 2 Mission cards from your Discard Pile to your hand.",
     ],
+    flavor: "\"Let's camp here.\" \"This is not a camp, is it?\"",
     image: "s15-j-587",
   },
   {
@@ -2063,6 +2168,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja with 2 or more -2/-2 coins",
       "Effect: Remove the target from game.",
     ],
+    flavor: "\"Not this again.\"",
     image: "s15-j-588",
   },
   {
@@ -2079,6 +2185,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place the target in your Battle Reward area face down.",
     ],
+    flavor: "\"My arm is being sucked into oblivion!\"",
     image: "s15-j-589",
   },
   {
@@ -2095,6 +2202,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user with printed Entrance cost equal to or lower than that of the user's",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"8 Trigrams! Air Palm!\"",
     image: "s15-j-590",
   },
   {
@@ -2109,6 +2217,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: During your opponent's next turn, if your opponent deploys a Ninja card, they cannot move their Turn Marker up at the end of that turn.",
     ],
+    flavor: "\"That sounds interesting. Can I join the conversation?\"",
     image: "s15-j-591",
   },
   {
@@ -2124,6 +2233,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Nine-Tailed Fox Spirit\"",
       "Effect: If the user's Team is Battling, regardless of the result of the Battle, the user's Team wins an Outstanding Victory during the Showdown of this turn instead.",
     ],
+    flavor: "\"Now do it..! Break the seal completely! If you do, I'll grant you all of my power.\"",
     image: "s15-j-592",
   },
   {
@@ -2139,6 +2249,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Sasuke Uchiha\" + Printed Entrance cost of 4 or more\"",
       "Effect: Randomly select 1 of the cards in your opponent's hand and place it in your Battle Reward area face down.",
     ],
+    flavor: "\"Interesting... I never would've guessed you had this inside of you.\"",
     image: "s15-j-593",
   },
   {
@@ -2155,6 +2266,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Move the target to the bottom of its owner's Deck.",
     ],
+    flavor: "\"Ahhhhhhhhhh!!!!\"",
     image: "s15-j-594",
   },
   {
@@ -2171,6 +2283,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: User",
       "Effect: Move the target to the top of its owner's Deck. In that case, draw 3 cards from the bottom your Deck.",
     ],
+    flavor: "\"You should show me proper respect by talking to me face to face since I'm your elder.\"",
     image: "s15-j-595",
   },
   {
@@ -2186,6 +2299,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target cannot be affected by the effects of your opponent's Jutsu cards that do not have a \"Water\" Symbol during this turn.",
     ],
+    flavor: "\"Whatever....\"",
     image: "s15-j-596",
   },
   {
@@ -2203,6 +2317,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "(1) Search for 1 Ninja card in your Deck and move it to your Discard Pile.",
       "(2) Search for 1 Ninja card in your opponent's Deck and move it to their Discard Pile.",
     ],
+    flavor: "\"I want everything in my scroll to be filled and sorted by age...\"",
     image: "s15-j-597",
   },
   {
@@ -2219,6 +2334,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"This is going to be fun.\"",
     image: "s15-j-598",
   },
   {
@@ -2235,6 +2351,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every one of your Ninjas",
       "Effect: The target cannot be affected by your opponent's effects during this turn. Additionally, all Teams skip the Showdown of this turn.",
     ],
+    flavor: "\"!!\"",
     image: "s15-j-599",
   },
   {
@@ -2250,6 +2367,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Requirements: \"Orochimaru\"",
       "Effect: If you paid the cost of this Jutsu with a \"Summoning Jutsu: Reanimation\" Jutsu card, or \"Orochimaru's Forbidden Jutsu\" Mission card, place up to 2 Ninja cards from your Discard Pile and/or your opponent's Discard Pile and put them(it) in play in the user's Team in any position.",
     ],
+    flavor: "\"It can't be! Those people are...!\"",
     image: "s15-j-600",
   },
   {
@@ -2266,6 +2384,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Every Ninja Battling against the user with 0 or less Mental Power",
       "Effect: Move the target to the top its owner's Deck.",
     ],
+    flavor: "\"Lady Tsunade interrogated him herself.\"",
     image: "s15-j-601",
   },
   // ── MISSION ──
@@ -2287,6 +2406,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "8+) You win 1 Battle Reward.",
       "10+) You win the game",
     ],
+    flavor: "It's Leaf Academy that is known for its high scholastic ability and excellence in sports.",
     image: "s15-m-500",
   },
   {
@@ -2303,6 +2423,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Your \"Sasuke Uchiha\" or \"Naruto Uzumaki\"",
       "Effect: If you selected your \"Sasuke Uchiha\" as the target, the target's Team can only be blocked by a Team that includes \"Naruto Uzumaki\" during this turn. If you selected your \"Naruto Uzumaki\" as the target, the target's Team can only be blocked by a Team that includes \"Sasuke Uchiha\" during this turn.",
     ],
+    flavor: "\"...Sasuke...\"",
     image: "s15-m-501",
   },
   {
@@ -2321,6 +2442,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "(2) 1 of your opponent's Ninjas with an Entrance cost equal to or lower Entrance cost of that of target (1)'s",
       "Effect: When this Mission card's effect is applied, remove target (1) from game. In that case, move target (2) to your Village. When this Mission card is removed from play, if target (2) still remains in play, move it to its owner's Village.",
     ],
+    flavor: "\"I need to talk to you.\"",
     image: "s15-m-502",
   },
   {
@@ -2337,6 +2459,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: During your Mission Phase, you can discard 1 of your in-play Ninjas with an Entrance cost of 3 or more. In that case, move down your opponent's Turn Marker by 1.",
     ],
+    flavor: "\"I would sacrifice anything to gain that power...\"",
     image: "s15-m-503",
   },
   {
@@ -2353,6 +2476,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Remove 4 Ninja cards that include \"Uchiha\" in their names from game from your Village, and/or Chakra area. In that case, move the target to the bottom of its owner's Deck.",
     ],
+    flavor: "\"Revenge is everything to me.\"",
     image: "s15-m-504",
   },
   {
@@ -2370,6 +2494,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "(2) 1 of your opponent's healthy \"Male\" Ninja",
       "Effect: Change target (1) to healthy status and change target (2) to injured status.",
     ],
+    flavor: "\"Sai didn't say 'monstrous strength' O.K.?\"",
     image: "s15-m-505",
   },
   {
@@ -2385,6 +2510,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Move up to 2 cards from your Discard Pile to your Chakra area and draw 1 card.",
     ],
+    flavor: "\"I've never seen such a luxurious meal before!\"",
     image: "s15-m-506",
   },
   {
@@ -2401,6 +2527,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (2)",
       "Effect: Your Teams can include as many Ninjas as you like.",
     ],
+    flavor: "\"So Neji will serve as Squad 7's captain.\"",
     image: "s15-m-507",
   },
   {
@@ -2416,6 +2543,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Remove from game 1 of your \"Priestess\" Ninjas or \"Priestess\" Clients. In that case, move 1 of your opponent's Ninjas to the bottom of its owner's Deck.",
     ],
+    flavor: "\"Finally, I know my destiny.\"",
     image: "s15-m-508",
   },
   {
@@ -2432,6 +2560,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: Your \"Shion\"",
       "Effect: If you don't have \"Naruto Uzumaki\" in play, remove the target from game. In that case, put a \"Naruto Uzumaki & Shion\" Ninja card in play from your Reinforcement Deck.",
     ],
+    flavor: "\"You must... ...live!!\"",
     image: "s15-m-509",
   },
   {
@@ -2447,6 +2576,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Select a player. Then, move all the cards in the selected player's hand to the bottom of the owner's Deck. Then, that player draws the same number of cards that were moved minus one.",
     ],
+    flavor: "\"You bet! You know me, I'm always up for anything!\"",
     image: "s15-m-510",
   },
   {
@@ -2463,6 +2593,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Counter Permanent",
       "Effect: When a player deploys a Ninja card with an Entrance cost of 6 or more, that player gets 2 Battle Rewards and draws 2 cards. Then, move this Mission card to your Chakra area. This Mission card cannot be played if your Turn Marker is 4 or more.",
     ],
+    flavor: "\"I wo---------n!\"",
     image: "s15-m-511",
   },
   {
@@ -2479,6 +2610,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Move the target to your hand. Then, put it in play.",
     ],
+    flavor: "\"I didn't know you were there, Hinata!\"",
     image: "s15-m-512",
   },
   {
@@ -2495,6 +2627,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Counter",
       "Effect: Your opponent must select and discard 1 of their in-play Ninjas.",
     ],
+    flavor: "\"He doesn't look familiar...\"",
     image: "s15-m-513",
   },
   {
@@ -2512,6 +2645,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The printed Power of the target becomes 0/0. (If you attach this to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"You are powerless...\"",
     image: "s15-m-514",
   },
   {
@@ -2528,6 +2662,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: If a player searches for any cards in their Deck, that player cannot move their Turn Marker up at the end of that turn. Additionally, that player cannot draw any cards at the beginning of their next turn.",
     ],
+    flavor: "\"Here is the punishment for you!\"",
     image: "s15-m-515",
   },
   {
@@ -2544,6 +2679,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: Ninjas that were sent out to Battle cannot be sent out to Battle during the next turn they were sent out.",
     ],
+    flavor: "\"Oh...not again...\"",
     image: "s15-m-516",
   },
   {
@@ -2560,6 +2696,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (3)",
       "Effect: When a player sends out 1 or more Teams that include 2 or more \"Male\" Ninjas to Battle, that player must discard 1 card from their hand if they have any.",
     ],
+    flavor: "\"It's even uglier in action...\"",
     image: "s15-m-517",
   },
   {
@@ -2576,6 +2713,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: Players cannot search for any cards in their Deck or put in play Ninja cards except by deploying them.",
     ],
+    flavor: "\"Haaaaaa----------!!\"",
     image: "s15-m-518",
   },
   {
@@ -2592,6 +2730,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Counter",
       "Effect: If your opponent searches 1 or more cards in their Deck during this turn, remove those cards from game instead.",
     ],
+    flavor: "\"What kind of book is this?\"",
     image: "s15-m-519",
   },
   {
@@ -2607,6 +2746,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Select 1 Ninja card from your hand, place it in your Village keeping it face down, and declare if that Ninja card has 1 or more Hand cost or not. Then, your opponent guesses if that's correct or not and then reveal that card. If your opponent guessed it correct, place that card in their Battle Reward area faced down. If not, put that Ninja card in play.",
     ],
+    flavor: "\"The book said 'Most people are likely to be tricked with fake smile.'...\"",
     image: "s15-m-520",
   },
   {
@@ -2623,6 +2763,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: At the end of each player's turn, if a Team has 4 or more Ninjas in it, that player must remove Ninjas in that Team from game until they have 3 or less Ninjas in that Team.",
     ],
+    flavor: "\"Now, I know that you are a petty...\"",
     image: "s15-m-521",
   },
   {
@@ -2638,6 +2779,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Discard X number of cards from the top of your opponent's Deck. X = the number of cards in your opponent's hand.",
     ],
+    flavor: "\"This mission was given by Lord Danzo for the future of our village.\"",
     image: "s15-m-522",
   },
   {
@@ -2654,6 +2796,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (3)",
       "Effect: Teams with 2 or more different Symbols cannot be sent out to Battle. (If a Ninja card has 2 or more Symbols, that player can select one of them.)",
     ],
+    flavor: "\"Mutual support is our principle.\"",
     image: "s15-m-523",
   },
   {
@@ -2669,6 +2812,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Move 1 Ninja card from your Chakra area or Discard Pile to your hand.",
     ],
+    flavor: "\"Thanks!\"",
     image: "s15-m-524",
   },
   {
@@ -2685,6 +2829,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (4)",
       "Effect: During the Exchange of Jutsu, you can discard 1 of your Chakras. In that case, place 1 of your Stand-By Ninjas in any of your Battling Teams in any position.",
     ],
+    flavor: "\"I will follow him right away.\"",
     image: "s15-m-525",
   },
   {
@@ -2703,6 +2848,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "(2) Your in-play \"Yamato\" or \"The First Hokage\"",
       "Effect: Target (1) and (2) cannot be sent out to Battle. When target (1) and/or (2) are(is) removed from play, move this Mission card to its Owner's Chakra area.",
     ],
+    flavor: "\"That necklace can control the power of 'Jinchuriki'...\"",
     image: "s15-m-526",
   },
   {
@@ -2719,6 +2865,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: During your Mission Phase, if your opponent has 2 or more Ninjas in play than you do, you can deploy 1 Ninja card with a \"Weapon\" Combat Attribute. That Ninja card is not counted towards the 1 Ninja per turn. This effect cannot be duplicated.",
     ],
+    flavor: "\"It seems like she has the same equipment as I do.\"",
     image: "s15-m-527",
   },
   {
@@ -2735,6 +2882,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: During the Exchange of Jutsu, you can discard 1 of your Chakras. In that case, select 1 of your Ninjas with a \"Byakugan\". The selected Ninja's printed Combat and Support values are switched during that turn and the next turn.",
     ],
+    flavor: "\"......\"",
     image: "s15-m-528",
   },
   {
@@ -2751,6 +2899,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: When 1 of your Ninjas would be removed from play by the effects of your opponent's Ninjas, you can remove from game 1 Ninja card with an Entrance cost equal to or higher that that of that Ninja's from your hand or Discard Pile. In that case, that Ninja is not removed from play.",
     ],
+    flavor: "\"Orochimaru is indeed a tough one to deal with...\"",
     image: "s15-m-529",
   },
   {
@@ -2766,6 +2915,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Designate a number. Then, look at all the cards in your opponent's hand and discard any Ninjas cards with the designated number Entrance cost from game.",
     ],
+    flavor: "\"This is....\"",
     image: "s15-m-530",
   },
   {
@@ -2782,6 +2932,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: The Attacker for the turn must send at least 1 Team out to Attack if possible.",
     ],
+    flavor: "\"Gaara...Gaara...\"",
     image: "s15-m-531",
   },
   {
@@ -2798,6 +2949,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: During the Exchange of Jutsu, you can make 1 of your Battling Ninjas a Stand-By Ninja. In that case, at the end of that turn, you can organize your Teams.",
     ],
+    flavor: "\"Gasp!\"",
     image: "s15-m-532",
   },
   {
@@ -2814,6 +2966,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (1)",
       "Effect: Your opponent cannot draw any cards.",
     ],
+    flavor: "\"How come you recognized Kiba that soon...\" \"No, he must be jealous.\"",
     image: "s15-m-533",
   },
   {
@@ -2831,6 +2984,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Target: 1 Ninja with an Entrance cost of 4 or more that was just deployed",
       "Effect: Move the target to the top of its original owner's Deck.",
     ],
+    flavor: "\"Hey, Hinata! What are you hiding from?\"",
     image: "s15-m-534",
   },
   {
@@ -2846,6 +3000,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Discard X number of cards from the top of both players' Deck. X = the number of your opponent's Turn Marker.",
     ],
+    flavor: "\"Don't ever forget the will of the foundation which supports the big tree from under ground as roots...\"",
     image: "s15-m-535",
   },
   {
@@ -2862,6 +3017,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: When your opponent searches for any card(s), you can reveal a \"The Nine-Tailed Fox Spirit\" Ninja card or \"Naruto Uzumaki (Tailed Beast Mode)\" from your hand. In that case, remove that searched card(s) from game instead. Then, search your opponent's Deck for any number of cards that have the same name and remove them from game.",
     ],
+    flavor: "\"The second time was when I saw the fourth tail of his Nine-Tailed Fox Spirit chakra while we were training together.\"",
     image: "s15-m-536",
   },
   {
@@ -2878,6 +3034,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (2)",
       "Effect: Your opponent cannot move their Turn Marker during the turn they deploy 1 or more Ninjas.",
     ],
+    flavor: "\"......\"",
     image: "s15-m-537",
   },
   {
@@ -2894,6 +3051,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (4)",
       "Effect: When your opponent puts a Ninja card in play except by deploying it, remove it from game instead.",
     ],
+    flavor: "\"Sasuke---------------!!!\"",
     image: "s15-m-538",
   },
   {
@@ -2910,6 +3068,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: During the Mission Phase, you can discard 1 of your Chakras with an \"Earth\" Symbol. In that case, you can negate the effect texts of 1 of your opponent's Ninjas during that turn and the next turn.",
     ],
+    flavor: "\"Now is the time!\"",
     image: "s15-m-539",
   },
   {
@@ -2926,6 +3085,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Counter Permanent (3)",
       "Effect: When your opponent sends any Teams out to Attack, you can deploy 1 \"Anbu\" Ninja from your hand and place it in any of your Teams.",
     ],
+    flavor: "\"Not another step!. You are done here!\"",
     image: "s15-m-540",
   },
   {
@@ -2945,6 +3105,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "(2) You win 1 Battle Reward",
       "This effect cannot be duplicated.",
     ],
+    flavor: "\"On the other hand, with most people in this village are supporting the current system, there's no reason to change it.\"",
     image: "s15-m-541",
   },
   {
@@ -2961,6 +3122,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (3)",
       "Effect: While you have 1 or more \"Satoosa\" Ninja cards in your Discard Pile, the effect texts of your opponent's Ninjas are negated.",
     ],
+    flavor: "\"In addition, the fifth hokage's current system was built based on the will of the third hokage.",
     image: "s15-m-542",
   },
   {
@@ -2978,6 +3140,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Effect: Your Ninjas with a \"Weapon\" Combat Attribute get the following effect text:",
       "When any Ninja Battling against this Ninja's Team receives any Damage due to the Showdown, remove it from game after Damage is applied, even if that Damage is reduced to 0. This effect is negated if the Damage is negated.",
     ],
+    flavor: "\"Kabuto, do those things when we get back.\"",
     image: "s15-m-543",
   },
   {
@@ -2993,6 +3156,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Reveal the bottom 5 cards of your Deck. If there are 1 or more \"Ninja Toad\" Ninja cards among them, select 1 of them and put in play. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"Wow!\"",
     image: "s15-m-544",
   },
   {
@@ -3009,6 +3173,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: During your Mission Phase, you can change 1 of your injured \"Medical\" Ninjas to healthy status. This effect cannot be duplicated.",
     ],
+    flavor: "Big hospital which regular doctors and medical ninjas manage working together. This place is also known as a laboratory for medical science and ninjutsu.",
     image: "s15-m-545",
   },
   {
@@ -3025,6 +3190,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (3)",
       "Effect: When a Ninja with a \"Byakugan\" is deployed, draw 1 card.",
     ],
+    flavor: "\"She looks nice, Father. Don't you think?\"",
     image: "s15-m-546",
   },
   {
@@ -3041,6 +3207,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent (2)",
       "Effect: Only Ninjas with no Hand cost can be sent out to Battle.",
     ],
+    flavor: "\"I'll change the role of the Hyuga clan......after I become (the) Hokage!\"",
     image: "s15-m-547",
   },
   {
@@ -3057,6 +3224,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Permanent",
       "Effect: While this card is in play, the name of this card is considered to be \"Power of State 2\". When this Mission's effect is applied, if you have another in-play \"Power of State 2\" Mission card, you can search for 1 \"State 2\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck. When you put in play a \"State 2\" Ninja card, draw 1 card.",
     ],
+    flavor: "\"Sasuke...you...\"",
     image: "s15-m-548",
   },
   {
@@ -3072,6 +3240,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: You can search for 1 \"The Symbol of the Proud Clan\" Mission card or 1 Ninja card with [LEAF POLICE FORCE] effect in your Deck show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Itachi! Are you here? Come out! We got something to ask you!\"",
     image: "s15-m-549",
   },
   // ── CLIENT ──
@@ -3089,6 +3258,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: During the Mission Phase, you can discard this in-play Client. In that case, players cannot search for any cards during that turn.",
     ],
+    flavor: "\"If I could repay that kindness by safeguarding her life... then I would gladly give up my own.\"",
     image: "s15-c-049",
   },
   {
@@ -3105,6 +3275,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Your Jutsu cards cannot be affected by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Take care of... Lady... Shion...\"",
     image: "s15-c-050",
   },
   {
@@ -3121,6 +3292,7 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     text: [
       "Effect: Effect texts of Ninjas are negated during the turn they are put in play. Players cannot put in play Ninja cards except by deploying them.",
     ],
+    flavor: "\"I am the priestess. Do not take my power lightly.\"",
     image: "s15-c-051",
   },
 ];

@@ -26,6 +26,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "During the Exchange of Jutsu, you can injure 1 opposing Ninja unless your opponent discards 1 card.",
       "Valid: Your opponent's maximum hand size is reduced by 1.",
     ],
+    flavor: "\"Very smart.\"",
     image: "s20-n-1037",
   },
   {
@@ -46,6 +47,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "During the Mission Phase, you can select 1 of your opponent's Ninjas. In that case, negate the selected Ninjas effect text unless your opponent discards 1 card.",
       "Valid: Your opponent's maximum hand size is reduced by 1.",
     ],
+    flavor: "\"But he suddenly just vanished...\"",
     image: "s20-n-1038",
   },
   {
@@ -67,6 +69,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Each player cannot put in play more than 1 Ninja per turn.",
       "Valid: The effect text of your opponent's Head Ninjas are negated.",
     ],
+    flavor: "\"He's ready, just like I said.\"",
     image: "s20-n-1039",
   },
   {
@@ -87,6 +90,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[SUPER SLAP!!]",
       "While you have more Battle Rewards than your opponent, this Ninja cannot be sent out to Attack.",
     ],
+    flavor: "\"Then allow me to pick up the slack.\"",
     image: "s20-n-1040",
   },
   {
@@ -107,6 +111,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[THE LEADER OF THE SENJU CLAN]",
       "Valid: While you have Ninjas with a combined Mental Power of 14 or more, this Ninjas Team and the Team Battling against it perform a Mental Power Battle.",
     ],
+    flavor: "\"So sorry...\"",
     image: "s20-n-1041",
   },
   {
@@ -148,6 +153,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[ACADEMY GENIUS]",
       "Valid: When 1 of your Ninjas is removed from play, put up to X Growth coins on 1 of your Ninjas. X = the number of Growth coins on the removed Ninja.",
     ],
+    flavor: "\"You and me, we believe in different things.\"",
     image: "s20-n-1043",
   },
   {
@@ -168,6 +174,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[STOCKPILE]",
       "Valid: When your opponent wins any Battle Rewards, place a Growth coin on this Ninja.",
     ],
+    flavor: "\"If you keep talking the whole time, it'll seem like forever.\"",
     image: "s20-n-1044",
   },
   {
@@ -190,6 +197,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Your opponent's Tracked Ninja can only be sent out to Attack as a Head Ninja.",
       "Valid: Your opponent's maximum hand size is reduced by 1.",
     ],
+    flavor: "\"Yes, father.\"",
     image: "s20-n-1045",
   },
   {
@@ -211,6 +219,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: While this Ninja is Battling as an Attacker, the effect texts of Ninjas opposing this Ninja are negated.",
       "Valid: This Ninja's Team can Block up to 2 Teams. When this Ninja Blocks, place a Growth coin on this Ninja.",
     ],
+    flavor: "\"Let's all pull together on this.\" \"I'll cover you!\"",
     image: "s20-n-1046",
   },
   {
@@ -232,6 +241,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: When this Ninja Blocks, you can place a Growth coin on this Ninja.",
       "Valid: Your opponent's maximum hand size is reduced by 1.",
     ],
+    flavor: "\"I'm here because I want to be.\"",
     image: "s20-n-1047",
   },
   {
@@ -254,6 +264,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "At the start of your opponent's turn, if your opponent has no cards in their hand, you win 1 Battle Reward.",
       "Valid: Your opponent's maximum hand size is reduced by 1.",
     ],
+    flavor: "\"Watch closely.\"",
     image: "s20-n-1048",
   },
   {
@@ -274,6 +285,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[WILD FANG]",
       "Valid: When this Ninja is sent out to Battle, Jutsu cards cannot be played during this turn.",
     ],
+    flavor: "\"You're rarin' to go for once!\"",
     image: "s20-n-1049",
   },
   {
@@ -294,6 +306,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[ONE OF THE LAST]",
       "Valid: While this Ninja is Battling against an Earth Ninja, this Ninja gets +2/+0 and cannot be affected by Earth Jutsu.",
     ],
+    flavor: "\"It's got to be a lie...\"",
     image: "s20-n-1050",
   },
   {
@@ -314,6 +327,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[SACRIFICE]",
       "Valid: When this Ninja is put in play, move 1 of your Fire Ninjas to your hand.",
     ],
+    flavor: "\"I want them for my ritual.\"",
     image: "s20-n-1051",
   },
   {
@@ -334,6 +348,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[NOSE FOR DANGER]",
       "Valid: When another 1 of your Ninjas would be removed from play due to an opponent's effect, you can move that Ninja to your hand instead.",
     ],
+    flavor: "\"Woof!!\"",
     image: "s20-n-1052",
   },
   {
@@ -354,6 +369,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[TAG TEAM]",
       "Valid: When this Ninja wins any Victory, you can reveal the top card of your Deck. In that case, if the revealed card is a Jutsu card, give 1 Damage to an opposing Ninja, then move that Jutsu card to your hand.",
     ],
+    flavor: "\"You're probably my only junior that I acknowldege as an equal...\" \"I got it!\"",
     image: "s20-n-1053",
   },
   {
@@ -374,6 +390,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[HOKAGE'S ORDER]",
       "Valid: During your Mission Phase, you can move an \"Anbu\" Ninja card from your Discard Pile to play.",
     ],
+    flavor: "\"Please prepare yourselves.\"",
     image: "s20-n-1054",
   },
   {
@@ -394,6 +411,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[SWIRLING HATRED]",
       "During your Mission Phase, you can pay 2 Chakra. In that case, choose 2 Ninjas. Injure 1 of those Ninjas and the Power of the other Ninja becomes 0/0 during this turn.",
     ],
+    flavor: "\"You disgust me.\" \"This is it, Sasuke.\"",
     image: "s20-n-1055",
   },
   {
@@ -414,6 +432,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[ACADEMY ELITE]",
       "Valid: During your Mission Phase, you can discard a \"Leaf Academy\" Ninja card. In that case, place 1 Growth coin on a \"Leaf Academy\" Ninja. (This counts as Growthing that Ninja.)",
     ],
+    flavor: "\"You don't have to be friends.\"",
     image: "s20-n-1056",
   },
   {
@@ -434,6 +453,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[REALITY TWIST]",
       "Valid: When this Ninja is put in play, you can select a player and that player reveals their hand. In that case, send any number of those revealed cards to the bottom of their Deck, then that player draws 1 card for each card moved due to this effect.",
     ],
+    flavor: "\"You know I can sweet talk anyone.\"",
     image: "s20-n-1057",
   },
   {
@@ -455,6 +475,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: Your opponent plays with their hand revealed.",
       "Valid: While your opponent has 2 or more cards of the same type in their hand, this Ninja gets the following effect text: \"Valid: When this Ninja wins any Victory, you win 1 Battle Reward.\"",
     ],
+    flavor: "\"Better look closely at yourself.\"",
     image: "s20-n-1058",
   },
   {
@@ -475,6 +496,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[TAG TEAM]",
       "Valid: During the Exchange of Jutsu, you can discard a \"Kiba Inuzuka\" or \"Akamaru\" Ninja card from your hand. In that case, this Ninja gets +X/+0 during this turn, where X = its Combat value.",
     ],
+    flavor: "\"You can't escape my nose!\" \"Awoo...\"",
     image: "s20-n-1059",
   },
   {
@@ -516,6 +538,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: At the start of your turn, move the top 3 cards from your Deck to your Chakra area.",
       "Valid: During your Mission Phase, if you have 10 or more Chakra, you can discard this Ninja. In that case, put in play 1 [FOUR TAILS] Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"Don't talk about Sasuke like you own him!\"",
     image: "s20-n-1061",
   },
   {
@@ -537,6 +560,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: X = the total number of cards in your Chakra area.",
       "Valid: At the end of your turn, give 1 Damage to all other Ninjas with an Entrance cost less than the number of cards in your Chakra area.",
     ],
+    flavor: "\"RRRRAAAR!!!\"",
     image: "s20-n-1062",
   },
   {
@@ -559,6 +583,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "While this Ninja is in the same Team as Shima, apply all Combination effects of Jutsus that Ninjas in this Ninja's Team use, regardless of the Combination Requirements.",
       "(SENJUTSU: Each Specific Symbol of a Jutsu this Ninja uses is treated as (1) for the purpose of paying its cost.)",
     ],
+    flavor: "\"Why go so far as to summon us to fight this fellow, Jiraiya-boy?\"",
     image: "s20-n-1063",
   },
   {
@@ -581,6 +606,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "When this Ninja is put in play, you can discard an in-play non-Ninja card.",
       "(SENJUTSU: Each Specific Symbol of a Jutsu this Ninja uses is treated as (1) for the purpose of paying its cost.)",
     ],
+    flavor: "\"Found him!\"",
     image: "s20-n-1064",
   },
   {
@@ -602,6 +628,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: When this Ninja is put in play, remove all of your opponent's \"Animal\" Ninjas with an Entrance cost of 2 or less from the game.",
       "Valid: This Ninja's Team can Block up to 2 Teams (the blocked Teams use their combined Team Power.)",
     ],
+    flavor: "\"All right. Clumsy as I am, I shall try.\"",
     image: "s20-n-1065",
   },
   {
@@ -622,6 +649,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[DIRE PREDICTION]",
       "Valid: When 1 of your \"Ninja Toad\" Ninjas becomes the user of a Jutsu, you can draw 1 card.",
     ],
+    flavor: "\"That disciple will become a Ninja who will bring about a great change to the ninja world.\"",
     image: "s20-n-1066",
   },
   {
@@ -667,6 +695,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "(SENJUTSU: Each Specific Symbol of a Jutsu this Ninja uses is treated as (1) for the purpose of paying its cost.)",
       "(MASTERY: Valid: After the effect of a Jutsu, used by this Ninja, is applied, you can discard 1 of your Chakra that shares a Symbol with the Jutsu, to return that Jutsu to your hand.)",
     ],
+    flavor: "\"I'm counting on you. Buy me some time until then!\"",
     image: "s20-n-1068",
   },
   {
@@ -687,6 +716,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[WEIGHT TRAINING]",
       "When this Ninja is put in play, place 3 -1/-1 coins on it. At the start of your turn, remove a -1/-1 coin from this Ninja. In that case, put a +1/+1 coin on this Ninja.",
     ],
+    flavor: "\"Brilliant, Master Guy! A training drill.\"",
     image: "s20-n-1069",
   },
   {
@@ -707,6 +737,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[FLOAT AND STING]",
       "Valid: Specific costs of all your Jutsu cards with \"Requirements: Weapon\" are each changed to (1).",
     ],
+    flavor: "\"No, it's Lord Eight-Tails. Okay?\"",
     image: "s20-n-1070",
   },
   {
@@ -727,6 +758,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[ACADEMY PRANKSTER]",
       "Valid: During your Mission Phase, you can discard 1 of your \"Leaf Academy\" Ninjas. In that case, place 1 Growth coin on this Ninja. This effect can be used as many times as you like.",
     ],
+    flavor: "\"This is my show now!\"",
     image: "s20-n-1071",
   },
   {
@@ -748,6 +780,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Growth coins on your Ninjas cannot be affected by your opponent's effects.",
       "Valid: Your Ninjas with Growth coins cannot be affected by your opponent's Ninja effects.",
     ],
+    flavor: "\"Or so the book says...\"",
     image: "s20-n-1072",
   },
   {
@@ -768,6 +801,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[BEYOND THE ENDLESS RAIN]",
       "When this Ninja card is Sacrificed or discarded, you can put 1 Growth coin on 1 of your Water or Void Ninjas.",
     ],
+    flavor: "\"You're a man!\"",
     image: "s20-n-1073",
   },
   {
@@ -809,6 +843,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[GAME OF THE EAST GATE]",
       "During your opponent's Mission Phase, you can discard 1 Water card. In that case, your opponent selects 1 of their Ninjas, that Ninja cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"So from here on out, no more Mr. Nice Guy...\"",
     image: "s20-n-1075",
   },
   {
@@ -829,6 +864,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[FLIRTATIOUS]",
       "At the start of your Battle Phase, you can discard 1 Water card. In that case, select a player, that player draws 1 card.",
     ],
+    flavor: "\"Let's take him down and go in together!\"",
     image: "s20-n-1076",
   },
   {
@@ -849,6 +885,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[RETURN OF THE DEMON]",
       "Valid: During the Exchange of Jutsu, you can discard 1 Ninja card. In that case, this Ninja gets +2/+0 during this turn. If you discarded a Water Ninja card for this effect, draw 1 card.",
     ],
+    flavor: "\"So, care to play around with me....\"",
     image: "s20-n-1077",
   },
   {
@@ -870,6 +907,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "During your opponent's Mission Phase, if 2 or more Ninjas were put in play during this turn, you can put this Ninja card in play.",
       "Valid: When your opponent puts a Ninja in play, this Ninja gets +1/+1 during this turn.",
     ],
+    flavor: "\"I want to see what kind of shinobi you really are.\"",
     image: "s20-n-1078",
   },
   {
@@ -890,6 +928,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[CURSED SEAL OF EARTH]",
       "During the Exchange of Jutsu, you can discard a Mission or Ninja card. In that case, give 1 Damage to an opposing Ninja with an Entrance cost less than or equal to the discarded card's Entrance cost.",
     ],
+    flavor: "\"I will not be extinguished, for I am not alone.\"",
     image: "s20-n-1079",
   },
   {
@@ -911,6 +950,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "When this Ninja card is discarded from your hand due to an effect, you can move this card to your Chakra area.",
       "Valid: At the end of your turn, if 3 or more cards were discarded due to your effects, win 1 Battle Reward.",
     ],
+    flavor: "\"This is my vendetta.\"",
     image: "s20-n-1080",
   },
   {
@@ -952,6 +992,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "During your Mission Phase, you can remove 7 cards in your Discard Pile from the game. In that case, you win 1 Battle Reward.",
       "This Ninja card can be deployed from your Discard Pile.",
     ],
+    flavor: "\"In exchange for your lives, I would know your names...\"",
     image: "s20-n-1082",
   },
   {
@@ -973,6 +1014,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: You can remove this Ninja from the game. In that case, negate 1 Jutsu or effect on the Chain. While this effect is on the Chain, your opponent cannot play cards or activate effects.",
       "This Ninja card can be deployed from your Removed From Game area.",
     ],
+    flavor: "\"Hissssss\"",
     image: "s20-n-1083",
   },
   {
@@ -994,6 +1036,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Sacrifice: \"Kidomaru (State 1)\"",
       "During the Mission Phase, you can discard 1 card from your hand. In that case, your opponent selects 1 of their Ninjas. Then apply 1 of the following effects: 1) The selected Ninja cannot be sent out to Battle this turn. 2) The selected Ninja must be sent out to Battle this turn.",
     ],
+    flavor: "\"But either way you're gonna die!\"",
     image: "s20-n-1084",
   },
   {
@@ -1078,6 +1121,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: When you Growth a Ninja, Draw 1 card.",
       "Valid: This Ninja is considered to be a \"Leaf\" Ninja.",
     ],
+    flavor: "\"I must clear my own path.\"",
     image: "s20-n-1088",
   },
   {
@@ -1119,6 +1163,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: This Ninja can only be organized into Teams with \"Puppet\" Ninjas.",
       "Valid: [SECRET SKILLS] Ninjas can organize with up to 4 Ninjas in their Team.",
     ],
+    flavor: "\"That's an impossible dream now...\"",
     image: "s20-n-1090",
   },
   {
@@ -1140,6 +1185,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: This Ninja can only be organized into Teams with \"Puppet\" Ninjas.",
       "Valid: \"Puppet\" Ninjas in a Team with a [SECRET SKILLS] Ninja get +0/+1.",
     ],
+    flavor: "\"She looks so peaceful.\"",
     image: "s20-n-1091",
   },
   {
@@ -1160,6 +1206,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "[UNPHASED ASSAULT]",
       "Valid: During your Mission Phase, you can discard a \"Manipulation\" or \"Puppet\" Ninja card. In that case, search your Deck for a \"Puppet\" Ninja card, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'll be finished with you in no time.\"",
     image: "s20-n-1092",
   },
   {
@@ -1201,6 +1248,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: During the Exchange of Jutsu, you can discard 1 card or injure 1 of your Ninjas. In that case, heal 1 other Ninja.",
       "Valid: This Ninja gets +2/+0 while in the same Team as a \"Puppet Master\" Ninja.",
     ],
+    flavor: "\"I will get you!\"",
     image: "s20-n-1094",
   },
   {
@@ -1222,6 +1270,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "When this Ninja Blocks or when a Ninja is Surged, you can heal 1 Ninja.",
       "Valid: Your \"Female\" and/or \"Medical\" Ninjas get +1 Entrance cost.",
     ],
+    flavor: "\"We could have avoided this...\"",
     image: "s20-n-1095",
   },
   {
@@ -1286,6 +1335,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "As an additional cost to put this Ninja in play, reveal a \"Rain\" Ninja card from your hand.",
       "Valid: When this Ninja is discarded, you can move this Ninja to its owner's Chakra area instead. In that case, you can move a player's Turn Marker up by 1.",
     ],
+    flavor: "\"Then everything went blank in my head...\"",
     image: "s20-n-1098",
   },
   {
@@ -1307,6 +1357,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "During the Mission Phase, while your Turn Marker is even, you can randomly remove 2 cards in a player's hand from the game. In that case, at the end of the turn, return those cards.",
     ],
+    flavor: "\"Do not move...\"",
     image: "s20-n-1099",
   },
   {
@@ -1329,6 +1380,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "While your Turn Marker is even, your opponent cannot play Mission cards or activate effects of Ninjas with an odd Entrance cost.",
       "Valid: During your Mission Phase, you can put in play 1 \"The Outer Path\" Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"Tell me now.\"",
     image: "s20-n-1100",
   },
   {
@@ -1351,6 +1403,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: While your Turn Marker is odd, this Ninja's Team wins a Victory regardless of the result of the Battle.",
       "Valid: When this Ninja is removed from play, place a -1/-1 coin on up to 3 of your opponent's Ninjas.",
     ],
+    flavor: "\"You taught me not to let my guard down.\"",
     image: "s20-n-1101",
   },
   // ── JUTSU ──
@@ -1369,6 +1422,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Negate the target's effect text during this turn. Then, the target becomes a Stand-by Ninja.",
       "Expert [Hinata Hyuga]: The user gets +3/+3 during this turn. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Naruto... Watch me.\"",
     image: "s20-j-773",
   },
   {
@@ -1385,6 +1439,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: The target is unaffected by the effects of your opponent's Ninja and Jutsu cards during this turn.",
       "Expert [\"Byakugan\"]: The target cannot receive any Damage during this turn. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"8 Trigrams Palm Rotation.\"",
     image: "s20-j-774",
   },
   {
@@ -1402,6 +1457,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: The target becomes a Stand-By Ninja. While this effect is on the chain, your opponent cannot play cards or activate effects.",
       "Expert [Neji Hyuga]: Give 1 Damage to the target.",
     ],
+    flavor: "\"Game over.\"",
     image: "s20-j-775",
   },
   {
@@ -1419,6 +1475,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Move the target to its owner's Hand.",
       "Expert [Neji Hyuga]: Move the target to the top of its owner's deck instead and draw 1 card. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"8 Trigrams Air Palm!!\"",
     image: "s20-j-776",
   },
   {
@@ -1434,6 +1491,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 or +3 Mental Power during this turn. If the higher cost of this Jutsu was paid, your opponent discards 1 random card from their hand.",
     ],
+    flavor: "\"Give it up! You can't escape!\"",
     image: "s20-j-777",
   },
   {
@@ -1449,6 +1507,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. Then, if the higher cost of this Jutsu was paid, give 1 Damage to the target. While the user of this Jutsu is Sasuke Uchiha, this Jutsu is unaffected by your opponent's effects.",
     ],
+    flavor: "\"It's too late, Naruto.\"",
     image: "s20-j-778",
   },
   {
@@ -1466,6 +1525,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Move cards from the top of your opponent's Deck to their Discard Pile equal to the combined Entrance costs of the user and the target.",
       "Expert [Itachi Uchiha]: Negate and Discard 1 Jutsu being used by the target.",
     ],
+    flavor: "\"Foolish little brother.\"",
     image: "s20-j-779",
   },
   {
@@ -1483,6 +1543,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: The target gets -X/-X during this turn, where X = the Entrance cost of the user.",
       "Combination (\"Genjutsu\"): the user gets +X/+X during this turn, where X = the targets Entrance cost.",
     ],
+    flavor: "\"Aaaargh!! Stop it!!\"",
     image: "s20-j-780",
   },
   {
@@ -1499,6 +1560,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Apply the following effect(s) according to the Symbols on the Chakra used to pay for this Jutsu: Fire: Injure the target. Lightning: The user gets +5/+0 during this turn. Wind: Draw 2 cards.",
     ],
+    flavor: "\"I think I'm gonna stir up some fried pain tonight!\"",
     image: "s20-j-781",
   },
   {
@@ -1530,6 +1592,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target into the user's team in any position. In that case, the user becomes 0/0 during the turn. At the end of the turn, return the target to your opponent's Village.",
     ],
+    flavor: "\"But I never imagined I'd catch you.\"",
     image: "s20-j-783",
   },
   {
@@ -1547,6 +1610,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Injure the target",
       "Expert (Jiraiya{Sage Mode}): Give 1 Damage to the target.",
     ],
+    flavor: "\"Kebari Senbon is my fastest jutsu with the widest attack range.\"",
     image: "s20-j-784",
   },
   {
@@ -1564,6 +1628,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Expert (Fukasaku): Switch the Combat and Support values of 1 Ninja Battling against the user during this turn.",
       "Expert (Jiraiya): The user is unaffected by your opponent's effects during this turn.",
     ],
+    flavor: "\"Now none of your bodies will be able to move.\"",
     image: "s20-j-785",
   },
   {
@@ -1580,6 +1645,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Remove the target from the game. At the end of the turn return that Ninja to play injured.",
     ],
+    flavor: "\"That was disappointing.\"",
     image: "s20-j-786",
   },
   {
@@ -1597,6 +1663,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Move the target into the user's Team in any position. At the end of the turn remove that Ninja from the game.",
       "Expert [Orochimaru]: Do not remove that Ninja from the game instead. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Now then, shall we get started?\"",
     image: "s20-j-787",
   },
   {
@@ -1612,6 +1679,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Draw X cards. X = # of cards in your hand. At the end of the turn discard cards from your hand until you have 3 or less cards in your hand.",
       "Expert [Kimimaro]: If you have no cards in your deck, you win 2 Battle Rewards. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Teshi Sendan! Distal Shrapnel!\"",
     image: "s20-j-788",
   },
   {
@@ -1629,6 +1697,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Give 1 Damage to the target.",
       "Expert [Kidomaru + \"State 2\"]: Give 1 damage to the target.",
     ],
+    flavor: "\"Got him!\"",
     image: "s20-j-789",
   },
   {
@@ -1645,6 +1714,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Heal the target. Then the target gets +2/+2 during this turn.",
       "Expert [Kidomaru]: Put 2 Growth coins on the target. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"My kumonenkin is metal that hardens upon contact with air.\"",
     image: "s20-j-790",
   },
   {
@@ -1661,6 +1731,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: The target gets -1/-1 during this turn for each Water card in your Chakra area.",
       "Expert [Guren]: Move that target to your Battle Reward area. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"You fight with me!\"",
     image: "s20-j-791",
   },
   {
@@ -1677,6 +1748,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Injure the target.",
       "Expert [Katsuyu]: Give 1 Damage to a Ninja. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Zesshi Nensan! Acid Slime!\"",
     image: "s20-j-792",
   },
   {
@@ -1694,6 +1766,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Heal the target. Ninjas in the target's Team cannot be injured or receive any Damage during this turn.",
       "Combination [\"Medical\"]: Draw 1 card.",
     ],
+    flavor: "\"I'll start medical ninjutsu!\"",
     image: "s20-j-793",
   },
   {
@@ -1711,6 +1784,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Negate the target and discard it. In that case, give 1 Damage to the user of the target.",
       "Expert [Tsunade]: You win 1 Battle Reward. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"THWAK!\"",
     image: "s20-j-794",
   },
   {
@@ -1727,6 +1801,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 Jutsu being played",
       "Effect: Change the effect of the target to the following: \"draw 1 card\".",
     ],
+    flavor: "\"So you did fiddle a bit.\"",
     image: "s20-j-795",
   },
   {
@@ -1743,6 +1818,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Search your Deck for 1 \"Puppet\" Ninja card and move it in the user's Team in any position. At the end of the turn, if the user did not have [SECRET SKILLS], move that \"Puppet\" Ninja to your hand.",
       "Expert [Chiyo]: Draw 2 cards.",
     ],
+    flavor: "\"Let's end this here and now...\"",
     image: "s20-j-796",
   },
   {
@@ -1760,6 +1836,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Move the target to its owner's hand.",
       "Expert [\"Puppet Master\"]: Discard the target instead.",
     ],
+    flavor: "\"What's the matter?\"",
     image: "s20-j-797",
   },
   {
@@ -1776,6 +1853,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Search your Deck for up to 2 \"Rinnegan\" Ninja cards with a combined Entrance cost of X or less, reveal them, and move 1 to your hand and the other into the user's Team in any position. X = Your Turn Marker.",
       "Expert [Pain (Animal Path)]: Move the bottom card of your Deck to your hand. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Art of Summoning...\"",
     image: "s20-j-798",
   },
   {
@@ -1792,6 +1870,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Move your Turn Marker up by 1.",
       "Expert [Nagato]: Move your opponent's Turn Marker down by 1. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Those eyes...said to hold the most noble of the three great ocular jutsu.\"",
     image: "s20-j-799",
   },
   {
@@ -1809,6 +1888,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Negate the target and shuffle it into its owner's Deck. If your Turn Marker is odd, negate the target user's effect text.",
       "Expert [Pain (Preta Path)]: You can move this card to your hand. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"He absorbs jutsu...\"",
     image: "s20-j-800",
   },
   {
@@ -1826,6 +1906,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: The target becomes a Stand-By Ninja. If you Turn Marker is even, your opponent cannot play Ninja cards with an even Entrance cost during their next turn.",
       "Expert [Pain (Human Path)]: Your opponent discard 1 card from their hand. (If the user of this Jutsu is [X], apply this effect when the Jutsu resolves.)",
     ],
+    flavor: "\"Do not move...\"",
     image: "s20-j-801",
   },
   // ── MISSION ──
@@ -1843,6 +1924,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Discard 1 card at random in your opponent's hand. If your opponent has the same or less cards in their hand than you, draw 2 cards.",
       "While this card is in your Chakra area, your \"Hinata Hyuga\" gets +2 Mental Power.",
     ],
+    flavor: "\"Hey... Is somebody there?\"",
     image: "s20-m-723",
   },
   {
@@ -1861,6 +1943,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Attach this card to the target. The target gets \"Byakugan\" and the following effect text: \"Valid: During the Mission Phase, you can turn 1 of your Battle Rewards face up.\"",
       "Effect: When this Mission is removed from play, discard 1 card at random from your opponent's hand.",
     ],
+    flavor: "\"You are within the boundaries of my 8 trigrams.\"",
     image: "s20-m-724",
   },
   {
@@ -1909,6 +1992,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     text: [
       "Effect: Discard any number of your Ninjas. In that case, draw 1 card for each Ninja discarded this way.",
     ],
+    flavor: "\"The gods shall punish those who don't understand the pain of others.\"",
     image: "s20-m-727",
   },
   {
@@ -1925,6 +2009,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Permanent",
       "Effect: At the start of your turn, if you have 1 or more \"Genjutsu\" Ninjas, you can look at the top card of your Deck and move it to the top or bottom of your Deck.",
     ],
+    flavor: "\"Long time no see, Sasuke.\"",
     image: "s20-m-728",
   },
   {
@@ -1942,6 +2027,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. When the target's team wins any Victory, its controller draws 1 card.",
     ],
+    flavor: "\"You're in the way.\"",
     image: "s20-m-729",
   },
   {
@@ -1958,6 +2044,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Permanent (3)",
       "Effect: During your Mission Phase, you can randomly select a card in your opponent's hand and have them reveal it. In that case, if the revealed card is a Ninja card, draw 1 card.",
     ],
+    flavor: "\"He's back, here, in this village?!\"",
     image: "s20-m-730",
   },
   {
@@ -1974,6 +2061,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Discard the target. In that case, win 1 Battle Reward and draw 1 card.",
     ],
+    flavor: "\"Behind this mask...\"",
     image: "s20-m-731",
   },
   {
@@ -1991,6 +2079,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target, then name a Ninja card. The target is considered to have that Name as long as this Mission is attached.",
     ],
+    flavor: "\"I can't... tell you apart at all...\"",
     image: "s20-m-732",
   },
   {
@@ -2007,6 +2096,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Permanent",
       "Effect: Name a Symbol. All of your cards are considered to have that Symbol (This includes all your cards in Deck, Removed from Game Pile, Discard Pile, etc.)",
     ],
+    flavor: "\"It's also known as maze mountain.\"",
     image: "s20-m-733",
   },
   {
@@ -2023,6 +2113,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Move 1 card of each Symbol the target has from your Discard Pile to your hand.",
     ],
+    flavor: "\"The Toad Sage Jiraiya falls victim to no woman's charm.\"",
     image: "s20-m-734",
   },
   {
@@ -2040,6 +2131,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: When 1 of your Ninjas is discarded, put 1 \"Book\" coin on this Mission.",
       "Effect: During your Mission Phase, if this Mission has 3 or more \"Book\" coins, you can Discard it. In that case, search your Deck for a Jutsu card, reveal it, then move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"The pursuit of happiness isn't for us...\"",
     image: "s20-m-735",
   },
   {
@@ -2057,6 +2149,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: When you discard card(s) due to the effect of 1 of your Ninja or Missions, draw 1 card and remove a coin from this Mission.",
       "Effect: When this card is discarded due to the effect of 1 of your cards, draw 1 card.",
     ],
+    flavor: "\"This is the dream vessel.\"",
     image: "s20-m-736",
   },
   {
@@ -2074,6 +2167,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: When you discard a card due to the effect of 1 of your Ninja (cards), put a coin on this card.",
       "Effect: During your Mission Phase, you can apply 1 of the following effects according to how many coins are on this card: 3+) Discard 1 card, draw 1 card. 5+) Win 1 Battle Reward.",
     ],
+    flavor: "\"I can't believe he would summon those two...\"",
     image: "s20-m-737",
   },
   {
@@ -2089,6 +2183,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     text: [
       "Effect: Move up to 3 cards from your Chakra area to your hand.",
     ],
+    flavor: "\"Seems you prepared before you came.\"",
     image: "s20-m-738",
   },
   {
@@ -2107,6 +2202,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: When this Mission card is put in play, you can pay X Chakra or Discard X cards from your hand. Then, place X+1 coins on this Mission card.",
       "Effect: The target gets +X/+X.",
     ],
+    flavor: "\"Suigetsu, are you stupid?!\"",
     image: "s20-m-739",
   },
   {
@@ -2122,6 +2218,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     text: [
       "Effect: Reveal the top 4 cards of your Deck. Then, your opponent separates the revealed cards into 2 piles. Move 1 of the piles into your hand and move the other to your Discard Pile.",
     ],
+    flavor: "\"Master Orochimaru... This is...?\"",
     image: "s20-m-740",
   },
   {
@@ -2139,6 +2236,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: During your Mission Phase, you can remove from game 3 of your \"Slug\" Ninjas to put in play 1 \"Katsuyu\" Ninja card from your Discard Pile, Chakra area, or removed from game area.",
       "Effect: During your Mission Phase, you can remove 1 of your \"Katsuyu\" Ninja from the game. In that case, move 3 \"Slug\" Ninja cards from the removed from game area into play.",
     ],
+    flavor: "\"What is this, some sort of reunion or something?\"",
     image: "s20-m-741",
   },
   {
@@ -2154,6 +2252,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     text: [
       "Effect: Discard 1 Wind card. In that case, search your Deck for 2 Wind Ninjas, reveal them, and place them in your hand.",
     ],
+    flavor: "\"Don't you ever lose... to Sakura.\"",
     image: "s20-m-742",
   },
   {
@@ -2171,6 +2270,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Target: 1 \"Male\" or \"Female Ninja\"",
       "Effect: Attach this card to the target. The target gets +0/+1 and \"Puppet Master\". When the target is removed from play, move the target to your hand.",
     ],
+    flavor: "\"The very first puppets you created.\"",
     image: "s20-m-743",
   },
   {
@@ -2187,6 +2287,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: Draw 2 cards and move 1 Wind Ninja in your Discard Pile to your hand.",
       "While this card is in your Chakra area, your Kankuro gets +2 Entrance cost.",
     ],
+    flavor: "\"What took you so long?\"",
     image: "s20-m-744",
   },
   {
@@ -2203,6 +2304,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Counter",
       "Effect: Select 1 of your opponent's Ninjas that was put in play this turn. In that case that Ninja must be sent out to attack by itself during this turn.",
     ],
+    flavor: "\"Heh...Enjoy the show...\"",
     image: "s20-m-745",
   },
   {
@@ -2218,6 +2320,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     text: [
       "Effect: If you have less Ninjas than your opponent, search your Deck for 1 \"Rain\" Ninja card, reveal it, and move it to your hand. If that Ninja has \"Sacrifice\", you can move your Turn Marker up 1.",
     ],
+    flavor: "\"From here on out, you're on your own.\"",
     image: "s20-m-746",
   },
   {
@@ -2235,6 +2338,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: When this Mission is put in play, if you have 3 or more \"Rinnegan\" and/or \"Akatsuki\" Ninjas, move 2 cards from the bottom of your Deck to your hand.",
       "Effect: Ninja cards without \"Sacrifice\" get \"Sacrifice: 1 Ninja or Client\".",
     ],
+    flavor: "\"Have I failed?\"",
     image: "s20-m-747",
   },
   {
@@ -2250,6 +2354,7 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     text: [
       "Effect: Apply the following effects according to the Symbols of the Hand cost paid for this Mission card: Fire) Discard 4 cards from the top of your opponent's Deck. Water) Move the top card of your Deck to your Chakra area. Earth) Discard 1 random card in your opponent's hand. Wind) Draw 1 card. Lightning) Your Ninjas get +2/+0 during this turn.",
     ],
+    flavor: "\"These are litmus papers that react to chakra.\"",
     image: "s20-m-748",
   },
 ];

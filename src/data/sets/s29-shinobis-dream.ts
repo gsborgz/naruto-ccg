@@ -26,6 +26,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sacrifice: 1 Ninja",
       "When this Ninja is deployed, discard your hand. In that case, move up to 2 cards from your Discard Pile to your hand.",
     ],
+    flavor: "\"Clearly, you want to take our your strongest opponents first. But no matter how you look at it, I'm the stronger one here!\"",
     image: "s29-n-5000",
   },
   {
@@ -47,6 +48,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sacrifice: Choji Akimichi + \"Chunin\" or higher Rank",
       "Valid: When this Ninja is put in play, you can give 1 Damage to target Ninja with an Entrance cost less than your Turn Marker. If that Ninja's Entrance cost is 2 or less, give it 2 Damage instead. In that case, injure this Ninja at the end of this turn.",
     ],
+    flavor: "\"I, Choji Akimichi, as the protector of the Yamanaka and Nara clans and as the protector of the Leaf village, now leave the chrysalis as a butterfly... and ascend!\"",
     image: "s29-n-5001",
   },
   {
@@ -69,6 +71,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "When this Ninja card is discarded from your hand, your opponent discards 1 Chakra.",
       "While you control 3 or more Water Ninjas, you may deploy this Ninja card from your Discard Pile.",
     ],
+    flavor: "\"Summoning Jutsu: Five Hungry Sharks!\"",
     image: "s29-n-5002",
   },
   {
@@ -111,6 +114,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "This Ninja card gets -1 Entrance cost for every 2 \"Insect\" and/or Insect Ninjas you control.",
       "[Valid | Attacker | Mission] Remove 1 coin from a card: Place an Insect Ninja coin in play with the following: [Power: 0/0 (Healthy and Injured) / Non-Unique]",
     ],
+    flavor: "\"Never underestimate your opponent... No matter how small they may seem.",
     image: "s29-n-5004",
   },
   {
@@ -132,6 +136,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Inherit",
       "When this Ninja Attacks by itself, you can pay (2). In that case, discard 1 of your opponent's Ninjas in a Team by itself.",
     ],
+    flavor: "\"I'll show you what duty... is all about.\"",
     image: "s29-n-5005",
   },
   {
@@ -154,6 +159,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "While this card is in your Deck, it is considered to have \"Name: Fukasaku\".",
       "Valid: When this Ninja is put in play, move 1 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"We need to buy some time for Naruto boy, Ma!\"",
     image: "s29-n-5006",
   },
   {
@@ -175,6 +181,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sensor",
       "[Valid | EOJ] Remove 2 \"Sharingan Eye\" Ninja cards in your Discard pile from the game: Change the effect of target Jutsu to the following: \"Remove the top 3 cards of your Deck from the game for each Ninja in the user's Team.\"",
     ],
+    flavor: "\"Itachi... Promise me that you will take care of Sasuke.\"",
     image: "s29-n-5007",
   },
   {
@@ -281,6 +288,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Burst | Inherit",
       "Valid: While injured, if this Ninja is discarded and you control 3 or more \"Taijutsu\" Ninjas, you can give 2 Damage to target opposing Ninja. Otherwise, you can give 1 Damage to the target.",
     ],
+    flavor: "\"You live only to protect Lady Hinata and to preserve the power of our clan's main household.\"",
     image: "s29-n-5013",
   },
   {
@@ -302,6 +310,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Burst | Inherit",
       "Valid: When you apply the effect of Burst, you can draw 1 card.",
     ],
+    flavor: "\"I'm not going to go back on my word... because that's my nindo. My Ninja way...\"",
     image: "s29-n-5014",
   },
   {
@@ -323,6 +332,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "When this Ninja is put in play, you can put in play 1 Naruto Uzumaki Ninja card from your hand with \"Vow\".",
       "While this Ninja is in the same team as another \"Vow\" Ninja, all \"Vow\" Ninjas get Evasive.",
     ],
+    flavor: "\"Brother Neji... I'm going to get married!\"",
     image: "s29-n-5015",
   },
   {
@@ -406,6 +416,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "When this Ninja card is discarded from your hand, you can put it in play.",
       "When this Ninja is put in play, you can discard 1 of your opponent's Chakra.",
     ],
+    flavor: "\"Looks like they left the weakling all alone.\"",
     image: "s29-n-5019",
   },
   {
@@ -449,6 +460,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Valid: Any numbers in the effect text and target of Jutsu cards used by this Ninja are increased by 1.",
       "This Ninja gains Evasive while you control both \"Fukasaku\" and \"Shima\".",
     ],
+    flavor: "\"Here goes nothing...\"",
     image: "s29-n-5021",
   },
   {
@@ -490,6 +502,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "When this Ninja card is discarded from your hand due to an effect, you can move it to your hand.",
       "The effect of [INEXHAUSTIBLE POWER] can only be used once per turn.",
     ],
+    flavor: "\"I have no interest in fighting you...\"",
     image: "s29-n-5023",
   },
   {
@@ -512,6 +525,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Desperation",
       "[EOJ] Discard 2 Water cards: Move target Water card from your Discard Pile to your hand.",
     ],
+    flavor: "\"Game over...\"",
     image: "s29-n-5024",
   },
   {
@@ -532,6 +546,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[THREE-CORNER DEADLOCK]",
       "[Valid | EOJ] (Wind): While this Ninja is on the Battlefield, heal target Ninja and it gains Shield during the turn.",
     ],
+    flavor: "\"Yes, ma'am.\"",
     image: "s29-n-5025",
   },
   {
@@ -553,6 +568,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Tracking | Sensor",
       "When this Ninja is deployed, you can move up to 2 cards from the top of your Deck to your Chakra area.",
     ],
+    flavor: "\"As you get the rhythm you discern how to win.\"",
     image: "s29-n-5026",
   },
   {
@@ -574,6 +590,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Masked (This card's Hand cost can be paid for with any Symbol.)",
       "When this Ninja is put in play, you can move 1 in-play non-Ninja card to its original owner's Chakra area. In that case, give 1 Damage to 1 injured Ninja or injure 1 Ninja.",
     ],
+    flavor: "\"You can always die. It's living that takes real courage.\"",
     image: "s29-n-5027",
   },
   {
@@ -617,6 +634,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Tracking | Sensor (This Ninja's Team can Block Ninjas with Infiltrate. In that case, it gets +1/+1 during the turn.)",
       "When this Ninja is deployed, you can search your Deck for 1 card with \"Aburame\" in it's name, reveal it, and move it to your hand.",
     ],
+    flavor: "\"Zaji... get away from him quickly.\"",
     image: "s29-n-5029",
   },
   {
@@ -660,6 +678,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Crush | Shield",
       "Valid: Gain the effect text of the Sacrificed Ninja.",
     ],
+    flavor: "\"I must fix the evil inside of you...\"",
     image: "s29-n-5031",
   },
   {
@@ -680,6 +699,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[MASKED MAN]",
       "This Ninja may become the user of Jutsu cards with \"Naruto Uzumaki\" in their Requirements and pay each specific Symbol in their costs with Wind Chakra.",
     ],
+    flavor: "\"You are weak and do not belong in this world.\"",
     image: "s29-n-5032",
   },
   {
@@ -722,6 +742,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Crush (When this Ninja wins any Victory, you win 1 Battle Reward.)",
       "When this Ninja is put in play, you can move 1 of your opponent's Ninjas to the bottom of it's original owner's Deck.",
     ],
+    flavor: "\"Hissssss...\"",
     image: "s29-n-5034",
   },
   {
@@ -743,6 +764,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sensor",
       "At the end of your turn, if 5 or more Earth cards without Revitalize were discarded from the top of your deck, you can move 1 of those cards to your hand.",
     ],
+    flavor: "\"Even if my enemy is far stronger... Even if my body should fail me... I cannot lose!!!\"",
     image: "s29-n-5035",
   },
   {
@@ -785,6 +807,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "When this Ninja is put in play, you can put in play 1 Hinata Hyuga Ninja card from your hand with \"Vow\".",
       "While this Ninja is in the same team as another \"Vow\" Ninja, if this Ninja's Team wins a Victory, it becomes an Outstanding Victory instead.",
     ],
+    flavor: "\"Okay, ready to go?\"",
     image: "s29-n-5037",
   },
   {
@@ -807,6 +830,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Infiltrate",
       "When this Ninja is put in play, move up to 3 cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"In the world of old memories, there's room for visitors.\"",
     image: "s29-n-5038",
   },
   {
@@ -849,6 +873,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[Valid | Blocker | Mission] (2): If you control more healthy Ninjas than injured Ninjas, draw 2 cards, then draw 1 card. Otherwise, only Teams with 1 or more injured Ninjas can be sent out to Battle during this turn.",
       "Valid: While injured, this Ninja gains Evasive.",
     ],
+    flavor: "\"I'm gonna be Hokage someday, believe it!\" \"Naruto, that impossible dream of yours... I don't want to see it crushed!\"",
     image: "s29-n-5040",
   },
   {
@@ -871,6 +896,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Valid: All your \"Ninja Toad\" Ninja cards get -3 Entrance cost.",
       "Valid: All your other \"Ninja Toad\" Ninjas get +2/+2.",
     ],
+    flavor: "\"Alright, these will be somewhat harsh measures, but let's try.\" \"This will be a piece of cake... believe it!\"",
     image: "s29-n-5041",
   },
   {
@@ -913,6 +939,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Your other \"Samurai\" Ninjas' effects are Valid.",
       "Your other \"Samurai\" Ninjas get +1/+1.",
     ],
+    flavor: "\"I choose to be... to be...\"",
     image: "s29-n-5043",
   },
   {
@@ -933,6 +960,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[LEAF POLICE FORCE]",
       "When this Ninja is deployed, you can discard 1 Fire card. In that case, search your Deck for 1 Fire Mission card that includes \"Clan\" in its name, reveal it, and move it to your hand.",
     ],
+    flavor: "\"It won't be useless...\"",
     image: "s29-n-5044",
   },
   {
@@ -955,6 +983,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[Attacker | Mission] (Lightning): Apply Burst of target Ninja.",
       "Valid: When the top card of your deck is removed, if it was revealed, you may reveal the next card until the end of this turn.",
     ],
+    flavor: "\"Chakra Disguise Technique!\"",
     image: "s29-n-5045",
   },
   {
@@ -977,6 +1006,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[Attacker | Mission] (2): If the top card of your Deck is a face up \"Taijutsu\" Ninja card, move it to your hand.",
       "Valid: When this Ninja Attacks, each player plays with the top card of their Deck revealed during this turn.",
     ],
+    flavor: "\"I've... become strong too!\"",
     image: "s29-n-5046",
   },
   {
@@ -998,6 +1028,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Inherit",
       "Valid: At the end of the turn, if this Ninja has \"Sharingan Eye\" and an Entrance cost of 2 or more, discard the top 2 cards of a player's Deck or place a -1/-1 coin on a Ninja.",
     ],
+    flavor: "\"Big brother... why do you always treat me like just a pest?\"",
     image: "s29-n-5047",
   },
   {
@@ -1019,6 +1050,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Inherit",
       "Valid: At the end of the turn, if this Ninja has \"Sharingan Eye\" and an Entrance cost of 2 or more, discard the top 2 cards of a player's Deck or place a -1/-1 coin on a Ninja.",
     ],
+    flavor: "\"Big brother... here is your gift.\"",
     image: "s29-n-5047b",
   },
   {
@@ -1061,6 +1093,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Crush (When this Ninja wins any Victory, you win 1 Battle Reward.)",
       "While you control 4 or more cards with \"Uchiha\" in their names, this Ninja gains Evasive.",
     ],
+    flavor: "\"What you ended up doing was empowering fools. To indulge in idiotic behavior... Nothing good comes out of that.\"",
     image: "s29-n-5049",
   },
   {
@@ -1081,6 +1114,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[THE WAY OF THE SAMURAI]",
       "When this Ninja Blocks, you can draw 1 card.",
     ],
+    flavor: "\"New eras don't come about because of swords, they're created by the people who wield them.\"",
     image: "s29-n-5050",
   },
   {
@@ -1102,6 +1136,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Tracking | Sensor (This Ninja's Team can Block Ninjas with Infiltrate. In that case, it gets +1/+1 during the turn.)",
       "Valid: You may have up to 3 Ninja names Tracked at a time. When this Ninja is removed from play, apply the effect of Tracking.",
     ],
+    flavor: "\"...\"",
     image: "s29-n-5051",
   },
   {
@@ -1124,6 +1159,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[Valid | EOJ] (Fire): Injure target opposing Ninja. At the start of the Showdown, heal the target.",
       "All your \"Anbu\" Ninja cards get -1 Entrance cost.",
     ],
+    flavor: "\"...You're my best friend and the only one I can count on. Protect the village... and the Uchiha name.\"",
     image: "s29-n-5052",
   },
   {
@@ -1146,6 +1182,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "When this Ninja is put in play, you can move 1 Parasitic Giant Insect Mission card from your Discard Pile or Chakra area to your hand.",
       "Valid: All Parasitic Giant Insect Mission cards in your hand get -1 Hand cost.",
     ],
+    flavor: "\"You see, while an ace in the hole is good... Two aces are better.\"",
     image: "s29-n-5053",
   },
   {
@@ -1187,6 +1224,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[KEEN SENSE]",
       "[Attacker | Mission] Move 1 card from the top of your opponent's Deck to their Chakra area: If your opponent has 4 or more Chakra, this Ninja gets +0/+2 during this turn.",
     ],
+    flavor: "\" I'll let you know i've trained with the great Ebisu Sensai \"",
     image: "s29-n-5055",
   },
   {
@@ -1208,6 +1246,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Desperation",
       "[Attacker | Mission] (Water), Move 1 card from the top of your opponent's Deck to their Chakra area: If your opponent has 5 or more Chakra, negate target Ninja or Client effect texts during this turn.",
     ],
+    flavor: "\" I wil protect you \"",
     image: "s29-n-5056",
   },
   {
@@ -1230,6 +1269,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Desperation | Senjutsu",
       "[Attacker | Mission] (3): Move target card from your Discard Pile to your hand.",
     ],
+    flavor: "\"We must fight you...\"",
     image: "s29-n-5057",
   },
   {
@@ -1251,6 +1291,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Revitalize",
       "[EOJ] (X): While this Ninja is on the Battlefield, move target Jutsu card with a cost of X that includes no specific Symbols from your Discard Pile to your hand.",
     ],
+    flavor: "\"I want to be a great and powerful ninja. To walk in the footsteps of the legendary kunoichi, Tsunade!\"",
     image: "s29-n-5058",
   },
   {
@@ -1294,6 +1335,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sensor (This Ninja's Team can Block Ninjas with Infiltrate. In that case, this Ninja gets +1/+1 during the turn.)",
       "All of your other \"Insect\" & Insect Ninjas get +1/+1.",
     ],
+    flavor: "\"I think it would be easier for a thief to enter the Orphanage.\"",
     image: "s29-n-5060",
   },
   {
@@ -1316,6 +1358,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Valid: When this Ninja becomes the user of a Water Jutsu, reduce its cost by (Water), if possible.",
       "When this Ninja is put in play, if you have 3 or less cards in your hand, draw card(s) until you have 4 cards in your hand.",
     ],
+    flavor: "\"That settles it, I've actually found a bigger idiot than my brother.\"",
     image: "s29-n-5061",
   },
   {
@@ -1337,6 +1380,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Attacker | Mission] Discard 7 cards from the top of your Deck: Give 1 Damage to target opposing Ninja. You may use this effect as many times as you like.",
     ],
+    flavor: "\"Now then...\"",
     image: "s29-n-5062",
   },
   {
@@ -1400,6 +1444,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect text of your other \"Samurai\" Ninjas cannot be negated.",
       "Your other \"Samurai\" Ninjas get +1/+1.",
     ],
+    flavor: "\"...Yes, General.\"",
     image: "s29-n-5065",
   },
   {
@@ -1442,6 +1487,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Attacker | Mission] Discard 1 of your \"Insect\" or Insect Ninjas: Place a Poison coin on target Ninja. If the target's Entrance cost is 2 or less, injure it.",
     ],
+    flavor: "\"Those bugs again...\"",
     image: "s29-n-5067",
   },
   {
@@ -1463,6 +1509,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Valid: Your other \"Taijutsu\" Ninjas get +1/+1.",
       "Valid: All your \"Taijutsu\" Ninjas get \"Surge\".",
     ],
+    flavor: "\"I was going to say nice to see you... but really, mid-air!?\"",
     image: "s29-n-5068",
   },
   {
@@ -1483,6 +1530,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "[SENJU CLAN]",
       "When this Ninja is sent out to Attack, you can discard 1 card. In that case, move up to 2 Water cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Grown-ups are idiots. They need to sit down with one another and reach a truce.\"",
     image: "s29-n-5069",
   },
   // ── JUTSU ──
@@ -1500,6 +1548,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja or 2 Stand-By Ninjas",
       "Effect: The target becomes a Stand-By Ninja. Then, place a Sticky coin on the target. Ninjas with 1 or more Sticky coins must be organized into the same Team, if possible. Teams with 4 or more Ninjas with 1 or more Sticky coins cannot be sent out to battle.",
     ],
+    flavor: "\"Earth Style: Mud Fall Jutsu!\"",
     image: "s29-j-5000",
   },
   {
@@ -1516,6 +1565,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Discard 1 of your Insect Ninja. In that case, discard the target.",
     ],
+    flavor: "\"Once it finds a host, it absorbs chakra and grows until it inevitably explodes.\"",
     image: "s29-j-5001",
   },
   {
@@ -1532,6 +1582,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: Injure or give X Damage to the target, where X = the number of Jutsu cards with \"Requirements: 'Samurai'\" in your Discard Pile.",
     ],
+    flavor: "\"Imposters!\"",
     image: "s29-j-5002",
   },
   {
@@ -1549,6 +1600,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Remove the target from game.",
     ],
+    flavor: "\"I learned that one from my uncle Asuma!\"",
     image: "s29-j-5003",
   },
   {
@@ -1566,6 +1618,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: Injure the target. Then, you can discard 1 card. In that case, give 1 Damage to the target.",
       "Expert [The Second Hokage]: Change the target to \"1 Ninja on the Battlefield\".",
     ],
+    flavor: "\"Flying Thunder God Slash!\"",
     image: "s29-j-5004",
   },
   {
@@ -1582,6 +1635,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Give 1 Damage to the target. If you control 3 or more Ninjas without effect text, the target becomes a Stand-by Ninja.",
     ],
+    flavor: "\"This is it. Please die.\"",
     image: "s29-j-5005",
   },
   {
@@ -1599,6 +1653,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: Give 2 Damage to the target.",
       "Expert [Madara Uchiha]: Give 1 Damage to every Ninja opposing the user.",
     ],
+    flavor: "\"Fire Style: Great Fire Annihilation!\"",
     image: "s29-j-5006",
   },
   {
@@ -1616,6 +1671,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: Negate the target.",
       "Expert [Mifune]: The Power of the target's user becomes 0/0 during this turn.",
     ],
+    flavor: "\"Without your hand signs, your Jutsu is useless against me.",
     image: "s29-j-5007",
   },
   {
@@ -1632,6 +1688,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Deal 1 Damage to the target. While you control 4 or more \"Taijutsu\" Ninjas, deal 2 damage instead.",
     ],
+    flavor: "\"Give up on being a Ninja!\"",
     image: "s29-j-5008",
   },
   {
@@ -1649,6 +1706,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: The target gains Evasive until the end of the turn.",
       "Expert [The Second Mizukage]: Discard 1 card. In that case, move this Jutsu card to your hand.",
     ],
+    flavor: "\"Please listen carefully.\"",
     image: "s29-j-5009",
   },
   {
@@ -1665,6 +1723,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Move the target to your Village as a non-Ninja card attached to the user. While that card is in-play, the user gains its effect text. When it is removed from play, return it to the owner's Village.",
     ],
+    flavor: "\"My friend gave his life to save me. Along with his tears of blood, the mangekyo was born.\"",
     image: "s29-j-5010",
   },
   {
@@ -1681,6 +1740,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Requirements: Ninja without effect text",
       "Effect: Charge 1 card. In that case, draw 2 cards.",
     ],
+    flavor: "\"This is it. Please die.\"",
     image: "s29-j-5011",
   },
   {
@@ -1697,6 +1757,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: The target becomes a Stand-By Ninja and cannot be sent out to Battle during the next turn.",
     ],
+    flavor: "\"Using chakra that can only be harnessed through taijutsu, he's cloaked himself with the same type of feathers.\"",
     image: "s29-j-5012",
   },
   {
@@ -1713,6 +1774,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Remove the target from the game. At the end of the EOJ, your opponent flips a coin. If heads, move the target to it's original owner's Village with it's effect text negated during the turn.",
     ],
+    flavor: "\"Hmm... Lightning Style...\"",
     image: "s29-j-5013",
   },
   {
@@ -1727,6 +1789,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: If the higher cost of this Jutsu was paid, negate and discard 1 Jutsu. Otherwise, discard 1 of your opponent's in-play non-Ninja cards.",
     ],
+    flavor: "\"This might suit you well.\"",
     image: "s29-j-5014",
   },
   {
@@ -1744,6 +1807,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: Injure the target.",
       "Expert [Entrance cost of 5 or more]: Give 1 Damage to the target.",
     ],
+    flavor: "\"Watch your back, Naruto!\"",
     image: "s29-j-5015",
   },
   {
@@ -1760,6 +1824,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 opposing Ninja",
       "Effect: Flip a coin. If heads, move the target to the top of it's owner's Deck. If tails, move the target to it's owner's hand and draw 1 card.",
     ],
+    flavor: "\"This might suit you well.\"",
     image: "s29-j-5016",
   },
   {
@@ -1776,6 +1841,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Requirements: Water",
       "Effect: Heal the user, then the user gets +2/+2 during this turn.",
     ],
+    flavor: "\"Water Style: Raging Waves!\"",
     image: "s29-j-5017",
   },
   {
@@ -1793,6 +1859,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: You can pay (2) to injure the target. Then, give 1 Damage to the target.",
       "Expert [Suigetsu Hozuki, Mangetsu Hozuki, or The Second Mizukage]: Move this Jutsu to your hand.",
     ],
+    flavor: "\"Move back Karin... or don't.\"",
     image: "s29-j-5018",
   },
   // ── MISSION ──
@@ -1809,6 +1876,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Search your Deck for 1 Ninja card that shares a Symbol with the card used to pay for this card's Hand cost and an Entrance cost less than or equal to your Turn Marker. Then, reveal it and move it to your hand. In that case, draw 1 card if you searched for a Ninja without a Lightning Symbol.",
     ],
+    flavor: "\"Wow... is that really Naruto?\"",
     image: "s29-m-5000",
   },
   {
@@ -1824,6 +1892,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Reveal the top 5 cards of your Deck. Your opponent selects 2 of the Lightning cards revealed this way. Move 1 of those cards to your hand. Then, move the rest of the revealed cards to the bottom of your Deck in any order.",
     ],
+    flavor: "\"Sorry... I was late.\"",
     image: "s29-m-5001",
   },
   {
@@ -1845,6 +1914,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Cloud) Move 1 card from your Discard Pile to your Chakra area.",
       "Stone) Place a -1/-1 coin on a Ninja.",
     ],
+    flavor: "\"Wait for my signal...\"",
     image: "s29-m-5002",
   },
   {
@@ -1860,6 +1930,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Discard 1 \"Puppet\" Ninja card from your hand. In that case, draw 3 cards.",
     ],
+    flavor: "\"He spent all his time working on his craft.\"",
     image: "s29-m-5003",
   },
   {
@@ -1875,6 +1946,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Draw 2 cards, then discard 1 card. In that case, draw 1 card.",
     ],
+    flavor: "\"Maybe if we fuse Jugo's cells, we can save him.\"",
     image: "s29-m-5004",
   },
   {
@@ -1892,6 +1964,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 Ninja",
       "Effect: Negate the effect text of the target. When your opponent puts a Ninja in play except by deployment, you can draw 1 card. In that case, negate this Mission's effect text during the turn.",
     ],
+    flavor: "\"Looks like it's time to go.\"",
     image: "s29-m-5005",
   },
   {
@@ -1907,6 +1980,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Search your Deck for 1 \"Thief\" Ninja card or Client card and move it to your hand.",
     ],
+    flavor: "\"We only do what is best for us.\"",
     image: "s29-m-5006",
   },
   {
@@ -1924,6 +1998,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "1+) Draw 4 cards.",
       "2+) Move 1 card from your Chakra area to your hand.",
     ],
+    flavor: "\"How about we kill some time while the two brothers finish up...\"",
     image: "s29-m-5007",
   },
   {
@@ -1939,6 +2014,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Draw 2 cards. Then, if you control 2 or more \"Insect\" Ninjas, place 2 Insect Ninja coins in play with the following: \"[Power: 0/0 (Healthy and Injured) / Non-Unique]\".",
     ],
+    flavor: "\"You were like an older brother to me. I wanted a keepsake from you, so I nurtured and bred those venomous beetles.\"",
     image: "s29-m-5008",
   },
   {
@@ -1955,6 +2031,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place X +1/+1 coins on the target, where X = the number of cards in your Discard Pile that include \"Make-Out\" in their names. If 2 or more of those cards have different names, draw 2 cards.",
     ],
+    flavor: "\"OH MY...\"",
     image: "s29-m-5009",
   },
   {
@@ -1971,6 +2048,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Permanent",
       "Effect: Your Ninjas with \"Uchiha\" in their names get +1/+1. Additionally, your Ninja cards with \"Uchiha\" in their names get -1 Entrance cost. This effect cannot be duplicated.",
     ],
+    flavor: "\"The Uchihas are strong and proud shinobi.\"",
     image: "s29-m-5010",
   },
   {
@@ -1986,6 +2064,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Search your Deck for 1 \"Taijutsu\" Ninja card.",
     ],
+    flavor: "\"Since we both seek to master taijutsu, please fight with me!\" \"To be honest, I've wanted to fight you.\"",
     image: "s29-m-5011",
   },
   {
@@ -2002,6 +2081,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: Place this Mission card in your Village as an Insect Ninja with the following:",
       "\"[Power 5/0 (Healthy and Injured) / Entrance cost: 0 / Guardian / Non-Unique] [Valid: When this Ninja is removed from play, you can place 2 Insect Ninja coins in play with the following: \"[Power: 0/0 (Healthy and Injured) / Non-Unique]\"]\". This effect cannot be duplicated.",
     ],
+    flavor: "\"We face them with full strength!\"",
     image: "s29-m-5012",
   },
   {
@@ -2019,6 +2099,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: Ninjas cannot be healed.",
       "[Attacker | Mission] Injure 1 Ninja you control: Your opponent injures 1 Ninja they control.",
     ],
+    flavor: "\"This mask also protects me.  Even with my resistence, I would not be left unharmed.\"",
     image: "s29-m-5013",
   },
   {
@@ -2034,6 +2115,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Draw 1 card. Then, if you paid the Hand cost of this card with a \"Samurai\" Ninja card, draw 2 cards.",
     ],
+    flavor: "\"The place is guarded from all angles... Jugo, use the birds to find an opening.\"",
     image: "s29-m-5014",
   },
   {
@@ -2049,6 +2131,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Your Teams with 3 or more Mental Power can only be blocked by Teams with 3 or more Mental Power during this turn.",
     ],
+    flavor: "\"We have no other choice, we must do this for our kids.\"",
     image: "s29-m-5015",
   },
   {
@@ -2065,6 +2148,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Counter Permanent (2)",
       "Effect: Players cannot discard cards from their hand due to card effects.",
     ],
+    flavor: "\"There is a great deal of responsibility on our shoulders, because we are the eyes for the Allied Shinobi Forces!\"",
     image: "s29-m-5016",
   },
   {
@@ -2081,6 +2165,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "While your opponent has 5 or more Battle Rewards, this Mission card gets -1 Hand cost.",
       "Effect: Move 2 cards from the bottom of your Deck to your hand. Then, charge 1 card. If you charged a non-Ninja card due to this effect, place a -1/-1 coin on 1 Ninja.",
     ],
+    flavor: "\"In this world, those who break the rules are scum!\"",
     image: "s29-m-5017",
   },
   {
@@ -2097,6 +2182,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Counter",
       "Effect: Draw 2 cards. Then, both players can shake hands. In that case, both players draw 2 cards.",
     ],
+    flavor: "\"Congradulations to Jared, Cody, and Ethan on your 3v3 Tournament win.\"",
     image: "s29-m-5018",
   },
   {
@@ -2114,6 +2200,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Target: 1 Water + \"Chunin\" or higher Rank Ninja you control",
       "Effect: Move the target and 1 of your opponent's in-play cards to their owner's Chakra area.",
     ],
+    flavor: "\"I knew I had to fight, but I didn't think it would be against you, Kakashi!\"",
     image: "s29-m-5019",
   },
   {
@@ -2130,6 +2217,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Revitalize",
       "Effect: Shuffle 5 cards from your Discard Pile into your Deck. In that case, if those cards were the same type, draw 2 cards. Otherwise, draw 1 card.",
     ],
+    flavor: "\"Lay the flowers down on your father's tombstone.\"",
     image: "s29-m-5020",
   },
   {
@@ -2145,6 +2233,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Move up to 2 cards from your Removed From Game area to your hand.",
     ],
+    flavor: "\"Take that back, Naruto!\"",
     image: "s29-m-5021",
   },
   // ── CLIENT ──
@@ -2162,6 +2251,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: When you would Sacrifice this Client for a Ninja card with an Entrance Cost of 3 or less, move this card to your hand instead.",
     ],
+    flavor: "\"If I have to sacrifice myself for peace then so be it.\"",
     image: "s29-c-5000",
   },
   {
@@ -2179,6 +2269,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: At the start of your turn, if you have no cards in your hand, draw 1 card.",
       "At the end of your turn, if you have 8 or more Chakra, you can draw 1 card.",
     ],
+    flavor: "\"I only do what is right for my Nation.\"",
     image: "s29-c-5001",
   },
   {
@@ -2195,6 +2286,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: When this Client is put in play, flip a Ninja Blade coin; if it's heads, you can deploy 1 additional Ninja during the turn.",
     ],
+    flavor: "\"Do you have somebody precious to you?\"",
     image: "s29-c-5002",
   },
   {
@@ -2211,6 +2303,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "When you deploy a Ninja, if that Ninja has \"Uchiha\" in its name, draw 1 card. Then, you can place a -1/-1 coin on a Ninja or Discard the top 2 cards of a player's Deck.",
     ],
+    flavor: "\"It was always his dream to become Hokage.\"",
     image: "s29-c-5003",
   },
   {
@@ -2228,6 +2321,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
       "Effect: When this Client is put in play, draw 1 card.",
       "When you put in play a \"Female\" Ninja except by deployment, you can draw 1 card.",
     ],
+    flavor: "\"You cannot erase the past, but you can help create the future!\"",
     image: "s29-c-5004",
   },
   {
@@ -2244,6 +2338,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "[Attacker | Mission] Reveal the top card of your Deck: If the revealed card has an Earth or Fire Symbol, place it in your hand. In that case, discard 1 card from your hand. Otherwise, return it to the top of your Deck.",
     ],
+    flavor: "\"If you help me out, you will make so much money.\"",
     image: "s29-c-5005",
   },
   {
@@ -2260,6 +2355,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "When you draw any cards outside your Draw Phase, you can charge 1 card. In that case, draw 1 card.",
     ],
+    flavor: "\"The boss says you want to help us out.\"",
     image: "s29-c-5006",
   },
   {
@@ -2276,6 +2372,7 @@ export const S29_SHINOBIS_DREAM: Card[] = [
     text: [
       "Effect: Cards in your Chakra area cannot be affected by the effects of your opponent's Ninja or Mission cards.",
     ],
+    flavor: "\"What a waste... I was in the mood to cut something.\"",
     image: "s29-c-5007",
   },
 ];

@@ -22,6 +22,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     injured: { combat: 3, support: 1 },
     attributes: ["Ninjutsu", "Weapon"],
     text: [],
+    flavor: "\"Iruka sensei!\" \"You're as restless as always.\"",
     image: "s05-n-186",
   },
   {
@@ -43,6 +44,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "When this Ninja is put in play, draw 1 card.",
       "Valid: Every \"Akatsuki\" Ninja in your opponent's hand gets -1 Entrance cost.",
     ],
+    flavor: "\"They want me, don't they?\"",
     image: "s05-n-187",
   },
   {
@@ -63,6 +65,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Memory of Despair]",
       "Valid: During the turn that this Ninja is moved to your Chakra area by the effect of \"Growth,\" every \"Itachi Uchiha\" in your hand gets -2 Entrance cost.",
     ],
+    flavor: "\"Why are you doing this ...? Itachi!!\"",
     image: "s05-n-188",
   },
   {
@@ -83,6 +86,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Errand]",
       "When this Ninja is sent out to Battle, draw 1 card. Then, move 1 of the cards in your hand to the top of your Deck.",
     ],
+    flavor: "\"I have a good idea! I'll take this for Sasuke later.\"",
     image: "s05-n-189",
   },
   {
@@ -100,6 +104,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     injured: { combat: 2, support: 1 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"Number 102, stand up ... You fail.\"",
     image: "s05-n-190",
   },
   {
@@ -120,6 +125,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Revenge]",
       "Valid: While you have 1 or more \"Special Jonin\" or higher Rank Ninjas in your Discard Pile, this Ninja gets +1/+1.",
     ],
+    flavor: "\"I vow ... to avenge you.\"",
     image: "s05-n-191",
   },
   {
@@ -140,6 +146,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Sharingan vs. Sharingan]",
       "While this Ninja is in your hand, if your opponent has 1 or more \"Akatsuki\" Ninjas in their Village, this Ninja can be put in play and placed in any Team of your choice during their Mission Phase.",
     ],
+    flavor: "\"His eyes have remained unchanged ...\"",
     image: "s05-n-192",
   },
   {
@@ -160,6 +167,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Countermeasure against the Sharingan]",
       "Valid: While your opponent has 1 or more Ninjas with \"Sharingan Eye\" in play, this Ninja gets +1/+1.",
     ],
+    flavor: "\"I am the handsome devil of the Leaf Village ... Might Guy!!\"",
     image: "s05-n-193",
   },
   {
@@ -180,6 +188,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Reliable Comrade]",
       "Valid: While this Ninja is in the same Team as \"Kurenai Yuhi,\" it gets +1/+0.",
     ],
+    flavor: "\"Kurenai ... You took too much time.\"",
     image: "s05-n-194",
   },
   {
@@ -200,6 +209,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Reliable Comrade]",
       "Valid: While this Ninja is in the same Team as \"Asuma Sarutobi,\" it gets +0/+1.",
     ],
+    flavor: "\"Don't be silly. I'm just getting dumplings for Anko.\"",
     image: "s05-n-195",
   },
   {
@@ -220,6 +230,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Combination]",
       "Valid: When this Ninja is sent out to Battle with an \"Animal\" Ninja in the same Team, it gets +1/+1 during the turn.",
     ],
+    flavor: "\"Kuromaru, let's go!\"",
     image: "s05-n-196",
   },
   {
@@ -241,6 +252,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "If you have \"Tsume Inuzuka\" in play, this Ninja is not included in the \"1 Ninja per turn\" restriction.",
       "Valid: This Ninja cannot be sent out to Battle by itself.",
     ],
+    flavor: "\"Yeah!\"",
     image: "s05-n-197",
   },
   {
@@ -282,6 +294,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Senior Adviser]",
       "Valid: All your in-play \"Leaf\" Ninjas get +1/+0.",
     ],
+    flavor: "\"We need the Fifth Hokage at this moment!\"",
     image: "s05-n-199",
   },
   {
@@ -302,6 +315,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Senior Adviser]",
       "Valid: All your in-play \"Leaf\" Ninjas get +0/+1.",
     ],
+    flavor: "\"We're in need of a reliable, strong leader.\"",
     image: "s05-n-200",
   },
   {
@@ -322,6 +336,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Legendary Sitting Duck]",
       "Every time your opponent flips a Ninja Blade coin(s) on a single occasion, the first result is always considered to be heads.",
     ],
+    flavor: "\"Alright! With this money, I'll not only pay off all my debts but also completely reverse the situation!!\"",
     image: "s05-n-201",
   },
   {
@@ -342,6 +357,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Mysterious Man from the Hidden Mist Valley]",
       "Valid: When this Ninja is sent out to Attack, you can select and discard up to 2 of your opponent's Chakras at the end of the turn.",
     ],
+    flavor: "\"I'm Kisame Hoshigaki ... Glad to get acquainted with you.\"",
     image: "s05-n-202",
   },
   {
@@ -362,6 +378,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[True Heir to the Sharingan]",
       "If your opponent does not have any Ninjas with \"Sharingan Eye\" in play, this Ninja cannot receive any Damage during the Showdown.",
     ],
+    flavor: "\"Only a Sharingan user who has the same blood as mine can defeat me.\"",
     image: "s05-n-203",
   },
   {
@@ -382,6 +399,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Master and Pupil]",
       "While this Ninja is in your hand and your Village has \"Naruto Uzumaki\" in injured status, this Ninja gets -1 Entrance cost.",
     ],
+    flavor: "\"You pervy sage!\" \"Stop calling me by that name in front of others!! OK?\"",
     image: "s05-n-204",
   },
   {
@@ -402,6 +420,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Mastering a Secret Technique]",
       "Valid: While this Ninja is injured, if it is sent out to Battle and opposed, you can flip a Ninja Blade coin. If the result is heads, return 1 \"Rasengan\" Jutsu card in your Chakra area or your Discard Pile to its original owner's hand.",
     ],
+    flavor: "\"Compress ... and ... sustain the Chakra!!!.\"",
     image: "s05-n-205",
   },
   {
@@ -422,6 +441,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Rivalry in Love]",
       "Valid: While this Ninja is in the same Team as \"Sasuke Uchiha,\" it gets +0/+1.",
     ],
+    flavor: "\"I won't lose to you... Not anymore, Ino.\" \"No matter what happens, I won't lose to you either, Sakura, okay?\"",
     image: "s05-n-206",
   },
   {
@@ -442,6 +462,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Building a Barricade]",
       "When this Ninja is put in play, your opponent cannot use any Mission cards during the following turn.",
     ],
+    flavor: "\"This is my grandfather's room ...\"",
     image: "s05-n-207",
   },
   {
@@ -462,6 +483,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Medical Ninjutsu]",
       "Valid: When this Ninja is sent out to Block, you can heal 1 of your in-play Ninjas at the end of the turn.",
     ],
+    flavor: "\"You're his Jonin, aren't you? ... A word. Over here.\"",
     image: "s05-n-208",
   },
   {
@@ -483,6 +505,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "When this Ninja is put in play, draw 1 card.",
       "Valid: Discard this Ninja and draw 1 card at the end of the turn it is put in play.",
     ],
+    flavor: "\"Tsunade, could this be ...\"",
     image: "s05-n-209",
   },
   {
@@ -504,6 +527,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "When this Ninja is put in play, draw 1 card.",
       "Valid: Discard this Ninja and draw 1 card at the end of the turn it is sent out to Battle and opposed.",
     ],
+    flavor: "\"That's why I'm determined to become Hokage ...\"",
     image: "s05-n-210",
   },
   {
@@ -524,6 +548,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Attendant]",
       "Valid: While this Ninja is in play, the card text of your in-play \"Tsunade\" is negated.",
     ],
+    flavor: "\"... because I am your attendant.\"",
     image: "s05-n-211",
   },
   {
@@ -545,6 +570,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Valid: This Ninja cannot be the user of Jutsu cards.",
       "Valid: During the Mission Phase that you deployed either \"Tsunade\" or \"Shizune,\" you can deploy an additional Ninja.",
     ],
+    flavor: "\"Oink\"",
     image: "s05-n-212",
   },
   {
@@ -566,6 +592,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Valid: This Ninja cannot be the user of Jutsu cards.",
       "Valid: Every \"Ninja Toad\" Ninja in your hand gets -1 Entrance cost.",
     ],
+    flavor: "\"This is the first time I've been summoned ...\"",
     image: "s05-n-213",
   },
   {
@@ -586,6 +613,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[One Mistake after Another]",
       "When this Ninja is put in play, you can move 1 in-play \"Permanent\" Mission card to its original owner's Chakra area.",
     ],
+    flavor: "\"Then, our brilliant scheme was known from the beginning!\"",
     image: "s05-n-214",
   },
   {
@@ -607,6 +635,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "When this ninja is sent out to Battle and opposed, your opponent moves 1 of the cards in their hand to the top of their Deck.",
       "When this Ninja's Team is Defeated or Completely Defeated, your opponent draws 2 cards.",
     ],
+    flavor: "\"It seems I need to teach you a lesson!!\"",
     image: "s05-n-215",
   },
   {
@@ -627,6 +656,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Impact of the Jutsu]",
       "While this Ninja is the Head Ninja, the Head Ninja Battling against it uses its Injured status values when calculating Team Power during the Showdown.",
     ],
+    flavor: "\"I've severed some of your biceps, rectus and femoris muscles.\"",
     image: "s05-n-216",
   },
   {
@@ -647,6 +677,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Deal]",
       "When this Ninja is put in play, your opponent can draw 1 card. If they choose to draw, you win 1 Battle Reward after the draw. If they do not, you can select up to 2 of the cards in their hand at random and discard them.",
     ],
+    flavor: "\"... I'll revive your brother and the man you dearly loved.\"",
     image: "s05-n-217",
   },
   {
@@ -668,6 +699,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "This Ninja is put in play in injured status.",
       "Valid: Heal this Ninja at the end of the turn it is put in play.",
     ],
+    flavor: "\"Oh, darn! My Jutsu doesn't work right ...\"",
     image: "s05-n-218",
   },
   {
@@ -689,6 +721,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "This Ninja gets +1/+0 during the turn it is put in play.",
       "While you have 2 or more injured Ninjas in play, this Ninja gets -2/+0.",
     ],
+    flavor: "\"I'm going to destroy you jerks, here and now!!\"",
     image: "s05-n-219",
   },
   {
@@ -709,6 +742,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Confrontation after a Long Separation]",
       "This Ninja cannot be put in play unless you have \"Jiraiya\" in play. While this Ninja is in your hand and either player has a \"Snake\" or \"Slug\" Ninja in play, this Ninja's Entrance cost becomes 0.",
     ],
+    flavor: "\"Good to see some old familiar faces.\"",
     image: "s05-n-220",
   },
   {
@@ -729,6 +763,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Risky Bet]",
       "Valid: At the beginning of your turn, if you do not have \"Orochimaru\" in your Village, discard 1 of your in-play Ninjas except this Ninja.",
     ],
+    flavor: "\"Do you want to get swallowed?\"",
     image: "s05-n-221",
   },
   {
@@ -750,6 +785,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "This Ninja cannot be put in play unless you have \"Tsunade\" in play.",
       "Valid: When this Ninja is discarded due to Damage, return it to its original owner's hand.",
     ],
+    flavor: "\"Yes ... ma'am.\"",
     image: "s05-n-222",
   },
   {
@@ -770,6 +806,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "[Debts]",
       "Valid: When this Ninja is put in play, draw 2 cards. At the end of the same turn, move 2 of the cards in your hand to the bottom of your Deck.",
     ],
+    flavor: "\"Don't tell me that the money is ...\" \"Yes! Freshly borrowed!\"",
     image: "s05-n-223",
   },
   // ── JUTSU ──
@@ -787,6 +824,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn.",
     ],
+    flavor: "\"Severe Leaf Hurricane!\"",
     image: "s05-j-173",
   },
   {
@@ -803,6 +841,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: (1) User, (2) 1 of your Teams",
       "Effect: Place target (1) as the Head Ninja in target (2).",
     ],
+    flavor: "\"Dynamic Entryyyyy!!!\"",
     image: "s05-j-174",
   },
   {
@@ -819,6 +858,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Ninja in 1 of the Teams being sent out to Battle.",
       "Effect: Flip a Ninja Blade coin once for each target. Return every Ninja that got heads to the top of its original owner's Deck.",
     ],
+    flavor: "\"You two are already trapped in my 'stomach'!\"",
     image: "s05-j-175",
   },
   {
@@ -835,6 +875,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Ninja Battling against the user without \"Sharingan Eye\"",
       "Effect: The target gets -2/-2 during this turn.",
     ],
+    flavor: "\"I'll show you the real power of my Sharingan, or ... my bloodline trait!\"",
     image: "s05-j-176",
   },
   {
@@ -847,10 +888,11 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
-      "Requirements: \"Itachi Uchihae\"",
+      "Requirements: \"Itachi Uchiha\"",
       "Target: 1 Ninja",
       "Effect: Return the target to the top of its original owner's Deck. Then, look at all the cards in your opponent's hand to return every Ninja with the same name as the target to the top of its original owner's Deck.",
     ],
+    flavor: "\"In the Tsukuyomi world, I control everything, including space, time, ... and even mass.\"",
     image: "s05-j-177",
   },
   {
@@ -867,6 +909,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Negate and discard the target. Then, look at all the cards in your opponent's hand to discard every Jutsu card with the same name as the target.",
     ],
+    flavor: "\"I even had to use Amaterasu ...\"",
     image: "s05-j-178",
   },
   {
@@ -883,6 +926,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja with an Entrance cost of X or less",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Ice Style: Black Dragon Blizzard!\"",
     image: "s05-j-179",
   },
   {
@@ -898,6 +942,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. In addition, the target gets an additional +1/+0 for each \"Ice Style: Tsubame Snowstorm\" Jutsu card in your Discard Pile.",
     ],
+    flavor: "\"Ice Style: Tsubame Snowstorm!\"",
     image: "s05-j-180",
   },
   {
@@ -908,10 +953,11 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     number: "181",
     set: "S05",
     rarity: "Uncommon",
-    cost: { symbols: [], generic: "X" },
+    cost: { symbols: [], generic: "X", xCount: 2 },
     text: [
       "Effect: Discard the top X cards of your opponent's Deck. X (the Jutsu cost) can only be paid by Chakras with the \"Water\" symbol.",
     ],
+    flavor: "\"Ice Style: Wolf-Fang Avalanche Jutsu!!\"",
     image: "s05-j-181",
   },
   {
@@ -927,6 +973,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Team",
       "Effect: The target skips the Showdown this turn.",
     ],
+    flavor: "\"Ice Style: Snowy White Whale!\"",
     image: "s05-j-182",
   },
   {
@@ -943,6 +990,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target gets -1/-1 during this turn.",
     ],
+    flavor: "\"It's made up of adhesive threads containing Chakra ...\"",
     image: "s05-j-183",
   },
   {
@@ -958,6 +1006,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Requirement: \"Kisame Hoshigaki\"",
       "Effect: Discard the top 3 cards of your opponent's Deck.",
     ],
+    flavor: "\"My great sword 'Shark Skin' doesn't cut ... It scrapes!\"",
     image: "s05-j-184",
   },
   {
@@ -974,6 +1023,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Water Style ... Water Shark Bomb Jutsu!\"",
     image: "s05-j-185",
   },
   {
@@ -990,6 +1040,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: The target gets +0/+X during this turn. X = the number of Jutsu cards in your Discard Pile.",
     ],
+    flavor: "\"I might name this Jutsu ... Sakura Blizzard Jutsu!\"",
     image: "s05-j-186",
   },
   {
@@ -1006,6 +1057,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja with a lower Entrance cost than the user",
       "Effect: Flip a Ninja Blade coin. If it's heads, discard the target.",
     ],
+    flavor: "\"Now it's ... over!\"",
     image: "s05-j-187",
   },
   {
@@ -1022,6 +1074,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Return the target to its original owner's hand.",
     ],
+    flavor: "\"Wind Style ... Infinite Sand Storm Devastation!\"",
     image: "s05-j-188",
   },
   {
@@ -1037,6 +1090,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Chakra in both player's Chakra area with the \"Fire\" symbol",
       "Effect: Return the target to its original owner's Deck and shuffle it.",
     ],
+    flavor: "\"Alright. It should be safe for now.\"",
     image: "s05-j-189",
   },
   {
@@ -1052,6 +1106,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Select and discard up to X number of your opponent's Chakras. X = the target's Entrance cost.",
     ],
+    flavor: "\"The device absorbs the wearer's Chakra to create an extremely strong barrier. You can't remove or destroy it ... with any means.\"",
     image: "s05-j-190",
   },
   {
@@ -1068,6 +1123,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. In addition, it gets +X/+X.",
     ],
+    flavor: "\"What??\"",
     image: "s05-j-191",
   },
   {
@@ -1084,6 +1140,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 \"Genin\" Ninja Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"A tap on the forehead ......?\"",
     image: "s05-j-192",
   },
   {
@@ -1099,6 +1156,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: During this turn, if the target receives Damage by your opponent's Jutsu cards, negate the Damage and give 1 Damage to each user of those Jutsu cards.",
     ],
+    flavor: "\"Ninja Art: Needle Jizo!!\"",
     image: "s05-j-193",
   },
   {
@@ -1115,6 +1173,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn.",
     ],
+    flavor: "\"She still has that extraordinary power ... Be aware that a single blow can finish us.\"",
     image: "s05-j-194",
   },
   {
@@ -1131,6 +1190,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: If the user is in the same Team as \"Gamabunta,\" give 2 Damage to the target.",
     ],
+    flavor: "\"Gamabunta, I need oil!!\"",
     image: "s05-j-195",
   },
   {
@@ -1147,6 +1207,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets -X/-X during this turn. X = the user's Support value.",
     ],
+    flavor: "\"This boy can use Medical Ninjutsu ...\"",
     image: "s05-j-196",
   },
   {
@@ -1163,6 +1224,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target.",
     ],
+    flavor: "\"You're my first prey!!\"",
     image: "s05-j-197",
   },
   {
@@ -1179,6 +1241,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Stand-By Ninja",
       "Effect: Place a Ninja Blade coin (symbolizing a Poison coin) on the target. A Ninja with a Poison coin cannot be sent out to Battle.",
     ],
+    flavor: "\"She's the only one who can prepare tasteless and odorless drugs against Ninja.\"",
     image: "s05-j-198",
   },
   {
@@ -1195,6 +1258,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Reveal the top 3 cards of your Deck. Give 1 Damage to the target for each Jutsu or Mission card among them. Return the cards to the top of the Deck. Then, shuffle your deck.",
     ],
+    flavor: "\"I'll stop you!\"",
     image: "s05-j-199",
   },
   {
@@ -1210,6 +1274,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin. If it's heads, give 1 Damage to the target.",
     ],
+    flavor: "\"Loaded needles!?\"",
     image: "s05-j-200",
   },
   {
@@ -1225,6 +1290,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: X number of Ninjas Battling against the user",
       "Effect: Flip a Ninja Blade coin twice for each target. If you get heads both times, discard that Ninja. X (the Jutsu cost) can only be paid by Chakras with the \"Wind\" symbol.",
     ],
+    flavor: "\"Even a single breath of this toxic air will risk my life ......\"",
     image: "s05-j-201",
   },
   {
@@ -1241,6 +1307,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: Heal the target. After applying this effect, return this card to its original owner's hand.",
     ],
+    flavor: "\"Reserve Seal... Release!!\"",
     image: "s05-j-202",
   },
   {
@@ -1257,6 +1324,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin. If it's heads, change the target's Support value to a negative value.",
     ],
+    flavor: "\"I gave electric properties to my Chakra, generated an electric field and infused it into your nervous system.\"",
     image: "s05-j-203",
   },
   {
@@ -1272,6 +1340,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Requirement: \"Tsunade\"",
       "Effect: Search for 1 \"Slug\" Ninja in your Deck and place it in any position in the user's Team. (The Entrance cost of the Ninja has to be equal or less than your Turn Marker and the Hand cost must be paid or the \"Slug\" Ninja is returned to the top of your deck.) Then, shuffle your Deck.",
     ],
+    flavor: "\"Katsuyu ... Take that kid to Shizune!\"",
     image: "s05-j-204",
   },
   {
@@ -1288,6 +1357,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: User",
       "Effect: The target cannot receive any Damage during this turn.",
     ],
+    flavor: "\"Lady Tsunade ...!\" \"Yes!\"",
     image: "s05-j-205",
   },
   {
@@ -1304,6 +1374,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target.",
     ],
+    flavor: "\"Acid Slime!!\"",
     image: "s05-j-206",
   },
   {
@@ -1320,6 +1391,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Heal the target. OR, remove every Poison coin from the target.",
     ],
+    flavor: "\"Don't go ... Don't go! Don't go! Don't go!\"",
     image: "s05-j-207",
   },
   {
@@ -1335,6 +1407,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Jutsu card being used by a \"Genin\" or lower Rank Ninja",
       "Effect: Negate and discard the target.",
     ],
+    flavor: "\"Tsunade's physical strength is as superhuman as ever ...\"",
     image: "s05-j-208",
   },
   {
@@ -1350,6 +1423,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 \"Ninja Toad,\" \"Snake,\" or \"Slug\" Ninja",
       "Effect: Flip a Ninja Blade coin. If it's heads, return the target to the bottom of its original owner's Deck. If it's tails, remove the target from its Team to change it to a Stand-By Ninja.",
     ],
+    flavor: "\"Such a tiny swamp isn't enough to drown the snake ...\"",
     image: "s05-j-209",
   },
   // ── MISSION ──
@@ -1366,6 +1440,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Look at the top 3 cards of your Deck. Then, return them to the top or bottom of your Deck in any order.",
     ],
+    flavor: "\"Is the raving beauty you wanna interview the person called Tsunade?\"",
     image: "s05-m-174",
   },
   {
@@ -1382,6 +1457,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 \"Counter\" Mission card being played",
       "Effect: Negate and discard the target. (You can play this Mission during your turn even if you have already played a Mission during that turn.)",
     ],
+    flavor: "\"I see ...\"",
     image: "s05-m-175",
   },
   {
@@ -1398,6 +1474,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent (3)",
       "Effect: Neither player can send out any Teams to Attack while they have 4 or more cards in their hand.",
     ],
+    flavor: "\"We're not gonna seclude ourselves in the mountains for training ...\"",
     image: "s05-m-176",
   },
   {
@@ -1414,6 +1491,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every Ninja with \"Sharingan Eye\"",
       "Effect: Return the target to its original owner's hand. This effect cannot be applied to \"Itachi Uchiha.\"",
     ],
+    flavor: "\"Dad! Mom!\"",
     image: "s05-m-177",
   },
   {
@@ -1430,6 +1508,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: X number of your in-play Ninjas",
       "Effect: Move the target to its original owner's Chakra area to draw X number of cards.",
     ],
+    flavor: "\"My ... ignorant brother ...\"",
     image: "s05-m-178",
   },
   {
@@ -1445,6 +1524,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Every \"Akatsuki\" Ninja in your hand gets -1 Entrance cost during this turn.",
     ],
+    flavor: "\"He joined a certain organization ...\"",
     image: "s05-m-179",
   },
   {
@@ -1462,6 +1542,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 Mission card being played",
       "Effect: Negate and discard the target.",
     ],
+    flavor: "\"An attractive man like me naturally draws and pleases the eyes of girls!!\"",
     image: "s05-m-180",
   },
   {
@@ -1479,6 +1560,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target cannot be included in a Team of 2 or more Ninjas during this turn.",
     ],
+    flavor: "\"Sasuke ...? No ... who's he?\"",
     image: "s05-m-181",
   },
   {
@@ -1495,6 +1577,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent",
       "Effect: Your Ninjas are unaffected by any Jutsu card's used by your opponent's Ninjas of lower rank.",
     ],
+    flavor: "\"How come Sasuke's Jutsu is blocked so easily ...?\"",
     image: "s05-m-182",
   },
   {
@@ -1511,6 +1594,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 \"Satoosa\" or \"Sannin\" or higher Rank Ninja",
       "Effect: Return the target to the top of its original owner's Deck.",
     ],
+    flavor: "\"A considerable time has passed since his death ... Probably, this took place before the start of the Chunin Exam ...\"",
     image: "s05-m-183",
   },
   {
@@ -1526,6 +1610,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Flip a Ninja Blade coin. If it's heads, you win 1 Battle Reward. If it's tails, your opponent wins 1 Battle Reward.",
     ],
+    flavor: "\"... I wonder how many people have lost their happiness for such a thing ...\"",
     image: "s05-m-184",
   },
   {
@@ -1543,6 +1628,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 of your Clients",
       "Effect: Attach this card to the target to give -1 Entrance cost to every Ninja in your hand. This effect cannot be duplicated.",
     ],
+    flavor: "\"That system turned out to be still incomplete.\"",
     image: "s05-m-185",
   },
   {
@@ -1559,6 +1645,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 of your Clients",
       "Effect: The target is also considered to be a Ninja with \"Power: 4/4\" during this turn. Remove the target from its Team and move it to its original owner's Village as a Stand-By Ninja when it receives any Damage or at the end of this turn. (The target is not changed to injured status or sent to your Discard Pile even when it receives Damage.)",
     ],
+    flavor: "\"Iridescent Chakra is flaming!\"",
     image: "s05-m-186",
   },
   {
@@ -1575,6 +1662,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent (2)",
       "Effect: Neither player can perform both of the following actions but only one of them per turn: \"Deploy a Ninja\" or \"Use a Mission card.\"",
     ],
+    flavor: "\"'3 Don'ts for Ninjas' is about three types of desire that corrupt ninja.\"",
     image: "s05-m-187",
   },
   {
@@ -1591,6 +1679,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 \"Permanent (X)\" Mission card",
       "Effect: Place a Ninja Blade coin on the target.",
     ],
+    flavor: "\"The gap between us hasn't narrowed in the slightest ... Why ...?\"",
     image: "s05-m-188",
   },
   {
@@ -1607,6 +1696,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent (3)",
       "Effect: While your opponent has 7 or more Battle Rewards, the Entrance cost of every Ninja in your hand becomes 0.",
     ],
+    flavor: "\"Under these circumstances, the highest priority must be given to preparation for further crisis situations.\"",
     image: "s05-m-189",
   },
   {
@@ -1623,6 +1713,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent (3)",
       "Effect: Both players can use up to 2 Mission cards per turn.",
     ],
+    flavor: "\"All work and no play makes Jack a dull boy! We'll start your training after a good rest.\"",
     image: "s05-m-190",
   },
   {
@@ -1638,6 +1729,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: During this turn, you can use only up to 1 Jutsu card. If you use a Jutsu card during this turn and its effect is applied successfully, select and move 3 of the cards in your Discard Pile to your Chakra area at the end of the turn.",
     ],
+    flavor: "\"Try to build up your Chakra by focusing on that mark.\"",
     image: "s05-m-191",
   },
   {
@@ -1653,6 +1745,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Your opponent can draw 2 cards. If they choose to draw 2 cards, you also draw 2 cards. If they do not, you draw 1 card.",
     ],
+    flavor: "\"Strike!!\"",
     image: "s05-m-192",
   },
   {
@@ -1668,6 +1761,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Each player can search for 1 \"Ninja Toad,\" \"Snake,\" or \"Slug\" Ninja in their Deck, show it to the other player, and place it in their hand. Then, shuffle both Decks.",
     ],
+    flavor: "\"Manda and Orochimaru, and Katsuyu and Tsunade ...\"",
     image: "s05-m-193",
   },
   {
@@ -1684,6 +1778,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Flip a Ninja Blade coin. If it's heads, heal the target. If it's tails, discard it.",
     ],
+    flavor: "\"Failure of the operation means ... death.\"",
     image: "s05-m-194",
   },
   {
@@ -1701,6 +1796,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target. While this card is attached, the target's Rank is also treated as \"Satoosa\".",
     ],
+    flavor: "\"Tsunade ... Our Village has made a request that you take office as Fifth Hokage ...\"",
     image: "s05-m-195",
   },
   {
@@ -1717,6 +1813,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Flip a Ninja Blade coin. If it's heads, place 1 growth coin on the target. If it's tails, move the target to your Chakra area.",
     ],
+    flavor: "\"When the necklace is worn by others, they always ... lose their lives!!\"",
     image: "s05-m-196",
   },
   {
@@ -1732,6 +1829,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Each player must select 1 of their Chakras, if they have any, and discard it.",
     ],
+    flavor: "\"Are you seeking a fight, knowing that we are the famous Haze Ninja Trio?\"",
     image: "s05-m-197",
   },
   {
@@ -1748,6 +1846,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: Every \"Male\" Ninja",
       "Effect: The target gets -1/-1 during this turn.",
     ],
+    flavor: "\"Come back soon.\" \"Yeah, I sure will!\"",
     image: "s05-m-198",
   },
   {
@@ -1763,6 +1862,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Each player can return 1 of the Ninjas in their Discard Pile to its original owner's hand. This Mission cannot be played if your opponent has no Ninjas in their Discard Pile.",
     ],
+    flavor: "\"Don't you want to see them again, Tsunade ......?\"",
     image: "s05-m-199",
   },
   {
@@ -1780,6 +1880,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Target: 1 \"Genin\" Ninja",
       "Effect: Attach this card to the target. When there are no Ninja Blade coins left on this card, move the target to the opponent's Village. (If you attach this card to your opponent's Ninja, they control this card.) X = 5 - the number of \"The Four Sound Ninja\" Ninjas you have in play.",
     ],
+    flavor: "\"Heh-heh ... You have a good look in your eyes.\"",
     image: "s05-m-200",
   },
   {
@@ -1796,6 +1897,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent",
       "Effect: No Ninja can be removed from play or moved to another Team by the effects of the other player's Jutsu cards.",
     ],
+    flavor: "\"My affection for them never goes away ...\"",
     image: "s05-m-201",
   },
   {
@@ -1811,6 +1913,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Flip a Ninja Blade coin 3 times. If you get the same result (heads or tails) for each flip, draw until you have 6 cards in your hand.",
     ],
+    flavor: "\"7 ... 7 ... 7 ... Yes!\"",
     image: "s05-m-202",
   },
   {
@@ -1827,6 +1930,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent (1)",
       "Effect: Your opponent cannot play, use or 'put in play' any cards with the \"Water\" symbol in their hand.",
     ],
+    flavor: "\"Well, well. You look as unfriendly as before.\"",
     image: "s05-m-203",
   },
   {
@@ -1842,6 +1946,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: If your opponent has 1 or more Battle Rewards, each player must discard 1 of their in-play Ninjas or Battle Rewards.",
     ],
+    flavor: "\"... Whew.\"",
     image: "s05-m-204",
   },
   {
@@ -1858,6 +1963,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent (2)",
       "Effect: Neither player can play any Mission cards.",
     ],
+    flavor: "\"I'm ... in trouble!\"",
     image: "s05-m-205",
   },
   {
@@ -1874,6 +1980,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Permanent",
       "Effect: Each time a Ninja gets healed, that Ninja gets -2/-2 during that turn.",
     ],
+    flavor: "\"...... Sorry ...\"",
     image: "s05-m-206",
   },
   {
@@ -1889,6 +1996,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand and count the number of Jutsu cards among them. You can select and discard up to the same number of their Chakras.",
     ],
+    flavor: "\"Oh, no! Not again!\"",
     image: "s05-m-207",
   },
   // ── CLIENT ──
@@ -1906,6 +2014,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: If you win 3 or more Battle Rewards in a turn, you can heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"Are you OK?\"",
     image: "s05-c-007",
   },
   {
@@ -1922,6 +2031,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: If your Village has the \"Coronation Ceremony\" Mission card, your opponent can win only up to 2 Battle Rewards in a turn.",
     ],
+    flavor: "\"I'll play the double role of the queen of the Land of Snow and an actress!\"",
     image: "s05-c-025",
   },
   {
@@ -1938,6 +2048,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: When this Client is put in play, select 1 in-play \"Male\" Ninja. The selected Ninja cannot be sent out to Battle during the turn.",
     ],
+    flavor: "\"Hi.\"",
     image: "s05-c-026",
   },
   {
@@ -1954,6 +2065,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: When your \"Naruto Uzumaki\" uses the \"Rasengan\" Jutsu card, the cost of the Jutsu becomes 1 \"Lightning\".",
     ],
+    flavor: "\"Mew\"",
     image: "s05-c-027",
   },
   {
@@ -1970,6 +2082,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: If either player flips one or more Ninja Blade coin(s) during a turn and any result is heads, draw 1 card at the end of that turn.",
     ],
+    flavor: "\"We lent you the amount of your losses.\"",
     image: "s05-c-028",
   },
   {
@@ -1986,6 +2099,7 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [
       "Effect: If either player flips one or more Ninja Blade coin(s) during a turn and any result is tails, draw 1 card at the end of that turn.",
     ],
+    flavor: "\"Here is the due bill.\"",
     image: "s05-c-029",
   },
 ];

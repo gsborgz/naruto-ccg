@@ -25,6 +25,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Result of the Training]",
       "Valid: When this Ninja is sent out to Battle and opposed by your opponent's Ninja with a \"Water\" or \"Wind\" Symbol, you can search for 1 \"Summoning Jutsu\" Jutsu card in the top 5 cards of your Deck, show it to your opponent and place it in your hand. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"Sakura...I swear I'll protect you!\"",
     image: "s06-n-173",
   },
   {
@@ -45,6 +46,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Avenger]",
       "Valid: If your opponent wins any Battle Reward(s) while this Ninja is in injured status, you can heal this Ninja.",
     ],
+    flavor: "\"Itachi chose me to be the avenger of the clan... He chose me to be the one to kill him!\"",
     image: "s06-n-174",
   },
   {
@@ -66,6 +68,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Valid: This Ninja cannot be the user of any Jutsu card.",
       "Valid: Any \"Ninja Toad\" Ninja(s) in your hand gets -1 Entrance cost.",
     ],
+    flavor: "\"Aw, come on, Pops, don't be like that, why don't 'cha just settle down and hear the kid out?\"",
     image: "s06-n-175",
   },
   {
@@ -87,6 +90,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "This Ninja cannot be put in play unless you have 1 or more Ninjas with the \"Oil\" Combat Attribute in play.",
       "Valid: This Ninja cannot be removed from play by your opponent's effects.",
     ],
+    flavor: "\"I'll show you what duty... is all about.\"",
     image: "s06-n-176",
   },
   {
@@ -108,6 +112,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "This Ninja can only be put in play by the effect of \"Gaara of the Desert (Possessed Mode)\".",
       "Valid: This Ninja cannot be removed from play by your opponent's effects.",
     ],
+    flavor: "\"I hope you're ready to die! Let's dooo this!!\"",
     image: "s06-n-177",
   },
   {
@@ -128,6 +133,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Alone]",
       "Valid: This Ninja can only be in a Team with \"Sand\" Ninja(s).",
     ],
+    flavor: "\"I don't want to be alone any more.\"",
     image: "s06-n-178",
   },
   {
@@ -149,6 +155,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "This Ninja cannot be put in play without using the \"Sand Cocoon\" Jutsu card.",
       "Valid: You can send this Ninja to your Chakra area during your Mission Phase. In that case, put in play a \"Shukaku\" from your hand to your Village.",
     ],
+    flavor: "\"When I fight, I fight for me and me alone!\"",
     image: "s06-n-179",
   },
   {
@@ -169,6 +176,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Sister's Memento]",
       "Valid: When your \"Gaara of the Desert\" receives any Damage, you can reduce that Damage by 1. In that case, give 1 Damage to this Ninja.",
     ],
+    flavor: "\"After all... you're special Gaara. I hold you very dear to me.\"",
     image: "s06-n-180",
   },
   {
@@ -189,6 +197,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Power of the Armor]",
       "When this Ninja is sent out to Battle, you can select and discard 1 of your Chakras with a \"Water\" symbol. In that case, this Ninja gets +1/+1 during the turn.",
     ],
+    flavor: "\"Long time no see, Kakashi. Aren't you running away just like last time?\"",
     image: "s06-n-181",
   },
   {
@@ -209,6 +218,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Power of the Armor]",
       "When this Ninja is sent out to Battle, you can select and discard 1 of your Chakras with a \"Water\" symbol. In that case, this Ninja gets +1/+0 during the turn.",
     ],
+    flavor: "\"Nothing works against this\"",
     image: "s06-n-182",
   },
   {
@@ -229,6 +239,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Power of the Armor]",
       "When this Ninja is sent out to Battle, you can select and discard 1 of your Chakras with a \"Water\" symbol. In that case, this Ninja gets +0/+1 during the turn.",
     ],
+    flavor: "\"Don't underestimate Snow Ninja. This attack is not enough to beat us\"",
     image: "s06-n-183",
   },
   {
@@ -249,6 +260,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Latest Technique Armor]",
       "While a \"Chakra Armor\" Mission card is attached to this Ninja, this Ninja gets +4/+4.",
     ],
+    flavor: "\"Alright! This is the latest technique 'Chakra Armor'!!\"",
     image: "s06-n-184",
   },
   {
@@ -269,6 +281,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[The Past in 10 Years Ago]",
       "Valid: Every \"Kakashi Hatake\" in your hand gets \"Growth\".",
     ],
+    flavor: "\"We can't beat them yet. That's why we escaped\"",
     image: "s06-n-185",
   },
   {
@@ -289,6 +302,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Comrade's Danger]",
       "Valid: When this Ninja is sent out to Battle and opposed by your opponent's Ninja with a \"Water\" or \"Fire\" Symbol, you can send 1 of your opponent's in-play \"Permanent\" Mission cards to it's owner's Chakra area. In that case, this Ninja gets +2/+0 during the turn.",
     ],
+    flavor: "\"I have to do it..!\"",
     image: "s06-n-us001",
   },
   {
@@ -310,6 +324,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Valid: While this Ninja is Battling in injured status, this Ninja gets +X/+0. X = the Entrance cost of your opponent's Head Ninjas Battling against this Ninja's Team.",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Jutsu or Mission cards.",
     ],
+    flavor: "\"Grrrrrrrrrrrr!\"",
     image: "s06-n-us002",
   },
   {
@@ -330,6 +345,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Chidori for the revenge]",
       "Valid: While this Ninja is Battling against your opponent's Ninja with a \"Fire\" symbol, you can search for 1 \"Chidori\" Jutsu card in the top 5 cards of your Deck, show it to your opponent, and move it to your hand. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"Itachi...I will beat you.\"",
     image: "s06-n-us003",
   },
   {
@@ -350,6 +366,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Power of the Curse Mark]",
       "While you have 2 or less cards in your hand, this Ninja gets +2/+0.",
     ],
+    flavor: "\"Tell me, which one of these people did this to you?\"",
     image: "s06-n-us004",
   },
   {
@@ -370,6 +387,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Determination]",
       "When you place a Growth coin on 1 of your other Ninjas, place a Growth coin on this Ninja as well.",
     ],
+    flavor: "\"Just this once — when it's life or death... you'd think just maybe I could come through..!\"",
     image: "s06-n-us005",
   },
   {
@@ -390,6 +408,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[A Double Personality]",
       "During the Exchange of Jutsu, you can exchange all the cards in your hand with the same amount of cards from the top of your Deck.",
     ],
+    flavor: "\"A girl's gotta be tough if she's going to survive something like this!\"",
     image: "s06-n-us006",
   },
   {
@@ -410,6 +429,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Control of Chakra]",
       "During your Mission Phase, you can exchange 2 cards in your Chakra area with 2 cards in your Discard Pile.",
     ],
+    flavor: "\"In fact I'm the best.\"",
     image: "s06-n-us007",
   },
   {
@@ -430,6 +450,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Instant Detection]",
       "You can discard this in-play Ninja to negate 1 Jutsu being played and discard it.",
     ],
+    flavor: "\"Yes ... This is your last battle. Ever!\"",
     image: "s06-n-us008",
   },
   {
@@ -450,6 +471,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Team Leader]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, you can put a Growth coin on 1 of your \"Genin\" Ninjas with no Growth coins.",
     ],
+    flavor: "\"You've really grown, haven't you?\"",
     image: "s06-n-us009",
   },
   {
@@ -470,6 +492,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Man Beast Clone]",
       "When this Ninja is put in play, you can search for 1 \"Akamaru\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"If I were you, I'd let Akamaru go.\"",
     image: "s06-n-us010",
   },
   {
@@ -490,6 +513,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Tracking]",
       "When this Ninja is sent out to the Battle, you can look at the top 3 cards of your opponent's Deck. Then, return them in any order you like to the top of their Deck.",
     ],
+    flavor: "\"I planted a beetle on you as you left the arena... A female beetle.\"",
     image: "s06-n-us011",
   },
   {
@@ -510,6 +534,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Ointment]",
       "At the end of your turn, if this Ninja was not moved to the Battlefield during that turn, you can heal 1 of your injured \"Genin\" Ninjas without \"Platoon\".",
     ],
+    flavor: "\"That too is my nindo. My ninja way.\"",
     image: "s06-n-us012",
   },
   {
@@ -530,6 +555,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Formation]",
       "During the Mission Phase, you can select 1 of your opponent's Ninjas. That selected Ninja can only be sent out to Battle as a Head Ninja during the turn.",
     ],
+    flavor: "\"Take it away, Choji!\"",
     image: "s06-n-us013",
   },
   {
@@ -550,6 +576,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Formation]",
       "While this Ninja is Battling, the Entrance cost of the Head Ninja Battling against this Ninja's Team becomes 0 and it's effect text is negated.",
     ],
+    flavor: "\"I'll leave the girl to you.\"",
     image: "s06-n-us014",
   },
   {
@@ -570,6 +597,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Flexibility]",
       "While you have 5 or more cards in your hand, this Ninja's Team and your opponent's Team Battling against this Ninja perform a Mental Power Battle. While you have 4 or less cards in your hand, this Ninja's Team and your opponent's Team Battling against this Ninja cannot perform a Mental Power Battle.",
     ],
+    flavor: "\"Just this once — when it's life or death... you'd think just maybe I could come through..!\"",
     image: "s06-n-us015",
   },
   {
@@ -590,6 +618,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Formation]",
       "When this Ninja is sent out to Battle and opposed, you can give 1 Damage to 1 of your opponent's Ninjas Battling agaist this Ninja with 0 Entrance cost. In that case, give 1 Damage to this Ninja at the end of the turn.",
     ],
+    flavor: "\"My pleasure!\"",
     image: "s06-n-us016",
   },
   {
@@ -610,6 +639,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Detection by Byakugan]",
       "During the Exchange of Jutsu, you can discard as many of your Chakras as you like. In that case, discard the same number of your opponent's Chakras as you discarded.",
     ],
+    flavor: "\"You're lucky to still be breathing.\"",
     image: "s06-n-us017",
   },
   {
@@ -630,6 +660,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Another Perfect Defense]",
       "When this Ninja receives Damage, you can discard 1 card from your hand to reduce the Damage by 1.",
     ],
+    flavor: "\"Rotation!\"",
     image: "s06-n-us018",
   },
   {
@@ -650,6 +681,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Lotus of the Leaf]",
       "When the effect of the \"Primary Lotus\" Jutsu card that this Ninja used is applied, you can search for 1 \"Hidden Lotus\" Jutsu card in your Deck, show it to your opponent and place it in your hand. In that case, shuffle your Deck.",
     ],
+    flavor: "\"The lotus of the Leaf Village blooms twice.\"",
     image: "s06-n-us019",
   },
   {
@@ -671,6 +703,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Valid: Jutsu cards used by this Ninja cannot be negated.",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Ninjas or Jutsu cards.",
     ],
+    flavor: "\"It has just begun!\"",
     image: "s06-n-us020",
   },
   {
@@ -691,6 +724,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Master of Weapons]",
       "Each time this Ninja becomes the user of Jutsu card with no specific Symbols, this Ninja gets +1/+1 during the turn.",
     ],
+    flavor: "\"Just bring it! I am not gonna hold back..\"",
     image: "s06-n-us021",
   },
   {
@@ -711,6 +745,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Backup]",
       "While this Ninja is in your hand and your opponent has 1 or more Ninjas with a \"Fire\" or \"Water\" Symbol in play, this Ninja's Entrance cost and Hand cost gets -1.",
     ],
+    flavor: "\"I will play with you for a while\"",
     image: "s06-n-us022",
   },
   {
@@ -731,6 +766,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Unique Teaching Method]",
       "While this Ninja is sent out to Battle in the same Team with 1 or more \"Genin\" Ninjas, 1 of the \"Genin\" Ninjas in this Ninja's Team can be the user of a \"Primary Lotus\" Jutsu card ignoring the Requirements of the Jutsu.",
     ],
+    flavor: "\"Don't let anything steer you off the path you've drawn for yourself, forge ahead to the end!\"",
     image: "s06-n-us023",
   },
   {
@@ -751,6 +787,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Power of Shukaku]",
       "Each time the effect of a Jutsu that includes the \"Requirements: 'Sand' Combat Attribute\" is applied, you can move 1 card with a \"Wind\" Symbol in your Discard Pile to your Chakra area if there is any.",
     ],
+    flavor: "\"To put it simply, my reason for living is the killing of others.\"",
     image: "s06-n-us024",
   },
   {
@@ -771,6 +808,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Wind Scythe]",
       "When this Ninja is put in play, you can look at all the cards in your opponent's hand, select 1 Jutsu card of your choice if there is any, and send it to their Chakra area.",
     ],
+    flavor: "\"No use in hiding!\"",
     image: "s06-n-us025",
   },
   {
@@ -791,6 +829,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Puppet Master]",
       "When this Ninja is put in play, you can search for 1 \"Puppet Master Jutsu\" Jutsu card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"If you really want to see how deadly my Ninjutsu can be, then you're in for a real treat!\"",
     image: "s06-n-us026",
   },
   {
@@ -811,6 +850,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Instruction of the Hidden Technique]",
       "During your Mission Phase, if you have \"Naruto Uzumaki\" in play, you can move 1 Jutsu card in your Discard Pile to your hand if there is any.",
     ],
+    flavor: "\"I'm going to teach you a killer technique.\"",
     image: "s06-n-us027",
   },
   {
@@ -831,6 +871,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[A Three - Cornered Battle]",
       "When your opponent's Ninja becomes the user of a Jutsu with a \"Wind\" or \"Fire\" Symbol, in addition to the Jutsu cost, your opponent must discard 1 Chakra (any Symbol).",
     ],
+    flavor: "\"You are not my comrade any more.\"",
     image: "s06-n-us028",
   },
   {
@@ -851,6 +892,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[A Three - Cornered Battle]",
       "When your opponent's Ninja becomes the user of a Jutsu with a \"Water\" or \"Earth\" Symbol, in addition to the Jutsu cost, your opponent must discard 1 Chakra (any Symbol).",
     ],
+    flavor: "\"Today is the last day they call us 'Sannin'.\"",
     image: "s06-n-us029",
   },
   {
@@ -871,6 +913,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[A Three - Cornered Battle]",
       "When your opponent's Ninja becomes the user of a Jutsu with a \"Lightning\" or \"Wind\" Symbol, in addition to the Jutsu cost, your opponent must discard 1 Chakra (any Symbol).",
     ],
+    flavor: "\"Heh-heh...give me a break.\"",
     image: "s06-n-us030",
   },
   {
@@ -891,6 +934,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Guardian of the Village]",
       "You can discard this Ninja. In that case, none of your Ninjas can receive Damage during the turn.",
     ],
+    flavor: "\"I will protect the leaf village!\"",
     image: "s06-n-us031",
   },
   {
@@ -911,6 +955,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Spy]",
       "At the beginning of your Mission Phase, you can discard 1 of your Chakras to look at the top 3 cards of your opponent's Deck and move them back in any order you like to the top of their Deck.",
     ],
+    flavor: "\"I recorded all the data on this.\"",
     image: "s06-n-us032",
   },
   {
@@ -931,6 +976,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Bond]",
       "When this Ninja is put in play, you can search for 1 \"Haku\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Looks like you've got a rival, Haku.\"",
     image: "s06-n-us033",
   },
   {
@@ -951,6 +997,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Roar of the Ogre]",
       "During the Exchange of Jutsu, this Ninja can get +5/+0 during the turn. In that case, discard this Ninja at the end of the turn.",
     ],
+    flavor: "\"Who do you think you're dealing with!?\"",
     image: "s06-n-us034",
   },
   {
@@ -971,6 +1018,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Camouflage]",
       "You can change 1 other Ninja in this Ninja's Team to injured status. In that case, that Ninja cannot be targeted by your opponent's Jutsu cards during the turn. Heal that injured Ninja at the end of the turn.",
     ],
+    flavor: "\"If I hadn't intervened, you'd be dead now ... that much is certain.\"",
     image: "s06-n-us035",
   },
   {
@@ -991,6 +1039,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Kekkei Genkai: Bloodline Trait]",
       "This in-play Ninja cannot be targeted by your opponent's Mission cards.",
     ],
+    flavor: "\"You will never learn the secret.\"",
     image: "s06-n-us036",
   },
   {
@@ -1011,6 +1060,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Requirements for the Eminence]",
       "When this Ninja is put in play, you can select and discard 1 of your opponent's in-play Ninjas with \"Sharingan Eye\" if they have any.",
     ],
+    flavor: "\"Your hatred...is not enough.\"",
     image: "s06-n-us037",
   },
   {
@@ -1031,6 +1081,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Chakra Eater Sword]",
       "Each time a Jutsu that this Ninja used is resolved, you can select and discard up to 2 of your opponent's Chakra if there is any.",
     ],
+    flavor: "\"I don't like him to use his jutsu...\"",
     image: "s06-n-us038",
   },
   {
@@ -1052,6 +1103,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Valid: While you have no other Ninjas with an \"Oil\" Combat Attribute besides this Ninja, you must discard 1 Chakra to send out this Ninja to Battle.",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Jutsu or Mission cards.",
     ],
+    flavor: "\"I'll even consider making you my henchman...\" \"Okay! Chief toad!\"",
     image: "s06-n-us039",
   },
   {
@@ -1072,6 +1124,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "[Shogi Match]",
       "When this Ninja wins a Victory, an Outstanding Victory, or is removed from play, you can look at all of your opponent's Battle Rewards if there is any, select 1 card among them, and place it in your hand.",
     ],
+    flavor: "\"...I had to go and get myself into this sticky situation...\" \"You did well, Shikamaru...\"",
     image: "s06-n-us040",
   },
   // ── JUTSU ──
@@ -1088,6 +1141,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Requirements: \"Oil\" Combat Attribute",
       "Effect: Place a \"Ninja Toad\" Ninja from your hand in any position in the user's Team. If the Entrance cost of the Ninja is greater than your Turn Marker, return it to your hand at the end of the turn.",
     ],
+    flavor: "\"Oh ho ho, anti-amphibian, huh? Well, take that, ya bigot!\"",
     image: "s06-j-163",
   },
   {
@@ -1104,6 +1158,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: Target gets +7/+0 during the turn.",
     ],
+    flavor: "\"That worthless little flunky!\"",
     image: "s06-j-164",
   },
   {
@@ -1120,6 +1175,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target.",
     ],
+    flavor: "\"Water Style! Liquid Bullets!\"",
     image: "s06-j-165",
   },
   {
@@ -1136,6 +1192,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: Target gets +X/+0 during the turn. X = the value of the target's Entrance cost.",
     ],
+    flavor: "\"Sand Shuriken!\"",
     image: "s06-j-166",
   },
   {
@@ -1151,6 +1208,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 2 or more\"",
       "Effect: You can search for any number of Ninjas with a \"Sand\" Combat Attribute in the top 4 cards of your Deck, show it(them) to your opponent. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"The only danger...is if the Medium...finally falls asleep.\"",
     image: "s06-j-167",
   },
   {
@@ -1167,6 +1225,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target.",
     ],
+    flavor: "\"Wind Style... Air Bullets!\"",
     image: "s06-j-168",
   },
   {
@@ -1183,6 +1242,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User and 1 Ninja Battling against the user",
       "Effect: The Power of the target cannot be added to their Team Power.",
     ],
+    flavor: "\"I...I've had it with yoooou!\"",
     image: "s06-j-169",
   },
   {
@@ -1199,6 +1259,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 \"Snake\" or \"Animal\" Ninja",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"Ninja Art Summoning: Bring Down the House Jutsu!\"",
     image: "s06-j-170",
   },
   {
@@ -1215,6 +1276,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: Target gets +X/+X during this turn. X = the number of your opponent's Battle Rewards.",
     ],
+    flavor: "\"The only reason I am alive is...to kill you!!\"",
     image: "s06-j-171",
   },
   {
@@ -1231,6 +1293,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: Return the target to your hand. Then, place a \"Orochimaru\" from your hand in any position in the target's Team.",
     ],
+    flavor: "\"It can't be... Then you've mastered even that forbidden jutsu?\"",
     image: "s06-j-172",
   },
   {
@@ -1246,6 +1309,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: You can discard as many cards you like from the top of your Deck. In that case, the target gets +1/+1 for each of the discarded cards during the turn. In addition, the target gets \"Clone status\" during the turn.",
     ],
+    flavor: "\"I am not alone this time.\"",
     image: "s06-j-us001",
   },
   {
@@ -1262,6 +1326,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: Every \"Male\" Ninja Battling against the user",
       "Effect: The target becomes \"Female\". The target cannot become the user of Jutsu cards during this turn.",
     ],
+    flavor: "\"Transform!\"",
     image: "s06-j-us002",
   },
   {
@@ -1277,6 +1342,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: The target gets +1/+1 during the turn. In addition, the next Jutsu card the target uses during the turn cannot be negated.",
     ],
+    flavor: "\"Eat this!\"",
     image: "s06-j-us003",
   },
   {
@@ -1293,6 +1359,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If you have 4 or more cards in your hand, give 2 Damage to the target. If you have 3 or less cards in your hand, give 1 Damage to the target.",
     ],
+    flavor: "\"Now, take this!\"",
     image: "s06-j-us004",
   },
   {
@@ -1309,6 +1376,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 2 Damage to the target. Then, discard the user at the end of the turn.",
     ],
+    flavor: "\"One more and we're finished!\"",
     image: "s06-j-us005",
   },
   {
@@ -1324,6 +1392,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during the turn. If the target has a \"Taijutsu\" Combat Attribute, you can discard 1 Chakra to move this Jutsu card to your hand instead of your Chakra area after this effect is applied.",
     ],
+    flavor: "\"Leaf Hurricane!\"",
     image: "s06-j-us006",
   },
   {
@@ -1334,12 +1403,13 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     number: "US007",
     set: "S06",
     rarity: "Super Rare",
-    cost: { symbols: [], generic: "X" },
+    cost: { symbols: [], generic: "X", xCount: 2 },
     text: [
       "Requirements: \"Sasuke Uchiha\"",
       "Target: 1 Ninja Battling against the user",
       "Effect: Give X Damage to the user. X (the Jutsu cost) can only be paid by Chakras with a \"Fire\" symbol.",
     ],
+    flavor: "\"I won't let this thing take over. No way!\"",
     image: "s06-j-us007",
   },
   {
@@ -1353,10 +1423,10 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Sharingan Eye\"",
-      "Target: (1) User",
-      "(2) 1 Ninja Battling against the user",
+      "Target: (1) User, (2) 1 Ninja Battling against the user",
       "Effect: During this turn, if target (2) gets additonal Power by the effect of a Jutsu card, target (1) gets the same amount of additional Power during the turn.",
     ],
+    flavor: "\"I can see it now!\"",
     image: "s06-j-us008",
   },
   {
@@ -1372,6 +1442,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target cannot win any Battle Rewards during this turn.",
     ],
+    flavor: "\"A Thousand Years of Death!\"",
     image: "s06-j-us009",
   },
   {
@@ -1387,6 +1458,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: The user gets +X/+X during this turn. X = the number of cards with a \"Water\" Symbol in your Chakra area.",
     ],
+    flavor: "\"Water Clone Jutsu.\"",
     image: "s06-j-us010",
   },
   {
@@ -1403,6 +1475,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"Water Style! Water Dragon Jutsu!\"",
     image: "s06-j-us011",
   },
   {
@@ -1419,6 +1492,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 injured Ninja Battling against the user",
       "Effect: Discard the target.",
     ],
+    flavor: "\"Water Style!! Water Shark Bomb Jutsu!\"",
     image: "s06-j-us012",
   },
   {
@@ -1434,6 +1508,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Requirements: \"Insect\" Combat Attribute",
       "Effect: look at the top 3 cards of your opponent's Deck and discard 1 of them of your choice. Return the rest in any order you like to the top of their Deck.",
     ],
+    flavor: "\"If you fight me, you won't be able to recover.\"",
     image: "s06-j-us013",
   },
   {
@@ -1449,6 +1524,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute",
       "Effect: Place this Jutsu card as a Ninja card with Power of 3/3 in any position in the user's Team. Send this Jutsu (Ninja) card to your Chakra area when it receives any Damage or at the end of the turn.",
     ],
+    flavor: "\"You haven't seen half of what Crow can do. So far he's been playing nice!\"",
     image: "s06-j-us014",
   },
   {
@@ -1464,6 +1540,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Jutsu card being played with 2 or more specific Symbols in its Jutsu cost",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"No use in hiding!\"",
     image: "s06-j-us015",
   },
   {
@@ -1480,6 +1557,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Change the target to injured status. Heal the target at the end of the turn.",
     ],
+    flavor: "\"Right under your feet.\"",
     image: "s06-j-us016",
   },
   {
@@ -1496,6 +1574,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: During this turn, the target's Power becomes the same as the user's.",
     ],
+    flavor: "\"Oh no you don't, mummy-man. Time to put you under wraps\"",
     image: "s06-j-us017",
   },
   {
@@ -1512,6 +1591,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Justu card being played",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"Defend yourself ... my brother.\"",
     image: "s06-j-us018",
   },
   {
@@ -1528,6 +1608,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: Each of your Ninjas",
       "Effect: The target cannot receive any Damage from the effect of your opponent's Jutsu or Ninja's effect.",
     ],
+    flavor: "\"Ha!\"",
     image: "s06-j-us019",
   },
   {
@@ -1544,6 +1625,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: User",
       "Effect: The target gets +4/+0 during this turn.",
     ],
+    flavor: "\"Expansion Jutsu!\"",
     image: "s06-j-us020",
   },
   // ── MISSION ──
@@ -1562,6 +1644,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target. The target can be the user of Jutsu cards with \"Requirements: Rock Lee\".",
     ],
+    flavor: "\"Once you wear it in training, you will easily see the difference and will never train without it!!\"",
     image: "s06-m-169",
   },
   {
@@ -1579,6 +1662,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target. The target gets +1/+1 while this card is attached.",
     ],
+    flavor: "\"This suits amplifies the Chakra in your body and boosts your Jutsu.\"",
     image: "s06-m-170",
   },
   {
@@ -1594,6 +1678,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: If your opponent has 6 or more Battle Rewards, you can draw 2 cards.",
     ],
+    flavor: "\"I wonder if he likes sweets\"",
     image: "s06-m-171",
   },
   {
@@ -1610,6 +1695,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: Each of your opponent's Battle Rewards",
       "Effect: Look at the target. You can select 1 card among them and move it to your hand. In that case, send 1 of the cards in your hand to your opponent's Battle Reward area.",
     ],
+    flavor: "\"That was the only way we could bring the princess back to this land.\"",
     image: "s06-m-172",
   },
   {
@@ -1626,6 +1712,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent",
       "Effect: Each player draws 1 card at the end of the turn that 1 or more of their own in-play Ninjas are discarded due to Damage. This effect cannot be duplicated.",
     ],
+    flavor: "\"Why do they do it? Why do people risk their lives for other people?\"",
     image: "s06-m-173",
   },
   {
@@ -1642,6 +1729,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (3)",
       "Effect: Any Ninjas that are put in play except by deployment are moved to the bottom of their original owner's Deck instead.",
     ],
+    flavor: "\"I'm really starting to hate you stinking frogs–?\"",
     image: "s06-m-us001",
   },
   {
@@ -1659,6 +1747,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this Mission card to the target. The target gets +3/+3. When this card is removed from play, discard the target.",
     ],
+    flavor: "\"Guy-sensei... please let this work!\"",
     image: "s06-m-us002",
   },
   {
@@ -1675,6 +1764,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (2)",
       "Effect: Any Ninja(s) with both a \"Fire\" Symbol and an Entrance cost of 4 or more in your opponent's hand gets +1 Hand cost. This effect cannot be duplicated.",
     ],
+    flavor: "\"WHAT?\" \"WHAT?\"",
     image: "s06-m-us003",
   },
   {
@@ -1691,6 +1781,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: Any number of Ninjas in your Discard Pile",
       "Effect: Move the target to your Chakra area. At the end of the turn, discard all the Chakra in both player's Chakra areas.",
     ],
+    flavor: "\"Just give me...Gimme some Chakra! I'm going to protect everyone!\"",
     image: "s06-m-us004",
   },
   {
@@ -1707,6 +1798,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (2)",
       "Effect: When your \"Jonin\" or higher Rank Ninja becomes the user of a Jutsu card with specific symbol(s) in its Jutsu cost during this turn, 1 non-\"Fire\" symbol of the cost can be paid with a \"Fire\" symbol instead.",
     ],
+    flavor: "\"Are you ready, Enma?\"",
     image: "s06-m-us005",
   },
   {
@@ -1723,6 +1815,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 of your Ninjas with \"Sharingan Eye\"",
       "Effect: If the target wins a Battle Reward during this turn, it becomes an Outstanding Battle Reward instead.",
     ],
+    flavor: "\"Only the ones with Sharingan Eye can beat me.\"",
     image: "s06-m-us006",
   },
   {
@@ -1739,6 +1832,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 of your \"Jonin\" Ninjas",
       "Effect: The target gets +X/+X during the turn. X = the number of the Ninja cards in your Discard Pile.",
     ],
+    flavor: "\"I was calling forth my ninja hounds.\"",
     image: "s06-m-us007",
   },
   {
@@ -1755,6 +1849,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja blade coin; If it's heads, heal the target. If it's tails, place a Growth coin on the target.",
     ],
+    flavor: "\"It was all an act. ... With a cute little mask.\"",
     image: "s06-m-us008",
   },
   {
@@ -1771,6 +1866,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja in either player's Discard Pile",
       "Effect: Discard your in-play Ninjas so that the total Entrance cost of those Ninjas is equal to or more than the target's Entrance cost. Then, put the target in play in your Village if you do not already have a Ninja of the same name in your Village.",
     ],
+    flavor: "\"Now then, .. shall we begin this?\"",
     image: "s06-m-us009",
   },
   {
@@ -1787,6 +1883,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (3)",
       "Effect: When your in-play \"Orochimaru\" or in-play \"Kabuto Yakushi\" is discarded, move it to your hand instead.",
     ],
+    flavor: "\"Oh. I think you've already guessed.\"",
     image: "s06-m-us010",
   },
   {
@@ -1803,6 +1900,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Counter Permanent (2)",
       "Effect: During each player's Organization Phase, they may only organize Teams of 2 Ninjas or less.",
     ],
+    flavor: "\"Just a little longer, Haku.\"",
     image: "s06-m-us011",
   },
   {
@@ -1818,6 +1916,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: Flip a Ninja blade coin; If it's heads, move your Turn Marker up by 1. If it's tails, move your Turn Marker down by 1.",
     ],
+    flavor: "\"Eyes full of loneliness...\"",
     image: "s06-m-us012",
   },
   {
@@ -1834,6 +1933,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Counter Permanent (3)",
       "Effect: At the beginning of your Turn, if your opponent has 1 or more \"Jonin\" or higher Rank Ninjas with a \"Water\" Symbol or 1 or more \"Permanent\" Mission cards in play or both, draw 1 card.",
     ],
+    flavor: "\"Bring it on, Orochimaru!\"",
     image: "s06-m-us013",
   },
   {
@@ -1851,6 +1951,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target must be sent out to Battle during this turn if possible.",
     ],
+    flavor: "\"His inner demon has been awakened.\"",
     image: "s06-m-us014",
   },
   {
@@ -1867,6 +1968,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent",
       "Effect: Draw 1 card at the end of the turn you played 1 or more Mission cards except this card.",
     ],
+    flavor: "\"If I create a diversion with a Clone Jutsu...\"",
     image: "s06-m-us015",
   },
   {
@@ -1884,6 +1986,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The effect text of the target is negated. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"It's the mark of those who are bound to a destiny they cannot escape.\"",
     image: "s06-m-us016",
   },
   {
@@ -1900,6 +2003,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (2)",
       "Effect: Any Ninja(s) with both a \"Water\" Symbol and an Entrance cost of 4 or more in your opponent's hand gets +1 Hand cost. This effect cannot be duplicated.",
     ],
+    flavor: "\"Asuma?! .. How did you...?\"",
     image: "s06-m-us017",
   },
   {
@@ -1915,6 +2019,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: Both players can look at all the cards in the opponent's hand, select any number of Mission or Jutsu cards among them and send the selected cards to the opponent's Chakra area. (The controller of this card gets to select first)",
     ],
+    flavor: "\"The whole time I thought I was keeping out of range of his shadow jutsu — when I was really walking right into it.\"",
     image: "s06-m-us018",
   },
   {
@@ -1931,6 +2036,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (2)",
       "Effect: Each of your Ninjas with an Entrance cost of 4 or more cannot be Blocked by your opponent's Ninja(s) with an Entrance cost of 3 or less.",
     ],
+    flavor: "\"That was Ninjutsu, the third shinobi battle skill.\"",
     image: "s06-m-us019",
   },
   {
@@ -1947,6 +2053,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
       "Permanent (2)",
       "Effect: If you only have Ninja(s) with an Entrance cost of 3 or less, you can send out more than 3 Teams to Attack.",
     ],
+    flavor: "\"Whoa! Everybody's here!\"",
     image: "s06-m-us020",
   },
   // ── CLIENT ──
@@ -1964,6 +2071,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: During your Mission Phase, you can send this in-play Client to your Chakara area. In that case, you can look at the top 3 cards of your Deck and return them in any order you like to the top of your Deck.",
     ],
+    flavor: "\"Oh, I have been possessed by the legendary movie makers!\"",
     image: "s06-c-020",
   },
   {
@@ -1980,6 +2088,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: During the Mission Phase, you can discard this in-play Client. In that case, you can select and discard 1 in-play permanent Mission card.",
     ],
+    flavor: "\"This role...as a Princess Gale cannot be performed by anyone except Yukie.\"",
     image: "s06-c-021",
   },
   {
@@ -1996,6 +2105,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "When any of your Ninja(s) are removed from play by your opponent's effects, you can send this in-play Client to your Chakra area. In that case, you can look at all of your opponent's Battle Rewards if there is any, select 1 card among them, and place it in you hand.",
     ],
+    flavor: "\"Don't give it up and believe the future. Then, the spring will come.\"",
     image: "s06-c-022",
   },
   {
@@ -2012,6 +2122,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: When you get a tails during the Ninja Blade coin flip(s) due to a Ninja Blade coin flip effect, you can send this in-play Client to your Chakra area. In that case, the result is considered to be heads.",
     ],
+    flavor: "\"Let's go beyond that rainbow!!\"",
     image: "s06-c-023",
   },
   {
@@ -2028,6 +2139,7 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     text: [
       "Effect: When this Client is put in play, place 2 Ninja Blade coins on this Client. At the beginning of your turn, you can remove 1 Ninja Blade coin on this Client to draw 1 card. At the end of your Turn, if there are no Ninja Blade coins on this Client, place this Client face down in your opponent's Battle Reward area.",
     ],
+    flavor: "\"I will become a princess.\"",
     image: "s06-c-024",
   },
 ];

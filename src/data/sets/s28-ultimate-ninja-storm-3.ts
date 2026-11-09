@@ -26,6 +26,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Revitalize",
       "Valid: When your opponent wins any Battle Rewards, place that many +1/+1 coins on this Ninja.",
     ],
+    flavor: "\"I'm scared.\"",
     image: "s28-n-1621",
   },
   {
@@ -46,6 +47,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[MENTAL ACUITY]",
       "[Attacker | Mission] Remove a coin from a card you control: Place a +1/+1 coin on target Ninja other than that card or a coin on target Mission other than that card you control. Then, if the target has 3 or more coins on it, draw 1 card and discard 1 card.",
     ],
+    flavor: "\"You boys better not wimp out on me.\"",
     image: "s28-n-1622",
   },
   {
@@ -67,6 +69,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Revitalize",
       "When this Ninja is deployed, you may discard 1 Earth card from your hand. In that case, move 1 Permanent Mission card from your Chakra area to your hand.",
     ],
+    flavor: "\"More reinforcements!\"",
     image: "s28-n-1623",
   },
   {
@@ -88,6 +91,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Burst",
       "Valid: When you put in play this Ninja or another \"Taijutsu\" Ninja, place a +1/+1 coin on it.",
     ],
+    flavor: "\"Are you alright?!\"",
     image: "s28-n-1624",
   },
   {
@@ -108,6 +112,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[DEDUCTIVE REASONING]",
       "During the Showdown, while this Ninja is opposed, if you control 2 or more Permanent Missions, this Ninja's Team and the opposing Team perform a Mental Power Battle.",
     ],
+    flavor: "\"Bothersome.\"",
     image: "s28-n-1625",
   },
   {
@@ -150,6 +155,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Burst",
       "Valid: +1/+1 coins on Ninjas you control provide an additional +1/+0.",
     ],
+    flavor: "\"Yeah...sorry.\"",
     image: "s28-n-1627",
   },
   {
@@ -170,6 +176,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[STICKING CLOSE]",
       "Valid: When a coin is removed from a Permanent Mission you control, you can place a +1/+1 coin on this Ninja.",
     ],
+    flavor: "\"Whee!\"",
     image: "s28-n-1628",
   },
   {
@@ -190,6 +197,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[WILD CARD]",
       "[Valid | Mission] Remove X coins from Missions and/or Ninjas you control: Negate and discard target Mission with an Entrance cost of X or less.",
     ],
+    flavor: "\"You're being a fool!\"",
     image: "s28-n-1629",
   },
   {
@@ -211,6 +219,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Revitalize",
       "[Valid | Mission] Remove 1 coin from a Mission you control: Place a -1/-1 coin on target Ninja, then remove that Ninja from its Team.",
     ],
+    flavor: "\"I'll go!!\"",
     image: "s28-n-1630",
   },
   {
@@ -231,6 +240,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[BOYHOOD]",
       "[Valid | Attacker | Mission] Move this Ninja to its owner's Chakra area: If your Turn Marker is 4 or more, you can put in play 1 Kakashi Hatake Ninja card from your hand, then place a +1/+1 coin on that Ninja.",
     ],
+    flavor: "\"You're late...\"",
     image: "s28-n-1631",
   },
   {
@@ -251,6 +261,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[ATTRACTING ATTENTION]",
       "When this Ninja Attacks, if the opponent controls 2 or more Teams, this Ninja must be Blocked during this turn.",
     ],
+    flavor: "\"I'm gonna make a name for myself in this war.\"",
     image: "s28-n-1632",
   },
   {
@@ -272,6 +283,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Desperation",
       "[Valid | EOJ] (1): Target Head Ninja opposing this Ninja gets -X/-0 during this turn. X = the number of Symbols on the target.",
     ],
+    flavor: "\"It won't be useless...\"",
     image: "s28-n-1633",
   },
   {
@@ -313,6 +325,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[ALLIED SHINOBI COMMANDER]",
       "[Attacker | Mission] (2): Put in play 1 non-Void Ninja card with an Entrance cost of 2 or less from your hand. At the end of this turn, if that Ninja is in play, discard it.",
     ],
+    flavor: "\"The tide has turned.\"",
     image: "s28-n-1635",
   },
   {
@@ -355,6 +368,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Desperation",
       "[Attacker | Mission] (Fire|Fire): Move 1 Ninja card from your Discard Pile to your hand.",
     ],
+    flavor: "\"Perfect...\"",
     image: "s28-n-1637",
   },
   {
@@ -397,6 +411,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Burst | Flashpoint",
       "When this Ninja is put in play, target Ninja other than this Ninja gets +2/+2 during this turn.",
     ],
+    flavor: "\"Do not be afraid.\"",
     image: "s28-n-1639",
   },
   {
@@ -418,6 +433,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Burst | Flashpoint",
       "When this Ninja is put in play, you can heal target injured Ninja.",
     ],
+    flavor: "\"Sigh...war, eh.\"",
     image: "s28-n-1640",
   },
   {
@@ -439,6 +455,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Burst",
       "Valid: When you apply the effect of Burst, you can move 1 card in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"The world flipped over again.\"",
     image: "s28-n-1641",
   },
   {
@@ -460,6 +477,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Flashpoint",
       "When you put in play this Ninja or an \"Ink\" Ninja, you may move the top card of your Deck to your Chakra area.",
     ],
+    flavor: "\"Just try it.\"",
     image: "s28-n-1642",
   },
   {
@@ -480,6 +498,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[A NEW WEAPON]",
       "Valid: When this Ninja Attacks, you can discard 1 of your opponent's Chakra. In that case, this Ninja gets +X/+0 during this turn, where X = the number of Symbols on the discarded Chakra.",
     ],
+    flavor: "\"If you're ready, give me the ok!\"",
     image: "s28-n-1643",
   },
   {
@@ -500,6 +519,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[ALLIED SHINOBI COMMANDER]",
       "Valid: The first Jutsu card your opponent plays each turn costs an additional (X) to play, where X = the number of Symbols on that Jutsu card.",
     ],
+    flavor: "\"Ah-haha. Sorry.\"",
     image: "s28-n-1644",
   },
   {
@@ -520,6 +540,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[QUICK ACTION]",
       "When this Ninja is put in play, you can injure 1 Ninja whose Combat is less than this Ninja's.",
     ],
+    flavor: "\"Have some respect!\"",
     image: "s28-n-1645",
   },
   {
@@ -561,6 +582,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Valid: This Ninja gets +1 Entrance cost for each [IMPURE RESURRECTION] Ninja card in your Discard Pile.",
       "Valid: You may ignore Sacrifice costs on your [IMPURE RESURRECTION] Ninja cards.",
     ],
+    flavor: "\"And if I say no...?\"",
     image: "s28-n-1647",
   },
   {
@@ -603,6 +625,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "When this Ninja is deployed, place 2 +1/+1 coins on it.",
       "[EOJ] Remove 1 +1/+1 coin from this Ninja: This Ninja gets +2/+2 during this turn.",
     ],
+    flavor: "\"Y-yes, ma'am!\"",
     image: "s28-n-1649",
   },
   {
@@ -624,6 +647,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "While a player has no Chakra, the Ninjas that player controls cannot be healed.",
       "When this Ninja is blocked, if your opponent has no Chakra, you can injure target Head Ninja opposing this Ninja.",
     ],
+    flavor: "\"Which means you and I are both depraved.\"",
     image: "s28-n-1650",
   },
   {
@@ -644,6 +668,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[STOLEN TRAIT]",
       "Valid: Non-Water Ninjas opposing this Ninja have their effect text negated.",
     ],
+    flavor: "\"Who are these two?!\"",
     image: "s28-n-1651",
   },
   {
@@ -685,6 +710,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[CONTROLLED MIST]",
       "At the start of your opponent's turn, if they control more Ninjas than you, they discard 1 Ninja they control.",
     ],
+    flavor: "\"Have them hurry, too!\"",
     image: "s28-n-1653",
   },
   {
@@ -706,6 +732,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Revitalize",
       "When this card is moved to the bottom of your Deck, place a 0/0 Insect coin with Non-Unique in your Village.",
     ],
+    flavor: "\"Must avoid flashy behavior.\"",
     image: "s28-n-1654",
   },
   {
@@ -746,6 +773,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[COMMANDO UNIT CAPTAIN]",
       "[EOJ] (Wind), reveal this card from your hand: If you control less Ninjas than your opponent, place this Ninja card into 1 of your Teams on the Battlefield in any position. At the end of this turn, if this Ninja is in play, move it to its owner's hand.",
     ],
+    flavor: "\"We retreat on my mark, got it?\"",
     image: "s28-n-1656",
   },
   {
@@ -808,6 +836,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[GALE FORCE]",
       "When this Ninja is deployed, your opponent reveals their hand. You can remove 1 non-Permanent Mission card revealed this way from the game and discard 1 Wind card from your hand. In that case, apply that Mission card's effect.",
     ],
+    flavor: "\"What's going on?\"",
     image: "s28-n-1659",
   },
   {
@@ -828,6 +857,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "[COMMANDER IN CHIEF]",
       "If you control another \"Sand\" Ninja, this Ninja gets +1/+0 and the cost of Jutsu cards used by this Ninja is reduced by (Wind). The same is true for \"Leaf\", \"Cloud\", \"Stone\", and \"Mist\".",
     ],
+    flavor: "\"You didn't need to get up.\"",
     image: "s28-n-1660",
   },
   {
@@ -849,6 +879,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "When this Ninja is deployed, you can remove 1 Haku Ninja card in any player's Discard Pile from the game. In that case, you can deploy 1 additional Ninja during this turn.",
     ],
+    flavor: "\"Please leave them to me.\"",
     image: "s28-n-1661",
   },
   {
@@ -912,6 +943,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Valid | EOJ] Remove 1 Jinin Akebino Ninja card in any player's Discard Pile from the game: Target opposing Ninja gets -4/-4 during this turn. If that Ninja is a \"Weapon\" Ninja, give it 1 Damage.",
     ],
+    flavor: "\"The blunt blade, Kabutowari, the Helmetsplitter, and its wielder...\"",
     image: "s28-n-1664",
   },
   {
@@ -933,6 +965,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Valid | EOJ] Remove 1 Jinpachi Munashi Ninja card in any player's Discard Pile from the game: At the start of the Showdown, if target Ninja opposing this Ninja did not use a Jutsu during this turn, give it 1 Damage.",
     ],
+    flavor: "\"The explosive blade, Shibuki, the Spatter, and its wielder...\"",
     image: "s28-n-1665",
   },
   {
@@ -954,6 +987,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Valid | EOJ] Remove 1 Ameyuri Ringo Ninja card in any player's Discard Pile from the game: Injure target Head Ninja opposing this Ninja. Each Back Ninja opposing this Ninja gets -3/-3 during this turn.",
     ],
+    flavor: "\"The lightning blade, Kiba, the Fang, and its wielder...\"",
     image: "s28-n-1666",
   },
   {
@@ -975,6 +1009,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Valid | EOJ] Remove 1 Kushimaru Kuriarare Ninja card in any player's Discard Pile from the game: Move target Ninja your opponent controls to the Team opposing this Ninja in any position, then give 1 Damage to it.",
     ],
+    flavor: "\"The long sword, Nuibari, the Sewing Needle, and its wielder...\"",
     image: "s28-n-1667",
   },
   {
@@ -1017,6 +1052,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "Valid: When this Ninja Attacks, if it is injured, you can remove 1 Zabuza Momochi Ninja card in any player's Discard Pile from the game. In that case, heal this Ninja and this Ninja gets +3/+0 during this turn.",
     ],
+    flavor: "\"Shut your mouth...\"",
     image: "s28-n-1669",
   },
   {
@@ -1038,6 +1074,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Attacker | Mission] Remove 1 Fuguki Suikazan Ninja card in any player's Discard Pile from the game: If your opponent has no Chakra, they discard 1 Ninja they control.",
     ],
+    flavor: "\"A previous wielder of the great blade Samehada, the Sharkskin...\"",
     image: "s28-n-1670",
   },
   {
@@ -1060,6 +1097,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Valid: While this Ninja has 1 or more +1/+1 coins on it, this Ninja gains \"Tailed Beast\".",
       "[Valid | EOJ] Remove 1 Kinkaku Ninja card in any player's Discard Pile from the game: Injure target Ninja opposing this Ninja, then place 2 +1/+1 coins on this Ninja.",
     ],
+    flavor: "\"Let's do this, Ginkaku.\"",
     image: "s28-n-1671",
   },
   {
@@ -1082,6 +1120,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Valid: While this Ninja has 1 or more +1/+1 coins on it, this Ninja gains \"Tailed Beast\".",
       "[Valid | EOJ] Remove 1 Ginkaku Ninja card in any player's Discard Pile from the game: Injure target Ninja opposing this Ninja, then place 2 +1/+1 coins on this Ninja.",
     ],
+    flavor: "\"Sure thing, Kinkaku!\"",
     image: "s28-n-1672",
   },
   {
@@ -1103,6 +1142,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "When this Ninja is deployed, you can remove 1 Asuma Sarutobi Ninja card in any player's Discard Pile from the game. In that case, search your Deck for up to 2 [IMPURE RESURRECTION] Ninja cards and move them to your Discard Pile. Shuffle your Deck afterwards.",
     ],
+    flavor: "\"Take me down!!\"",
     image: "s28-n-1673",
   },
   {
@@ -1187,6 +1227,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[EOJ] Remove 1 Itachi Uchiha Ninja card in any player's Discard Pile from the game: Target Ninja opposing this Ninja becomes a Stand-By Ninja.",
     ],
+    flavor: "\"I thought I knew more than you did.\"",
     image: "s28-n-1677",
   },
   {
@@ -1228,6 +1269,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "This Ninja cannot be blocked by a Team that includes a Ninja with less Entrance cost than this Ninja's.",
     ],
+    flavor: "\"I commend you, whoever you are...\"",
     image: "s28-n-1679",
   },
   {
@@ -1250,6 +1292,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Valid: This Ninja cannot receive Damage or be removed from play due to Damage.",
       "Valid: When a Jutsu this Ninja is using is negated, if this Ninja is injured, discard it.",
     ],
+    flavor: "\"I would have enjoyed battle with all of you.\"",
     image: "s28-n-1680",
   },
   {
@@ -1271,6 +1314,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[Attacker | Mission] (X): Negate target Jutsu unless its owner discards X Chakra.",
     ],
+    flavor: "\"I'm the Fourth Kazekage.\"",
     image: "s28-n-1681",
   },
   {
@@ -1334,6 +1378,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Sacrifice: 1 Ninja",
       "[EOJ] Remove X Hanzo Ninja cards in any player's Discard Piles from the game: Give X Damage to each Ninja opposing this Ninja, then discard this Ninja.",
     ],
+    flavor: "\"I've had enough of you!\"",
     image: "s28-n-1684",
   },
   {
@@ -1529,6 +1574,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Requirements: Might Guy",
       "Effect: Both players reveal their hand and discard every Jutsu card revealed this way. Then, distribute X Damage among your opponent's Ninjas, where X = the number of Jutsu cards discarded due to this effect, plus 1.",
     ],
+    flavor: "\"That's Guy's Eight Inner Gates move, the Hirudora, the Afternoon Tiger!\"",
     image: "s28-j-1012",
   },
   {
@@ -1578,6 +1624,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Injure the target. At the start of the Showdown, if the target did not use a Jutsu during this turn, give 1 Damage to the target.",
     ],
+    flavor: "\"Lightning Style! Black Panther!\"",
     image: "s28-j-1015",
   },
   {
@@ -1657,6 +1704,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Requirements: \"Weapon\"",
       "Effect: The user gets +3/+3 during this turn. Then, the user gets +3/+3 during this turn for each Jutsu card with the same name as this Jutsu in your Discard Pile.",
     ],
+    flavor: "\"You fight well for a weak man of peace.\"",
     image: "s28-j-1020",
   },
   {
@@ -1672,6 +1720,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Requirements: Kabuto Yakushi + Entrance cost of 6 or more",
       "Effect: Choose up to 3 [IMPURE RESURRECTION] Ninja cards in your Discard Pile. Move 1 of the chosen Ninja cards to the user's Team in any position, ignoring Sacrifice, then move the other 2 to your hand.",
     ],
+    flavor: "\"First we have...\"",
     image: "s28-j-1021",
   },
   {
@@ -1769,6 +1818,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Discard the target.",
     ],
+    flavor: "\"I desire to battle you!\"",
     image: "s28-j-1027",
   },
   {
@@ -1884,6 +1934,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Permanent | Revitalize",
       "Effect: If any coins are placed on a Ninja or Mission you control, you can place an additional coin of that type on that card.",
     ],
+    flavor: "\"...a hundred thousand.\"",
     image: "s28-m-976",
   },
   {
@@ -2083,6 +2134,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "While your opponent has 5 or more Battle Rewards, all numbers in this card's effect text are increased by 1.",
       "Effect: Search your Deck for 1 card and move it to your Discard Pile. Then, shuffle your Deck and draw 1 card.",
     ],
+    flavor: "\"Let's go...the war begins!!",
     image: "s28-m-988",
   },
   {
@@ -2116,6 +2168,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Permanent (3) | Desperation",
       "[EOJ] (0): Negate target Jutsu and move it to its owner's hand. At the end of the turn, move this Mission to your Chakra area.",
     ],
+    flavor: "\"Ninpo Kirigakure Jutsu!\"",
     image: "s28-m-990",
   },
   {
@@ -2151,6 +2204,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Effect: All Ninjas you control without Flashpoint get Flashpoint.",
       "Effect: When you put in play a Ninja except by deployment, you can draw 1 card.",
     ],
+    flavor: "\"I want to protect that friend, and this world!\"",
     image: "s28-m-992",
   },
   {
@@ -2168,6 +2222,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Effect: Your maximum Team size is 4.",
       "[Blocker | Mission] (1): Organize your Teams.",
     ],
+    flavor: "\"So watch your back too!\"",
     image: "s28-m-993",
   },
   {
@@ -2234,6 +2289,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
       "Effect: You may ignore Sacrifice costs on your [IMPURE RESURRECTION] Ninja cards.",
       "[Attacker | Mission] Discard 1 [IMPURE RESURRECTION] Ninja card: Draw 1 card.",
     ],
+    flavor: "\"This is unbelievable.\"",
     image: "s28-m-997",
   },
   {
@@ -2249,6 +2305,7 @@ export const S28_ULTIMATE_NINJA_STORM_3: Card[] = [
     text: [
       "Effect: You win the game if you control Ninjas with \"Leaf\", \"Mist\", \"Sand\", \"Stone\", and \"Cloud\", as well as have Earth, Fire, Lightning, Water, and Wind cards in your Chakra area. (Cards with multiple Symbols and/or Villages count for all of those Symbols and/or Villages)",
     ],
+    flavor: "\"All who feel as I do, follow me!\"",
     image: "s28-m-998",
   },
 ];

@@ -26,6 +26,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja is deployed, your opponent gets 1 Battle Reward.",
       "Valid: During your Mission Phase, you can turn 1 of your opponent's Battle Rewards face up.",
     ],
+    flavor: "\"There is only one destiny we all share equally...death.\"",
     image: "s18-n-883",
   },
   {
@@ -46,6 +47,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SISTERHOOD]",
       "When your opponent wins or gets any Battle Rewards, look at them. If there are 1 or more Earth Jutsu cards among them, you can reveal and move them to your hand instead. Then, move the rest to their Battle Reward area face up.",
     ],
+    flavor: "\"Stronger than hers?\"",
     image: "s18-n-884",
   },
   {
@@ -66,6 +68,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[WAY BIG!!!]",
       "During the Exchange of Jutsu, you can turn 1 of your opponent's Battle Rewards face up. In that case, move 1 coin from another Ninja onto this Ninja.",
     ],
+    flavor: "\"Here I come fatso! Partial Expansion Jutsu!!\"",
     image: "s18-n-885",
   },
   {
@@ -86,6 +89,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[CHIVALROUS]",
       "During your opponent's Mission Phase, you can turn 1 your opponent's Battle Rewards face down. In that case, select 1 of your opponent's Ninjas and negate its effect text during this turn.",
     ],
+    flavor: "\"A real man doesn't let a woman do his fighting for him.\"",
     image: "s18-n-886",
   },
   {
@@ -108,6 +112,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Your opponent's Tracked Ninja cannot become the user of Jutsu cards.",
       "Valid: During your Mission Phase, you can turn 1 of your opponent's Battle Rewards face up.",
     ],
+    flavor: "\"I have more than just Byakugan!\"",
     image: "s18-n-887",
   },
   {
@@ -128,6 +133,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[DESIRE]",
       "During your Mission Phase, you can exchange 1 card in your hand with 1 of your opponent's face-up Battle Rewards. (The exchanged card is placed face down)",
     ],
+    flavor: "\"I'm Ino Yamanaka. My family owns the Yamanaka Flower Shop.\"",
     image: "s18-n-888",
   },
   {
@@ -150,6 +156,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Your opponent's Tracked Ninja must be sent out to Battle, if possible.",
       "Valid: During your Mission Phase, you can turn 1 of your opponent's Battle Rewards face up.",
     ],
+    flavor: "\"Rotation!\"",
     image: "s18-n-889",
   },
   {
@@ -172,6 +179,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "While this Ninja card is face-up in your opponent's Battle Reward area, you can deploy it.",
       "Valid: The effect text of your opponent's Tracked Ninja is negated.",
     ],
+    flavor: "\"When you're sad and alone, you can only trust in yourself.\"",
     image: "s18-n-890",
   },
   {
@@ -193,6 +201,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "During the Exchange of Jutsu, you can turn 3 of your opponent's Battle Rewards face down. In that case, make 1 Battling Ninja a Stand-By NInja.",
       "Cards in your hand and Chakra area cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"My Will of Fire...is now yours.\"",
     image: "s18-n-891",
   },
   {
@@ -214,6 +223,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja is deployed, you can play a face-up Mission card from your opponent's Battle Reward area (ignoring its Hand cost).",
       "Valid: During your Mission Phase, you can turn 1 Battle Reward face up or face down.",
     ],
+    flavor: "\"Sorry, but from here on out...I'm playing for keeps!\"",
     image: "s18-n-892",
   },
   {
@@ -234,6 +244,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[DANGEROUS ARTIST]",
       "During the Exchange of Jutsu, you can turn 3 of your opponent's Battle Rewards face down. In that case, negate all Jutsu cards played during this turn.",
     ],
+    flavor: "\"Art to me is...explosiveness itself!\"",
     image: "s18-n-893",
   },
   {
@@ -277,6 +288,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: When your opponent's Tracked Ninja is sent out to Attack, your opponent must randomly discard 1 card from their hand.",
       "Valid: During your Mission Phase, you can turn up to 2 of your opponent's Battle Rewards face up.",
     ],
+    flavor: "\"I might not be at my cousin Neji's level, but I...\" \"8 Trigrams 64 Palms..! Haaa!!\"",
     image: "s18-n-895",
   },
   {
@@ -298,6 +310,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Tracking (When this Ninja is put in play. Select a Ninja name. Your opponent's Ninjas that include that name are considered Tracked. Only 1 Ninja name per player can be Tracked at a time.)",
       "While your opponent has a Tracked Ninja, this Ninja gets +2/+0.",
     ],
+    flavor: "\"In peace and harmony... Hehehehe!\"",
     image: "s18-n-896",
   },
   {
@@ -320,6 +333,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "While this card is in your hand, If you have 1 or more \"Ninja Dog\" Ninjas and/or Ninjas that include \"Hatake\" in their name, this Ninja is not included in the \"1 Ninja per turn\" restriction.",
       "During the Exchange of Jutsu, you can move this Ninja into another 1 of your Battling Teams.",
     ],
+    flavor: "\"Ugh...You stink of insects.\"",
     image: "s18-n-897",
   },
   {
@@ -341,6 +355,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Tracking (When this Ninja is put in play. Select a Ninja name. Your opponent's Ninjas that include that name are considered Tracked. Only 1 Ninja name per player can be Tracked at a time.)",
       "When this Ninja is sent out to Attack, if your opponent has a Tracked Ninja, your opponent reveals their hand.",
     ],
+    flavor: "\"Is there no mistake, Sis?\"",
     image: "s18-n-898",
   },
   {
@@ -361,6 +376,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[NEW FOUND ABILITY]",
       "When this Ninja is sent out to Battle, you can move up to 2 cards from your Discard Pile to your Chakra area. In that case, discard 3 of your Chakra at the end of your turn.",
     ],
+    flavor: "\"It's too late Naruto... It's already too late. I can't go back anymore.\"",
     image: "s18-n-899",
   },
   {
@@ -402,6 +418,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[ELITE UCHIHA]",
       "Valid: While this Ninja is injured, Fire Jutsu cards used by this Ninja cost 1 less to play.",
     ],
+    flavor: "\"I don't want those words to be just empty talk!\"",
     image: "s18-n-901",
   },
   {
@@ -423,6 +440,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Tracking",
       "During your Mission Phase, if this Ninja card is in your Chakra area or Discard Pile and you have 3 or more Ninjas that share a Symbol with this Ninja card, you can put this Ninja card in play (Entrance cost must be met).",
     ],
+    flavor: "\"You're such a snappy female, as usual.\"",
     image: "s18-n-902",
   },
   {
@@ -443,6 +461,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[RELIABLE BACK-UP]",
       "When this Ninja is sent out to Battle, you can discard 1 of your Fire Chakra and select 1 of your opponent's Ninjas with an Entrance cost of 1 or less. In that case, the selected Ninja gets -2/-2 during this turn.",
     ],
+    flavor: "\"What's the meaning of this? We pierced his vital spots.\"",
     image: "s18-n-903",
   },
   {
@@ -463,6 +482,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[GONE BUT NOT FORGOTTEN]",
       "During your opponent's Mission Phase, you can discard 1 of your Fire Chakra and select 1 of your Ninjas. In that case, the selected Ninja cannot be affected by the effect of your opponent's Mission cards during this turn.",
     ],
+    flavor: "\"I must tell Lord Hokage about this quick.\"",
     image: "s18-n-904",
   },
   {
@@ -484,6 +504,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: \"Akatsuki\" Ninja cards in your hand and Chakra area get -1 Hand cost.",
       "During your Mission Phase, you can move this Ninja to the bottom of your Deck. In that case, deploy an additional \"Akatsuki\" Ninja card from your hand during this turn without paying its Hand cost.",
     ],
+    flavor: "\"W-W-Wait, D-Deidara Sensei!\"",
     image: "s18-n-905",
   },
   {
@@ -506,6 +527,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: Your \"Ninja Dog\" Ninjas get +1/+1.",
       "While you have 4 or more \"Ninja Dog\" Ninjas, your opponent's Tracked Ninja cannot be sent out to Block.",
     ],
+    flavor: "\"Your weapons have a thick scent of my blood on them now. Those are my adorable ninja dogs. And their sense of smell is without equal.\"",
     image: "s18-n-906",
   },
   {
@@ -526,6 +548,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SECOND TO NONE]",
       "During your Mission Phase, you can discard 2 of your Fire Chakra. In that case, select up to X number of your opponent's Ninjas and they get -2/-2 during this turn. X = the number of your Ninjas with a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "\"He has grown. But...he's still not good enough.\"",
     image: "s18-n-907",
   },
   {
@@ -546,6 +569,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SON OF THE GAMA CLAN]",
       "When this Ninja is put in play, look at the top 5 cards of your Deck. You can reveal a \"Ninja Toad\" Ninja card from among them and move it to your hand. Then, move the rest to the bottom of your Deck in any order.",
     ],
+    flavor: "\"Mold Chakra in your stomach and inhale through your nose!\"",
     image: "s18-n-908",
   },
   {
@@ -566,6 +590,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SON OF THE GAMA CLAN]",
       "Valid: During the Exchange of Jutsu, you can discard 1 of your Chakra. In that case, select a Symbol. This Ninja gets the selected Symbol during this turn.",
     ],
+    flavor: "\"We've been summoned.\"",
     image: "s18-n-909",
   },
   {
@@ -586,6 +611,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SYNC TRAINING]",
       "When this Ninja is put in play, look at the top 5 cards of your Deck. You can reveal a Jutsu card with Combination from among them and move it to your hand. Then, move the rest to the bottom of your Deck in any order.",
     ],
+    flavor: "\"Be gentle, okay?\"",
     image: "s18-n-910",
   },
   {
@@ -606,6 +632,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[ONE WITH THE TOADS]",
       "Valid: This Ninja gets +1/+1 while you have a \"Ninja Toad\" Ninja.",
     ],
+    flavor: "\"This is.. a toad ... isn't it?\"",
     image: "s18-n-911",
   },
   {
@@ -626,6 +653,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[KEEPER OF THE SCROLL]",
       "Valid: This Ninja cannot become the user of Jutsu cards.",
     ],
+    flavor: "\"....\"",
     image: "s18-n-912",
   },
   {
@@ -646,6 +674,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[EXPLOSIVE POWER]",
       "This Ninja can be Surged by discarding any Ninja card from your hand with a \"Taijutsu\" Combat Attribute.",
     ],
+    flavor: "\"Guy sensei, I did it! All your training has not been in vain!\"",
     image: "s18-n-913",
   },
   {
@@ -666,6 +695,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SAGE'S STUDENT]",
       "Valid: Play with the top card of your Deck revealed. Your \"Ninja Toad\" Ninjas get the revealed card's Symbol(s).",
     ],
+    flavor: "\"Everyone, please direct these kunai knives towards the enemy all at once. I will do the rest.\"",
     image: "s18-n-914",
   },
   {
@@ -686,6 +716,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[UNSTOPPABLE BLUE BEAST]",
       "Valid: While this Ninja's Combat value is 8 or more, this Ninja cannot be affected by the effects of your opponent's Jutsu and Ninja cards.",
     ],
+    flavor: "\"The fact is, I'm stronger than Kakashi...and faster...\"",
     image: "s18-n-915",
   },
   {
@@ -706,6 +737,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[INK SUMMONS]",
       "During your Mission Phase, you can discard a card from your hand. In that case, put an \"Animal\" Ninja card from your Discard Pile in play with its effect text negated. At the end of the turn, if it still remains in play, remove it from the game.",
     ],
+    flavor: "\"This store's ink works really well for molding my Chakra.\"",
     image: "s18-n-916",
   },
   {
@@ -726,6 +758,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[LEAF'S ELITE ACADEMY]",
       "Valid: While this Ninja is injured, Jutsu cards used by this Ninja cannot be negated.",
     ],
+    flavor: "\"I can't display my true strength on a lame mission like this!\"",
     image: "s18-n-917",
   },
   {
@@ -746,6 +779,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SHARED SPOILS]",
       "During the Mission Phase, you can discard this Ninja. In that case, if your opponent would draw cards due to an effect during this turn, you draw the same number of cards.",
     ],
+    flavor: "\"So...looks like we've got ourselves a tough guy...\"",
     image: "s18-n-918",
   },
   {
@@ -767,6 +801,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: Your \"Ninja Toad\" Ninjas get +1/+1.",
       "Valid: When 1 of your Ninjas becomes the user of a Jutsu card with Combination, you can search your Deck for a Jutsu card with Combination in its effect text, reveal it, shuffle your Deck, then place that card on top of your Deck.",
     ],
+    flavor: "\"This isn't the time to be throwing in the towel!\"",
     image: "s18-n-919",
   },
   {
@@ -787,6 +822,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[CURSED WEB]",
       "During the Exchange of Jutsu, if you have 2 or less cards in your hand, you can make 1 Ninja with an Entrance cost of 1 or less Battling against this Ninja a Stand-By Ninja.",
     ],
+    flavor: "\"Heh! Since you'll be my first victim, let's make this entertaining.\"",
     image: "s18-n-920",
   },
   {
@@ -807,6 +843,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[CURSED FIST]",
       "Valid: While you have 2 or less cards in your hand, this Ninja gets +2/+0.",
     ],
+    flavor: "\"You sure do suffer when you have a stupid leader. You underlings!\"",
     image: "s18-n-921",
   },
   {
@@ -827,6 +864,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[CURSED FLUTE]",
       "During the Mission Phase, if you have 2 or less cards in your hand, you can discard 2 of your Chakra. In that case, negate and discard 1 Mission card being played.",
     ],
+    flavor: "\"Come with us!\"",
     image: "s18-n-922",
   },
   {
@@ -847,6 +885,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[RESEARCHER]",
       "During your Mission Phase, you can discard 2 of your Water Chakra. In that case, look at the top 3 cards of your Deck, move 1 to your hand, 1 to your Chakra area, and 1 to your Discard Pile.",
     ],
+    flavor: "\"This is why I cannot leave Lord Orochimaru's side.\"",
     image: "s18-n-923",
   },
   {
@@ -868,6 +907,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "At the start of your turn, if you have no cards in your hand, draw 1 card.",
       "Valid: While you have no cards in your hand, Teams cannot perform a Mental Power Battle.",
     ],
+    flavor: "\"Free at last. Thank you, Sasuke.\"",
     image: "s18-n-924",
   },
   {
@@ -888,6 +928,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SENSING]",
       "During your Mission Phase, if you have no cards in your hand, you can discard 1 of your Chakra. In that case, move 1 Ninja or Jutsu card from your Chakra area to your hand.",
     ],
+    flavor: "\"So it's you, after all ...Sasuke.\"",
     image: "s18-n-925",
   },
   {
@@ -908,6 +949,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[ANGRY SOUL]",
       "Valid: During your Mission Phase, if you have no cards in your hand, you can select 1 in-play non-Ninja card. In that case, discard the selected card.",
     ],
+    flavor: "\"You're good at controlling your Curse Mark!\"",
     image: "s18-n-926",
   },
   {
@@ -928,6 +970,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SHARP STANCE]",
       "During the Exchange of Jutsu, if you have 2 or less cards in your hand, you can discard 3 of your Water Chakra. In that case, negate and discard 1 Jutsu card being played.",
     ],
+    flavor: "\"I will become your blade.\"",
     image: "s18-n-927",
   },
   {
@@ -948,6 +991,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[PIERCING RESISTANCE]",
       "Valid: When this Ninja is injured due to the Showdown, injure another Ninja with a Printed Entrance cost of 0.",
     ],
+    flavor: "\"If you go to Lord Orochimaru, you won't be alone anymore.\"",
     image: "s18-n-928",
   },
   {
@@ -969,6 +1013,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja is sent out to Attack, if you have 1 or less cards in your hand, you can place 1 Growth coin on a Water Ninja with no Growth coins.",
       "Cards in your Chakra area cannot be affected by the effects of your opponent's Ninja and Mission cards.",
     ],
+    flavor: "\"-Are you coming? -Or not?!\"",
     image: "s18-n-929",
   },
   {
@@ -989,6 +1034,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SERPENT'S STUDENT]",
       "Valid: When this Ninja is discarded due to the Showdown, move this Ninja to its owner's Chakra area instead. In that case, you can move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"You can't bring back the dead, can you?\"",
     image: "s18-n-930",
   },
   {
@@ -1010,6 +1056,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja's Team wins any Victory, you can injure 1 of your opponent's Stand-By Ninjas.",
       "Valid: This Ninja is considered to have \"Jonin\".",
     ],
+    flavor: "\"From this point on, we move together. And henceforth, we will call ourselves... Hebi.\"",
     image: "s18-n-931",
   },
   {
@@ -1030,6 +1077,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[SERPENT INCARNATION]",
       "At the start of your turn, you can select 1 of your opponent's Ninjas with an Entrance cost less than this Ninja's Entrance cost. In that case, remove this Ninja from the game and move the selected Ninja to your Village. The selected Ninja gets \"Name: Orochimaru\".",
     ],
+    flavor: "\"Power that was not used in a lifetime rests inside the human body.\"",
     image: "s18-n-932",
   },
   {
@@ -1051,6 +1099,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "At the end of the Showdown give 1 Damage to 1 Ninja that Battled against this Ninja during this turn.",
       "This Ninja cannot be injured or receive Damage from the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"I see... Your strength is amazing...\" \"Aren't you... afraid of me?\"",
     image: "s18-n-933",
   },
   {
@@ -1072,6 +1121,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "This Ninja card can only be put in play during your Mission Phase by moving your \"Sasuke Uchiha\" with an Entrance cost of 4 or more to your Chakra area while you have no cards in your hand. While you have no cards in your hand, your Water Ninjas cannot be affected by the effects of your opponent's cards.",
       "Valid: This Ninja is considered to have \"Jonin\".",
     ],
+    flavor: "\"You wanted it so badly that you went after the fledgling in the nest... But you became targeted as the prey instead...\"",
     image: "s18-n-934",
   },
   {
@@ -1092,6 +1142,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[EXISTENCE]",
       "When this Ninja would receive any Damage, you can move 1 \"Surge\" Ninja card from your Discard Pile to the bottom of your Deck. In that case, reduce the Damage by 1 instead.",
     ],
+    flavor: "\"I fight for my sake only and live to love no one but myself.\"",
     image: "s18-n-935",
   },
   {
@@ -1112,6 +1163,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[THREAT]",
       "Valid: When 1 of your Ninjas is Surged, place a Growth coin on this Ninja.",
     ],
+    flavor: "\"And now...lets have a puppet show!\"",
     image: "s18-n-936",
   },
   {
@@ -1133,6 +1185,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "While this Ninja is in the same Team as \"Gaara of the Desert\", this Ninja is not counted in the number of Ninjas in that Team.",
       "You can organize your Teams during your opponent's Mission Phase.",
     ],
+    flavor: "\"Excuse me, will you be my Sensei? Please teach me!\"",
     image: "s18-n-937",
   },
   {
@@ -1153,6 +1206,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[CYCLONE]",
       "When this Ninja is deployed or is Surged, you can move 1 \"Surge\" Ninja card from your Chakra area to its owner's hand.",
     ],
+    flavor: "\"Excuse me did I ask for your opinion?!",
     image: "s18-n-938",
   },
   {
@@ -1174,6 +1228,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When 1 of your Ninjas is Surged, draw 1 card.",
       "Valid: Your \"Sand\" and \"Leaf\" Ninjas get +1 Entrance cost.",
     ],
+    flavor: "\"We'll see how much better they are. The Chunin Exams are almost upon us.\"",
     image: "s18-n-939",
   },
   {
@@ -1195,6 +1250,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Non-\"Surge\" Ninjas cannot be organized into Teams during the turn they are put in play.",
       "This Ninja cannot be affected by the effects of your opponent's Ninja with an Entrance cost lower than this Ninja's Entrance cost.",
     ],
+    flavor: "\"Cha!\"",
     image: "s18-n-940",
   },
   {
@@ -1216,6 +1272,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: The value of X is equal to the number of your \"Surge\" Ninjas. This effect cannot be negated.",
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute.",
     ],
+    flavor: "\"Creak, Creak, Creak...\"",
     image: "s18-n-941",
   },
   {
@@ -1236,6 +1293,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[NUMBER OF FINGERS]",
       "Valid: Surge on your Ninjas is changed to the following: \"Valid: During the Exchange of Jutsu, you can discard 1 Ninja card from your hand with the same name as this Ninja. In that case, this Ninja gets +2/+2 and you can negate 1 Jutsu card being played and return it to its owner's hand.\"",
     ],
+    flavor: "\"They're the first puppets you ever made. The father and...the mother.\"",
     image: "s18-n-942",
   },
   {
@@ -1256,6 +1314,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "[ILLUSIONIST]",
       "The Power of your Ninjas with a \"Genjutsu\" Combat Attribute cannot be affected by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Sorry, but you're the one who's getting tied up!\"",
     image: "s18-n-943",
   },
   {
@@ -1277,6 +1336,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Your other Ninjas with a \"Genjutsu\" Combat Attribute cannot be affected by the effect of your opponent's Ninjas.",
       "Valid: When this Ninja is discarded due to the Showdown, draw 2 cards.",
     ],
+    flavor: "\"If you seal off your five senses the Genjutsu will no longer have any effect on you.\"",
     image: "s18-n-944",
   },
   {
@@ -1298,6 +1358,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja is sent to Attack or is Surged, you can select 1 of your opponent's Ninjas. In that case, at the end of the turn, if that Ninja was not sent out to Battle during this turn, return it to its owner's hand.",
       "Valid: \"Sasori\" Ninja cards in your hand get \"Growth\".",
     ],
+    flavor: "\"I don't like waiting for people, and I don't like making people wait...I'll finish this right away.\"",
     image: "s18-n-945",
   },
   {
@@ -1319,6 +1380,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: During your Mission Phase or Exchange of Jutsu, you can heal 1 Ninja or remove from play any number of coins on your Ninjas.",
       "Valid: At the end of your turn, If you have \"Tsunade\" in your Village, you can draw 1 card.",
     ],
+    flavor: "\"The battle to come promises to be a most fearful one.\"",
     image: "s18-n-946",
   },
   {
@@ -1340,6 +1402,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja is sent to Attack, each player moves 1 of their Ninjas to its owner's hand at the end of this turn. (excluding this Ninja)",
       "Valid: When this Ninja is removed from play, draw 2 cards.",
     ],
+    flavor: "\"Now...what will you do?\"",
     image: "s18-n-947",
   },
   {
@@ -1361,6 +1424,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When this Ninja is put in play, your opponent discards their hand. In that case, they draw cards equal to the the number they discarded minus one.",
       "Valid: Your opponent's non-\"Surge\" Ninjas get -2 Entrance cost.",
     ],
+    flavor: "\"The cardinal rule of the desert. If you hit a sandstorm, stay put.\" \"Sand Prison!\"",
     image: "s18-n-948",
   },
   // ── JUTSU ──
@@ -1378,6 +1442,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninja and cannot be sent out to Battle during the next turn. If the user has a \"Tree\" Combat Attribute, the user's Team and the Team Battling against it perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\" 10th Edict of Enlightenment!\"",
     image: "s18-j-706",
   },
   {
@@ -1394,6 +1459,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Tracked Ninjas",
       "Effect: The target becomes a Stand-by Ninja. If the target has no effect text or negated effect text, your opponent discards 1 card in their hand.",
     ],
+    flavor: "\"I've no intention...of dropping...out!\"",
     image: "s18-j-707",
   },
   {
@@ -1410,6 +1476,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target is Tracked. (Only 1 Ninja can be Tracked per player.) Negate the target's effect text during this turn.",
     ],
+    flavor: "\"Haaa!\"",
     image: "s18-j-708",
   },
   {
@@ -1426,6 +1493,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja in 1 of your opponent's Teams",
       "Effect: Negate the target's effect text during this turn. Then, the target becomes a Stand-By Ninja and cannot be sent out to Battle during the next turn. If the user is \"The First Hokage\", injure the target.",
     ],
+    flavor: "\"ROAR!!!\"",
     image: "s18-j-709",
   },
   {
@@ -1441,6 +1509,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Requirements: \"Leaf\" + \"Chunin\" or higher Rank",
       "Effect: Select 1 of the following and apply it: (1) Negate 1 Jutsu card being played and move it to the top of its owner's Deck. (2) Remove 1 in-play Mission card from the game. If the user is \"Shikamaru Nara\", this Jutsu card cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"When you curse someone, you dig two holes.\"",
     image: "s18-j-710",
   },
   {
@@ -1456,6 +1525,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The user gets +3/+3 and cannot be affected by the effects of your opponent's Jutsu cards during this turn. If the user is \"Asuma Sarutobi\", injure the target.",
     ],
+    flavor: "\"I'm your opponent!\"",
     image: "s18-j-711",
   },
   {
@@ -1471,6 +1541,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Requirements: \"Byakugan\"",
       "Effect: The user's Team gets +2 Team Power and +2 Team Mental Power during this turn. If the user's Team wins any Victory or Battle Reward, your opponent randomly discards 1 card in their hand.",
     ],
+    flavor: "\"Behind us!\"",
     image: "s18-j-712",
   },
   {
@@ -1487,6 +1558,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Team Battling against the user",
       "Effect: Switch the Team Power of the user's Team and that of the target's during the Showdown of this turn. If the user has \"Sharingan Eye\", move up to 2 cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"This pain is not an illusion. This pain is absolutely no different from reality. How long will your spirit sustain?\"",
     image: "s18-j-713",
   },
   {
@@ -1502,6 +1574,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target is Tracked. (Only 1 Ninja can be Tracked per player.) Your Ninjas get +1/+1 while Battling against the Tracked Ninja during this turn.",
     ],
+    flavor: "\"Then why didn't you tell me!?\" \"Because if we told you you'd raised a big fuss!\"",
     image: "s18-j-714",
   },
   {
@@ -1517,6 +1590,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your \"Animal\" Ninjas",
       "Effect: Heal the target and it gets +2/+2 during this turn.",
     ],
+    flavor: "\"Thanks...Akamaru...\"",
     image: "s18-j-715",
   },
   {
@@ -1533,6 +1607,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. If you have 4 or more \"Ninja Dogs\" Ninjas, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Aim for the legs! Immobilize Akamaru!\"",
     image: "s18-j-716",
   },
   {
@@ -1548,6 +1623,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 of your opponent's Tracked Ninja",
       "Effect: Your opponent moves all their Ninjas into the target's Team, in any position.",
     ],
+    flavor: "\"If you're not going to do anything, you're in the way, so beat it!\"",
     image: "s18-j-717",
   },
   {
@@ -1564,6 +1640,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja in the user's Team",
       "Effect: The target cannot be affected by the effect of your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"There isn't anything else to hold on to. I need to check our surroundings, so in the meantime just endure it.\"",
     image: "s18-j-718",
   },
   {
@@ -1579,6 +1656,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 during this turn. X = number of Ninja cards in your Discard Pile. If the user is \"Kakashi Hatake\" double the value of X.",
     ],
+    flavor: "\"How stubborn...You're still alive, huh?\"",
     image: "s18-j-719",
   },
   {
@@ -1595,6 +1673,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Change the effect of the target to the following: The user gets -2/-2 during this turn and reveal your hand.",
     ],
+    flavor: "\"We fought him earlier. He's fast... Stay alert!\"",
     image: "s18-j-720",
   },
   {
@@ -1610,6 +1689,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 during this turn. The user's Power cannot be affected by the effects of your opponent's Ninja or Jutsu cards during this turn.",
     ],
+    flavor: "\"Kakashi...I will take your heart to replace the one you took from me.\"",
     image: "s18-j-721",
   },
   {
@@ -1627,6 +1707,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: The target becomes a Stand-By Ninja.",
       "Combination (Wind): Give 1 Damage to the target.",
     ],
+    flavor: "\"Now! Wind Style: Toad Water Pistol!\"",
     image: "s18-j-722",
   },
   {
@@ -1644,6 +1725,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: Injure the target.",
       "Combination (Wind,Fire): Give 1 Damage to every Ninja in the target's Team.",
     ],
+    flavor: "\"Collaboration Jutsu! Wind Style: Toad Flame Bombs!\"",
     image: "s18-j-723",
   },
   {
@@ -1659,6 +1741,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: Search your Deck for any number of Ninja cards and remove them from the game. The target gets +X/+X during this turn. X = the number of Ninja cards removed from the game due to this effect.",
     ],
+    flavor: "\"I'll beat you into the oblivion if that's what it's gonna take...to bring you back!\"",
     image: "s18-j-724",
   },
   {
@@ -1674,6 +1757,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Requirements: \"Oil\" Combat Attribute",
       "Effect: Search your Deck for 1 \"Ninja Toad\" Ninja card, reveal it, and move it into the user's Team in any position. Then, Shuffle your Deck. At the end of the turn, if the user did not have an Entrance cost of 4 or more, move that \"Ninja Toad\" Ninja to your hand.",
     ],
+    flavor: "\"Whoa, that is totally awesome! ...That may be the coolest thing I've ever seen!\"",
     image: "s18-j-725",
   },
   {
@@ -1689,6 +1773,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 \"Tailed Beast Form\" Ninja",
       "Effect: Give 1 Damage to every Ninja in the target's Team. If the user's Team is Battling against a \"Tailed Beast Form\" Ninja, the user's Team wins a Victory, regardless of the results of the Showdown during this turn.",
     ],
+    flavor: "\"With Chakra alone, he caused this much damage..\"",
     image: "s18-j-726",
   },
   {
@@ -1705,6 +1790,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Apply the same Effect as the target. (Targets remain the same)",
     ],
+    flavor: "\"His timing for using the Shadow Clone Jutsu has gotten better.\"",
     image: "s18-j-727",
   },
   {
@@ -1720,6 +1806,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: If the target would be removed from play due to the Showdown or by the effects of your opponent's cards during this turn, heal it and place a Growth coin on it instead.",
     ],
+    flavor: "\"Now, Sasuke... Give me your body!\"",
     image: "s18-j-728",
   },
   {
@@ -1735,6 +1822,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The user gets the target's effect text during this turn. Then, Negate the target's effect text and it gets -2/-2 during this turn.",
     ],
+    flavor: "\"My future lies in this child!\"",
     image: "s18-j-729",
   },
   {
@@ -1751,6 +1839,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: Discard any number of cards from your hand and/or Chakra area. The target gets +2/+2 for each card discarded due to this effect. During the Showdown of this turn, if the user's Team wins any Victory, you win 1 Battle Reward.",
     ],
+    flavor: "\"Not another copy of me...!\"",
     image: "s18-j-730",
   },
   {
@@ -1766,6 +1855,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target's Power becomes equal to its printed Power during this turn. Then, discard up to 2 of your opponent's Chakra or move up to 2 cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"One down.\"",
     image: "s18-j-731",
   },
   {
@@ -1782,6 +1872,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Negate the target's effect text during this turn. Then, if the target's Symbol is different from the user's Symbol, its Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"I want revenge.\"",
     image: "s18-j-732",
   },
   {
@@ -1798,6 +1889,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Injure the target. Negate any Jutsu cards being used by target.",
     ],
+    flavor: "\"A snake that slithers on the ground can only dream of flying through the air.\"",
     image: "s18-j-733",
   },
   {
@@ -1813,6 +1905,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. Then, if the user has an Entrance cost of 4 or more, you can move the top 2 cards of your Deck to your Chakra area.",
     ],
+    flavor: "\"It's over... that was too quick.\"",
     image: "s18-j-734",
   },
   {
@@ -1828,6 +1921,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: The target becomes a Stand-By Ninja. If the user has a Water Symbol, place 1 Growth coin on the target.",
     ],
+    flavor: "\"Stop it, both of you!\"",
     image: "s18-j-735",
   },
   {
@@ -1843,6 +1937,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Jutsu card being played with 1 or more specific Symbols in its cost.",
       "Effect: Negate and move the target to it to its owner's hand. If the user is \"Jonin\" or higher Rank, negate and discard the target instead.",
     ],
+    flavor: "\"Look out!\" \"Kakashi Sensei...!\"",
     image: "s18-j-736",
   },
   {
@@ -1859,6 +1954,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: Move the target to its owner's hand. In that case, move a Ninja card with the same name as the target from your hand into the target's Team in any position. If the user was not \"Gaara of the Desert\", move that Ninja back to your hand at the end of the turn.",
     ],
+    flavor: "\"Gaara's even using his \"Ultimate Defense\" sand in this fight.\"",
     image: "s18-j-737",
   },
   {
@@ -1875,6 +1971,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the user and the target to their owner's hand. If the user is a \"Surge\" Ninja, draw 1 card.",
     ],
+    flavor: "\"His fingers always move before he attacks...\"",
     image: "s18-j-738",
   },
   {
@@ -1890,6 +1987,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: User",
       "Effect: The target gets \"Surge\" during this turn. (Valid: During the exchange of Jutsu, you can discard 1 Ninja card from you hand with the same name as this Ninja. In that case, this Ninja gets +2/+2 during this turn.) In that case, the target gets +2/+2 during this turn. (It is considered as being Surged.)",
     ],
+    flavor: "\"You haven't changed at all, have you, you jerk?!\"",
     image: "s18-j-739",
   },
   {
@@ -1905,6 +2003,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Requirements: Entrance cost of 6 or more",
       "Effect: Move every Ninja to its owner's hand. If the user is a \"Puppet\" Ninja, this Jutsu cannot be affected by the effects of your opponent's cards.",
     ],
+    flavor: "\"You're finished...little girl.\"",
     image: "s18-j-740",
   },
   {
@@ -1921,6 +2020,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja Battling against the user.",
       "Effect: Flip a coin twice. If you got any heads, draw 1 card and injure the user. If you got any tails, injure the target.",
     ],
+    flavor: "\"That was an extraordinary amount of attacks. I couldn't even count them all with the Sharingan. What a Jutsu...\"",
     image: "s18-j-741",
   },
   {
@@ -1937,6 +2037,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 2 of your opponent's Ninjas",
       "Effect: Your opponent selects 1 of the targets and moves it to its owner's hand. If the user is a \"Puppet Master\" Ninja, you can select 1 of the targets instead.",
     ],
+    flavor: "\"It's useless to hide!\"",
     image: "s18-j-742",
   },
   // ── MISSION ──
@@ -1989,6 +2090,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The target's effect text is changed to the following: \"Valid: This Ninja cannot become the user of Jutsu cards with 1 or more specific Symbols in its Jutsu cost.\"",
     ],
+    flavor: "\"This fire Change in Chakra Nature is strong against the wind next to it, but weak against water on the other side.\"",
     image: "s18-m-672",
   },
   {
@@ -2004,6 +2106,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Your opponent gets 1 Battle Reward. In that case, draw 2 cards.",
     ],
+    flavor: "\"The Will of Fire shines upon the village.\"",
     image: "s18-m-673",
   },
   {
@@ -2022,6 +2125,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Mission) Draw 2 cards and Charge 1 card.",
       "Other) Your opponent randomly discard 1 card.",
     ],
+    flavor: "\"I took each of these hearts from Shinobi I once fought. I can always replenish my stock...with your hearts\"",
     image: "s18-m-674",
   },
   {
@@ -2038,6 +2142,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: Select 2 of your opponent's Battle Rewards. If any of them are face up, you can move 1 of them to your hand, then discard the rest.",
       "Effect: While this Mission card is in your Chakra area, your opponent's maximum hand size is reduced by 1.",
     ],
+    flavor: "\"You're late, Sasori my man...I thought you didn't like to keep people waiting.\"",
     image: "s18-m-675",
   },
   {
@@ -2054,6 +2159,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent (2)",
       "Effect: During your Mission Phase, you can discard the top 4 cards of your Deck. In that case, put 1 \"Ninja Dog\" Ninja card from your Discard Pile with an Entrance cost less than or equal to your Turn Marker in play.",
     ],
+    flavor: "\"It's very rare for you to summon me.\" \"Pakkun is out on a mission, so Biscuit, I need you to find Naruto right away.\"",
     image: "s18-m-676",
   },
   {
@@ -2070,6 +2176,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent (3)",
       "Effect: When your opponent's Tracked Ninja is sent out to Block, draw 1 card.",
     ],
+    flavor: "\"Our voices travel farther than wireless radios, and our noses that can instantly sniff out danger will protect you.\"",
     image: "s18-m-677",
   },
   {
@@ -2085,6 +2192,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Teams with \"Ninja Dog\" Ninjas don't count towards the \"3 Teams sent out to Attack\" Restriction during this turn. Ninjas cannot receive any Damage due to the Showdown during this turn.",
     ],
+    flavor: "\"These things here are different too, huh...\"",
     image: "s18-m-678",
   },
   {
@@ -2103,6 +2211,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "(3+) Select 1 of your opponent's Ninjas. The selected Ninja cannot use Jutsu cards during this turn.",
       "(5+) Jutsu cards cannot be played during this turn.",
     ],
+    flavor: "\"I didn't notice in time...No wonder my Genjutsu's having no effect. This is a shadow clone.\"",
     image: "s18-m-679",
   },
   {
@@ -2119,6 +2228,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: All your \"Animal\" Ninjas",
       "Effect: Heal the target. Then, place 1 Growth coin on it.",
     ],
+    flavor: "\"You don't need to worry. The Medical Corp will figure something out soon.\"",
     image: "s18-m-680",
   },
   {
@@ -2134,6 +2244,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Search your Deck for an \"Animal\" Ninja card, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"First comes special rhythm training!\"",
     image: "s18-m-681",
   },
   {
@@ -2150,6 +2261,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent (3)",
       "Effect: When this Mission card is put in play, select a Symbol. All your \"Ninja Toad\" Ninjas get the selected Symbol.",
     ],
+    flavor: "\"Alright, these will be somewhat harsh measures, but let's try...\"",
     image: "s18-m-682",
   },
   {
@@ -2166,6 +2278,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent (2)",
       "Effect: Jutsu cards cannot be played.",
     ],
+    flavor: "\"Young lady, the dango here sure is wonderful!\"",
     image: "s18-m-683",
   },
   {
@@ -2182,6 +2295,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent",
       "Effect: All Counter Mission cards get +1 Hand cost.",
     ],
+    flavor: "\"Asuma....\"",
     image: "s18-m-684",
   },
   {
@@ -2199,6 +2313,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: During your Mission Phase, you can move the top card of your Deck to your Chakra area.",
       "Effect: During the Exchange of Jutsu, you can move any number of cards from your hand to your Chakra area.",
     ],
+    flavor: "\"If we get food this awesome every mission, Captain Yamato can stay with us forever!\"",
     image: "s18-m-685",
   },
   {
@@ -2216,6 +2331,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets +4/+0, \"Tailed Beast Form\", and the following effect text: \"This Ninja must be sent out to battle, if possible.\"",
     ],
+    flavor: "\"That is truly a small Nine-Tails in and of itself!\"",
     image: "s18-m-686",
   },
   {
@@ -2233,6 +2349,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: When this Mission card is put in play, select 1 of the following: Ninja Toad, Ninja Dog, Tailed Beast Form, or Snake",
       "Effect: When a Ninja with the selected Characteristic is put in play, draw 1 card. This effect cannot be duplicated.",
     ],
+    flavor: "\"It's a teleportation technique in which you sign a contract in blood with all kinds of living creatures and then summon them whenever you like with Ninjutsu, Ninja Art.\"",
     image: "s18-m-687",
   },
   {
@@ -2249,6 +2366,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent (3)",
       "Effect: All your Jutsu cards get the following effect: Combination (Lightning): The user gets +3/+0 during this turn. (If another Ninja in the in the Team of this Jutsu's user has a Lightning Symbol, The user gets +3/+0 during this turn.)",
     ],
+    flavor: "\"The Fourth Hokage originally developed the Rasengan intending to add his own Change in Chakra Nature to it.\"",
     image: "s18-m-688",
   },
   {
@@ -2265,6 +2383,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Permanent (3)",
       "Effect: At the start of your opponent's turn, if you have no cards in your hand, you can discard 1 of your opponent's Chakra. In that case, move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"By the eyes of a hawk soaring high above the sky.\"",
     image: "s18-m-689",
   },
   {
@@ -2281,6 +2400,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: Look at the top 3 cards of your Deck, move 1 to your hand, 1 to your Chakra area, and 1 to your Discard Pile.",
       "During your Mission Phase, if this card is in your Chakra area, you can remove this card and another card in your Chakra area from the game. In that case, discard 1 in-play non-Ninja card.",
     ],
+    flavor: "\"It's all right. We're best friends.\"",
     image: "s18-m-690",
   },
   {
@@ -2297,6 +2417,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: Search your Deck for a \"Hebi\" Ninja card, reveal it, move it to your hand. Then, shuffle your Deck.",
       "During your Mission phase, if this card is in your Chakra area, you can remove it from the game. In that case, place a Growth coin on a \"Hebi\" Ninja.",
     ],
+    flavor: "\"Let's go!\"",
     image: "s18-m-691",
   },
   {
@@ -2314,6 +2435,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: When this Mission card is put in play, draw 1 card.",
       "Effect: During your Mission phase, if you have 2 or less cards in your hand, you can move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "You couldn't even live up to the Uchiha name, much less surpass it.",
     image: "s18-m-692",
   },
   {
@@ -2330,6 +2452,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: Draw 1 card for each of your Ninjas with an Entrance cost of 4 or more.",
       "If this card is discarded from your hand or Deck due to your opponent's effect, move it to your hand instead.",
     ],
+    flavor: "\"My own puppet?\"",
     image: "s18-m-693",
   },
   {
@@ -2345,6 +2468,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: Each player reveals up to 10 cards from the top of their Deck and puts any number of Ninja cards from among the revealed cards and from their hand in play. Effect text of Ninjas put in play due to this effect are negated. In that case, your opponent can organize their Teams. Then, each player returns the rest of the revealed cards to their Deck and shuffles it.",
     ],
+    flavor: "\"However...I...used this to bring down a nation!\"",
     image: "s18-m-694",
   },
   {
@@ -2362,6 +2486,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Target: (1) 1 Ninja or in-play Mission (2) 1 of your Ninjas with an Entrance cost equal to or higher than target (1)'s",
       "Effect: Move target (1) and (2) to their owner's hand. If target (2) was a \"Sand\" Ninja, draw 1 card.",
     ],
+    flavor: "\"I'll show you...my puppet show!\" Crow! Black Ant! Salamander!\"",
     image: "s18-m-695",
   },
   {
@@ -2381,6 +2506,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "(3+) Your \"Surge\" Ninjas get +1 Entrance cost during this turn.",
       "(5+) Draw 1 card.",
     ],
+    flavor: "\"Allies of the Leaf Village..\" \"Were Shinobi...\" \"Of the Sand...\"",
     image: "s18-m-696",
   },
   {
@@ -2397,6 +2523,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: Discard up to 2 Wind cards in your hand. If you discarded 1 card, draw 3 cards. If you discarded 2 cards, draw 4 cards.",
       "While this Mission card is in your Chakra area, your \"Sakura Haruno\" gets +1 Entrance cost and +1 Mental Power.",
     ],
+    flavor: "\"So? You think I've become a bit womanly?\"",
     image: "s18-m-697",
   },
   {
@@ -2412,6 +2539,7 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     text: [
       "Effect: At the start of the Battle Phase of this turn, each player selects up to 3 of their \"Female\" and/or \"Medical\" Ninjas and remove them from their Teams. Those Ninjas must be sent out to Battle ignoring all other effects during this turn. Other Ninjas cannot be sent out to Battle during this turn. During the Showdown of this turn, if a player wins any Victory, that player wins 1 Battle Reward and draws 1 card.",
     ],
+    flavor: "\"Four-Corner Sealing Barrier...Lock!\"",
     image: "s18-m-698",
   },
 ];

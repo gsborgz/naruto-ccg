@@ -25,6 +25,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[EXPONENTIAL POWER]",
       "Valid: When a card is moved to the bottom of your Deck, this Ninja gets +1/+0 during the turn.",
     ],
+    flavor: "\"All by himself!?\"",
     image: "s26-n-1488",
   },
   {
@@ -45,6 +46,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[ACADEMY TRAINING]",
       "Valid: When this Ninja Blocks, this Ninja gets +3/+0 during this turn.",
     ],
+    flavor: "\"Ur...urm...\"",
     image: "s26-n-1489",
   },
   {
@@ -65,6 +67,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[GIFTED GENIUS]",
       "[Attacker | Mission] (Earth|Earth): All players discard 1 card.",
     ],
+    flavor: "\"Enough...\"",
     image: "s26-n-1490",
   },
   {
@@ -85,6 +88,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[ACADEMY TRAINING]",
       "Valid: At the start of your turn, if Ninjas you control have a combined Mental Power of 5 or more, you can discard the top 3 cards of your Deck, then draw 1 card.",
     ],
+    flavor: "\"This stuff's a breeze.\"",
     image: "s26-n-1491",
   },
   {
@@ -105,6 +109,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[MAGAKI GANGSTER]",
       "Valid: Jutsus used by other Ninjas in this Ninja's Team cost (Earth) or (1) less to play.",
     ],
+    flavor: "\"Phew. That was close.\"",
     image: "s26-n-1492",
   },
   {
@@ -126,6 +131,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Revitalize (Valid: When this card would be moved to the Discard Pile, move it to the bottom of your Deck instead.)",
       "Valid: When this Ninja is removed from play, place a +1/+1 coin on 1 Ninja you control. If that Ninja is a \"Weapon\" Ninja, place an additional +1/+1 coin on that Ninja.",
     ],
+    flavor: "\"No luck.\"",
     image: "s26-n-1493",
   },
   {
@@ -147,6 +153,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Revitalize (Valid: When this card would be moved to the Discard Pile, move it to the bottom of your Deck instead.)",
       "Valid: When this Ninja is sent out to Battle, reveal the bottom card of your Deck. If that card has Revitalize, move it to your hand. Otherwise, discard the top 3 cards of your Deck.",
     ],
+    flavor: "\"We're not kids anymore.\"",
     image: "s26-n-1494",
   },
   {
@@ -167,6 +174,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[SELFLESS ATTITUDE]",
       "[Mission | EOJ] (Earth): Negate target activated effect targeting another Ninja you control.",
     ],
+    flavor: "\"Please be extremely careful while traveling.\"",
     image: "s26-n-1495",
   },
   {
@@ -187,6 +195,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[ALL SEEING EYES]",
       "Valid: When this Ninja wins any Victory, if the Head Ninja opposing this Ninja has an Entrance cost of 3 or more, discard 1 of your opponent's Battle Rewards.",
     ],
+    flavor: "\"Lady Hinata!\"",
     image: "s26-n-1496",
   },
   {
@@ -208,6 +217,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Revitalize",
       "When this card is moved to the bottom of your Deck, your opponent removes a card in their hand from the game. Your opponent moves that card to their hand at the end of this turn.",
     ],
+    flavor: "\"He always knows the best way to say things...\"",
     image: "s26-n-1497",
   },
   {
@@ -230,6 +240,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "At the start of your turn, you can discard the top 2 cards of your Deck.",
       "Valid: When 1 or more cards are moved to the bottom of your Deck, you can draw 1 card. Your opponent can negate this effect by discarding 1 card from their hand.",
     ],
+    flavor: "\"Good work.\"",
     image: "s26-n-1498",
   },
   {
@@ -251,6 +262,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Revitalize (When this card would be moved to the Discard Pile, move it to the bottom of your Deck instead.)",
       "[Attacker | Mission] Reveal this card from your hand: Discard the top 5 cards of your Deck, then if you discarded 3 or more Earth cards due to this effect, draw 1 card. Then, discard this card.",
     ],
+    flavor: "\"This here is now my territory.\"",
     image: "s26-n-1499",
   },
   {
@@ -292,6 +304,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[BULLY]",
       "[Attacker | Mission] (1): Injure target Ninja with Childhood in its name.",
     ],
+    flavor: "\"This guy's such an idiot!\"",
     image: "s26-n-1501",
   },
   {
@@ -312,6 +325,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[OLD HABITS]",
       "When this Ninja is deployed, move target \"Ninja Dog\" Ninja from your opponent's Village to your Village.",
     ],
+    flavor: "\"They're carpenters like me.\"",
     image: "s26-n-1502",
   },
   {
@@ -332,6 +346,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[CAT SHOPKEEPER]",
       "When this Ninja is deployed, search your Deck for an \"Animal\" Ninja card with an Entrance cost of 1 or less, reveal it, then shuffle your Deck and move that card to the top of your Deck.",
     ],
+    flavor: "\"What a rude thing to say.\"",
     image: "s26-n-1503",
   },
   {
@@ -352,6 +367,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[MAN BEAST TRANSFORMATION]",
       "[Attacker | Mission] (0): Target Ninja you control gains \"Ninja Dog\" and its printed Power becomes 3/2 during this turn.",
     ],
+    flavor: "\"You were going to do it alone?\"",
     image: "s26-n-1504",
   },
   {
@@ -372,6 +388,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[KEEN OBSERVER]",
       "[Mission] (Fire): Target Ninja you control cannot be the target of your opponent's Mission cards during this turn.",
     ],
+    flavor: "\"Yea...\"",
     image: "s26-n-1505",
   },
   {
@@ -393,6 +410,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "[EOJ] (Fire|Fire): Target Ninja gets -X/-0 during this turn, where X = this Ninja's Entrance cost.",
     ],
+    flavor: "\"Hey. Screwup.\"",
     image: "s26-n-1506",
   },
   {
@@ -414,6 +432,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Other \"Akatsuki\" Ninjas you control get +1/+1.",
       "Valid: When 1 of your Teams wins any Victory, if that Team has 2 or more \"Akatsuki\" Ninjas, you win 1 Battle Reward.",
     ],
+    flavor: "\"There's now an opening for one...\"",
     image: "s26-n-1507",
   },
   {
@@ -435,6 +454,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Desperation",
       "[Mission] Remove 2 Ninja cards in your Discard Pile from the game: Place a +1/+1 coin on this Ninja. If this effect was used twice this turn, you may discard this Ninja and put in play 1 Susano'o (Sasuke) Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"I asked you if it's true!\"",
     image: "s26-n-1508",
   },
   {
@@ -455,6 +475,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[BLOOD BOND]",
       "Valid: When this Ninja receives Damage, you can give 1 Damage to target opposing Ninja with an Entrance cost less than this Ninja's.",
     ],
+    flavor: "\"Says the weakling...\"",
     image: "s26-n-1509",
   },
   {
@@ -476,6 +497,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "[EOJ] (Fire): Negate and discard target Jutsu being used by an opposing Ninja. In that case, discard this Ninja at the end of this turn.",
     ],
+    flavor: "\"It doesn't make sense.\"",
     image: "s26-n-1510",
   },
   {
@@ -497,6 +519,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "[Valid | Attacker | Mission] (0): Discard 1 Ninja you control. In that case, draw 2 cards.",
     ],
+    flavor: "\"It's about time for you to come with me...\"",
     image: "s26-n-1511",
   },
   {
@@ -560,6 +583,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst",
       "[EOJ] Remove a +1/+1 coin from target Ninja you control: Draw 1 card.",
     ],
+    flavor: "\"Yes... I am the sage who oversees Honegami Grounds.\"",
     image: "s26-n-1514",
   },
   {
@@ -580,6 +604,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[OFFENSIVE PROTOTYPE]",
       "[Attacker | Mission] Remove this Ninja card in your hand from the game: Return target in-play non-Ninja card to its owner's hand.",
     ],
+    flavor: "\"Leave him to me!\"",
     image: "s26-n-1515",
   },
   {
@@ -600,6 +625,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[DEFENSIVE PROTOTYPE]",
       "[Mission | EOJ] Remove this Ninja card in your hand from the game: Remove a coin of any type from target Ninja or Mission.",
     ],
+    flavor: "\"Did I get him?\"",
     image: "s26-n-1516",
   },
   {
@@ -620,6 +646,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[COMBAT TRAINING]",
       "Burst (When this Ninja is put in play, reveal the top card of your Deck. That card remains face up until the end of this turn as long as it remains on top of your Deck. In that case, this Ninja gets +X/+X during this turn, where X = the revealed card's Entrance cost.)",
     ],
+    flavor: "\"Hey!!\"",
     image: "s26-n-1517",
   },
   {
@@ -640,6 +667,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[SQUAD LEADER]",
       "When any of your Teams that has 1 or more Ninjas with 6 or more Combat wins any Victory, you may draw 1 card.",
     ],
+    flavor: "\"Reporting in!\"",
     image: "s26-n-1518",
   },
   {
@@ -661,6 +689,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst",
       "When this Ninja wins any Victory, if this Ninja's Combat is 7 or higher, you win 1 Battle Reward.",
     ],
+    flavor: "\"Yeah, let's go!\"",
     image: "s26-n-1519",
   },
   {
@@ -682,6 +711,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst",
       "[Valid | Attacker | Mission | EOJ] (0): If this Ninja's Combat is 7 or more, discard this Ninja, then put in play 1 Naruto Uzumaki (Six Tails) Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"That's a lie...!!\"",
     image: "s26-n-1520",
   },
   {
@@ -703,6 +733,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst (When this Ninja is put in play, reveal the top card of your Deck. That card remains face up during this turn as long as it remains on top of your Deck. In that case, this Ninja gets +X/+X during this turn, where X = the revealed card's Entrance cost.)",
       "[Mission | EOJ] (0): Draw 1 card. Then move 1 card from your hand to the top of your Deck.",
     ],
+    flavor: "\"None of you are in any position to celebrate.\"",
     image: "s26-n-1521",
   },
   {
@@ -724,6 +755,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst",
       "While the top card of your Deck is a revealed Jutsu card, this Ninja can use it as though it were in your hand with its cost reduced to (0).",
     ],
+    flavor: "\"Not going to happen.\"",
     image: "s26-n-1522",
   },
   {
@@ -745,6 +777,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst",
       "[Attacker | Mission] (Lightning|Lightning): If the top card of your Deck is a revealed \"Ninja Toad\" Ninja card, put it in play.",
     ],
+    flavor: "\"Kuchiyose no Jutsu!\"",
     image: "s26-n-1523",
   },
   {
@@ -766,6 +799,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Burst",
       "[EOJ] (Lightning|Lightning): If this card is revealed on the top of your Deck, place this Ninja card into any of your Battling Teams in any position. At the end of this turn, if this Ninja is still in play, move it to its owner's hand.",
     ],
+    flavor: "\"...RELEASE!!!\"",
     image: "s26-n-1524",
   },
   {
@@ -807,6 +841,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[GANG LEADER]",
       "Valid: This Ninja gets +3/+0 while your opponent controls a Wind Ninja.",
     ],
+    flavor: "\"That won't do!\"",
     image: "s26-n-1526",
   },
   {
@@ -827,6 +862,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[STALWART CHILD]",
       "Valid: When this Ninja is put in play or removed from play, look at the top 2 cards of your Deck, move 1 of those cards to the bottom of your Deck and the other to the top.",
     ],
+    flavor: "\"Be careful.\"",
     image: "s26-n-1527",
   },
   {
@@ -847,6 +883,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[SENSING WEAKNESS]",
       "Valid: When any Ninja in this Ninja's Team or the Team opposing this Ninja receives any Damage, increase that Damage by 1.",
     ],
+    flavor: "\"Hurry up!\"",
     image: "s26-n-1528",
   },
   {
@@ -867,6 +904,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[UNIQUE ABILITIES]",
       "Valid: While your opponent has 8 or more Chakra, Jutsus used by your Ninjas cannot be the target of your opponent's Jutsu cards or Ninja effects.",
     ],
+    flavor: "\"Yes, I do...\"",
     image: "s26-n-1529",
   },
   {
@@ -887,6 +925,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[DEMON'S HEIR]",
       "[Attacker | Mission | EOJ] Remove a coin from a Mission: This Ninja gets +2/+0 and may only be blocked by Teams of 2 or more Ninjas during this turn.",
     ],
+    flavor: "\"Oh well...\"",
     image: "s26-n-1530",
   },
   {
@@ -928,6 +967,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[INTEL GATHERER]",
       "[Attacker | Mission] Move the top card of your opponent's Deck to their Chakra area: Draw 1 card. Then, if your opponent has less than 10 Chakra, move 1 card from your hand to the bottom of your Deck.",
     ],
+    flavor: "\"What's that look for?\"",
     image: "s26-n-1532",
   },
   {
@@ -949,6 +989,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "While your opponent has 8 or more Chakra, this Ninja cannot become the target of your opponent's Jutsu cards.",
       "[Valid | EOJ] Move 1 card from your opponent's Discard Pile to their Chakra area: If your opponent has 8 or more Chakra, injure target Back Ninja opposing this Ninja.",
     ],
+    flavor: "\"Haku, do you understand?\"",
     image: "s26-n-1533",
   },
   {
@@ -970,6 +1011,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Desperation (If your opponent has 5 or more Battle Rewards, Activated Abilities of this card can be activated up to twice per turn.)",
       "[Attacker | Mission] (Water): Discard 1 of your opponent's Chakra. In that case, move 1 card from the top of your Deck to your Chakra area.",
     ],
+    flavor: "\"Please don't worry, though...\"",
     image: "s26-n-1534",
   },
   {
@@ -991,6 +1033,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Desperation",
       "[Valid | EOJ] (Water): This Ninja gets +2/+0 during this turn. At the end of this turn, if this Ninja won any Victory, discard 1 Ninja your opponent controls with the lowest Entrance cost.",
     ],
+    flavor: "\"Who's next?!!\"",
     image: "s26-n-1535",
   },
   {
@@ -1012,6 +1055,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Desperation",
       "[Attacker | Mission] Move your Turn Marker down by 1: Give 1 Damage to target Ninja with Entrance cost less than or equal to your Turn Marker. If this effect was used twice this turn, you cannot move your Turn Marker up at the end of this turn.",
     ],
+    flavor: "\"Give it up.\"",
     image: "s26-n-1536",
   },
   {
@@ -1053,6 +1097,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[TRACKER IN TRAINING]",
       "[Blocker | EOJ] (0): If this Ninja is a Stand-by Ninja, move this Ninja into any of your Battling Teams in any position.",
     ],
+    flavor: "\"Iruka Sensei, you chose the wrong person.\"",
     image: "s26-n-1538",
   },
   {
@@ -1074,6 +1119,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Flashpoint ([Attacker | Mission] (0): Remove this Ninja from the game. At the start of your next turn, move this Ninja card to your Village.)",
       "When this Ninja is removed from play, you may put in play 1 Inner Sakura Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"You fool!\"",
     image: "s26-n-1539",
   },
   {
@@ -1095,6 +1141,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Flashpoint ([Attacker | Mission] (0): Remove this Ninja from the game. At the start of your next turn, move this Ninja card to your Village.)",
       "When this Ninja is put in play, draw 1 card, then discard 1 card.",
     ],
+    flavor: "\"Promise me that!\"",
     image: "s26-n-1540",
   },
   {
@@ -1117,6 +1164,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Valid: When this Ninja is removed from play, your opponent's Jutsu cards cost (1) more to play during this turn and the next turn.",
       "This Ninja gets +0/+1 while Blocking.",
     ],
+    flavor: "\"So you wanna pull out again?\"",
     image: "s26-n-1541",
   },
   {
@@ -1137,6 +1185,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[SAND ELITE]",
       "Valid: This Ninja gets +1/+0 for each other \"Sand\" Ninja you control.",
     ],
+    flavor: "\"You're impatient.\"",
     image: "s26-n-1542",
   },
   {
@@ -1158,6 +1207,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Valid: When this Ninja is put in play, you may exchange all the cards in your hand with the same number of cards from the top of your Deck.",
       "Valid: At the end of your opponent's turn, remove this Ninja from the game. This effect cannot be negated.",
     ],
+    flavor: "\"I'm gonna kill you for this...later!\"",
     image: "s26-n-1543",
   },
   {
@@ -1201,6 +1251,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "When this Ninja is put in play, remove target Ninja with an Entrance cost less than this Ninja's from its Team.",
       "When this Ninja is put in play except by deployment, this Ninja gets +1 Entrance cost and \"Puppet Master\" during this turn.",
     ],
+    flavor: "\"That's easy for you to say.\"",
     image: "s26-n-1545",
   },
   {
@@ -1221,6 +1272,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[DEMON ILLUSION]",
       "[Blocker | EOJ] Discard 1 card from your hand and put this Ninja card in play from your hand: Your opponent cannot win Battle Rewards during this turn. Then, if your Turn Marker is less than 4, remove this Ninja from the game.",
     ],
+    flavor: "\"You're finished.\"",
     image: "s26-n-1546",
   },
   {
@@ -1243,6 +1295,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Valid: When this Ninja is put in play except by Deployment, discard 1 \"Puppet\" Ninja you control.",
       "Valid: When this Ninja is removed from play, search your Deck for a \"Puppet\" Ninja with Entrance cost less than this Ninja's and move it to your Village.",
     ],
+    flavor: "\"It's showtime.\"",
     image: "s26-n-1547",
   },
   {
@@ -1263,6 +1316,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[COMPANIONS]",
       "[EOJ] (Earth|Earth) or (Wind|Wind): Target Ninja with less Entrance cost than this Ninja's becomes a Stand-By Ninja. Then, draw 1 card.",
     ],
+    flavor: "\"Kurenai, what's taking you so long?\" \"Fool.\"",
     image: "s26-n-1548",
   },
   {
@@ -1283,6 +1337,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[THE LAST BATTLE]",
       "Valid: When any of your Teams with 1 or more \"Puppet\" Ninjas wins any Victory, you win 1 Battle Reward and draw 1 card.",
     ],
+    flavor: "\"Strike it down!!\" \"Yes!!\"",
     image: "s26-n-1549",
   },
   {
@@ -1326,6 +1381,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Non-Unique (This Ninja (card) can be put in play or moved into a Village or Battlefield, even if that area already has 1 or more Ninjas with the same name as this Ninja (card))",
       "All your Samurai Warrior Ninjas get +1/+1.",
     ],
+    flavor: "\"We could say the same!!\"",
     image: "s26-n-1551",
   },
   {
@@ -1346,6 +1402,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "[SKILLFUL MEDIATOR]",
       "[Attacker | Mission] (0): Search your Deck or Discard Pile for 1 Jutsu card with \"Weapon\" in its Requirements, reveal it, and move it to your hand. If you searched your Deck, shuffle it afterwards.",
     ],
+    flavor: "\"Please refrain from behavior that lacks civility.\"",
     image: "s26-n-1552",
   },
   // ── JUTSU ──
@@ -1363,6 +1420,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: The target cannot be the target of your opponent's Jutsu cards during this turn.",
       "Expert [\"Tree\"]: All Teams skip the Showdown during this turn.",
     ],
+    flavor: "\"Now then...\"",
     image: "s26-j-946",
   },
   {
@@ -1379,6 +1437,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: If the target's Entrance cost is less than or equal to the user's, discard it. In that case, your opponent can move 1 of your Battle Rewards to their hand.",
     ],
+    flavor: "\"Earth Style: Mud Wave!\"",
     image: "s26-j-947",
   },
   {
@@ -1394,6 +1453,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Reveal the top card of your Deck. If the revealed card's Entrance cost is greater than or equal to the target's, give 1 Damage to the target.",
     ],
+    flavor: "\"Explode!\"",
     image: "s26-j-948",
   },
   {
@@ -1412,6 +1472,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: The target becomes a Stand-By Ninja and cannot be sent out to Battle during the next turn. Then, if you have 10 or less cards in your Deck, move this Jutsu back to your hand.",
     ],
+    flavor: "\"I just managed to divert its path...\"",
     image: "s26-j-949",
   },
   {
@@ -1443,6 +1504,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Requirements: Entrance cost of 2 or more",
       "Effect: Put in play 1 \"Animal\" Ninja card from your Discard Pile with an Entrance cost less than your Turn Marker.",
     ],
+    flavor: "\"A new summoning jutsu?\"",
     image: "s26-j-951",
   },
   {
@@ -1475,6 +1537,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: Negate and discard 1 Jutsu OR negate every other Jutsu on the chain and end the current turn (Skip the rest of the Battle Phase and the rest of the current player's turn).",
       "Expert [Danzo]: You can remove 1 \"Sharingan Eye\" Ninja card in your Discard Pile from the game. In that case, move this Jutsu to its owner's hand.",
     ],
+    flavor: "\"An ultimate genjutsu cast upon oneself...\"",
     image: "s26-j-953",
   },
   {
@@ -1491,6 +1554,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja opposing the user with less Entrance cost than the user's",
       "Effect: When the user would receive Damage during this turn, give it to the target instead. When the user would be removed from play during this turn, discard the target instead.",
     ],
+    flavor: "\"You, who extolled self-sacrifice, would take a hostage?\"",
     image: "s26-j-954",
   },
   {
@@ -1506,6 +1570,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: The target cannot use Jutsus during this turn. If the target has 2 or more Symbols, injure it.",
     ],
+    flavor: "\"Naruto, is something wrong?\"",
     image: "s26-j-955",
   },
   {
@@ -1524,6 +1589,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "2) Give 1 Damage to 1 Ninja opposing the user.",
       "3) Negate 1 Jutsu with 2 or more specific Symbols in its cost being used by 1 Ninja opposing the user.",
     ],
+    flavor: "\"Art of the Raging Lion's Mane!\"",
     image: "s26-j-956",
   },
   {
@@ -1538,6 +1604,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Place this card in the user's Team in any position as a Ninja with the following: [Power: 3/3 (Healthy and Injured)][Valid: When any Ninja in this Ninja's Team would be removed from play due to an effect, remove this Ninja instead.][Valid: Move this Ninja to its owner's Chakra area at the end of your opponent's turn.]",
     ],
+    flavor: "\"I don't have taijutsu like Bushy Brows.\"",
     image: "s26-j-957",
   },
   {
@@ -1557,6 +1624,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "2+) Give 2 Damage to the target.",
       "3+) Give 1 Damage to every Ninja in the target's Team.",
     ],
+    flavor: "\"Naruto Barrage!\"",
     image: "s26-j-958",
   },
   {
@@ -1590,6 +1658,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: Discard a Ninja in the user's Team. In that case, your opponent discards 1 Ninja in the opposing Team.",
       "Expert [Sasuke Uchiha]: The user gets +X/+0 during this turn, where X = the Entrance cost of the Ninja your opponent discarded.",
     ],
+    flavor: "\"One down...\"",
     image: "s26-j-960",
   },
   {
@@ -1604,6 +1673,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Move X cards from your opponent's Discard Pile to their Chakra area. Then, if your opponent has 10 or more Chakra, draw 2 cards.",
     ],
+    flavor: "\"Hurry up! Bite me!\"",
     image: "s26-j-961",
   },
   {
@@ -1619,6 +1689,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: Your opponent moves the top card of their Deck to their Chakra area. Then, negate the target's effect text during this turn. Then, if your opponent has 3 or more Chakra, negate 1 Jutsu being used by the target.",
     ],
+    flavor: "\"Water Style Genjutsu! Mystic Fog Prison!\"",
     image: "s26-j-962",
   },
   {
@@ -1666,6 +1737,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: The target becomes a Stand-by Ninja. Then, if the target's Entrance cost is less than or equal to the user's, injure the target.",
       "Expert [\"Satoosa\"]: Give 1 Damage to the target.",
     ],
+    flavor: "\"Wind Style: Vacuum Bullets.\"",
     image: "s26-j-965",
   },
   {
@@ -1696,6 +1768,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: Negate the target's effect text during this turn.",
       "Expert [Danzo]: Injure the target and its Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"A curse mark of paralysis, eh...\"",
     image: "s26-j-967",
   },
   {
@@ -1730,6 +1803,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: Remove the user from the game, then remove any number of your opponent's Ninjas from the game whose total Entrance cost is less than or equal to the user's.",
       "Expert [Danzo]: Draw 2 cards.",
     ],
+    flavor: "\"This is a reverse tetragram sealing jutsu!!\"",
     image: "s26-j-969",
   },
   {
@@ -1763,6 +1837,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Jutsu) Give 1 Damage to 1 Ninja.",
       "Mission) Negate 1 Jutsu.",
     ],
+    flavor: "\"When did you get those things!?\"",
     image: "s26-j-971",
   },
   // ── MISSION ──
@@ -1781,6 +1856,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Permanent (1)",
       "Effect: Negate the effect text of all Ninjas.",
     ],
+    flavor: "\"Who and what am I to you...?\"",
     image: "s26-m-914",
   },
   {
@@ -1798,6 +1874,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 \"Genin\" Ninja you control",
       "Effect: The target's printed Power is changed to 6/4 (Healthy and Injured) and it gains the following effect text: \"[EOJ] (0): Send target Ninja opposing this Ninja to the bottom of its owner's Deck. In that case, discard this Ninja at the end of this turn.\"",
     ],
+    flavor: "\"It'll be fifty years this year.\"",
     image: "s26-m-915",
   },
   {
@@ -1814,6 +1891,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "As an additional cost to play this Mission, pay (X).",
       "Effect: Search your Deck for a Permanent Mission card with an Entrance cost of X or less and put it in play. Then, shuffle your Deck.",
     ],
+    flavor: "\"He was involved in the most important parts so don't worry.\"",
     image: "s26-m-916",
   },
   {
@@ -1829,6 +1907,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Reveal the top 5 cards of your Deck. Move any Jutsu cards with \"Weapon\" in its Requirements to your hand and the rest to the bottom of your Deck in any order.",
     ],
+    flavor: "\"This is Jidanda?\"",
     image: "s26-m-917",
   },
   {
@@ -1846,6 +1925,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Mission",
       "Effect: Negate and move the target to the top of its owner's Deck. If you have 5 or less cards in your Discard Pile, discard the target instead.",
     ],
+    flavor: "\"Did you record the battle?\"",
     image: "s26-m-918",
   },
   {
@@ -1861,6 +1941,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Remove 1 \"Sharingan Eye\" Ninja card with Inherit in your Discard Pile from the game. In that case, apply its Inherit effect as though it was just removed from play.",
     ],
+    flavor: "\"It's disgusting!\"",
     image: "s26-m-919",
   },
   {
@@ -1876,6 +1957,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Remove all Ninjas you control from the game. At the end of the turn, move all Ninja cards removed by this effect to your Village.",
     ],
+    flavor: "\"Are you alright, Sasuke?\"",
     image: "s26-m-920",
   },
   {
@@ -1891,6 +1973,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Your opponent discards 1 Ninja they control, then you discard 1 Ninja you control. If those Ninjas had the same Entrance cost, draw 1 card.",
     ],
+    flavor: "\"The descendants of the two brothers continued to battle.\"",
     image: "s26-m-921",
   },
   {
@@ -1906,6 +1989,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Discard 1 Ninja you control. In that case, if its Entrance cost was 2 or less, draw 2 cards. Otherwise, draw 3 cards.",
     ],
+    flavor: "\"Don't you think we should just wait until Tsunade recovers?\"",
     image: "s26-m-922",
   },
   {
@@ -1921,6 +2005,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Move 2 cards from your Discard Pile to your hand. If you moved 2 cards with the same type, your opponent draws 1 card. Then, remove this card from the game.",
     ],
+    flavor: "\"Why!?\"",
     image: "s26-m-923",
   },
   {
@@ -1937,6 +2022,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Permanent",
       "Effect: When a Team you control with 1 or more Ninjas with 1 or more +1/+1 coins on them wins any Victory, you can draw 1 card. This effect cannot be duplicated.",
     ],
+    flavor: "\"Cha!\"",
     image: "s26-m-924",
   },
   {
@@ -1952,6 +2038,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Reveal the top card of your Deck. Discard 1 of your opponent's Ninjas with an Entrance cost less than or equal to the revealed card's (if any).",
     ],
+    flavor: "\"Oh, if it isn't Jiraiya Honey.\"",
     image: "s26-m-925",
   },
   {
@@ -1969,6 +2056,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: When this Mission is put in play, place 2 coins on it.",
       "[EOJ] Remove 1 coin from this Mission: Heal target Ninja. Then, if there are no coins on this Mission, move it to its owner's Chakra area.",
     ],
+    flavor: "\"These herbal pills were made with my sweat, tears and love!\"",
     image: "s26-m-926",
   },
   {
@@ -1985,6 +2073,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place a +1/+1 coin on the target, then injure it. In that case, at the end of this turn, heal the target.",
     ],
+    flavor: "\"I can't help but drown myself in food.\"",
     image: "s26-m-927",
   },
   {
@@ -2000,6 +2089,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Draw 2 cards. Then, move 1 card in your hand to your Chakra area. If you moved a non-Ninja card due to this effect, place a +1/+1 coin on 1 Ninja you control.",
     ],
+    flavor: "\"Everyone ready to go?\"",
     image: "s26-m-928",
   },
   {
@@ -2015,6 +2105,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Move 1 of your opponent's Ninjas with the lowest Entrance cost to its owner's Chakra area. If that Ninja had an Entrance cost of 0, move this Mission to your hand.",
     ],
+    flavor: "\"M-my glasses!\"",
     image: "s26-m-929",
   },
   {
@@ -2034,6 +2125,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "3+) Draw 2 cards",
       "5+) You may apply each of the above effects",
     ],
+    flavor: "\"Late... for marriage?\"",
     image: "s26-m-930",
   },
   {
@@ -2051,6 +2143,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target gets -X/-X, where X = the total number of Water cards in all player's Chakra areas.",
     ],
+    flavor: "\"Ugh...\"",
     image: "s26-m-931",
   },
   {
@@ -2066,6 +2159,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Reveal the top 4 cards of your Deck. Your opponent discards 1 of the revealed cards. Then you move 1 of the remaining cards to your hand. Move the rest of the revealed cards to your Chakra area.",
     ],
+    flavor: "\"When you encounter it, the final journey to the land of the dead begins.\"",
     image: "s26-m-932",
   },
   {
@@ -2082,6 +2176,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Permanent",
       "[EOJ] (0): Move 2 cards from your opponent's Discard Pile to their Chakra area. Then, if your opponent has 10 or more Chakra, look at the top 2 cards of your Deck, move any number to the bottom and the rest to the top of your Deck in any order.",
     ],
+    flavor: "\"A monster!\"",
     image: "s26-m-933",
   },
   {
@@ -2097,6 +2192,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Draw 1 card. Then, you can move 2 cards from your opponent's Discard Pile to their Chakra area. In that case, draw 1 card.",
     ],
+    flavor: "\"That seat is reserved for me...\"",
     image: "s26-m-934",
   },
   {
@@ -2112,6 +2208,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Look at the top 4 cards of your Deck. Select 1 card and move it to your hand, then return the rest to the top of your Deck in any order. Then, if you control Sakura Haruno, draw 1 card.",
     ],
+    flavor: "\"Naruto... I said, I love you!\"",
     image: "s26-m-935",
   },
   {
@@ -2131,6 +2228,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "1) Draw 2 cards",
       "2) Put in play 1 Ninja card from your hand with an Entrance cost less than the target's.",
     ],
+    flavor: "\"Aha... you were going to put everyone to sleep with this, weren't you?\"",
     image: "s26-m-936",
   },
   {
@@ -2146,6 +2244,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Draw 1 card for each \"Genin\" and \"Ninja Academy Student\" Ninja you control.",
     ],
+    flavor: "\"C-Congratulations!\"",
     image: "s26-m-937",
   },
   {
@@ -2163,6 +2262,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1) 1 \"Female\" Ninja you control 2) 1 \"Male\" Ninja your opponent controls",
       "Effect: Target (2) can only be sent out to Battle while target (1) is on the Battlefield.",
     ],
+    flavor: "\"Are you curious too?\"",
     image: "s26-m-938",
   },
   {
@@ -2180,6 +2280,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Target: 1 Ninja card in either player's Chakra area",
       "Effect: This card is considered to be a copy of the target with no effect text. When this card would be removed from play, move it to its owner's Chakra area instead.",
     ],
+    flavor: "\"This is the jofuku flower?\"",
     image: "s26-m-939",
   },
   {
@@ -2195,6 +2296,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
     text: [
       "Effect: Draw 1 card. Then, if you control only \"Samurai\" Ninjas, draw 1 card.",
     ],
+    flavor: "\"Man, I feel like cutting into something.\"",
     image: "s26-m-940",
   },
   {
@@ -2211,6 +2313,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Permanent",
       "Effect: When your opponent puts in play a Ninja, if they control more Ninjas than you do, you can put in play 1 Samurai Warrior Ninja card from your hand.",
     ],
+    flavor: "\"Move out.\"",
     image: "s26-m-941",
   },
   {
@@ -2228,6 +2331,7 @@ export const S26_AVENGERS_WRATH: Card[] = [
       "Effect: When this Mission is put in play, search your Deck for 1 \"Samurai\" Ninja card, reveal it, then move it to your hand. Then, shuffle your Deck.",
       "Effect: Jutsu cards cost an additional (1) to play.",
     ],
+    flavor: "\"We have been awaiting your arrival.\"",
     image: "s26-m-942",
   },
 ];

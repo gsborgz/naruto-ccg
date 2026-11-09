@@ -25,6 +25,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[PROTECTING THE PLAN]",
       "When 1 of your Permanent Earth Missions would be removed from play due to an effect, you can move this Ninja to your Chakra area and that Mission to your hand instead.",
     ],
+    flavor: "\"Just not that interested.\"",
     image: "s25-n-1423",
   },
   {
@@ -45,6 +46,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[STALWART MIND]",
       "Ninjas opposing this Ninja's Team with Mental Power less than this Ninja get -2/-0.",
     ],
+    flavor: "\"Take care of yourself.\"",
     image: "s25-n-1424",
   },
   {
@@ -65,6 +67,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[OUTWIT]",
       "[EOJ] Move 1 card from your hand to the bottom of your Deck: If this Ninja is in a Team by itself, this Ninja's Team and the Team opposing it perform a Mental Power Battle during this turn.",
     ],
+    flavor: "\"Actually, things got a little complicated.\"",
     image: "s25-n-1425",
   },
   {
@@ -85,6 +88,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[WEAPON SWAP]",
       "[Attacker | Mission] (Earth), (Fire), or (Wind): Search your Deck for an Earth, Fire, or Wind card without \"AMBUSH\" and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"Okay!\"",
     image: "s25-n-1426",
   },
   {
@@ -106,6 +110,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: This Ninja gets +1/+0 for every Permanent Mission.",
       "[EOJ] Move a Permanent Mission you control to the bottom of your Deck: This Ninja gets +2/+0 during this turn.",
     ],
+    flavor: "\"...Got it...\"",
     image: "s25-n-1427",
   },
   {
@@ -126,6 +131,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[GUARDIAN OF THE WILL]",
       "[Attacker | Mission] (1): If you control another Earth Ninja, shuffle up to 3 cards from your Discard Pile into your Deck. Then, if you control another Fire Ninja, discard the top 2 cards of your opponent's Deck.",
     ],
+    flavor: "\"We're not kids anymore.\"",
     image: "s25-n-1428",
   },
   {
@@ -146,6 +152,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[WILL TO PROTECT]",
       "When you put in play a Permanent (X) Earth Mission, place an additional coin on that Mission.",
     ],
+    flavor: "\"I'm...just being selfish...\"",
     image: "s25-n-1429",
   },
   {
@@ -167,6 +174,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is put in play, place 2 +1/+1 coins on it.",
       "[Valid | Mission] Remove a +1/+1 coin from this Ninja or a coin from a Permanent Mission you control: Place a coin on target Permanent Mission or place a +1/+1 coin on this Ninja.",
     ],
+    flavor: "\"But this is a crisis situation...\"",
     image: "s25-n-1430",
   },
   {
@@ -188,6 +196,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: When a coin is removed from 1 of your Permanent Missions, you can place a \"Bomb\" coin on target Ninja that has no \"Bomb\" coins on it.",
       "[Valid | Mission | EOJ] (2): Give 1 Damage to target Ninja with a \"Bomb\" coin on it. Then, remove that \"Bomb\" coin from the game.",
     ],
+    flavor: "\"So quit acting so smug!\"",
     image: "s25-n-1431",
   },
   {
@@ -209,6 +218,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is put in play, if you control another Wind Ninja, remove target Ninja from its Team.",
       "When this Ninja is put in play, if you control a Fire Ninja, injure target Ninja whose Entrance cost is less than this Ninjas.",
     ],
+    flavor: "\"Now let's get going.\"",
     image: "s25-n-1432",
   },
   {
@@ -230,6 +240,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is put in play, search your Deck for an Earth Permanent Mission card with an Entrance cost less than or equal to the number of Permanent Missions you control, and put it in play.",
       "Valid: When one of your Earth Permanent Missions would be removed from play, shuffle it into your Deck and draw 1 card instead.",
     ],
+    flavor: "\"Stay still.\"",
     image: "s25-n-1433",
   },
   {
@@ -251,6 +262,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: At the start of your turn, if you control another Earth Ninja, place a coin on target Permanent (X) Mission you control.",
       "Valid: At the start of your turn, if you control another Fire Ninja, you can discard 1 card. In that case, draw 1 card.",
     ],
+    flavor: "\"Why drag out the glory?\"",
     image: "s25-n-1434",
   },
   {
@@ -291,6 +303,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[TAKING ORDERS]",
       "[Attacker | Mission] (Fire), (Lightning) or (Water): Search your Deck for a Fire, Lightning, or Water card without \"AMBUSH\" and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"Your Matatabi drink, miss.\"",
     image: "s25-n-1436",
   },
   {
@@ -311,6 +324,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[BODYGUARD]",
       "This Ninja gets +1/+0 for each coin on your opponent's Ninjas.",
     ],
+    flavor: "\"You don't look familiar.\"",
     image: "s25-n-1437",
   },
   {
@@ -331,6 +345,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[SOUL SEALING]",
       "[Blocker | Mission] Remove this Ninja card in your hand from the game: Negate the effect text of target Ninja during this turn.",
     ],
+    flavor: "\"You're not that strong.\"",
     image: "s25-n-1438",
   },
   {
@@ -351,6 +366,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[PEERLESS GENIUS]",
       "Your opponent's non-\"Taijutsu\" Ninjas with an Entrance cost of 2 or less cannot be sent out to Attack during the turn they are put in play.",
     ],
+    flavor: "\"Come with me.\"",
     image: "s25-n-1439",
   },
   {
@@ -371,6 +387,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[OVERFANG]",
       "[Attacker | Mission] (1): If you control another Fire Ninja, remove a coin from target Permanent Mission, then place a -1/-1 coin on target Ninja. Then, if you control another Lightning Ninja, negate that Mission's effect text during this turn.",
     ],
+    flavor: "\"I'm going to stop him.\"",
     image: "s25-n-1440",
   },
   {
@@ -392,6 +409,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is deployed, search your Deck for a card and remove it from the game.",
       "Valid: When this Ninja would be removed from play, move the card you removed from the game with this effect to your hand, then move this Ninja to your opponent's Battle Rewards instead.",
     ],
+    flavor: "\"We're good to go!\"",
     image: "s25-n-1441",
   },
   {
@@ -413,6 +431,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: When this Ninja would be removed from the game, move it to your Discard Pile instead.",
       "[Attacker | Mission] Give your opponent 1 Battle Reward: If your Turn Marker is equal to or greater than this Ninja card's Entrance cost, put this Ninja card in play from your Discard Pile. (This effect can only be activated from the Discard Pile.)",
     ],
+    flavor: "\"Lord Jashin, behold!\"",
     image: "s25-n-1442",
   },
   {
@@ -434,6 +453,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is put in play, if you control a Lightning Ninja, all of your Ninjas get +2/+0 during this turn.",
       "When this Ninja is put in play, if you control another Water Ninja, you can look at the top 4 cards of your Deck, move any of them to the bottom of your Deck, then move the rest to the top of your Deck in any order.",
     ],
+    flavor: "\"Don't sweat it.\"",
     image: "s25-n-1443",
   },
   {
@@ -455,6 +475,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "At the start of your turn, if you control another Fire Ninja, you can place a -1/-1 coin on target Ninja.",
       "Valid: When 1 of your other Ninjas is injured, if you control another Lightning Ninja, place a +1/+1 coin on that injured Ninja.",
     ],
+    flavor: "\"Pretty gutsy.\"",
     image: "s25-n-1444",
   },
   {
@@ -476,6 +497,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is deployed, if you control 4 or more \"Genjutsu\" Ninjas, place a 6/3 (Healthy), 0/0 (Injured) \"Itachi Clone\" Ninja coin into play with the following: [\"Genjutsu\"].",
       "[EOJ] Remove an \"Itachi Clone\" Ninja from the game: Your opponent cannot win any Battle Rewards during this turn.",
     ],
+    flavor: "\"He's dying.\"",
     image: "s25-n-1445",
   },
   {
@@ -538,6 +560,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When you put in play another \"Weapon\" Ninja, place a +1/+1 coin on it.",
       "When a Team you control wins an Outstanding Victory, if that Team has 1 or more \"Weapon\" Ninjas with 1 or more +1/+1 coins on it, you win 1 Battle Reward.",
     ],
+    flavor: "\"I have something big!\"",
     image: "s25-n-1448",
   },
   {
@@ -558,6 +581,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[WEAPON MASTER'S ASSISTANT]",
       "[Attacker | Mission] Remove this Ninja card in your hand from the game: Move 1 Jutsu card with \"Weapon\" in its Requirements from your Discard Pile to your hand.",
     ],
+    flavor: "\"Yes, so boring, sensei.\"",
     image: "s25-n-1449",
   },
   {
@@ -578,6 +602,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[THE GREEN BEAST]",
       "[Attacker | Mission] (1): If you control another Lightning Ninja, you can place a +1/+1 coin on 1 of your Ninjas that has no coins on it. Then, if you control another Wind Ninja, you can look at the top card of your opponent's Deck and move it to the top or bottom of their Deck.",
     ],
+    flavor: "\"Back to your old self.\"",
     image: "s25-n-1450",
   },
   {
@@ -598,6 +623,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[CLOUD SECRETARY]",
       "[Attacker | Mission] (Lightning), (Water) or (Wind): Search your Deck for a Lightning, Water, or Wind card without \"AMBUSH\" and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"Not again!\"",
     image: "s25-n-1451",
   },
   {
@@ -640,6 +666,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[ONE'S PRIDE]",
       "Valid: This Ninja gets -1/-0 for each other Ninja you control. This effect cannot be negated.",
     ],
+    flavor: "\"He hasn't caught on to me yet...!\"",
     image: "s25-n-1453",
   },
   {
@@ -660,6 +687,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[INK SAVANT]",
       "When this Ninja is deployed, put in play up to 2 \"Ink\" Ninja cards with an Entrance cost of 4 or less from your Discard Pile or Chakra area.",
     ],
+    flavor: "\"I'm not letting you go further.\"",
     image: "s25-n-1454",
   },
   {
@@ -681,6 +709,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is put in play, if you control a Water Ninja, target Ninja's Combat becomes 0 during this turn.",
       "When this Ninja is put in play, if you control another Wind Ninja, remove the top card of your Deck from the game. If the removed card is a non-Ninja card, you can play it as though it were in your hand during this turn.",
     ],
+    flavor: "\"Quit yapping and let's go!\"",
     image: "s25-n-1455",
   },
   {
@@ -701,6 +730,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[THE BLUE BEAST]",
       "[Valid | EOJ] Give your opponent 2 Battle Rewards: Give 2 Damage to target opposing Ninja.",
     ],
+    flavor: "\"What?!\"",
     image: "s25-n-1456",
   },
   {
@@ -722,6 +752,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: At the start of your turn, if you control another Lightning Ninja, place a +1/+1 coin on target Ninja.",
       "Valid: While you control another Water Ninja, all of your opponent's activated effects cost an additional (1) to activate.",
     ],
+    flavor: "\"Suuuure.\"",
     image: "s25-n-1457",
   },
   {
@@ -785,6 +816,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[Valid | Attacker | Mission] Discard 1 Naruto Uzumaki (Six Tails) from your Village: Put this Ninja card in play.",
       "When this Ninja is put in play, you win the game.",
     ],
+    flavor: "\"Destroy everything.\"",
     image: "s25-n-1460",
   },
   {
@@ -846,6 +878,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[ARHAT FIST]",
       "[Attacker | EOJ] Move 1 card from your opponent's Discard Pile to their Chakra area: This Ninja gets +1/+0 during this turn. When this Ninja wins any Battle Reward during this turn, if your opponent has 3 or more Chakra, discard 1 of your opponent's Battle Rewards.",
     ],
+    flavor: "\"Jirobo of the South Gate.\"",
     image: "s25-n-1463",
   },
   {
@@ -866,6 +899,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[SYMPHONY]",
       "[Attacker | Mission] (1): If you control another Water Ninja, no Teams can perform a Mental Power Battle during this turn. Then, if you control another Earth Ninja, exchange 1 card in your hand with 1 of your opponent's face down Battle Rewards.",
     ],
+    flavor: "\"Tayuya of the North Gate.\"",
     image: "s25-n-1464",
   },
   {
@@ -886,6 +920,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[PLAYING THE GAME]",
       "[Attacker | Mission] (Water), (Earth) or (Fire): Search your Deck for a Water, Earth, or Fire card without \"AMBUSH\" and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"Kidomaru of the East Gate.\"",
     image: "s25-n-1465",
   },
   {
@@ -906,6 +941,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[MULTI-FIST]",
       "Valid: While your opponent has 5 or more Chakra, if this Ninja wins any Battle Reward, you win 1 Battle Reward.",
     ],
+    flavor: "\"Sakon of the West Gate.\"",
     image: "s25-n-1466",
   },
   {
@@ -926,6 +962,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[TASTE OF POWER]",
       "[Valid | Attacker | EOJ] Move 1 card from your opponent's Discard Pile to their Chakra area: This Ninja gets +1/+0 during this turn. This effect can be used up to three times per turn.",
     ],
+    flavor: "\"Ah-ha!!!!\"",
     image: "s25-n-1467",
   },
   {
@@ -946,6 +983,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[LIQUIFY]",
       "While your opponent has 8 or more Chakra, this Ninja gets +2/+0 and any Damage this Ninja receives is reduced by 1.",
     ],
+    flavor: "\"My poor executioner's blade!!\"",
     image: "s25-n-1468",
   },
   {
@@ -967,6 +1005,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: When this Ninja is put in play, if you control another Earth Ninja, draw 1 card, then move 1 card from your hand to the bottom of your Deck.",
       "When this Ninja is put in play, if you control a Fire Ninja, your opponent discards the top 3 cards of their Deck unless they give you 1 Battle Reward.",
     ],
+    flavor: "\"...I hope...\"",
     image: "s25-n-1469",
   },
   {
@@ -988,6 +1027,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: At the start of your turn, if you control another Earth Ninja, your opponent reveals 1 card at random from their hand.",
       "Valid: At the start of your turn, if you control another Water Ninja you can look at the top card of your Deck. In that case, if it is a Mission card, reveal it and move it to your hand. Otherwise, shuffle your Deck.",
     ],
+    flavor: "\"I impart valuable advice through my lectures, you know!\"",
     image: "s25-n-1470",
   },
   {
@@ -1028,6 +1068,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[SNAKEBIND]",
       "Valid: While your opponent has 10 or more Chakra, you may play Water Jutsu cards from your Discard Pile as though they were in your hand. Jutsu cards played this way are removed from the game after they resolve.",
     ],
+    flavor: "\"The time is now...\"",
     image: "s25-n-1472",
   },
   {
@@ -1048,6 +1089,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[TRANQUILIZER]",
       "[Blocker | Mission] Remove this Ninja card in your hand from the game: Target Ninja cannot be organized into Teams or be sent out to Attack during this turn.",
     ],
+    flavor: "\"Target located.\"",
     image: "s25-n-1473",
   },
   {
@@ -1068,6 +1110,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[HEALING JUTSU]",
       "[Mission | EOJ] Remove this Ninja card in your hand from the game: Heal target injured Ninja.",
     ],
+    flavor: "\"Target captured!\"",
     image: "s25-n-1474",
   },
   {
@@ -1108,6 +1151,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[FOLLOWING A SCENT]",
       "[Attacker | Mission (Wind), (Earth) or (Lightning): Search your Deck for a Wind, Earth, or Lightning card without \"AMBUSH\" and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"Leave him to me.\"",
     image: "s25-n-1476",
   },
   {
@@ -1128,6 +1172,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[MEDICAL STUDENT]",
       "[Attacker | Mission] (1): If you control another Wind Ninja, you can heal target Ninja. Then, if you control another Water Ninja, you can have 1 Ninja use its injured Power during this turn.",
     ],
+    flavor: "\"I'll do anything you want.\"",
     image: "s25-n-1477",
   },
   {
@@ -1148,6 +1193,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[GALESTORM]",
       "[EOJ] (Wind|Wind): Negate target Jutsu and return it and this Ninja to their owner's hand.",
     ],
+    flavor: "\"Y-Yes sir!\"",
     image: "s25-n-1478",
   },
   {
@@ -1190,6 +1236,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[PAPER PUSHER]",
       "When this Ninja is deployed, you can remove this Ninja and a Tonton Ninja you control from the game. In that case, you can put in play a Tsunade Ninja card from your hand, Discard Pile, or Chakra area.",
     ],
+    flavor: "\"Don't tell me...?!\"",
     image: "s25-n-1480",
   },
   {
@@ -1211,6 +1258,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "When this Ninja is put in play, if you control another Earth Ninja, discard 1 of your opponent's Battle Rewards.",
       "When this Ninja is put in play, if you control a Lightning Ninja, move a Jutsu card from your Discard Pile to the top of your Deck.",
     ],
+    flavor: "\"Say again, old man?!!\"",
     image: "s25-n-1481",
   },
   {
@@ -1274,6 +1322,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Valid: At the start of your turn, if you control another Lightning Ninja, you can move the top card of your Deck to your Chakra area.",
       "Valid: When you play a Mission, if you control another Wind Ninja, draw 1 card.",
     ],
+    flavor: "\"What should we do?\"",
     image: "s25-n-1484",
   },
   {
@@ -1351,6 +1400,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Remove X Ninja cards in your opponent's Discard Pile from the game. In that case, place X \"Non-Unique\" 0/0 (Healthy and Injured) Spore Ninja coins into play.",
     ],
+    flavor: "\"What!?\"",
     image: "s25-j-921",
   },
   {
@@ -1367,6 +1417,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: The target becomes a Stand-by Ninja. If the higher cost of this Jutsu was paid, every other Ninja in the target's Team becomes a Stand-by Ninja.",
     ],
+    flavor: "\"You just stay put.\"",
     image: "s25-j-922",
   },
   {
@@ -1384,6 +1435,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: The target becomes a Stand-by Ninja. Then, injure the target.",
       "Expert [Mei Terumi]: Give 1 Damage to the target.",
     ],
+    flavor: "\"Lava Style! Lava Monster Jutsu!\"",
     image: "s25-j-923",
   },
   {
@@ -1399,6 +1451,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Requirements: Earth + Entrance cost of 4 or more",
       "Effect: Place a 3/3 (Healthy and Injured) Golem Ninja coin in the user's Team in any position with the following: [When any other Ninja in this Ninja's Team would receive any Damage, reduce that Damage by 1.]",
     ],
+    flavor: "\"Rurk.\"",
     image: "s25-j-924",
   },
   {
@@ -1413,6 +1466,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Increase the Entrance cost of Ninja cards in your opponent's hand by 1 during this turn and the next turn.",
     ],
+    flavor: "\"Earth Style! Weighted Boulder Jutsu!\"",
     image: "s25-j-925",
   },
   {
@@ -1430,6 +1484,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Every other Ninja in the target's Team becomes a Stand-by Ninja and remove the target from the game. Then draw 2 cards.",
       "Expert [\"Gravity\"]: Give 2 Damage to every Ninja that was made a Stand-by Ninja due to this effect.",
     ],
+    flavor: "\"Particle Style! Atomic Dismantling Jutsu!\"",
     image: "s25-j-926",
   },
   {
@@ -1444,6 +1499,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Name a card. During this turn and the next turn, your opponent cannot play the named card.",
     ],
+    flavor: "\"All of us in the Foundation bear one.\"",
     image: "s25-j-927",
   },
   {
@@ -1460,6 +1516,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja",
       "Effect: The user gets +3/+3 during this turn. Then, flip a coin. If the result is heads, give 2 Damage to the target, otherwise give 1 Damage to the target.",
     ],
+    flavor: "\"...you sure are quick.\"",
     image: "s25-j-928",
   },
   {
@@ -1476,6 +1533,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Requirement: \"Genjutsu\" + Entrance cost of 5 or more",
       "Effect: You control your opponent's next turn (you see all cards that player would see, you make all decisions for them and play their cards for them).",
     ],
+    flavor: "\"Th-this...must be genjutsu.\"",
     image: "s25-j-929",
   },
   {
@@ -1491,6 +1549,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Requirements: Itachi Uchiha or Sasuke Uchiha + Entrance cost of 4 or more",
       "Effect: When your opponent would win any Battle Rewards during this turn, you win the same amount instead.",
     ],
+    flavor: "\"A shield of black flames!\"",
     image: "s25-j-930",
   },
   {
@@ -1507,6 +1566,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Give 2 Damage to the target. Then, if the user is blocking, give 1 Damage to every Ninja that shares a Symbol with the target.",
     ],
+    flavor: "\"Inferno Style! Flame Control!\"",
     image: "s25-j-931",
   },
   {
@@ -1523,6 +1583,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Requirements: Lightning + Entrance cost of 3 or more or Wind + Entrance cost of 3 or more",
       "Effect: Apply the following effects based on X: 1+) Give 1 Damage to 1 Ninja opposing the user 2+) Injure 1 Ninja",
     ],
+    flavor: "\"Gale Style! Laser Circus!\"",
     image: "s25-j-932",
   },
   {
@@ -1538,6 +1599,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja",
       "Effect: During this turn and the next turn, the target cannot use Jutsus.",
     ],
+    flavor: "\"Lightning Illusion! Flash Pillar!\"",
     image: "s25-j-933",
   },
   {
@@ -1555,6 +1617,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Move the target into the Team opposing the user as a Head Ninja, then injure the target. If the user wins any Victory during this turn, draw 1 card.",
       "Expert [A]: Negate all other Jutsus on the chain. Players cannot play Jutsu cards during this turn.",
     ],
+    flavor: "\"Liger Bomb!!\"",
     image: "s25-j-934",
   },
   {
@@ -1570,6 +1633,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: The target of any Jutsu cards the user uses may be changed to \"1 Ninja\" during this turn.",
       "Expert [A]: Move this card back to your hand.",
     ],
+    flavor: "\"I'm impressed that you were able to touch me.\"",
     image: "s25-j-935",
   },
   {
@@ -1585,6 +1649,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Requirements: Water + Entrance cost of 5 or more or Lightning + Entrance cost of 5 or more",
       "Effect: Give 1 Damage to target Ninja opposing the user for each Lightning Chakra used to pay for this Jutsu, then give that same amount of Damage to 1 other Ninja opposing the user for each Water Chakra used to pay for this Jutsu.",
     ],
+    flavor: "\"Lightning Style! Emotion Wave!\"",
     image: "s25-j-936",
   },
   {
@@ -1599,6 +1664,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: During this turn and the next turn, players cannot play Mission cards.",
     ],
+    flavor: "\"Water Style! Water Wall!\"",
     image: "s25-j-937",
   },
   {
@@ -1615,6 +1681,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja on the Battlefield with more Support than the user",
       "Effect: Give 1 Damage to the target. Then, you can injure the user. In that case, give 1 Damage to the target.",
     ],
+    flavor: "\"Mwa-ha ha!\"",
     image: "s25-j-938",
   },
   {
@@ -1630,6 +1697,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Requirements: \"Weapon\"",
       "Effect: You can pay (2). In that case, the user gets +4/+4 during this turn. Then, you can make 1 Ninja opposing the user a Stand-by Ninja if its Combat is less than the user.",
     ],
+    flavor: "\"Hiramekarei Release!\"",
     image: "s25-j-939",
   },
   {
@@ -1647,6 +1715,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: If the target's Entrance cost is equal to or less than the user, injure the target.",
       "Expert [Mei Terumi]: Discard all injured Ninjas opposing the user.",
     ],
+    flavor: "\"Vapor Style! Solid Fog Jutsu!\"",
     image: "s25-j-940",
   },
   {
@@ -1661,6 +1730,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: During this turn and the next turn, Ninjas cannot receive Damage.",
     ],
+    flavor: "\"...I guess your absolute defense is still going strong.\"",
     image: "s25-j-941",
   },
   {
@@ -1677,6 +1747,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Negate the target.",
       "Expert [Temari]: Move the target's user to its owner's hand.",
     ],
+    flavor: "\"Wind Scythe Jutsu!\"",
     image: "s25-j-942",
   },
   {
@@ -1694,6 +1765,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: Every Ninja your opponent controls on the Battlefield",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Secret Red Technique! Puppet Triad!\"",
     image: "s25-j-943",
   },
   {
@@ -1711,6 +1783,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Select and apply 1 of the following: 1) The target's Power becomes 0/0 during this turn. 2) Injure the target.",
       "Expert [\"Satoosa\"]: Discard 1 injured Ninja.",
     ],
+    flavor: "\"Sand Shower Barrage!\"",
     image: "s25-j-944",
   },
   {
@@ -1728,6 +1801,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Injure the target.",
       "Expert [\"Satoosa\"]: Discard all of your opponent's injured Ninjas.",
     ],
+    flavor: "\"Thank you...\"",
     image: "s25-j-945",
   },
   // ── MISSION ──
@@ -1746,6 +1820,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: When this Mission is put in play, if you control another Permanent Mission, place an additional coin on this Mission.",
       "Effect: When you remove 1 or more coins from this Mission, draw 1 card.",
     ],
+    flavor: "\"Talk about bad timing.\"",
     image: "s25-m-884",
   },
   {
@@ -1764,6 +1839,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "2) Target Ninja you control may only be blocked by Ninjas that share a Symbol with it.",
       "3) Shuffle your hand into your deck, then draw the same number of cards you moved due to this effect, plus 1.",
     ],
+    flavor: "\"Look at the young-uns romping around without any regard.\"",
     image: "s25-m-885",
   },
   {
@@ -1781,6 +1857,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Permanent (1)",
       "Effect: Ninjas with an Entrance cost of 5 or less cannot be sent out to Battle.",
     ],
+    flavor: "\"The Gokage assemble here today.\"",
     image: "s25-m-886",
   },
   {
@@ -1798,6 +1875,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove 1 Ninja card in your opponent's Discard Pile from the game. The target's effect text is replaced with the removed Ninja card's effect text.",
     ],
+    flavor: "\"My right eye is also a precious spoil of war.\"",
     image: "s25-m-887",
   },
   {
@@ -1815,6 +1893,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[Attacker | Mission] Remove a coin from this Mission: Remove 2 Chakra from the game.",
       "When this Mission is removed from play, move all cards removed from the game due to this card back to their owner's Chakra area.",
     ],
+    flavor: "\"Easy for you to say...\"",
     image: "s25-m-888",
   },
   {
@@ -1832,6 +1911,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "[Attacker | Mission] Remove X coins from this Mission: Remove target Ninja with X or less Entrance cost from the game. X cannot be 0.",
       "When this Mission is removed from play, move all cards removed from the game due to this effect back to their owner's Village.",
     ],
+    flavor: "\"What have you done...\"",
     image: "s25-m-889",
   },
   {
@@ -1848,6 +1928,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Permanent",
       "[EOJ] Discard 2 Ninjas you control: After this Battle Phase, there is an additional Battle Phase.",
     ],
+    flavor: "\"W-what?!\"",
     image: "s25-m-890",
   },
   {
@@ -1865,6 +1946,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Mission",
       "Effect: Negate and discard the target. If the target's Entrance cost is 4 or more, draw 1 card.",
     ],
+    flavor: "\"Yes, master?\"",
     image: "s25-m-891",
   },
   {
@@ -1883,6 +1965,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "2) Deploy 1 Ninja card from your Discard Pile.",
       "3) Draw 2 cards, then move 1 card from your hand to your Chakra area.",
     ],
+    flavor: "\"I know.\"",
     image: "s25-m-892",
   },
   {
@@ -1900,6 +1983,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "1) You win 1 Battle Reward.",
       "2) Your opponent discards 1 of their Ninjas.",
     ],
+    flavor: "\"Stand down.\"",
     image: "s25-m-893",
   },
   {
@@ -1915,6 +1999,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Both players reveal their hand. The player who reveals the Ninja card with the highest Entrance cost draws 2 cards. If players are tied, both players draw 1.",
     ],
+    flavor: "\"Wanna talk?\"",
     image: "s25-m-894",
   },
   {
@@ -1931,6 +2016,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Counter",
       "Effect: At the end of this turn, if your opponent did not play a Mission during this turn, remove all of your opponent's Ninjas from their Teams.",
     ],
+    flavor: "\"Something's just not sitting right...\"",
     image: "s25-m-895",
   },
   {
@@ -1963,6 +2049,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Permanent (2)",
       "Effect: When a Ninja would receive any Damage, increase that Damage by 1. When a player would win any Battle Rewards, increase that number by 1. When a player would draw any cards, increase that number by 1.",
     ],
+    flavor: "\"What should I do if they all totally come after me?\"",
     image: "s25-m-897",
   },
   {
@@ -1979,6 +2066,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 Ninja your opponent controls",
       "Effect: At the end of this turn, if the target was not sent out to Block during this turn, give 1 Damage to the target.",
     ],
+    flavor: "\"Get off your high horse!!\"",
     image: "s25-m-898",
   },
   {
@@ -1997,6 +2085,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "2) Reveal the top 5 cards of your Deck. You can move 1 Ninja card among those cards to your hand, then shuffle the rest into your Deck.",
       "3) Draw 2 cards.",
     ],
+    flavor: "\"Let's go!\"",
     image: "s25-m-899",
   },
   {
@@ -2013,6 +2102,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Put in play a Ninja card from your hand with its effect text negated. At the end of this turn, if that Ninja is still in play, remove it from the game.",
       "While this Mission card is in your Chakra area, when a Ninja you control would be removed from play due to an opponent's effect, you can remove this Mission card from the game and move that Ninja to your hand instead.",
     ],
+    flavor: "\"I'm taking the stairs, like normal folk...\"",
     image: "s25-m-900",
   },
   {
@@ -2030,6 +2120,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "1) Search your Deck for a Jutsu card, reveal it, then move it to your hand. Then, shuffle your Deck.",
       "2) Place 1 Growth coin on each of your Ninjas.",
     ],
+    flavor: "\"Please!!\"",
     image: "s25-m-901",
   },
   {
@@ -2045,6 +2136,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Look at the top 2 cards of your Deck, move any of them to the bottom of your Deck, and move the rest to the top of your Deck in any order. Then, draw 1 card.",
     ],
+    flavor: "\"Well, hello there...!\"",
     image: "s25-m-902",
   },
   {
@@ -2063,6 +2155,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "2) Both players select and discard 1 of their Ninjas.",
       "3) Select 2 cards in your opponent's hand. Your opponent reveals 1 of them. Select 1 of those cards and discard it.",
     ],
+    flavor: "\"I swear upon my title as Mizukage to carry out my duties with brilliance.\"",
     image: "s25-m-903",
   },
   {
@@ -2080,6 +2173,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: When any Ninja your opponent controls takes any Damage due to the Showdown, discard that Ninja.",
       "[EOJ] Move this Mission to your Chakra area: Target Ninja gets -2/-2 during this turn.",
     ],
+    flavor: "\"After all his warnings to me not to kill anyone!\"",
     image: "s25-m-904",
   },
   {
@@ -2097,6 +2191,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 \"Satoosa\" Ninja",
       "Effect: The target cannot be organized into Teams, has its effect text negated, and must be sent out to Battle by itself each turn.",
     ],
+    flavor: "\"I'm gonna slaughter ya!!\"",
     image: "s25-m-905",
   },
   {
@@ -2112,6 +2207,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Discard the Ninja with the highest Combat. If any Ninjas are tied, give 1 Damage to those Ninjas instead.",
     ],
+    flavor: "\"I've got an absolute defense that's even greater than yours.\"",
     image: "s25-m-906",
   },
   {
@@ -2128,6 +2224,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Permanent",
       "[EOJ] Discard 1 of your Ninjas: Target Ninja gets +X/+0 during this turn, where X = the discarded Ninja's Combat.",
     ],
+    flavor: "\"The former Mizukage's Three-Tails.\"",
     image: "s25-m-907",
   },
   {
@@ -2144,6 +2241,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: Place 2 \"Insect\" Ninja coins in play with the following: \"[Power: 0/0 (Healthy and Injured)] [Non-Unique]\"",
       "While this Mission card is in your Chakra area, all of your \"Insect\" Ninjas get +1/+1.",
     ],
+    flavor: "\"You chose the wrong person.\"",
     image: "s25-m-908",
   },
   {
@@ -2160,6 +2258,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Target: 1 \"Satoosa\" Ninja you control",
       "Effect: Search your Deck for a Ninja card that shares at least 1 Symbol with the target and has an Entrance cost less than the target, reveal it, and move it to your Village. Then, shuffle your Deck.",
     ],
+    flavor: "\"I trust your discretion.\"",
     image: "s25-m-909",
   },
   {
@@ -2178,6 +2277,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "2) All opposed Teams perform a Mental Power Battle during this turn.",
       "3) Move 1 Lightning card from your Discard Pile to your hand.",
     ],
+    flavor: "\"We're off.\"",
     image: "s25-m-910",
   },
   {
@@ -2195,6 +2295,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
       "Effect: When you would draw a card, you may place a \"Heart\" coin on this Mission instead.",
       "[Attacker | Mission] Remove 3 \"Heart\" coins from this Mission: Search your Deck for any card, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"What a pure hearted child...\"",
     image: "s25-m-911",
   },
   {
@@ -2227,6 +2328,7 @@ export const S25_KAGE_SUMMIT: Card[] = [
     text: [
       "Effect: Select any number of cards you control and place another coin on those cards of a type that card already has on it.",
     ],
+    flavor: "\"You're one of Konoha's heroes too!\"",
     image: "s25-m-913",
   },
 ];

@@ -25,6 +25,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[BURNING FIST]",
       "While this Ninja is Battling a Lightning Ninja, this Ninja gets +2/+0 during the turn and is unaffected by Lightning Ninja effects.",
     ],
+    flavor: "\"Don't they say there's nothing scarier than a grudge over food?\"",
     image: "s21-n-1102",
   },
   {
@@ -46,6 +47,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Valid | Attacker | Mission] (2): Flip a coin. If the result is heads, give 1 Damage to 1 of your opponent's Ninjas. Otherwise, your opponent gives 1 Damage to 1 of your Ninjas.",
       "Valid: \"Deidara\" Ninja cards in your hand get \"Growth\".",
     ],
+    flavor: "\"Don't you mock me... or my art!\"",
     image: "s21-n-1103",
   },
   {
@@ -67,6 +69,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Non-Unique",
       "Valid: During the Showdown, while you haven't deployed a Ninja this turn, this Ninja gets +2/+1 during this turn.",
     ],
+    flavor: "\"It was nothing..hack hack... I'm fine... hack...\"",
     image: "s21-n-1104",
   },
   {
@@ -89,6 +92,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Valid | Attacker | Mission] (Earth|Earth|Earth): Place a \"Clay\" coin on 1 of your Ninjas.",
       "[Valid | Attacker | Mission] Discard this Ninja: Give 2 Damage to every Ninja without a \"Clay\" coin, then remove all \"Clay\" coins from the game.",
     ],
+    flavor: "\"Cry your heart out!!!\"",
     image: "s21-n-1105",
   },
   {
@@ -110,6 +114,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Attacker | Mission] Discard this Ninja: Ninjas can be deployed from your Discard Pile during this turn.",
       "This Ninja gets +1/+0 for each of your Ninjas.",
     ],
+    flavor: "\"You brought gifts, mew?\"",
     image: "s21-n-1106",
   },
   {
@@ -131,6 +136,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Attacker | Mission] Discard this card from your hand: Discard a Mission or Client.",
       "This Ninja gets +1/+0 for each of your Ninjas.",
     ],
+    flavor: "\"What brings you here, mew?\"",
     image: "s21-n-1107",
   },
   {
@@ -152,6 +158,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Non-Unique",
       "[Attacker | Mission] Put this Ninja card in play from your hand: All your \"Anbu\" Ninjas get +1/+1 during this turn.",
     ],
+    flavor: "\"Should we not provide support?\"",
     image: "s21-n-1108",
   },
   {
@@ -173,6 +180,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "When this Ninja is put in play, place 3 -1/-1 coins on this Ninja.",
       "Valid: When any of your Ninjas becomes the user of a Jutsu, remove a -1/-1 coin from this Ninja. In that case, place a -1/-1 coin on 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"Perhaps what you lack is purpose...\"",
     image: "s21-n-1109",
   },
   {
@@ -194,6 +202,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Non-Unique",
       "[Attacker | Mission] Put this Ninja card in play from your hand: All your \"Anbu\" Ninjas cannot receive Damage during this turn.",
     ],
+    flavor: "\"Not so ordinary then, hunh?\"",
     image: "s21-n-1110",
   },
   {
@@ -255,6 +264,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Valid | EOJ] Give your opponent 3 Battle Rewards: Put 1 \"Susano'o\" Ninja card from your Reinforcement Deck into play.",
       "Valid: While you have \"Susano'o\" in play, this Ninja cannot receive Damage or be injured due to your opponent's effects.",
     ],
+    flavor: "\"I shall show you my final trump card...\"",
     image: "s21-n-1113",
   },
   {
@@ -316,6 +326,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: While you have a \"Naruto Uzumaki\", this Ninja gets +1/+1.",
       "Valid: All your \"Tailed Beast\" Ninja cards and \"Animal\" Ninja cards with a printed Entrance cost of 7 or more get -2 Entrance cost and -1 Hand cost.",
     ],
+    flavor: "\"Naruto...It's a wonderful name.\"",
     image: "s21-n-1116",
   },
   {
@@ -336,6 +347,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[STAR PUPIL]",
       "Valid: While 3 or more Jutsu's have been played this turn, your Jutsu cards cannot be negated.",
     ],
+    flavor: "\"What's the matter, Master Guy?\"",
     image: "s21-n-1117",
   },
   {
@@ -357,6 +369,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: When this Ninja is put into play by the effect of Growth, place an additional Growth coin on this Ninja.",
       "Valid: This Ninja can be Growthed even if it already has a Growth coin on it.",
     ],
+    flavor: "\"This stops now!!\"",
     image: "s21-n-1118",
   },
   {
@@ -377,6 +390,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[THE GALLANT SAGE]",
       "Valid: When this Ninja is put in play, search your Deck for 1 \"Ninja Toad\" Ninja card, reveal it, and move it to your hand. Shuffle your deck afterwards.",
     ],
+    flavor: "\"Naruto, you are the child of prophecy.\"",
     image: "s21-n-1119",
   },
   {
@@ -398,6 +412,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: Your Water Chakra is considered to also have a Lightning Symbol.",
       "Valid: Your Lightning Chakra is considered to also have a Water Symbol.",
     ],
+    flavor: "\"What's wrong?\"",
     image: "s21-n-1120",
   },
   {
@@ -459,6 +474,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: When this Ninja is put in play, give 1 Damage to all of your opponent's Ninjas.",
       "Valid: When this Ninja is removed from play due to the Showdown, heal all of your opponent's Ninjas.",
     ],
+    flavor: "\"I believe in you.\" \"I'm the Fourth Hokage's kid...I'll deal.\"",
     image: "s21-n-1123",
   },
   {
@@ -480,6 +496,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "When this Ninja wins any Victory, your opponent reveals a random card from their hand.",
       "In that case, if that card has a Wind Symbol, discard it.",
     ],
+    flavor: "\"Are you stupid!?\"",
     image: "s21-n-1124",
   },
   {
@@ -500,6 +517,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[SHARPENED BLADE]",
       "[Valid | EOJ] (*): This Ninja gets +1/+0 during this turn for every Water Chakra you have.",
     ],
+    flavor: "\"You shouldn't underestimate us.\"",
     image: "s21-n-1125",
   },
   {
@@ -520,6 +538,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[HATEFUL VIGOR]",
       "Valid: When this Ninja receives any Damage or is injured, place a Growth coin on it.",
     ],
+    flavor: "\"Stop it.\"",
     image: "s21-n-1126",
   },
   {
@@ -540,6 +559,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[FIST OF THE LEFT]",
       "When this Ninja is put in play, you can discard a card. In that case, search your Deck for a \"The Four Sound Ninja\" Ninja card, reveal it, and move it to your hand. Shuffle your deck afterwards.",
     ],
+    flavor: "\"Feel the power?\"",
     image: "s21-n-1127",
   },
   {
@@ -560,6 +580,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[FIST OF THE RIGHT]",
       "When this Ninja is put in play, if you control another \"The Four Sound Ninja\" Ninja, you can put in play 1 \"The Four Sound Ninja\" Ninja card with an Entrance cost of 3 or less from your Chakra area.",
     ],
+    flavor: "\"Two on two. Works for me.\"",
     image: "s21-n-1128",
   },
   {
@@ -602,6 +623,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: This Ninja cannot be sent out to Attack.",
       "Valid: When 1 of your \"The Four Sound Ninja\" Ninjas would receive Damage, you can discard this Ninja card. In that case, reduce that Damage to 0.",
     ],
+    flavor: "\"Thooom!\"",
     image: "s21-n-1130",
   },
   {
@@ -623,6 +645,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Sacrifice: Sakon (State 1) & Ukon (State 1)",
       "[Attacker | Mission] (*)(*), select 1 of your opponent's Ninjas and 1 of your \"The Four Sound Ninja\" Ninjas: Remove the selected Ninjas from their Teams. Those Ninjas must be sent out to Battle by themselves and must oppose each other during this turn.",
     ],
+    flavor: "\"Alpha!\" \"Omega!\"",
     image: "s21-n-1131",
   },
   {
@@ -643,6 +666,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[TAILED BEAST REMOVAL]",
       "[Valid | Attacker | Mission] Discard this Ninja: Move target \"Animal\" Ninja with an Entrance cost of 7 or more to your Village. You now control that Ninja.",
     ],
+    flavor: "\"A ninja never runs away from a battle that must be fought.\"",
     image: "s21-n-1132",
   },
   {
@@ -664,6 +688,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: When this Ninja is put in play, you can pay 2 Wind Chakra. In that case, draw 2 cards.",
       "Valid: When this Ninja is put in play, you can pay 2 Water Chakra. In that case, discard 2 of your opponent's Chakra and draw 1 card.",
     ],
+    flavor: "\"Are you toying with me?\"",
     image: "s21-n-1133",
   },
   {
@@ -684,6 +709,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[TSUCHIGUMO'S SECRET]",
       "Valid: When this Ninja is put in play, flip a coin. If heads, draw 1 card. If tails, place a Growth coin on this Ninja.",
     ],
+    flavor: "\"I want to become strong.\"",
     image: "s21-n-1134",
   },
   {
@@ -704,6 +730,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[PLAYFUL]",
       "[Valid | Attacker | Mission] Injure this Ninja, discard 1 Wind card: Draw 1 card and this Ninja gets the following effect text during this turn: \"Valid: At the end of the turn, Heal this Ninja\".",
     ],
+    flavor: "\"This chakra feels...\"",
     image: "s21-n-1135",
   },
   {
@@ -724,6 +751,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[ORIGAMI]",
       "[Valid | EOJ] Injure this Ninja: Injure target opposing Ninja with an Entrance cost equal to this Ninja's Entrance cost.",
     ],
+    flavor: "\"He was dying...\"",
     image: "s21-n-1136",
   },
   {
@@ -768,6 +796,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "When this Ninja is deployed, move 1 \"Weapon\" Ninja from your Discard Pile to your hand.",
       "Valid: \"Weapon\" Ninjas get +1/+0.",
     ],
+    flavor: "\"We'll go!\"",
     image: "s21-n-1138",
   },
   {
@@ -788,6 +817,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[WARRIOR OF THE RED GUARD]",
       "When this Ninja is put in play, if you have a \"Manipulation\" Ninja, you can remove two target opponent's Ninjas from their current Teams and form a new Team with them.",
     ],
+    flavor: "\"It's Sasori's favorite puppet.\"",
     image: "s21-n-1139",
   },
   {
@@ -809,6 +839,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: This Ninja can only be organized into Teams with \"Puppet\" Ninjas.",
       "[EOJ] (1): If you have 5 or more cards in your hand, switch the Combat and Support values of 1 of your opponent's Ninja during this turn.",
     ],
+    flavor: "\"Shall we begin?\"",
     image: "s21-n-1140",
   },
   {
@@ -829,6 +860,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[TREASURED PUPPET]",
       "Valid: When an opponent's Ninja would be moved to their hand by an effect, you can move it to your Battle Reward area, face down instead.",
     ],
+    flavor: "\"Fwosh!\"",
     image: "s21-n-1141",
   },
   {
@@ -851,6 +883,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: X is equal to the number of cards in your hand.",
       "Valid: You have no maximum hand size.",
     ],
+    flavor: "\"If you're going to play like that, I suppose you leave me no choice.\"",
     image: "s21-n-1142",
   },
   {
@@ -913,6 +946,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[RIGHT RING OF GAI]",
       "When this Ninja is put in play or removed from play, look at your opponent's hand.",
     ],
+    flavor: "\"The only thing you have faith in is yourself.\"",
     image: "s21-n-1145",
   },
   {
@@ -933,6 +967,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[DAWN OF VENGANCE]",
       "When this Ninja is put in play, search your Deck for 1 card with \"World\" in its name, reveal it, and move it to your hand.",
     ],
+    flavor: "\"Hey! You're alive!\"",
     image: "s21-n-1146",
   },
   {
@@ -953,6 +988,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[RIGHT RING OF BYA]",
       "When a Void Ninja is Sacrificed, put in play 1 Void Ninja card from your hand with a lower Entrance cost than the Ninja that was Sacrificed.",
     ],
+    flavor: "\"I will believe in you as well.\"",
     image: "s21-n-1147",
   },
   {
@@ -973,6 +1009,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[LEFT RING OF GYOKU]",
       "When this Ninja is put in play, you can exchange X Void cards in your hand with X cards from the bottom of your Deck.",
     ],
+    flavor: "\"It's been awhile indeed...since last I used myself.\"",
     image: "s21-n-1148",
   },
   {
@@ -993,6 +1030,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[RIGHT RING OF AOI]",
       "[Attacker | Mission] (2): If you have only Void Ninjas, give 1 Damage to 1 of your opponent's Ninjas unless your opponent moves your Turn Marker up by 1.",
     ],
+    flavor: "\"You're about to become my greatest masterpiece!\"",
     image: "s21-n-1149",
   },
   {
@@ -1013,6 +1051,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[LEFT RING OF NAN]",
       "When this Ninja Attacks in a Team with all Void Ninjas, you can remove up to 2 target Chakra from the game. Then, if your opponent has less Chakra than you, move your Turn Marker up by 1.",
     ],
+    flavor: "\"Knowing that it is you calling the shots makes my job easier.\"",
     image: "s21-n-1150",
   },
   {
@@ -1033,6 +1072,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[RIGHT RING OF SHU]",
       "[Valid | EOJ] Move your Turn Marker down by X: negate 1 Jutsu with a cost of X.",
     ],
+    flavor: "\"...this is it.\"",
     image: "s21-n-1151",
   },
   {
@@ -1055,6 +1095,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "When this Ninja wins any Victory, move your Turn Marker up by 1 and your opponent's Turn Marker down by 1.",
       "Valid: While your Turn Marker is even, your opponent can only play 1 Jutsu card during the turn.",
     ],
+    flavor: "\"And one comprehends pain.\"",
     image: "s21-n-1152",
   },
   {
@@ -1078,6 +1119,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Wind - Heal target Ninja.",
       "Other - This Ninja cannot receive Damage during this turn.",
     ],
+    flavor: "\"Just be careful, or you'll die.\"",
     image: "s21-n-1153",
   },
   {
@@ -1098,6 +1140,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[LEFT RING OF SAN]",
       "When a Ninja receives Damage from this Ninja's Team, place a -1/-1 coin on that Ninja.",
     ],
+    flavor: "\"But it's not possible...eh?!\"",
     image: "s21-n-1154",
   },
   {
@@ -1370,6 +1413,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The attached Ninja's effect text is negated.",
     ],
+    flavor: "\"Ninja Art: Tile Shuriken!\"",
     image: "s21-j-802",
   },
   {
@@ -1386,6 +1430,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. Then if the target has no effect text or negated effect text, it becomes a Stand-by Ninja.",
     ],
+    flavor: "\"Earth Style! Earth Dragon Bomb!\"",
     image: "s21-j-803",
   },
   {
@@ -1417,6 +1462,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Requirements: Deidara",
       "Effect: Move all Growth coins from your other Ninjas to the user. Then, give 1 Damage to each opposing Ninja with less Growth coins on them than the user.",
     ],
+    flavor: "\"This time, it's over for real!\"",
     image: "s21-j-805",
   },
   {
@@ -1432,6 +1478,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Requirements: Deidara",
       "Effect: All Back Ninjas in the user's Team and the Team Battling against the user become Stand-by Ninjas. Then, place 2 Growth coins on the user.",
     ],
+    flavor: "\"This time, it's over for real!\"",
     image: "s21-j-806",
   },
   {
@@ -1448,6 +1495,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If a Fire Chakra was discarded to pay for this Jutsu, give 1 Damage to the target. Otherwise, injure the target.",
     ],
+    flavor: "\"Fire Style! Fireball Jutsu!\"",
     image: "s21-j-807",
   },
   {
@@ -1495,6 +1543,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Give 1 Damage to the target. Then, your opponent discards the top 5 cards of their Deck.",
       "Expert [Sasuke Uchiha]: Give 1 Damage to the target.",
     ],
+    flavor: "\"Fire Style! Art of Dragon Flame!\"",
     image: "s21-j-810",
   },
   {
@@ -1526,6 +1575,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target.",
     ],
+    flavor: "\"But I beg you, help me\"",
     image: "s21-j-812",
   },
   {
@@ -1558,6 +1608,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja on the Battlefield",
       "Effect: Give 2 Damage to the target. While this Jutsu is on the Chain, players cannot play cards.",
     ],
+    flavor: "\"Begone with the thunderclap...\"",
     image: "s21-j-814",
   },
   {
@@ -1574,6 +1625,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: Up to 2 Ninjas with an Entrance cost less than the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Haah!!\"",
     image: "s21-j-815",
   },
   {
@@ -1589,6 +1641,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Requirements: Entrance cost of 3 or more",
       "Effect: Any opposing Ninja that receives Damage due to the Showdown this turn receives 1 additional Damage.",
     ],
+    flavor: "\"The block you chose was incorrect\"",
     image: "s21-j-816",
   },
   {
@@ -1604,6 +1657,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: Your opponent's Ninjas with an Entrance cost lower then the user's Entrance cost.",
       "Effect: The target cannot add their Power to their Team's Power during this turn.",
     ],
+    flavor: "\"Water Style: Raging Waves!\"",
     image: "s21-j-817",
   },
   {
@@ -1618,6 +1672,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     text: [
       "Effect: Charge 1 card. In that case, draw 2 cards.",
     ],
+    flavor: "\"Tsuchigumo Style: Forbidden Jutsu Release!\"",
     image: "s21-j-818",
   },
   {
@@ -1633,6 +1688,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: User",
       "Effect: Flip a coin. If heads, the user gets +0/+4 during this turn. If tails, the user gets +0/+2 during this turn and you draw 1 card.",
     ],
+    flavor: "\"The Hidden Mist?\"",
     image: "s21-j-819",
   },
   {
@@ -1648,6 +1704,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a coin. If heads, move the target to its owner's Chakra area. If tails, move the target to its owner's hand and draw 1 card.",
     ],
+    flavor: "\"You fell for it.\"",
     image: "s21-j-820",
   },
   {
@@ -1680,6 +1737,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Give 1 Damage to the target. Then, flip a coin. If heads, the target becomes a Stand-By Ninja. If tails, draw 1 card.",
       "Expert [Hiruko]: You choose the result of the coin flip instead.",
     ],
+    flavor: "\"Pakka kakka.\"",
     image: "s21-j-822",
   },
   {
@@ -1696,6 +1754,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: Injure the target. Then, attach this card to the target. The attached Ninja gets the following effect text: \"Valid: At the start of your turn, move the top 2 cards of your Deck to your Discard pile.\"",
     ],
+    flavor: "\"What is this stuff anyway?\"",
     image: "s21-j-823",
   },
   {
@@ -1713,6 +1772,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Move the target to the top of its owner's Deck.",
       "Expert [Itachi Uchiha]: Move X cards from the top of your opponent's Deck to their Discard Pile, where X = their Turn Marker divided by 2 (rounded down).",
     ],
+    flavor: "\"Tsukuyomi, the nightmare realm!\"",
     image: "s21-j-824",
   },
   {
@@ -1762,6 +1822,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     text: [
       "Effect: Search your Deck for 1 Ninja card without effect text with an Entrance cost less than the total number of your Ninjas without effect text, reveal it, and move it to your hand.",
     ],
+    flavor: "\"What did you think of Chiriku's technique?\"",
     image: "s21-m-749",
   },
   {
@@ -1883,6 +1944,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     text: [
       "Effect: Search your Deck for up to 2 Ninja cards with an Entrance cost of 1 or less, reveal them, then move them to your hand. Then, shuffle your deck afterwards.",
     ],
+    flavor: "\"You think I've just been sleeping and doing nothing this whole time?\"",
     image: "s21-m-756",
   },
   {
@@ -1898,6 +1960,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     text: [
       "Effect: Your opponent moves 1 card from the top of their Deck to their Discard Pile for each card in their Chakra area.",
     ],
+    flavor: "\"How much can you actually see?\"",
     image: "s21-m-757",
   },
   {
@@ -1915,6 +1978,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: At the end of your turn, place a -1/-1 coin on 1 of your opponent's Ninjas.",
       "Effect: At the end of your turn, you can move this Mission to your Chakra area. In that case, discard all Ninjas with 3 or more -1/-1 coins on them.",
     ],
+    flavor: "\"This is it.\"",
     image: "s21-m-758",
   },
   {
@@ -2015,6 +2079,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: When any of your Team's Battles would result in a Draw, it is considered to be a Victory for that Team and a Defeat for the Team Battling against them instead during this turn.",
       "Effect: When 1 of your Teams wins a Victory, move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Whomp!\"",
     image: "s21-m-764",
   },
   {
@@ -2047,6 +2112,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     text: [
       "Effect: Move 10 cards from the top of your Deck to your Discard Pile. In that case, put in play up to 2 \"Snake\" Ninja cards from your Discard Pile.",
     ],
+    flavor: "\"This is Orochimaru's Eight-Headed Serpent Jutsu.\"",
     image: "s21-m-766",
   },
   {
@@ -2066,6 +2132,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "3+) Move 1 card from your Discard Pile to your Chakra area.",
       "4+) Move a Water Mission card from your Chakra area to your hand.",
     ],
+    flavor: "\"This is what I've been waiting for!\"",
     image: "s21-m-767",
   },
   {
@@ -2123,6 +2190,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: When this Mission is put in play, you can search your Deck for 1 \"Slug\" Ninja card, reveal it, and move it to your hand.",
       "Effect: \"Slug\" Ninjas get +3/+1.",
     ],
+    flavor: "\"What the...!?\"",
     image: "s21-m-770",
   },
   {
@@ -2192,6 +2260,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     text: [
       "Effect: Search your Deck for 1 \"Rogue Ninja\" Ninja card that shares a Symbol with the card used to pay for this card's Hand cost, reveal it, and move it to your hand.",
     ],
+    flavor: "\"I'm sorry.\"",
     image: "s21-m-774",
   },
   {
@@ -2209,6 +2278,7 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target cannot be sent out to Battle.",
     ],
+    flavor: "\"This will seal the chakra immediately...\"",
     image: "s21-m-775",
   },
 ];

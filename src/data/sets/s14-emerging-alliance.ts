@@ -25,6 +25,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Piggyback]",
       "Valid: During the Exchange of Jutsu, you can place up to 2 of your Stand-By injured status Ninjas in this Ninjas Team in any position.",
     ],
+    flavor: "\"It's a lot easier this way!\" \"\"Wha--?! Whoa! Hey--!\"",
     image: "s14-n-590",
   },
   {
@@ -47,6 +48,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Valid: This Ninja cannot be affected by your opponent's effects.",
       "Valid: This Ninja must be sent out to Battle, if possible.",
     ],
+    flavor: "\"Vvvvvvvvvv.....\"",
     image: "s14-n-591",
   },
   {
@@ -67,6 +69,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Invite]",
       "Valid: During your opponent's Mission Phase, you can move 1 of your Ninjas from another of your Teams into this Ninjas Team.",
     ],
+    flavor: "\"Hmm, let's see now. Who would be good?\"",
     image: "s14-n-592",
   },
   {
@@ -87,6 +90,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[New Member]",
       "Your other Ninjas get +1/+1 and +1 Mental Power during the turn they are put in play.",
     ],
+    flavor: "\"He looks kind of like Sasuke, don't you think?\"",
     image: "s14-n-593",
   },
   {
@@ -108,6 +112,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, remove all the cards in each player's Discard Pile and each in-play Clients from game.",
       "Valid: Players cannot discard any cards from their Deck due to their own effects.",
     ],
+    flavor: "\"We don't have names, feeling, past or future. We just have the mission.\"",
     image: "s14-n-594",
   },
   {
@@ -128,6 +133,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Pressing]",
       "When this Ninja is put in play, you can reveal the top 2 cards of your Deck. If there are 1 or more Ninja cards among them, place 1 of them in your hand, return the rest and shuffle your Deck. If not, return them to the top or bottom of your Deck.",
     ],
+    flavor: "\"Come on! He told us to hurry up!\"",
     image: "s14-n-595",
   },
   {
@@ -148,6 +154,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[I Got Your Back]",
       "While this Ninja is Battling as an Attacker, the effect texts of Ninjas Battling against this Ninja are negated.",
     ],
+    flavor: "\"Go, Naruto! I'll back you up!\"",
     image: "s14-n-596",
   },
   {
@@ -169,6 +176,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "During your Mission Phase if your opponent has 4 or more Battle Rewards, you can put in play this Ninja card from your hand.",
       "When this Ninja is sent out to Attack, you can discard 1 of your Chakras. In that case, this Ninja cannot be affected by your opponent's effects during this turn.",
     ],
+    flavor: "\"Hey, I'll help you out.\"",
     image: "s14-n-597",
   },
   {
@@ -190,6 +198,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Valid: While your opponent has 1 or more Ninjas with the [OVERFLOWING CHAKRA] or [TAILED BEAST FORM] effect in play, they cannot win or get any Battle Rewards.",
       "Valid: This Ninja can become the user of Jutsu cards with \"Requirements: The First Hokage\".",
     ],
+    flavor: "\"That's why I need you, Yamato. You are the only one who successfully inherited the gene of the first hokage.\"",
     image: "s14-n-598",
   },
   {
@@ -210,6 +219,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Good News]",
       "Valid: Your Ninjas cannot receive any Damage or be changed to injured status due to your opponent's Ninja's effects.",
     ],
+    flavor: "\"The Kazekage has been returned to his village safely.\"",
     image: "s14-n-599",
   },
   {
@@ -230,6 +240,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Hard-Liner]",
       "When this Ninja is put in play, your opponent moves all the cards in their hand to the bottom of their Deck in any order. Then, they draw the same number of cards that they moved to the bottom of their Deck due to this effect minus one.",
     ],
+    flavor: "\"That's been taken care of.\"",
     image: "s14-n-600",
   },
   {
@@ -250,6 +261,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Showdown]",
       "Valid: When this Ninja is injured due to the Showdown, you can search for up to 3 copies of \"Secret White Move: Chikamatsu's Ten Puppets\" Jutsu cards in your Deck, show them(it) to your opponent, and place them(it) in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Let us finish this here and now..!\"",
     image: "s14-n-601",
   },
   {
@@ -270,6 +282,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Follower]",
       "Your other \"Sand\" Ninjas get +0/+1.",
     ],
+    flavor: "\"If anything should ever happen again, I'll protect him! With all of my heart!\"",
     image: "s14-n-602",
   },
   {
@@ -290,6 +303,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Follower]",
       "Your other \"Sand\" Ninjas get +1/+0.",
     ],
+    flavor: "\"Lord Gaara is totally cute, isn't he! After all, he is Kazekage!!\"",
     image: "s14-n-603",
   },
   {
@@ -310,6 +324,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[The Man of Mystery]",
       "Valid: When this in-play Ninja is removed from play, move this card to your hand instead.",
     ],
+    flavor: "\"Maybe now I can become a member of the Akatsuki, huh?\"",
     image: "s14-n-604",
   },
   {
@@ -330,6 +345,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Cold-Blooded]",
       "When this Ninja is put in play, place a Ninja Blade coin symbolizing -2/-2 on every Ninja in 1 of your opponent's Teams. This Ninja can only be put in play by removing from game 1 \"Sasori\" Ninja card with an Entrance cost of 5 from your Discard Pile or your Village. (Entrance cost must be met.)",
     ],
+    flavor: "\"Nonsense...\"",
     image: "s14-n-605",
   },
   {
@@ -350,6 +366,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Prominent Medical Skill]",
       "During your Mission Phase, you can discard 2 of your Chakras with a \"Water\" Symbol. In that case, put in play 1 \"Chunin\" Ninja card with a \"Water\" Symbol from your Discard Pile.",
     ],
+    flavor: "\"You cannot be too careful.\"",
     image: "s14-n-606",
   },
   {
@@ -370,6 +387,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Dream Vessel]",
       "During your Mission Phase, you can remove 1 \"Sasuke Uchiha\" Ninja (card) from your Village or your hand from game. In that case, move 1 of your opponent's Ninjas to the bottom of their Deck. Then, your opponent draws 1 card.",
     ],
+    flavor: "\"I have Sasuke in my hands.\"",
     image: "s14-n-607",
   },
   {
@@ -390,6 +408,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Bad Terms]",
       "This Ninja's Team cannot be blocked by a Team that includes 2 or more Ninjas with different Symbols. (If a Ninja card has 2 or more symbols, that player selects 1 of them.)",
     ],
+    flavor: "\"Y..you!\" \"Hi...\"",
     image: "s14-n-608",
   },
   {
@@ -411,6 +430,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, remove all the cards in each player's Discard Pile from game.",
       "Valid: Each time a card is discarded to the Discard Pile, it is removed from game instead.",
     ],
+    flavor: "\"Don't ever forget the will of the foundation.\"",
     image: "s14-n-609",
   },
   {
@@ -432,6 +452,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, you can put in play \"Koharu Utatane\" Ninja card from your hand or your Discard Pile.",
       "Valid: At the end of your turn, if your opponent has 1 or more Ninjas with the [OVERFLOWING CHAKRA] or [TAILED BEAST FORM] effect in play, you can remove up to 6 cards from the top of their Deck from game.",
     ],
+    flavor: "\"He is supposed to be watched all the time.\"",
     image: "s14-n-610",
   },
   {
@@ -453,6 +474,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, you can put in play \"Homura Mitomon\" Ninja card from your hand or your Discard Pile.",
       "Valid: At the end of your turn, if your opponent has 1 or more Ninjas with the [OVERFLOWING CHAKRA] or [TAILED BEAST FORM] effect in play, you can remove up to 6 cards from the top of their Deck from game.",
     ],
+    flavor: "\"What if you are wrong?\"",
     image: "s14-n-611",
   },
   {
@@ -473,6 +495,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Matchless Hero]",
       "Valid: During the Exchange of Jutsu, you can discard 2 of your Chakras with an \"Earth\" Symbol. In that case, negate and remove 1 Jutsu being used from game.",
     ],
+    flavor: "The hero who established the village with the will of fire. He had not only the unrivaled power as a shinobi, but also a natural virtue that bound people together.",
     image: "s14-n-612",
   },
   {
@@ -493,6 +516,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Matchless Hero]",
       "Valid: During the Exchange of Jutsu, you can discard 2 of your Chakras with a \"Water\" Symbol. In that case, negate and remove 1 Jutsu being used from game.",
     ],
+    flavor: "The hero who accomplished the will of fire as the Hidden Village in the Leaves. He was also a leader who seeked for the stability and peace.\"",
     image: "s14-n-613",
   },
   {
@@ -514,6 +538,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Valid: When this Ninja is discarded due to the Showdown, you can search for 1 \"Zabuza Momochi\" Ninja card in your Deck and put it in play. In that case, your opponent draws 2 cards.",
       "Valid: Every \"Haku\" Ninja card in your hand gets \"Growth\".",
     ],
+    flavor: "\"Your eyes are just like mine, mister, we're both the same.\"",
     image: "s14-n-614",
   },
   {
@@ -534,6 +559,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Database]",
       "When this Ninja is put in play, you can search for 1 Mission card with a \"Water\" Symbol in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Well, I can't promise my information is complete or perfect. But I've got something on just about everyone...\"",
     image: "s14-n-615",
   },
   {
@@ -555,6 +581,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, you can search for up to 2 Permanent Mission cards with an \"Earth\" Symbol in your Deck and put them(it) in play. Then, shuffle your Deck.",
       "Valid: This Ninja can become the user of Jutsu cards with \"Requirements: The First Hokage\".",
     ],
+    flavor: "\"Come on, show me what you got!\" \"Raaaa!!\"",
     image: "s14-n-616",
   },
   {
@@ -575,6 +602,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Sonic Impact]",
       "When this Ninja is put in play, you can put two Ninja Blade coins symbolizing -1/-1 on 1 of your opponent's Ninjas with an Entrance cost of 0.",
     ],
+    flavor: "\"Oh. I forgot to mention this little gadget I wear... You might be able to dodge my blows... but you can't get away from it.\"",
     image: "s14-n-617",
   },
   {
@@ -595,6 +623,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Sonic Impact]",
       "During the Exchange of Jutsu, you can discard 1 of your Chakras with a \"Water\" Symbol. In that case, negate the effect texts of 1 Ninja Battling against this Ninja during this turn.",
     ],
+    flavor: "\"Try this! Slicing Sound Wave!\"",
     image: "s14-n-618",
   },
   {
@@ -615,6 +644,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[The Rear Guard]",
       "Valid: Your \"Dosu Kinuta\" and/or \"Zaku\" in this Ninja's Team get +1/+1 and cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"It's pointless, that won't work on me.\"",
     image: "s14-n-619",
   },
   {
@@ -636,6 +666,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "During the Showdown, in the calculation of the Team Power, every Ninja with an Entrance cost of 4 or less Battling against this Ninja's Team use only the printed value regardless of any other in-play effects.",
       "Valid: Every \"Kimimaro\" Ninja card in your hand gets \"Growth\".",
     ],
+    flavor: "\"Yes... Fighting. That......is the only thing I can do now.\"",
     image: "s14-n-620",
   },
   {
@@ -657,6 +688,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, remove all the cards in your opponent's Chakra area from game.",
       "While this Ninja is the Head Ninja, any Head Ninja that Battled against this Ninja, during the turn, receives 1 Damage after the Showdown.",
     ],
+    flavor: "\"We've already found you? .. Now wake Sasuke up; we want to fight him.\"",
     image: "s14-n-621",
   },
   {
@@ -677,6 +709,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Pupil of Orochimaru]",
       "Valid: When this Ninja is discarded due to the Showdown, you can search for 1 \"Orochimaru\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Lord Orochimaru...\"",
     image: "s14-n-622",
   },
   {
@@ -697,6 +730,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Glowing Eyes]",
       "During the Showdown, in the calculation of the Team Power, every Ninja with an Entrance cost of 3 or less Battling against this Ninja's Team use only the printed value regardless of any other in-play effects.",
     ],
+    flavor: "\"But even as fragile as I was, I had a special power no one else did...\"",
     image: "s14-n-623",
   },
   {
@@ -718,6 +752,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "At the end of your turn, you must select and remove 1 injured status Ninja from game. If you cannot, remove 2 cards from the top of your Deck from game.",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "I'll expect a hundred human sacrifices.\"",
     image: "s14-n-624",
   },
   {
@@ -738,6 +773,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Seven Swordsmen of the Mist]",
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, reveal the top 5 cards of your opponent's Deck and remove all the Ninja cards among them from game. Then, return the rest and your opponent shuffles their Deck.",
     ],
+    flavor: "\"Bwa ha ha ha ha ha haaaa!\"",
     image: "s14-n-625",
   },
   {
@@ -758,6 +794,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Same Wavelength]",
       "When this Ninja is put in play, you can search for 1 \"The Demon Brothers Meizu\" in your Deck, show it to your opponent and place it in your hand. In that case, shuffle your Deck.",
     ],
+    flavor: "\"......\"",
     image: "s14-n-626",
   },
   {
@@ -778,6 +815,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Same Wavelength]",
       "When this Ninja is put in play, you can search for 1 \"The Demon Brothers Gouzu\" in your Deck, show it to your opponent and place it in your hand. In that case, shuffle your Deck.",
     ],
+    flavor: "\"Now, it's your turn...\"",
     image: "s14-n-627",
   },
   {
@@ -798,6 +836,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Keeping an Eye]",
       "Players cannot put in play Ninjas except by deploying them.",
     ],
+    flavor: "\"Number 130, number 110, that means you're out, too.\"",
     image: "s14-n-628",
   },
   {
@@ -818,6 +857,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Unique Talent]",
       "When this Ninja is sent out to Attack, select 1 of your opponent's Ninjas with an Entrance cost of 2 or less. In that case, that selected Ninja gets -2/-2 during this turn and the next turn.",
     ],
+    flavor: "\"I could finish you right now if I wanted to.\"",
     image: "s14-n-629",
   },
   {
@@ -838,6 +878,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Unique Talent]",
       "When this Ninja is sent out to Attack, select 1 of your opponent's Ninjas. In that case, during this turn and the next turn, when that Ninja is sent out to Battle, you can discard up to 2 of their Chakras.",
     ],
+    flavor: "\"Don't worry, little man. I'll make it short and sweet.\"",
     image: "s14-n-630",
   },
   {
@@ -858,6 +899,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Enticement]",
       "Your opponent's \"Male\" Ninjas with 2 or less Entrance cost get -2/-0.",
     ],
+    flavor: "\"Hi, there!.. I've been wanting to meet you for a really long time, Neji... So.. hi!\"",
     image: "s14-n-631",
   },
   {
@@ -878,6 +920,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Dangerous Chakra]",
       "Valid: When this Ninja receives any Damage due to the Showdown, remove the top 5 cards of your opponent's Deck from game. This effect cannot be negated.",
     ],
+    flavor: "\"Fine. Guess there's no point in talkin' anymore...Sasuke!\"",
     image: "s14-n-632",
   },
   {
@@ -900,6 +943,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, draw 1 card.",
       "Valid: This Ninja can become the user of Jutsu cards with \"Requirements: 'Might Guy'\".",
     ],
+    flavor: "\"Haaa!! Chaa!!\"",
     image: "s14-n-633",
   },
   {
@@ -920,6 +964,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Unwillingness]",
       "During the Mission Phase, you can select 1 of your opponent's Ninjas with an Entrance cost of 2 or less. In that case, that selected Ninja and this Ninja cannot be sent out to Battle during the turn.",
     ],
+    flavor: "\"This is gonna be a real pain in the neck...\"",
     image: "s14-n-634",
   },
   {
@@ -940,6 +985,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Infuriation]",
       "When this Ninja is sent out to Battle, you can remove 1 Ninja Blade coin of any kind from play.",
     ],
+    flavor: "\"Pleasingly Plump Forever!!\"",
     image: "s14-n-635",
   },
   {
@@ -960,6 +1006,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[An Assistant and a Pet]",
       "When this Ninja is put in play, you can search for 1 \"Tsunade\" Ninja card in your Deck and put it in play.",
     ],
+    flavor: "\"Lady Tsunade!\" \"Oink!\"",
     image: "s14-n-636",
   },
   {
@@ -980,6 +1027,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Copying the Skills]",
       "When this Ninja is sent out to Battle, you can select 1 of your opponent's \"Genin\" Ninjas. In that case, negate the effect texts of that selected Ninja during this turn, and this Ninja gets those effects during this turn.",
     ],
+    flavor: "\"I've been waiting to try this out.\"",
     image: "s14-n-637",
   },
   {
@@ -1001,6 +1049,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, you can remove 1 of your Ninjas with both a \"Wind\" Symbol and an Entrance cost of 2 or more from game. In that case, draw 2 cards.",
       "Valid: This Ninja can becomes the user of Jutsu cards with \"Requirements: \"Sand\" Combat Attribute + An Entrance cost of 5 or more\".",
     ],
+    flavor: "\"AHAHAHAHAHAHA....\"",
     image: "s14-n-638",
   },
   {
@@ -1021,6 +1070,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Strange Team Work]",
       "During your opponent's Mission Phase, you can select 1 of your opponent's Ninjas. In that case, negate the effect texts of that selected Ninja during this turn and next turn. Additionally, that selected Ninja must be sent out to Battle this turn, if possible.",
     ],
+    flavor: "\"Cha!\" \"Ninja Art: Super Beast Scroll!\"",
     image: "s14-n-639",
   },
   {
@@ -1042,6 +1092,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "When this Ninja is put in play, you can remove 1 of your opponent's injured status Ninjas from game. In that case, draw 1 card.",
       "Valid: While this Ninja is in the same Team as 1 or more Ninjas with a \"Taijutsu\" Combat Attribute, this Ninja gets +0/+5.",
     ],
+    flavor: "\"Noble Blue Beast of the Leaf Village!\"",
     image: "s14-n-640",
   },
   {
@@ -1062,6 +1113,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[No Mercy]",
       "During your Mission Phase, you can discard 1 \"Puppet\" Ninja (card) from your Village or your Chakra area. In that case, place a poison coin on 1 of your opponent's Ninjas. If that Ninja's Entrance cost is 2 or less, discard that Ninja.",
     ],
+    flavor: "\"Oh, and standing as close as you are to my friend the Black Ant...big mistake!\"",
     image: "s14-n-641",
   },
   {
@@ -1082,6 +1134,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Windstorm]",
       "During the Showdown, in the calculation of Team Power or Mental Team Power, use only the printed value of the Ninjas in this Ninja's Team and the Team Battling against it regardless of any other in-play effects.",
     ],
+    flavor: "\"How was that? It's finished.\"",
     image: "s14-n-642",
   },
   {
@@ -1102,6 +1155,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "[Genius in Genjutsu]",
       "During your Mission Phase, you can discard 1 of your Chakras with a \"Fire\" Symbol. In that case, you can select 1 of your opponent's Ninjas. That selected Ninja cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"These eyes aren't the only way I can wield Genjutsu...All I need......is a single finger.\"",
     image: "s14-n-643",
   },
   {
@@ -1123,6 +1177,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "While your opponent has 1 or less Chakra, this Ninja's Team cannot be blocked.",
       "Valid: When this Ninja's Team wins a Victory or Outstanding Victory, you can select and discard 1 of your oponent's Chakras.",
     ],
+    flavor: "\"Now, whaddya say we finally get down to business, huh!?!?!\"",
     image: "s14-n-644",
   },
   // ── JUTSU ──
@@ -1140,6 +1195,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: Remove all the cards in your Discard Pile from game. Then, remove the same number of cards from the top of your Deck from game.",
     ],
+    flavor: "\"Wait!!\"",
     image: "s14-j-496",
   },
   {
@@ -1155,6 +1211,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Requirements: \"Brush\" Combat Attribute",
       "Effect: Reveal the top 4 cards of your Deck. If there are 1 or more Jutsu cards among them, place 1 of them in your hand, return the rest and shuffle your Deck. In that case, during this turn, the user can use that Jutsu card without paying its cost and ignoring its requirements.",
     ],
+    flavor: "\"Ninja Art: Super Beast Scroll!!\"",
     image: "s14-j-497",
   },
   {
@@ -1171,6 +1228,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: Give 1 Damage to each Ninja in the user's Team including the user.",
     ],
+    flavor: "\"Fire Style: Phoenix Flower Jutsu!\"",
     image: "s14-j-498",
   },
   {
@@ -1187,6 +1245,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every one of your opponent's Ninjas with a printed Entrance cost of 4 or less",
       "Effect: During this turn, if the user is discarded due to the Showdown, discard the target.",
     ],
+    flavor: "\"Everybody, run as far as you can now!\"",
     image: "s14-j-499",
   },
   {
@@ -1203,6 +1262,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: Remove the user from game.",
     ],
+    flavor: "\"Water Style: Water Shark Bomb Jutsu!!\"",
     image: "s14-j-500",
   },
   {
@@ -1219,6 +1279,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the target does not become the user of a Jutsu card during this turn, move the target to the top of its owner's Deck at the end of the Exchange of Jutsu.",
     ],
+    flavor: "\"Paper bomb--!\"",
     image: "s14-j-501",
   },
   {
@@ -1235,6 +1296,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja battling against the user",
       "Effect: Remove the target from game. Additionally, look through your opponent's Deck and remove all the Ninja cards with the same name as the target's from game. In that case, your opponent shuffles their Deck.",
     ],
+    flavor: "\"We did it...\" \"He can't move. That sealing traps every ounce of chakra stored in a person's body.\"",
     image: "s14-j-502",
   },
   {
@@ -1251,6 +1313,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every one of your opponent's Ninjas with a printed Entrance cost of 4 or less",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Well? What are you going to do now?!\"",
     image: "s14-j-503",
   },
   {
@@ -1267,6 +1330,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Reveal X number of cards from the top of your Deck. Give 1 Damage to the target for each Ninja card among them. Then, return them and shuffle your Deck.",
     ],
+    flavor: "\"Secret White Move: Chikamatsu's Ten Puppets.\"",
     image: "s14-j-504",
   },
   {
@@ -1283,6 +1347,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Negate the effect texts of the target and change it to injured status.",
     ],
+    flavor: "\"Haaa!!\"",
     image: "s14-j-505",
   },
   {
@@ -1299,6 +1364,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: Discard the user.",
     ],
+    flavor: "\"Ninja Art: Shadow Stitching!\"",
     image: "s14-j-506",
   },
   {
@@ -1314,6 +1380,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Requirements: \"Medicine\" Combat Attribute + \"Printed Entrance cost of 4 or more\"",
       "Effect: Remove the user from game. In that case, put in play 1 Ninja card from your Discard Pile and place it in the same position as the user was.",
     ],
+    flavor: "\"She's bringing him back..?! Are you serious..!?\"",
     image: "s14-j-507",
   },
   {
@@ -1330,6 +1397,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Discard X number of Ninja cards from your hand. In that case, give X Damage to the target and draw X number of cards.",
     ],
+    flavor: "\"Secret Red Move: Performance of a Hundred Puppets. It's show time.\"",
     image: "s14-j-508",
   },
   {
@@ -1346,6 +1414,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the target still remains in play at the end of this turn, move it to its owner's hand.",
     ],
+    flavor: "\"The smallest cut can be fatal, as you know.\"",
     image: "s14-j-509",
   },
   {
@@ -1361,6 +1430,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Requirements: \"Sharingan Eye\"",
       "Effect: Draw 2 cards. Then, remove 2 cards from your hand from game.",
     ],
+    flavor: "\"My preparation's complete. Let's go, Naruto!\"",
     image: "s14-j-510",
   },
   {
@@ -1377,6 +1447,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every Ninja Battling against the user with lower Entrance cost than that of the user's",
       "Effect: Change the target to injured status and it becomes a Stand-By Ninja. The target cannot be sent out to Battle during the next turn.",
     ],
+    flavor: "\"Even a short eye contact with him...made me scared of Sasuke in the depth of my heart.\"",
     image: "s14-j-511",
   },
   {
@@ -1393,6 +1464,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: User",
       "Effect: During this turn and the next turn, when the target becomes the user of a Jutsu card, you can pay its cost with Chakras with an \"Earth\" Symbol regardless of the original cost of that Jutsu card.",
     ],
+    flavor: "\"......\"",
     image: "s14-j-512",
   },
   {
@@ -1408,6 +1480,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Requirements: 1 Ninja Battling against the user",
       "Effect: Discard a total of X number of Mission cards from your Village and/or your hand. In that case, give X Damage to the target.",
     ],
+    flavor: "\"!!\"",
     image: "s14-j-513",
   },
   {
@@ -1423,6 +1496,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Requirements: \"Brush\" Combat Attribute",
       "Effect: Reveal the top 5 cards of your opponent's Deck, remove 1 of them from game, return the rest and your opponent shuffles their Deck. Then, look at all the cards in your opponent's hand. If there are 1 or more cards with the same name, remove those cards from game.",
     ],
+    flavor: "\"Nothing was detected around here.\"",
     image: "s14-j-514",
   },
   {
@@ -1439,6 +1513,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: User",
       "Effect: During this turn and the next turn, the target can use any Jutsu card regardless of the Jutsu card's Requirements.",
     ],
+    flavor: "\"Wood Style Transformation!\"",
     image: "s14-j-515",
   },
   {
@@ -1456,6 +1531,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "(2) 1 of your opponent's Team in their Village",
       "Effect: Switch positions of target (1) and (2). Then, your opponent designates a Head Ninja in Target (2).",
     ],
+    flavor: "\"Striking Multi Shadow Snakes Jutsu!\"",
     image: "s14-j-516",
   },
   {
@@ -1473,6 +1549,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "2 + ) Negate 1 Jutsu card being used and discard it.",
       "3 + ) Remove 1 Ninja Battling against the user from game.",
     ],
+    flavor: "\"Give us back Sasuke...\"",
     image: "s14-j-517",
   },
   {
@@ -1488,6 +1565,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja",
       "Effect: The target's Power and Mental Power are changed to their original printed value and cannot be changed during this turn.",
     ],
+    flavor: "\"Is he Sasori, Lord Orochimaru?\"",
     image: "s14-j-518",
   },
   {
@@ -1504,6 +1582,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Reveal the top 3 cards of your Deck. If there are 2 or more Ninja cards among them, remove the target from game. Then, return them and shuffle your Deck.",
     ],
+    flavor: "\"I get where you're goin'. Awesome move, Kakashi-Sensei!\"",
     image: "s14-j-519",
   },
   {
@@ -1521,6 +1600,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "1) Search for any number of Jutsu cards with \"Detonating Clay\" in their names in the top 7 cards of your Deck, show them to your opponent and place them in your hand. Then, shuffle your Deck.",
       "2) Remove X number of Jutsu cards with \"Detonating Clay\" in their names from your Discard Pile from game. In that case, give X Damage to 1 Ninja Battling against the user.",
     ],
+    flavor: "\"Now. ~ You're within range. ~ Hmmm!\"",
     image: "s14-j-520",
   },
   {
@@ -1537,6 +1617,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every one of your opponent's Ninjas with an Entrance cost of 3 or less",
       "Effect: Move them to their owner's Chakra area.",
     ],
+    flavor: "\"ZzZzZzZzZzZzZzZzZ.....\"",
     image: "s14-j-521",
   },
   {
@@ -1553,6 +1634,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every one of your Ninjas",
       "Effect: The target cannot be affected by the effects of your opponent's Ninja and Jutsu cards during this turn.",
     ],
+    flavor: "\"Wood Style Jutsu: Wooden Lock Wall!!\"",
     image: "s14-j-522",
   },
   {
@@ -1569,6 +1651,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: User",
       "Effect: Double the current Power and Mental Power of the user during this turn.",
     ],
+    flavor: "\"Wood Clone Jutsu!\"",
     image: "s14-j-523",
   },
   {
@@ -1585,6 +1668,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate and remove the target from game. Additionally, look through your opponent's Deck and hand, and remove all the Jutsu cards with the same name as the target's from game. In that case, your opponent shuffles their Deck.",
     ],
+    flavor: "\"Summoning Jutsu: Triple Rashomon!\"",
     image: "s14-j-524",
   },
   {
@@ -1601,6 +1685,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. Ninjas that are discarded by the Damage of this Jutsu card are removed from the game instead.",
     ],
+    flavor: "\"I didn't see that coming.\"",
     image: "s14-j-525",
   },
   {
@@ -1617,6 +1702,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Remove the target from game. Then, discard X number of your opponent's Chakras. X = the target's printed Entrance cost.",
     ],
+    flavor: "\"Thunder Funeral! Feast of Lightning!\"",
     image: "s14-j-526",
   },
   {
@@ -1634,6 +1720,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "1) Negate the effect text of 1 Ninja Battling against the user.",
       "2) Every Ninja in the user's Team cannot be affected by your opponent's effects during this turn.",
     ],
+    flavor: "\"The four of them are still alive...One of them is... troublesome....\"",
     image: "s14-j-527",
   },
   {
@@ -1650,6 +1737,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every Back Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninjas. If the user's Team wins a Victory or an Outstanding Victory this turn, give 1 Damage to the target.",
     ],
+    flavor: "\"!!\"",
     image: "s14-j-528",
   },
   {
@@ -1665,6 +1753,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Requirements: \"Sound\" Combat Attribute",
       "Effect: Your opponent discards 1 card from their hand and cannot draw any cards during their next turn.",
     ],
+    flavor: "\"This device amplifies the vibrations of the impact, transforming them into a wave of sound.\"",
     image: "s14-j-529",
   },
   {
@@ -1681,6 +1770,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: In the Showdown of this turn, apply the target's injured status Power regardless its current status.",
     ],
+    flavor: "\"Super Sonic Slicing Wave!\"",
     image: "s14-j-530",
   },
   {
@@ -1697,6 +1787,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and move it to its owner's hand. Then, discard up to X number of your opponent's Chakras. X = the user's Entrance cost.",
     ],
+    flavor: "\"The thing is Sasuke, Yoroi's unique skills are going to be disastrous for you.\"",
     image: "s14-j-531",
   },
   {
@@ -1713,6 +1804,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target(2): 1 of the Back Ninjas Battling against the user",
       "Effect: Change positions of target (1) and (2).",
     ],
+    flavor: "\"And I will unless you give up.\"",
     image: "s14-j-532",
   },
   {
@@ -1729,6 +1821,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Discard 1 Mission card from your hand or your Village. In that case, give 1 Damage to the target.",
     ],
+    flavor: "\"Well, whatever you are, I'll snap you out of it.\"",
     image: "s14-j-533",
   },
   {
@@ -1745,6 +1838,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Discard 1 Jutsu card from your hand. In that case, negate the target and remove it from game.",
     ],
+    flavor: "\"Unorthodox--- is it not? This is my Kekkei Genkai...",
     image: "s14-j-534",
   },
   {
@@ -1760,6 +1854,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: User",
       "Effect: Heal the user. Then place a Growth coin on it.",
     ],
+    flavor: "\"You know those food pellets are only for emergencies... A girl at your age should especially be careful-\"",
     image: "s14-j-535",
   },
   {
@@ -1776,6 +1871,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every one of your opponent's Ninjas on the Battlefield",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Th..this is the of the first hokage's exclusive secret technique...\"",
     image: "s14-j-536",
   },
   {
@@ -1792,6 +1888,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: The Power of the user becomes 0/0 during this turn and the Mental Power of the user becomes 0 during this turn.",
     ],
+    flavor: "\"Everyone! Whatever you do, don't look him in the eyes!\"",
     image: "s14-j-537",
   },
   {
@@ -1808,6 +1905,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: X number of Ninjas Battling against the user",
       "Effect: Remove the target from game.",
     ],
+    flavor: "\"Giant Rasengan!\"",
     image: "s14-j-538",
   },
   {
@@ -1824,6 +1922,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Change the effect of the target to the following: Remove the top 3 cards of your Deck from game for each Ninja in the user's Team.",
     ],
+    flavor: "\"But I didn't make any eye contact..! How did I get drawn in..?!\"",
     image: "s14-j-539",
   },
   {
@@ -1840,6 +1939,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Remove the target from game. In that case, remove up to 3 of your opponent's Chakras from game.",
     ],
+    flavor: "\"At any rate......Now we can fight without any interference.\"",
     image: "s14-j-540",
   },
   // ── MISSION ──
@@ -1860,6 +1960,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "3 + ) Draw 1 card.",
       "4 + ) Randomly select 1 of the cards in your opponent's Battle Reward area and move it to your hand.",
     ],
+    flavor: "\"A Medical Ninja must never be hit by an enemy attack.\"",
     image: "s14-m-455",
   },
   {
@@ -1876,6 +1977,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (1)",
       "Effect: When this Mission card's effect is applied, search for 1 Ninja card in your Deck and remove it from game keeping it face up. Then, shuffle your Deck. When this Mission card is removed from play, move that removed from game card to your hand.",
     ],
+    flavor: "\"Well then... shall we go?\" \"Fine. Yessir!\"",
     image: "s14-m-456",
   },
   {
@@ -1892,6 +1994,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Injured status Ninjas can only be sent out to Battle with 1 or more healthy status Ninjas.",
     ],
+    flavor: "\"You're forgetting, I have Kakashi on my back. Technically, he came in second!\"",
     image: "s14-m-457",
   },
   {
@@ -1908,6 +2011,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, if you paid the Hand cost of this card with an \"Akatsuki\" Ninja card, draw 2 cards. Your \"Akatsuki\" Ninjas cannot be affected by the effects of your opponent's Mission cards.",
     ],
+    flavor: "\"After all, there's an open spot now, right?\"",
     image: "s14-m-458",
   },
   {
@@ -1924,6 +2028,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Each time a Ninja with a \"Taijutsu\" Combat Attribute is put in play, put a Growth coin on it. Your Ninjas with a \"Taijutsu\" Combat Attribute cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"I promise!!\"",
     image: "s14-m-459",
   },
   {
@@ -1941,6 +2046,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: Every one of your \"Satoosa\" Ninjas",
       "Effect: Attach this card to the target. During the Exchange of Jutsu, you can reveal X number of Ninja cards from your hand. In that case, the target gets +X/+X and +X Mental Power during the turn.",
     ],
+    flavor: "\"They all came running to help ya..! You've had everyone worried half to death..!\"",
     image: "s14-m-460",
   },
   {
@@ -1957,6 +2063,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (3)",
       "Effect: At the end of the turn, if 1 or more of your Ninjas were discarded due to the Showdown, your opponent must discard 1 card from their hand.",
     ],
+    flavor: "\"I couldn't save Sasuke...and Gaara either...\"",
     image: "s14-m-461",
   },
   {
@@ -1972,6 +2079,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: Search for 1 \"Orochimaru\" or \"Sasuke Uchiha\" Ninja card in your Deck, show it your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Orochimaru is always with Sasuke. If you go any further, you will end up with becoming his guinea pig.\"",
     image: "s14-m-462",
   },
   {
@@ -1988,6 +2096,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, if you have only \"Female\" Ninjas in play, draw 2 cards. Your \"Female\" Ninjas cannot be affected by the effects of your opponent's \"Male\" Ninjas.",
     ],
+    flavor: "\"Naruto---!!\"",
     image: "s14-m-463",
   },
   {
@@ -2004,6 +2113,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Counter Permanent",
       "Effect: When this Mission card's effect is applied, draw 1 card. Players cannot move any cards from their Discard Pile to their hand or their Deck.",
     ],
+    flavor: "\"I'd like to be gentle with you guys, but I can control you with fear, if you like...\"",
     image: "s14-m-464",
   },
   {
@@ -2020,6 +2130,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (2)",
       "Effect: When this Mission card's effect is applied, search for 1 card in your Deck and remove it from game. Then, shuffle your Deck. When this Mission card is removed from play, move that removed from card to your hand.",
     ],
+    flavor: "\"It's gonna be busier...\"",
     image: "s14-m-465",
   },
   {
@@ -2036,6 +2147,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (2)",
       "Effect: When this Mission card's effect is applied, draw 1 card. Your Ninjas get +1/+1.",
     ],
+    flavor: "\"Here, Shikamaru...Your mom asked me to bring you your lunchbox.\"",
     image: "s14-m-466",
   },
   {
@@ -2052,6 +2164,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, remove all the cards in each player's Discard Pile from game. Then, draw 1 card. Each time a card is discarded to the Discard Pile, it is removed from game instead.",
     ],
+    flavor: "\"......\"",
     image: "s14-m-467",
   },
   {
@@ -2068,6 +2181,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Teams with only 1 Ninja cannot be sent out to Battle.",
     ],
+    flavor: "\"Don't you know what the word \"comrade\" is? Of course I do...What of it?",
     image: "s14-m-468",
   },
   {
@@ -2084,6 +2198,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (3)",
       "Effect: Teams with 3 or more Ninjas cannot be sent out to Attack.",
     ],
+    flavor: "\"It's about time.\"",
     image: "s14-m-469",
   },
   {
@@ -2100,6 +2215,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove X number of cards from the top of your Deck from game. In that case, move the target to the bottom of its owner's Deck. X = the target's Entrance cost + 3.",
     ],
+    flavor: "\"Wait up, Sasuke......\"",
     image: "s14-m-470",
   },
   {
@@ -2115,6 +2231,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: If you have \"Naruto Uzumaki (Tailed Beast Mode)\" with an Entrance cost of 5 or more, you can discard any number of your Chakras. In that case, give 1 Damage to 1 of your opponent's Ninjas for each 2 Chakras you discarded.",
     ],
+    flavor: "\"That's not good.\"",
     image: "s14-m-471",
   },
   {
@@ -2130,6 +2247,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: Move up to 2 Ninja cards with \"Ambush\" from your Discard Pile to your hand.",
     ],
+    flavor: "\"Raiga......\"",
     image: "s14-m-472",
   },
   {
@@ -2146,6 +2264,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Your Teams with only 2 Ninjas get +2 Team Power and +2 Mental Power during the Showdown.",
     ],
+    flavor: "\"Nothing will ever separate us again Ranmaru.\"",
     image: "s14-m-473",
   },
   {
@@ -2161,6 +2280,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: Draw 1 card. Additionally, effect texts of all in-play cards that do not have a \"Water\" Symbol are negated during this turn and the next turn.",
     ],
+    flavor: "\"!!\"",
     image: "s14-m-474",
   },
   {
@@ -2177,6 +2297,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Counter",
       "Effect: Your opponent draws 1 card. Your opponent cannot move their Turn Marker this turn.",
     ],
+    flavor: "\"Don't push me .. I'm in a really foul mood.\"",
     image: "s14-m-475",
   },
   {
@@ -2193,6 +2314,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, draw 1 card. When any of your in-play Ninjas receive any Damage by the effects of your opponent's Ninjas, you can put in play 1 Ninja card from your hand.",
     ],
+    flavor: "\"Is there.. someone who is precious to you?\"",
     image: "s14-m-476",
   },
   {
@@ -2209,6 +2331,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: During your Mission Phase, if you have both \"Might Guy\" and \"Rock Lee\" in play, you can remove 1 of your opponent's injured status Ninjas from game. In that case, draw 1 card.",
     ],
+    flavor: "\"Hey, what's shakin'?.. Howya doing, everybody? Life treating you good?\"",
     image: "s14-m-477",
   },
   {
@@ -2225,6 +2348,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (2)",
       "Effect: During your Mission Phase, you can reveal the top or bottom card of your Deck. If it's a Ninja card, move it to your hand and shuffle your Deck. If not, return it and shuffle your Deck.",
     ],
+    flavor: "\"It's hard to explain, but these cards have been Chakra-encoded with everything I've learned over the past four years.\"",
     image: "s14-m-478",
   },
   {
@@ -2241,6 +2365,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Ninjas with 0 or less Mental Power (including Ninjas with no Mental Power) cannot be sent out to Battle. However, during your opponent's Mission Phase, your opponent can discard 2 of the cards in their hand to discard this Mission card.",
     ],
+    flavor: "\"My teammates are gonna kill me!\"",
     image: "s14-m-479",
   },
   {
@@ -2258,6 +2383,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "(2) 1 of your opponent's Ninjas with the same Entrance cost as target (1)'s",
       "Effect: Move both target (1) and (2) to their owner's Chakra area.",
     ],
+    flavor: "\"......\"",
     image: "s14-m-480",
   },
   {
@@ -2274,6 +2400,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, draw 1 card. When any of your in-play Ninjas receive any Damage by the effects of your opponent's Ninjas, you can put in play 1 Ninja card from your hand.",
     ],
+    flavor: "\"Because he's...he's my student. And because I care what happens to him.\"",
     image: "s14-m-481",
   },
   {
@@ -2290,6 +2417,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (3)",
       "Effect: During your Mission Phase, you can injure 1 of your Healthy status Ninjas. In that case, injure 1 of your opponent's healthy status Ninjas with the same Entrance cost.",
     ],
+    flavor: "\"Sasuke had the same eyes this guy does...\" \"The same eyes..?\"",
     image: "s14-m-482",
   },
   {
@@ -2305,6 +2433,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: Your opponent selects 1 symbol. Then, they discard 1 of their in-play Ninjas that do not have the symbol that they selected.",
     ],
+    flavor: "\"Why are you blooming in a place like this...?\"",
     image: "s14-m-483",
   },
   {
@@ -2322,6 +2451,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Attach this card to the target and select 1 Ninja card in your opponent's Discard Pile. While the selected Ninja card remains in their Discard Pile, the target is considered to be the same Ninja as the selected Ninja. At the beginning of your turn, discard 1 of your Chakras. If you cannot, discard this Mission card.",
     ],
+    flavor: "\"You should be the one thanking me...It's only because of my Impersonation Jutsu... they could join the ranks of the Akatsuki, shortlived as it was.\"",
     image: "s14-m-484",
   },
   {
@@ -2337,6 +2467,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: Your Teams with 1 or more \"Medical\" Ninjas can only be blocked by Teams with 1 or more \"Medical\" Ninjas this turn.",
     ],
+    flavor: "\"The Leaf's current Hokage is Tsunade... And she's known as a world-class Medical Ninja.\"",
     image: "s14-m-485",
   },
   {
@@ -2353,6 +2484,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Counter",
       "Effect: Designate a card name. Then, look at all the cards in your opponent's hand. If they have 1 or more cards with the designated name among them, remove those cards from game. Then, search your opponent's Deck, and remove all the cards with the same name from game.",
     ],
+    flavor: "\"And now you can't move anymore.\"",
     image: "s14-m-486",
   },
   {
@@ -2369,6 +2501,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Each time you put in play a \"Squad\" Ninja card or \"Platoon\" Ninja card, draw 2 cards.",
     ],
+    flavor: "\"From now, four of us are heading for the Tenchi bridge, capture and bring a spy from 'Akatsuki' here who has been infiltrating into the Orochimaru's organization.\"",
     image: "s14-m-487",
   },
   {
@@ -2385,6 +2518,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Counter",
       "Effect: If your opponent deployed a Ninja this turn, you can deploy 1 Ninja with an Entrance cost equal to or less than that of Ninja that your opponent deployed this turn.",
     ],
+    flavor: "\"Good...Listen...don't lower your guard at any time.\"",
     image: "s14-m-488",
   },
   {
@@ -2401,6 +2535,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 of your opponent's \"Genin\" Ninjas",
       "Effect: Move the target to the bottom of its owner's Deck.",
     ],
+    flavor: "\"He betrayed the Leaf and joined Orochimaru for the power...\"",
     image: "s14-m-489",
   },
   {
@@ -2418,6 +2553,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Target: 1 Permanent Mission card being played",
       "Effect: Change the effect text of the target to the following: Discard 1 card from your hand. At the end of this turn, discard this Mission card.",
     ],
+    flavor: "\"I don't hand it to anyone. It's my brother's.\"",
     image: "s14-m-490",
   },
   {
@@ -2434,6 +2570,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: The effect texts of Ninjas in a Team that includes Ninjas with different Symbols are negated. (If a Ninja has 2 or more different Symbols, that player selects 1 of them.)",
     ],
+    flavor: "\"Let's make it simple! I hate you!!\"",
     image: "s14-m-491",
   },
   {
@@ -2450,6 +2587,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (3)",
       "Effect: When this Mission card's effect is applied, select even or odd number. Ninjas with the unselected number Entrance cost cannot be sent out to Battle. (0 is considered to be an even number. Ninjas with no Entrance cost cannot be sent out to Battle.)",
     ],
+    flavor: "\"Long time no see, Lord Sasori.\"",
     image: "s14-m-492",
   },
   {
@@ -2512,6 +2650,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent",
       "Effect: Each time you send out 1 or more \"Anbu\" and/or \"The Foundation\" Ninjas to Battle, remove the top 2 cards of your opponent's Deck from game.",
     ],
+    flavor: "\"Danzo is a hard-liner who used to oppose to the third hokage.\"",
     image: "s14-m-496",
   },
   {
@@ -2527,6 +2666,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     text: [
       "Effect: Search for up to 1 copy of each \"Homura Mitomon\" and \"Koharu Utatane\" Ninja card in your Deck, show them(it) to your opponent and place them(it) in your hand. Then, shuffle your Deck. While this Mission card is in your Chakra area, your \"Homura Mitomon\" and \"Koharu Utatane\" Ninjas get +3/+3.",
     ],
+    flavor: "\"Tsunade, Naruto is no ordinary child. He is a 'Jinchuriki'.\"",
     image: "s14-m-497",
   },
   {
@@ -2544,6 +2684,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "1) Move all \"The End of the Demon\" Mission cards in your Discard Pile and/or your Chakra area to your hand.",
       "2) Search for up to 3 copies of \"The End of the Demon\" Mission cards in your Deck, show them(it) to your opponent and place them(it) in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Boy! Give me your kunai.\"",
     image: "s14-m-498",
   },
   {
@@ -2560,6 +2701,7 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Permanent (3)",
       "Effect: All Teams perform a Mental Power Battle.",
     ],
+    flavor: "\"Over there...\"",
     image: "s14-m-499",
   },
 ];

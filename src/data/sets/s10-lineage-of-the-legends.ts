@@ -25,6 +25,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Unfit to be a Team Leader?]",
       "Valid: If this Ninja is sent out to Battle, every time either player flips a Ninja Blade coin during the turn, the result is considered to be tails regardless of the result.",
     ],
+    flavor: "\"Our route has been more difficult than we expected.\"",
     image: "s10-n-344",
   },
   {
@@ -45,6 +46,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Growing Talent]",
       "During your Mission Phase, you can discard 1 of your Chakras with a \"Wind\" symbol. In that case, heal 1 of your injured Ninjas with an Entrance cost equal to or less than this Ninja's.",
     ],
+    flavor: "\"Yesterday, I found it injured, so I tried to cure it...\"",
     image: "s10-n-345",
   },
   {
@@ -65,6 +67,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Till I Get Sober]",
       "During the Exchange of Jutsu, you can discard 1 card with a \"Lightning\" symbol from your hand. In that case, this Ninja gets +3/+0 during the turn. However, if this Ninja's Team wins a Victory during the turn, discard this Ninja at the end of the turn.",
     ],
+    flavor: "\"Oh! The world is spinning.\"",
     image: "s10-n-346",
   },
   {
@@ -85,6 +88,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Aspiration]",
       "Valid: While your opponent has 2 or more Battle Rewards than you do, this Ninja gets +1/+1.",
     ],
+    flavor: "\"I won't stop... until I can see much further...\"",
     image: "s10-n-347",
   },
   {
@@ -105,6 +109,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Summoning Weapons]",
       "When this Ninja is sent out to Battle, you can select 1 of the Jutsu cards with a Jutsu cost of only 1 or 2 in your Discard Pile and place it in your hand.",
     ],
+    flavor: "\"Get ready!\"",
     image: "s10-n-348",
   },
   {
@@ -125,6 +130,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Proud of the Pupils]",
       "While this Ninja is in your hand, it gets -1 Entrance cost for each \"Rock Lee,\" \"Neji Hyuga,\" and \"Tenten\" you have in play.",
     ],
+    flavor: "\"I guarantee that my pupils will complete the mission without any trouble!\"",
     image: "s10-n-349",
   },
   {
@@ -145,6 +151,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Thin Disguise]",
       "Valid: While this Ninja is Battling in either status, its printed Power is considered to be 1/0.",
     ],
+    flavor: "\"Of course. We've been improving our disguise techniques for this day...\"",
     image: "s10-n-350",
   },
   {
@@ -165,6 +172,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Thin Disguise]",
       "Valid: While this Ninja is Battling in either status, its printed Power is considered to be 1/0.",
     ],
+    flavor: "\"Wow! We really look like them!\"",
     image: "s10-n-351",
   },
   {
@@ -185,6 +193,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Eccentric Man of the Village]",
       "When this Ninja's Team wins an Outstanding Victory, or an Outstanding Battle Reward, you can look at all the cards in your opponent hand, select 1 of them and discard it.",
     ],
+    flavor: "\"You should've heard about the irresistible hero who defeats other ninja easily but is rather vulnerable to feminine charm. The famous Leaf Ninja, Jiraiya, is me!!\"",
     image: "s10-n-352",
   },
   {
@@ -205,6 +214,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Lurking Evil]",
       "If this Ninja's Team wins an Outstanding Victory, or an Outstanding Battle Reward, it gets the following effect during the turn: \"Valid: At the end of the turn, if this Ninja is in your Village, select 1 of your opponent's in-play Ninjas with the lowest Entrance cost and discard it.\"",
     ],
+    flavor: "\"I'm going to get every Jutsu and grasp all the truths of this world...\"",
     image: "s10-n-353",
   },
   {
@@ -225,6 +235,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Unrivaled Strength]",
       "When this Ninja's Team wins an Outstanding Victory, or an Outstanding Battle Reward, your opponent must discard the top 4 cards of their Deck.",
     ],
+    flavor: "\"Say what?\"",
     image: "s10-n-354",
   },
   {
@@ -246,6 +257,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja's Team wins an Outstanding Victory, or an Outstanding Battle Reward, discard every Ninja card in your opponent's Chakra area.",
       "Valid: While you have \"Ranmaru\" in play, this Ninja gets +2/+2.",
     ],
+    flavor: "\"I'll give you a funeral!\"",
     image: "s10-n-355",
   },
   {
@@ -267,6 +279,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Any \"Raiga Kurosuki\" Ninja card in your hand gets -1 Entrance cost.",
       "Valid: The Head Ninja in this Ninja's Team cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"For me, to live was to be with you...\"",
     image: "s10-n-356",
   },
   {
@@ -288,6 +301,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: This Ninja can be put in play or moved into a Village or Battlefield, even if that player already has 1 or more Ninjas with the same name in play.",
       "Valid: This Ninja gets +1/+1 for each of your other in-play \"Kurosuki Family\" Ninjas.",
     ],
+    flavor: "\"Get into formation!\"",
     image: "s10-n-357",
   },
   {
@@ -309,6 +323,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja's Team wins a Victory, or an Outstanding Victory, draw 1 card.",
       "Valid: The only Jutsu card this Ninja can use is the \"Blade Slash\" Jutsu card.",
     ],
+    flavor: "\"I'm a bounty hunter, Sazanami.\"",
     image: "s10-n-358",
   },
   {
@@ -330,6 +345,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja's Team wins a Victory or an Outstanding Victory, draw 1 card.",
       "Valid: The only Jutsu card this Ninja can use is the \"Blade Slash\" Jutsu card.",
     ],
+    flavor: "\"I'm also a bounty hunter. We're in the same profession!\"",
     image: "s10-n-359",
   },
   {
@@ -350,6 +366,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Wanted Criminal]",
       "When this Ninja's Team wins an Outstanding Battle Reward, select up to 1 of your opponent's Battle Rewards at random and move it to its original owner's Discard Pile.",
     ],
+    flavor: "\"Unfortunately... I have an important job to do...\"",
     image: "s10-n-360",
   },
   {
@@ -370,6 +387,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Field Exercise]",
       "Valid: The Head Ninja in this Ninja's Team cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"Squad Formation! Cheesecake Jutsu!!\"",
     image: "s10-n-361",
   },
   {
@@ -390,6 +408,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Assistants to the Fifth Hokage]",
       "At the end of your turn, you can draw 1 card. In that case, move 1 of the cards in your hand to your Chakra area.",
     ],
+    flavor: "\"You had us fetch your documents to get some sleep, didn't you!\" \"By the way, I have something to report to you.\"",
     image: "s10-n-362",
   },
   {
@@ -411,6 +430,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja is put in play by sending your in-play \"Orochimaru\" or \"Kabuto Yakushi\" to your Chakra area, move that \"Orochimaru\" or \"Kabuto Yakushi\" Ninja card to your hand instead.",
       "Valid: If this Ninja is removed from play, move it to its original owner's hand instead.",
     ],
+    flavor: "\"The time feels long when you're waiting for what you want...\" \"Sasuke... I can't wait to see him.\"",
     image: "s10-n-363",
   },
   {
@@ -431,6 +451,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Wandering Ghost]",
       "When this Ninja is sent out to Battle, each player must select 1 of the cards in their hand or 1 of their Chakras, if they have any, and discard it.",
     ],
+    flavor: "\"I will never forgive them...\"",
     image: "s10-n-364",
   },
   {
@@ -451,6 +472,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Formidable Visual Jutsu]",
       "Valid: When this Ninja is put in play, change 1 of your opponent's in-play Ninjas to injured status. As long as this Ninja remains in play, that injured Ninja cannot be healed.",
     ],
+    flavor: "\"The next 72 hours will be nothing but this. Over and over.\"",
     image: "s10-n-365",
   },
   {
@@ -471,6 +493,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Fierce Fighting Instinct]",
       "Valid: When this Ninja is sent out to Battle and opposed, if the Team Power of this Ninja's Team is equal to or lower than that of your opponent's Team Battling against it, this Ninja gets +2/+0 during the turn.",
     ],
+    flavor: "\"This guy is getting on my nerves. Can I kill him?\"",
     image: "s10-n-366",
   },
   {
@@ -491,6 +514,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Real Aim]",
       "When 1 or more of your opponent's in-play Ninjas are discarded due to Damage from this Ninja's Team, you win 1 Battle Reward.",
     ],
+    flavor: "\"Naruto... You're coming with us.\" \"Hard to believe that such a child carries the Nine-Tailed Fox...\"",
     image: "s10-n-367",
   },
   {
@@ -511,6 +535,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Secret Wood Style Jutsu]",
       "Each time your opponent puts a Ninja in play during the Mission Phase, that Ninja can neither be included in any other Teams nor be sent out to Battle during the turn it is put in play.",
     ],
+    flavor: "A hero who created stability in the war-torn era and founded the Leaf Village. He captured enemies with complete control of a source of life: trees.",
     image: "s10-n-368",
   },
   {
@@ -531,6 +556,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Water-Style Jutsu]",
       "During your Mission Phase, you can discard X number of your Chakras with a \"Water\" symbol. In that case, select 1 of your opponent's Ninjas to give it -X/-X during the turn. At the end of that turn, you can move up to X number of cards with a \"Water\" symbol in your Discard Pile to your Chakra area.",
     ],
+    flavor: "Following in his brother's footsteps, he strove for the development of the village. With powerful Water-Style Jutsu, he generated great waves in waterless places.",
     image: "s10-n-369",
   },
   {
@@ -551,6 +577,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Guardian of the Village]",
       "Valid: When this Ninja is put in play, place 1 Growth coin on all of your other in-play \"Leaf\" Ninjas.",
     ],
+    flavor: "A guardian of the Leaf Village, who worked for the village for many years. He was called \"professor\" due to his exceptional ability, which was not lost even in his old age.",
     image: "s10-n-370",
   },
   {
@@ -572,6 +599,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: When you win a Normal Battle Reward or an Outstanding Battle Reward due to this Ninja's Team, you can win 1 additional Battle Reward.",
       "Valid: While this Ninja is in injured status, this Ninja's Team cannot be blocked by a Team with 1 Ninja.",
     ],
+    flavor: "A young leader who sacrificed his life to protect the village from a disaster. His brave figure moved swiftly through the battleground like a flash.",
     image: "s10-n-371",
   },
   {
@@ -593,6 +621,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: While you have 1 or more injured Ninjas, this Ninja cannot be sent out to Attack unless you discard 1 of your Chakras with a \"Wind\" symbol.",
       "Valid: At the end of your turn, if you have 1 or more injured Ninjas, you can heal 1 of them.",
     ],
+    flavor: "A Kunoichi who is known as a legend due to many anecdotes. No one can rival her in physical strength and medical expertise.",
     image: "s10-n-372",
   },
   {
@@ -613,6 +642,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Overflowing Chakra]",
       "Valid: While this Ninja is in injured status, it gets +X/+0. X = the value of your Turn Marker.",
     ],
+    flavor: "\"I will never let her join you!\"",
     image: "s10-n-373",
   },
   {
@@ -633,6 +663,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Cool Judgment]",
       "Other Ninjas in this Ninja's Team cannot be affected by your opponent's Jutsu cards.",
     ],
+    flavor: "\"Fight me...\"",
     image: "s10-n-374",
   },
   {
@@ -653,6 +684,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Support from Behind]",
       "When this Ninja becomes the user of a Jutsu card, you can select 1 of your opponent's Ninjas Battling against this Ninja. In that case, that Ninja gets -2/-2 during the turn.",
     ],
+    flavor: "\"Let me handle it!\"",
     image: "s10-n-375",
   },
   {
@@ -673,6 +705,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Signs of Orochimaru]",
       "Valid: While this Ninja is Battling against your opponent's Ninja(s) with a \"Water\" symbol, this Ninja gets -1/+0.",
     ],
+    flavor: "\"The pain is getting stronger...\"",
     image: "s10-n-376",
   },
   {
@@ -693,6 +726,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Eye That Detects Falsehood]",
       "Valid: This Ninja cannot be affected by the effects of Jutsu cards used by your opponent's Ninja that do not have a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "\"It's because I saw your Jutsu with my eye...\"",
     image: "s10-n-377",
   },
   {
@@ -714,6 +748,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "At the beginning of your turn, you can search for 1 \"Gamabunta\" Ninja card in the bottom 5 cards of your Deck and put it in play. In that case, return the rest to your Deck and shuffle it.",
       "Valid: This Ninja cannot be the user of Jutsu cards.",
     ],
+    flavor: "\"What a place you've summoned us to!\" \"Good evening.\"",
     image: "s10-n-378",
   },
   {
@@ -734,6 +769,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Stealing Jutsu]",
       "When this Ninja's Team wins an Outstanding Victory, your opponent must select 1 of the cards in their hand and discard it.",
     ],
+    flavor: "\"I was tricked by the Leaf ninja...!\"",
     image: "s10-n-379",
   },
   {
@@ -754,6 +790,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Stealing Jutsu]",
       "If this Ninja is sent out to Battle, each time your opponent's Ninja uses a Jutsu card during the turn, your opponent must select 1 of the cards in their hand and discard it.",
     ],
+    flavor: "\"We visit various Ninja villages, steal their Jutsu, and create new Ninjutsu.\"",
     image: "s10-n-380",
   },
   {
@@ -774,6 +811,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Coup Plot]",
       "When this Ninja's Team wins an Outstanding Victory, move your opponent's Turn Marker down by 1.",
     ],
+    flavor: "\"I use the name 'Moso' to deceive the public.\"",
     image: "s10-n-381",
   },
   {
@@ -794,6 +832,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Frozen Time]",
       "When you win a Normal Battle Reward or an Outstanding Battle Reward due to this Ninja's Team, your opponent must select 1 of the cards in their hand and discard it.",
     ],
+    flavor: "\"I must start my brother's time again...\"",
     image: "s10-n-382",
   },
   {
@@ -814,6 +853,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Living in the Dark World]",
       "When this Ninja is sent out to Attack, you can select 1 of your opponent's in-play Ninjas with an Entrance cost of 2 or less. In that case, the effect text of that selected Ninja is negated during this turn and the next turn.",
     ],
+    flavor: "\"Don't talk about irrelevant things.\"",
     image: "s10-n-383",
   },
   {
@@ -834,6 +874,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Rescue from the Seabed]",
       "When this Ninja is sent out to Block, you can reveal the bottom card of your Deck. If it is a Ninja card, move it to your hand. If not, return it to your Deck and shuffle it.",
     ],
+    flavor: "\"I just happened to be there...\"",
     image: "s10-n-384",
   },
   {
@@ -855,6 +896,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: When this Ninja is put in play, you can search for 1 \"Sea Monster Panic\" Mission card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, you can place 1 Ninja Blade coin on 1 \"Sea Monster Panic\" Mission card you have in play.",
     ],
+    flavor: "\"I'm a perfect fighter created by improving her version!\"",
     image: "s10-n-385",
   },
   {
@@ -875,6 +917,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Improved Absorption Jutsu]",
       "If this Ninja is sent out to Attack and opposed, it gets the following effect during the turn: \"Valid: At the end of the turn, if this Ninja is in your Village, you can select and discard up to the same number of your opponent's Chakras as their Ninjas that were sent out to Block this Ninja's Team this turn.\"",
     ],
+    flavor: "\"I'm different from that time!\"",
     image: "s10-n-386",
   },
   {
@@ -895,6 +938,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Rubber-like Body]",
       "During your turn, this Ninja's healthy status printed Support value becomes the same value as its healthy status printed Combat value.",
     ],
+    flavor: "\"Heh-heh... You dropped your guard.\"",
     image: "s10-n-387",
   },
   {
@@ -915,6 +959,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Meals during Missions]",
       "Valid: Every Ninja in this Ninja's Team except this Ninja gets +1/+1.",
     ],
+    flavor: "\"We made efforts to serve delicious dishes to ninjas while they are on missions.\"",
     image: "s10-n-388",
   },
   {
@@ -936,6 +981,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: This Ninja cannot receive any Damage from your opponent's Jutsu cards.",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"They're just soldiers dedicated to the cause...\"",
     image: "s10-n-us093",
   },
   {
@@ -956,6 +1002,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Fake Utopia]",
       "At the end of the turn this Ninja is put in play, you can search for 1 \"Haido (Transformed)\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"We've traveled far and wide, trying to create a utopia.\"",
     image: "s10-n-us094",
   },
   {
@@ -977,6 +1024,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: When this Ninja is discarded due to the Showdown or by your opponent's effects, you can search for 1 \"Haido's Soldier\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"...\"",
     image: "s10-n-us095",
   },
   {
@@ -998,6 +1046,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja is sent out to Battle in the same Team with another Ninja with a \"Magic\" Combat Attribute, this Ninja gets +0/+1 during the turn.",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"Prepare yourself... for an eternity of anguish.\"",
     image: "s10-n-us096",
   },
   {
@@ -1019,6 +1068,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja is sent out to Battle in the same Team with another Ninja with a \"Magic\" Combat Attribute, this Ninja gets +2/+0 during the turn.",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"What's the matter, don't you wanna play?!?!\"",
     image: "s10-n-us097",
   },
   {
@@ -1040,6 +1090,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja is sent out to Battle in the same Team with another Ninja with a \"Magic\" Combat Attribute, this Ninja gets +1/+1 during the turn.",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"I can smell your blood, that's all I need!\"",
     image: "s10-n-us098",
   },
   {
@@ -1061,6 +1112,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: During the Exchange of Jutsu, you can discard 1 card with a \"Fire\" symbol from your hand. In that case, heal this Ninja. This effect can be used as many times as you like.",
       "Valid: This Ninja cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"I know more about the stones than anybody. It was given to me by my master, Haido.\"",
     image: "s10-n-us099",
   },
   {
@@ -1082,6 +1134,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "This Ninja cannot be put in play except by sending your in-play \"Haido\" with an Entrance cost of 1 to your Chakra area.",
       "Valid: During the Exchange of Jutsu, you can discard 1 card with an \"Earth\" symbol from your hand. In that case, heal this Ninja. This effect can be used as many times as you like.",
     ],
+    flavor: "\"That's not going to work on me!\"",
     image: "s10-n-us100",
   },
   {
@@ -1102,6 +1155,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Firm Determination]",
       "While this Ninja is Battling against your opponent's Team of only Ninjas with an Entrance cost of 1 or less, this Ninja cannot receive any Damage except due the result of the Showdown.",
     ],
+    flavor: "\"If I haven't the courage to face this demon, how can I ever hope to face him?\"",
     image: "s10-n-us101",
   },
   {
@@ -1122,6 +1176,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Leadership]",
       "Valid: The Head Ninja in this Ninja's Team cannot be affected by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"Okay, Team Ino, let's show 'em who's boss.\"",
     image: "s10-n-us102",
   },
   {
@@ -1143,6 +1198,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: When this Ninja is put in play, discard every card in both players' Chakra areas. During the turn and the next turn that this Ninja is put in play, you cannot charge or move any cards to your Chakra area.",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Jutsu cards. This effect cannot be negated.",
     ],
+    flavor: "\"I'm finally freeee!! ~ Here I come, baby!\"",
     image: "s10-n-us103",
   },
   {
@@ -1163,6 +1219,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[For the Name \"Hokage\"]",
       "Valid: This Ninja cannot receive any Damage by the effects of your opponent's Ninjas.",
     ],
+    flavor: "\"Sorry, but you can forget about being Hokage. Cuz I'm the... top dog around here\"",
     image: "s10-n-us104",
   },
   {
@@ -1183,6 +1240,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[For the One I Care For]",
       "Valid: When this Ninja is put in play, you can select and put 1 \"Naruto Uzumaki\" Ninja card with an Entrance cost of 0 in your Discard Pile in play in injured status.",
     ],
+    flavor: "\"Not in front of the person I admire most, who's finally seeing the real me.\"",
     image: "s10-n-us105",
   },
   {
@@ -1203,6 +1261,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Expert of Genjutsu]",
       "While this Ninja is Battling, all Ninjas in this Ninja's Team and all Ninjas Battling against this Ninja's Team get -1/-1. This effect is not applied to Ninjas with a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "\"Alright... Let's end this!\"",
     image: "s10-n-us106",
   },
   {
@@ -1223,6 +1282,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Expanded Body]",
       "Valid: While this Ninja is in play, The Entrance cost of this Ninja is considered to be 3. This effect cannot be negated.",
     ],
+    flavor: "\"Super Expansion Jutsu!\"",
     image: "s10-n-us107",
   },
   {
@@ -1243,6 +1303,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Self-Sacrifice]",
       "Valid: While this Ninja is Battling, when any other Ninja in this Ninja's Team with a \"Water\" symbol receives any Damage except due to the Showdown, you can negate the Damage. In that case, give the same amount of Damage to this Ninja.",
     ],
+    flavor: "\"Sorry, Naruto...Change of plan. I'm not ready to die quite yet.\"",
     image: "s10-n-us108",
   },
   {
@@ -1263,6 +1324,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Bond of Reliance]",
       "Valid: When this Ninja is removed from play by your opponent's effects, you can select and put 1 \"The Third Hokage\" Ninja card in your Discard Pile or Chakra area in play in injured status in the same position as this Ninja.",
     ],
+    flavor: "\"Let's go, Enma!!\" \"I'm right behind you!\"",
     image: "s10-n-us109",
   },
   {
@@ -1283,6 +1345,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Bond of Reliance]",
       "Valid: When this Ninja is removed from play by your opponent's effects, you can select and put 1 \"Jiraiya\" Ninja card in your Discard Pile or Chakra area in play in injured status in the same position as this Ninja in the same position as this Ninja.",
     ],
+    flavor: "\"The dear old faces reunited once again. I think I'm going to cry.\" \"I didn't summon you after all this time just to listen to your stupid jokes.\"",
     image: "s10-n-us110",
   },
   {
@@ -1303,6 +1366,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Backup]",
       "When this Ninja is sent out to Attack and opposed, you can place this Ninja in any of your other Teams being sent out to Battle in any position.",
     ],
+    flavor: "\"Don't worry. Give me ten minutes and I'll come after you to see if you're okay.\"",
     image: "s10-n-us111",
   },
   {
@@ -1324,6 +1388,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "This Ninja cannot be put in play except by sending your in-play \"Gaara of the Desert\" with an Entrance cost of 2 or more to your Chakra area during your Mission Phase.",
       "Valid: At the end of your turn, if this Ninja is in injured status, heal this Ninja.",
     ],
+    flavor: "\"Think only of yourself, love only yourself! That is what it means to be the strongest.\"",
     image: "s10-n-us112",
   },
   {
@@ -1344,6 +1409,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Strict Discipline]",
       "When you win a Normal Battle Reward or an Outstanding Battle Reward due to this Ninja's Team, your opponent must select 1 of the cards in their hand and discard it.",
     ],
+    flavor: "\"Stand up, Hanabi.\" \"...\"",
     image: "s10-n-us113",
   },
   {
@@ -1364,6 +1430,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Follow Up]",
       "When this Ninja is sent out to Attack and opposed, you can place this Ninja in any of your other Teams being sent out to Battle in any position.",
     ],
+    flavor: "\"Well, I finally caught up to you guys.\"",
     image: "s10-n-us114",
   },
   {
@@ -1384,6 +1451,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Releasing the Power]",
       "Valid: When your in-play \"Rock Lee\", \"Neji Hyuga\" and/or \"Tenten\" is discarded, place 1 Growth coin on this Ninja.",
     ],
+    flavor: "Haaaaa!!!",
     image: "s10-n-us115",
   },
   {
@@ -1404,6 +1472,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Elite Squad with no Face]",
       "While this Ninja card is in your hand, when any of your in-play Ninjas receive any Damage by the effect of your opponent's Ninjas, you can put this Ninja in play.",
     ],
+    flavor: "\"Here I come!\"",
     image: "s10-n-us116",
   },
   {
@@ -1425,6 +1494,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "When this Ninja is sent out to Battle, you can search for 1 Jutsu card with a \"Requirements: 'Kimimaro'\" in the top 5 cards of your Deck, show it to your opponent, and place it in your hand. In that case, return the rest and shuffle your Deck.",
       "Valid: When this Ninja would receive any Damage, you can discard 1 card with a \"Requirements: 'Kimimaro'\" from your hand. In that case, negate that Damage.",
     ],
+    flavor: "\"Normally... the human body contains two hundred and six bones. But in my case that number is somewhat more negotiable...\"",
     image: "s10-n-us117",
   },
   {
@@ -1445,6 +1515,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Trick]",
       "Valid: When this Ninja is discarded due to the Showdown, you can move this Ninja to its original owner's hand instead. In that case, search for 1 \"Puppet\" Ninja card in your Deck and put it in play. Then, shuffle your Deck.",
     ],
+    flavor: "\"You .. fool.. You're the one who's going to die here.\"",
     image: "s10-n-us118",
   },
   {
@@ -1465,6 +1536,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Eternal Rivalry]",
       "Valid: At the beginning of your turn, if this Ninja is in injured status, heal this Ninja.",
     ],
+    flavor: "\"Don't be off your guard!\" \"Right back at you!\"",
     image: "s10-n-us119",
   },
   {
@@ -1485,6 +1557,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Power of the Most Secret Pills]",
       "Valid: When this Ninja is sent out to Battle, you can discard 1 of your Chakras. In that case, this Ninja gets \"Secret Pill\" during the turn.",
     ],
+    flavor: "\"Even if it means I die... I've got to win.\"",
     image: "s10-n-us120",
   },
   {
@@ -1505,6 +1578,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "[Analysis of the Situation]",
       "During your Mission Phase, you can discard 1 of your Chakras. In that case, look at all the cards in your opponent's hand.",
     ],
+    flavor: "\"Give me an analysis of her skills and battle style.\"",
     image: "s10-n-us121",
   },
   {
@@ -1526,6 +1600,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: At the beginning of your turn, discard the top 2 cards of your Deck. This effect is negated while you have the \"The Final Valley\" Mission card in play.",
       "Valid: This Ninja cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"Sasuke...you...\"",
     image: "s10-n-us122",
   },
   {
@@ -1547,6 +1622,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: At the beginning of your turn, discard the top 2 cards of your Deck. This effect is negated while you have the \"The Final Valley\" Mission card in play.",
       "Valid: This Ninja cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"This is the best place for us, don't you think Naruto?\"",
     image: "s10-n-us123",
   },
   {
@@ -1568,6 +1644,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Valid: At the beginning of your turn, discard the top 2 cards of your Deck. This effect is negated while you have the \"Power of State 2\" Mission card in play.",
       "Valid: This Ninja cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"It seems like... I don't have much time left.\"",
     image: "s10-n-us124",
   },
   // ── JUTSU ──
@@ -1585,6 +1662,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The user gets +3/+3 during this turn. Additionally, the user cannot receive any Damage during this turn.",
     ],
+    flavor: "\"Useless! That's not gonna work against my plasma ball!\"",
     image: "s10-j-257",
   },
   {
@@ -1601,6 +1679,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin for each target. Give 1 Damage for each target that got tails.",
     ],
+    flavor: "\"Tornado Lightning!!\"",
     image: "s10-j-258",
   },
   {
@@ -1617,6 +1696,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target.",
     ],
+    flavor: "\"Amazing, isn't it?-I can blow things away without touching them.\"",
     image: "s10-j-261",
   },
   {
@@ -1633,6 +1713,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn. Additionally, if the target's Team wins a Victory or an Outstanding Victory this turn, give 1 additional Damage to every Ninja Battling against the target when Damage is received.",
     ],
+    flavor: "\"Rising Thunder!!\"",
     image: "s10-j-262",
   },
   {
@@ -1649,6 +1730,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: The target gets -3/-3 during this turn.",
     ],
+    flavor: "\"Hear the cries of those who've stood against us... doomed to wander the Land of Death.\"",
     image: "s10-j-274",
   },
   {
@@ -1665,6 +1747,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +4/+4 during this turn.",
     ],
+    flavor: "\"Grrrr......\"",
     image: "s10-j-275",
   },
   {
@@ -1681,6 +1764,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin X times. If you get heads at least once, give 1 Damage to the target.",
     ],
+    flavor: "\"Clone Spinning Axe Kick!\"",
     image: "s10-j-305",
   },
   {
@@ -1696,6 +1780,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: During this turn, the target's printed injured status Power values become its printed healthy status Power values.",
     ],
+    flavor: "\"He's still unconscious...\"",
     image: "s10-j-306",
   },
   {
@@ -1712,6 +1797,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The effect text of the target is negated during this turn.",
     ],
+    flavor: "\"We don't care anymore!\"",
     image: "s10-j-307",
   },
   {
@@ -1728,6 +1814,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Jutsu card being played",
       "Effect: Move 1 of the cards in your hand to your Chakra area. In that case, negate and discard the target.",
     ],
+    flavor: "\"Take this!\"",
     image: "s10-j-308",
   },
   {
@@ -1744,6 +1831,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: During this turn, when the target receives any Damage during the Exchange of Jutsu, give the same amount of Damage to 1 of your opponent's in-play Ninjas. The \"Thunder Armor\" Jutsu card can be applied only once per turn per player.",
     ],
+    flavor: "\"I won't forgive you!!\"",
     image: "s10-j-309",
   },
   {
@@ -1759,6 +1847,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Thunderbolt\" Combat Attribute",
       "Effect: Look at the top 5 cards of your opponent's Deck and discard any number of Jutsu cards among them. Then, return the rest, if there is any, in any order you like.",
     ],
+    flavor: "\"Ninja Art: Boulder Avalanche!!\"",
     image: "s10-j-310",
   },
   {
@@ -1775,6 +1864,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin for each target. Give 1 Damage to every Ninja that got heads.",
     ],
+    flavor: "\"I can't give you a funeral, but don't worry. Nothing will be left of you...\"",
     image: "s10-j-311",
   },
   {
@@ -1790,6 +1880,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Thunderbolt\" Combat Attribute",
       "Effect: Select and look at X number of the cards in your opponent's hand. Then, move every Ninja among them to their original owner's Chakra area. You can only discard Chakras with a \"Water\" symbol for X.",
     ],
+    flavor: "\"Ninja Art: Lightning Fangs!\"",
     image: "s10-j-312",
   },
   {
@@ -1806,6 +1897,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every injured Ninja Battling against the user",
       "Effect: Discard the target.",
     ],
+    flavor: "\"Why don't you give up?\"",
     image: "s10-j-313",
   },
   {
@@ -1821,6 +1913,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Thunderbolt\" Combat Attribute",
       "Effect: Exchange all the cards in your opponent's hand with all the cards in their Chakra area.",
     ],
+    flavor: "\"Has he evaporated completely...?\"",
     image: "s10-j-314",
   },
   {
@@ -1837,6 +1930,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X during this turn. X = the number of your in-play \"Kurosuki Family\" Ninjas and Client.",
     ],
+    flavor: "\"Ninja Art: Black Tornado!!\"",
     image: "s10-j-315",
   },
   {
@@ -1853,6 +1947,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every \"Male\" Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin once for each target. The current Power of every Ninja that got heads becomes 0/0 during this turn. Change every Ninja that got tails to injured status.",
     ],
+    flavor: "\"Cheesecake!♥\"",
     image: "s10-j-316",
   },
   {
@@ -1869,6 +1964,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 during this turn. Additionally, if the value of your Turn Marker is 3 or more, select and discard up to 2 of your opponent's Chakras.",
     ],
+    flavor: "\"Gentle Fist!\"",
     image: "s10-j-317",
   },
   {
@@ -1885,6 +1981,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 during this turn. Additionally, it cannot receive any Damage from your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Ha!\"",
     image: "s10-j-318",
   },
   {
@@ -1901,6 +1998,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target gets -2/-2 during this turn. Additionally, the effect text of the target is negated during this turn.",
     ],
+    flavor: "\"Yah!\"",
     image: "s10-j-319",
   },
   {
@@ -1917,6 +2015,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"You can't move anymore!\"",
     image: "s10-j-320",
   },
   {
@@ -1933,6 +2032,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin once for each target. Change every Ninja that got heads to injured status.",
     ],
+    flavor: "\"Ninja Art: Flying Nail Mist!\"",
     image: "s10-j-321",
   },
   {
@@ -1948,6 +2048,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Itachi Uchiha\"",
       "Effect: Select a card type. Then, look at all the cards in your opponent's hand and return all the cards of the selected type to the bottom of their original owner's Deck.",
     ],
+    flavor: "\"And twenty-four hours from now... you'll be weaker still.\"",
     image: "s10-j-322",
   },
   {
@@ -1964,6 +2065,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: The Combat of the target becomes 0 during this turn.",
     ],
+    flavor: "\"Forget the legs... Maybe I outta start off with those arms of his...\"",
     image: "s10-j-323",
   },
   {
@@ -1980,6 +2082,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 during this turn. X = the number of your opponent's in-play Ninjas. However, your opponent can negate this effect by discarding 1 card with a \"Lightning\" symbol from their hand.",
     ],
+    flavor: "\"You'll be the first to meet them in Hell...\"",
     image: "s10-j-324",
   },
   {
@@ -1994,6 +2097,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: During this turn, each time your in-play Ninja is discarded, return it to its original owner's hand instead.",
     ],
+    flavor: "\"Striking Shadow Snake!!\"",
     image: "s10-j-325",
   },
   {
@@ -2010,6 +2114,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 during this turn. X = the value of your Turn Marker.",
     ],
+    flavor: "\"What's this strange Chakra...?\"",
     image: "s10-j-326",
   },
   {
@@ -2026,6 +2131,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: During this turn, in the calculation of the Team Power of the target's Team, apply the target's injured status value instead of its healthy status value. Additionally, the effect text of the target is negated.",
     ],
+    flavor: "\"Yes, I am a dog. Any complaints?\"",
     image: "s10-j-327",
   },
   {
@@ -2043,6 +2149,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "(1) The User gets +7/+0 during this turn.",
       "(2) Negate and discard 1 Jutsu card being played.",
     ],
+    flavor: "\"...There!!\"",
     image: "s10-j-328",
   },
   {
@@ -2059,6 +2166,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 2 Damage to the target. However, if the target's Entrance cost is greater than the user's, give 1 Damage instead.",
     ],
+    flavor: "\"...All right.\"",
     image: "s10-j-329",
   },
   {
@@ -2074,6 +2182,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 or +0/+X during this turn.",
     ],
+    flavor: "\"Soon you'll be unable to breathe...!\"",
     image: "s10-j-330",
   },
   {
@@ -2088,6 +2197,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Select and discard up to X number of your opponent's Chakras. Then, select and move up to X number of the cards in your Discard Pile to their original owner's Chakra area.",
     ],
+    flavor: "\"What do you think about my improved Chakra Absorption Jutsu?\"",
     image: "s10-j-331",
   },
   {
@@ -2103,6 +2213,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your opponent's Ninjas with an Entrance cost of X or less",
       "Effect: Return the target to the bottom of its original owner's Deck. You can only discard Chakras with a \"Water\" symbol for X.",
     ],
+    flavor: "\"I'm going to unleash all the Chakra I've absorbed!\"",
     image: "s10-j-332",
   },
   {
@@ -2119,6 +2230,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja being sent out to Battle",
       "Effect: The target becomes a Stand-by Ninja.",
     ],
+    flavor: "\"Eat this!\"",
     image: "s10-j-333",
   },
   {
@@ -2134,6 +2246,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Sea Monster\" + \"An Entrance cost of 4 or more\"",
       "Effect: Place this card in the user's Team as a Head Ninja with \"Power: 6/0\" and \"Sea Monster.\" It cannot receive any Damage and if it still remains in play at the end of this turn, it is moved to your Chakra area.",
     ],
+    flavor: "\"Sea Monster doesn't die! It's immortal...\"",
     image: "s10-j-334",
   },
   {
@@ -2149,6 +2262,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin: If it's heads, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"He's gonna set fire!\"",
     image: "s10-j-335",
   },
   {
@@ -2165,6 +2279,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status. However, your opponent can negate this effect by discarding 1 card from their hand.",
     ],
+    flavor: "\"This Jutsu is one example...\"",
     image: "s10-j-336",
   },
   {
@@ -2181,6 +2296,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Discard the target. However, your opponent can negate this effect by discarding 1 card from their hand.",
     ],
+    flavor: "\"He uses the same Jutsu as Gaara...!\"",
     image: "s10-j-337",
   },
   {
@@ -2197,6 +2313,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Each of your Ninjas with an Entrance cost equal to or less than the user's",
       "Effect: The target gets +2/+2 during this turn.",
     ],
+    flavor: "\"Phew... Just in time.\"",
     image: "s10-j-338",
   },
   {
@@ -2213,6 +2330,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target cannot receive any Damage during this turn. However, your opponent can negate this effect by discarding 1 card with an \"Earth\" symbol from their hand.",
     ],
+    flavor: "\"Does he take the properties of rock in his body?\"",
     image: "s10-j-339",
   },
   {
@@ -2229,6 +2347,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. However, your opponent can negate this effect by discarding 1 card with an \"Earth\" symbol from their hand.",
     ],
+    flavor: "\"Get crushed!\"",
     image: "s10-j-340",
   },
   {
@@ -2245,6 +2364,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X during this turn. X = the number of your opponent's healthy Ninjas.",
     ],
+    flavor: "\"Give me a rest!\"",
     image: "s10-j-341",
   },
   {
@@ -2261,6 +2381,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every Stand-By Ninja in 1 of your opponent's Teams",
       "Effect: Move the target back to its original owner's hand. This effect is negated if the user's Team is not opposed.",
     ],
+    flavor: "\"Water Jutsu: Giant Vortex Jutsu!!!\"",
     image: "s10-j-us077",
   },
   {
@@ -2277,6 +2398,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn. Additionally, if the target's Team wins a Victory or an Outstanding Victory this turn, you win 1 Battle Reward.",
     ],
+    flavor: "\"Flower!\"",
     image: "s10-j-us078",
   },
   {
@@ -2292,6 +2414,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Change the target to injured status at the end of this turn.",
     ],
+    flavor: "\"Paper Bomb!!\"",
     image: "s10-j-us079",
   },
   {
@@ -2307,6 +2430,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Neji Hyuga\" or \"Byakugan\" + \"An Entrance cost of 4 or more\"",
       "Effect: Look at the top 5 cards of your opponent's Deck and discard any number of Jutsu cards among them. Then, return the rest, if there is any, and your opponent shuffles their Deck.",
     ],
+    flavor: "\"Gentle Fist Style: 8 Trigrams 64 Palms!!\"",
     image: "s10-j-us080",
   },
   {
@@ -2322,6 +2446,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Magic\" Combat Attribute",
       "Effect: During this turn, in the calculation of the Team Power of the user's Team and the Team Battling against it, the Head Ninja uses its Support value, and the Back Ninjas use their Combat value.",
     ],
+    flavor: "\"Nice trick!!\"",
     image: "s10-j-us081",
   },
   {
@@ -2337,6 +2462,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The user gets +2/+2 during this turn. This Jutsu card can be used even when it is in your Chakra area.",
     ],
+    flavor: "\"Sazanami!!\"",
     image: "s10-j-us082",
   },
   {
@@ -2351,6 +2477,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand, select 1 of them and move it to their Chakra area.",
     ],
+    flavor: "\"!!\"",
     image: "s10-j-us083",
   },
   {
@@ -2365,6 +2492,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Select 1 Jutsu card in your Discard Pile and move it to your hand.",
     ],
+    flavor: "\"!!\"",
     image: "s10-j-us084",
   },
   {
@@ -2380,6 +2508,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: Every Ninja in the User's Team",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"You guys keep following him!\"",
     image: "s10-j-us085",
   },
   {
@@ -2395,6 +2524,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Medicine\" Combat Attribute",
       "Effect: Look at your opponent's Battle Rewards. You can move any number of them to your hand. In that case, move the same amount of cards from your hand to your opponent's Battle Reward area.",
     ],
+    flavor: "\"Calm down. You need a little more time and patience...\"",
     image: "s10-j-us086",
   },
   {
@@ -2409,6 +2539,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Search for 1 Jutsu card with a \"Water\" symbol in the top 5 cards of your Deck, show it to your opponent and place it in your hand. Then, return the rest and shuffle your Deck.",
     ],
+    flavor: "\"......\"",
     image: "s10-j-us087",
   },
   {
@@ -2425,6 +2556,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target. This Jutsu card cannot be negated.",
     ],
+    flavor: "\"Toad Sword!\"",
     image: "s10-j-us088",
   },
   {
@@ -2441,6 +2573,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the target is in healthy status, change it to injured status. If the target is in injured status, discard it.",
     ],
+    flavor: "\"So... fast!\" \"Not just fast. Powerful.\"",
     image: "s10-j-us089",
   },
   {
@@ -2456,6 +2589,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Puppet\"",
       "Effect: Every Ninja that receives any Damage from the user's Team this turn is discarded after that Damage is applied, even if that Damage is reduced to 0. This effect is negated if the Damage is negated.",
     ],
+    flavor: "\"I don't need his body... Every part of him is a lethal weapon!\"",
     image: "s10-j-us090",
   },
   {
@@ -2474,6 +2608,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "(2) User",
       "Effect: Pay the Jutsu cost of target (1). In that case, apply the effect of target (1) making target (2) as a user of target (1). However, \"requirements\" and/or \"target\" of target (1), if it has any, have to be applicable.",
     ],
+    flavor: "\"Wha.. what! I was just about to create a vortex, but HE created one first!\"",
     image: "s10-j-us091",
   },
   {
@@ -2489,6 +2624,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Requirements: \"Sharingan Eye\"",
       "Effect: Look at the top 5 cards of your opponent's Deck and discard any number of Jutsu cards among them. Then, return the rest, if there is any, and your opponent shuffles their Deck.",
     ],
+    flavor: "\"Impossible...Those eyes...The Sharingan...\"",
     image: "s10-j-us092",
   },
   {
@@ -2504,6 +2640,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: User",
       "Effect: The target cannot be affected by your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Take this!\"",
     image: "s10-j-us093",
   },
   {
@@ -2519,6 +2656,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Compare the target's current status printed Combat and Support value. The target's Combat and Support values are considered to be the same value as the lower of the two during this turn.",
     ],
+    flavor: "\"Huh? She's let her guard down...\"",
     image: "s10-j-us094",
   },
   // ── MISSION ──
@@ -2536,6 +2674,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 \"Knight\" Ninja card in your hand",
       "Effect: Put the target in play.",
     ],
+    flavor: "\"What the..?\"",
     image: "s10-m-264",
   },
   {
@@ -2552,6 +2691,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your Chakras or 1 card in your Discard Pile",
       "Effect: Return the target to its original owner's hand.",
     ],
+    flavor: "\"This is not a picnic!\"",
     image: "s10-m-286",
   },
   {
@@ -2568,6 +2708,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your injured Ninjas",
       "Effect: Heal the target and flip a Ninja Blade coin: If it's heads, place 1 Growth coin on the target.",
     ],
+    flavor: "\"It's a curry Sansho made for us. Let's eat it!\"",
     image: "s10-m-287",
   },
   {
@@ -2584,6 +2725,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (2)",
       "Effect: The Hand cost of every \"Sannin\" Ninja card in your hand becomes 0. Additionally, every \"Sannin\" Ninja in your hand without \"Growth\" gets \"Growth\".",
     ],
+    flavor: "\"There were three exceptional Ninja in the verdurous Land of Fire.\"",
     image: "s10-m-288",
   },
   {
@@ -2601,6 +2743,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 non-Platoon Ninja",
       "Effect: Attach this card to the target. While this Mission card is attached, \"Guy\" is added to the end of the target's name. (When the target is \"Naruto Uzumaki,\" its name becomes \"Naruto Uzumaki Guy.\" If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"From now on, my name is Guy. A Leaf Ninja, Mondai Guy!\"",
     image: "s10-m-289",
   },
   {
@@ -2617,6 +2760,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: When either player wins 1 or more Battle Rewards, the other player must discard 1 of the cards in their hand at the end of that turn.",
     ],
+    flavor: "\"You must get some rest!\"",
     image: "s10-m-290",
   },
   {
@@ -2633,6 +2777,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: Each time your opponent's Ninja with 1 or more Growth coins receives Damage during the Showdown and is discarded as a result, you can move 1 Growth coin from it onto 1 of your Ninjas currently on the Battlefield before the Ninja is discarded.",
     ],
+    flavor: "\"This is going to be a competition for crystals, where Jonin, Chunin, and Genin entrants will fight one another!\"",
     image: "s10-m-291",
   },
   {
@@ -2649,6 +2794,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (2)",
       "Effect: Teams cannot perform a Mental Power Battle.",
     ],
+    flavor: "\"I can't believe how gullible he is.\"",
     image: "s10-m-292",
   },
   {
@@ -2666,6 +2812,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. While this card is attached, the target gets a \"Wanted\" Characteristic. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"I didn't commit such a crime...\"",
     image: "s10-m-293",
   },
   {
@@ -2682,6 +2829,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: Each time a \"Wanted\" Ninja of either player is removed from play, the other player can win 1 Battle Reward and select and move 1 of the cards in their Discard Pile to their hand.",
     ],
+    flavor: "\"I'm going to track the target on my own... Let's see who gets him first!\"",
     image: "s10-m-294",
   },
   {
@@ -2697,6 +2845,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: During this turn, you can deploy 1 non-\"Leaf\" Ninja in addition to the regular deployment of a Ninja.",
     ],
+    flavor: "\"It's getting interesting, isn't it?\"",
     image: "s10-m-295",
   },
   {
@@ -2713,6 +2862,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your opponent's \"Leaf\" Ninjas with an Entrance cost of 5 or less",
       "Effect: Move the target to your Village. However, you cannot target a Ninja if another Ninja in your Village has the same name.",
     ],
+    flavor: "\"...Are you not going to rethink, Orochimaru?\"",
     image: "s10-m-296",
   },
   {
@@ -2729,6 +2879,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: Ninjas with an Entrance cost that exceeds the value of your Turn Marker cannot be sent out to Battle by either player.",
     ],
+    flavor: "\"Guy, an S-ranked mission is already waiting for you.\"",
     image: "s10-m-297",
   },
   {
@@ -2745,6 +2896,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: Every Mission card in both players' hands gets +1 Hand cost.",
     ],
+    flavor: "\"I have no doubt that we're completely lost.\"",
     image: "s10-m-298",
   },
   {
@@ -2760,6 +2912,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: If the value of your Turn Marker is 5 or less, draw 2 cards. If the value is 6 or more, select 1 of the cards in your opponent's hand at random and discard it.",
     ],
+    flavor: "\"What's this? ...A wanted poster?\"",
     image: "s10-m-299",
   },
   {
@@ -2776,6 +2929,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: When you pay a Hand cost to deploy a Ninja during your Mission Phase, you can pay it with cards with any symbol.",
     ],
+    flavor: "\"Even Naruto could be of some use...\"",
     image: "s10-m-300",
   },
   {
@@ -2791,6 +2945,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Players cannot win any Battle Rewards during this turn. At the beginning of the Showdown of this turn, place 1 Growth coin on every Ninja in your Non-Battling Teams.",
     ],
+    flavor: "\"Whatever happens, we'll finish before anyone else! Are you ready?\"",
     image: "s10-m-301",
   },
   {
@@ -2806,6 +2961,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Discard every Ninja card in both player's Chakra area.",
     ],
+    flavor: "\"Funerals are good. They make me emotional...\"",
     image: "s10-m-302",
   },
   {
@@ -2821,6 +2977,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Draw 2 cards.",
     ],
+    flavor: "\"Then, it'll be an easy victory.\"",
     image: "s10-m-303",
   },
   {
@@ -2837,6 +2994,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: \"Akatsuki\" Ninjas get +1/+1. Additionally, \"Akatsuki\" Ninjas cannot be affected by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"We last met like this seven years ago... when Orochimaru left this organization...\"",
     image: "s10-m-304",
   },
   {
@@ -2852,6 +3010,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Draw 2 cards. During this turn, you cannot move up your Turn Marker.",
     ],
+    flavor: "\"He's as energetic as always...\"",
     image: "s10-m-305",
   },
   {
@@ -2867,6 +3026,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand, select 1 of the non-Ninja cards among them, and return it to the bottom of its original owner's Deck. Then, your opponent draws 1 card.",
     ],
+    flavor: "\"They know that when you're alone, you tend to neglect your training.\"",
     image: "s10-m-306",
   },
   {
@@ -2883,6 +3043,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (4)",
       "Effect: At the end of your turn, if you have no cards in your hand, draw 1 card. This effect cannot be duplicated.",
     ],
+    flavor: "\"I didn't have enough money for the request, so I also gave them all my pocket money...\"",
     image: "s10-m-307",
   },
   {
@@ -2899,6 +3060,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: When any of your Ninjas receive any Damage by your opponent's Jutsu card or by the effect of your opponent's Ninjas, you can send this card to your Chakra area. In that case, negate the Damage.",
     ],
+    flavor: "\"Are you not hurt...?\"",
     image: "s10-m-308",
   },
   {
@@ -2914,6 +3076,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Your opponent selects a number from 1 to 9. Then, you reveal X number of the cards in your hand so that the total of the Entrance costs of the revealed cards becomes the same as the selected number. If you succeed, you win the same number of Battle Rewards as the revealed cards.",
     ],
+    flavor: "\"Let's start the cooking match!\"",
     image: "s10-m-309",
   },
   {
@@ -2930,6 +3093,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: X number of the cards in your Discard Pile",
       "Effect: Return the target to the top of their original owner's Deck in any order you like. X = the number of your in-play \"Leaf + Genin\" Ninjas.",
     ],
+    flavor: "\"You know...\"",
     image: "s10-m-310",
   },
   {
@@ -2946,6 +3110,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your opponent's \"Genin\" Ninjas with an Entrance cost of 1 or less",
       "Effect: Return the target to the bottom of its original owner's Deck.",
     ],
+    flavor: "\"Those who approached that island disappeared one after another...\"",
     image: "s10-m-311",
   },
   {
@@ -2962,6 +3127,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (4)",
       "Effect: Every \"Sea Monster\" Ninja gets +1/+1. This effect cannot be duplicated. During your Mission Phase, you can move 1 of the coins on this card to 1 of your in-play Ninjas as a \"Sea Monster\" coin. While this card is in play, a Ninja with 1 or more \"Sea Monster\" coins gets a \"Sea Monster\" Characteristic.",
     ],
+    flavor: "\"You look like... Are you the sea monster?\"",
     image: "s10-m-312",
   },
   {
@@ -2977,6 +3143,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: You can search for 1 \"Orochimaru\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"The curse mark aches. It's a clear indication of his presence...\"",
     image: "s10-m-313",
   },
   {
@@ -2993,6 +3160,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: While your Turn Marker is 2 or less, players cannot win any Battle Rewards.",
     ],
+    flavor: "\"Where... where is this place...?\"",
     image: "s10-m-314",
   },
   {
@@ -3009,6 +3177,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Counter Permanent",
       "Effect: You move the Turn Marker at the beginning of your turn instead of at the end.",
     ],
+    flavor: "\"I would like to work to rebuild this country till the end of my life!\"",
     image: "s10-m-315",
   },
   {
@@ -3025,6 +3194,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Counter",
       "Effect: During this turn, your opponent cannot move up their Turn Marker.",
     ],
+    flavor: "\"The samurai is clothed in white armor, carrying a pike, and wearing a terrifying mask...\"",
     image: "s10-m-316",
   },
   {
@@ -3041,6 +3211,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: The Jutsu cost of every Jutsu card that includes \"Requirements: Itinerant Ninja\" can be paid by Chakras with any symbol.",
     ],
+    flavor: "\"Even the summoned dragons are false...\"",
     image: "s10-m-317",
   },
   {
@@ -3057,6 +3228,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent",
       "Effect: Stand-By Ninjas cannot be affected by the effects of your opponent's Jutsu cards or your opponent's Ninjas.",
     ],
+    flavor: "\"Your mission is finished... Don't do anything that is not part of the mission.\"",
     image: "s10-m-318",
   },
   {
@@ -3072,6 +3244,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Select 1 of the players. Move every card in that player's Chakra area and Discard Pile to their original owner's Deck and shuffle it.",
     ],
+    flavor: "\"...\"",
     image: "s10-m-319",
   },
   {
@@ -3088,6 +3261,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: When you deploy a \"Leaf\" Ninja, place 1 Growth coin on that Ninja.",
     ],
+    flavor: "Ninja of the Land of Fire, where leaves shine vibrantly. Their determination to love and protect their village creates unity and fosters their abilities as true Ninjas.",
     image: "s10-m-320",
   },
   {
@@ -3104,6 +3278,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: When you deploy a \"Sand\" Ninja, place 1 Growth coin on that Ninja.",
     ],
+    flavor: "Ninja of the Land of Wind, where sandstorms occur frequently. The harsh environment sharpens their senses, helping them to be elite Ninjas.",
     image: "s10-m-321",
   },
   {
@@ -3120,6 +3295,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: Your Ninjas with a \"Byakugan\" cannot be affected by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Their Taijutsu is a unique one that's been passed down for generations.\"",
     image: "s10-m-us087",
   },
   {
@@ -3137,6 +3313,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 of your \"Jonin\" or higher Rank Ninjas",
       "Effect: Attach this Mission card to the target. While this Mission card is attached, the target can use Jutsu cards with a \"Requirements: 'Thunderbolt' Combat Attribute\".",
     ],
+    flavor: "\"Ohhhhhhhhhh!!!!\"",
     image: "s10-m-us088",
   },
   {
@@ -3153,6 +3330,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (X)",
       "Effect: Players cannot move their Turn Marker.",
     ],
+    flavor: "\"My watch had stopped beating time since then...\"",
     image: "s10-m-us089",
   },
   {
@@ -3168,6 +3346,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Search for 1 \"Gamatatsu\" or 1 \"Gamakichi\" Ninja card in your Deck and put it in play. Then, shuffle your Deck.",
     ],
+    flavor: "\"Hi, long time no see. Got some candies for me?\" \"Why you guys all the time?\"",
     image: "s10-m-us090",
   },
   {
@@ -3183,6 +3362,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Search for any number of \"Ichiraku Noodle Shop\" Mission cards, show them(it) to your opponent, place them(it) in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"He he he... we got the 'Scum Recipe', you know.\"",
     image: "s10-m-us091",
   },
   {
@@ -3198,6 +3378,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Shuffle your Deck, designate a card type for each of the top 2 cards of your Deck and reveal them. If both of them are the same card type you designated, move them to your hand. If not, discard them.",
     ],
+    flavor: "\"South is about where 12 is. Don't forget this.\"",
     image: "s10-m-us092",
   },
   {
@@ -3214,6 +3395,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (2)",
       "Effect: Select 1 Ninja card with a Water symbol in your Discard Pile and put it in play. When this Mission card is removed from play, if that Ninja still remains in play, discard that Ninja.",
     ],
+    flavor: "\"If you walk out at night, you will encounter a ghost in a white armor.\"",
     image: "s10-m-us093",
   },
   {
@@ -3229,6 +3411,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Select and reveal 2 of your opponent's Battle Rewards. If they are different card types, discard them. If they are the same card types, your opponent wins 1 Battle Reward.",
     ],
+    flavor: "\"See? Can you see the difference between them?\"",
     image: "s10-m-us094",
   },
   {
@@ -3246,6 +3429,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Effect: Any \"The Nine-Tailed Fox Spirit\" Ninja cards in your hand gets -2 Entrance cost. Additionally, the effect text of any \"The Nine-Tailed Fox Spirit\" Ninja cards in your hand is negated.",
       "This Mission card cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"The Fox Spirit that killed Iruka's parents and destroyed our village has taken over YOUR body! You ARE the Nine-Tailed Fox!\"",
     image: "s10-m-us095",
   },
   {
@@ -3263,6 +3447,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Effect: Any \"Manda\" Ninja cards in your hand gets -2 Entrance cost. Additionally, the effect text of your in-play \"Manda\" is negated.",
       "This Mission card cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"Well, Orochimaru? Why have you dragged me here? You know I don't like being summoned.\" \"...\"",
     image: "s10-m-us096",
   },
   {
@@ -3279,6 +3464,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: You can organize your Teams at the beginning of your opponent's Battle Phase.",
     ],
+    flavor: "\"This is already announced to the Ninja Academy students.\"",
     image: "s10-m-us097",
   },
   {
@@ -3294,6 +3480,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Discard the top 3 cards of your opponent's Deck.",
     ],
+    flavor: "\"This file...some part of the records after 10 years old are missing.\"",
     image: "s10-m-us098",
   },
   {
@@ -3309,6 +3496,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Select 1 of your opponent's healthy status Ninjas, if they have any, and change it to injured status. Then, your opponent selects 1 of your healthy status Ninjas, if you have any, and changes it to injured status.",
     ],
+    flavor: "\"!!\"",
     image: "s10-m-us099",
   },
   {
@@ -3325,6 +3513,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Counter Permanent (3)",
       "Effect: During your opponent's turn, each of your Teams which have Ninjas with only a \"Water\" symbol get +1 Team Power.",
     ],
+    flavor: "\"It seems like the land of Sea sent them over here.\" \"Well then, we need to treat them nicely.\"",
     image: "s10-m-us100",
   },
   {
@@ -3341,6 +3530,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (2)",
       "Effect: Any Ninja without the \"Genjutsu\" Combat Attribute cannot be the user of Jutsu cards with a Jutsu cost of 2 or more. (Each specific symbol in the Jutsu cost also counts as 1.)",
     ],
+    flavor: "Genjutsu: It drags the target to the world of illusion where their spirit and body gets exhausted and deranged.",
     image: "s10-m-us101",
   },
   {
@@ -3357,6 +3547,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: Effect texts of Ninjas cannot be negated.",
     ],
+    flavor: "\"Narutoooo!\" \"Sasukeeeee!\"",
     image: "s10-m-us102",
   },
   {
@@ -3372,6 +3563,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Select 1 of the Permanent Mission cards in your Discard Pile or your Chakra area and move it to your hand.",
     ],
+    flavor: "\"Let's go home!\" \"Yeah!\"",
     image: "s10-m-us103",
   },
   {
@@ -3388,6 +3580,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: Each of your Ninjas with a \"Weapon\" Combat Attribute gets +1/+1.",
     ],
+    flavor: "Weapons: They are highly sophisticated and essential to the deadly ninja battles as well as training in Ninja arts.",
     image: "s10-m-us104",
   },
   {
@@ -3404,6 +3597,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: Every in-play \"Leaf\" Ninjas gets -1/-1.",
     ],
+    flavor: "Their ambitions lead them to the deeper darkness.",
     image: "s10-m-us105",
   },
   {
@@ -3420,6 +3614,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (2)",
       "Effect: Teams with 2 or more \"Genin\" only Ninjas cannot be sent out to Battle.",
     ],
+    flavor: "\"......\"",
     image: "s10-m-us106",
   },
   {
@@ -3435,6 +3630,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: Search for 1 \"Rogue\" Ninja card in your Deck and put it in play. Then, shuffle your Deck.",
     ],
+    flavor: "\"The fact that you know our names must mean that you're a shinobi formerly of this village.\"",
     image: "s10-m-us107",
   },
   {
@@ -3451,6 +3647,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: If the target is sent out to Attack this turn, you can select 1 of your opponent's Ninjas. In that case, if the target is Blocked, it can only be Blocked by the selected Ninja's Team.",
     ],
+    flavor: "\"Well, okay then, it's time I give 'em what they want!\"",
     image: "s10-m-us108",
   },
   {
@@ -3468,6 +3665,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja or 1 Permanent Mission card",
       "Effect: Attach this Mission card to the target. While this Mission card is attached, the effect text of the target is negated. (If you attach this card to your opponent's card, they control this card.)",
     ],
+    flavor: "\"Curse Sealing Jutsu!!\"",
     image: "s10-m-us109",
   },
   {
@@ -3485,6 +3683,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Place a -3/-3 coin on the target. When this Mission card is removed from play, that -3/-3 coin is changed to +3/+3 coin. (If you attach this card to your opponent's card, they control this card.)",
     ],
+    flavor: "\"Fairly basic training equipment...\"",
     image: "s10-m-us110",
   },
   {
@@ -3501,6 +3700,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "Permanent (3)",
       "Effect: During your Mission Phase, you can change 1 of your healthy Ninjas to injured status. In that case, heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"In the ninja world, those who break the rules are scum. That's true....those who abandon their friends are worse than scum.\"",
     image: "s10-m-us111",
   },
   // ── CLIENT ──
@@ -3518,6 +3718,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: At the end of your turn, you can send this in-play Client to your Chakra area. In that case, select and move 1 Ninja card with a \"Gelel\" in your Discard Pile to your hand.",
     ],
+    flavor: "\"It's time this thing was eliminated from the world once and for all. Even if it means our doom.\"",
     image: "s10-c-034",
   },
   {
@@ -3534,6 +3735,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: During your Mission Phase, if you have 5 or more Ninja cards in your Discard Pile, you can move 5 of them to your Deck and shuffle it. In that case, draw a card.",
     ],
+    flavor: "\"The land we hail from was destroyed, and we've been traveling ever since.\"",
     image: "s10-c-035",
   },
   {
@@ -3552,6 +3754,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "\"Valid: During the Exchange of Jutsu, you can discard 1 card with an \"Earth\" or a \"Fire\" symbol from your hand. In that case, heal this Ninja.\"",
       "When that Ninja is removed from play while this Client is attached, discard this Client.",
     ],
+    flavor: "\"Squeak\"",
     image: "s10-c-036",
   },
   {
@@ -3568,6 +3771,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: While this Client is in play, your \"Curry of Life\" Mission card in your hand gets -1 Hand cost. Additionally, every time you flip a Ninja Blade coin by the effect of \"Curry of Life\" Mission card, the result is considered to be heads regardless of the result.",
     ],
+    flavor: "\"Oh, I'm busy.\"",
     image: "s10-c-038",
   },
   {
@@ -3584,6 +3788,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: During your Mission Phase, you can send this in-play Client to your Chakra area. In that case, you can search for 1 \"Kurosuki Family\" Ninja card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"After all this, I can't go back to the curry shop.\"",
     image: "s10-c-039",
   },
   {
@@ -3602,6 +3807,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
       "(1) Search for 1 \"Komei\" Client card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
       "(2) Put 1 \"Komei\" Client card in your Discard Pile in play.",
     ],
+    flavor: "\"We must protect Lady Toki at any cost...\"",
     image: "s10-c-040",
   },
   {
@@ -3618,6 +3824,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: During your Mission Phase, you can discard this in-play Client and 1 of your Chakras. In that case, all Teams perform a Mental Power Battle during the turn.",
     ],
+    flavor: "\"I see... So this is what you want...\"",
     image: "s10-c-041",
   },
   {
@@ -3634,6 +3841,7 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     text: [
       "Effect: During your opponent's Mission Phase, you can send this Client to your Chakra area. In that case, a player who has 2 or more different symbols in their Chakra area must discard them so that they only have 1 symbol in their Chakra area. (If a card has 2 or more symbols, that player selects 1 of them.)",
     ],
+    flavor: "\"The money ship sails at an earlier time.\"",
     image: "s10-c-042",
   },
 ];

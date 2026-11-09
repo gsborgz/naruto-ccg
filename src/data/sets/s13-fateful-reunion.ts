@@ -27,6 +27,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Valid: This Ninja cannot be affected by your opponent's effects.",
       "Valid: This Ninja must be sent out to Battle, if possible.",
     ],
+    flavor: "\"Bobobobobobo....\"",
     image: "s13-n-522",
   },
   {
@@ -47,6 +48,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Protection Against Poison]",
       "Valid: This Ninja cannot receive any Damage or be changed to injured status by the effects of your opponent's.",
     ],
+    flavor: "\"Please use me!\"",
     image: "s13-n-523",
   },
   {
@@ -68,6 +70,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "During your Mission Phase, you can change this Ninja to injured status. In that case, change 1 of your opponent's Ninjas to injured status. Then, place a Ninja Blade coin symbolizing an Exhaust coin on this Ninja.",
       "Valid: While this Ninja has an Exhaust coin on it, this Ninja cannot be healed.",
     ],
+    flavor: "\"It takes some time.....but...\"",
     image: "s13-n-527",
   },
   {
@@ -88,6 +91,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Animal Instinct]",
       "When this Ninja is deployed, you can put in play 1 \"Ninja Dog\" Ninja card from your Chakra area.",
     ],
+    flavor: "\"By the way, you've grown!\"",
     image: "s13-n-528",
   },
   {
@@ -108,6 +112,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Quiet]",
       "When this Ninja is deployed, you can shuffle all the cards in your opponent's Chakra area into their Deck. In that case, move the same amount of cards from the top of your opponent's Deck to their Chakra area.",
     ],
+    flavor: "\"It's me...\"",
     image: "s13-n-529",
   },
   {
@@ -128,6 +133,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Shyness]",
       "When this Ninja is put in play, if you have \"Naruto Uzumaki\" in play, draw 1 card.",
     ],
+    flavor: "\"Well...well....\"",
     image: "s13-n-530",
   },
   {
@@ -148,6 +154,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Stranger?]",
       "Your opponent's Ninjas get -1/-1 during the turn they are put in play.",
     ],
+    flavor: "\"A stranger?\"",
     image: "s13-n-531",
   },
   {
@@ -168,6 +175,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Powerful Support]",
       "When this Ninja is sent out to Attack, you can discard 1 of your Chakras with an \"Earth\" Symbol. In that case, this Ninja gets +2/+2 during the turn.",
     ],
+    flavor: "\"Maybe I can be your help.\"",
     image: "s13-n-532",
   },
   {
@@ -188,6 +196,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Good Assistant]",
       "While this Ninja is Battling as a Back Ninja and is in the same Team as \"Izumo Kamizuki\", the Head Ninja of this Ninja's Team cannot be affected by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"Hey, that is...\"",
     image: "s13-n-533",
   },
   {
@@ -208,6 +217,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Good Assistant]",
       "While this Ninja is Battling as a Back Ninja and is in the same Team as \"Kotetsu Hagane\", the Head Ninja of this Ninja's Team cannot receive any Damage due to Showdown.\"",
     ],
+    flavor: "\"yeah...no doubt.\"",
     image: "s13-n-534",
   },
   {
@@ -228,6 +238,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Elite of the Sound]",
       "During your Mission Phase, if you have \"Kidomaru,\" \"Jirobo,\" \"Sakon,\" and \"Tayuya\" in play, you can flip a Ninja Blade coin twice; if you get heads both times, you win 1 Battle Reward.",
     ],
+    flavor: "\"If that's it for you, just die!\"",
     image: "s13-n-535",
   },
   {
@@ -248,6 +259,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Elite of the Sound]",
       "During your Mission Phase, if you have \"Kidomaru,\" \"Jirobo,\" \"Sakon,\" and \"Tayuya\" in play, you can discard 1 of your opponent's Chakras and draw 1 card.",
     ],
+    flavor: "\"You are my meal.\"",
     image: "s13-n-536",
   },
   {
@@ -268,6 +280,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Elite of the Sound]",
       "During your Mission Phase, if you have \"Kidomaru,\" \"Jirobo,\" \"Sakon,\" and \"Tayuya\" in play and don't have \"Ukon\" in play, you can search for 1 \"Ukon\" Ninja card in your Deck, and put it in play. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'll finish this right away!\"",
     image: "s13-n-537",
   },
   {
@@ -288,6 +301,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Elite of the Sound]",
       "While you have \"Kidomaru,\" \"Jirobo,\" \"Sakon,\" and \"Tayuya\" in play, each of your opponent's Ninjas gets -1/-1.",
     ],
+    flavor: "\"Hurry up, you idiot.\"",
     image: "s13-n-538",
   },
   {
@@ -309,6 +323,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "During your Mission Phase, you can discard 1 of your Chakras with a \"Wind\" Symbol. In that case, place a Ninja Blade coin (symbolizing a Puppet coin) on 1 of your Ninjas with an Entrance cost of 3 or less.",
       "Valid: During the Exchange of Jutsu, you can place 1 of your Ninjas with a Puppet coin in this Ninja's Team in any position.",
     ],
+    flavor: "\"When a woman is speaking, a guy should shut his mouth and listen.\"",
     image: "s13-n-539",
   },
   {
@@ -329,6 +344,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Lifeless Warriors]",
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute. During the Exchange of Jutsu, you can place this Ninja in 1 of your Teams with 1 or more Ninjas with a \"Manipulation\" Combat Attribute in any position.",
     ],
+    flavor: "\"Creak\"",
     image: "s13-n-540",
   },
   {
@@ -349,6 +365,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Dangerous Artist]",
       "Valid: When this Ninja is discarded due to the Showdown, you can place 1 Bomb coin on each of your opponent's Ninjas and search for 1 \"Deidara\" Ninja card with [Dangerous Artist] effect, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Let me handle that Jinchuriki, hmmm?\"",
     image: "s13-n-541",
   },
   {
@@ -369,6 +386,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[The Best Toy]",
       "During your Mission Phase, you can discard 2 of your Chakras with a \"Wind\" Symbol. In that case, select 1 Ninja card in your Discard Pile and deploy it. At the end of that turn, if that Ninja card still remains in play, remove it from game.",
     ],
+    flavor: "\"I will show you my secret technique.\"",
     image: "s13-n-542",
   },
   {
@@ -390,6 +408,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "At the end of the turn this Ninja is sent out to Battle, place a Ninja Blade coin symbolizing -2/-2 on every Ninja that Battled against this Ninja.",
       "This Ninja card can only be put in play while you have \"Sasori\" in play.",
     ],
+    flavor: "\".........\"",
     image: "s13-n-543",
   },
   {
@@ -411,6 +430,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "When 1 or more of your opponent's Ninjas are injured due to Damage from this Ninja's Team, place a Poison coin on those Ninjas.",
       "Valid: This Ninja can only be put in play by removing from game 1 \"Sasori\" Ninja card with an Entrance cost of 5 from your Discard Pile or your Village. (Entrance cost must be met.)",
     ],
+    flavor: "\"It's been a while since I used my own body last time.\"",
     image: "s13-n-544",
   },
   {
@@ -431,6 +451,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Special Education]",
       "Valid: While this Ninja is Battling against 1 or more Ninjas with 1 or less Entrance cost, this Ninja gets +1/+1.",
     ],
+    flavor: "\"Pant, pant...\"",
     image: "s13-n-545",
   },
   {
@@ -451,6 +472,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Unassailable]",
       "During your Mission Phase, you can select 1 of your opponent's Ninjas. In that case, the selected Ninja cannot be the user of any Jutsu cards during that turn.",
     ],
+    flavor: "\"Found you.\"",
     image: "s13-n-546",
   },
   {
@@ -468,6 +490,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     injured: { combat: 2, support: 0 },
     attributes: ["Taijutsu"],
     text: [],
+    flavor: "\"Here we go!\"",
     image: "s13-n-547",
   },
   {
@@ -488,6 +511,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Cold Headed]",
       "When this Ninja is sent out to Battle, you can give 1 Damage to 1 of your other Ninjas. In that case, select and give 1 Damage to 1 of your opponent's Ninjas with equal to or lower printed Entrance cost than that Ninja's.",
     ],
+    flavor: "\"I don't know...such guy.\"",
     image: "s13-n-548",
   },
   {
@@ -508,6 +532,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Eminent Clan]",
       "Valid: At the end of your opponent's turn, if they have 4 or more cards in their hand, they must discard until they have 3 or less cards in their hand.",
     ],
+    flavor: "\"Byakugan!\" \"Byakugan!\"",
     image: "s13-n-549",
   },
   {
@@ -528,6 +553,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Ambition and Desire]",
       "When this Ninja is put in play, move your opponent's Turn Marker to 0.",
     ],
+    flavor: "\"You shouldn't make a fool with Sasuke.\" \"Help my training right now.\"",
     image: "s13-n-550",
   },
   {
@@ -548,6 +574,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Reunion]",
       "During your Mission Phase, you can discard a Ninja card from your hand. In that case, draw 2 cards and move 1 card from your hand to the bottom of your Deck.",
     ],
+    flavor: "\"Long time no see, Naruto.\" \"Hey, it's you, Naruto!\"",
     image: "s13-n-551",
   },
   {
@@ -568,6 +595,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Madness]",
       "At the end of your Organization Phase, you can discard 3 of your Chakras. In that case, discard each Ninja in a Team of only 1 Ninja.",
     ],
+    flavor: "\"Ikuku...let's begin, shall we?\" \"Artists always seek stranger stimulation to keep their senses sharp.\"",
     image: "s13-n-552",
   },
   {
@@ -588,6 +616,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Get Well Soon Gift]",
       "When this Ninja is sent out to Attack in the same Team with 1 or more injured Ninjas, you can heal 1 of them.",
     ],
+    flavor: "\"I pick this one.\"",
     image: "s13-n-553",
   },
   {
@@ -608,6 +637,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Chase]",
       "If this Ninja is sent out to Attack, this Ninja's Team can only be Blocked by a Team of 2 or less Ninjas during the turn.",
     ],
+    flavor: "\"I'll go after him!\"",
     image: "s13-n-554",
   },
   {
@@ -628,6 +658,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Legendary Pervy Sage]",
       "Valid: This Ninja cannot be included in a Team with a Ninja with 2 or less Entrance cost.",
     ],
+    flavor: "\"I can't work with someone who has no respect for a true artist. Besides, I don't like kids\"",
     image: "s13-n-555",
   },
   {
@@ -648,6 +679,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Observation]",
       "When this Ninja is sent out to Block, you can move 1 of the cards in your Chakra area to the top of your Deck.",
     ],
+    flavor: "\"Let's go there and check.\"",
     image: "s13-n-556",
   },
   {
@@ -665,6 +697,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     injured: { combat: 4, support: 0 },
     attributes: ["Taijutsu"],
     text: [],
+    flavor: "\"This is it!!\"",
     image: "s13-n-557",
   },
   {
@@ -685,6 +718,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Eager Desire]",
       "When this Ninja's Team wins an Outstanding Victory, move your opponent's Turn Marker down by 1.",
     ],
+    flavor: "\"It's too late!!\"",
     image: "s13-n-558",
   },
   {
@@ -705,6 +739,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Rapid Growth]",
       "Valid: When this Ninja's Team wins an Outstanding Victory, move your Turn Marker up by 1.",
     ],
+    flavor: "\"I'm not what I was last time.\"",
     image: "s13-n-559",
   },
   {
@@ -725,6 +760,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Seeing Through the Wall]",
       "During your Mission Phase, you can discard 1 of your Chakras. In that case, look at the top 3 cards of your opponent's Deck, discard 1 of them and return the rest in any order.",
     ],
+    flavor: "\"I know.\"",
     image: "s13-n-560",
   },
   {
@@ -745,6 +781,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Strong Spirit]",
       "When this Ninja is deployed, you can search for 1 \"Hinata Hyuga\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"That's wrong, Neji. Because I can see it.\"",
     image: "s13-n-561",
   },
   {
@@ -765,6 +802,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Splendid Attack]",
       "When this Ninja is sent out to Attack, you can discard 1 card from your hand. In that case, this Ninja gets +2/+2 during the turn.",
     ],
+    flavor: "\"Are you ready for this?\"",
     image: "s13-n-562",
   },
   {
@@ -785,6 +823,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Learning a New Technique]",
       "Valid: When this Ninja is put in play, you can discard 2 of your Chakras with a Lightning Symbol. In that case, search for 1 \"Rasengan\" Jutsu card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Rasengan!!\"",
     image: "s13-n-563",
   },
   {
@@ -805,6 +844,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Learning a New Technique]",
       "Valid: When this Ninja is put in play, you can discard 2 of your Chakras with a Fire Symbol. In that case, search for 1 \"Chidori\" Jutsu card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Chidori!\"",
     image: "s13-n-564",
   },
   {
@@ -825,6 +865,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Desperate Battle]",
       "During your Mission Phase, you can select 1 of your opponent's in-play Ninjas with 1 or less Entrance cost. In that case, discard that Ninja and this Ninja.",
     ],
+    flavor: "\"This should be it!\"",
     image: "s13-n-565",
   },
   {
@@ -886,6 +927,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "While this Ninja card is in your hand, if you have no Ninja cards in play, or only have injured status Ninja(s) in play, this Ninja card gets -1 Entrance cost.",
       "Valid: When this Ninja is sent out to Block, this Ninja gets +2/+0 during the turn.",
     ],
+    flavor: "\"Did you think you won?\"",
     image: "s13-n-568",
   },
   {
@@ -906,6 +948,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Strong Wind]",
       "When this Ninja is put in play, you can move 1 of your opponent's Battle Rewards to your Chakra area.",
     ],
+    flavor: "\"Don't underestimate my power...\"",
     image: "s13-n-569",
   },
   {
@@ -926,6 +969,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Handicap]",
       "When this Ninja is sent out to Attack, you can give -2 Team Power and -2 Team Mental Power to this Ninja's Team. In that case, this Ninja gets the following effect during the turn: \"Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, you win 1 Battle Reward and draw a card.\"",
     ],
+    flavor: "\"This one finger is enough to beat you.\"",
     image: "s13-n-570",
   },
   {
@@ -946,6 +990,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Loopy Fist]",
       "Valid: During the Mission Phase, you can flip a Ninja Blade coin; If it's heads, double the original Combat value (both healthy and injured status) of this Ninja during the turn. If it's tails, the original Combat value (both healthy and injured status) of this Ninja becomes 0 during the turn.",
     ],
+    flavor: "\"Here I coooooome!!\"",
     image: "s13-n-571",
   },
   {
@@ -966,6 +1011,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Wipe Out Attack]",
       "During your Mission Phase, you can discard X number of your Chakras. In that case, you can discard X number of your opponent's in-play Ninjas with an Entrance cost of 1 or less.",
     ],
+    flavor: "\"There are so many of them.\" \"Not only that. The situation is even worse.\"",
     image: "s13-n-572",
   },
   {
@@ -986,6 +1032,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Excellent Combination]",
       "When this Ninja is put in play, discard the top 6 cards of your opponent's Deck.",
     ],
+    flavor: "\"I'm counting on you, Pakkun!\" \"I got it, Kakashi.\"",
     image: "s13-n-573",
   },
   {
@@ -1006,6 +1053,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[The White Guardian and the Master]",
       "While this Ninja is Battling as a Back Ninja, the Head Ninja of this Ninja's Team cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"Come on, Akamaru!!\" \"Arf, arf!!\"",
     image: "s13-n-574",
   },
   {
@@ -1026,6 +1074,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Amazing Growth]",
       "Valid: During the turn 1 or more otehr Ninjas are put in play, this Ninja gets +1/+0.",
     ],
+    flavor: "\"Aren't you reading that book this time?\"",
     image: "s13-n-575",
   },
   {
@@ -1046,6 +1095,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Alert]",
       "If this Ninja is sent out to Battle, during the Exchange of Jutsu of that turn, you can move other Ninjas in this Ninjas Team to your other Battling Teams in any position.",
     ],
+    flavor: "\"Everybody, scatter!!\"",
     image: "s13-n-576",
   },
   {
@@ -1066,6 +1116,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Attack in Waves]",
       "During the Exchange of Jutsu, you can move 1 Jutsu card which includes \"Weapon Combat Attribute\" in their \"Requirements\" from your hand to your Chakra area. In that case, you can give 1 Damage to 1 Ninja Battling against this Ninja with an Entrance of 3 or less.",
     ],
+    flavor: "\"How about this?\"",
     image: "s13-n-577",
   },
   {
@@ -1087,6 +1138,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "While this Ninja is in the same Team with 1 or more other \"Proctor\" Ninjas, this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
       "Valid: Your other in-play \"Proctor\" Ninjas get +2 Mental Power.",
     ],
+    flavor: "\"It's such a nuisance but I am supposed to supervise the chunin exam.\"",
     image: "s13-n-578",
   },
   {
@@ -1107,6 +1159,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[First Aid Treatment]",
       "When any Ninja in this Ninja's Team, including this Ninja would receive X Damage, you can discard X number of your Chakra times 2. In that case, negate that Damage.",
     ],
+    flavor: "\"This should be good for the time being...\"",
     image: "s13-n-579",
   },
   {
@@ -1127,6 +1180,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Set Up]",
       "During your opponent's Mission Phase, you can discard 1 of your Chakras with a \"Fire\" Symbol. In that case, the maximum number of Jutsu cards your opponent's Ninjas can use that turn is 1.",
     ],
+    flavor: "\"it's my turn now.\"",
     image: "s13-n-580",
   },
   {
@@ -1147,6 +1201,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Mysterious Corps]",
       "Your \"Anbu\" Ninjas get +1/+1.",
     ],
+    flavor: "\"To measure my caliber.\"",
     image: "s13-n-581",
   },
   {
@@ -1167,6 +1222,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Speed of Lightning]",
       "When this Ninja is put in play, move your Turn Marker up by 1. At the end of that turn, flip a Ninja Blade coin; if it's tails, move your Turn Marker down by 1.",
     ],
+    flavor: "\"Haaa!!\"",
     image: "s13-n-582",
   },
   {
@@ -1187,6 +1243,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[Howl]",
       "When this Ninja is sent out to Attack, you can search for 1 \"Ninja Dog\" Ninja card in the top 5 cards of your Deck, show it to your opponent, and place it in your hand. Then, return the rest to the top of your Deck and shuffle it.",
     ],
+    flavor: "\"Hooooooow!!!\"",
     image: "s13-n-583",
   },
   {
@@ -1208,6 +1265,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "This Ninja card can be deployed from your Discard Pile by discarding your in-play \"Chiyo\".",
       "Valid: While this Ninja is Battling in the same Team with 2 or more \"Leaf\" Ninjas, this Ninja gets +0/+2.",
     ],
+    flavor: "\"......\"",
     image: "s13-n-584",
   },
   {
@@ -1228,6 +1286,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[For the Next Generation]",
       "At the end of the Battle Phase that your opponent won 2 or more Battle Rewards, if you have \"Naruto Uzumaki\" in play, you can draw 2 cards.",
     ],
+    flavor: "\"Teaching a born genius is not fun at all.\"",
     image: "s13-n-585",
   },
   {
@@ -1248,6 +1307,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[For the Next Generation]",
       "At the end of the Battle Phase that your opponent won 2 or more Battle Rewards, if you have \"Sakura Haruno\" in play, you can draw 2 cards.",
     ],
+    flavor: "\"Right now, I'll attack you with all my power. The training is dodging all my attacks. Again, I'm not going to hold back.\"",
     image: "s13-n-586",
   },
   {
@@ -1268,6 +1328,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "[For My Desire]",
       "At the end of the Battle Phase that your opponent won 2 or more Battle Rewards, if you have \"Sasuke Uchiha\" in play, draw 2 cards.",
     ],
+    flavor: "\"That kid will never beat Sasuke who has Sharingan, which is the talent of the ninja.\"",
     image: "s13-n-587",
   },
   {
@@ -1289,6 +1350,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Valid: When this Ninja is sent out to Attack and opposed, this Ninja gets +X/+0 during the turn. X = the number of Ninjas in the Team that opposed this Ninja's Team that turn.",
       "Vald: This effect cannot be negated.",
     ],
+    flavor: "\"if you bother me, I'm not going to hold back!!\"",
     image: "s13-n-588",
   },
   {
@@ -1310,6 +1372,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "When this Ninja is sent out to Attack, you can discard 1 of your in-play Ninjas. In that case, this Ninja gets +2/+2 during the turn.",
       "Valid: This Ninja is considered to have \"Jonin\".",
     ],
+    flavor: "\"\"I got another connection...\"",
     image: "s13-n-589",
   },
   // ── JUTSU ──
@@ -1326,6 +1389,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your Stand-By Ninjas",
       "Effect: Place the target in the user's Team in any position.",
     ],
+    flavor: "\"I found the target...\"",
     image: "s13-j-450",
   },
   {
@@ -1344,6 +1408,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "(1) Change the target to injured status.",
       "(2) Negate the target's effect texts during this turn.",
     ],
+    flavor: "\"Secret Taijutsu technique...!!\"",
     image: "s13-j-451",
   },
   {
@@ -1359,6 +1424,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Chunin\" or higher Rank",
       "Effect: Move 1 of your opponent's in-play Mission or Client cards to your Village. After it is moved to your Village, you control that card.",
     ],
+    flavor: "\"Now!!\"",
     image: "s13-j-452",
   },
   {
@@ -1375,6 +1441,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"No more playing...\"",
     image: "s13-j-453",
   },
   {
@@ -1391,6 +1458,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: When this Ninja's Team wins a Victory, an Outstanding Victory or Draws, give 2 Damage to the target.",
     ],
+    flavor: "\"Shadow Clone Jutsu!!\"",
     image: "s13-j-454",
   },
   {
@@ -1406,6 +1474,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Sharingan Eye\"",
       "Effect: Select 1 Jutsu card in your Chakra area or Discard Pile and move it to your hand.",
     ],
+    flavor: "\"This is bushy -brow's...\"",
     image: "s13-j-455",
   },
   {
@@ -1422,6 +1491,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja with a printed Entrance cost of 3 or less",
       "Effect: The target's printed Power (both healthy and injured status) becomes 0/0 during the turn.",
     ],
+    flavor: "\"The same look and power.\"",
     image: "s13-j-456",
   },
   {
@@ -1438,6 +1508,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Head Ninja of your opponent's Teams being sent out to Battle",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"We break in with Button Hook Entry.\"",
     image: "s13-j-457",
   },
   {
@@ -1453,6 +1524,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Deidara\"",
       "Effect: If your opponent's Turn Maker is 6 or higher, move it down by 3. If it's 5 or less, move it down by 2.",
     ],
+    flavor: "\"HA!!\"",
     image: "s13-j-458",
   },
   {
@@ -1469,6 +1541,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Negate the effect of the target during this turn. Additionally, remove the target from the game. Then, place a Ninja Blade coin symbolizing -2/-2 on the user at the end of the turn.",
     ],
+    flavor: "\"This jutsu is awesome!\"",
     image: "s13-j-459",
   },
   {
@@ -1485,6 +1558,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin 5 times. Give X Damage to the target and discard up to X number of your opponent's Chakras. X = the number of heads you got during the flips.",
     ],
+    flavor: "\"This is just the beginning of my revenge...\"",
     image: "s13-j-460",
   },
   {
@@ -1501,6 +1575,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja being sent out to Battle with a printed Entrance cost of 3 or less",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Barrier....\"",
     image: "s13-j-461",
   },
   {
@@ -1516,6 +1591,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Akatsuki\"",
       "Effect: If you have 2 or more \"Akatsuki\" Ninjas in play, discard up to 2 of your opponent's Battle Rewards.",
     ],
+    flavor: "\"It will take two to three days to complete.\"",
     image: "s13-j-462",
   },
   {
@@ -1531,6 +1607,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Each of your Head Ninjas being sent out to Battle",
       "Effect: The target gets +2/+0 during this turn.",
     ],
+    flavor: "\"Fire on my command.\"",
     image: "s13-j-463",
   },
   {
@@ -1547,6 +1624,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: Flip a Ninja Blade coin twice; If you get a heads only once, change the target to injured status. If you get heads twice, move the target to its owner's Chakra area.",
     ],
+    flavor: "\"You stay back.\"",
     image: "s13-j-464",
   },
   {
@@ -1563,6 +1641,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your injured Ninjas",
       "Effect: Heal the target. Additionally, move up to 3 cards from your Discard Pile to the top of your Deck in any order.",
     ],
+    flavor: "\"My left hand is all right now.\"",
     image: "s13-j-465",
   },
   {
@@ -1579,6 +1658,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Place a Ninja Blade coin symbolizing -2/-2 on the target.",
     ],
+    flavor: "\"You are slow...\"",
     image: "s13-j-466",
   },
   {
@@ -1595,6 +1675,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Each of your opponent's Ninjas with 1 or more Ninja Blade coins symbolizing -2/-2 on it",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"His attack range so wide!!\"",
     image: "s13-j-467",
   },
   {
@@ -1611,6 +1692,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Place a Ninja Blade coin (symbolizing a Puppet coin) on the target.",
     ],
+    flavor: "\"You were manipulating the girl with your chakra thread...\"",
     image: "s13-j-468",
   },
   {
@@ -1627,6 +1709,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+X during this turn. X = the number of your in-play \"Puppet\" Ninjas and Ninjas with 1 or more \"Puppet\" coins on them.",
     ],
+    flavor: "\"Die.\"",
     image: "s13-j-469",
   },
   {
@@ -1642,6 +1725,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Puppet\"",
       "Effect: Your opponent cannot win any Battle Rewards this turn.",
     ],
+    flavor: "\"You blocked my attack with chakra shield...\"",
     image: "s13-j-470",
   },
   {
@@ -1658,6 +1742,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Place a Ninja Blade coin symbolizing -1/-1 on the target.",
     ],
+    flavor: "\"Sakura! Hold your breath!!\"",
     image: "s13-j-471",
   },
   {
@@ -1673,6 +1758,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Sasuke Uchiha\" + \"A printed Entrance cost of 4 or more\" or \"Itachi Uchiha\"",
       "Effect: Move your opponent's Turn Marker down by 2.",
     ],
+    flavor: "\"I see...\"",
     image: "s13-j-472",
   },
   {
@@ -1689,6 +1775,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: During this turn, each time the target uses a Jutsu card and it's effect is applied, give 1 Damage to the target.",
     ],
+    flavor: "\"He blocked all my attacks with his chakra!?\"",
     image: "s13-j-473",
   },
   {
@@ -1703,6 +1790,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Reveal the top 5 cards of your opponent's Deck. If there are 3 or more Ninja cards among them, discard those Ninja cards and return the rest if there are any. Then, your opponent shuffles their Deck. Otherwise, return them to their Deck and they shuffle it.",
     ],
+    flavor: "\"1, 2, 3...there are 3 guys watching the aerial attacks.\"",
     image: "s13-j-474",
   },
   {
@@ -1719,6 +1807,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your opponent's injured Ninjas",
       "Effect: Discard the target.",
     ],
+    flavor: "\"Fire Style: Fire Ball Jutsu!!\"",
     image: "s13-j-475",
   },
   {
@@ -1735,6 +1824,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja Battling against the user with a printed Entrance cost of 3 or less",
       "Effect: The target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"Noooooo!!\"",
     image: "s13-j-476",
   },
   {
@@ -1750,6 +1840,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Sasori\"",
       "Effect: Search for 1 \"The 3rd Kazekage\" Ninja card in your Deck and place it in the user's Team in any position. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'll show you my treasure puppet. It was a little hard to get...\"",
     image: "s13-j-477",
   },
   {
@@ -1766,6 +1857,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin X times. Give 1 Damage to the target for each heads.",
     ],
+    flavor: "\"Kakakakaka.....\"",
     image: "s13-j-478",
   },
   {
@@ -1782,6 +1874,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja Battling against the user with an Entrance cost of 4 or less",
       "Effect: During the Showdown this turn, in the calculation of the Team Power, the target's Power value is subtracted instead of added.",
     ],
+    flavor: "\"!!\"",
     image: "s13-j-479",
   },
   {
@@ -1797,6 +1890,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Salamander\" or \"Manipulation\" Combat Attribute",
       "Effect: If the user is \"Salamander\", your Ninjas cannot be affected by your opponent's effects during this turn. Otherwise, search for 1 \"Salamander\" Ninja card in your Deck and discard it. In that case, your Ninjas cannot be affected by your opponent's effects during this turn. Then, shuffle your Deck.",
     ],
+    flavor: "\"Salamander\"",
     image: "s13-j-480",
   },
   {
@@ -1812,6 +1906,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Change the target to injured status. At the beginning of the Showdown, if the target is in injured status, heal the target.",
     ],
+    flavor: "\"!!\"",
     image: "s13-j-481",
   },
   {
@@ -1827,6 +1922,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Jonin\" or higher Rank",
       "Effect: Every Ninja without a \"Water\" Symbol gets -2/-2 during this turn.",
     ],
+    flavor: "\"Water Style: Exploding Water Shock Wave!!\"",
     image: "s13-j-482",
   },
   {
@@ -1843,6 +1939,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the target's Combat is lower than the user's, discard the target. Otherwise, flip a Ninja Blade coin: If it's heads, discard the target.",
     ],
+    flavor: "\"Now! Go, Sakura!!\" \"Got it!!\"",
     image: "s13-j-483",
   },
   {
@@ -1859,6 +1956,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: User",
       "Effect: The target cannot be affected by your opponent's effects during this turn.",
     ],
+    flavor: "\"Clay...! It's a clone...\"",
     image: "s13-j-484",
   },
   {
@@ -1874,6 +1972,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Naruto Uzumaki\"",
       "Effect: This card becomes a copy of the user but has no effect texts. Place this card in any of your Battling Teams in any position in injured status. When it receives any Damage or the user would be removed from play, move this card to your Chakra area.",
     ],
+    flavor: "\"Shadow Clone Jutsu!!\"",
     image: "s13-j-485",
   },
   {
@@ -1889,6 +1988,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Genjutsu\" Combat Attribute + \"Jonin\" or higher Rank",
       "Effect: During the Showdown of this turn, exchange the Team Power of the user's Team and the Team Battling against it.",
     ],
+    flavor: "\"Genjutsu: Sylvan Fetters!!\"",
     image: "s13-j-486",
   },
   {
@@ -1905,6 +2005,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every injured Ninja Battling against the user",
       "Effect: Give 1 Damage to target.",
     ],
+    flavor: "\"Crescent Moon Dance!!\"",
     image: "s13-j-487",
   },
   {
@@ -1921,6 +2022,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+2 during this turn. Additionally, the target cannot be affected by your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"Human Boulder!!\"",
     image: "s13-j-488",
   },
   {
@@ -1936,6 +2038,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Jutsu card being used by a Ninja with a \"Genjutsu\" Combat Attribute",
       "Effect: Negate the target and move it to its owner's Chakra area.",
     ],
+    flavor: "\"HAAAAAAA!!\"",
     image: "s13-j-489",
   },
   {
@@ -1951,6 +2054,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Requirements: \"Shikamaru Nara\" or \"Ino Yamanaka\" or \"Choji Akimichi\"",
       "Effect: If you have \"Shikamaru Nara\", \"Ino Yamanaka\" and \"Choji Akimichi\" in the user's Team, regardless of the result of the Showdown, the user's Team wins an Outstanding Victory instead this turn.",
     ],
+    flavor: "\"We're the best trio in the hidden village in the Leafs, Ino-Shika-Cho Trio!!\"",
     image: "s13-j-490",
   },
   {
@@ -1967,6 +2071,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: During this turn, each time the target uses a Jutsu card and it's effect is applied, give 1 Damage to the target.",
     ],
+    flavor: "\"Shoot, this is a trap!!\"",
     image: "s13-j-491",
   },
   {
@@ -1982,6 +2087,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: User",
       "Effect: The target gets \"Taijutsu\" Combat Attribute during this turn. Additionally, the target gets +3/+0 during this turn.",
     ],
+    flavor: "\"Ninja strategy No.1, Taijutsu!!\"",
     image: "s13-j-492",
   },
   {
@@ -1998,6 +2104,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja being sent out to Battle with a printed Entrance cost of 3 or less",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Naruto, Sakura....help me\"",
     image: "s13-j-493",
   },
   {
@@ -2014,6 +2121,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Each of your opponent's Stand-By Ninjas",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"This is my masterpiece art 'Detonating Clay \"Signature Technique' which contains the highest level chakra 'C3'.\"",
     image: "s13-j-494",
   },
   {
@@ -2030,6 +2138,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. If 1 or more of the targets are discarded due to the Damage from this Jutsu card, you win 1 Battle Reward.",
     ],
+    flavor: "\"Rasengan!!\"",
     image: "s13-j-495",
   },
   // ── MISSION ──
@@ -2046,6 +2155,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's Battle Rewards. If there is 1 or more Ninja cards among them, you can select 1 of them and deploy it.",
     ],
+    flavor: "\"Gotcha!!\"",
     image: "s13-m-412",
   },
   {
@@ -2061,6 +2171,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Your opponent shuffles their Deck. Then, guess the number of Ninja cards in the top 5 cards from the top of your opponent's Deck. Then, reveal the top 5 cards of their Deck. If you get it correct, you win 2 Battle Rewards and discard the cards you revealed by this effect. If not, return them and your opponent shuffles their Deck.",
     ],
+    flavor: "\"This can't be...the 1st prize?\"",
     image: "s13-m-413",
   },
   {
@@ -2076,6 +2187,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Discard your in-play \"Quota\" Mission card.",
     ],
+    flavor: "\"I've fulfilled my quota, hmmm?\"",
     image: "s13-m-414",
   },
   {
@@ -2092,6 +2204,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (3)",
       "Effect: Each time your opponent would win 1 or more Battle Rewards, reduce that number by 1.",
     ],
+    flavor: "\"This bought enough time already...\"",
     image: "s13-m-415",
   },
   {
@@ -2108,6 +2221,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your opponent's Ninjas with an Entrance cost of 4 or less in a Team of only 1 Ninja",
       "Effect: Move the target to your Village. As long as the target is in your Village, it can neither be included in any other Teams nor be sent out to Attack.",
     ],
+    flavor: "\"Are you going to take those?\"",
     image: "s13-m-416",
   },
   {
@@ -2124,6 +2238,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (3)",
       "Effect: Each player selects 1 symbol. At the end of each player's turn, the attacker for the turn discards 1 of their in-play Ninjas that does not have the symbol that they selected if they have any.",
     ],
+    flavor: "\"Listen...an alliance is just a pipe dream.\"",
     image: "s13-m-417",
   },
   {
@@ -2139,6 +2254,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Move the player's Turn Marker with the lower value to the same value as that of the player with the Turn Marker with the higher value.",
     ],
+    flavor: "\"Have we met before?\"",
     image: "s13-m-418",
   },
   {
@@ -2155,6 +2271,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent",
       "Effect: During the Showdown, in the calculation of Team Power or Mental Team Power, use only the printed value of the Ninjas in that Team regardless of any other in-play effects.",
     ],
+    flavor: "\"Those poison needles won't work for me...\"",
     image: "s13-m-419",
   },
   {
@@ -2171,6 +2288,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent",
       "Effect: Players cannot put in play Ninjas with \"OVERFLOWING CHAKRA\" or \"TAILED BEAST FORM\" effect.",
     ],
+    flavor: "\"This way, you can control his chakra right away...\"",
     image: "s13-m-420",
   },
   {
@@ -2186,6 +2304,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Put in play an \"Akatsuki\" Ninja card from your hand. At the end of this turn, if it still remains in play, move it to your hand.",
     ],
+    flavor: "\"...HERE COMES ANOTHER ONE. LEAF NINJA.\"",
     image: "s13-m-421",
   },
   {
@@ -2202,6 +2321,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (3)",
       "Effect: During the Exchange of Jutsu, you can discard 3 of your Chakras with a \"Lightning Symbol\". In that case, you can negate and discard 1 Jutsu card being used.",
     ],
+    flavor: "\"you need my power, don't you?\"",
     image: "s13-m-422",
   },
   {
@@ -2218,6 +2338,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your opponent's in-play Ninjas with an Entrance cost of 3 or less",
       "Effect: Flip a Ninja Blade coin; If it's heads, discard the target.",
     ],
+    flavor: "\"This time...I am taking your life on a whim.\"",
     image: "s13-m-423",
   },
   {
@@ -2233,6 +2354,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: If you have \"Crow\", \"Black Ant\" and \"Salamander\" in your Chakra area and none in play, put 1 of each in play. If not, search for up to 1 copy of each in your Deck and move them to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'm taking Gaara back!\"",
     image: "s13-m-424",
   },
   {
@@ -2249,6 +2371,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (2)",
       "Effect: When this Mission card is removed from play before removing the last Ninja Blade coin from this Mission card, you win 3 Battle Rewards. This Mission cannot be negated or removed from play by effects except the one of \"Fulfilling the Quota\" Mission card.",
     ],
+    flavor: "\"All I have to do is to capture one of the 'Jinchuriki' right?\"",
     image: "s13-m-425",
   },
   {
@@ -2264,6 +2387,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Deploy 1 Ninja card with \"Ambush\" from your Discard Pile.",
     ],
+    flavor: "\"Taking Naruto with us is our highest priority mission given by our organization 'Akatsuki'\"",
     image: "s13-m-426",
   },
   {
@@ -2280,6 +2404,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (2)",
       "Effect: Ninja cards in your hand get -1 Entrance cost.",
     ],
+    flavor: "\"This is the sand village's fastest hawk \"Takamaru\"!!\"",
     image: "s13-m-427",
   },
   {
@@ -2295,6 +2420,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's Battle Rewards. If there is 1 or more Ninja cards among them, you can select 1 of them and deploy it.",
     ],
+    flavor: "\"Kakashi told to track the scent of 'Akatsuki'\".",
     image: "s13-m-428",
   },
   {
@@ -2311,6 +2437,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (2)",
       "Effect: Players cannot put in play any Ninja cards. At the end of your opponent's Mission Phase, they draw 1 card.",
     ],
+    flavor: "\"Aaaaaaaaaaaahhhhhhhhhhh....\"",
     image: "s13-m-429",
   },
   {
@@ -2326,6 +2453,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Discard up to 3 cards from your opponent's Chakra area. In that case, move up to the same amount of cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Tailed beasts have enormous amount of chakra. So, every village tried to get their power and use it for the military affairs.\"",
     image: "s13-m-430",
   },
   {
@@ -2343,6 +2471,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "1+) Draw 3 cards",
       "3+) You win 3 Battle Rewards.",
     ],
+    flavor: "\"Stop it, Kankuro! This is a sacred place!!\"",
     image: "s13-m-431",
   },
   {
@@ -2359,6 +2488,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent",
       "Effect: Players cannot put Ninjas in play by the effects of \"Ambush\". However, during your opponent's Mission Phase, your opponent can discard 2 of the cards in their hand to negate this effect during that turn.",
     ],
+    flavor: "\"They're right behind us!!\"",
     image: "s13-m-432",
   },
   {
@@ -2375,6 +2505,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent",
       "Effect: At the end of each player's turn, if that player has 1 or more injured Ninjas, they must discard 1 of them.",
     ],
+    flavor: "\"......\"",
     image: "s13-m-433",
   },
   {
@@ -2390,6 +2521,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Apply the following effect twice. Your opponent shuffles their Deck and reveals the top card of their Deck. If it's a Jutsu, Mission or a Client card, you win a Battle Reward. Then, return the revealed card to the top of their Deck.",
     ],
+    flavor: "\"I normally don't trust these things...\"",
     image: "s13-m-434",
   },
   {
@@ -2406,6 +2538,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (4)",
       "Effect: Satoosa Ninjas cannot be sent out to Battle.",
     ],
+    flavor: "\"Kuku...\"",
     image: "s13-m-435",
   },
   {
@@ -2426,6 +2559,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "(5+) Your opponent must select 1 of their in-play Ninjas and discard it.",
       "Any of the above effects cannot be duplicated.",
     ],
+    flavor: "\"This village is artistically designed...\"",
     image: "s13-m-436",
   },
   {
@@ -2441,6 +2575,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: During your Mission Phase, if your opponent has either \"Sasuke Uchiha\" or \"Naruto Uzumaki\" in play, you can search for the other one in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck. If your Turn Marker is equal to or higher than the Entrance cost of that Ninja card, put it in play.",
     ],
+    flavor: "\"You should have trained more rather than spending your time finding me.\"",
     image: "s13-m-437",
   },
   {
@@ -2457,6 +2592,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent",
       "Effect: Your Head Ninjas get +1/+0 during the turn they are sent out to Battle and opposed.",
     ],
+    flavor: "\"Got it. I'll try!\"",
     image: "s13-m-438",
   },
   {
@@ -2473,6 +2609,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent",
       "Effect: Players can send out up to 4 Teams to Battle.",
     ],
+    flavor: "\"Hehehe! They finally made Tsunade's face rock!\"",
     image: "s13-m-439",
   },
   {
@@ -2490,6 +2627,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your opponent's in-play Ninjas",
       "Effect: Move 1 Ninja card in your hand with an Entrance cost equal to the target's to your Chakra area. In that case, move the target to it's owner's Chakra area.",
     ],
+    flavor: "\"Look at him carefully. He looks so alike, but he is not 'White Fang'...\"",
     image: "s13-m-440",
   },
   {
@@ -2507,6 +2645,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (2)",
       "Effect: When this Mission card is removed from play, move the target to its owner's Chakra area.",
     ],
+    flavor: "\"It will take at least 3 days.\"",
     image: "s13-m-441",
   },
   {
@@ -2522,6 +2661,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: If your opponent has 2 or more Battle Rewards than you do when this Mission card's effect is applied, you can put in play 1 Ninja from your hand. The Entrance cost of that Ninja has to be equal to or less than the number of your opponent's in-play Ninjas.",
     ],
+    flavor: "\"Sorry, we are late.\" \"Temari!\"",
     image: "s13-m-442",
   },
   {
@@ -2538,6 +2678,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: You can search for 1 Ninja card in your Deck with an Entrance cost equal to or lower than the target's and put it in play. Then, discard the target.",
     ],
+    flavor: "\"I'm coming with you!\"",
     image: "s13-m-443",
   },
   {
@@ -2554,6 +2695,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (4)",
       "Effect: Jutsu cards used by Ninjas with a \"Genjutsu\" Combat Attribute are negated.",
     ],
+    flavor: "\"If it's 2 on 1, even if one of them gets caught in genjutsu, once the other one hits him, the genjutsu is canceled.\"",
     image: "s13-m-444",
   },
   {
@@ -2570,6 +2712,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (3)",
       "Effect: Every Ninja which does not have a \"Water\" Symbol gets -2/-2.",
     ],
+    flavor: "\"I bet you will remember me after this...\"",
     image: "s13-m-445",
   },
   {
@@ -2585,6 +2728,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Search for 1 card in your Deck and move it to your Discard Pile.",
     ],
+    flavor: "\"Now, go!\"",
     image: "s13-m-446",
   },
   {
@@ -2600,6 +2744,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "Effect: Look at all the cards in your opponent's hand. Then, you can move both player's Turn Marker up by 4. In that case, at the end of your opponent's next turn, move both player's Turn Marker down by 4.",
     ],
+    flavor: "\"All right, everyone. Let's go 4 times faster!\" \"......\"",
     image: "s13-m-447",
   },
   {
@@ -2616,6 +2761,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (3)",
       "Effect: At the end of each turn, give 1 Damage to every Ninja in a Team of 2 or less Ninjas.",
     ],
+    flavor: "\"......\"",
     image: "s13-m-448",
   },
   {
@@ -2696,6 +2842,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "3+) You win 3 Battle Rewards.",
       "5) You win the game",
     ],
+    flavor: "\"......\"",
     image: "s13-m-453",
   },
   {
@@ -2712,6 +2859,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Permanent (2)",
       "Effect: Each time any of your injured Ninja are sent out to Battle, change those Ninjas to Healthy status.",
     ],
+    flavor: "\"......\"",
     image: "s13-m-454",
   },
   // ── CLIENT ──
@@ -2729,6 +2877,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "During your Mission Phase, you can move this in-play Client card to your Chakra area. In that case, heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"Go ahead and order whatever you want.\"",
     image: "s13-c-047",
   },
   {
@@ -2745,6 +2894,7 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [
       "During your Mission Phase, you can move this in-play Client card to your Chakra area. In that case, you can exchange all the cards in your hand with the same number of cards from the top of your Deck.",
     ],
+    flavor: "\"This...this is the fastest hawk in the sand village \"Takamaru\"!!\"",
     image: "s13-c-048",
   },
 ];

@@ -26,6 +26,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "When this Ninja is deployed, you can search for 1 \"Puppet\" Ninja card with an Entrance cost of 3 or less in your Deck and place it in your hand. Then, shuffle your Deck.",
       "Valid: During the Exchange of Jutsu, you can place 1 \"Puppet\" Ninja card with an Entrance cost of 3 or less from your hand in this Ninja's Team in any position.",
     ],
+    flavor: "\"I knew it...\"",
     image: "s12-n-461",
   },
   {
@@ -47,6 +48,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "When this Ninja is sent out to Attack, you can discard 1 of your Chakras. In that case, this Ninja gets +1/+0 during the turn.",
       "When this Ninja is sent out to Block, you can discard 1 of your Chakras. In that case, this Ninja gets +0/+1 during the turn.",
     ],
+    flavor: "\"No kidding. Why would I?\"",
     image: "s12-n-462",
   },
   {
@@ -67,6 +69,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[THE BRAIN OF THE SAND]",
       "Every \"Sand\" Ninja card in your hand gets -1 Hand cost.",
     ],
+    flavor: "\"Have you heard of an organization called \"Akatsuki\" before??\"",
     image: "s12-n-463",
   },
   {
@@ -87,6 +90,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[QUICK REACTION]",
       "At the beginning of the Battle Phase of your opponent's turn, you can organize your Teams.",
     ],
+    flavor: "\"Get ready for the combat right way.\"",
     image: "s12-n-464",
   },
   {
@@ -107,6 +111,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[GUARD WITH THE SAND]",
       "Valid: During the Exchange of Jutsu, if this Ninja is Battling as a Blocker, you can discard 1 of your Chakras with a \"Wind\" Symbol. In that case, every Ninja in this Ninja's Team, including this Ninja, cannot be affected by your opponent's effects during the turn.",
     ],
+    flavor: "\"......\"",
     image: "s12-n-465",
   },
   {
@@ -127,6 +132,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[WILL POWER]",
       "At the end of your turn, if this Ninja is in healthy status, you can change it to injured status.",
     ],
+    flavor: "\"This time, I will save him no matter what!\"",
     image: "s12-n-466",
   },
   {
@@ -147,6 +153,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[CURE]",
       "Valid: During the Mission Phase, you can discard 1 of your Chakras. In that case, remove 1 Ninja Blade coin of any kind from 1 of your in-play Ninjas.",
     ],
+    flavor: "\"let me take care of him.\"",
     image: "s12-n-467",
   },
   {
@@ -167,6 +174,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[TEACHER]",
       "When this Ninja is put in play, all of your other in-play \"Leaf\" Ninjas get +1/+1 during the turn.",
     ],
+    flavor: "\"He is no longer a weak ninja whom I need to worry about.\"",
     image: "s12-n-468",
   },
   {
@@ -187,6 +195,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[ROOKIE OF THE LEAF]",
       "Valid: While you have \"Udon\" and/or \"Moegi\" in play, this Ninja gets +2/+0.",
     ],
+    flavor: "\"You must have caught a cold when you were peeping.\"",
     image: "s12-n-469",
   },
   {
@@ -207,6 +216,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[ROOKIE OF THE LEAF]",
       "Valid: While you have \"Udon\" and/or \"Konohamaru\" in play, this Ninja gets +1/+1.",
     ],
+    flavor: "\"\"Are you OK, Ebisu sensei?\"",
     image: "s12-n-470",
   },
   {
@@ -227,6 +237,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[ROOKIE OF THE LEAF]",
       "Valid: While you have \"Konohamaru\" and/or \"Moegi\" in play, this Ninja gets +0/+2.",
     ],
+    flavor: "\"......\"",
     image: "s12-n-471",
   },
   {
@@ -247,6 +258,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[SUPERVISOR]",
       "Teams that include \"Moegi\", \"Udon\" and/or \"Konohamaru\" get +1 Team Power.",
     ],
+    flavor: "\"Maybe I spent too much time in the hot spring.",
     image: "s12-n-472",
   },
   {
@@ -267,6 +279,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[DETECTION OF THE MOVEMENT]",
       "During the Exchange of Jutsu, when any Ninja in this Ninja's Team, including this Ninja, becomes the target of your opponent's Jutsu card, you can discard 2 of your Chakras with a \"Fire\" Symbol. In that case, negate and discard that Jutsu card.",
     ],
+    flavor: "\"I'm not that bad.\"",
     image: "s12-n-473",
   },
   {
@@ -287,6 +300,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[EIGHT INNER GATES]",
       "Valid: If this Ninja becomes the user of 1 or more Jutsu cards that include \"Requirements: 'Taijutsu'\" and/or \"Requirements: 'Might Guy'\" and this Ninja's Team wins a Victory or an Outstanding Victory during that turn, you win 1 Battle Reward.",
     ],
+    flavor: "\"Haaaaaaaaa!!!\"",
     image: "s12-n-474",
   },
   {
@@ -307,6 +321,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[EXPERT OF TAIJUTSU]",
       "Valid: Each time this Ninja becomes the user of a Jutsu card with \"Requirements: 'Taijutsu'\" and/or \"Requirements: Rock Lee\", this Ninja gets +1/+1 during the turn.",
     ],
+    flavor: "\"Tenten, maybe you need to train more.\"",
     image: "s12-n-475",
   },
   {
@@ -327,6 +342,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[KEKKEIGENKAI]",
       "Each time this Ninja becomes the user of a Jutsu card that includes \"Byakugan\" and/or \"Neji Hyuga\" in its \"Requirements\", your opponent must select and discard 1 of the cards in their hand.",
     ],
+    flavor: "\"He is coming from behind!\"",
     image: "s12-n-476",
   },
   {
@@ -347,6 +363,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[MASTER OF WEAPONS]",
       "Other Ninjas with a \"Weapon\" Combat Attribute in this Ninja's Team get +1/+1.",
     ],
+    flavor: "\"Why don't we take a break!\"",
     image: "s12-n-477",
   },
   {
@@ -367,6 +384,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[ABSOLUTE GENJUTSU WORLD]",
       "Valid: Jutsu cards used by this Ninja cannot be negated by the effects of Jutsu cards used by Ninjas that do not have a \"Genjutsu\" Combat Attribute or by the effects of Ninjas that do not have a \"Genjutsu\" Combat Attribute.",
     ],
+    flavor: "\"It's time for you to fall asleep with my jutsu...\"",
     image: "s12-n-478",
   },
   {
@@ -387,6 +405,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[INEXHAUSTIBLE POWER]",
       "When this Ninja is sent out to Battle and opposed, the Head Ninja Battling against this Ninja's Team gets -X/+0. X = the value of that Ninja's current status Support value.",
     ],
+    flavor: "\"You will remember me soon...\"",
     image: "s12-n-479",
   },
   {
@@ -408,6 +427,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "During your Mission Phase, you can place a Ninja Blade coin (symbolizing a Bomb coin) on 1 of your opponent's in-play Ninjas.",
       "Valid: During the Exchange of Jutsu, you can discard 2 of your Chakras with an \"Earth\" Symbol. In that case, give 1 Damage to 1 of your opponent's Ninjas with 1 or more Bomb coins on it.",
     ],
+    flavor: "\"You will understand it once you get this...\"",
     image: "s12-n-480",
   },
   {
@@ -429,6 +449,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "During your Mission Phase, you can discard 2 of your Chakras with a \"Wind\" Symbol. In that case, place a Ninja Blade coin (symbolizing a Puppet coin) on 1 of your Ninjas.",
       "Valid: At the beginning of your Battle Phase, you can place as many of your Ninjas with a Puppet coin in this Ninja's Team in any position.",
     ],
+    flavor: "\"Why do you care? You are going to die anyway.\"",
     image: "s12-n-481",
   },
   {
@@ -449,6 +470,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[MYSTERIOUS EXISTENCE]",
       "During your Mission Phase, you can select 3 Ninja cards from your Discard Pile or your opponent's Discard Pile, and remove them from game. In that case, place a Growth coin on this Ninja. The maximum number of Growth coins due to this effect is 2.",
     ],
+    flavor: "\"THE ENEMY IS APPROACHING HERE...\"",
     image: "s12-n-482",
   },
   {
@@ -469,6 +491,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[DIGNITY]",
       "This Ninja's Team cannot be Blocked by your opponent's Team that includes 1 or more Ninjas with an Entrance cost of 1 or less.",
     ],
+    flavor: "\"As a Kazekage of the Hidden Sand Village.\"",
     image: "s12-n-483",
   },
   {
@@ -490,6 +513,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute.",
       "During the Exchange of Jutsu, you can place this Ninja in 1 of your Teams with 1 or more Ninjas with a \"Manipulation\" Combat Attribute in any position.",
     ],
+    flavor: "\"Gigiii...\"",
     image: "s12-n-484",
   },
   {
@@ -511,6 +535,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute.",
       "During the Exchange of Jutsu, you can place this Ninja in 1 of your Teams with 1 or more Ninjas with a \"Manipulation\" Combat Attribute in any position.",
     ],
+    flavor: "\"Gigiii...\"",
     image: "s12-n-485",
   },
   {
@@ -532,6 +557,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute.",
       "During the Exchange of Jutsu, you can place this Ninja in 1 of your Teams with 1 or more Ninjas with a \"Manipulation\" Combat Attribute in any position.",
     ],
+    flavor: "\"Gigiii...\"",
     image: "s12-n-486",
   },
   {
@@ -552,6 +578,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[FISHING]",
       "When this Ninja is put in play, you can select 1 of the \"Puppet\" Ninja cards from your Chakra area and/or Discard Pile and put it in play.",
     ],
+    flavor: "\"That's not funny at all...\"",
     image: "s12-n-487",
   },
   {
@@ -572,6 +599,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[RETIRED MASTER]",
       "When this Ninja is put in play, you can search for 1 \"Puppet\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Come on! I was just joking! Ha ha ha!\"",
     image: "s12-n-488",
   },
   {
@@ -592,6 +620,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[DECODING THE CODE]",
       "During your Mission Phase, reveal the top card of your Deck. If that card has an \"Earth\" Symbol, place it in your hand. In that case, discard 1 card from your hand. If not, return it to the top of your Deck.",
     ],
+    flavor: "\"Got it. I will decode it right away!\"",
     image: "s12-n-489",
   },
   {
@@ -609,6 +638,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     injured: { combat: 7, support: 0 },
     attributes: ["Oil"],
     text: [],
+    flavor: "\"Let me handle it.\"",
     image: "s12-n-490",
   },
   {
@@ -626,6 +656,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     injured: { combat: 1, support: 3 },
     attributes: ["Medicine"],
     text: [],
+    flavor: "\"I will save them this time!!\"",
     image: "s12-n-491",
   },
   {
@@ -646,6 +677,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[HOT-BLOODED MIND]",
       "Valid: While you have 1 or more Ninjas in injured status in this Ninja's Team except this Ninja, this Ninja gets +1/+1.",
     ],
+    flavor: "\"No, sensei! Let's get there by noon!.\"",
     image: "s12-n-492",
   },
   {
@@ -663,6 +695,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     injured: { combat: 3, support: 2 },
     attributes: ["Taijutsu"],
     text: [],
+    flavor: "\"Naruto...\"",
     image: "s12-n-493",
   },
   {
@@ -683,6 +716,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[UNTIL THE DAY THE DREAM COMES TRUE]",
       "Valid: When this Ninja would be removed from play during the Battle Phase, you can discard 1 of your Chakras with a \"Lightning\" Symbol and another one with a \"Wind\" Symbol. In that case, move this Ninja to your Village in injured status instead.",
     ],
+    flavor: "\"I want to become one who everyone relies on... as a Kazekage of the Hidden Sand Village.\" \"I will become Hokage one day. So I will put him under a debt.\"",
     image: "s12-n-494",
   },
   {
@@ -703,6 +737,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[MENACE OF THE SAND]",
       "When this Ninja is put in play, you can look at all the cards in your opponent's hand, select 1 card and discard it. However, your opponent can negate this effect by discarding 2 cards from their hand.",
     ],
+    flavor: "\"Let's go, Kankuro!\" \"I know.\"",
     image: "s12-n-495",
   },
   {
@@ -723,6 +758,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[COMPETITIVENESS]",
       "When this Ninja is sent out to Battle and opposed, if the Team Power of this Ninja's Team is equal to or lower than that of your opponent's Team Battling against it, this Ninja gets +1/+0 during the turn.",
     ],
+    flavor: "\"I'll admit it. You're definitely strong.\"",
     image: "s12-n-496",
   },
   {
@@ -743,6 +779,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[FOR THE FELLOWS]",
       "Valid: When this Ninja is deployed, you can place a Growth coin on 1 of your other Ninjas.",
     ],
+    flavor: "\"You gonna tell me your comrades risked their lives for nothing?!\"",
     image: "s12-n-497",
   },
   {
@@ -763,6 +800,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[ANIMAL MIMICRY]",
       "Your other in-play \"Animal\" Ninjas get +1/+1.",
     ],
+    flavor: "\"Wait'll they see our new technique!--These clowns won't know what hit 'em, right, boy?\"",
     image: "s12-n-498",
   },
   {
@@ -783,6 +821,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[SUMMON]",
       "During your Mission Phase, you can move this in-play Ninja to your Chakra area. In that case, put 1 \"Ninja Dog Squad (All Gathered)\" Ninja card in play from your hand.",
     ],
+    flavor: "\"All right. Scatter!!\"",
     image: "s12-n-499",
   },
   {
@@ -803,6 +842,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[SUCCESSORS OF THE CLAN]",
       "Valid: During your Mission Phase, if you have 1 or more other Ninjas with \"Byakugan\" in play, you can move 1 Jutsu card that includes \"Byakugan\" and/or \"Hinata Hyuga\" in its \"Requirements\" in your Chakra area or Discard Pile to your hand.",
     ],
+    flavor: "\"Your kick is still weak.\" \"Yes.\"",
     image: "s12-n-500",
   },
   {
@@ -824,6 +864,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "This Ninja's Team cannot be Blocked by a Team with only 1 Ninja.",
       "Valid: At the end of your turn, you can give 1 Damage to 1 of your opponent's Ninjas with the lowest Entrance cost.",
     ],
+    flavor: "\"I'll finish this quickly.\" \"You are pretty good at rubbing me the wrong way.\"",
     image: "s12-n-501",
   },
   {
@@ -845,6 +886,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "This Ninja's Team cannot be Blocked by a Team with only 1 Ninja.",
       "At the end of your turn, you can change 1 of your opponent's Ninjas to injured status.",
     ],
+    flavor: "\"You just went into my effective range.\" \"One finger is enough to activate my Genjutsu\"",
     image: "s12-n-502",
   },
   {
@@ -866,6 +908,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "This Ninja can only be put in play by discarding both an in-play \"Kiba Inuzuka\" and in-play \"Akamaru\" during your Mission Phase. (The Entrance cost needs to be met.)",
       "Valid: When this Ninja's Team wins a Victory or an Outstanding Victory, you can discard the top 2 cards of your opponent's Deck.",
     ],
+    flavor: "\"Inuzuka Style! Man-Beast Transformation Combo!\"",
     image: "s12-n-503",
   },
   {
@@ -886,6 +929,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[THE FANG OF THE LEAF]",
       "While this Ninja is in the same Team as 1 or more other \"Animal\" Ninjas, this Ninja gets +2/+2.",
     ],
+    flavor: "\"I gotcha!\" \"Yahooo!!\"",
     image: "s12-n-504",
   },
   {
@@ -906,6 +950,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[ILLUSION]",
       "Valid: While this Ninja is in the same Team as 1 or more other Ninjas with a \"Genjutsu\" Combat Attribute, this Ninja gets +1/+1.",
     ],
+    flavor: "\"It looks like the exams are going to be fun this year...\"",
     image: "s12-n-505",
   },
   {
@@ -926,6 +971,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[BIG SISTER]",
       "While you only have \"Female\" Ninjas in play, your other \"Female\" Ninjas get +1/+1.",
     ],
+    flavor: "\"Watch yourself, something doesn't seem quite right here!\"",
     image: "s12-n-506",
   },
   {
@@ -946,6 +992,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[HIDDEN PASSION]",
       "Valid: When this Ninja is discarded due to the Showdown, you can discard 1 in-play Permanent Mission card or Client.",
     ],
+    flavor: "\"Even a caged bird will smarten up, .. and will become able to figure out how to open the door to its cage with its beak...\"",
     image: "s12-n-507",
   },
   {
@@ -966,6 +1013,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[A SPY]",
       "Players cannot put Ninjas in play by the effects of \"Ambush\".",
     ],
+    flavor: "\"I must tell Lord Hokage\"",
     image: "s12-n-508",
   },
   {
@@ -986,6 +1034,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[BOND OF FAMILY]",
       "When this Ninja is deployed, you can search for 1 \"Hinata Hyuga\" Ninja card in your Deck and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Yes, father\"",
     image: "s12-n-509",
   },
   {
@@ -1006,6 +1055,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[SKILLFUL MANIPULATION OF PUPPETS]",
       "During your Mission Phase, you can search for 1 \"Puppet\" Ninja card in the top 5 cards of your Deck, show it to your opponent, and place it in your hand. Then, return the rest to the top of your Deck and shuffle it.",
     ],
+    flavor: "\"You .. fool. .. You're the one who's going to die here.\"",
     image: "s12-n-510",
   },
   {
@@ -1026,6 +1076,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[INSECT WARRIORS]",
       "When this Ninja is put in play, put 1 Ninja Blade coin (symbolizing an Insect coin) in play with the following: \"[Power: 0/0 (Healthy and Injured status)] [Valid: This Ninja cannot be the user of Jutsu cards. This effect cannot be negated.]\"",
     ],
+    flavor: "\"If you fight me, you won't be able to recover. Forfeit and withdraw.\"",
     image: "s12-n-511",
   },
   {
@@ -1043,6 +1094,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     injured: { combat: 3, support: 3 },
     attributes: ["Fang"],
     text: [],
+    flavor: "\"Arf! Arf!!\"",
     image: "s12-n-512",
   },
   {
@@ -1064,6 +1116,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "When this Ninja is sent out to Battle and opposed, you can place 1 Ninja Blade coin (symbolizing a Negation coin) on 1 Ninja Battling against this Ninja.",
       "Valid: Effect texts of Ninjas with 1 or more Negation coins are negated.",
     ],
+    flavor: "\"\"I struck all sixty-four of your Chakra Points. You're lucky to still be breathing.\"",
     image: "s12-n-513",
   },
   {
@@ -1084,6 +1137,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[AS A FATHER]",
       "Valid: During your opponent's Mission Phase, if you have \"Ino Yamanaka\" in play, you can discard 2 of your Chakras with an \"Earth\" Symbol. In that case, your opponent skips their Organization Phase of that turn.",
     ],
+    flavor: "\"Take this!!\"",
     image: "s12-n-514",
   },
   {
@@ -1105,6 +1159,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "While you have \"Shikamaru Nara\" in play, this Ninja gets \"Mental Power: 4\".",
       "While this Ninja is Battling in the same Team as \"Shikamaru Nara\", this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
     ],
+    flavor: "\"Then you're gonna love this next one...\"",
     image: "s12-n-515",
   },
   {
@@ -1126,6 +1181,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "When this Ninja is sent out to Attack, this Ninja gets +1/+0 during the turn.",
       "Valid: When this Ninja is send out to Battle in injured status while you have \"Choji Akimichi\" in play, change this Ninja to healthy status.",
     ],
+    flavor: "\"Expansion Jutsu!\"",
     image: "s12-n-516",
   },
   {
@@ -1146,6 +1202,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[AS A FATHER]",
       "Valid: While you have \"Shino Aburame\" in play, your opponent cannot draw or exchange cards due to their effects.",
     ],
+    flavor: "\"Try not to move, Shino.\"",
     image: "s12-n-517",
   },
   {
@@ -1166,6 +1223,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[THE HEAD OF THE CLAN]",
       "Valid: When this Ninja is sent out to Battle while you have another Ninja with \"Byakugan\" in play, you can select 1 of the cards in your opponent's hand at random and remove it from game keeping it face down. In that case, return that card to your opponent's hand at the end of the turn.",
     ],
+    flavor: "\"The Hyuga clan has no use for such an heir\"",
     image: "s12-n-518",
   },
   {
@@ -1186,6 +1244,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "[QUEST FOR THE FOOD]",
       "Valid: When this Ninja is put in play, you can move 1 card in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Awwwright!.\"",
     image: "s12-n-519",
   },
   {
@@ -1203,6 +1262,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     injured: { combat: 5, support: 2 },
     attributes: ["Bomb"],
     text: [],
+    flavor: "\"All my jutsu are 'art'..!\"",
     image: "s12-n-520",
   },
   {
@@ -1220,6 +1280,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     injured: { combat: 4, support: 3 },
     attributes: ["Manipulation"],
     text: [],
+    flavor: "\"That's not my business.\"",
     image: "s12-n-521",
   },
   // ── JUTSU ──
@@ -1237,6 +1298,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Jutsu card being used by a \"Male\" Ninja",
       "Effect: The user becomes \"Female\" during this turn. Additionally, negate the target and discard it.",
     ],
+    flavor: "\"This is amazing isn't it?\"",
     image: "s12-j-387",
   },
   {
@@ -1253,6 +1315,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every other \"Male\" Ninja in the user's Team and every \"Male\" Ninja in the Team Battling against the user's Team",
       "Effect: The user becomes \"Female\" during this turn. Additionally, give 1 Damage to the target.",
     ],
+    flavor: "\"Behold! My newly developed Pervy Ninjutsu!!\"",
     image: "s12-j-388",
   },
   {
@@ -1271,6 +1334,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "1) Change the target to injured status.",
       "2) The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"The ending of 'Make Out Tactics' is.....\"",
     image: "s12-j-389",
   },
   {
@@ -1287,6 +1351,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: User",
       "Effect: If you have both \"Make-Out Paradise\" and \"Make-Out Violence\" Mission cards in your Chakra area and the target's Team is Battling, regardless of the result of the Battle, the target's Team wins an Outstanding Victory during the Showdown of this turn instead.",
     ],
+    flavor: "\"After 3 years, they finally released this new book in the 'Make-Out' series!\"",
     image: "s12-j-390",
   },
   {
@@ -1303,6 +1368,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user with a printed Entrance cost of 2 or less",
       "Effect: Move the target to the back of the user's Team as a Back Ninja. After the Showdown, if the target still remains in play, return the target to its original Team in the original position.",
     ],
+    flavor: "\"Now, I remembered something...\"",
     image: "s12-j-391",
   },
   {
@@ -1318,6 +1384,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja in the user's Team and the Team Battling against it.",
       "Effect: The target gets -2/-2 during the turn.",
     ],
+    flavor: "\"Sasuke was here at that time...\"",
     image: "s12-j-392",
   },
   {
@@ -1334,6 +1401,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+3 during the turn.",
     ],
+    flavor: "\"Wha..what an extraordinary power she has!\"",
     image: "s12-j-393",
   },
   {
@@ -1350,6 +1418,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user with a printed Entrance cost of 3 or less",
       "Effect: Move the target to its original owner's hand.",
     ],
+    flavor: "\"There's no use hiding from me!\"",
     image: "s12-j-394",
   },
   {
@@ -1366,6 +1435,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja in the user's Team and the Team Battling against it",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Don't be so hasty...\"",
     image: "s12-j-395",
   },
   {
@@ -1382,6 +1452,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Jutsu card being used by a Ninja with a printed Entrance cost equal to or lower than the printed Entrance cost of the user",
       "Effect: Negate the target and discard it.",
     ],
+    flavor: "\"Wha..what?\"",
     image: "s12-j-396",
   },
   {
@@ -1398,6 +1469,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: User",
       "Effect: The user gets +4/+4 during this turn.",
     ],
+    flavor: "\"......\"",
     image: "s12-j-397",
   },
   {
@@ -1414,6 +1486,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: User",
       "Effect: The user gets +Y/+0 during this turn. Y = the value of X times 3.",
     ],
+    flavor: "\"Eight Inner Gates! The 6th Gate: Gate of Joy, open!!!\"",
     image: "s12-j-398",
   },
   {
@@ -1430,6 +1503,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to the bottom of its owner's Deck. If this Ninja's Team wins a Victory or an Outstanding Victory during this turn, you win 1 Battle Reward.",
     ],
+    flavor: "\"That fighting stance...!!\"",
     image: "s12-j-399",
   },
   {
@@ -1445,6 +1519,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\" + \"An Entrance cost of 3 or more\"",
       "Effect: Give 2 Damage to every Ninja with an Entrance cost of X or less Battling against the user. You can only discard Chakras with a \"Lightning\" Symbol for X.",
     ],
+    flavor: "\"I know that!\"",
     image: "s12-j-400",
   },
   {
@@ -1460,6 +1535,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Genjutsu\" Combat Attribute + \"Jonin\" or higher Rank",
       "Effect: The Power of every Ninja Battling against the user with a Turn cost of 4 or less becomes 0/0 during this turn.",
     ],
+    flavor: "\"These eyes are not the only ways to activate my genjutsu...\"",
     image: "s12-j-401",
   },
   {
@@ -1474,6 +1550,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Discard 1 in-play Mission card.",
     ],
+    flavor: "\"\"The guard of VIP from land of the Field...which is a B-rank mission...\"",
     image: "s12-j-402",
   },
   {
@@ -1490,6 +1567,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Effect texts of the target are negated during this turn. Additionally, you can discard 1 of your Chakras after this effect is applied. In that case, move this Jutsu card to your hand instead of your Chakra area.",
     ],
+    flavor: "\"What do you think of this?\"",
     image: "s12-j-403",
   },
   {
@@ -1506,6 +1584,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. This Jutsu card cannot be negated.",
     ],
+    flavor: "\"This one is pretty fast, you know.\"",
     image: "s12-j-404",
   },
   {
@@ -1522,6 +1601,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The name of the target is changed to \"Spider\" during this turn. Additionally, all of the target's Characteristics are negated during this turn.",
     ],
+    flavor: "\"Don't call it a 'thing'!!\"",
     image: "s12-j-405",
   },
   {
@@ -1538,6 +1618,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Each of your opponent's Ninjas with 1 or more Bomb coins",
       "Effect: Give 1 Damage to the target for each \"Bomb\" coin on them.",
     ],
+    flavor: "\"I changed my mind. Let's destroy this village...\"",
     image: "s12-j-406",
   },
   {
@@ -1554,6 +1635,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: User",
       "Effect: Remove X number of Ninja cards in your opponent's Discard Pile from game. In that case, the target gets +X/+X during this turn.",
     ],
+    flavor: "\"This one looks like a good one to have...\"",
     image: "s12-j-407",
   },
   {
@@ -1569,6 +1651,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Jonin\" or higher Rank",
       "Effect: Move any number of cards with a \"Water\" Symbol from your Discard Pile to your Chakra area. At the end of this turn, discard all the cards in your Chakra area.",
     ],
+    flavor: "\"Water Style: Water Shock Wave!!\"",
     image: "s12-j-408",
   },
   {
@@ -1585,6 +1668,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja Battling the user with an Entrance cost of 4 or less",
       "Effect: The Power of the target becomes 0/0.",
     ],
+    flavor: "\"My breath...\"",
     image: "s12-j-409",
   },
   {
@@ -1602,6 +1686,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "(2) The user of target (1)",
       "Effect: Negate target (1) and discard it. Additionally, give 1 Damage to target (2).",
     ],
+    flavor: "\"I am the only one who can use this 'Shark Skin', no one else.\"",
     image: "s12-j-410",
   },
   {
@@ -1617,6 +1702,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Akatsuki\"",
       "Effect: Place this card in any of your Battling Teams in any position. This card becomes a copy of the user but has no effect texts. It cannot receive any Damage and if it still remains in play at the end of this turn, it is moved to your Chakra area.",
     ],
+    flavor: "\"Let's use that jutsu...\"",
     image: "s12-j-411",
   },
   {
@@ -1633,6 +1719,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"Shoot, I couldn't get him.\"",
     image: "s12-j-412",
   },
   {
@@ -1648,6 +1735,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute + \"An Entrance cost of 3 or more\"",
       "Effect: Reveal the top 7 cards of your Deck and place any number of \"Puppet\" Ninja cards among them in the user's Team in any position. Then, shuffle your Deck.",
     ],
+    flavor: "\"I won't let you go!\"",
     image: "s12-j-413",
   },
   {
@@ -1664,6 +1752,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Each of your Ninjas",
       "Effect: The target cannot be affected by your opponent's Jutsu cards during this turn.",
     ],
+    flavor: "\"It looks like an egg shell to protect things inside.\"",
     image: "s12-j-414",
   },
   {
@@ -1680,6 +1769,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"This is not good.\"",
     image: "s12-j-415",
   },
   {
@@ -1696,6 +1786,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to your Battle Reward area face down.",
     ],
+    flavor: "\"Sand Coffin!!\"",
     image: "s12-j-416",
   },
   {
@@ -1711,6 +1802,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Remove any number of Ninja Blade coins of any kind from the target, if there is any. Additionally, you can heal the target.",
     ],
+    flavor: "\"I have detoxicated directly from his body.\"",
     image: "s12-j-417",
   },
   {
@@ -1727,6 +1819,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Place a Ninja Blade coin (symbolizing a \"Poison\" coin) on the target. At the end of this turn, give 1 Damage to each Ninja for each \"Poison\" coin on it. A Ninja with a Poison coin cannot be sent out to Battle.",
     ],
+    flavor: "\"Is that poisonous too?\"",
     image: "s12-j-418",
   },
   {
@@ -1743,6 +1836,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Jutsu card being used",
       "Effect: Negate the target and discard it. X = the Jutsu cost of the target. You can only discard cards with an \"Earth\" Symbol for X. (If the target's Jutsu cost is \"Lightning 1\", you must discard a total of 2 cards with an \"Earth\" Symbol for X.)",
     ],
+    flavor: "\"!!\"",
     image: "s12-j-419",
   },
   {
@@ -1758,6 +1852,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Medicine\" Combat Attribute",
       "Effect: Draw 3 cards. In that case, move 3 cards from your hand to the bottom of your Deck.",
     ],
+    flavor: "\"I can make three antidotes out of this.\"",
     image: "s12-j-420",
   },
   {
@@ -1774,6 +1869,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to its owner's hand.",
     ],
+    flavor: "\"8 Trigrams Air Palm!!\"",
     image: "s12-j-421",
   },
   {
@@ -1790,6 +1886,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user with lower Combat than the user",
       "Effect: Move the target to its owner's Chakra area.",
     ],
+    flavor: "\"Arhat Fist!!!\"",
     image: "s12-j-422",
   },
   {
@@ -1806,6 +1903,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Apply the following effect X times: Flip a Ninja Blade coin twice. If you get a heads at least once, give 1 Damage to the target.",
     ],
+    flavor: "\"Spider Bow: Fierce Rip!!\"",
     image: "s12-j-423",
   },
   {
@@ -1822,6 +1920,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin 3 times; If you get heads at least once, move the target to your Battle Reward area face down.",
     ],
+    flavor: "\"... but now the real battle begins.\"",
     image: "s12-j-424",
   },
   {
@@ -1838,6 +1937,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja Battling against the user with non-\"Genjutsu\" Combat Attribute",
       "Effect: The Power of the target becomes 0/0 during this turn. Additionally, its Mental Power becomes 0 during this turn.",
     ],
+    flavor: "\"Demon Flute: Chains of Fantasia!!\"",
     image: "s12-j-425",
   },
   {
@@ -1853,6 +1953,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute + \"An Entrance cost of 3 or more\"",
       "Effect: Place any number of \"Puppet\" Ninja cards in the user's Team in any position from your hand, Chakra area and/or your Discard Pile. At the end of this turn, if those \"Puppet\" Ninjas still remain in play, discard them.",
     ],
+    flavor: "\"Oh, and standing as close as you are to my friend the Black Ant...\"",
     image: "s12-j-426",
   },
   {
@@ -1869,6 +1970,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja in the user's Team",
       "Effect: Place 1 Ninja Blade coins (symbolizing a Insect Substitution coin) on the target. When the target would receive any Damage during this turn, you can remove 1 Insect Substitution coin from the target. In that case, negate that Damage. At the end of this turn, remove all Insect Substitution coins from the target.",
     ],
+    flavor: "\"Those bugs again...\"",
     image: "s12-j-427",
   },
   {
@@ -1885,6 +1987,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Give 1 Damage to the target. If the target's printed Entrance cost is 4 or less, give 1 additional Damage to the target.",
     ],
+    flavor: "\"Poison on the blade...\"",
     image: "s12-j-428",
   },
   {
@@ -1901,6 +2004,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin X times. Give 2 Damage to the target for each heads.",
     ],
+    flavor: "\"The Leaf Village's spirit is strong... You'd do well to remember.\"",
     image: "s12-j-429",
   },
   {
@@ -1920,6 +2024,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "2) The target's Mental Power becomes 0 during this turn.",
       "3) The Target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"The Leaf Village's Shadow Strangle Jutsu.\"",
     image: "s12-j-430",
   },
   {
@@ -1936,6 +2041,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 injured Ninja",
       "Effect: Discard the target.",
     ],
+    flavor: "\"You!\" \"Needles... Dipped in poison\"",
     image: "s12-j-431",
   },
   {
@@ -1951,6 +2057,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Anbu\"",
       "Effect: Place any number of \"Anbu\" Ninja cards in the user's Team in any position from your Chakra area and/or Discard Pile even if you already have 1 or more Ninjas with the same name in play.",
     ],
+    flavor: "\"!!\"",
     image: "s12-j-432",
   },
   {
@@ -1966,6 +2073,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Chunin\" or higher Rank + \"Taijutsu\" Combat Attribute",
       "Effect: If your opponent has 7 or more Battle rewards, discard 2 of them. If your opponent has 6 or less Battle rewards, discard 1 of them.",
     ],
+    flavor: "\"Ha!!\"",
     image: "s12-j-433",
   },
   {
@@ -1982,6 +2090,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 of your opponent's Stand-By Ninjas",
       "Effect: Move the target to the user's Team in any position. At the end of this turn, If the target still remains in play, move it to your opponent's Village.",
     ],
+    flavor: "\"Shhhhhhhhhhhhh......!!\"",
     image: "s12-j-434",
   },
   {
@@ -1997,6 +2106,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"The Third Hokage\" or \"The Fourth Hokage\"",
       "Effect: Look through your opponent's Deck, remove from game any number of cards among them, and your opponent wins up to the same amount of Battle Rewards. Then, your opponent shuffles their Deck.",
     ],
+    flavor: "\"Sealing jutsu: Reaper Death Seal!\"",
     image: "s12-j-435",
   },
   {
@@ -2012,6 +2122,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\"",
       "Effect: Multiply the user's printed Power value (both healthy and Injured status) by X during this turn.",
     ],
+    flavor: "\"Shadow Clone Jutsu!!\"",
     image: "s12-j-436",
   },
   {
@@ -2027,6 +2138,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Oil\" Combat Attribute",
       "Effect: Search for 1 \"Ninja Toad\" Ninja card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck. If your Turn Marker is equal to or higher than the Entrance cost of that \"Ninja Toad\" Ninja card, you can place it in the user's Team in any position ignoring the Entrance requirements.",
     ],
+    flavor: "\"Not you again! What is this?!\"",
     image: "s12-j-437",
   },
   {
@@ -2042,6 +2154,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Sand\" Combat Attribute",
       "Effect: Search for 1 \"Shukaku\" Ninja card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck. If your Turn Marker is equal to or higher than the Entrance cost of that \"Shukaku\" Ninja card, you can move the user to your Chakra. In that case, place that \"Shukaku\" Ninja card in the same Team as user was in any position ignoring the Entrance requirements.",
     ],
+    flavor: "\"I'm finally freeee!! ~ Here I come, baby!\"",
     image: "s12-j-438",
   },
   {
@@ -2058,6 +2171,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Negate the effect texts of the target during this turn. Additionally, move the target to the bottom of its original owner's Deck.",
     ],
+    flavor: "\"Water Style: Liquid Bullets!!\"",
     image: "s12-j-439",
   },
   {
@@ -2074,6 +2188,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Negate the effect texts of the target during this turn. Additionally, move the target to the bottom of its original owner's Deck.",
     ],
+    flavor: "\"Wind Style: Air Bullets!!\"",
     image: "s12-j-440",
   },
   {
@@ -2089,6 +2204,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja with a \"Fire\" symbol Battling against the user",
       "Effect: The target becomes a Stand-by Ninja.",
     ],
+    flavor: "\"Sealing Jutsu: Fire Seal!!\"",
     image: "s12-j-441",
   },
   {
@@ -2104,6 +2220,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against user",
       "Effect: The name of the target is changed to \"Anbu\" during this turn. Additionally, all of the target's Characteristics are negated during this turn.",
     ],
+    flavor: "\"Careful kid, you shouldn't walk around with that mask on.\"",
     image: "s12-j-442",
   },
   {
@@ -2120,6 +2237,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Change the target to injured status. Additionally, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"!!\"",
     image: "s12-j-443",
   },
   {
@@ -2136,6 +2254,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: The effect texts of the target are negated during this turn.",
     ],
+    flavor: "\"Byakugan!!\"",
     image: "s12-j-444",
   },
   {
@@ -2152,6 +2271,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Wolf Fang Over Fang!!\"",
     image: "s12-j-445",
   },
   {
@@ -2167,6 +2287,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Kimimaro\"",
       "Effect: Flip a Ninja Blade coin 3 times. Give 1 Damage to 1 of your opponent's Ninjas for each heads.",
     ],
+    flavor: "\"Larch Dance!!\"",
     image: "s12-j-446",
   },
   {
@@ -2182,6 +2303,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Requirements: \"Manipulation\" Combat Attribute",
       "Effect: Search for 1 \"Puppet\" Ninja card in your Deck and discard it. Then, shuffle your Deck. In that case, every Ninja in the user's Team, including the user, cannot be removed from play or receive Damage due to your opponent's effects during this turn.",
     ],
+    flavor: "\"This one's a puppet, tool?\"",
     image: "s12-j-447",
   },
   {
@@ -2198,6 +2320,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja with a printed Entrance cost of 4 or less",
       "Effect: Move the user and the target to the bottom of their owner's Deck.",
     ],
+    flavor: "\"My Black Ant puppet isn't designed to be used on offense. Its usual function, is trapping people.\"",
     image: "s12-j-448",
   },
   {
@@ -2212,6 +2335,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Discard 1 in-play Mission card or Client.",
     ],
+    flavor: "\"Fire Style: Fire Ball Jutsu!!\"",
     image: "s12-j-449",
   },
   // ── MISSION ──
@@ -2229,6 +2353,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Counter",
       "Effect: Put in play 1 Ninja card from your Chakra area with \"Ambush\".",
     ],
+    flavor: "\"Black cloak with red clouds pattern...\"",
     image: "s12-m-364",
   },
   {
@@ -2245,6 +2370,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: Each of your Ninjas with an Entrance cost of 5 or more cannot be Blocked by your opponent's Ninja(s) with an Entrance cost of 1 or less.",
     ],
+    flavor: "\"Lord Kazekage...the conference is about to start.\"",
     image: "s12-m-365",
   },
   {
@@ -2261,6 +2387,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Counter",
       "Effect: Discard 1 in-play Client card.",
     ],
+    flavor: "\"In the past few years, our village has become steady and gained diplomatic relations with other allied villages\"",
     image: "s12-m-366",
   },
   {
@@ -2277,6 +2404,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (3)",
       "Effect: During your Mission Phase, you can discard 2 of your Chakras. In that case, you can move 1 of your in-play Ninja cards to its original owner's hand.",
     ],
+    flavor: "\"I am just sending this envoy from the Sand off.\"",
     image: "s12-m-367",
   },
   {
@@ -2293,6 +2421,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Growth coins on your Ninjas are considered to be +2/+2 instead.",
     ],
+    flavor: "\"Hehe...A ninja must see through deception, right?\"",
     image: "s12-m-368",
   },
   {
@@ -2308,6 +2437,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: You can reveal 1 \"Nine-Tailed Fox Spirit\" Ninja card in your hand. In that case, randomly select and move 1 of your opponent's Battle Rewards to your hand.",
     ],
+    flavor: "\"They called people like Gaara a 'Jinchuriki'...\"",
     image: "s12-m-369",
   },
   {
@@ -2324,6 +2454,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: When this Mission card's effect is applied, put in play 1 Ninja card from your Chakra area. That Ninja can only be sent out to Block and is discarded when this Mission card is removed from play.",
     ],
+    flavor: "\"All-right, everyone! We need to get to the 'Sand' by the end of the day!\"",
     image: "s12-m-370",
   },
   {
@@ -2340,6 +2471,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: Each of your opponent's Ninjas with 1 or more \"Bomb\" coins",
       "Effect: If you have \"Deidara\" in play, give 1 Damage to the target.",
     ],
+    flavor: "\"HA!\"",
     image: "s12-m-371",
   },
   {
@@ -2355,6 +2487,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Search for 1 \"Akatsuki\" Ninja card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"OK...come over here.\"",
     image: "s12-m-372",
   },
   {
@@ -2371,6 +2504,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (4)",
       "Effect: At the beginning of the Battle Phase of your opponent's turn, you can organize your Teams.",
     ],
+    flavor: "\".....You are...\"",
     image: "s12-m-373",
   },
   {
@@ -2387,6 +2521,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (4)",
       "Effect: Each time your Team with 3 or more Ninjas is Defeated or Completely Defeated, draw 1 card.",
     ],
+    flavor: "\"I still remember what you did to my son, 'White Fang of the Leaf'!!\"",
     image: "s12-m-374",
   },
   {
@@ -2402,6 +2537,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Search for 1 Ninja card with a \"Manipulation\" Combat Attribute in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"You mean, you are the 'Sasori of the Red Sand' who is known as the master craftsman of the Puppet Unit?\"",
     image: "s12-m-375",
   },
   {
@@ -2419,6 +2555,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The target cannot be affected by Jutsu cards. If you attach this card to your opponent's Ninja, they control this card.",
     ],
+    flavor: "\"I was playing dead. Gya ha ha ha...\"",
     image: "s12-m-376",
   },
   {
@@ -2435,6 +2572,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Each time your \"Leaf\" Ninja becomes a user of a Jutsu card, that Ninja gets +2/+2 during that turn.",
     ],
+    flavor: "\"I will crush you all!!\"",
     image: "s12-m-377",
   },
   {
@@ -2451,6 +2589,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Each time your non-\"Leaf\" Ninja becomes a user of a Jutsu card, that Ninja gets +2/+2 during that turn.",
     ],
+    flavor: "\"Let the fight begin!!\"",
     image: "s12-m-378",
   },
   {
@@ -2467,6 +2606,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: \"Tayuya\" and \"Sakon\" are considered to be in your Village. However, you still can put in play \"Tayuya\" and \"Sakon\". While you have 4 \"The Four Sound Ninja\" Ninjas in play, each of them gets +1/+1.",
     ],
+    flavor: "\"And I'm Sakon of the West Gate.\" \"I'm Tayuya of the North Gate.\"",
     image: "s12-m-379",
   },
   {
@@ -2483,6 +2623,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: \"Jirobo\" and \"Kidomaru\" are considered to be in your Village. However, you still can put in play \"Jirobo\" and \"Kidomaru\". While you have 4 \"The Four Sound Ninja\" Ninjas in play, each of them gets +1/+1.",
     ],
+    flavor: "\"I am Jirobo of the South Gate.\" \"I'm Kidomaru of the East Gate.\"",
     image: "s12-m-380",
   },
   {
@@ -2499,6 +2640,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: During your Mission Phase, you can discard the top 3 cards of your Deck. In that case, draw 1 card.",
     ],
+    flavor: "\"GRRRAAAAAAHHHHHH!!!!!\"",
     image: "s12-m-381",
   },
   {
@@ -2514,6 +2656,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Put in play any number of \"Anbu\" Ninja cards from your Chakra area and/or Discard Pile even if you already have 1 or more Ninjas with the same name in play.",
     ],
+    flavor: "\"A steady flow of people have gone missing from the village. Genin, Chunin, even Anbu Black Ops. Many of them were last seen with you... And you've been acting rather strange lately...\"",
     image: "s12-m-382",
   },
   {
@@ -2530,6 +2673,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Each Time you put in play \"Jiraiya\" or \"The 4th Hokage\", you can search for the other Ninja card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"..........\"",
     image: "s12-m-383",
   },
   {
@@ -2546,6 +2690,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: At the beginning of the Battle Phase of your opponent's turn, you can look at the top 2 cards of your Deck and return them in any order you like.",
     ],
+    flavor: "\"..........\"",
     image: "s12-m-384",
   },
   {
@@ -2562,6 +2707,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: You can discard 1 Jutsu card with \"Requirements: 'Insect' Combat Attribute\" and/or \"Requirements: 'Shino Aburame'\" from your hand. In that case, search for 1 card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"She gives off a very faint scent. Nothing you could detect. But the male of the species can. He has a very strong sense of smell...\"",
     image: "s12-m-385",
   },
   {
@@ -2580,6 +2726,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "(2) 1 of your in-play Ninjas with an Entrance cost equal to or higher than target (1)'s",
       "Effect: Move both target (1) and (2) to their owner's Chakra area.",
     ],
+    flavor: "\"No, Gaara! You can't do this!\" \"Yashamaru...\"",
     image: "s12-m-386",
   },
   {
@@ -2595,6 +2742,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Each player counts the number of Ninja cards in their Discard Pile. If the number of Ninja cards in your Discard Pile exceeds your opponent's by 2 or more, move your Turn Marker up by 2.",
     ],
+    flavor: "\"Hayate... I will avenge your death... I promise.\"",
     image: "s12-m-387",
   },
   {
@@ -2611,6 +2759,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: At the beginning of your Mission Phase, you can move the top card of your Deck to your Chakra area.",
     ],
+    flavor: "\"I don't need much... Just give me... Gimme some Chakra!\"",
     image: "s12-m-388",
   },
   {
@@ -2627,6 +2776,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Each time a Ninja or Client which includes \"Uchiha\" in its name is put in play, discard the top 3 cards of your opponent's Deck.",
     ],
+    flavor: "\"..........\"",
     image: "s12-m-389",
   },
   {
@@ -2643,6 +2793,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: Each player selects 1 of their opponent's Ninjas. While this Mission card is in play, the selected Ninjas cannot be sent out to Battle.",
     ],
+    flavor: "\"Well Jiraiya, it looks like I win our little wager. Enjoy your time on the stump.\"",
     image: "s12-m-390",
   },
   {
@@ -2658,6 +2809,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Draw 3 cards and then discard 2 cards.",
     ],
+    flavor: "\"Take a good look, Shizune. The losing streak is over! Our luck is about to change!\"",
     image: "s12-m-391",
   },
   {
@@ -2674,6 +2826,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Teams of only 1 \"Genin\" or lower Rank Ninjas cannot be sent out to Battle by itself.",
     ],
+    flavor: "\"You are all far from the path to becoming excellent shinobi!\"",
     image: "s12-m-392",
   },
   {
@@ -2689,6 +2842,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Each player reveals their hand. Then, each player moves 1 Ninja card with the highest Entrance cost among them, if there is any, to their Chakra area.",
     ],
+    flavor: "\"...I've finally found you.\"",
     image: "s12-m-393",
   },
   {
@@ -2705,6 +2859,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: When this Mission card's effect is applied, your opponent can organize their Teams. Only Teams that include both \"Male\" and \"Female\" can be sent out to Attack.",
     ],
+    flavor: "\"Dan...\"",
     image: "s12-m-394",
   },
   {
@@ -2721,6 +2876,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: Players cannot put in play any Ninjas with an odd number Entrance cost. (0 is considered to be an even number.)",
     ],
+    flavor: "\"Hmmm... Lets see... I'm exactly fifty years old, so... Gimme Chou!\"",
     image: "s12-m-395",
   },
   {
@@ -2737,6 +2893,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (4)",
       "Effect: Each time 1 of your \"Male\" Ninjas is discarded due to the Showdown, you can place 1 Growth coin on 1 of your \"Female\" Ninjas at the end of that turn.",
     ],
+    flavor: "\"Dan...Take this... I want you to have it.\"",
     image: "s12-m-396",
   },
   {
@@ -2753,6 +2910,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: When this Mission card's effect is applied, draw 2 cards. While this card is in play, you cannot draw any cards during your Start Phase.",
     ],
+    flavor: "\"Ten orders of Short Ribs!\" \"Man, you could put me off food for good. Just watching you makes me sick.\"",
     image: "s12-m-397",
   },
   {
@@ -2769,6 +2927,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: At the beginning of your Mission Phase, you can move the top 2 cards of your Deck to your Chakra area.",
     ],
+    flavor: "\"I can use the time getting ready for what I've got in store for you.\"",
     image: "s12-m-398",
   },
   {
@@ -2785,6 +2944,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent (2)",
       "Effect: Each Time you put in play either \"Inoichi Yamanaka\", \"Shikaku Nara\" and/or \"Choza Akimichi\", you can search for 1 of those Ninja cards in your Deck, show it to your opponent, place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"The Original Ino-Shika-Cho Trio is back.\"",
     image: "s12-m-399",
   },
   {
@@ -2801,6 +2961,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Your \"Ninja Dog\" Ninjas get +1/+1.",
     ],
+    flavor: "\"Listen, Kiba...Play time's over. The time's come for you and Akamaru to get stronger, together.\"",
     image: "s12-m-400",
   },
   {
@@ -2816,6 +2977,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Draw 1 card. Then, heal 1 of your injured Ninjas, if there is any.",
     ],
+    flavor: "\"This is what I am talking about!!\"",
     image: "s12-m-401",
   },
   {
@@ -2832,6 +2994,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: When a Ninja becomes a Stand-By Ninja during the Exchange of Jutsu, give 1 Damage to that Ninja.",
     ],
+    flavor: "\"Wait!!!\"",
     image: "s12-m-402",
   },
   {
@@ -2848,6 +3011,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: When an \"Akatsuki\" Ninja is put in play, place 1 Growth coin it.",
     ],
+    flavor: "\"Not long ago it was at the height of its glory... Look at it now.\" \"Hm. You sound almost sad... Don't tell me you still have feelings for your old home.\"",
     image: "s12-m-403",
   },
   {
@@ -2864,6 +3028,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: Ninjas with 1 or more Hand costs get -2/-2.",
     ],
+    flavor: "\"Itachi is stronger than I am...That is why... I pulled myself out of that organization...\"",
     image: "s12-m-404",
   },
   {
@@ -2881,6 +3046,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target and change it to injured status. While this card is attached, the target cannot be healed or changed to healthy status. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"She slipped me a Mickey!\"",
     image: "s12-m-405",
   },
   {
@@ -2898,6 +3064,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 of your opponent's Ninjas",
       "Effect: You can put in play 1 Ninja card from your hand with the same Entrance cost as the target.",
     ],
+    flavor: "\"We've tied each other, at 48 wins. Today's face-off'll put one of us in the lead.\"",
     image: "s12-m-406",
   },
   {
@@ -2913,6 +3080,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: At the end of this turn, place 1 Growth coin on every Ninja in a Team that was Defeated or Completely Defeated this turn.",
     ],
+    flavor: "\"Alright, I still have a little more left. Upsy-daisy...\" \"I am coming too!\"",
     image: "s12-m-407",
   },
   {
@@ -2929,6 +3097,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Counter Permanent",
       "Effect: While this Mission card is in play, your in-play \"The Four Sound Ninja\" Ninjas and \"Kimimaro\" get \"Jonin\".",
     ],
+    flavor: "\"All right then, shall we?\"",
     image: "s12-m-408",
   },
   {
@@ -2945,6 +3114,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Target: 1 of your in-play Ninjas",
       "Effect: Move the target to your hand.",
     ],
+    flavor: "\"Stay with me Akamaru. Let's move out!\"",
     image: "s12-m-409",
   },
   {
@@ -2961,6 +3131,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
       "Permanent",
       "Effect: The Head Ninja of a Team that is Defeated in the Showdown receives 1 additional Damage.",
     ],
+    flavor: "\"I'm not the one who killed Shisui... But I apologize for the words I have spoken... I'm truly sorry.\"",
     image: "s12-m-410",
   },
   {
@@ -2976,6 +3147,7 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [
       "Effect: Search for 1 Ninja card in your deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck. At the end of the turn, if you didn't put in play a Ninja card with the same name as the Ninja card that you searched for this turn, discard all the cards in your hand.",
     ],
+    flavor: "\"Well, you know... I asked you to take care of those two earlier...But I guess I got a little worried.\"",
     image: "s12-m-411",
   },
 ];

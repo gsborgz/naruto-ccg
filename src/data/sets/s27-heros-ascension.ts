@@ -26,6 +26,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "When this Ninja Attacks, it gets +2/+0 during this turn.",
     ],
+    flavor: "\"Ugh...! Shut your mouth and keep your eyes open!\"",
     image: "s27-n-1553",
   },
   {
@@ -47,6 +48,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "Valid: The Head Ninja of this Ninja's Team cannot be the target of your opponent's Ninja effects.",
     ],
+    flavor: "\"Are you... insane?!\"",
     image: "s27-n-1554",
   },
   {
@@ -88,6 +90,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "When this Ninja is put in play, you may remove 1 coin from each Permanent Mission your opponent controls.",
       "Valid: All of your opponent's Mission cards get +1 Entrance cost.",
     ],
+    flavor: "\"Cripes... Train your guys properly!\"",
     image: "s27-n-1556",
   },
   {
@@ -108,6 +111,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[FORMIDABLE OPPONENT]",
       "This Ninja gets +1/+0 for each Earth Chakra you have.",
     ],
+    flavor: "\"Now I get it.\"",
     image: "s27-n-1557",
   },
   {
@@ -128,6 +132,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[TACTICAL PARAGON]",
       "While this Ninja is opposed, if it is Blocking, the Head Ninja of the Team opposing this Ninja uses its Support instead of its Combat during the Showdown.",
     ],
+    flavor: "\"Just one word too far...\"",
     image: "s27-n-1558",
   },
   {
@@ -149,6 +154,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "Valid: When this Ninja Blocks, place a Growth coin on it.",
     ],
+    flavor: "\"I'm scared.\"",
     image: "s27-n-1559",
   },
   {
@@ -169,6 +175,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[SPLIT PERSONALITY]",
       "Valid: When this Ninja is discarded due to the Showdown, you may place a White Zetsu coin and a Black Zetsu coin in play with the following: \"[Power: 1/1 (Healthy and Injured)]\".",
     ],
+    flavor: "\"No...be patient.\"",
     image: "s27-n-1560",
   },
   {
@@ -190,6 +197,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Revitalize (When this card would be moved to the Discard Pile, move it to the bottom of your Deck instead.)",
       "When this Ninja is put in play, you can discard target non-\"Leaf\" Ninja with an Entrance cost of 2 or less.",
     ],
+    flavor: "\"I wouldn't worry about your body anymore.\"",
     image: "s27-n-1561",
   },
   {
@@ -210,6 +218,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[GENIUS OF THE HYUGA]",
       "Valid: When this Ninja would receive any Damage, you may move up to that same amount of Earth cards from your Discard Pile to the bottom of your Deck. In that case, reduce that Damage by the number of cards you moved due to this effect instead.",
     ],
+    flavor: "\"There are too many!\"",
     image: "s27-n-1562",
   },
   {
@@ -231,6 +240,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Revitalize (When this card would be moved to the Discard Pile, move it to the bottom of your Deck instead.)",
       "When this Ninja receives Damage due to the Showdown, you can give 1 Damage to target opposing Ninja.",
     ],
+    flavor: "\"Now this is my greatest masterpiece!!\"",
     image: "s27-n-1563",
   },
   {
@@ -291,6 +301,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[FRIENDLY BANTER]",
       "Valid: While this Ninja is opposed, this Ninja gets +X/+0, where X = the total combined Mental Power of the opposing Team.",
     ],
+    flavor: "\"May I join you?\"",
     image: "s27-n-1566",
   },
   {
@@ -332,6 +343,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Desperation (If your opponent has 5 or more Battle Rewards, Activated Abilities of this card can be activated up to twice per turn.)",
       "[Valid | Attacker | EOJ] (0): This Ninja gets +1/+0 during this turn.",
     ],
+    flavor: "\"I'll defeat you and become truly free!\"",
     image: "s27-n-1568",
   },
   {
@@ -352,6 +364,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[THE BEST TRAIL]",
       "This Ninja cannot be Blocked by a Team with 1 or more \"Genin\" Ninjas in it.",
     ],
+    flavor: "\"Feh! Give me a break! Drop the act!\"",
     image: "s27-n-1569",
   },
   {
@@ -373,6 +386,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Desperation (If your opponent has 5 or more Battle Rewards, Activated Abilities of this card can be activated up to twice per turn.)",
       "[EOJ] Discard 1 of your Battle Rewards: This Ninja gets +2/+0 during this turn.",
     ],
+    flavor: "\"I don't care...\"",
     image: "s27-n-1570",
   },
   {
@@ -394,6 +408,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Desperation",
       "[Attacker | EOJ] (Fire|1): Injure this Ninja and target opposing Ninja. If this effect was used twice this turn, move this Ninja to your hand.",
     ],
+    flavor: "\"The key is in maintaining self-control!\"",
     image: "s27-n-1571",
   },
   {
@@ -414,6 +429,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[A FOREBODING FEELING]",
       "When 1 of your \"Akatsuki\" Ninjas would be discarded due to an effect, you can move it to your hand instead.",
     ],
+    flavor: "\"Right now, we retreat.\"",
     image: "s27-n-1572",
   },
   {
@@ -434,6 +450,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[EVERLASTING LIFE]",
       "When this Ninja card is used to pay the hand cost of an \"Akatsuki\" Ninja card, you may put this Ninja card in play.",
     ],
+    flavor: "\"...What a joke...\"",
     image: "s27-n-1573",
   },
   {
@@ -455,6 +472,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Inherit",
       "Jutsu cards used by this Ninja may have their costs paid by discarding cards from the top of your Deck instead (Any specific symbol counts as 1 for this effect).",
     ],
+    flavor: "\"I'm not holding back!\"",
     image: "s27-n-1574",
   },
   {
@@ -475,6 +493,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[HEIR OF THE FANG]",
       "When this Ninja is put in play, you can reveal the top 3 cards of your Deck. In that case, move any Jutsu cards revealed this way that this Ninja could use to your hand, then move the rest of the revealed cards to your Discard Pile.",
     ],
+    flavor: "\"I'll detain them...\"",
     image: "s27-n-1575",
   },
   {
@@ -496,6 +515,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Inherit (Valid: When this Ninja would be discarded, remove it from the game instead. In that case, target Ninja you control gets this Ninja card's effect text (except Inherit) as long as that Ninja remains in play.)",
       "When this Ninja Attacks by itself, it cannot be Blocked by a Ninja that does not have this Ninja's Combat Attribute.",
     ],
+    flavor: "\"This is my task.\"",
     image: "s27-n-1576",
   },
   {
@@ -516,6 +536,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[CONTINUATION OF THE BLOODLINE]",
       "At the start of your turn, you can move 1 Ninja card with \"Uchiha\" in its name from your Discard Pile to your hand.",
     ],
+    flavor: "\"You be wary...\"",
     image: "s27-n-1577",
   },
   {
@@ -557,6 +578,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[HEROIC IDEALS]",
       "Valid: While this Ninja is opposed by a Ninja with an Entrance cost of 2 or more, it gets +2/+0.",
     ],
+    flavor: "\"Remember me!!!\"",
     image: "s27-n-1579",
   },
   {
@@ -578,6 +600,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Flashpoint ([Attacker | Mission] (0): Remove this Ninja from the game. At the start of your next turn, move this Ninja card to your Village.)",
       "Valid: When this Ninja is put in play except by deployment, if it Attacks, it can only be opposed by target Ninja during this turn.",
     ],
+    flavor: "\"Whaaat!\"",
     image: "s27-n-1580",
   },
   {
@@ -619,6 +642,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[POWER SURGE]",
       "[Valid | EOJ] (Lightning): This Ninja gets +2/+0 during this turn. Give this Ninja 1 Damage at the end of this turn.",
     ],
+    flavor: "\"Hee-yah!\"",
     image: "s27-n-1582",
   },
   {
@@ -640,6 +664,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Flashpoint",
       "When this Ninja is removed from play, you can put in play 1 \"Tailed Beast\" Ninja card from your hand. In that case, remove that \"Tailed Beast\" Ninja from the game at the end of this turn.",
     ],
+    flavor: "\"Naruto...\"",
     image: "s27-n-1583",
   },
   {
@@ -661,6 +686,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "When you put in play an other \"Leaf\" Ninja, you may place a +1/+1 coin on that Ninja.",
       "[EOJ] Remove 3 +1/+1 coins from Ninjas your control: Draw 1 card.",
     ],
+    flavor: "\"Why didn't I get to go with Kotetsu!?\"",
     image: "s27-n-1584",
   },
   {
@@ -682,6 +708,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "When this Ninja is put in play, if you have 1 or more \"Tailed Beast\" Ninja cards in your Chakra area, you can injure this Ninja.",
       "Valid: All your \"Tailed Beast\" Ninja cards get -1 Hand cost.",
     ],
+    flavor: "\"Don't mess with me!\"",
     image: "s27-n-1585",
   },
   {
@@ -703,6 +730,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Flashpoint",
       "When this Ninja is put in play except by deployment, you can search your Deck for 1 Jutsu card whose name includes \"Rasengan\", reveal it, then shuffle your Deck. Place the searched card on top of your Deck afterwards.",
     ],
+    flavor: "\"I wanted revenge.\"",
     image: "s27-n-1586",
   },
   {
@@ -724,6 +752,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Flashpoint",
       "When this Ninja is put in play, you can reveal the top 3 cards of your Deck and remove 1 Jutsu card revealed this way from the game, and discard the rest. This Ninja can use that Jutsu card, regardless of its Requirements during this turn. Discard any other cards revealed due to this effect.",
     ],
+    flavor: "\"Just try it.\"",
     image: "s27-n-1587",
   },
   {
@@ -744,6 +773,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[SYMBIOTIC RELATIONSHIP]",
       "When this Ninja is Blocked, you can win 1 Battle Reward. In that case, this Ninja's Team cannot deal Damage due to the Showdown during this turn.",
     ],
+    flavor: "\"Wheeeeeee!!!!\"",
     image: "s27-n-1588",
   },
   {
@@ -806,6 +836,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[GREAT EQUALIZER]",
       "When this Ninja is put in play, you can remove target Ninja from the game. In that case, at the end of this turn, put that Ninja back into play, then injure it.",
     ],
+    flavor: "\"Comin' right up!!\"",
     image: "s27-n-1591",
   },
   {
@@ -827,6 +858,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Burst | Desperation",
       "[EOJ] (1): If the top card of your Deck is a revealed Jutsu card, move it to your hand. Then, this Ninja gets +1/+0 during this turn.",
     ],
+    flavor: "\"They're mine.\"",
     image: "s27-n-1592",
   },
   {
@@ -847,6 +879,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[SELF PRESERVATION]",
       "Valid: At the end of your turn, if this Ninja is injured, heal it.",
     ],
+    flavor: "\"What are you doing...?!\"",
     image: "s27-n-1593",
   },
   {
@@ -868,6 +901,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Desperation",
       "[EOJ] (Water): The next time this Ninja receives Damage during this turn, reduce that Damage by 1.",
     ],
+    flavor: "\"He's not the type to listen to words...\"",
     image: "s27-n-1594",
   },
   {
@@ -889,6 +923,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Burst | Desperation",
       "[EOJ] (1): If the top card of your Deck is a revealed Mission card, move it to your hand. Then, this Ninja gets +2/+0 during this turn.",
     ],
+    flavor: "\"Hmm...\"",
     image: "s27-n-1595",
   },
   {
@@ -909,6 +944,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[MIRROR DOUBLE]",
       "[EOJ] (Water|Water): Place a copy of target Ninja you control other than this Ninja in your Village. That copy has Non-Unique. At the end of this turn, remove the copy from the game.",
     ],
+    flavor: "\"I've got to make it to the next mirror!\"",
     image: "s27-n-1596",
   },
   {
@@ -929,6 +965,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[SNAPWAVE]",
       "When this Ninja is put in play, you can move target Ninja with an Entrance cost less than X to its owner's hand. X = the number of \"Mist\" Ninjas you control.",
     ],
+    flavor: "\"Humph! No thanks!\"",
     image: "s27-n-1597",
   },
   {
@@ -950,6 +987,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Burst",
       "[EOJ] (Water): If the top card of your Deck is a revealed Ninja card, place it in this Ninja's Team in any position. At the end of this turn, discard that Ninja.",
     ],
+    flavor: "\"I'll fight you any day.\"",
     image: "s27-n-1598",
   },
   {
@@ -971,6 +1009,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Desperation",
       "[Valid | EOJ] (0): This Ninja gets +4/+0 during this turn. At the end of this turn, move this Ninja to your Chakra area.",
     ],
+    flavor: "\"Show me what you've got!\"",
     image: "s27-n-1599",
   },
   {
@@ -991,6 +1030,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[CHAKRA CONTROL]",
       "When this Ninja uses a Jutsu, you can discard X of your opponent's Chakra. X = the total cost of the Jutsu (Specific Symbols count as 1 for the purpose of total cost).",
     ],
+    flavor: "\"I apologize, but you must feed Samehada.\"",
     image: "s27-n-1600",
   },
   {
@@ -1011,6 +1051,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[BATTLEFIELD OF BONE]",
       "When a player deploys a Ninja, they may pay (2). If they do not, injure that Ninja.",
     ],
+    flavor: "\"I'm left with no choice...\"",
     image: "s27-n-1601",
   },
   {
@@ -1073,6 +1114,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Revitalize",
       "When any of your Ninjas with Revitalize become the target of a Jutsu, you can draw 1 card.",
     ],
+    flavor: "\"I'll handle this.\"",
     image: "s27-n-1604",
   },
   {
@@ -1095,6 +1137,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "When this Ninja is put in play, if you control Sasuke Uchiha, draw 1 card.",
       "While you control Naruto Uzumaki, this Ninja gets +2/+1.",
     ],
+    flavor: "\"Not again!\"",
     image: "s27-n-1605",
   },
   {
@@ -1116,6 +1159,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "When you put in play a \"Puppet\" Ninja, you can place a +1/+1 coin on that Ninja.",
       "[EOJ] (1): Remove a +1/+1 coin from a \"Puppet\" Ninja you control to injure target Ninja opposing that Ninja who has an Entrance cost equal to that \"Puppet\" Ninja's.",
     ],
+    flavor: "\"Oh, look. Another little brat.\"",
     image: "s27-n-1606",
   },
   {
@@ -1136,6 +1180,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[FURIOUS GUST]",
       "When this Ninja is put in play, you can discard target Permanent Mission.",
     ],
+    flavor: "\"Hmm...pretty cool!\"",
     image: "s27-n-1607",
   },
   {
@@ -1156,6 +1201,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[EMERGENCY SITUATION]",
       "At the end of your turn, if you have 1 or less Chakra, you can heal target Ninja.",
     ],
+    flavor: "\"Break it up.\"",
     image: "s27-n-1608",
   },
   {
@@ -1197,6 +1243,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[BOLD ATTITUDE]",
       "When this Ninja Attacks by itself, it may only be opposed by a Team with 1 Ninja in it.",
     ],
+    flavor: "\"Not too bad.\"",
     image: "s27-n-1610",
   },
   {
@@ -1259,6 +1306,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Revitalize",
       "Valid: When one of your Ninjas would be discarded due to Damage, you can discard this Ninja instead.",
     ],
+    flavor: "\"You can't move anymore...\"",
     image: "s27-n-1613",
   },
   {
@@ -1279,6 +1327,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[MEDICAL EXPERT]",
       "[Blocker | Mission] (Wind): Heal target Ninja. That Ninja cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"This is bad...\"",
     image: "s27-n-1614",
   },
   {
@@ -1299,6 +1348,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[CONTROLLING THE SENSES]",
       "At the start of the opponent's turn, you can name Ninja, Jutsu, or Mission. In that case, the opponent must reveal a card of the named type from their hand. If they do not, the opponent injures 1 Ninja they control.",
     ],
+    flavor: "\"Now what?\"",
     image: "s27-n-1615",
   },
   {
@@ -1339,6 +1389,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[STITCH ARTS]",
       "At the start of your turn, you can remove 1 Ninja card in your Discard Pile from the game. In that case, this Ninja gains that Ninja's effect text during this turn.",
     ],
+    flavor: "\"Not so fast...\"",
     image: "s27-n-1617",
   },
   {
@@ -1402,6 +1453,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[THE ORIGINAL SAGE]",
       "Valid: While you control 2 or more other Ninjas with Senjutsu, this Ninja gets +3/+3 and gains Senjutsu and \"Ninja Toad\".",
     ],
+    flavor: "\"Of course, I'm not really human anymore, either!!\"",
     image: "s27-n-1620",
   },
   // ── JUTSU ──
@@ -1420,6 +1472,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Effect: Discard the target.",
       "Expert [Senjutsu]: Discard 1 Ninja.",
     ],
+    flavor: "\"My new jutsu will finish this in one try!!\"",
     image: "s27-j-1000",
   },
   {
@@ -1436,6 +1489,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Randomly remove a card in your opponent's hand from the game. If that card's Entrance cost is greater than or equal to the target's, discard the target. Otherwise, injure the target. At the end of this turn, move the card that was removed from the game to its owner's hand.",
     ],
+    flavor: "\"Do not make a move... or this woman will die.\"",
     image: "s27-j-1001",
   },
   {
@@ -1451,6 +1505,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Requirements: \"Mind\" + Entrance cost of 3 or more",
       "Effect: If you haven't deployed a Ninja this turn, search your opponent's Deck for a Ninja card an Entrance cost equal to or less than the user's and move it to the user's Team in any position. That Ninja's effect text is negated during this turn. You now control that Ninja.",
     ],
+    flavor: "\"You need to watch my body.\"",
     image: "s27-j-972",
   },
   {
@@ -1465,6 +1520,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Name a Symbol. The user cannot become the target of Jutsu cards with the named Symbol during this turn.",
     ],
+    flavor: "\"Augh... I should have known...\"",
     image: "s27-j-973",
   },
   {
@@ -1480,6 +1536,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: Every Ninja opposing the user",
       "Effect: The target becomes a Stand-By Ninja if its Mental Power is less than the user's.",
     ],
+    flavor: "\"Waah! I'm a victim, too!!\"",
     image: "s27-j-974",
   },
   {
@@ -1495,6 +1552,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 \"Animal\" Ninja",
       "Effect: Discard the target, then heal the user.",
     ],
+    flavor: "\"N-no, absolutely not!!\"",
     image: "s27-j-975",
   },
   {
@@ -1528,6 +1586,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "1) The target becomes a 0/0 Ninja during this turn.",
       "2) Discard 1 card and your opponent draws 1 card.",
     ],
+    flavor: "\"Don't you care what happens to your brat?\"",
     image: "s27-j-977",
   },
   {
@@ -1544,6 +1603,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Remove the target and the user from the game. Then, move the user to 1 of your Teams on the Battlefield in any position. Move the target to its original owner's Village, then injure it.",
     ],
+    flavor: "\"There is no hope for you!!\"",
     image: "s27-j-978",
   },
   {
@@ -1559,6 +1619,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Requirements: The 4th Hokage or The 3rd Hokage",
       "Effect: Remove any number of Ninjas opposing the user from the game. In that case, your opponent wins 1 Battle Reward for each Ninja removed this way. Then, remove the user from the game.",
     ],
+    flavor: "\"Let's believe in this child.\"",
     image: "s27-j-979",
   },
   {
@@ -1588,6 +1649,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: The user may use any Jutsu card during this turn, regardless of their Requirements.",
     ],
+    flavor: "\"Our roles could have been reversed.\"",
     image: "s27-j-981",
   },
   {
@@ -1603,6 +1665,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Jutsu with 1 or less Specific Symbols in its cost",
       "Effect: If the target's total cost is 2 or less, negate the target (specific Symbols count as 1 for the purpose of total cost).",
     ],
+    flavor: "\"A pencil?!!\"",
     image: "s27-j-982",
   },
   {
@@ -1620,6 +1683,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Move the target to your Battle Reward area, face down. If Killer Bee and A are in the user's Team, discard each other Ninja in the target's Team.",
     ],
+    flavor: "\"DOUBLE LARIAT!!!\"",
     image: "s27-j-983",
   },
   {
@@ -1634,6 +1698,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: The user gets +X/+X during this turn. Then, if X is 3 or less, the user gets the following effect text during this turn: \"Valid: When this Ninja wins any Victory, you win 1 Battle Reward\".",
     ],
+    flavor: "\"Can't ya see my mouth is full?\"",
     image: "s27-j-984",
   },
   {
@@ -1649,6 +1714,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Effect: Move the user to 1 of your Teams on the Battlefield in any position, then the user gets +2/+2 during this turn.",
       "Expert [The 4th Hokage]: Give 1 Damage to 1 Ninja opposing the user.",
     ],
+    flavor: "\"I won't let you destroy this spot!\"",
     image: "s27-j-985",
   },
   {
@@ -1680,6 +1746,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Requirements: Kisame Hoshigaki",
       "Effect: Attach this Jutsu to the user. While this Jutsu is attached, the Power of every non-Water Ninja in the user's Team and opposing the user is 0/0 and cannot be altered or changed.",
     ],
+    flavor: "\"You cannot escape suiton.\"",
     image: "s27-j-987",
   },
   {
@@ -1696,6 +1763,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Reveal the top 3 cards of your Deck. If the total combined Entrance cost of the revealed cards is greater than the target's, discard the target. Move the revealed cards to the top of your Deck in any order afterwards.",
     ],
+    flavor: "\"Yes... That's right.\"",
     image: "s27-j-988",
   },
   {
@@ -1712,6 +1780,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Discard the target. In that case, put in play 1 Ninja card from any player's Discard Pile in the user's Team in any position.",
     ],
+    flavor: "Summoning Jutsu: Reanimation.",
     image: "s27-j-989",
   },
   {
@@ -1727,6 +1796,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: The target's Power is 0/0 and its effect text is negated during this turn.",
     ],
+    flavor: "\"This heavy water...\"",
     image: "s27-j-990",
   },
   {
@@ -1741,6 +1811,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Select a number. Discard all player's Chakra whose Entrance cost equals the selected number.",
     ],
+    flavor: "\"It just won't be able to devour this much chakra...\"",
     image: "s27-j-991",
   },
   {
@@ -1755,6 +1826,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: The user cannot be the target of Jutsu cards during this turn.",
     ],
+    flavor: "\"Oh well...looks like they caught on.\"",
     image: "s27-j-992",
   },
   {
@@ -1785,6 +1857,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Effect: Heal the target. In that case, if the target is on the Battlefield, it becomes a Stand-By Ninja.",
       "Expert [\"Medical\"]: Draw 1 card.",
     ],
+    flavor: "\"Hurry up and stop the bleeding!\"",
     image: "s27-j-994",
   },
   {
@@ -1800,6 +1873,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja you control",
       "Effect: The user gets +3/+0 during this turn. At the end of the turn, place a -1/-1 coin on the target.",
     ],
+    flavor: "\"...?!!\"",
     image: "s27-j-995",
   },
   {
@@ -1817,6 +1891,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Expert [Kisame Hoshigaki]: Discard 2 of your opponent's Chakra.",
       "Expert [Killer Bee]: Move up to 2 cards from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Pleased to meet you, after the fact.\"",
     image: "s27-j-996",
   },
   {
@@ -1831,6 +1906,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: The user gets +2/+2 during this turn. Then, if the user is a \"Genin\" Ninja, it gets an additional +2/+2 during this turn.",
     ],
+    flavor: "\"Fight me, Kakashi!\"",
     image: "s27-j-997",
   },
   {
@@ -1849,6 +1925,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Odd: X Ninja on the Battlefield become Stand-By Ninjas.",
       "Even: Move X cards from the top and bottom of your Deck to your hand.",
     ],
+    flavor: "\"Al-mighty Push!\"",
     image: "s27-j-998",
   },
   {
@@ -1897,6 +1974,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja you control",
       "Effect: Look at the top X cards of your Deck, then move 1 of those cards to your hand. Return the rest and shuffle your Deck. X = the target's Entrance cost.",
     ],
+    flavor: "\"It gets lonely when you're not around.\"",
     image: "s27-m-944",
   },
   {
@@ -1930,6 +2008,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "1) Your opponent randomly discards 1 card.",
       "2) You draw 2 cards.",
     ],
+    flavor: "\"How about this much per bunch?\"",
     image: "s27-m-946",
   },
   {
@@ -1963,6 +2042,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja",
       "Effect: At the start of the controller of the target's turn, that player can discard 2 Chakra. In that case, the target gets +3/+0 during this turn. Otherwise, the target cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"At last I understand. I'm an avenger.\"",
     image: "s27-m-948",
   },
   {
@@ -1980,6 +2060,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja your opponent controls",
       "Effect: Remove X Ninja cards in your Discard Pile from the game, where X = the target's Entrance cost. In that case, discard the target.",
     ],
+    flavor: "\"I'm traveling a path the rest of you can't follow.\"",
     image: "s27-m-949",
   },
   {
@@ -1997,6 +2078,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Mission",
       "Effect: Negate and discard the target. In that case, if you control Sasuke Uchiha with an Entrance cost of 4 or more, injure up to 2 of your opponent's Ninjas.",
     ],
+    flavor: "\"You can replace her. This will work out just fine.\"",
     image: "s27-m-950",
   },
   {
@@ -2015,6 +2097,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Effect: When this Mission is put in play, put in play the target.",
       "Effect: When this Mission is removed from play, discard the target if it is still in play.",
     ],
+    flavor: "\"How you've fallen, Sasuke.\"",
     image: "s27-m-951",
   },
   {
@@ -2045,6 +2128,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Shuffle your Discard Pile, then place it on top of your Deck.",
     ],
+    flavor: "\"To me, Pervy Sage was irreplaceable. He was family.\"",
     image: "s27-m-953",
   },
   {
@@ -2061,6 +2145,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "You may discard 2 Lightning cards instead of meeting this card's Entrance cost.",
       "Effect: Injure every Ninja.",
     ],
+    flavor: "\"Raar!!\"",
     image: "s27-m-954",
   },
   {
@@ -2078,6 +2163,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: (1) 1 Ninja you control (2) 1 Ninja you control besides target (1)",
       "Effect: As long as target (1) remains in play, target (2) cannot be removed from play due to Damage.",
     ],
+    flavor: "\"...I can still... do it...\"",
     image: "s27-m-955",
   },
   {
@@ -2095,6 +2181,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Effect: When this Mission is put in play, draw 1 card.",
       "Effect: You may charge Chakra during the Exchange of Jutsu.",
     ],
+    flavor: "\"It's no use getting hesitant.\"",
     image: "s27-m-956",
   },
   {
@@ -2111,6 +2198,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: (1) 1 Ninja you control (2) 1 Ninja your opponent controls with the same name as target (1).",
       "Effect: Discard both targets.",
     ],
+    flavor: "\"Weren't they all just completely disgusting...?\"",
     image: "s27-m-957",
   },
   {
@@ -2127,6 +2215,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Permanent (3)",
       "Effect: At the start of each player's turn, that player discards X Chakra. X = the number of coins on this Mission.",
     ],
+    flavor: "\"Here I come!\"",
     image: "s27-m-958",
   },
   {
@@ -2144,6 +2233,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja",
       "Effect: At the start of your turn, the player with the most Chakra gains control of the target.",
     ],
+    flavor: "\"What's the matter?\"",
     image: "s27-m-959",
   },
   {
@@ -2159,6 +2249,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Both player's discard their hand, then move up to 2 cards from their Discard Pile to their hand.",
     ],
+    flavor: "\"Time to put my plan into action.\"",
     image: "s27-m-960",
   },
   {
@@ -2175,6 +2266,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "While your opponent has 8 or more Chakra, this Mission card gets -2 Entrance cost and -1 Hand cost.",
       "Effect: Discard every player's Chakra.",
     ],
+    flavor: "\"Let's start with greetings...\"",
     image: "s27-m-961",
   },
   {
@@ -2190,6 +2282,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Your opponent gives 1 Damage to 1 Ninja they control, discards 1 card, and discards 2 of their Chakra.",
     ],
+    flavor: "\"This performance is dedicated to you.\"",
     image: "s27-m-962",
   },
   {
@@ -2205,6 +2298,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Select a number and your opponent reveals their hand. Move all cards with Entrance cost equal to the selected number to the opponent's Chakra area.",
     ],
+    flavor: "\"Th This is...\"",
     image: "s27-m-963",
   },
   {
@@ -2220,6 +2314,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Select a Mission card in your Discard Pile and apply its effect (choose target's before applying the effect if needed). Remove this Mission from the game afterwards.",
     ],
+    flavor: "\"I'll make it happen somehow, I promise you!\"",
     image: "s27-m-964",
   },
   {
@@ -2237,6 +2332,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove the target from the game. At the end of this turn, move the target to its owner's Village.",
     ],
+    flavor: "\"They won't be getting up for a while.\"",
     image: "s27-m-965",
   },
   {
@@ -2254,6 +2350,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Target: 1 Ninja you control",
       "Effect: Remove 1 Ninja card in your Discard Pile from the game, then select a Characteristic on the removed Ninja card. The target gains the selected Characteristic.",
     ],
+    flavor: "\"I was dangerously close to becoming the Hokage.\"",
     image: "s27-m-966",
   },
   {
@@ -2284,6 +2381,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Draw 1 card. Then, your opponent can draw 1 card. If they do, draw 1 card.",
     ],
+    flavor: "\"Energy Ginseng!\"",
     image: "s27-m-968",
   },
   {
@@ -2299,6 +2397,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Each player chooses a Ninja they control. Then, each player simultaneously exchanges control of those Ninjas.",
     ],
+    flavor: "\"The villagers shunned Master Bee over and over again...\"",
     image: "s27-m-969",
   },
   {
@@ -2314,6 +2413,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Reveal the top 5 cards of your Deck. You may move 1 revealed Ninja card to your hand. Then, return the rest to the top of your Deck and shuffle it.",
     ],
+    flavor: "\"May I suggest you decide now, noble sirs...?\"",
     image: "s27-m-970",
   },
   {
@@ -2347,6 +2447,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Effect: When your Turn Marker is moved, you may draw 1 card.",
       "[Mission] Move this Mission to your Chakra area: Ignore Sacrifice for the next Void Ninja you deploy during this turn.",
     ],
+    flavor: "\"How would you confront this hatred, in order to create peace?\"",
     image: "s27-m-972",
   },
   {
@@ -2362,6 +2463,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: Search your Deck for a Naruto Uzumaki Ninja card, reveal it, then move it to your hand. Then, shuffle your Deck. If you control a Ninja with Senjutsu, draw 1 card.",
     ],
+    flavor: "\"Yer trainin' starts now.\"",
     image: "s27-m-973",
   },
   {
@@ -2378,6 +2480,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "Permanent (When you play this Mission, it remains in play.)",
       "Effect: At the end of your turn, if you have no Chakra, you can draw 1 card.",
     ],
+    flavor: "\"All right... I did it.\"",
     image: "s27-m-974",
   },
   {
@@ -2393,6 +2496,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
     text: [
       "Effect: If you control only \"Rinnegan\", \"Rain\" and/or \"Akatsuki\" Ninjas, move 3 cards from your bottom of your Deck to your hand.",
     ],
+    flavor: "\"Starting here, the world shall know pain...\"",
     image: "s27-m-975",
   },
   // ── CLIENT ──
@@ -2411,6 +2515,7 @@ export const S27_HEROS_ASCENSION: Card[] = [
       "[Attacker | Mission] Move your Turn Marker down by 1: You may deploy a Void Ninja ignoring its Sacrifice.",
       "At the end of your turn, if your Turn Marker is 0, you can draw 1 card.",
     ],
+    flavor: "\"Very well...then I hereby declare war on you all...the fourth great ninja war.\"",
     image: "s27-c-060",
   },
 ];

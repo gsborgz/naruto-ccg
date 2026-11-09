@@ -47,6 +47,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "if you do not have a Ninja that includes \"Pain\" in its name, this Ninja gets -2/-2.",
       "Valid: When you would \"Sacrifice\" this Ninja, move it to your hand instead.",
     ],
+    flavor: "\"Hssssssss!!!!!\"",
     image: "s19-n-1001",
   },
   {
@@ -68,6 +69,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "When this Ninja's Team is Defeated, you can place 1 coin (symbolizing a \"Chimera\" Ninja) in play with the following:",
       "\"[Power: 2/0 (Healthy and Injured) / Entrance Cost: 0 / \"Animal\" / \"Rinnegan\"]",
     ],
+    flavor: "\"Grrr...\"",
     image: "s19-n-1002",
   },
   {
@@ -89,6 +91,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Sacrifice: 1 Ninja or Client",
       "At the start of the turn, if your Turn Marker is odd, you can put 1 coin (symbolizing a \"Pain Spawn\" Ninja) in play with the following: \"[Power: 3/0 (Healthy and Injured) / \"Animal\" / \"Rinnegan\"] [Valid: At the end of the turn, discard this Ninja.]",
     ],
+    flavor: "\"Sensei, you are still just a man...\"",
     image: "s19-n-1003",
   },
   {
@@ -170,6 +173,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[EXPLOSIVE ART]",
       "During your Mission Phase, while this card is in the Discard Pile, you can charge 1 Deidara Ninja card from your hand. In that case, put this Ninja card in play.",
     ],
+    flavor: "\"I'll play with you a bit more!\"",
     image: "s19-n-949",
   },
   {
@@ -190,6 +194,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[CALM MIND]",
       "Valid: Your Ninjas get +1 Mental Power for each Growth coin on them.",
     ],
+    flavor: "\"Go for it!\"",
     image: "s19-n-950",
   },
   {
@@ -210,6 +215,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[FLOWER TACTICS]",
       "Valid: When you turn a Battle Reward face up, this Ninja gets +2/+0 during this turn.",
     ],
+    flavor: "\"If this is going to be one-on-one, then I will never lose to a Rogue Ninja!\"",
     image: "s19-n-951",
   },
   {
@@ -231,6 +237,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: This Ninja gets +1/+1 while your opponent has 3 or more face-up Battle Rewards.",
       "Valid: At the start of your turn, you can turn 1 of your opponent's Battle Rewards face up.",
     ],
+    flavor: "\"Allow me to avenge Kikunojou.\"",
     image: "s19-n-952",
   },
   {
@@ -252,6 +259,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: While you have Ninjas with a combined Mental Power of 10 or more, this Ninja's Team uses it's Mental Power value instead of its Team Power value during the Showdown.",
       "Valid: Other Ninjas in this Ninja's Team get +1 Mental Power.",
     ],
+    flavor: "\"By my calculations...it's all over for you two now.\"",
     image: "s19-n-953",
   },
   {
@@ -272,6 +280,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[WEAPON CACHE]",
       "During your Mission Phase, you can select 1 of your opponent's face-up Earth Battle Rewards. In that case, move the selected card to your hand and your opponent wins 1 Battle Reward.",
     ],
+    flavor: "\"No luck, he got away.\"",
     image: "s19-n-954",
   },
   {
@@ -292,6 +301,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[MEDITATION]",
       "While you have Ninjas with a combined Mental Power of 8 or more, this Ninjas Team cannot be affected by your opponent's Jutsu cards.",
     ],
+    flavor: "\"I don't know what business brings you here... but turn around and go home!\"",
     image: "s19-n-955",
   },
   {
@@ -312,6 +322,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[PLANNING]",
       "During the Exchange of Jutsu, if you have Ninjas with a combined Mental Power of 12 or more, you can move 1 Jutsu or Mission card from your Discard Pile to your hand.",
     ],
+    flavor: "\"...I see I can't hold back any longer...I'm sorry...\"",
     image: "s19-n-956",
   },
   {
@@ -353,6 +364,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: When this Ninja is put into play, search your Deck for up to 2 cards with \"Deidara\" or \"Tobi\" in their name.",
       "Valid: During the Exchange of Jutsu, you can discard 1 Deidara or Tobi Ninja card from your hand. In that case, give 1 Damage to 1 Ninja Battling against this Ninja.",
     ],
+    flavor: "\"Tobi, you know what to do, right?!!\" \"Yessiree, partner!\"",
     image: "s19-n-958",
   },
   {
@@ -374,6 +386,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Tracking",
       "Your opponent's Tracked Ninja can only be sent out to Block as a Head Ninja.",
     ],
+    flavor: "\"Impossible.\"",
     image: "s19-n-959",
   },
   {
@@ -394,6 +407,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[FOCUSED TRACKER]",
       "Valid: When this Ninja's Team wins any Victory while Battling against a Tracked Ninja, your opponent discards 1 card from their hand.",
     ],
+    flavor: "\"Let's work together...\"",
     image: "s19-n-960",
   },
   {
@@ -415,6 +429,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Tracking",
       "Valid: While your opponent has a Tracked Ninja, this Ninja gets +0/+1 for each other \"Ninja Dog\" Ninja in its Team.",
     ],
+    flavor: "\"Hello, Sakura.\"",
     image: "s19-n-961",
   },
   {
@@ -435,6 +450,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[STOIC TRACKER]",
       "When this Ninja's Team is blocked by a Team that includes a Tracked Ninja, you can draw 1 card, then discard 1 card.",
     ],
+    flavor: "\"I'm partnering with Shino.\"",
     image: "s19-n-962",
   },
   {
@@ -455,6 +471,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[SPECIALIZED TRAINING]",
       "When this Ninja becomes the user of a Jutsu with \"Requirements: Taijutsu\", you can select 1 Ninja Battling against this Ninja. In that case, that selected Ninja gets -2/+0 during this turn.",
     ],
+    flavor: "\"If you're not going to come to me, I'll go to you!\"",
     image: "s19-n-963",
   },
   {
@@ -475,6 +492,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[ELITE PROCTOR]",
       "Valid: This Ninja cannot be affected by Jutsus with a cost of ① or ②.",
     ],
+    flavor: "\"Sorry, but the Chunin Exam is over.\"",
     image: "s19-n-964",
   },
   {
@@ -496,6 +514,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Deploying your \"Animal\" Ninja cards does not count towards the \"1 Ninja per turn\" Restriction.",
       "Valid: While this Ninja is in the same Team as \"The Third Hokage\", this Ninja gets +2/+2.",
     ],
+    flavor: "\"Orochimaru... so it has come to this, after all...\"",
     image: "s19-n-965",
   },
   {
@@ -516,6 +535,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[DANGEROUS OPPONENT]",
       "Valid: When this Ninja becomes the user of a Jutsu, you can place a -1/-1 Ninja Blade coin on 1 Ninja Battling against this Ninja.",
     ],
+    flavor: "\"Yamato told me everything.  All about Sasuke too.\"",
     image: "s19-n-966",
   },
   {
@@ -536,6 +556,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[Ambush: During your Mission Phase, while this card is in your Chakra area, you can deploy it.]",
       "[Mastery: Valid: When the effect of a Jutsu used by this Ninja is applied, you can pay 1 Chakra that shares a Symbol with that Jutsu. In that case, return that Jutsu to your hand.]",
     ],
+    flavor: "\"There's no rush... rest right now. Otherwise, it's likely to be a while.\"",
     image: "s19-n-967",
   },
   {
@@ -576,6 +597,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[THE GATE OF JOY]",
       "Valid: Your \"Taijutsu\" Ninjas can be Surged any number of times in a turn.",
     ],
+    flavor: "\"The 8 Inner Gates!  The Sixth Gate! Keimon, RELEASE!\"",
     image: "s19-n-969",
   },
   {
@@ -596,6 +618,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[PERFECT COMBINATION]",
       "Valid: When this Ninja's Team wins any Victory, perform an additional Battle Phase after this one. In that case, only this Ninja's Team can be sent out to Attack.",
     ],
+    flavor: "\"Lee!! Now.. Explode!!!\" \"Yes, Sir!!\"",
     image: "s19-n-970",
   },
   {
@@ -616,6 +639,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[SPECIAL SUIT]",
       "Valid: When this Ninja becomes the user of a Jutsu with \"Requirements: Taijutsu\", you can give this Ninja +2/+0 during this turn.",
     ],
+    flavor: "\"Heh Heh...Shinobi read the hidden meanings within the hidden meanings.\"",
     image: "s19-n-971",
   },
   {
@@ -636,6 +660,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[SNEAK ATTACK]",
       "During the Mission Phase, you can move 1 Jutsu card from your Discard Pile to your hand. In that case, remove this Ninja from the game.",
     ],
+    flavor: "\"What is this guy, Immortal?\"",
     image: "s19-n-972",
   },
   {
@@ -656,6 +681,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[LESSON ONE: TRANSFORM]",
       "Valid: During the Exchange of Jutsu, you can pay 1 Lightning Chakra. In that case, switch the Combat and Support values of 1 of your Ninjas.",
     ],
+    flavor: "\"Today in class we'll be reviewing the art of transformation.\"",
     image: "s19-n-973",
   },
   {
@@ -677,6 +703,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: All your \"Taijutsu\" Ninjas get \"Surge\"",
       "[Surge: Valid: During the Exchange of Jutsu, you can discard 1 Ninja card from your hand with the same name as this Ninja. In that case, this Ninja gets +2/+2 during this turn.]",
     ],
+    flavor: "\"That's enough, Lee!\"",
     image: "s19-n-974",
   },
   {
@@ -697,6 +724,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[THE EMERGING BEAST]",
       "Valid: During your Mission Phase, while you have 3 or more Chakra, you can discard this Ninja. In that case, put in play 1 [NINE-TAIL'S CLOAK] Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"...Give...Sasuke...Back...!\"",
     image: "s19-n-975",
   },
   {
@@ -718,6 +746,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: At the start of your turn, each player moves the top 3 cards of their Deck to their Chakra area.",
       "Valid: During your Mission Phase, while you have 5 or more Chakra, you can discard this Ninja. In that case, put in play 1 [TAILED BEAST] Ninja card from your Reinforcement Deck.",
     ],
+    flavor: "\"GRRRAAAR!!!\"",
     image: "s19-n-976",
   },
   {
@@ -738,6 +767,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[MASTER OF TOADS]",
       "This Ninja is considered to have all Symbols.",
     ],
+    flavor: "\"I've come here to make a formal announcement.\"",
     image: "s19-n-977",
   },
   {
@@ -799,6 +829,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[WARDEN OF THE SOUTHERN HIDEOUT]",
       "Valid: Each player plays with the top card of their Deck revealed. While you have 2 or less cards in your hand, if the top card of your Deck is a Water card, that card can be played as though it was in your hand.",
     ],
+    flavor: "\"If you really want me to Sasuke... I will follow you.\"",
     image: "s19-n-980",
   },
   {
@@ -819,6 +850,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[SONG OF THE NORTH GATE]",
       "When a Mission is played, you can discard the top card of your Deck. In that case, discard 1 of your opponent's Chakra.",
     ],
+    flavor: "\"Bring it, punks.\"",
     image: "s19-n-981",
   },
   {
@@ -839,6 +871,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[DEMON OF THE EASTERN HIDEOUT]",
       "When a card is moved to your Chakra area, this Ninja gets +1/+0 during this turn.",
     ],
+    flavor: "\"I'm free... at last...\"",
     image: "s19-n-982",
   },
   {
@@ -859,6 +892,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[PRISONER OF THE NORTHERN HIDEOUT]",
       "Valid: When your opponent puts a Ninja in play, if you have no cards in your hand, move 1 card from your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"I'm getting out of here. And whoever stands in my way... is dead!\"",
     image: "s19-n-983",
   },
   {
@@ -879,6 +913,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[SERPENT CHARMER]",
       "Valid: When you put a Ninja in play, discard 1 of your opponent's Chakra",
     ],
+    flavor: "\"This is the group that Kakashi's been training, right?\"",
     image: "s19-n-984",
   },
   {
@@ -899,6 +934,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[VENOM OF THE SERPENT]",
       "At the beginning of your turn, if your opponent has no Chakra, you can draw 1 card.",
     ],
+    flavor: "\"Just a little longer... a little more patience, and he's mine!\"",
     image: "s19-n-985",
   },
   {
@@ -920,6 +956,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "When this Ninja is sent out to Attack, you can move 1 Chakra to the bottom of its owner's Deck.",
       "Players with no Chakra cannot play Mission cards.",
     ],
+    flavor: "\"I have a goal.  And a small team will let me reach that goal faster.\"",
     image: "s19-n-986",
   },
   {
@@ -942,6 +979,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "During your Mission Phase, while you have no cards in your hand, you can play 1 Mission card from either player's Chakra area ignoring its hand cost. Then, remove it from game.",
       "Valid: When a Mission is played, heal this Ninja.",
     ],
+    flavor: "\"I'm going to use what I've absorbed of Orochimaru...\"",
     image: "s19-n-987",
   },
   {
@@ -963,6 +1001,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Sacrifice: \"Tayuya (State 1)\"",
       "Valid: While you have no cards in your hand, your opponent's activated Ninja effects cost an additional 1 to use.",
     ],
+    flavor: "\"Never thought I'd use second state here.\"",
     image: "s19-n-988",
   },
   {
@@ -1024,6 +1063,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[ASTUTE STUDENT]",
       "When your opponent puts a Ninja in play, this Ninja gets +3/+0 during this turn.",
     ],
+    flavor: "\"Right now, this is all I can do. I can't allow myself to fail!\"",
     image: "s19-n-991",
   },
   {
@@ -1044,6 +1084,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[MENTAL TOUGHNESS]",
       "Valid: When this Ninja is put in play, your Ninjas cannot be moved to Stand-By during this turn.",
     ],
+    flavor: "\"Kakashi... Obito...\"",
     image: "s19-n-992",
   },
   {
@@ -1064,6 +1105,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[EXCELLENT TACTICIAN]",
       "Valid: During the Exchange of Jutsu, you can change the position of the Ninjas in this Ninja's Team.",
     ],
+    flavor: "\"Make sure not to cry in front of me this time.\"",
     image: "s19-n-993",
   },
   {
@@ -1084,6 +1126,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[SACRIFICE]",
       "Valid: During your Mission Phase, you can remove this Ninja from the game. In that case, put in play a Wind Ninja card from your Discard pile with an Entrance cost less than or equal to your Turn Marker.",
     ],
+    flavor: "\"The things I did in the past were nothing but mistakes...But...in my last hour, it seems I shall finally be able to do the right thing.\"",
     image: "s19-n-994",
   },
   {
@@ -1104,6 +1147,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[ARDENT SOLDIER]",
       "While you have 2 or more \"Medical\" Ninjas, your opponent's Jutsu cards that target your Ninjas cost 1 more to use.",
     ],
+    flavor: "\"Get out of my way!\"",
     image: "s19-n-995",
   },
   {
@@ -1124,6 +1168,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[GENJUTSU REVERSAL]",
       "When a Ninja in this Ninja's Team becomes the only target of your opponent's Jutsu, you can pay 2 Wind Chakra. In that case, apply the effect of that Jutsu to its user instead.",
     ],
+    flavor: "\"You think you caught me with that? You're the one who's caught.\"",
     image: "s19-n-996",
   },
   {
@@ -1145,6 +1190,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "When this Ninja is put in play, you can heal 1 of your Ninjas. In that case, you can injure 1 of your opponent's Ninja with an Entrance cost equal to or less then the healed Ninja's.",
       "Valid: Your Mission cards cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"To protect... My hometown...the Leaf Village...!\"",
     image: "s19-n-997",
   },
   {
@@ -1185,6 +1231,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "[ANGEL OF PAIN]",
       "Valid: When you Sacrifice a Ninja, you can draw 1 card.",
     ],
+    flavor: "\"I have received orders from our god.\"",
     image: "s19-n-999",
   },
   // ── JUTSU ──
@@ -1201,6 +1248,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Jutsu being played",
       "Effect: Negate the target and move it to the bottom of its owner's Deck.",
     ],
+    flavor: "\"Heh Heh...Victory here is mine.\"",
     image: "s19-j-743",
   },
   {
@@ -1217,6 +1265,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target becomes a Stand-By Ninja. If your opponent has 3 or more face-up Battle Rewards, move the target to the top of its owner's Deck instead. Then, turn 3 of your opponent's Battle Rewards face down.",
     ],
+    flavor: "\"Pop is dead! My art is superflat, hmm?!\"",
     image: "s19-j-744",
   },
   {
@@ -1231,6 +1280,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
     text: [
       "Effect: The user gets +5/+0 during this turn. If the higher cost of this Jutsu was paid, draw 2 cards and this Jutsu cannot be affected by your opponent's effects.",
     ],
+    flavor: "\"...Which means C2 is my best bet.\"",
     image: "s19-j-745",
   },
   {
@@ -1246,6 +1296,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Requirements: Earth + Entrance cost of 5 or more",
       "Effect: Give 2 Damage to every Ninja with an Entrance cost of 2 or less.",
     ],
+    flavor: "\"Among all my dolls, Ohako is my prize masterpiece, containing C3 Chakra.\"",
     image: "s19-j-746",
   },
   {
@@ -1262,6 +1313,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove the target from the game. Then, injure each other Ninja in the target's Team.",
     ],
+    flavor: "\"Sayonara, Sasuke!\"",
     image: "s19-j-747",
   },
   {
@@ -1277,6 +1329,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Requirements: Earth + Entrance cost of 4 or more",
       "Effect: Move this Jutsu into the user's Team in any position as a Ninja with the following: \"[Power: 2/2 (Healthy and Injured) / Entrance Cost: 0], [Valid: When any of your Ninjas would receive any Damage, this Ninja receives it instead.]\"",
     ],
+    flavor: "\"This time it's over for real!!\"",
     image: "s19-j-748",
   },
   {
@@ -1293,6 +1346,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja",
       "Effect: The Target gets -10/+0 during this turn.",
     ],
+    flavor: "\"That Jutsu required not just changing my chakra nature to Lightning...\"",
     image: "s19-j-749",
   },
   {
@@ -1309,6 +1363,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja",
       "Effect: Remove the target from the game. In that case, at the end of this turn, move that Ninja into play in any of its owner's Teams in any position.",
     ],
+    flavor: "\"I teleported him...and the explosion to another space.\"",
     image: "s19-j-750",
   },
   {
@@ -1324,6 +1379,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The target's Power becomes equal to its printed Power during this turn. If the user has \"Sharingan Eye\", negate and discard 1 Jutsu being played by the target.",
     ],
+    flavor: "\"Whether it's a genjutsu illusion or a ninjutsu fighting technique...There's some kind of magic at work here!\"",
     image: "s19-j-751",
   },
   {
@@ -1339,6 +1395,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Jutsu being played",
       "Effect: Injure the user of the target.",
     ],
+    flavor: "\"ugh...again with the bed rest...?",
     image: "s19-j-752",
   },
   {
@@ -1353,6 +1410,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
     text: [
       "Effect: Move all of your Ninjas with Tracking into the user's Team in any position.",
     ],
+    flavor: "\"All right, let me explain the team rosters for our patrols.\"",
     image: "s19-j-753",
   },
   {
@@ -1368,6 +1426,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: User",
       "Effect: Discard an \"Animal\" Ninja card from your hand. In that case, the target gets +X/+X during this turn, where X = the Discarded card's Combat value.",
     ],
+    flavor: "\"Enma!!  Indestructible Nyoi Staff!!!\"",
     image: "s19-j-754",
   },
   {
@@ -1384,6 +1443,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: Move Ninja cards with the same name as the user from your Discard Pile to your hand.",
       "Combination (\"Taijutsu\"): Move 1 Jutsu card with \"Requirements: Taijutsu\" from your Discard pile to your hand.",
     ],
+    flavor: "Leaf Hurricane!!!",
     image: "s19-j-755",
   },
   {
@@ -1399,6 +1459,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Requirements: \"Taijutsu\"",
       "Effect: Move any number of Jutsu cards from your hand to the bottom of your Deck. In that case, If the user wins any Victory, The User's team wins Battle Rewards equal to the number of Jutsu cards moved by this effect.",
     ],
+    flavor: "\"This is the finale!!!\"",
     image: "s19-j-756",
   },
   {
@@ -1414,6 +1475,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Requirements: \"Taijutsu\"",
       "Effect: Move all Jutsu cards with \"Requirements: Taijutsu\" from your Discard Pile and Chakra Area to your hand. During this turn, when the effect of your Jutsus is applied, move that Jutsu card to the bottom of your Deck instead of the Chakra area.",
     ],
+    flavor: "\"Gotcha!!!\"",
     image: "s19-j-757",
   },
   {
@@ -1430,6 +1492,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: The target gets +2/+0.",
       "Combination (Taijutsu): Return this Jutsu card to your hand.",
     ],
+    flavor: "\"NOW!!\"",
     image: "s19-j-758",
   },
   {
@@ -1446,6 +1509,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: Negate the target",
       "Combination (\"Ninja Toad\"): The user gets +2/+2 during this turn.",
     ],
+    flavor: "\"You're inside the stomach of a toad.\"",
     image: "s19-j-759",
   },
   {
@@ -1462,6 +1526,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: The user's printed Power becomes equal to the target's during this turn.",
       "Combination (\"Jonin\"): The user gets +X/+Y during this turn, where X = the target's Combat and Y= the target's Support.",
     ],
+    flavor: "\"Okay people, now we're moving!!!\"",
     image: "s19-j-760",
   },
   {
@@ -1478,6 +1543,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: The target gets -1/+0 and -2 Mental Power during this turn. While you have no cards in your hand, this Jutsu card can be played from your Chakra Area.",
       "Combination (\"Soul\"): Injure 1 Ninja battling against the user.",
     ],
+    flavor: "\"Fire Style! Searing Migraine!!\"",
     image: "s19-j-761",
   },
   {
@@ -1494,6 +1560,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Jutsu being played",
       "Effect: Change the effect of the target to the following: Injure the user. While you have no cards in your hand, this Jutsu card can be played from your Chakra area.",
     ],
+    flavor: "\"Heh... I imagine you're paralyzed now.\"",
     image: "s19-j-762",
   },
   {
@@ -1510,6 +1577,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Move the target to its owner's Chakra area. While you have no cards in your hand, this Jutsu card can be played from your Chakra area.",
     ],
+    flavor: "\"Intriguing...\"",
     image: "s19-j-763",
   },
   {
@@ -1525,6 +1593,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. If the user is \"Sasuke Uchiha\", the target's Power becomes 0/0 during this turn. While you have no cards in your hand, this Jutsu card can be played from your Chakra area.",
     ],
+    flavor: "\"Seems you've used up all your chakra... Your reaction time is slow.\"",
     image: "s19-j-764",
   },
   {
@@ -1540,6 +1609,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 2 Jutsus being played",
       "Effect: Injure the user(s) of the target. Then, negate the target.",
     ],
+    flavor: "\"Here I go!\"",
     image: "s19-j-765",
   },
   {
@@ -1555,6 +1625,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja battling against the user",
       "Effect: The effect text of the target and all Ninja(s) that share the same name as the target is negated until the end of the turn.",
     ],
+    flavor: "\"I'll count up to five.Go away before I am done. Or else, I'll make you disappear myself\"",
     image: "s19-j-766",
   },
   {
@@ -1571,6 +1642,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Injure the target. If the target is a \"Male\" Ninja with an Entrance cost less than or equal to the user's, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Naruto!\"",
     image: "s19-j-767",
   },
   {
@@ -1589,6 +1661,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "3+) Injure one ninja battling against the user and draw one card",
       "4+) Make a ninja battling against the user a Stand-by ninja and move 4 cards from your discard to your chakra area.",
     ],
+    flavor: "\"Now she needs bed rest\"",
     image: "s19-j-768",
   },
   {
@@ -1604,6 +1677,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: User",
       "Effect: Remove the target from the game. In that case, move the target back into play into any of your Teams in any position.",
     ],
+    flavor: "\"What are you thinking?\" \"I'll explain later, for crying out loud. You do it or not?\"",
     image: "s19-j-769",
   },
   {
@@ -1620,6 +1694,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: Move your Turn Marker up by 1.",
       "Combination (\"Rinnegan\"): Move 1 card from the bottom of your Deck to your hand.",
     ],
+    flavor: "\"Are the doggies bound to a self-replicating summoning jutsu?\"",
     image: "s19-j-770",
   },
   {
@@ -1636,6 +1711,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 Jutsu being played",
       "Effect: If your Turn Marker is odd, change the effect of the target to the following: Move your Turn Marker down by 1.",
     ],
+    flavor: "\"Yes, but that's not all. At the same time... Summoning Jutsu!\"",
     image: "s19-j-771",
   },
   {
@@ -1653,6 +1729,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Even: Shuffle 1 Mission or Ninja into its owner's Deck.",
       "Odd: Move 3 cards from the bottom of your Deck to your hand.",
     ],
+    flavor: "\"That's the Rinnegan?  What nasty eyes...\"",
     image: "s19-j-772",
   },
   // ── MISSION ──
@@ -1670,6 +1747,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent: (3)",
       "Effect: At the beginning of your Battle Phase, if your Ninja's total Mental Power is 8 or more, you can draw 1 card.",
     ],
+    flavor: "\"I'm not as logic-minded as you think.\"",
     image: "s19-m-699",
   },
   {
@@ -1703,6 +1781,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent (3)",
       "Effect: When you turn a Battle Reward face up due to an effect, you can discard 1 card. In that case, draw 1 card.",
     ],
+    flavor: "\"Shikamaru what's our next move?\"",
     image: "s19-m-701",
   },
   {
@@ -1719,6 +1798,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: Ninjas that are not deployed from a player's hand cannot be sent out to Battle during the turn they are put in play.",
     ],
+    flavor: "\"Let's start our search from Fire Temple.\"",
     image: "s19-m-702",
   },
   {
@@ -1751,6 +1831,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: At the start of your turn, draw 2 cards. In that case, your opponent wins 1 Battle Reward.",
       "This Mission cannot be affected by effects and cannot be removed from play.",
     ],
+    flavor: "\"Seal!!\"",
     image: "s19-m-704",
   },
   {
@@ -1767,6 +1848,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Discard the target. In that case, injure all Ninjas with an Entrance cost equal to the discarded Ninja's Entrance cost.",
     ],
+    flavor: "\"I had to.\"",
     image: "s19-m-705",
   },
   {
@@ -1783,6 +1865,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: Battle Rewards cannot be discarded by the effects of Missions.",
     ],
+    flavor: "\"We should start the exercise.\"",
     image: "s19-m-706",
   },
   {
@@ -1798,6 +1881,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
     text: [
       "Effect: Discard a Ninja card from your hand. In that case, move a Ninja card from your Discard pile to your hand.",
     ],
+    flavor: "\"They're Ninja cats.  Be careful, or they'll claw you up.\"",
     image: "s19-m-707",
   },
   {
@@ -1814,6 +1898,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: When 1 of your \"Taijutsu\" Ninjas is Surged, if all of your Ninjas are \"Taijutsu\" Ninjas, draw 1 card.",
     ],
+    flavor: "\"Fast! Just like...him...\"",
     image: "s19-m-708",
   },
   {
@@ -1829,6 +1914,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
     text: [
       "Effect: Search your Deck for a Jutsu card with \"Requirements: Tailed Beast Form\", reveal it and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"I've got a bad feeling about this...\"",
     image: "s19-m-709",
   },
   {
@@ -1845,6 +1931,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: During the Exchange of Jutsu, you can discard a card. In that case, move the top 2 cards of your Deck to your Chakra area.",
     ],
+    flavor: "\"Look! Over there...\"",
     image: "s19-m-710",
   },
   {
@@ -1861,6 +1948,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: When this Mission is put in play, select 1 of your Ninjas. When the selected Ninja would be removed from play due to your opponent's effect or the Showdown, discard this Mission instead.",
     ],
+    flavor: "\"You'll see...\"",
     image: "s19-m-711",
   },
   {
@@ -1877,6 +1965,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: When a player plays a Jutsu, that player draws 1 card, then discards 1 card.",
     ],
+    flavor: "\"The rules are the same as when we first met.\"",
     image: "s19-m-712",
   },
   {
@@ -1893,6 +1982,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Target: 1 \"Counter\" Mission card being played or 1 in-play card",
       "Effect: Negate the target's effect text. Then, move the top card of your Deck to you Chakra area. (This Mission does not count towards your 1 Mission per turn)",
     ],
+    flavor: "\"Nothing. Let's go.\"",
     image: "s19-m-713",
   },
   {
@@ -1908,6 +1998,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
     text: [
       "Effect: Each player moves all but 1 card from their hand to their Chakra area. Then, each player draws 2 cards.",
     ],
+    flavor: "\"This yogurt is the best.\"",
     image: "s19-m-714",
   },
   {
@@ -1924,6 +2015,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent",
       "Effect: All your \"The Four Sound Ninja\", \"Kimimaro\", and \"Hebi\" Ninjas and Ninja cards gets \"Ambush\" and \"State 2\".",
     ],
+    flavor: "\"But you're quit the guy to be able to do a Partial Transformation.\"",
     image: "s19-m-715",
   },
   {
@@ -1956,6 +2048,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: During your Mission Phase, you can remove 1 of your Ninjas from the game. In that case, move that Ninja back into play.",
       "This Mission card can not be removed from play by effects.",
     ],
+    flavor: "\"Sealing team! Standby for the Three-Tails!\"",
     image: "s19-m-717",
   },
   {
@@ -1973,6 +2066,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: When this Mission is put in play, put 1 coin on it for each of your Wind Ninjas.",
       "Effect: Jutsu costs can only be paid by Chakra that shares a Symbol with that Jutsu card.",
     ],
+    flavor: "\"I'll cause the flow of chakra into his body...It will cause the toxin to surface from the cells. It will then be absorbed by this liquid...and extracted!\"",
     image: "s19-m-718",
   },
   {
@@ -1989,6 +2083,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent (4)",
       "Effect: When your opponent plays a Jutsu, negate and move that Jutsu to its owner's hand. In that case, remove a coin from this Mission.",
     ],
+    flavor: "\"It'll soon be three hours... Please take over.\"",
     image: "s19-m-719",
   },
   {
@@ -2005,6 +2100,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Permanent (2)",
       "Effect: Ninjas with an Entrance cost less than or equal to the number of cards in your hand can not be sent out to Attack.",
     ],
+    flavor: "\"It's just that, whenever I come here. I want to punish myself for being such a fool in the past.\"",
     image: "s19-m-720",
   },
   {
@@ -2020,6 +2116,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
     text: [
       "Effect: If you have 2 or more \"Rinnegan\" and/or \"Akatsuki\" Ninjas, you can move your Turn Marker up by 1. Then, move 1 card from the bottom of your Deck to your hand.",
     ],
+    flavor: "\"Pain... That name is an alias that denotes all six of us.\"",
     image: "s19-m-721",
   },
   {
@@ -2037,6 +2134,7 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: When this Mission is put in play, if you have 2 or more \"Rinnegan\" and/or \"Akatsuki\" Ninjas, move 2 cards from the bottom of your Deck to your hand.",
       "Effect: At the end of the turn, if your opponent put in play 2 or more Ninjas, move your Turn Marker up by 1.",
     ],
+    flavor: "\"Konan... When I stop the rain, seek out the intruder with your jutsu.\"",
     image: "s19-m-722",
   },
 ];

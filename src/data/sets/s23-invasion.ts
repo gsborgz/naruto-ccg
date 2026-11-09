@@ -25,6 +25,7 @@ export const S23_INVASION: Card[] = [
       "[SHADOWHOLD]",
       "When this Ninja is put in play, target Ninja in a Team by itself becomes 0/0 during this turn.",
     ],
+    flavor: "\"Nope! No way.\"",
     image: "s23-n-1270",
   },
   {
@@ -45,6 +46,7 @@ export const S23_INVASION: Card[] = [
       "[CALORIC RAGE]",
       "When this Ninja is put in play, you can discard any number of cards attached to your Ninjas.",
     ],
+    flavor: "\"Shikamaru... Let go of me!\"",
     image: "s23-n-1271",
   },
   {
@@ -65,6 +67,7 @@ export const S23_INVASION: Card[] = [
       "[CIPHER]",
       "[Attacker | Mission] (0): Draw 1 card. Then, move 1 card in your hand to the top of your Deck.",
     ],
+    flavor: "\"Ahem.\"",
     image: "s23-n-1272",
   },
   {
@@ -85,6 +88,7 @@ export const S23_INVASION: Card[] = [
       "[HEIR OF THE HYUGA]",
       "[Valid | EOJ] (0): Move this Ninja to your Chakra area, then negate target Jutsu unless its owner discards 1 Chakra.",
     ],
+    flavor: "\"Big brother Neji...\"",
     image: "s23-n-1273",
   },
   {
@@ -106,6 +110,7 @@ export const S23_INVASION: Card[] = [
       "Valid: While this Ninja is Battling against a \"Female\" Ninja, this Ninja gets +1/+1.",
       "[EOJ] Move 1 card in your hand to your Chakra area: If this Ninja is opposed by a \"Female\" Ninja, draw 1 card.",
     ],
+    flavor: "\"What... What on earth are you?\"",
     image: "s23-n-1274",
   },
   {
@@ -126,6 +131,7 @@ export const S23_INVASION: Card[] = [
       "[CURSED GENIUS]",
       "Valid: While your opponent controls a Hinata Hyuga or Hiashi Hyuga, this Ninja gets -1/-1.",
     ],
+    flavor: "\"You foresaw your own defeat!!\"",
     image: "s23-n-1275",
   },
   {
@@ -146,6 +152,7 @@ export const S23_INVASION: Card[] = [
       "[TORTURED WORDS]",
       "When this Ninja is put in play, you can reveal any number of \"Proctor\" Ninja cards from your hand. In that case, place a +1/+1 coin on this Ninja for each card revealed this way.",
     ],
+    flavor: "\"If that's your attitude, then I shall make you want to speak.\"",
     image: "s23-n-1276",
   },
   {
@@ -186,6 +193,7 @@ export const S23_INVASION: Card[] = [
       "[PROTECTOR OF THE WILL]",
       "[Mission | EOJ] (Earth|Earth), name a Symbol: target Ninja you control cannot be the target of Jutsu cards with the named Symbol.",
     ],
+    flavor: "\"I can read you like a book when we're playing shogi.\"",
     image: "s23-n-1278",
   },
   {
@@ -207,6 +215,7 @@ export const S23_INVASION: Card[] = [
       "[Attacker | Mission] (Earth|Earth): Place a \"Mind\" coin on target Ninja.",
       "The Combat of Ninjas with a \"Mind\" coin on them is 0.",
     ],
+    flavor: "\"Got it...\"",
     image: "s23-n-1279",
   },
   {
@@ -227,6 +236,7 @@ export const S23_INVASION: Card[] = [
       "[UPSCALED]",
       "Valid: X = the number of Earth Ninjas you control, plus 2.",
     ],
+    flavor: "\"Over there!\"",
     image: "s23-n-1280",
   },
   {
@@ -267,6 +277,7 @@ export const S23_INVASION: Card[] = [
       "[BLADED JUSTICE]",
       "[EOJ] Remove 1 of your Jutsu from the game: During this turn, you can play that Jutsu for free.",
     ],
+    flavor: "\"Man, you're good.\"",
     image: "s23-n-1282",
   },
   {
@@ -288,6 +299,7 @@ export const S23_INVASION: Card[] = [
       "Valid: When this Ninja is discarded due to the Showdown, if it does not have a \"Ghost\" coin on it, move this Ninja card to your Village with a \"Ghost\" coin on it.",
       "Valid: When this Ninja would be discarded due to the Showdown, if it has a \"Ghost\" coin on it, remove it from the game instead.",
     ],
+    flavor: "\"What?! Where?!\"",
     image: "s23-n-1283",
   },
   {
@@ -309,6 +321,7 @@ export const S23_INVASION: Card[] = [
       "Valid: When this Ninja is put in play or removed from play, move the top 2 cards of your opponent's Deck to their Discard Pile.",
       "When this Ninja is moved to your Chakra area due to the effect of GROWTH, you can place a Growth coin on 1 of your Ninjas.",
     ],
+    flavor: "\"Clone Jutsu is child's play.\"",
     image: "s23-n-1284",
   },
   {
@@ -329,6 +342,7 @@ export const S23_INVASION: Card[] = [
       "[CARRIER OF VENGEANCE]",
       "Valid: When this Ninja is sent out to Attack, place a +1/+1 coin on this Ninja.",
     ],
+    flavor: "\"Right...\"",
     image: "s23-n-1285",
   },
   {
@@ -349,6 +363,7 @@ export const S23_INVASION: Card[] = [
       "[OVERSEER]",
       "[EOJ] (0): Choose new positions for every Ninja in 1 Team, then move this Ninja to its owner's Chakra area.",
     ],
+    flavor: "\"Begin!!\"",
     image: "s23-n-1286",
   },
   {
@@ -390,6 +405,7 @@ export const S23_INVASION: Card[] = [
       "Valid: When this Ninja is removed from play, draw 1 card.",
       "When this Ninja becomes the target of a Jutsu card or an effect, move this Ninja to its owner's hand.",
     ],
+    flavor: "\"Oh! You're alive!\"",
     image: "s23-n-1288",
   },
   {
@@ -410,6 +426,7 @@ export const S23_INVASION: Card[] = [
       "[ANATHEMA]",
       "[Valid | Attacker | Mission] Discard this Ninja: Both players win 1 Battle Reward.",
     ],
+    flavor: "\"Pretty tough-looking, too.\"",
     image: "s23-n-1289",
   },
   {
@@ -430,6 +447,7 @@ export const S23_INVASION: Card[] = [
       "[TEAMWORK]",
       "Valid: All of your \"Anbu\" Ninjas gain the following effect text: \"[EOJ] Discard this Ninja: target \"Anbu\" Ninja gets +2/+2 during this turn.\"",
     ],
+    flavor: "\"Well? Did we do it?\"",
     image: "s23-n-1290",
   },
   {
@@ -451,6 +469,7 @@ export const S23_INVASION: Card[] = [
       "Valid: At the end of your turn, if this Ninja did not Attack, place a \"Charge\" coin on this Ninja.",
       "[EOJ] Remove 2 \"Charge\" coins from this Ninja: This Ninja gets +5/+0 during this turn. Any opposing Ninja that receives Damage during the Showdown this turn receives 1 additional Damage.",
     ],
+    flavor: "\"I'm fine.\"",
     image: "s23-n-1291",
   },
   {
@@ -492,6 +511,7 @@ export const S23_INVASION: Card[] = [
       "[ASSASSINATE]",
       "When this Ninja is deployed, you can pay X Chakra. In that case, discard target Ninja with an Entrance cost less than X.",
     ],
+    flavor: "Now!",
     image: "s23-n-1293",
   },
   {
@@ -533,6 +553,7 @@ export const S23_INVASION: Card[] = [
       "[CHAKRA LINK]",
       "When this Ninja is put in play, if your opponent has more Chakra than you, you can search your Deck for a card and move it to your Chakra area. Then, shuffle your Deck.",
     ],
+    flavor: "That must be it...",
     image: "s23-n-1295",
   },
   {
@@ -554,6 +575,7 @@ export const S23_INVASION: Card[] = [
       "Valid: This Ninja can only be sent out to Battle by itself.",
       "Valid: This Ninja can only be blocked by a Ninja in a Team by itself.",
     ],
+    flavor: "\"Right!!!\"",
     image: "s23-n-1296",
   },
   {
@@ -595,6 +617,7 @@ export const S23_INVASION: Card[] = [
       "[OUT OF CONTROL]",
       "Valid: All of your Lightning Jutsu cards cost (1) less to play.",
     ],
+    flavor: "\"RAAAGH!!\"",
     image: "s23-n-1298",
   },
   {
@@ -615,6 +638,7 @@ export const S23_INVASION: Card[] = [
       "[MUSCLE MEMORY]",
       "Valid: When another effect would change this Ninja's Power, negate that effect instead and this Ninja gets +4/+0 during this turn.",
     ],
+    flavor: "\"Understood!\"",
     image: "s23-n-1299",
   },
   {
@@ -636,6 +660,7 @@ export const S23_INVASION: Card[] = [
       "When this Ninja is put in play, if you have a Fire Ninja, place a -1/-1 coin on target Ninja.",
       "When this Ninja is put in play, if you have a Wind Ninja, you can draw 1 card.",
     ],
+    flavor: "\"Sai, is it?\"",
     image: "s23-n-1300",
   },
   {
@@ -658,6 +683,7 @@ export const S23_INVASION: Card[] = [
       "When this Ninja is put in play, search your Deck for a Fukasaku Ninja card, reveal it, then move it to your hand.",
       "When this Ninja is put in play, heal 1 of your Lightning Ninjas.",
     ],
+    flavor: "\"I'm going to procure us some fresh ingredients.\"",
     image: "s23-n-1301",
   },
   {
@@ -680,6 +706,7 @@ export const S23_INVASION: Card[] = [
       "When this Ninja is put in play, search your Deck for a Shima Ninja card, reveal it, then move it to your hand.",
       "Valid: When this Ninja is Sacrificed, draw 2 cards.",
     ],
+    flavor: "\"For animals, not moving is the hardest thing to do.\"",
     image: "s23-n-1302",
   },
   {
@@ -720,6 +747,7 @@ export const S23_INVASION: Card[] = [
       "[GATES RELEASE]",
       "Valid: While this Ninja is in a Team by itself, this Ninja gets +1/+0 for each of your opponent's Battle Rewards.",
     ],
+    flavor: "\"First Gate: Initial Gate. Release!\"",
     image: "s23-n-1304",
   },
   {
@@ -760,6 +788,7 @@ export const S23_INVASION: Card[] = [
       "[MALEVOLENT RAIN]",
       "[Attacker | Mission] (1): Your opponent discards 1 of their Chakra.",
     ],
+    flavor: "\"Those guys...\"",
     image: "s23-n-1306",
   },
   {
@@ -781,6 +810,7 @@ export const S23_INVASION: Card[] = [
       "When this Ninja is put in play, if there are no \"Sticky\" coins in play, place a \"Sticky\" coin on 2 target Ninjas your opponent controls.",
       "Valid: During your opponent's Organization Phase, Ninjas with a \"Sticky\" coin on them must be organized into the same Team, if possible.",
     ],
+    flavor: "\"What? There's another?\"",
     image: "s23-n-1307",
   },
   {
@@ -801,6 +831,7 @@ export const S23_INVASION: Card[] = [
       "[CHAKRA KINESTHESIA]",
       "[Mission | EOJ] Remove a coin from target Ninja: place a -1/-1 coin on that Ninja.",
     ],
+    flavor: "The feeling of this chakra...",
     image: "s23-n-1308",
   },
   {
@@ -821,6 +852,7 @@ export const S23_INVASION: Card[] = [
       "[CONTROLLING THE ANGER]",
       "[Attacker | Mission] (0): If you have Sasuke Uchiha or Kimimaro in your Village, injure this Ninja.",
     ],
+    flavor: "\"It's already begun.\"",
     image: "s23-n-1309",
   },
   {
@@ -841,6 +873,7 @@ export const S23_INVASION: Card[] = [
       "[IMPARTIAL]",
       "At the start of each player's turn, that player discards 1 of their Chakra.",
     ],
+    flavor: "\"Free at last...\"",
     image: "s23-n-1310",
   },
   {
@@ -862,6 +895,7 @@ export const S23_INVASION: Card[] = [
       "When this Ninja is put in play, place a \"Mirror\" coin on this Ninja.",
       "[EOJ] Remove 1 \"Mirror\" coin from this Ninja: Change the target of a Jutsu to another legal target.",
     ],
+    flavor: "\"I want to fight him in my own way...\"",
     image: "s23-n-1311",
   },
   {
@@ -882,6 +916,7 @@ export const S23_INVASION: Card[] = [
       "[BRASH ATTITUDE]",
       "When this Ninja wins any Battle Reward, discard 2 of your opponent's Chakra.",
     ],
+    flavor: "\"Here it comes!\"",
     image: "s23-n-1312",
   },
   {
@@ -902,6 +937,7 @@ export const S23_INVASION: Card[] = [
       "[EMOTIONLESS]",
       "When this Ninja is put in play, each player discards their Chakra until they only have 3 cards in their Chakra area.",
     ],
+    flavor: "\"Naturally, I won't force you.\"",
     image: "s23-n-1313",
   },
   {
@@ -924,6 +960,7 @@ export const S23_INVASION: Card[] = [
       "Valid: When this Ninja Attacks, discard 1 of your opponent's Chakra and place a \"Drain\" coin on this Ninja.",
       "[Mission | EOJ] Remove a \"Drain\" coin from this Ninja: Move 1 card from the top of your Deck to your Chakra area.",
     ],
+    flavor: "\"So much chakra. I feel like a kid in a candy store.\"",
     image: "s23-n-1314",
   },
   {
@@ -945,6 +982,7 @@ export const S23_INVASION: Card[] = [
       "When this Ninja is put in play, if it was put in play from your hand, discard 3 of your opponent's Chakra.",
       "Valid: Your opponent's Jutsu cards cost (1) more to play.",
     ],
+    flavor: "\"Now you've got it.\"",
     image: "s23-n-1315",
   },
   {
@@ -965,6 +1003,7 @@ export const S23_INVASION: Card[] = [
       "[RIGHT HAND OF THE SNAKE]",
       "[EOJ] (2), Discard a card: negate target Jutsu.",
     ],
+    flavor: "\"She's strong!\"",
     image: "s23-n-1316",
   },
   {
@@ -986,6 +1025,7 @@ export const S23_INVASION: Card[] = [
       "This Ninja gets +3/+0 if you control a Fire Ninja.",
       "This Ninja cannot be blocked by injured Ninjas.",
     ],
+    flavor: "\"You're the only one left.\"",
     image: "s23-n-1317",
   },
   {
@@ -1007,6 +1047,7 @@ export const S23_INVASION: Card[] = [
       "When a Ninja is discarded, you can place a +1/+1 coin on this Ninja.",
       "[Attacker | Mission] (2), Remove a +1/+1 coin from this Ninja: Look at the top 3 cards of your Deck, move 1 of those cards to your hand, and return the rest in any order.",
     ],
+    flavor: "\"Enough with the old folks' small talk.\"",
     image: "s23-n-1318",
   },
   {
@@ -1027,6 +1068,7 @@ export const S23_INVASION: Card[] = [
       "[SAND PUPPETEER]",
       "[EOJ] (1): Move target \"Puppet\" Ninja in 1 of your other Teams on the Battlefield to this Ninja's Team in any position.",
     ],
+    flavor: "\"P-Pardon me!\"",
     image: "s23-n-1319",
   },
   {
@@ -1048,6 +1090,7 @@ export const S23_INVASION: Card[] = [
       "Valid: When this Ninja is put in play or removed from play, reveal the top card of your Deck. If that card is a Ninja card, move it to your hand.",
       "When this Ninja is moved to your Chakra area due to the effect of GROWTH, you can place a Growth coin on 1 of your Ninjas.",
     ],
+    flavor: "\"Don't interrupt Sasuke's focus!\"",
     image: "s23-n-1320",
   },
   {
@@ -1131,6 +1174,7 @@ export const S23_INVASION: Card[] = [
       "[THREE STARS]",
       "When you play a Jutsu whose target is \"1 Jutsu\", draw 2 cards, then discard 1 card.",
     ],
+    flavor: "\"Nice catch.\"",
     image: "s23-n-1324",
   },
   {
@@ -1172,6 +1216,7 @@ export const S23_INVASION: Card[] = [
       "[PERFECT CONTROL]",
       "At the end of the turn that this Ninja was put in play, move all cards that were moved to your Discard Pile during this turn to your Chakra area.",
     ],
+    flavor: "\"Right!\"",
     image: "s23-n-1326",
   },
   {
@@ -1192,6 +1237,7 @@ export const S23_INVASION: Card[] = [
       "[ATTACK & DEFENSE]",
       "[Attacker | Mission] (2), Move a Ninja you control to its owner's hand: Move target Ninja your opponent controls to their hand with Entrance cost equal to the Ninja you moved.",
     ],
+    flavor: "\"I'll handle this.\"",
     image: "s23-n-1327",
   },
   {
@@ -1212,6 +1258,7 @@ export const S23_INVASION: Card[] = [
       "[PUPPET CONTROL]",
       "[EOJ] (1): Move 1 \"Puppet\" Ninja you control that is not in this Ninja's Team to this Ninja's Team in any position.",
     ],
+    flavor: "\"You're good...But...\"",
     image: "s23-n-1328",
   },
   {
@@ -1232,6 +1279,7 @@ export const S23_INVASION: Card[] = [
       "[ORIGAMI ANGEL]",
       "While your opponent has less cards in their hand than you, every Ninja opposing this Ninja gets -2/-2.",
     ],
+    flavor: "\"Where is Naruto Uzumaki?\"",
     image: "s23-n-1329",
   },
   {
@@ -1296,6 +1344,7 @@ export const S23_INVASION: Card[] = [
       "All of your \"Rinnegan\" + \"Animal\" Ninjas get +1/+1.",
       "Valid: When 1 of your \"Rinnegan\" + \"Animal\" Ninjas would be removed from play, you can move it to your hand instead.",
     ],
+    flavor: "\"Just what is this pain you speak of?\"",
     image: "s23-n-1332",
   },
   {
@@ -1356,6 +1405,7 @@ export const S23_INVASION: Card[] = [
       "Effect: The targets Power becomes 0/0 during this turn. If the card that was used to pay for this Jutsu had a Water Symbol, move 1 card in your Discard Pile to the top of your Deck.",
       "Combination (\"Food\"): Give 2 Damage to the target.",
     ],
+    flavor: "\"Now!\"",
     image: "s23-j-865",
   },
   {
@@ -1371,6 +1421,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Fire Jutsu",
       "Effect: Negate and discard the target.",
     ],
+    flavor: "\"Earth Style, Mud Wall!\"",
     image: "s23-j-866",
   },
   {
@@ -1386,6 +1437,7 @@ export const S23_INVASION: Card[] = [
       "Effects: Move X cards from your Discard Pile to the bottom of your Deck in any order. The user gets +X/+0 during this turn.",
       "Combination (\"Food\"): Look at the top 3 cards of your Deck, move 1 to your hand, and the rest to the bottom of your Deck in any order.",
     ],
+    flavor: "\"One down...\"",
     image: "s23-j-867",
   },
   {
@@ -1400,6 +1452,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Ninjas cannot deal Damage during this turn. If Lightning was used to pay for this Jutsu, your Ninjas are unaffected by this effect.",
     ],
+    flavor: "\"That's...\"",
     image: "s23-j-868",
   },
   {
@@ -1416,6 +1469,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Remove the target from the game. The target's controller can draw 2 cards.",
     ],
+    flavor: "\"Kurenai Sensei, can you step back?\"",
     image: "s23-j-869",
   },
   {
@@ -1432,6 +1486,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: The user gets +Y/+0 during this turn, where Y = X times 2. If Lightning was used to pay for this Jutsu, give 2 Damage to the target.",
     ],
+    flavor: "\"Lightning Blade!\"",
     image: "s23-j-870",
   },
   {
@@ -1463,6 +1518,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja",
       "Effect: At the end of the turn, if the target was injured or dealt Damage during the Showdown, discard it.",
     ],
+    flavor: "\"We'll deal with the dog!\"",
     image: "s23-j-872",
   },
   {
@@ -1478,6 +1534,7 @@ export const S23_INVASION: Card[] = [
       "Requirements: \"Animal\"",
       "Effect: Your opponent moves X cards from the top of their Deck to their Discard Pile. While X is greater than 5, this Jutsu cannot be negated or affected by Jutsus.",
     ],
+    flavor: "\"Fang over Fang!\"",
     image: "s23-j-873",
   },
   {
@@ -1493,6 +1550,7 @@ export const S23_INVASION: Card[] = [
       "Requirements: Entrance cost of 3 or more",
       "Effect: Place this card in the users Team in any position with the following: \"[Power: 3/3 (Healthy and Injured)][Valid: When this Ninja is removed from play, give 1 Damage to 1 Ninja][Valid: At the end of the turn, move this Ninja to its owner's Chakra area]\".",
     ],
+    flavor: "How will you counter this?",
     image: "s23-j-874",
   },
   {
@@ -1507,6 +1565,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Discard 1 of your Ninjas. Place X +1/+1 coins on the user, where X = the discarded Ninja's Entrance cost. Then, If X is greater than 3, draw 2 cards.",
     ],
+    flavor: "\"It simply means to be lightly attached to your shoulder or back.\"",
     image: "s23-j-875",
   },
   {
@@ -1523,6 +1582,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: The target gets -3/-3 and negate its effect text.",
     ],
+    flavor: "I get it! That's his ability!",
     image: "s23-j-876",
   },
   {
@@ -1537,6 +1597,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: If the user would receive any Damage during this turn, prevent that Damage instead. Then, injure 1 Ninja opposing the user.",
     ],
+    flavor: "A Lightning Style Shadow Clone!",
     image: "s23-j-877",
   },
   {
@@ -1568,6 +1629,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: The user gets +X/+0 during this turn, where X = the target's Entrance cost. Then, Move the target to the top of its owner's Deck.",
     ],
+    flavor: "\"Rasengan!\"",
     image: "s23-j-879",
   },
   {
@@ -1584,6 +1646,7 @@ export const S23_INVASION: Card[] = [
       "Target: 2 Ninjas in the same Team",
       "Effect: 1 of the target's Combat becomes 0 and the other's Support becomes 0 during this turn.",
     ],
+    flavor: "\"So as you can see, even my Chakra is foul.\"",
     image: "s23-j-880",
   },
   {
@@ -1599,6 +1662,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user.",
       "Effect: Your opponent discards 1 card at random from their hand. The target gets -X/-X during this turn, where X = the Entrance cost of the discarded card (Jutsus are considered to have 0 Entrance cost).",
     ],
+    flavor: "\"We cannot keep the village waiting any longer.\"",
     image: "s23-j-881",
   },
   {
@@ -1615,6 +1679,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: The target gets -2/-2 during this turn. If this Jutsu was played from your Discard Pile, remove it from the game.",
     ],
+    flavor: "\"Giant spider tightrope?\"",
     image: "s23-j-882",
   },
   {
@@ -1629,6 +1694,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Each player discards 1 Chakra for each Ninja they have on the Battlefield.",
     ],
+    flavor: "\"Ninja Art, Grudge Rain.\"",
     image: "s23-j-883",
   },
   {
@@ -1644,6 +1710,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: Injure the target. If Water was used to pay for this Jutsu, the target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"Wind Blade Jutsu!\"",
     image: "s23-j-884",
   },
   {
@@ -1659,6 +1726,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Jutsu",
       "Effect: Your opponent reveals their hand. If they revealed a non-Ninja card that shares a Symbol with the target, negate and move the target back to its owner's hand. Then, draw 1 card.",
     ],
+    flavor: "\"Inoichi is really amazing!\"",
     image: "s23-j-885",
   },
   {
@@ -1675,6 +1743,7 @@ export const S23_INVASION: Card[] = [
       "Effect: Place a +1/+1 coin on each of your Healthy Ninjas. Then, heal all of your injured Ninjas.",
       "Expert (Tsunade): Draw 1 card for each Ninja you healed due to this effect.",
     ],
+    flavor: "The damage is devastating...",
     image: "s23-j-886",
   },
   {
@@ -1691,6 +1760,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja opposing the user",
       "Effect: If the target is injured, remove it from the game. Otherwise, injure the target.",
     ],
+    flavor: "\"Humph... Know pain.\"",
     image: "s23-j-887",
   },
   {
@@ -1707,6 +1777,7 @@ export const S23_INVASION: Card[] = [
       "Target: X Ninjas",
       "Effect: Move the target back to its owner's hand.",
     ],
+    flavor: "\"This world shall know pain...\"",
     image: "s23-j-888",
   },
   {
@@ -1723,6 +1794,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Jutsu",
       "Effect: Negate the target if its cost is X or less. Then, the user gets +X/+X during the turn.",
     ],
+    flavor: "\"This guy... He sucked up the Jutsu!\"",
     image: "s23-j-889",
   },
   // ── MISSION ──
@@ -1739,6 +1811,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: If your opponent has more Ninjas than you, you can search your Deck for a Earth Ninja card with an Entrance cost less than your Turn Marker, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Wh-What is that?!\"",
     image: "s23-m-817",
   },
   {
@@ -1756,6 +1829,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this Mission to the target. When the target is removed from play, the controller of the target discards 2 cards.",
     ],
+    flavor: "\"I'll loosen your mouth.\"",
     image: "s23-m-818",
   },
   {
@@ -1774,6 +1848,7 @@ export const S23_INVASION: Card[] = [
       "Effect: When this Mission is put in play, draw 1 card.",
       "Effect: All Ninjas in the target's Team get -2/-2.",
     ],
+    flavor: "\"Don't get too depressed.\"",
     image: "s23-m-819",
   },
   {
@@ -1790,6 +1865,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Discard the target. In that case, draw X cards. X = the target's Entrance cost.",
     ],
+    flavor: "\"We want Shikamaru to win. No matter what.\"",
     image: "s23-m-820",
   },
   {
@@ -1806,6 +1882,7 @@ export const S23_INVASION: Card[] = [
       "Permanent (3)",
       "[Attacker | Mission] Name a card type, then reveal the top card of your Deck: If the revealed card is the named type, move it to your hand.",
     ],
+    flavor: "\"You haven't said a word. You see something, right?\"",
     image: "s23-m-821",
   },
   {
@@ -1824,6 +1901,7 @@ export const S23_INVASION: Card[] = [
       "Effect: Attach this Mission to the target. The target gets +1/+1.",
       "[EOJ] (Earth): The next time the target would receive Damage during this turn, give that same amount of Damage, minus 1 instead.",
     ],
+    flavor: "\"Get down!\"",
     image: "s23-m-822",
   },
   {
@@ -1841,6 +1919,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this Mission to the target. When the target would be removed from play, move it to your hand instead. Then, if the target had an Entrance cost of 5 or higher, give 1 Damage to 1 Ninja.",
     ],
+    flavor: "\"Your house burned down quite a while ago.\"",
     image: "s23-m-823",
   },
   {
@@ -1857,6 +1936,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Search your Deck for 1 Ninja that shares a Combat Attribute with the target, reveal it, then move it to your hand. Shuffle your Deck afterwards.",
     ],
+    flavor: "\"Well... Father...\"",
     image: "s23-m-824",
   },
   {
@@ -1873,6 +1953,7 @@ export const S23_INVASION: Card[] = [
       "Permanent (2)",
       "Effect: When a Ninja is put in play, injure it.",
     ],
+    flavor: "Well... it seems this is it for me, too.",
     image: "s23-m-825",
   },
   {
@@ -1889,6 +1970,7 @@ export const S23_INVASION: Card[] = [
       "Permanent",
       "Effect: When 1 of your Ninjas is discarded due to the Showdown, you may draw 1 card.",
     ],
+    flavor: "I didn't make it.",
     image: "s23-m-826",
   },
   {
@@ -1904,6 +1986,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Your opponent wins 2 Battle Rewards. In that case, draw 4 cards.",
     ],
+    flavor: "\"They are so useless.\"",
     image: "s23-m-827",
   },
   {
@@ -1921,6 +2004,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this Mission to the target. The target gets +1/+1 for each other Ninja you control. When this Mission is removed from play, draw 2 cards.",
     ],
+    flavor: "\"Wha-?! What are you doing?!\"",
     image: "s23-m-828",
   },
   {
@@ -1937,6 +2021,7 @@ export const S23_INVASION: Card[] = [
       "Permanent",
       "Effect: When a player plays a Jutsu card, move this Mission to its owner's Chakra area. In that case, the opponent of that player draws 3 cards.",
     ],
+    flavor: "\"Naruto... I didn't notice him at all.\"",
     image: "s23-m-829",
   },
   {
@@ -1968,6 +2053,7 @@ export const S23_INVASION: Card[] = [
       "Counter",
       "Effect: Your Ninjas and Missions cannot be removed from play by your opponent's effects during this turn.",
     ],
+    flavor: "\"Old man, seconds please!\"",
     image: "s23-m-831",
   },
   {
@@ -1983,6 +2069,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Each player randomly selects 1 of their Ninjas and removes them from their Teams. Both Ninjas must be sent out to Battle by themselves during this turn and must be opposed. When either of the Ninjas wins any Victory this turn, that Ninja's controller draws 2 cards and wins 1 Battle Reward.",
     ],
+    flavor: "\"You showed up Sasuke real good!\"",
     image: "s23-m-832",
   },
   {
@@ -2001,6 +2088,7 @@ export const S23_INVASION: Card[] = [
       "Effect: The target gets +2/+2.",
       "[EOJ] Move this Mission to its owner's Chakra area: The target gets +5/+5 during this turn.",
     ],
+    flavor: "\"I can't believe they stole something stupid like this.\"",
     image: "s23-m-833",
   },
   {
@@ -2017,6 +2105,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: The target must be blocked this turn. If the target wins any Victory during this turn, you can draw 2 cards. If the target gets any Defeat, discard 1 card.",
     ],
+    flavor: "\"Who do you think will win, boys?\"",
     image: "s23-m-834",
   },
   {
@@ -2034,6 +2123,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 non-Permanent Mission",
       "Effect: Copy the effect of the target (Select new legal targets, if any).",
     ],
+    flavor: "\"How come you're gritting your teeth so hard.\"",
     image: "s23-m-835",
   },
   {
@@ -2049,6 +2139,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Search your Deck for 4 Ninja cards with different names and reveal them. Your opponent chooses 2 of those cards. Move the chosen cards to your hand and discard the others. Then, shuffle your Deck.",
     ],
+    flavor: "It's the gang of thieves!",
     image: "s23-m-836",
   },
   {
@@ -2066,6 +2157,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this Mission to the target. The target gets -3/-3. When the target is removed from play, its controller discards 2 Chakra.",
     ],
+    flavor: "\"We're going to split up into two teams and lie in wait for them.\"",
     image: "s23-m-837",
   },
   {
@@ -2083,6 +2175,7 @@ export const S23_INVASION: Card[] = [
       "Effect: When a Ninja is discarded, its controller discards 2 Chakra.",
       "Effect: While your opponent has no Chakra, your Jutsu cards cost (1) less.",
     ],
+    flavor: "\"That seat is reserved for me.\"",
     image: "s23-m-838",
   },
   {
@@ -2098,6 +2191,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Reveal the top 4 cards of your Deck. Move any revealed \"Rogue Ninja\" Ninja cards to your hand. Move the rest to the bottom of your Deck in any order.",
     ],
+    flavor: "\"Then, what's the plan?\"",
     image: "s23-m-839",
   },
   {
@@ -2115,6 +2209,7 @@ export const S23_INVASION: Card[] = [
       "Effect: Attach this Mission to your opponent's Ninja that shares the highest Entrance cost among their Ninjas.",
       "Effect: When the attached Ninja is removed from play, draw 3 cards.",
     ],
+    flavor: "\"No, it seems to be a vendetta.\"",
     image: "s23-m-840",
   },
   {
@@ -2132,6 +2227,7 @@ export const S23_INVASION: Card[] = [
       "Effect: When this Mission is put in play, draw 1 card.",
       "Effect: When you would draw a card during your Start Phase, look at the top 2 cards of your Deck and move 1 of those cards to your hand and the other to the bottom of your Deck instead.",
     ],
+    flavor: "\"Wow...\"",
     image: "s23-m-841",
   },
   {
@@ -2148,6 +2244,7 @@ export const S23_INVASION: Card[] = [
       "Permanent (2)",
       "Effect: When any of your Ninjas are removed from play, search your Deck for a Ninja card with the same name as that Ninja, reveal it, and move it to your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'm saying, you were supposed to be Hokage.\"",
     image: "s23-m-842",
   },
   {
@@ -2180,6 +2277,7 @@ export const S23_INVASION: Card[] = [
       "Target: 1 Ninja",
       "Effect: When the target wins any Battle Reward, its controller draws 1 card.",
     ],
+    flavor: "\"A receiver, or they use it to transmit chakra to each other.\"",
     image: "s23-m-844",
   },
   {
@@ -2197,6 +2295,7 @@ export const S23_INVASION: Card[] = [
       "Effect: When you sacrifice a Ninja, place a coin on this Mission.",
       "Effect: The maximum Team size for each player is 1.",
     ],
+    flavor: "\"Take action before it becomes more difficult.\"",
     image: "s23-m-845",
   },
   {
@@ -2212,6 +2311,7 @@ export const S23_INVASION: Card[] = [
     text: [
       "Effect: Draw 1 card. Then, draw 1 card for each Ninja you have with Sacrifice.",
     ],
+    flavor: "\"Disperse!\"",
     image: "s23-m-846",
   },
 ];

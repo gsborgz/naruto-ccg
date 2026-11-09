@@ -25,6 +25,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Temporary Vessel]",
       "If this Ninja is in your hand at the end of your turn, you can send 1 of your in-play Ninjas with a \"Water\" symbol and an Entrance cost of 4 or more to your Chakra area. In that case, put this Ninja in play in the same Team as that Ninja.",
     ],
+    flavor: "\"Now, ... your body will be mine.\"",
     image: "s08-n-255",
   },
   {
@@ -45,6 +46,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Pure Anger]",
       "While your opponent has 1 or more \"Sound\" Ninjas in play, this Ninja's healthy status Combat value becomes the same as its injured status Combat value.",
     ],
+    flavor: "\"I'll destroy you...\"",
     image: "s08-n-256",
   },
   {
@@ -66,6 +68,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "When this Ninja is put in play, discard 1 Jutsu or Mission card in your hand. If you do not, discard this Ninja.",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Jutsu or Mission cards.",
     ],
+    flavor: "\"I've decided to join Orochimaru!\"",
     image: "s08-n-257",
   },
   {
@@ -87,6 +90,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "At the beginning of each of your turns, you can place a Ninja Blade coin (symbolizing a Potion coin) on this Ninja.",
       "Valid: Each Potion coin on this Ninja is treated as a Ninja Blade coin symbolizing +1/+1 during your turns and -1/-1 during your opponent's turns.",
     ],
+    flavor: "\"What are you doing here, stranger?\"",
     image: "s08-n-258",
   },
   {
@@ -107,6 +111,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Despair at the Clan]",
       "When this Ninja is put in play, you can discard X number of your in-play Ninjas. In that case, draw X number of cards.",
     ],
+    flavor: "\"I find this clan hopelessly unfit for my capacity.\"",
     image: "s08-n-259",
   },
   {
@@ -127,6 +132,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Representative of the Clan]",
       "Valid: All your in-play Ninjas with \"Uchiha\" in their names get +2/+0 except this Ninja.",
     ],
+    flavor: "\"I'm proud of you, son...\"",
     image: "s08-n-260",
   },
   {
@@ -147,6 +153,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Motherly Love]",
       "Valid: Your in-play \"Sasuke Uchiha\" gets +1/+1.",
     ],
+    flavor: "\"Your father always cares about both of you.\"",
     image: "s08-n-261",
   },
   {
@@ -168,6 +175,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Each Ninja that receives Damage from this Ninja's Team due to the Showdown is moved to the bottom of its original owner's Deck.",
       "This Ninja cannot be removed from play by the effects of your opponent's Ninjas or Jutsu cards.",
     ],
+    flavor: "\"Let's go, Lee!!\" \"Yes, Guy sensei!!!\"",
     image: "s08-n-262",
   },
   {
@@ -188,6 +196,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Brothers]",
       "When you put this Ninja in play by sending your in-play \"Sasuke Uchiha\" to your Chakra area, you can put the same number of Growth coins that was on that \"Sasuke Uchiha\" on this Ninja.",
     ],
+    flavor: "\"Forgive me, Sasuke... There'll be another time.\" \"It hurts!\"",
     image: "s08-n-263",
   },
   {
@@ -208,6 +217,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Strong-Arm Tactics]",
       "During the Exchange of Jutsu, you can discard 2 of your Chakras. In that case, choose one of the following: This Ninja's Team and the Team Battling against this Ninja's Team perform a Mental Power Battle during the turn OR This Ninja's Team and your opponent's Team Battling against this Ninja's Team cannot perform a Mental Power Battle during the turn.",
     ],
+    flavor: "\"Now, what do you think?\" \"......\"",
     image: "s08-n-264",
   },
   {
@@ -229,6 +239,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Valid: This Ninja can only be sent out to Battle in the same Team as \"Sakon\".",
       "Valid: When you are the Attacker, at the beginning of the Battle Phase, you may move this in-play Ninja into any of your Teams.",
     ],
+    flavor: "\"Let's finish this quickly! Change to 'State 2'!!\"",
     image: "s08-n-265",
   },
   {
@@ -249,6 +260,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Protection with Bones]",
       "Each time your opponent's Ninja uses a Jutsu card targeting any of your Ninjas in this Ninja's Team, including this Ninja, and its effect is applied successfully, the user of that Jutsu receives 1 Damage.",
     ],
+    flavor: "\"My moves are irregular, aren't they? This is my Kekkei Genkai.\"",
     image: "s08-n-266",
   },
   {
@@ -290,6 +302,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[A Great Debt]",
       "If this Ninja is in your hand during the Exchange of Jutsu, and you have less Ninjas than your opponent, you can place this Ninja as the Head Ninja in your Team with only \"Leaf\" Ninja(s) (The Entrance cost of this Ninja has to be equal or less than your Turn Marker) .",
     ],
+    flavor: "\"We owe the Leaf Village ... a great debt.\"",
     image: "s08-n-268",
   },
   {
@@ -310,6 +323,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Mimicry]",
       "Valid: While this Ninja is in the same Team as 1 or more \"Puppet\" Ninjas, none of the Ninjas in this Ninja's Team, including this Ninja, can be the target of your opponent's Jutsu or Mission cards.",
     ],
+    flavor: "\"Your Jutsu seems to have no effect on puppets.\"",
     image: "s08-n-269",
   },
   {
@@ -330,6 +344,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Wind Pressure]",
       "When this Ninja is put in play, you can look at all the cards in your opponent's hand, select 1 Mission card of your choice if there is any, and discard it.",
     ],
+    flavor: "\"Are you going to give up again?\"",
     image: "s08-n-270",
   },
   {
@@ -351,6 +366,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute.",
       "At the beginning of the Exchange of Jutsu, you can select 1 of your opponent's Ninjas Battling against this Ninja. That Ninja cannot be sent out to Battle during the next turn.",
     ],
+    flavor: "\"Creak\"",
     image: "s08-n-271",
   },
   {
@@ -372,6 +388,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Valid: This Ninja can only be sent out to Battle in the same Team as a Ninja with a \"Manipulation\" Combat Attribute.",
       "While this Ninja is Battling, the cost of any \"Puppet Show, Secret Black Move, Iron Maiden\" Jutsu card(s) in your hand is reduced by 1 \"Wind\" symbol.",
     ],
+    flavor: "\"Creak\"",
     image: "s08-n-272",
   },
   {
@@ -392,6 +409,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Risky New Jutsu]",
       "This Ninja can only be put in play by the following: If this Ninja is in your hand during your Mission Phase, and you have both \"Kiba Inuzuka\" and \"Akamaru\" in play, you can put this Ninja in play by moving both those \"Kiba Inuzuka\" and \"Akamaru\" to your Chakra area. (The Entrance cost of this Ninja has to be equal or less than your Turn Marker.)",
     ],
+    flavor: "\"Only one more shot of Wolf Fang Over Fang is possible... The next will be the last.\"",
     image: "s08-n-273",
   },
   {
@@ -412,6 +430,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Desperate Pursuit]",
       "Valid: When this Ninja is sent out to Attack by itself, select 1 of your opponent's Teams. This Ninja's Team can only be blocked by the selected Team.",
     ],
+    flavor: "\"...I won't let such a thing happen ......\"",
     image: "s08-n-274",
   },
   {
@@ -432,6 +451,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Last-Ditch Escape Attempt]",
       "Valid: While you have both this Ninja and \"Akamaru\" in play, if either or both of them are discarded, those Ninjas are moved to the original owner's hand instead of the Discard Pile.",
     ],
+    flavor: "\"No way... He's already catching up...\"",
     image: "s08-n-275",
   },
   {
@@ -452,6 +472,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Determination to Repay the Trust]",
       "If this Ninja is a Back Ninja while you have \"Shikamaru Nara\" in play, use this Ninja's Combat value instead of its Support value in calculating the Team Power of its Team.",
     ],
+    flavor: "\"Everyone, go!!\"",
     image: "s08-n-276",
   },
   {
@@ -472,6 +493,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[For Those Who Believe in Me]",
       "Valid: When this Ninja is discarded while in injured status, you can give 1 Damage to 1 Ninja Battling against this Ninja.",
     ],
+    flavor: "\"I can never lose... I have a reason for that.\"",
     image: "s08-n-277",
   },
   {
@@ -492,6 +514,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Reasonable Choice]",
       "Valid: During your opponent's Organization Phase, you can return this in-play Ninja to its original owner's hand. In that case, you can put up to 1 of each \"Naruto Uzumaki\" and \"Shikamaru Nara\" in your Discard Pile in play.",
     ],
+    flavor: "\"Naruto, can you move according to my plan?\" \"!\"",
     image: "s08-n-278",
   },
   {
@@ -513,6 +536,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and you don't have the \"Power of State 2\" Mission card in play, this Ninja gets +1 Entrance cost and +1 Hand cost.",
       "When this Ninja's Team wins a Victory, you win 1 Battle Reward. When this Ninja's Team wins an Outstanding Victory, you win 2 Battle Rewards.",
     ],
+    flavor: "\"I've hardened my bones to the limit.... They'll penetrate beyond your sand shield.\"",
     image: "s08-n-279",
   },
   {
@@ -534,6 +558,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and you don't have the \"Power of State 2\" Mission card in play, this Ninja gets +1 Entrance cost and +1 Hand cost.",
       "When this Ninja is sent out to Battle and opposed, you can flip a Ninja Blade coin; If it's heads, give 1 Damage to 1 of your opponent's Ninjas.",
     ],
+    flavor: "\"It was a stupid game... but I did find some enjoyment in it. This is a reward for that.\"",
     image: "s08-n-280",
   },
   {
@@ -555,6 +580,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and you don't have the \"Power of State 2\" Mission card in play, this Ninja gets +1 Entrance cost and +1 Hand cost.",
       "When this Ninja is sent out to Battle, you can select and discard 1 of your opponent's Chakras. In that case, move 1 of the cards in your Discard Pile to your Chakra area.",
     ],
+    flavor: "\"Well, it's time for a meal...\"",
     image: "s08-n-281",
   },
   {
@@ -576,6 +602,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and you don't have the \"Power of State 2\" Mission card in play, this Ninja gets +1 Entrance cost and +1 Hand cost.",
       "While this Ninja is in the same Team as \"Ukon,\" it gets +2/+2.",
     ],
+    flavor: "\"How do you want it?\" \"...... Broken in pieces.\"",
     image: "s08-n-282",
   },
   {
@@ -597,6 +624,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and you don't have the \"Power of State 2\" Mission card in play, this Ninja gets +1 Entrance cost and +1 Hand cost.",
       "Every Ninja Battling against this Ninja gets -1/-1.",
     ],
+    flavor: "\"Heh-heh... In 'State 2,' I can use dozens of Genjutsu with my flute...\"",
     image: "s08-n-283",
   },
   {
@@ -618,6 +646,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and the \"The Final Valley\" Mission card is not in play, this Ninja gets +2 Entrance cost.",
       "Valid: This Ninja cannot be the target of your opponent's Jutsu cards and is unaffected by the effects of your opponent's Ninja cards.",
     ],
+    flavor: "\"Hyaaah!!!\"",
     image: "s08-n-288",
   },
   {
@@ -639,6 +668,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and the \"The Final Valley\" Mission card is not in play, this Ninja gets +2 Entrance cost.",
       "Valid: This Ninja cannot be the target of your opponent's Jutsu cards and is unaffected by the effects of your opponent's Ninja cards.",
     ],
+    flavor: "\"I am even more special than you.\"",
     image: "s08-n-289",
   },
   {
@@ -659,6 +689,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Search for Sasuke]",
       "Valid: While your opponent has \"Sasuke Uchiha\" in play, this Ninja gets +0/+2.",
     ],
+    flavor: "\"Yes... Sasuke is alive...\"",
     image: "s08-n-290",
   },
   {
@@ -679,6 +710,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Accurate Analysis]",
       "Valid: All your in-play Ninjas with no effect texts (including the Ninjas with negated effect texts) get +1/+1.",
     ],
+    flavor: "\"I guessed it was a trap for luring us into this place.\"",
     image: "s08-n-291",
   },
   {
@@ -699,6 +731,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Intensive Care]",
       "At the end of your turn, you can discard 2 of your Chakras with a \"Wind\" symbol. In that case, select and move 1 of the cards in your Discard Pile to the top of its original owner's Deck.",
     ],
+    flavor: "\"Control your Chakra with the utmost care!\"",
     image: "s08-n-292",
   },
   {
@@ -719,6 +752,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[The Worst Outcome]",
       "At the end of the turn that this Ninja was sent out to Battle, you can move 1 of the \"Genin\" only Ninjas in your Discard Pile to its original owner's hand.",
     ],
+    flavor: "\"I'm sorry ... I couldn't come in time....\"",
     image: "s08-n-293",
   },
   {
@@ -739,6 +773,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Mission for Adults]",
       "Valid: While this Ninja is Battling, this Ninja gets +1/+0 for each \"Female\" Ninja in its Team and -1/+0 for each \"Female\" Ninja in the Team Battling against this Ninja.",
     ],
+    flavor: "\"It gets too dangerous from here... It's a mission for adults.\"",
     image: "s08-n-294",
   },
   {
@@ -759,6 +794,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Immense Power]",
       "When this Ninja is sent out to Battle, you can search for 1 Jutsu card with \"Requirements: \"Sand\" Combat Attribute\" in the top 5 cards of your Deck, show it to your opponent, and place it in your hand. Then, return the rest to the top of your Deck and shuffle it.",
     ],
+    flavor: "\"It's extremely simple for me to generate sand out of soil.\"",
     image: "s08-n-295",
   },
   {
@@ -779,6 +815,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Looking for My Cousin]",
       "At the end of your turn, you can discard 1 of your Chakras. In that case, put 1 \"Fuma Clan\" Ninja in your hand in play. (The Entrance cost of the Ninja has to be equal to or less than your Turn Marker.)",
     ],
+    flavor: "\"I must rescue Arashi...!\"",
     image: "s08-n-296",
   },
   {
@@ -799,6 +836,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Entertainment that Brings Death]",
       "Every \"Male\" Ninja Battling against this Ninja gets +0/-1 during the turn.",
     ],
+    flavor: "\"My final mission is to guide my guest to the other world...\"",
     image: "s08-n-297",
   },
   {
@@ -819,6 +857,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Robber]",
       "When this Ninja is sent out to Battle and opposed, your opponent must discard 1 of their Chakras.",
     ],
+    flavor: "\"Everyone, stop talking and finish this now!\"",
     image: "s08-n-298",
   },
   {
@@ -839,6 +878,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Huge Shears]",
       "When this Ninja is sent out to Attack, it gets +1/+0 during the turn.",
     ],
+    flavor: "\"Everything is for the revival of the Fuma clan!\"",
     image: "s08-n-299",
   },
   {
@@ -859,6 +899,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Silver Path]",
       "When this Ninja is sent out to Block, it gets +1/+0 during the turn.",
     ],
+    flavor: "\"Don't worry. My little ones are making a silver path that leads to them.\"",
     image: "s08-n-300",
   },
   {
@@ -879,6 +920,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Molting]",
       "Valid: During the Exchange of Jutsu, you can move this Ninja to your Chakra area. In that case, you can search for 1 \"Kagero + Female\" in your Deck and put it in play in any position in this Ninja's Team. Then, shuffle your Deck.",
     ],
+    flavor: "\"That's when I can end my life in my true form...!\"",
     image: "s08-n-301",
   },
   {
@@ -900,6 +942,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "This Ninja cannot be put in play without using the [Molting] effect. When this Ninja is put in play, you can move 1 \"Kagero\" in your Chakra area to the top of your Deck.",
       "Valid: Move this Ninja to the bottom of its original owner's Deck at the end of your opponent's turn. This effect cannot be negated.",
     ],
+    flavor: "\"I believed... we could revive our clan some day.... I did believe in it...\"",
     image: "s08-n-302",
   },
   {
@@ -917,6 +960,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     injured: { combat: 3, support: 0 },
     attributes: ["Ninjutsu"],
     text: [],
+    flavor: "\"I'm sorry, Sasame... I made you sad...\"",
     image: "s08-n-303",
   },
   {
@@ -938,6 +982,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "This Ninja can use Jutsu cards with \"Requirements: Satoosa.\"",
       "When this Ninja is put in play, discard 2 of your in-play \"Fuma Clan\" Ninjas. If you do not, discard this Ninja.",
     ],
+    flavor: "\"The Arashi you know no longer exists.\"",
     image: "s08-n-304",
   },
   {
@@ -959,6 +1004,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "While this Ninja is in your hand and you don't have the \"Power of State 2\" Mission card in play, this Ninja gets +1 Entrance cost and +1 Hand cost.",
       "During the Exchange of Jutsu, you can switch the positions of the Head Ninja and a Back Ninja of the Team Battling against this Ninja.",
     ],
+    flavor: "\"You know nothing!!\"",
     image: "s08-n-305",
   },
   {
@@ -979,6 +1025,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Precious Friend]",
       "When this Ninja is put in play, place a Ninja Blade coin symbolizing +1/+1 on this Ninja for every 2 cards in your hand. (rounded down)",
     ],
+    flavor: "\"Sakura!\" \"Naruto...!\"",
     image: "s08-n-306",
   },
   {
@@ -999,6 +1046,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Snake's Glare]",
       "While this Ninja is Battling, the Power of each Ninja in this Ninja's Team, including this Ninja, and each Ninja in the Team Battling against this Ninja become the original printed value and cannot be changed.",
     ],
+    flavor: "\"It's only natural. The prey must never let down its guard, not even for a moment...in the presence of its predator.\"",
     image: "s08-n-us055",
   },
   {
@@ -1019,6 +1067,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Targeted Prey]",
       "If this Ninja is sent out to Attack as the Head Ninja, you can do the following after the Showdown: Select and give 1 Damage to 1 of your opponent's Ninjas that were sent out to Block as a Head Ninja during the turn.",
     ],
+    flavor: "\"A sound wave I can channel with my chakra, focusing all its energy on any target I desire!\"",
     image: "s08-n-us056",
   },
   {
@@ -1039,6 +1088,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Absorption of the Damage]",
       "While this Ninja is a Back Ninja, and the Head Ninja of this Ninja's Team is a \"Sound\" only Ninja, you can reduce the Damage that the Head Ninja receives by the effects your opponent's Jutsu or Ninja cards by 1.",
     ],
+    flavor: "\"See, I can manipulate ultrasonic waves and air pressure. I can obliterate boulders, or make the ground itself as soft as a feather cushion.\"",
     image: "s08-n-us057",
   },
   {
@@ -1059,6 +1109,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Better Power of Insight than Sharingan Eye]",
       "Valid: While this Ninja is Battling, you can discard 1 of your Chakras with an \"Earth\" symbol to negate and discard a Jutsu card with \"Requirements: Sharingan Eye\" being used by your opponent's Ninja.",
     ],
+    flavor: "\"In fact, they say the Uchiha clan's Sharingan was derived from the Byakugan sometime long ago. But for sheer power of insight... The Byakugan is the stronger of the two.'",
     image: "s08-n-us058",
   },
   {
@@ -1080,6 +1131,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "When this Ninja is opposed, you can place 2 Ninja Blade coins (symbolizing a Drug coin) on 1 of your opponent's Ninjas Battling against this Ninja.",
       "Valid: A Ninja with a Drug coin cannot be sent out to Battle. A player who controls 1 or more Ninjas with Drug coin(s) on them can remove a Drug coin from each of them at the beginning of their turn.",
     ],
+    flavor: "\"Hmph.\"",
     image: "s08-n-us059",
   },
   {
@@ -1100,6 +1152,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Protection]",
       "Valid: Any Ninja in this Ninja's Team, including this Ninja, cannot be the target of your opponent's Jutsu cards and is unaffected by the effects of your opponent's Ninja cards.",
     ],
+    flavor: "\"Katsuyu!\" \"Acid Slime!\"",
     image: "s08-n-us060",
   },
   {
@@ -1120,6 +1173,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[The Limits of My Ability]",
       "At the beginning of your turn, you can discard your in-play \"Fugaku Uchiha\" and \"Mikoto Uchiha\". In that case, you can search for 2 cards of your choice in your Deck, show them to your opponent, and place them in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Why did you do this..? Itachi, why?\" \"To test the limits... of my ability...\"",
     image: "s08-n-us061",
   },
   {
@@ -1140,6 +1194,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Outstanding Sense of Smell]",
       "When this Ninja is sent out to Battle, reveal the top card of your Deck. If it is a Ninja card, place it in your hand and move 1 card from your hand to the bottom of your Deck. If it's not a Ninja card, move it back to the top of the Deck.",
     ],
+    flavor: "\"By concentrating his Chakra in his nose, Kiba can make his sense of smell a thousand times more sensitive than average. It's easy for him to distinguish people by their scent.\"",
     image: "s08-n-us062",
   },
   {
@@ -1160,6 +1215,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[The Fifth Gate Opened!]",
       "Valid: At the beginning of your turn, place a Ninja Blade coin (symbolizing a Gate coin) on this Ninja. For every Gate coin on this Ninja, this Ninja gets +1/+0. When you place the 5th Gate coin on this Ninja, discard this Ninja at the end of that turn.",
     ],
+    flavor: "\"One more and we are finished! The fifth gate — Gate of Closing ... open!!\"",
     image: "s08-n-us063",
   },
   {
@@ -1180,6 +1236,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Tracking by Insects]",
       "During the Exchange of Jutsu, if this Ninja is a Stand-By Ninja, you can place this Ninja in any position of any of your Battling Teams.",
     ],
+    flavor: "\"Shino?... How did you find us?\" \"I planted a beetle on you as you left the arena... A female beetle.\"",
     image: "s08-n-us064",
   },
   {
@@ -1200,6 +1257,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "[Resolution]",
       "When this Ninja is opposed, if the Team Power of this Ninja's Team is lower than the Team Battling against this Ninja's Team, this Ninja can use a Jutsu card with \"Requirements: Byakugan\" without paying its Jutsu cost during the turn.",
     ],
+    flavor: "\"But, now, finally, you're the one watching me. And I'll show you what I can do, ... Naruto!\"",
     image: "s08-n-us065",
   },
   // ── JUTSU ──
@@ -1216,6 +1274,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +2/+0 during this turn. If the user has a \"Taijutsu\" Combat Attribute, it gets an additional +2/+0 during this turn.",
     ],
+    flavor: "\"Leaf's Severe Hurricane!!\"",
     image: "s08-j-232",
   },
   {
@@ -1231,6 +1290,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Each of your Potion coins",
       "Effect: The target is treated as a Ninja Blade coin symbolizing +2/+2 instead during this turn.",
     ],
+    flavor: "\"Oh... I'm a bit loopy.\"",
     image: "s08-j-233",
   },
   {
@@ -1247,6 +1307,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User and 1 Ninja Batting against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"We're going together...\"",
     image: "s08-j-234",
   },
   {
@@ -1262,6 +1323,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Akamaru\"",
       "Effect: Look at the top 5 cards of your opponent's Deck and return them to the top of the same Deck in the original order. While this Jutsu card is in your Chakra area, each time your \"Akamaru\" is sent out to Attack, discard the top card of your opponent's Deck.",
     ],
+    flavor: "\"Arf!\"",
     image: "s08-j-235",
   },
   {
@@ -1277,6 +1339,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Double-Headed Wolf\"",
       "Effect: Discard up to X number of cards from the top of your opponent's Deck. X = the user's current Combat value. The maximum value of X is 10. The \"Wolf Fang Over Fang\" Jutsu card's effect can only be applied once per turn per player.",
     ],
+    flavor: "\"Take this!! Wolf Fang Over Fang!!\"",
     image: "s08-j-236",
   },
   {
@@ -1293,6 +1356,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: If the target's Team wins a Victory or an Outstanding Victory during this turn, discard up to 3 of your opponent's Battle Rewards.",
     ],
+    flavor: "\"Slamming Palm!!\"",
     image: "s08-j-237",
   },
   {
@@ -1309,6 +1373,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin twice; If you get heads at least once, give 2 Damage to the target.",
     ],
+    flavor: "\"Accuracy: 100%, Power: Maximum.\"",
     image: "s08-j-238",
   },
   {
@@ -1325,6 +1390,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+0 during this turn.",
     ],
+    flavor: "\"Multiple Fists Barrage!!\"",
     image: "s08-j-239",
   },
   {
@@ -1341,6 +1407,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Jutsu card being played except this card",
       "Effect: Negate and discard the target.",
     ],
+    flavor: "\"Summoning Jutsu... Rashomon!!\"",
     image: "s08-j-240",
   },
   {
@@ -1356,6 +1423,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Ukon\" + \"State 2\"",
       "Effect: Select 1 of the cards in your opponent's hand at random and discard it. If the discarded card is a Ninja card, discard an additional card at random.",
     ],
+    flavor: "\"Hey... Who are you looking for?\"",
     image: "s08-j-241",
   },
   {
@@ -1371,6 +1439,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Tayuya\"",
       "Effect: Search for 1 \"Doki\" Ninja card in your Deck and place it in the user's Team as the Head Ninja. Then, shuffle your Deck.",
     ],
+    flavor: "\"I'm gonna play a melody of death!\"",
     image: "s08-j-242",
   },
   {
@@ -1387,6 +1456,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: If the user is in the same Team as \"Doki,\" the target's Power becomes X/X during this turn. X = the lowest value among the target's Combat and Support values.",
     ],
+    flavor: "\"Finale, Ninth Passage, Demon Revolution!!\"",
     image: "s08-j-243",
   },
   {
@@ -1403,6 +1473,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: X number of Ninjas",
       "Effect: The target gets +0/-3 during this turn.",
     ],
+    flavor: "\"This Genjutsu immobilizes and binds the enemy!\"",
     image: "s08-j-244",
   },
   {
@@ -1419,6 +1490,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +X/+0 during this turn. X = the total number of your opponent's in-play healthy Ninjas.",
     ],
+    flavor: "\"Watch my Willow Dance!\"",
     image: "s08-j-245",
   },
   {
@@ -1435,6 +1507,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+3 during this turn.",
     ],
+    flavor: "\"Camellia Dance!!\"",
     image: "s08-j-246",
   },
   {
@@ -1451,6 +1524,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin once for each target. Change every Ninja that got heads to injured status.",
     ],
+    flavor: "\"Larch Dance.\"",
     image: "s08-j-247",
   },
   {
@@ -1467,6 +1541,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: The user's Battling Team",
       "Effect: If the user is Battling as a Blocker, the target gets +10 Team Power or +10 Team Mental Power during this turn. If the target's Team wins an Outstanding Victory during this turn, it becomes a Victory.",
     ],
+    flavor: "\"I gathered subterranean minerals with high levels of hardness, pressurized them with my Chakra, and mixed them into the sand.\"",
     image: "s08-j-248",
   },
   {
@@ -1483,6 +1558,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: If the user is in the same Team as both \"Crow\" and \"Black Ant,\" give 2 Damage to the target.",
     ],
+    flavor: "\"The end.\"",
     image: "s08-j-249",
   },
   {
@@ -1499,6 +1575,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Return the target to its original owner's hand. If the target has a \"Water\" symbol, move it to the bottom of its original owner's Deck instead.",
     ],
+    flavor: "\"Cyclone Scythe Jutsu!!\"",
     image: "s08-j-250",
   },
   {
@@ -1515,6 +1592,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin; If it's heads, discard the target. If it's tails, the target gets -3/-3 during this turn.",
     ],
+    flavor: "\"That Jutsu is my only option ...\"",
     image: "s08-j-251",
   },
   {
@@ -1531,6 +1609,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Back Ninja Battling against the user",
       "Effect: Change the target to the Head Ninja of its Team. In addition, the target's Power becomes 0/0 during this turn.",
     ],
+    flavor: "\"Vine!\"",
     image: "s08-j-252",
   },
   {
@@ -1547,6 +1626,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +5/+0 during this turn. Also, if the target's Team wins a Victory or an Outstanding Victory, give 2 Damage to 1 Ninja Battling against the target.",
     ],
+    flavor: "\"Flower!\"",
     image: "s08-j-253",
   },
   {
@@ -1562,6 +1642,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User's Team",
       "Effect: The target gets +X Team Power or +X Team Mental Power during this turn. X = the total number of \"Naruto Uzumaki,\" \"Kiba Inuzuka,\" \"Shikamaru Nara,\" \"Choji Akimichi,\" and \"Neji Hyuga\" you have in play.",
     ],
+    flavor: "\"Ugh... Now is your chance, Kiba!\"",
     image: "s08-j-254",
   },
   {
@@ -1578,6 +1659,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +7/+0 during this turn. In addition, if the target's Team wins a Victory or an Outstanding Victory, you can move up to 2 of your opponent's Battle Rewards to your Chakra area face up.",
     ],
+    flavor: "\"Rasengan!!\"",
     image: "s08-j-255",
   },
   {
@@ -1594,6 +1676,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: (1) User, (2) 1 Ninja Battling against the user",
       "Effect: During this turn, each time target (1) receives any Damage, give 1 Damage to target (2).",
     ],
+    flavor: "\"Those Chakra threads are connected to the Chakra Network of my heart...\"",
     image: "s08-j-256",
   },
   {
@@ -1610,6 +1693,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +7/+0 during this turn. In addition, if the target's Team wins an Outstanding Victory, select up to 2 of the cards in your opponent's hand at random and discard them.",
     ],
+    flavor: "\"Chidori!!\"",
     image: "s08-j-259",
   },
   {
@@ -1626,6 +1710,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: The target gets +3/+0 during this turn.",
     ],
+    flavor: "\"I'm gonna make you sorry with this!\"",
     image: "s08-j-260",
   },
   {
@@ -1641,6 +1726,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Tayuya\"",
       "Effect: Any Team cannot perform a Mental Power Battle during this turn and the next turn.",
     ],
+    flavor: "\"There!\"",
     image: "s08-j-263",
   },
   {
@@ -1657,6 +1743,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Each of your opponent's Ninjas",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"I'm going to show you the Bracken Dance.\"",
     image: "s08-j-264",
   },
   {
@@ -1673,6 +1760,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin; If it's heads, the target's Power becomes 0/0 during this turn. If it's tails, move the target to its original owner's hand.",
     ],
+    flavor: "\"The Chakra cage shrinks gradually...\"",
     image: "s08-j-265",
   },
   {
@@ -1688,6 +1776,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Medical\"",
       "Effect: Move X number of cards in your Discard Pile to the top of your Deck in any order you like. X = the number of your in-play Ninjas with \"Medical\".",
     ],
+    flavor: "\"Although we're using his hair as the medium, take extreme care to restore the right composition of cells in the lost parts!\"",
     image: "s08-j-266",
   },
   {
@@ -1704,6 +1793,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Flip a Ninja Blade coin; If it's heads, give 1 Damage to the target.",
     ],
+    flavor: "\"Sand Shower!!\"",
     image: "s08-j-267",
   },
   {
@@ -1720,6 +1810,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja in 1 of your opponent's Teams",
       "Effect: Change the target to injured status.",
     ],
+    flavor: "\"Sand Tsunami!!\"",
     image: "s08-j-268",
   },
   {
@@ -1736,6 +1827,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: All of your opponent's injured Ninjas",
       "Effect: Discard the target.",
     ],
+    flavor: "\"It's not finished yet.\"",
     image: "s08-j-269",
   },
   {
@@ -1752,6 +1844,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Move the target to the bottom of its original owner's Deck.",
     ],
+    flavor: "\"...This Jutsu buries and traps the enemy 650 feet below the ground level.",
     image: "s08-j-270",
   },
   {
@@ -1768,6 +1861,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: (1) User's Team, (2) 1 of your Battling Teams",
       "Effect: Place every Ninja of target (1) in any position in target (2).",
     ],
+    flavor: "\"My little ones made a path with their silver threads and let us know where you were going!\"",
     image: "s08-j-271",
   },
   {
@@ -1784,6 +1878,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Flip a Ninja Blade coin twice for each target. Discard every Ninja that got heads both times.",
     ],
+    flavor: "\"Remember that our true nature belongs to the dark subterranean world...\"",
     image: "s08-j-272",
   },
   {
@@ -1800,6 +1895,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja",
       "Effect: Give 2 Damage to the target. Move the user to either the top or bottom of its original owner's Deck at the end of this turn if it is in your Village.",
     ],
+    flavor: "\"I can use this Jutsu only once in my lifetime, but I don't hesitate to use it for our goal...\"",
     image: "s08-j-273",
   },
   {
@@ -1816,6 +1912,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja in 1 of the Teams being sent out to Battle",
       "Effect: Flip a Ninja Blade coin once for each target. Every Ninja that got heads becomes a Stand-By Ninja and cannot be sent out to Battle during the next turn.",
     ],
+    flavor: "\"You've both just been swallowed by the Mountain Toad. Welcome, my friends, to the belly of the beast.\"",
     image: "s08-j-us045",
   },
   {
@@ -1832,6 +1929,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User and 1 Ninja Batting against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"But now...This is the end...\"",
     image: "s08-j-us046",
   },
   {
@@ -1848,6 +1946,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja with both a \"Water\" Symbol and an Entrance cost of 4 or lower Battling against the user",
       "Effect: The Power of the target becomes 0/0 during the turn.",
     ],
+    flavor: "\"Thank goodness that Jiraiya's here! Now, unless you want to make this frog really mad, you'll never bother us again!\"",
     image: "s08-j-us047",
   },
   {
@@ -1863,6 +1962,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: User",
       "Effect: Move the user to any of your Battling Teams in any position.",
     ],
+    flavor: "\"You live up to your reputation. However...\" \"!\"",
     image: "s08-j-us048",
   },
   {
@@ -1879,6 +1979,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: The next time the target receives any Damage during this turn, give 1 additional Damage to the target when Damage is applied.",
     ],
+    flavor: "\"Proctor... It's over.\"",
     image: "s08-j-us049",
   },
   {
@@ -1894,6 +1995,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: \"Mental Power\" of 1 or more",
       "Effect: Look at all the cards in your opponent's hand. Then, draw a card.",
     ],
+    flavor: "\"Whenever he gets stuck on a move, he does that thing with his hands. He's working out a strategy.\"",
     image: "s08-j-us050",
   },
   {
@@ -1910,6 +2012,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Effect: The user gets +2/+2 during the turn.",
       "This Jutsu card can be used even when it is in your Discard Pile. In that case, move this Jutsu card to the bottom of your Deck instead after the effect is applied.",
     ],
+    flavor: "\"I should have guessed you'd use that shadow clone jutsu... It's your specialty, after all...I was careless.\"",
     image: "s08-j-us051",
   },
   {
@@ -1926,6 +2029,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Head Ninja of your opponent's Teams being sent out to Battle",
       "Effect: Flip a Ninja Blade coin once for each target. Give 1 Damage to every Ninja that got heads.",
     ],
+    flavor: "\"But I know what to do. .. This will draw out that ninth ninja and reveal where he's hiding!\"",
     image: "s08-j-us052",
   },
   {
@@ -1941,6 +2045,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Requirements: Injured Ninja",
       "Effect: Double the user's original injured printed Combat value. Discard the user after the Showdown.",
     ],
+    flavor: "\"You and I are a lot alike... more than you know... We shouldn't be doing this.\"",
     image: "s08-j-us053",
   },
   {
@@ -1956,6 +2061,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every Ninja with a \"Water\" Symbol Battling against the user",
       "Effect: Give 1 Damage to the target.",
     ],
+    flavor: "\"Fire Style: Fireball Jutsu!!\"",
     image: "s08-j-us054",
   },
   {
@@ -1972,6 +2078,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja Battling against the user",
       "Effect: Shuffle the target into your opponent's hand. Then, reveal a card from your opponent's hand at random until a card with the same name is revealed. Then, return the target to its original position in the original status and give 1 Damage to it. Discard all the other cards that were revealed by this effect.",
     ],
+    flavor: "\"The next 72 hours will be nothing but this. Over and over.\"",
     image: "s08-j-us055",
   },
   {
@@ -1988,6 +2095,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Ninja with 1 or less Entrance cost",
       "Effect: The Power of the target becomes 0/0 during the turn.",
     ],
+    flavor: "\"It looks to me like somebody used our teammate as a punching bag...No one does that and gets away with it!\"",
     image: "s08-j-us056",
   },
   // ── MISSION ──
@@ -2005,6 +2113,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Counter",
       "Effect: All of your in-play Ninjas are unaffected by Mission cards during this turn.",
     ],
+    flavor: "\"Are you from the Mist Village?\" \"...No.\"",
     image: "s08-m-236",
   },
   {
@@ -2021,6 +2130,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent",
       "Effect: Each time a Ninja uses a Jutsu card and its effect is applied successfully, the player who controls that Ninja draws 1 card and discards 1 card.",
     ],
+    flavor: "\"As I said before, the first attack is a fake...\"",
     image: "s08-m-237",
   },
   {
@@ -2038,6 +2148,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 of your injured Ninjas",
       "Effect: Heal the target and place it in any of your Teams in any position. The target gets +1/+1 during this turn and the next turn.",
     ],
+    flavor: "\"Let me handle this guy!\"",
     image: "s08-m-238",
   },
   {
@@ -2053,6 +2164,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: You can search for 1 \"Double-Headed Wolf\" Ninja card or 1 \"Wolf Fang Over Fang\" Justu card in your Deck, show it to your opponent, and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Inuzuka Style: Man-Beast Transformation Combo!!\"",
     image: "s08-m-239",
   },
   {
@@ -2068,6 +2180,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Reveal the top 3 cards of your opponent's Deck. Discard every non-Jutsu card among them, and move each Jutsu card to its original owner's hand.",
     ],
+    flavor: "\"Actually ...He's going berserk!!\"",
     image: "s08-m-240",
   },
   {
@@ -2084,6 +2197,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent",
       "Effect: Any Team with 1 or less Team Power cannot win any Battle Rewards in the Showdown.",
     ],
+    flavor: "\"I have no energy left... I can't move...\"",
     image: "s08-m-241",
   },
   {
@@ -2100,6 +2214,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent",
       "Effect: This card is also considered to be 1 Battle Reward of the player who controls this card while it is in play. Your opponent can discard 1 of their in-play Ninjas during their Mission Phase to move this card to their Village. While this card is in your opponent's Village, they control this card. This card cannot be played while you have 7 or more Battle Rewards.",
     ],
+    flavor: "\"This is a precious vessel for our dreams...\"",
     image: "s08-m-242",
   },
   {
@@ -2116,6 +2231,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: While Battling, every Ninja in the target's Team gets +2/+2 during this turn. The target cannot be sent out to Block during the next turn.",
     ],
+    flavor: "\"Teach them how powerful the Kaguya clan is!\"",
     image: "s08-m-243",
   },
   {
@@ -2132,6 +2248,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (2)",
       "Effect: All of your in-play \"Four Sound Ninjas\" Ninjas and \"Kimimaro\" get \"State 2\". This Mission card cannot be negated.",
     ],
+    flavor: "\"'State 2' increases my power by more than 10 times. No one can rival me......\"",
     image: "s08-m-244",
   },
   {
@@ -2148,6 +2265,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent",
       "Effect: Any Ninja cannot be moved to another Team or removed from play by the effects of the other player's Mission cards or Ninja cards.",
     ],
+    flavor: "\"Did it make me stronger to be with those 'friends'?\"",
     image: "s08-m-245",
   },
   {
@@ -2164,6 +2282,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Counter",
       "Effect: If the number of your opponent's in-play Ninjas exceeds yours by 2 or more when you play this Mission card, you can place 1 Ninja in your hand in any of your Teams in any position. The Entrance cost of that Ninja has to be equal or less than the number of your opponent's in-play Ninjas.",
     ],
+    flavor: "\"We're shinobi...\" \"From the Sand Village...\" \"The ally of the Leaf Village...\"",
     image: "s08-m-246",
   },
   {
@@ -2180,6 +2299,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (2)",
       "Effect: Neither player can put any \"Satoosa\" or \"Sannin\" Ninjas in play or send them out to Battle.",
     ],
+    flavor: "\"Fifth Hokage! You've been dozing off, haven't you?\"",
     image: "s08-m-247",
   },
   {
@@ -2195,6 +2315,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Each player selects 1 symbol. Then, each player discards all their in-play Ninjas that do not have the symbol that they selected.",
     ],
+    flavor: "\"If you become the last survivor, you'll be freed from this prison.\"",
     image: "s08-m-248",
   },
   {
@@ -2211,6 +2332,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Counter",
       "Effect: During this turn, each time 1 of your in-play Ninjas is discarded, move it to the top of its original owner's Deck instead.",
     ],
+    flavor: "\"I have made... a lot of friends...\"",
     image: "s08-m-249",
   },
   {
@@ -2227,6 +2349,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (2)",
       "Effect: If there are 3 or more different symbols among a player's in-play Ninjas, that player cannot deploy any Ninjas. Each player can move 1 of their in-play Ninjas to their Chakra area at the beginning of their turn.",
     ],
+    flavor: "\"How much longer can I stay alive...?\"",
     image: "s08-m-250",
   },
   {
@@ -2243,6 +2366,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent",
       "Effect: Neither player can play any \"Counter\" Mission cards.",
     ],
+    flavor: "\"That will make us powerless in the darkness.\"",
     image: "s08-m-251",
   },
   {
@@ -2259,6 +2383,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: During this turn, every Ninja in the target's Team uses their Combat value instead of Support value when calculating their Team Power.",
     ],
+    flavor: "\"In terms of teamwork, we're a few notches above them.\"",
     image: "s08-m-252",
   },
   {
@@ -2275,6 +2400,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: (1) Any number of \"Leaf\" Ninjas in 1 of your Teams, (2) The same number of your opponent's Ninjas as target (1)",
       "Effect: Neither target (1) nor target (2) can be sent out to Battle during this turn. At the beginning of the Battle Phase of this turn, your opponent can organize their Teams.",
     ],
+    flavor: "\"Each of us must be ready for a one-on-one fight to reach Sasuke.\"",
     image: "s08-m-253",
   },
   {
@@ -2291,6 +2417,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent",
       "Effect: At the beginning of your turn, you can discard 2 of your Chakras. In that case, you can search for 1 Jutsu card that includes \"Requirements: State 2\" in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"His appearance has changed ...!\"",
     image: "s08-m-254",
   },
   {
@@ -2307,6 +2434,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (4)",
       "Effect: Any Ninja with the [Special Power] effect is unaffected by the opponent's Mission cards (except this card).",
     ],
+    flavor: "\"This is the border called 'The Final Valley.'\"",
     image: "s08-m-255",
   },
   {
@@ -2323,6 +2451,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (3)",
       "Effect: Your \"Naruto Uzumaki\" gets the following text: \"Valid: During the Exchange of Jutsu, you can discard X number of your Chakras to give this Ninja +X/+0 during this turn.\"",
     ],
+    flavor: "\"His red Chakra is ... different from ordinary Chakra.\"",
     image: "s08-m-256",
   },
   {
@@ -2339,6 +2468,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: (1) 1 of your Ninjas with the highest Combat value, (2) 1 of your opponent's Ninjas with the highest Combat value",
       "Effect: Move both targets to their original owner's hand.",
     ],
+    flavor: "\"Naruto... I...\"",
     image: "s08-m-257",
   },
   {
@@ -2354,6 +2484,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: After this turn ends, you can have 1 additional turn. Neither player can play any Mission cards during that additional turn.",
     ],
+    flavor: "\"You can't ... control me ...!\"",
     image: "s08-m-259",
   },
   {
@@ -2369,6 +2500,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: At the beginning of the Exchange of Jutsu, each player flips a Ninja Blade coin once for each Team they sent out to Battle this turn. Change the Head Ninja of every Team that got heads to injured status.",
     ],
+    flavor: "\"This is the entrance to hell. We don't know what we might encounter...\"",
     image: "s08-m-260",
   },
   {
@@ -2385,6 +2517,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (2)",
       "Effect: At the end of their turn, each player must select 1 of the cards in their hand, if they have any, and discard it.",
     ],
+    flavor: "\"I don't want you ... to follow in my footsteps.\"",
     image: "s08-m-261",
   },
   {
@@ -2400,6 +2533,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: You can search for 1 Jutsu or Mission card among the top 5 cards of your Deck, show it to your opponent, and place it in your hand. Then, return the rest to the top of your Deck in any order you like.",
     ],
+    flavor: "\"Anything is possible ... with sand.\"",
     image: "s08-m-262",
   },
   {
@@ -2415,6 +2549,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Flip a Ninja Blade coin 3 times. Draw 1 card for each heads you get during the flips.",
     ],
+    flavor: "\"In any country, young girls are charming!\"",
     image: "s08-m-263",
   },
   {
@@ -2431,6 +2566,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: (1) 1 of your Battle Rewards, (2) All of your injured Ninjas",
       "Effect: Discard target (1) to heal target (2).",
     ],
+    flavor: "\"Neji Hyuga and Choji Akimichi are critically injured... Their conditions are currently unpredictable.\"",
     image: "s08-m-265",
   },
   {
@@ -2447,6 +2583,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: Move X number of your Ninjas in your hand to your Chakra area to place X number of Ninja Blade coin(s) symbolizing +1/+1 on the target.",
     ],
+    flavor: "\"What you see is a mere lump of flesh barely sustaining life with Ninja Art: Puppet of the Dead Man!\"",
     image: "s08-m-266",
   },
   {
@@ -2462,6 +2599,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Each player can search for 1 Jutsu card in their Deck. Then, show it to the opponent at the same time and place it in their hand. Then, shuffle their own Decks.",
     ],
+    flavor: "\"Then, let's put an end to this battle...\"",
     image: "s08-m-267",
   },
   {
@@ -2477,6 +2615,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Remove all Ninja Blade coins of any kind on every in-play Ninja and Client.",
     ],
+    flavor: "\"From now on, we will fight as equals.\"",
     image: "s08-m-us041",
   },
   {
@@ -2492,6 +2631,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: If you have either \"Sasuke Uchiha\" or \"Itachi Uchiha\" in play, and the other one in your Discard Pile or in your Chakra area, move up to 1 copy of the one that is currently in your Discard Pile or in your Chakra area to your hand.",
     ],
+    flavor: "\"My poor brother...If you wish to kill me, hate and curse me! Then, someday... show up with the same eyes as mine.\"",
     image: "s08-m-us042",
   },
   {
@@ -2507,6 +2647,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: You can deploy up to 2 Ninjas this turn.",
     ],
+    flavor: "\"Leave behind Squads One and Two ... and head to the gate .. right now!\" \"Yes, sir!\"",
     image: "s08-m-us043",
   },
   {
@@ -2523,6 +2664,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (2)",
       "Effect: The effect texts of every \"Male\" Ninja are negated.",
     ],
+    flavor: "\"Hi, there!.. I've been wanting to meet you for a really long time, Neji... So.. hi!\"",
     image: "s08-m-us044",
   },
   {
@@ -2539,6 +2681,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 Mission card with \"Permanent (X)\" that is attached to 1 of your in-play Ninjas",
       "Effect: Attach the target to 1 of your other in-play Ninjas.",
     ],
+    flavor: "\"You're hot...\"",
     image: "s08-m-us045",
   },
   {
@@ -2555,6 +2698,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Permanent (3)",
       "Effect: No Ninjas can be the user of Jutsu cards with \"Requirements: Sharingan Eye\".",
     ],
+    flavor: "\"Don't use your Sharingan.\"",
     image: "s08-m-us046",
   },
   {
@@ -2571,6 +2715,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: 1 of your Teams",
       "Effect: Your opponent can organize their Teams. If the target is sent out to Attack this turn, you select your opponent's Blocking Team for the target and send it out if possible.",
     ],
+    flavor: "\"Ibiki, you may reveal which ninja have been paired up.\" \"Yes, sir.\"",
     image: "s08-m-us047",
   },
   {
@@ -2586,6 +2731,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Your opponent can organize their Teams. If any Ninja's current Power is higher than its original printed value, that Ninja cannot be sent out to Battle during this turn.",
     ],
+    flavor: "\"On top of Tsukuyomi, to have to use Amaterasu as well... It was more exhausting than I thought.\"",
     image: "s08-m-us048",
   },
   {
@@ -2603,6 +2749,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Every injured Ninja",
       "Effect: The target gets +2/+1 during this turn.",
     ],
+    flavor: "\"You're still too weak... You don't have enough hate.\"",
     image: "s08-m-us049",
   },
   {
@@ -2620,6 +2767,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Target: Each of your in-play \"Leaf\" Ninjas",
       "Effect: While you have 1 or more \"The First Hokage\" or \"The Second Hokage\" Ninja cards in your Discard Pile, the target gets +1/+1 and +1 Mental Power.",
     ],
+    flavor: "\"It is a place where, every year, shinobi are born — raised — grow old — fight — and die to protect their home.\"",
     image: "s08-m-us050",
   },
   // ── CLIENT ──
@@ -2637,6 +2785,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Each time your Ninja with \"Uchiha\" in its name is put in play, draw 1 card.",
     ],
+    flavor: "\"Both you and Itachi belong to the Uchiha clan, the distinguished clan of the Leaf Village. Have confidence in yourself!\"",
     image: "s08-c-032",
   },
   {
@@ -2653,6 +2802,7 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [
       "Effect: Each time your Ninja with \"Uchiha\" in its name is put in play, you can heal 1 of your injured Ninjas.",
     ],
+    flavor: "\"Hi, Sasuke. Are you going to school?\"",
     image: "s08-c-033",
   },
 ];

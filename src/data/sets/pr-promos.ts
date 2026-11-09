@@ -25,6 +25,7 @@ export const PR_PROMOS: Card[] = [
       "[MASTERING THE HIDDEN TECHNIQUE]",
       "Valid: When this Ninja is sent out to Battle, you can search for 1 Jutsu card that includes \"Rasengan\" in its name and/or \"Requirements: 'Naruto Uzumaki'\" in the top 5 cards of your Deck, show it to your opponent, and place it in your hand. Then, return the rest to the top of your Deck and shuffle it.",
     ],
+    flavor: "\"Don't think I am the same one as the last time!\"",
     image: "promo-n-524",
   },
   {
@@ -45,6 +46,7 @@ export const PR_PROMOS: Card[] = [
       "[GUARDIAN OF THE VILLAGE]",
       "Each of your Teams gets +2 Team Power and +2 Team Mental Power during your opponent's turns.",
     ],
+    flavor: "\"I realized that pain, sorrow and joy could be shared with others.\"",
     image: "promo-n-525",
   },
   {
@@ -65,6 +67,7 @@ export const PR_PROMOS: Card[] = [
       "[THE EYE THAT SEES THROUGH EVERYTHING]",
       "During your Mission Phase, you can select 1 of your opponent's Ninjas. In that case, the selected Ninja cannot be the user of any Jutsu cards during that turn and the next turn.",
     ],
+    flavor: "\"!!!!!\"",
     image: "promo-n-526",
   },
   {
@@ -85,6 +88,7 @@ export const PR_PROMOS: Card[] = [
       "[PERVY SAGE'S TRAINING]",
       "When this Ninja is put in play, except by the effect of \"Growth\", discard all Chakras in both players' Chakra areas.",
     ],
+    flavor: "\"I am doing my best, believe me!\"",
     image: "promo-n-ex-001",
   },
   {
@@ -105,6 +109,7 @@ export const PR_PROMOS: Card[] = [
       "[Energizing the Body]",
       "This Ninja gets +2/+0 during the turn it is put in play.",
     ],
+    flavor: "\"...I got you.\"",
     image: "promo-n-ex-002",
   },
   {
@@ -125,6 +130,7 @@ export const PR_PROMOS: Card[] = [
       "[BATTLE DECISION]",
       "If this Ninja is healthy, you may injure it at the start of the Battle Phase.",
     ],
+    flavor: "\"Let's go wild!\"",
     image: "promo-n-pr-001",
   },
   {
@@ -145,6 +151,7 @@ export const PR_PROMOS: Card[] = [
       "[BATTLE SENSE]",
       "If this Ninja becomes the user of a Jutsu card, one \"Fire\" symbol of the Jutsu cost can be paid as (1).",
     ],
+    flavor: "\"Hmph.\"",
     image: "promo-n-pr-002",
   },
   {
@@ -165,6 +172,7 @@ export const PR_PROMOS: Card[] = [
       "[TEXTBOOK NINJUTSU]",
       "When this Ninja becomes the user of a Jutsu card with a Jutsu cost of 1 or less (Jutsu cards which require specific Symbols are not included), it gets +1/+1 during its turn.",
     ],
+    flavor: "\"Yes! I can do it.\"",
     image: "promo-n-pr-003",
   },
   {
@@ -185,6 +193,7 @@ export const PR_PROMOS: Card[] = [
       "[MAIN CHARACTER'S PRIVILEGE]",
       "If your opponent has two or more Ninjas in play than you, this Ninja is not included in the \"1 Ninja card per turn\" restriction.",
     ],
+    flavor: "\"Naruto Uzumaki is here. Yeah, believe it!\"",
     image: "promo-n-pr-004",
   },
   {
@@ -205,6 +214,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FELLOW]",
       "Valid: If this Ninja is in the same Team as \"Sakura Haruno\", this Ninja gets +1/+1.",
     ],
+    flavor: "\"Sakura...\"",
     image: "promo-n-pr-005",
   },
   {
@@ -225,6 +235,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FELLOW]",
       "Valid: If this Ninja is in the same Team as \"Sakura Haruno\", this Ninja gets +1/+1.",
     ],
+    flavor: "\"Sakura...\"",
     image: "promo-n-pr-005r",
   },
   {
@@ -245,6 +256,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FELLOW]",
       "Valid: If this Ninja is in the same Team as \"Naruto Uzumaki\", this Ninja gets +1/+1.",
     ],
+    flavor: "\"You idiot!\"",
     image: "promo-n-pr-006",
   },
   {
@@ -265,6 +277,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FELLOW]",
       "Valid: If this Ninja is in the same Team as \"Naruto Uzumaki\", this Ninja gets +1/+1.",
     ],
+    flavor: "\"You idiot!\"",
     image: "promo-n-pr-006r",
   },
   {
@@ -285,6 +298,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FELLOW]",
       "Valid: If this Ninja is in the same Team as \"Sasuke Uchiha\", this Ninja gets +1/+1.",
     ],
+    flavor: "\"I will trust Sasuke and do what I should do...\"",
     image: "promo-n-pr-007",
   },
   {
@@ -305,6 +319,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FELLOW]",
       "Valid: If this Ninja is in the same Team as \"Sasuke Uchiha\", this Ninja gets +1/+1.",
     ],
+    flavor: "\"I will trust Sasuke and do what I should do...\"",
     image: "promo-n-pr-007r",
   },
   {
@@ -325,6 +340,7 @@ export const PR_PROMOS: Card[] = [
       "[HOT BLOODED TEACHER]",
       "This Ninja gets -1 Entrance cost when you have a \"Ninja Academy Student\" Ninja in play.",
     ],
+    flavor: "\"Hey, I caught you!\"",
     image: "promo-n-pr-008",
   },
   {
@@ -345,6 +361,7 @@ export const PR_PROMOS: Card[] = [
       "[HOT BLOODED TEACHER]",
       "This Ninja gets -1 Entrance cost when you have 1 or more \"Ninja Academy Student\" Ninjas in play.",
     ],
+    flavor: "\"Hey, I caught you!\"",
     image: "promo-n-pr-008r",
   },
   {
@@ -365,6 +382,7 @@ export const PR_PROMOS: Card[] = [
       "[SHARINGAN EYE KAKASHI]",
       "This Ninja can use a Jutsu card without paying any Justu cost if your opponent has a Justu card with the same name as the Justu card in their Discard Pile.",
     ],
+    flavor: "\"We will be in trouble...unless we find a way to improve this situation.\"",
     image: "promo-n-pr-009",
   },
   {
@@ -385,6 +403,7 @@ export const PR_PROMOS: Card[] = [
       "[SHARINGAN EYE KAKASHI]",
       "This Ninja can use a Jutsu card without paying any Justu cost if your opponent has a Justu card with the same name as the Justu card in their Discard Pile.",
     ],
+    flavor: "\"We will be in trouble...unless we find a way to improve this situation.\"",
     image: "promo-n-pr-009r",
   },
   {
@@ -405,6 +424,7 @@ export const PR_PROMOS: Card[] = [
       "[Unlimited Potential]",
       "This Ninja can be put in play with Growth effect even when you already have a Ninja in play with the same name with 1 or more Growth coins on it.",
     ],
+    flavor: "\"My future dream is... to be the greatest Hokage!\"",
     image: "promo-n-pr-014",
   },
   {
@@ -425,6 +445,7 @@ export const PR_PROMOS: Card[] = [
       "[Angry Roar]",
       "Valid: While your opponent has 1 or more Ninjas with Water Symbol in play, this Ninja gets +2/+0.",
     ],
+    flavor: "\"I won't let you do that\"",
     image: "promo-n-pr-015",
   },
   {
@@ -445,6 +466,7 @@ export const PR_PROMOS: Card[] = [
       "[THE ONE WHO CREATED THE VILLAGE]",
       "When this Ninja is put in play, if your opponent has 5 or more Battle Rewards, discard your opponent's Battle Reward(s) until they have 4 Battle Rewards.",
     ],
+    flavor: "\"Being Hokage means believing in your people just as much...as they believe in you.\"",
     image: "promo-n-pr-018",
   },
   {
@@ -465,6 +487,7 @@ export const PR_PROMOS: Card[] = [
       "[THE ONE WHO ESTABLISHED THE FOUNDATION]",
       "When this Ninja is put in play, if you have 3 or less cards in your hand, draw card(s) until you have 4 cards in your hand.",
     ],
+    flavor: "\"Guide the people and believe in them, for it's from among them...that the one will come, who will carry on when your time is done.\"",
     image: "promo-n-pr-019",
   },
   {
@@ -486,6 +509,7 @@ export const PR_PROMOS: Card[] = [
       "When this Ninja becomes the user of Jutsu card with \"Requirements: Rock Lee\", you can change the cost of the Jutsu to 1 \"Lightning\".",
       "Valid: This Ninja cannot be removed from play by the effects of your opponent's Jutsu cards.",
     ],
+    flavor: "\"I'm going to be teaching you a new technique, so pay attention now.\" \"It's over, all right — one way or the other!\"",
     image: "promo-n-pr-024",
   },
   {
@@ -506,6 +530,7 @@ export const PR_PROMOS: Card[] = [
       "[ULTIMATE TRAINING]",
       "When this Ninja is put in play, you can move 1 \"Chidori\" Jutsu card in your Discard Pile or in your Chakra area to your hand. Additionally, each time this Ninja uses a \"Chidori\" Jutsu card and its effect is applied successfully, move it to your hand.",
     ],
+    flavor: "\"If you wondered why I insisted on training Sasuke myself...now you know... It's because he's like me.\" \"I can use the time getting ready for what I've got in store for you.\"",
     image: "promo-n-pr-025",
   },
   {
@@ -526,6 +551,7 @@ export const PR_PROMOS: Card[] = [
       "[ULTIMATE TRAINING]",
       "Valid: This Ninja can use \"Rasengan\" Jutsu card without paying its Jutsu cost. In that case, this Ninja cannot be removed from play by the effects of your opponent's Jutsu cards during that turn. If you do pay the Jutsu cost, that \"Rasengan\" Jutsu card cannot be negated.",
     ],
+    flavor: "\"Naruto, let's get going. Time for you to train.\" \"Yes sir!\"",
     image: "promo-n-pr-026",
   },
   {
@@ -546,6 +572,7 @@ export const PR_PROMOS: Card[] = [
       "[FIRM DETERMINATION]",
       "This Ninja cannot receive any Damage by the effects your opponent's Ninjas with an Entrance cost of 2 or less. While this Ninja is Battling against your opponent's \"Naruto Uzumaki\", this Ninja gets +2/+0.",
     ],
+    flavor: "\"Come on, Naruto...\"",
     image: "promo-n-pr-027",
   },
   {
@@ -566,6 +593,7 @@ export const PR_PROMOS: Card[] = [
       "[MEANING OF ONE'S LIFE]",
       "While this Ninja is Battling, you can discard 1 of your \"Four Sound Ninjas\" Ninjas in this Ninja's Team. In that case, you can negate and send 1 of your opponent's Jutsu cards with 2 or more specific symbols being used to its original owner's Chakra area.",
     ],
+    flavor: "\"I realized that — finding our purpose is the meaning. That's why we're here...\"",
     image: "promo-n-pr-028",
   },
   {
@@ -586,6 +614,7 @@ export const PR_PROMOS: Card[] = [
       "[OVERFLOWING CHAKRA]",
       "Valid: While you have a \"Final Valley\" Mission card in play, at the beginning of your Mission Phase, you can move the top card of your Deck to your Chakra area.",
     ],
+    flavor: "\"I'm not gonna let the likes of Orochimaru get ahold of you!\"",
     image: "promo-n-pr-034",
   },
   {
@@ -606,6 +635,7 @@ export const PR_PROMOS: Card[] = [
       "[OVERFLOWING CHAKRA]",
       "Valid: While you have a \"Final Valley\" Mission card in play, at the beginning of your Mission Phase, you can move the top card of your Deck to your Chakra area.",
     ],
+    flavor: "\"You're not leaving me a lot of choice here, Naruto...\"",
     image: "promo-n-pr-035",
   },
   {
@@ -626,6 +656,7 @@ export const PR_PROMOS: Card[] = [
       "[COLD-BLOODED EYES]",
       "When this Ninja is sent out to Battle, discard up to 2 cards from the top of your opponent's Deck.",
     ],
+    flavor: "\"Go away. You don't interest me at the moment.\"",
     image: "promo-n-pr-036",
   },
   {
@@ -646,6 +677,7 @@ export const PR_PROMOS: Card[] = [
       "[LIKE WHIRLWIND]",
       "When this Ninja is Deployed, randomly select 1 of your opponent's Battle Rewards and move it to your hand.",
     ],
+    flavor: "\"I will take Sasuke back from Orochimaru!\"",
     image: "promo-n-pr-038",
   },
   {
@@ -667,6 +699,7 @@ export const PR_PROMOS: Card[] = [
       "While this Ninja card is in your hand, if you have \"Rock Lee\", \"Neji Hyuga\" and/or \"Tenten\" in play in injured status, this Ninja's Entrance cost and Hand cost get -1.",
       "Valid: Your in-play \"Rock Lee\", \"Neji Hyuga\" and/or \"Tenten\" gets +1/+1.",
     ],
+    flavor: "\"Team guy! Do it with all your passion!!!\"",
     image: "promo-n-pr-039",
   },
   {
@@ -687,6 +720,7 @@ export const PR_PROMOS: Card[] = [
       "[COMPETITIVE SPIRIT]",
       "The Head Ninja that received any Damage from this Ninja's Team due to Showdown is discarded.",
     ],
+    flavor: "\"I've learned the competitive spirit from my master!\"",
     image: "promo-n-pr-040",
   },
   {
@@ -707,6 +741,7 @@ export const PR_PROMOS: Card[] = [
       "[SUDDEN REUNION]",
       "At the beginning of your opponent's Mission Phase, you can put this Ninja card in play by removing your in-play \"Naruto Uzumaki\" and \"Hinata Hyuga\" from game. (The Entrance cost must be met.) In that case, your opponent cannot put in play any Ninja cards during this turn.",
     ],
+    flavor: "\"Hey, Hinata! Why are you hiding?\" \"I'm not ready for this yet...\"",
     image: "promo-n-pr-041",
   },
   {
@@ -727,6 +762,7 @@ export const PR_PROMOS: Card[] = [
       "[NEW TECHNIQUE]",
       "When this Ninja is put in play, you can search for 1 \"Mangekyo Sharingan\" Jutsu card in your Deck and remove it from game keeping it face up. In that case, at the beginning of your next turn, move that card to your hand.",
     ],
+    flavor: "\"Yes. It's a new sharingan.\"",
     image: "promo-n-pr-042",
   },
   {
@@ -748,6 +784,7 @@ export const PR_PROMOS: Card[] = [
       "When this Ninja is put in play, move up to 3 cards with an \"Earth\" Symbol from your Discard Pile to your Chakra area.",
       "Valid: This Ninja can become the user of Jutsu cards with Requirements: The First Hokage\".",
     ],
+    flavor: "\"All right then. Let's do this!\"",
     image: "promo-n-pr-046",
   },
   {
@@ -769,6 +806,7 @@ export const PR_PROMOS: Card[] = [
       "Valid: Each time this Ninja becomes the user of a Jutsu card, this Ninja gets +2/+2 and is unaffected by the effect of your opponent's Jutsu and Ninja cards during this turn.",
       "Valid: This Ninja can become the user of Jutsu cards with Requirements: \"Might Guy\".",
     ],
+    flavor: "\"I got sand in my mouth...\" \"As long as I have sand, I can do anything.\"",
     image: "promo-n-pr-050",
   },
   {
@@ -790,6 +828,7 @@ export const PR_PROMOS: Card[] = [
       "When this Ninja is deployed, you can discard a card. In that case, search your Deck for 1 \"Naruto Uzumaki\" Ninja card with [TRUE ALLIES] effect, reveal it, and place it in your hand. Then, shuffle your Deck.",
       "Valid: During your Mission Phase, if you have another Ninja with [TRUE ALLIES] effect, you can discard 2 of your Chakras to heal an injured Ninja or draw 1 card.",
     ],
+    flavor: "Naruto! Are you okay?\"",
     image: "promo-n-pr-051",
   },
   {
@@ -811,6 +850,7 @@ export const PR_PROMOS: Card[] = [
       "When this Ninja is deployed, you can discard a card. In that case, search your Deck for 1 \"Sakura Haruno\" Ninja card with [TRUE ALLIES] effect, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
       "Valid: During your Mission Phase, if you have another Ninja with [TRUE ALLIES] effect, you can move 1 Ninja or Mission card from your Discard Pile or Chakra area to your hand.",
     ],
+    flavor: "\"We're no longer teacher and students. We will work together as equal leaf shinobi. Got it?\"",
     image: "promo-n-pr-052",
   },
   {
@@ -832,6 +872,7 @@ export const PR_PROMOS: Card[] = [
       "While this card is in your Reinforcement Deck, if you have 2 or more Ninjas with [TRUE ALLIES] effect, you can return your \"Naruto Uzumaki\" Ninja to its owner's hand during your Mission Phase. In that case, put this Ninja card in play.",
       "Valid: When a Ninja would be removed from play, you can discard 1 \"Naruto Uzumaki\" Ninja card in your hand. In that case, that Ninja is not removed instead.",
     ],
+    flavor: "\"Eat This!\"",
     image: "promo-n-pr-053",
   },
   {
@@ -1255,6 +1296,7 @@ export const PR_PROMOS: Card[] = [
       "When this Ninja Attacks by itself, it gets +5/-5 during this turn.",
       "Valid: When this Ninja Attacks by itself, this Ninja can only be Blocked by Teams with 2 or more Ninjas during this turn.",
     ],
+    flavor: "\"But you are such a sadistic little brat...\" \"Exactly!\"",
     image: "promo-n-pr-075",
   },
   {
@@ -1276,6 +1318,7 @@ export const PR_PROMOS: Card[] = [
       "Valid: When this Ninja is put in play, distribute 3 -1/-1 coins on up to 3 target Ninjas.",
       "Valid: Your opponent's Ninjas with -1/-1 coins on them cannot be the users of Jutsu cards.",
     ],
+    flavor: "\"This is my vendetta.\" \"Now he can't get away.\"",
     image: "promo-n-pr-076",
   },
   {
@@ -1440,6 +1483,7 @@ export const PR_PROMOS: Card[] = [
       "This Ninja card gets -1 Entrance cost for each injured Ninja you control.",
       "When this Ninja is put in play, place a +1/+1 coin on this Ninja for each injured Ninja you control.",
     ],
+    flavor: "\"My new jutsu will finish this in one try!!!\"",
     image: "promo-n-pr-087",
   },
   {
@@ -1460,6 +1504,7 @@ export const PR_PROMOS: Card[] = [
       "[CHAMPION OF THE UCHIHA]",
       "[Attacker | Mission] Remove 2 \"Sharingan Eye\" Ninja cards in either player's Discard Pile from the game: Search your Deck for 1 Jutsu card, reveal it, then move it to your hand.",
     ],
+    flavor: "\"This is my vendetta.\"",
     image: "promo-n-pr-088",
   },
   {
@@ -1481,6 +1526,7 @@ export const PR_PROMOS: Card[] = [
       "When this Ninja wins any Victory, place a +1/+1 coin on it.",
       "When this Ninja wins any Battle Reward, draw 1 card.",
     ],
+    flavor: "\"That's right.\"",
     image: "promo-n-pr-089",
   },
   {
@@ -1501,6 +1547,7 @@ export const PR_PROMOS: Card[] = [
       "[CHAMPION OF THE HEART]",
       "[EOJ] (0): At the start of the Showdown, remove this Ninja and target opposing Head Ninja from the game.",
     ],
+    flavor: "\"I'm here because I want to be.\"",
     image: "promo-n-pr-090",
   },
   {
@@ -1522,6 +1569,7 @@ export const PR_PROMOS: Card[] = [
       "[EOJ] (1): This Ninja gets +1/+0 for each different Symbol in your Chakra area.",
       "[Attacker | Mission] (2): Look at the top X cards of your Deck and return them in any order. X = the number of different Symbols in your Chakra area.",
     ],
+    flavor: "\"It's true. Physical attacks are virtually useless against me.\"",
     image: "promo-n-pr-091",
   },
   {
@@ -1604,6 +1652,7 @@ export const PR_PROMOS: Card[] = [
       "[DRASTIC REVERSAL]",
       "Valid: While this Ninja is injured status, the Combat of this Ninja becomes the same value as the number of your opponent's Battle Rewards.",
     ],
+    flavor: "\"Now that I'm here, everything'll be all right!\"",
     image: "promo-n-pr-us001",
   },
   {
@@ -1624,6 +1673,7 @@ export const PR_PROMOS: Card[] = [
       "[GENIUS CLAN]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, you can select and discard 1 of the cards in your opponent's Chakra area.",
     ],
+    flavor: "\"You want to know more about my clan? .. Then I'll teach you... the hard way.\"",
     image: "promo-n-pr-us002",
   },
   {
@@ -1644,6 +1694,7 @@ export const PR_PROMOS: Card[] = [
       "[WHIM]",
       "When this Ninja is sent out to Battle and opposed, flip a Ninja Blade coin; If it's heads, this Ninja's Team and your opponent's Team Battling against this Ninja's Team perform a Mental Power Battle.",
     ],
+    flavor: "\"I'm just not into putting effort into stuff...\"",
     image: "promo-n-pr-us003",
   },
   {
@@ -1664,6 +1715,7 @@ export const PR_PROMOS: Card[] = [
       "[FOR MY TEACHER]",
       "Valid: While this Ninja is Battling against your opponent's Team with 1 or more \"Chunin\" or higher Rank Ninjas, this Ninja gets +2/+0.",
     ],
+    flavor: "\"If you ever lay a hand on my sensei ...\"",
     image: "promo-n-pr-us005",
   },
   {
@@ -1684,6 +1736,7 @@ export const PR_PROMOS: Card[] = [
       "[RED CHAKRA]",
       "Valid: While this Ninja is in injured status and you have 3 or less cards in your hand, this Ninja gets +2/+0.",
     ],
+    flavor: "\"This is it!\"",
     image: "promo-n-pr-us007",
   },
   {
@@ -1704,6 +1757,7 @@ export const PR_PROMOS: Card[] = [
       "[TRAGIC NAME]",
       "You can discard another Ninja in this Ninja's Team to give 1 Damage to 1 of your opponent's Ninjas Battling against this Ninja's Team.",
     ],
+    flavor: "\"I live solely for myself. I love only myself.\"",
     image: "promo-n-pr-us008",
   },
   {
@@ -1724,6 +1778,7 @@ export const PR_PROMOS: Card[] = [
       "[INSIGHT]",
       "This Ninja cannot be moved from your Village or Battlefield by the effect of your opponent's Jutsu cards.",
     ],
+    flavor: "\"I see the world clearly, — with my Byakugan.\"",
     image: "promo-n-pr-us009",
   },
   {
@@ -1744,6 +1799,7 @@ export const PR_PROMOS: Card[] = [
       "[I CAN DO IT]",
       "During the Exchange of Jutsu, if this Ninja is opposed, you can change this Ninja to injured status. In that case, this Ninja's Team and your opponent's Team Battling against this Ninja's Team perform a Mental Power Battle.",
     ],
+    flavor: "\"Nothing works against this\"",
     image: "promo-n-pr-us010",
   },
   {
@@ -1764,6 +1820,7 @@ export const PR_PROMOS: Card[] = [
       "[ONE LAST ATTACK]",
       "Valid: When this Ninja is sent out to Attack and receives any Damage, you can give 1 Damage to 1 of your opponent's Ninja Battling against this Ninja.",
     ],
+    flavor: "\"Get ready, you crazy monster!\"",
     image: "promo-n-pr-us011",
   },
   {
@@ -1784,6 +1841,7 @@ export const PR_PROMOS: Card[] = [
       "[FAVORITE NINJA ART]",
       "Each time this Ninja becomes the user of a Jutsu card with a \"Fire\" symbol, you can draw 1 card.",
     ],
+    flavor: "\"Fireball Jutsu!!\"",
     image: "promo-n-pr-us012",
   },
   {
@@ -1804,6 +1862,7 @@ export const PR_PROMOS: Card[] = [
       "[THE BODY OF UCHIHA CLAN]",
       "When this Ninja's Team wins a Victory or an Outstanding Victory, you can select and move 1 Jutsu card that includes \"Requirements: 'Sharingan Eye'\" or \"Requirements: 'Itachi Uchiha'\" in your Discard Pile to the top of your Deck.",
     ],
+    flavor: "\"I will show you the real power of Uchiha clan!\"",
     image: "promo-n-pr-us013",
   },
   {
@@ -1824,6 +1883,7 @@ export const PR_PROMOS: Card[] = [
       "[PRECIOUS FAMILY]",
       "While you only have \"Genin\" Ninjas in play, this Ninja's Entrance cost and Hand cost gets -1.",
     ],
+    flavor: "\"They are precious to me... They are my family!\"",
     image: "promo-n-pr-us015",
   },
   {
@@ -1841,6 +1901,7 @@ export const PR_PROMOS: Card[] = [
     injured: { combat: 3, support: 2 },
     attributes: ["Genjutsu"],
     text: [],
+    flavor: "\"I'll protect you with my life. All of you.\"",
     image: "promo-n-ps-004",
   },
   // ── JUTSU ──
@@ -1858,6 +1919,7 @@ export const PR_PROMOS: Card[] = [
       "Target: User",
       "Effect: The target gets +7/+0 during this turn. At the end of the turn, give 1 Damage to every Ninja in this Nijna's Team.",
     ],
+    flavor: "\"It's time for that Jutsu...\"",
     image: "promo-j-pr-020",
   },
   {
@@ -1873,6 +1935,7 @@ export const PR_PROMOS: Card[] = [
       "Target: 1 Ninja with \"Sharingan Eye\"",
       "Effect: The effect text of the target is negated during this turn. This Jutsu card cannot be negated.",
     ],
+    flavor: "\"Close your eyes! Don't look at his eyes!\"",
     image: "promo-j-pr-026",
   },
   {
@@ -1888,6 +1951,7 @@ export const PR_PROMOS: Card[] = [
       "Requirements: \"Itachi Uchiha\"",
       "Effect: Discard 5 cards from the top of your opponent's Deck. Then, keep flipping Ninja Blade coins until you get tails. Discard 3 cards from the top of your opponent's Deck for each heads your got during the flips.",
     ],
+    flavor: "To burn the stone toad, when it has the power to spit fire itself... That is a strong jutsu indeed.",
     image: "promo-j-pr-037",
   },
   {
@@ -1904,6 +1968,7 @@ export const PR_PROMOS: Card[] = [
       "Target: User",
       "Effect: The target gets +6/+6 and +6 Mental Power during this turn. Additionally, the target cannot be affected by your opponent's effects during this turn.",
     ],
+    flavor: "\"Multi Shadow Clone Jutsu!!\"",
     image: "promo-j-pr-043",
   },
   {
@@ -1922,6 +1987,7 @@ export const PR_PROMOS: Card[] = [
       "•Target (1) gets +5/+5 during this turn. Additionally, the target cannot be affected by your opponent's effects during this turn.",
       "•Move target (2) to the bottom of its owner's Deck.",
     ],
+    flavor: "\"Lightning Blade!!\"",
     image: "promo-j-pr-044",
   },
   {
@@ -1938,6 +2004,7 @@ export const PR_PROMOS: Card[] = [
       "Target: Every Ninja Battling against the user",
       "Effect: Negate the effect texts of the target and give 1 Damage to it. Additionally, if the target's printed Entrance cost is equal to or lower than that of the user's, the target becomes a Stand-By Ninja.",
     ],
+    flavor: "\"Chidori Stream!!\"",
     image: "promo-j-pr-045",
   },
   {
@@ -1970,6 +2037,7 @@ export const PR_PROMOS: Card[] = [
       "Target: 1 of your opponent's Jutsu cards being played",
       "Effect: Negate the target and discard it. Then, look at all the cards in your opponent's hand and discard the card(s) with the same name as the target.",
     ],
+    flavor: "\"I can see it now!\"",
     image: "promo-j-pr-us004",
   },
   {
@@ -1986,6 +2054,7 @@ export const PR_PROMOS: Card[] = [
       "Target: User",
       "Effect: The targets gets +3/+0 for each of \"Naruto Uzumaki\" Ninja cards in your Discard Pile and Chakra area.",
     ],
+    flavor: "\"If you're not comin'...Then we're gonna come after you!\"",
     image: "promo-j-pr-us014",
   },
   // ── MISSION ──
@@ -2003,6 +2072,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent",
       "Effect: When you put an \"Akatsuki\" Ninja card in play, it gets the following effect texts during that turn: \"When this Ninja is put in play, draw 1 card.\" \"When this Ninja's Team wins a Victory or an Outstanding Victory, you win 1 Battle Reward.\"",
     ],
+    flavor: "\"I hate the way they look at us as if we're monsters or something!!\"",
     image: "promo-m-621",
   },
   {
@@ -2019,6 +2089,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent",
       "Effect: Your Teams with only \"Leaf\" Ninja(s) get +2 Team Power while Battling against 1 or more non-\"Leaf\" Ninjas. Additionally, each of your Ninja in those Teams cannot be affected by the effects of your opponent's non-\"Leaf\" Ninjas.",
     ],
+    flavor: "\"No matter what it tales, I won't let you have Gaara!\"",
     image: "promo-m-622",
   },
   {
@@ -2035,6 +2106,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent",
       "Effect: During the Exchange of Jutsu, you can remove 2 Ninja cards with \"Sharingan Eye\", in your Discard Pile and/or Chakra area, from game. In that case, search for 1 Jutsu card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "\"Do you think you could break your bonds that easily, Sasuke?\" \"......\"",
     image: "promo-m-623",
   },
   {
@@ -2051,6 +2123,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent",
       "Effect: All of your Teams that only have \"Leaf\" Ninjas get +1 Team Power during the Showdown.",
     ],
+    flavor: "\"The leaves dance in the air where they burn. The shadow of the fire thows light on the sky and it makes leaves green again...\"",
     image: "promo-m-pr-010",
   },
   {
@@ -2067,6 +2140,7 @@ export const PR_PROMOS: Card[] = [
       "Target: \"Naruto Uzumaki\", \"Sasuke Uchiha\" and \"Sakura Haruno\"",
       "Effect: When all of the target Ninjas are in the same Team and wins an Outstanding Battle Reward during this turn, you win the game.",
     ],
+    flavor: "\"To be the Hokage is my dream!\"",
     image: "promo-m-pr-011",
   },
   {
@@ -2083,6 +2157,7 @@ export const PR_PROMOS: Card[] = [
       "Target: 1 of your Ninjas",
       "Effect: After this turn's Battle Phase ends, you may have 1 additional Battle Phase. You may send out only the target's Team to Battle during that additional Battle Phase.",
     ],
+    flavor: "\"All right! Let's go!\"",
     image: "promo-m-pr-012",
   },
   {
@@ -2098,6 +2173,7 @@ export const PR_PROMOS: Card[] = [
     text: [
       "Effect: Look at the top 2 cards of your opponent's Deck and return them to the top of their Deck in any order you like.",
     ],
+    flavor: "\"I enjoyed witnessing your skills and power.\"",
     image: "promo-m-pr-013",
   },
   {
@@ -2113,6 +2189,7 @@ export const PR_PROMOS: Card[] = [
     text: [
       "Effect: After this turn ends, you may have 1 additional turn except Mission Phase. Your opponent wins 3 battle Rewards at the end of the additional turn.",
     ],
+    flavor: "\"My existence won't be vanished!\"",
     image: "promo-m-pr-016",
   },
   {
@@ -2128,6 +2205,7 @@ export const PR_PROMOS: Card[] = [
     text: [
       "Effect: After this turn ends, you can have 1 additional turn. In that case, at the end of that additional turn, discard all the cards in your Deck.",
     ],
+    flavor: "\"Let's end this now!\"",
     image: "promo-m-pr-017",
   },
   {
@@ -2143,6 +2221,7 @@ export const PR_PROMOS: Card[] = [
     text: [
       "Effect: During the Organization Phase of this turn, both players' Genin Ninjas must be removed from their Teams and may not be included in the Team with any other Ninjas. (Other Ninjas can be organized as usual). During the Battle Phase, both players must send out only Genin Ninjas to Battle, if possible. During the Showdown, no Ninjas can receive any Damage. Also, if a player wins a Victory or Outstanding Victory, that player wins 2 Battle Rewards and draws a card.",
     ],
+    flavor: "\"You fight with me now!\"",
     image: "promo-m-pr-018",
   },
   {
@@ -2160,6 +2239,7 @@ export const PR_PROMOS: Card[] = [
       "Target: 1 Ninja with 1 or less Entrance cost",
       "Effect: Attach this card to the target. The effect text of the target is negated. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"Ninjutsu, the third shinobi battle skill.\" \"...\"",
     image: "promo-m-pr-021",
   },
   {
@@ -2176,6 +2256,7 @@ export const PR_PROMOS: Card[] = [
       "Target: (1) 1 of your \"Genin\" only Ninjas (2) 1 of your opponent's Ninjas",
       "Effect: You organize a Team of only target (1) and your opponent organizes a Team of only target (2). These 2 Teams must be sent out to Battle this turn if possible. The effect texts of both targets are negated while they are Battling this turn. No other Teams can be sent out to Battle during this turn.",
     ],
+    flavor: "\"How could you dare say that to me...Let's take this outside, you little brat!\"",
     image: "promo-m-pr-022",
   },
   {
@@ -2193,6 +2274,7 @@ export const PR_PROMOS: Card[] = [
       "Target: Every Ninja with 1 or less Entrance cost",
       "Effect: The effect text of the target is negated.",
     ],
+    flavor: "\".........!\"",
     image: "promo-m-pr-023",
   },
   {
@@ -2210,6 +2292,7 @@ export const PR_PROMOS: Card[] = [
       "Target: 1 Ninja",
       "Effect: Attach this card to the target. The target's Mental Power becomes 0 and cannot be changed. (If you attach this card to your opponent's Ninja, they control this card.)",
     ],
+    flavor: "\"I just passed a candidate who didn't answer a single question...\"",
     image: "promo-m-pr-024",
   },
   {
@@ -2226,6 +2309,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent (2)",
       "Effect: At the beginning of your turn, if you have either \"Haku\" or \"Zabuza Momochi\" in play, and the other one in your Discard Pile, put the one that is currently in your Discard Pile in play in the same status as the one that is currently in play.",
     ],
+    flavor: "\"I know it cannot be, but...I wish I could go to where you have gone...How I wish I could  join you there..\"",
     image: "promo-m-pr-025",
   },
   {
@@ -2242,6 +2326,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent (2)",
       "Effect: \"Sannin\" Ninjas cannot receive any Damage by your opponent's Jutsu cards used by non-\"Sannin\" Ninjas. Additionally, while the \"Sannin\" Ninjas are Battling against a Team which includes no \"Sannin\" Ninjas, they cannot receive any Damage due to the Showdown.",
     ],
+    flavor: "\"Today is the last day they call us 'The Sannin'\".",
     image: "promo-m-pr-029",
   },
   {
@@ -2258,6 +2343,7 @@ export const PR_PROMOS: Card[] = [
       "Counter",
       "Effect: Put 1 \"Kimimaro\" Ninja card in your hand in play. Then, you can place it in any of your Teams with 2 or less Ninjas. That \"Kimimaro's\" Team must be sent out to Block, if possible, during the turn.",
     ],
+    flavor: "\"Why you are...\"",
     image: "promo-m-pr-030",
   },
   {
@@ -2274,6 +2360,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent (3)",
       "Effect: At the beginning of each player's turn, that player selects 1 of their in-play Ninjas. If the selected Ninja's Team wins a Victory or an Outstanding Victory during the turn, that player wins 1 Battle Reward.",
     ],
+    flavor: "\"The one who becomes the Hokage is me!!\"",
     image: "promo-m-pr-031",
   },
   {
@@ -2290,6 +2377,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent",
       "Effect: When you put a \"Sannin\" Ninja in play, your opponent cannot play any Mission cards and their Ninjas cannot use any Jutsu cards during that turn and the next turn.",
     ],
+    flavor: "\"Sannin\" Ninjas are legendary ninjas known through out all the villages.",
     image: "promo-m-pr-032",
   },
   {
@@ -2306,6 +2394,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent",
       "Effect: When your \"Satoosa\" Ninja is removed from play due to Showdown or by your opponent's effects, you can search for 1 \"Satoosa\" Ninja card in your Deck, show it to your opponent and place it in your hand. Then, shuffle your Deck.",
     ],
+    flavor: "A Ninja who governs the Leaf Village and protects it from the danger is called \"The Hokage\".",
     image: "promo-m-pr-033",
   },
   {
@@ -2322,6 +2411,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent (3)",
       "Effect: While you have only 1 Ninja with the highest cost among the Ninjas you have in play, that Ninja cannot be affected by your opponent's effects.",
     ],
+    flavor: "Everyone's all \"Sasuke, Sasuke.\" What's so great about this guy?!",
     image: "promo-m-pr-048",
   },
   {
@@ -2339,6 +2429,7 @@ export const PR_PROMOS: Card[] = [
       "Effect: Each player's Ninjas cannot be removed from play by the effects of their opponent's Jutsu cards.",
       "Effect: When this Mission is removed from play, you can draw 1 card. In that case, move this card to the top of its owner's Deck instead.",
     ],
+    flavor: "\"I'm a Ninja now and I want a Ninja mission!\"",
     image: "promo-m-pr-049",
   },
   {
@@ -2401,6 +2492,7 @@ export const PR_PROMOS: Card[] = [
       "Permanent (2)",
       "Effect: When your opponent would draw a card during their Start Phase, they draw a card and reveal it instead. In that case, if that card is a Ninja card, discard it unless that player has you win 1 Battle Reward.",
     ],
+    flavor: "\"Instead of wasting all that time chasing me, you should've been training.\"",
     image: "promo-m-pr-081",
   },
   {
@@ -2431,6 +2523,7 @@ export const PR_PROMOS: Card[] = [
     text: [
       "Effect: Draw 3 cards. In that case, skip your Organization Phase during this turn.",
     ],
+    flavor: "\"Thank you...\"",
     image: "promo-m-pr-092",
   },
   {
@@ -2447,6 +2540,7 @@ export const PR_PROMOS: Card[] = [
       "Counter Permanent (2)",
       "Effect: All Jutsu cards and Ninja effects that require Chakra cannot be used or activated.",
     ],
+    flavor: "\"It was all an act. ... With a cute little mask.\"",
     image: "promo-m-pr-us006",
   },
 ];
