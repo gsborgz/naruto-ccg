@@ -40,7 +40,7 @@ Abra cada folha e compare **todos os campos** com o impresso:
 | `text` | Um item por bloco impresso. Os títulos de efeito ficam no item próprio entre colchetes, na grafia já usada na coleção (no S01 são Title Case, embora o impresso seja em maiúsculas). |
 | `rarity` | Pontos depois do copyright no rodapé. |
 
-**Pontos de raridade** (S01): nenhum = Common; 1 = Uncommon; 2 = Rare; 3 = Super Rare; ponto **vermelho** = Starter Deck. Para ver de perto: `sheets.py footer $W <ids…>` (4×). Coleções posteriores podem usar outro padrão; veja as anotações por set na memória e no README.
+**Pontos de raridade** (S01): nenhum = Common; 1 = Uncommon; 2 = Rare; 3 = Super Rare; ponto **vermelho** = Starter Deck. Para ver de perto: `sheets.py footer $W <ids…>` (4×). Coleções posteriores podem usar outro padrão; veja as anotações por set na memória.
 
 **Varredura de texto:** procure espaços duplos, espaços no início ou no fim e caracteres fora do ASCII nos campos `name`, `text` e `characteristics`. Antes do flavor, o S01 não tinha nenhum.
 
@@ -72,7 +72,8 @@ Exemplos do S01:
 Muitas cartas têm uma frase entre aspas logo acima da caixa de texto (fala do anime). Ela vai no campo opcional `flavor` (ver `BaseCard` em [src/models/card.ts](../src/models/card.ts)).
 
 ```bash
-python -I scripts/review-set/sheets.py quotes $W              # $W/sheets/qNN.png, 7 frases por folha
+python -I scripts/review-set/sheets.py dense $W               # $W/sheets/fNN.png, 24 frases por folha (preferido: menos imagens para ler)
+python -I scripts/review-set/sheets.py quotes $W              # $W/sheets/qNN.png, 7 frases por folha, maiores
 python -I scripts/review-set/sheets.py crop $W 300 388 <ids…>  # frases de 3 linhas que saíram cortadas em cima
 ```
 
@@ -83,12 +84,15 @@ python -I scripts/review-set/sheets.py crop $W 300 388 <ids…>  # frases de 3 l
    ```
    O script coloca `flavor: "..."` antes de `image:` em cada carta e regrava todas as frases a cada execução, então pode rodar de novo à vontade. Ele falha se o JSON tiver um id que não existe no TS.
 
+O OCR nativo do Windows foi testado no S06 e errou demais (texto branco sobre a arte); a leitura é visual.
+
 **Convenções** (as mesmas do S01):
 
 - **Aspas:** a frase fica **como impressa, com as aspas**. Ex.: `flavor: "\"Ugh!\""`.
 - **Mais de uma fala:** ficam na mesma string, cada uma com suas aspas. Ex.: `"\"Horse! Tiger!!\" \"I'll pinpoint the target!\""`.
 - **Pontuação:** apóstrofo `'`; reticências `...`; o coração vira `♥`. Frases só de pontos ficam assim mesmo (`"\"......\""`).
 - **Erros de impressão:** mantenha, porque é o texto da carta (ex.: "there's a quite a few", "No hand!!"). A exceção é espaço sobrando (ex.: antes da aspa final), que pode ser removido.
+- **Texto narrativo sem aspas** (ex.: S07 N-US041): grave sem aspas, como impresso.
 - **Kanji:** grave como impresso. Se não estiver legível, vai para a lista de revisão.
 - **Carta sem frase:** não recebe o campo.
 - **Conferência de fim de lote:** confira se o número de frases bate com o número de cartas que têm frase.

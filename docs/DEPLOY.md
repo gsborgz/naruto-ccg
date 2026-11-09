@@ -38,7 +38,7 @@ O push sobe cerca de 330 MB (as imagens otimizadas em `public/cards`) e pode dem
 Ficam de fora pelo `.gitignore` e só existem na sua máquina, então guarde um backup delas:
 
 - as imagens originais (`cards/`, ~1,7 GB);
-- as ferramentas de importação (`scripts/`, incluindo os modelos de marca d'água em `scripts/watermark/data/`, e `tools/`).
+- as ferramentas locais (`scripts/` e `tools/`).
 
 ## 2. Criar o projeto na Vercel
 
