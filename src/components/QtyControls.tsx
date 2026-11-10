@@ -2,6 +2,7 @@
 
 import { memo } from 'react';
 import type { Card } from '@/models/card';
+import { useCardName } from '@/lib/cardLanguage';
 
 interface Props {
   card: Card;
@@ -17,6 +18,7 @@ export const QtyControls = memo(function QtyControls({ card, qty, blocked, onSet
   const btn = `grid place-items-center rounded-md font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-35 ${
     compact ? 'size-8' : 'size-10 text-lg'
   }`;
+  const name = useCardName()(card);
 
   return (
     <div className="flex items-center gap-2">
@@ -25,7 +27,7 @@ export const QtyControls = memo(function QtyControls({ card, qty, blocked, onSet
         className={`${btn} bg-surface-2 hover:bg-border`}
         disabled={qty === 0}
         onClick={() => onSetQty(card, qty - 1)}
-        aria-label={`Remover 1 ${card.name}`}
+        aria-label={`Remover 1 ${name}`}
       >
         −
       </button>
@@ -38,7 +40,7 @@ export const QtyControls = memo(function QtyControls({ card, qty, blocked, onSet
         disabled={blocked !== null}
         title={blocked ?? undefined}
         onClick={() => onSetQty(card, qty + 1)}
-        aria-label={`Adicionar 1 ${card.name}`}
+        aria-label={`Adicionar 1 ${name}`}
       >
         +
       </button>

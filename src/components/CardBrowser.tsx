@@ -3,7 +3,7 @@
 import { memo, useDeferredValue, useMemo, useState } from 'react';
 import { CARDS } from '@/data/cards';
 import { filterCards, INITIAL_FILTERS } from '@/lib/cardFilters';
-import { useCardLanguage } from '@/lib/cardLanguage';
+import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFilters } from './CardFilters';
@@ -50,6 +50,7 @@ interface TileProps {
  * mudou são re-renderizadas (a grade pode ter milhares de cartas).
  */
 const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect, onSetQty }: TileProps) {
+  const name = useCardName()(card);
   return (
     <li className="group flex flex-col gap-1.5 [contain-intrinsic-size:auto_320px] [content-visibility:auto]">
       <button
@@ -58,7 +59,7 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
         onPointerEnter={() => preloadFull(card)}
         onFocus={() => preloadFull(card)}
         className="relative overflow-hidden rounded-lg ring-1 ring-border transition hover:-translate-y-0.5 hover:ring-accent"
-        aria-label={`Ver detalhes de ${card.name}`}
+        aria-label={`Ver detalhes de ${name}`}
       >
         <img
           src={cardImageUrl(card, 'thumb')}
@@ -78,8 +79,8 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
       </button>
       <div className="flex items-center justify-between gap-2 px-0.5">
         <div className="min-w-0">
-          <p className="truncate text-sm font-medium" title={card.name}>
-            {card.name}
+          <p className="truncate text-sm font-medium" title={name}>
+            {name}
           </p>
           <p className="text-xs text-muted">
             {CARD_TYPE_LABEL[card.type]}

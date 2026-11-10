@@ -14,6 +14,7 @@ import {
   type ZoneName,
 } from '@/lib/game/state';
 import { cardImageUrl, type Card } from '@/models/card';
+import { useCardName } from '@/lib/cardLanguage';
 
 /**
  * Arena da partida: uma mesa com os dois Painéis de Jogo frente a frente (docs/REGRAS.md, "Painel de Jogo").
@@ -187,6 +188,7 @@ function ArenaCard({
   style?: React.CSSProperties;
 }) {
   const card = CARDS_BY_ID.get(inst.cardId);
+  const nameOf = useCardName();
   return (
     <div
       role="button"
@@ -198,7 +200,7 @@ function ArenaCard({
       }}
       onClick={() => card && onInspect(card)}
       onKeyDown={(e) => e.key === 'Enter' && card && onInspect(card)}
-      title={card?.name ?? inst.cardId}
+      title={card ? nameOf(card) : inst.cardId}
       style={style}
       className={`${sizeClass} relative shrink-0 overflow-hidden rounded-[6%/4.3%] shadow-[0_2px_6px_rgb(0_0_0/0.5)] ring-1 ring-black/40 transition duration-150 hover:ring-2 hover:ring-accent ${hoverClass} ${
         draggable ? 'cursor-grab active:cursor-grabbing' : 'cursor-pointer'
@@ -207,7 +209,7 @@ function ArenaCard({
       {card ? (
         <img
           src={cardImageUrl(card, 'thumb')}
-          alt={card.name}
+          alt={nameOf(card)}
           draggable={false}
           loading="lazy"
           className="aspect-[5/7] w-full object-cover"
@@ -611,6 +613,7 @@ function ZoneListDialog({
   onClose: () => void;
 }) {
   const targets = (['hand', 'village', 'battlefield', 'chakra', 'discard', 'deck'] as const).filter((t) => t !== zone);
+  const nameOf = useCardName();
   return (
     <Dialog open onClose={onClose} title={title}>
       {cards.length === 0 ? (
@@ -623,7 +626,7 @@ function ZoneListDialog({
               <li key={c.uid} className="flex items-center gap-3">
                 <ArenaCard inst={c} draggable={false} onInspect={onInspect} sizeClass="w-12" />
                 <div className="flex min-w-0 flex-1 flex-col gap-1">
-                  <span className="truncate text-sm font-medium">{card?.name ?? c.cardId}</span>
+                  <span className="truncate text-sm font-medium">{card ? nameOf(card) : c.cardId}</span>
                   {controls && (
                     <div className="flex flex-wrap gap-1">
                       {targets.map((t) => (

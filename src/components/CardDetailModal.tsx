@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { SET_NAMES } from '@/data/sets';
-import { useCardLanguage, useLocalizedCard } from '@/lib/cardLanguage';
+import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { ElementBadge } from './ElementBadge';
@@ -39,6 +38,7 @@ export function CardDetailModal({ card, onClose, actions }: Props) {
 function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
   const { language } = useCardLanguage();
   const localized = useLocalizedCard(card);
+  const setName = useSetName()(card.set);
   return (
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       {/* A miniatura (já em cache pela grade) aparece por baixo enquanto a imagem grande carrega. */}
@@ -63,8 +63,10 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
               {CARD_TYPE_LABEL[card.type]} · #{card.number} · {card.set}
               {localized.rarity ? ` · ${localized.rarity}` : ''}
             </p>
-            {SET_NAMES[card.set] && <p className="text-xs text-muted">{SET_NAMES[card.set]}</p>}
-            <h2 className="text-2xl font-bold">{card.name}</h2>
+            {setName && <p className="text-xs text-muted">{setName}</p>}
+            <h2 className="text-2xl font-bold">{localized.name}</h2>
+            {/* Com o nome traduzido, o impresso continua visível: é ele que vale na regra de cópias. */}
+            {localized.name !== card.name && <p className="text-sm text-muted">{card.name}</p>}
           </div>
           <button
             type="button"
@@ -98,7 +100,7 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
                 {card.injured.combat}/{card.injured.support}
               </dd>
               <dt className="text-muted">Atributo</dt>
-              <dd>{card.attributes.join(' / ')}</dd>
+              <dd>{localized.attributes.join(' / ')}</dd>
             </>
           )}
           {localized.characteristics.length > 0 && (

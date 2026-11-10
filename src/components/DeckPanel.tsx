@@ -6,6 +6,7 @@ import { DECK_RULES, deckPartOf, type DeckSummary } from '@/lib/deckRules';
 import { sortCost } from '@/lib/cardFilters';
 import type { Deck } from '@/lib/deckStore';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card, type CardType } from '@/models/card';
+import { useCardName } from '@/lib/cardLanguage';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 
@@ -56,14 +57,15 @@ function DeckCard({
   onSetQty: (card: Card, qty: number) => void;
 }) {
   const { card, qty } = entry;
+  const name = useCardName()(card);
   return (
     <li className="group relative">
       <button
         type="button"
         onClick={() => onSelect(card)}
         className="block w-full overflow-hidden rounded-md ring-1 ring-border transition hover:-translate-y-0.5 hover:ring-accent"
-        aria-label={`Ver detalhes de ${card.name}`}
-        title={card.name}
+        aria-label={`Ver detalhes de ${name}`}
+        title={name}
       >
         <img
           src={cardImageUrl(card, 'thumb')}
@@ -81,7 +83,7 @@ function DeckCard({
             type="button"
             onClick={() => onSetQty(card, qty - 1)}
             className={`${roundBtn} bg-surface-2 text-text ring-border hover:bg-border`}
-            aria-label={`Remover 1 ${card.name}`}
+            aria-label={`Remover 1 ${name}`}
           >
             −
           </button>
@@ -99,7 +101,7 @@ function DeckCard({
             disabled={blocked !== null}
             title={blocked ?? undefined}
             className={`${roundBtn} bg-accent text-bg ring-accent hover:bg-accent-strong`}
-            aria-label={`Adicionar 1 ${card.name}`}
+            aria-label={`Adicionar 1 ${name}`}
           >
             +
           </button>
@@ -168,6 +170,7 @@ export function DeckPanel({
   onSave: () => void;
 }) {
   const [tab, setTab] = useState<Tab>('ninja');
+  const nameOf = useCardName();
 
   const entries = Object.entries(deck.cards)
     .map(([id, qty]) => ({ card: lookup(id), qty }))
@@ -177,7 +180,7 @@ export function DeckPanel({
     .filter((e) =>
       tab === 'reinforcement' ? deckPartOf(e.card) === 'reinforcement' : deckPartOf(e.card) === 'main' && e.card.type === tab,
     )
-    .sort((a, b) => sortCost(a.card) - sortCost(b.card) || a.card.name.localeCompare(b.card.name));
+    .sort((a, b) => sortCost(a.card) - sortCost(b.card) || nameOf(a.card).localeCompare(nameOf(b.card), 'pt-BR'));
 
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">

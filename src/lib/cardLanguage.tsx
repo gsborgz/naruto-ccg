@@ -3,7 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { Card } from '@/models/card';
 import type { CardLanguage, CardTranslations, LocalizedCardText } from '@/models/cardTranslation';
-import { localizeCard } from './cardLocale';
+import { localizeCard, localizeCardName, localizeSetName } from './cardLocale';
 
 /** Preferência por navegador (não vai para o servidor nem para os decks compartilhados). */
 const STORAGE_KEY = 'naruto-ccg:card-language';
@@ -67,4 +67,16 @@ export function useCardLanguage(): CardLanguageContextValue {
 export function useLocalizedCard(card: Card): LocalizedCardText {
   const { language, translations } = useCardLanguage();
   return useMemo(() => localizeCard(card, language, translations), [card, language, translations]);
+}
+
+/** Nome da carta no idioma escolhido, para listas (grade, deck, arena). */
+export function useCardName(): (card: Card) => string {
+  const { language, translations } = useCardLanguage();
+  return useCallback((card: Card) => localizeCardName(card, language, translations), [language, translations]);
+}
+
+/** Nome da coleção no idioma escolhido. */
+export function useSetName(): (set: string) => string | undefined {
+  const { language } = useCardLanguage();
+  return useCallback((set: string) => localizeSetName(set, language), [language]);
 }

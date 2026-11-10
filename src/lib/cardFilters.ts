@@ -1,6 +1,7 @@
 import type { Card, CardType, ElementSymbol } from '../models/card.ts';
 import type { CardTranslations } from '../models/cardTranslation.ts';
 import { translateCharacteristic } from '../data/ptbr/glossary.ts';
+import { cardNamesPtBr } from './cardLocale.ts';
 
 export type SortKey = 'type' | 'name' | 'cost';
 
@@ -54,8 +55,11 @@ function ptHaystackOf(c: Card, translations: CardTranslations): string {
   if (!cache) ptHaystackCache.set(translations, (cache = new WeakMap()));
   let h = cache.get(c);
   if (h === undefined) {
-    const characteristics = 'characteristics' in c ? c.characteristics.map(translateCharacteristic) : [];
-    const pt = normalize([...characteristics, ...(translations[c.id]?.text ?? [])].join(' '));
+    const names = cardNamesPtBr(translations);
+    const characteristics =
+      'characteristics' in c ? c.characteristics.map((ch) => translateCharacteristic(ch, (en) => names.get(en))) : [];
+    const tr = translations[c.id];
+    const pt = normalize([tr?.name ?? '', ...characteristics, ...(tr?.text ?? [])].join(' '));
     h = `${haystackOf(c)} ${pt}`;
     cache.set(c, h);
   }
@@ -73,7 +77,8 @@ export function filterCards(cards: Card[], f: CardFilterState, translations?: Ca
     return true;
   });
 
-  const byName = (a: Card, b: Card) => a.name.localeCompare(b.name, 'pt-BR');
+  const nameOf = (c: Card) => translations?.[c.id]?.name ?? c.name;
+  const byName = (a: Card, b: Card) => nameOf(a).localeCompare(nameOf(b), 'pt-BR');
   const byCost = (a: Card, b: Card) => sortCost(a) - sortCost(b);
   const byType = (a: Card, b: Card) => TYPE_ORDER[a.type] - TYPE_ORDER[b.type];
 

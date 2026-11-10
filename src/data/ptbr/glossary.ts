@@ -188,11 +188,15 @@ const NAME_PREFIX = 'Name:';
 const MENTAL_POWER = /^Mental Power:\s*(.+)$/;
 
 /**
- * Característica em PT-BR. "Name: X" vira "Nome: X" com o nome em inglês (os nomes das cartas não
- * são traduzidos, e X é o nome de outra carta). Termo fora do glossário fica como impresso.
+ * Característica em PT-BR. "Name: X" vira "Nome: X"; X é o nome de outra carta e usa o nome PT-BR dela
+ * quando `cardName` souber (ex.: "Name: The Third Hokage" → "Nome: O Terceiro Hokage").
+ * Termo fora do glossário fica como impresso.
  */
-export function translateCharacteristic(characteristic: string): string {
-  if (characteristic.startsWith(NAME_PREFIX)) return `Nome: ${characteristic.slice(NAME_PREFIX.length).trim()}`;
+export function translateCharacteristic(characteristic: string, cardName?: (en: string) => string | undefined): string {
+  if (characteristic.startsWith(NAME_PREFIX)) {
+    const en = characteristic.slice(NAME_PREFIX.length).trim();
+    return `Nome: ${cardName?.(en) ?? en}`;
+  }
   const mental = MENTAL_POWER.exec(characteristic);
   if (mental) return `Poder Mental: ${mental[1]}`;
   return CHARACTERISTICS_PTBR[characteristic] ?? characteristic;
@@ -201,3 +205,127 @@ export function translateCharacteristic(characteristic: string): string {
 export function translateRarity(rarity: string): string {
   return RARITY_PTBR[rarity] ?? rarity;
 }
+
+/**
+ * Atributos de Combate (ícone do canto inferior direito). O rulebook PT-BR os deixa em inglês;
+ * aqui são traduzidos para exibição. As técnicas japonesas (Ninjutsu, Taijutsu, Genjutsu) ficam como estão.
+ * Citações no texto (`Atributo de Combate "Arma"`) usam esta mesma forma.
+ */
+export const COMBAT_ATTRIBUTES_PTBR: Readonly<Record<string, string>> = {
+  '?': '?',
+  Absorption: 'Absorção',
+  Bat: 'Morcego',
+  // "Beast" não aparece impresso em nenhum Ninja, mas é citado em textos do S01.
+  Beast: 'Fera',
+  Bee: 'Abelha',
+  Bomb: 'Bomba',
+  Bone: 'Osso',
+  Brush: 'Pincel',
+  Bubble: 'Bolha',
+  Control: 'Controle',
+  Cooking: 'Culinária',
+  Crystal: 'Cristal',
+  Curse: 'Maldição',
+  Decode: 'Decifrar',
+  Delivery: 'Entrega',
+  Face: 'Rosto',
+  Fang: 'Presa',
+  Flame: 'Chama',
+  Food: 'Comida',
+  Fool: 'Tolo',
+  Genjutsu: 'Genjutsu',
+  Gravity: 'Gravidade',
+  Hair: 'Cabelo',
+  Ice: 'Gelo',
+  Illusion: 'Ilusão',
+  Ink: 'Tinta',
+  Insect: 'Inseto',
+  Iron: 'Ferro',
+  'Kung Fu': 'Kung Fu',
+  Labyrinth: 'Labirinto',
+  Lava: 'Lava',
+  Magic: 'Magia',
+  Magnet: 'Magnetismo',
+  Manipulation: 'Manipulação',
+  'Martial Arts': 'Artes Marciais',
+  Medicine: 'Medicina',
+  Mind: 'Mente',
+  Mist: 'Névoa',
+  Money: 'Dinheiro',
+  Mud: 'Lama',
+  Nail: 'Unha',
+  Ninjutsu: 'Ninjutsu',
+  Oil: 'Óleo',
+  Paper: 'Papel',
+  Peacock: 'Pavão',
+  Pig: 'Porco',
+  Power: 'Força',
+  Prophecy: 'Profecia',
+  Running: 'Corrida',
+  Sand: 'Areia',
+  'Sand Iron': 'Areia de Ferro',
+  Seal: 'Selo',
+  Shadow: 'Sombra',
+  Slime: 'Gosma',
+  Smoke: 'Fumaça',
+  Snake: 'Cobra',
+  Soft: 'Maleável',
+  'Soft Body': 'Corpo Maleável',
+  'Soft body': 'Corpo Maleável',
+  Sound: 'Som',
+  Speech: 'Discurso',
+  Spider: 'Aranha',
+  Spirit: 'Espírito',
+  Steal: 'Roubo',
+  Steam: 'Vapor',
+  Stitch: 'Costura',
+  Stone: 'Pedra',
+  Taijutsu: 'Taijutsu',
+  Thunderbolt: 'Relâmpago',
+  Tree: 'Árvore',
+  Water: 'Água',
+  Weapon: 'Arma',
+  Wisdom: 'Sabedoria',
+};
+
+export function translateAttribute(attribute: string): string {
+  return COMBAT_ATTRIBUTES_PTBR[attribute] ?? attribute;
+}
+
+/** Nomes das coleções (`src/data/sets.ts`) em PT-BR. */
+export const SET_NAMES_PTBR: Readonly<Record<string, string>> = {
+  S01: 'O Caminho para Hokage',
+  S02: 'As Garras da Serpente',
+  S03: 'A Maldição da Areia',
+  S04: 'Vingança e Renascimento',
+  S05: 'O Legado do Sonho',
+  S06: 'Rivalidade Eterna',
+  S07: 'Em Busca do Poder',
+  S08: 'Batalha do Destino',
+  S09: 'Os Escolhidos',
+  S10: 'A Linhagem das Lendas',
+  S11: 'Vento que se Aproxima',
+  S12: 'Uma Nova Crônica',
+  S13: 'Reencontro Fatídico',
+  S14: 'Aliança Emergente',
+  S15: 'A Profecia Anunciada',
+  S16: 'Promessa Quebrada',
+  S17: 'A Vontade do Fogo',
+  S18: 'As Presas da Serpente',
+  S19: 'O Caminho da Dor',
+  S20: 'Contos do Sábio Galante',
+  S21: 'A Verdade Despedaçada',
+  S22: 'Armas de Guerra',
+  S23: 'Invasão',
+  S24: 'O Legado do Sábio',
+  S25: 'A Cúpula dos Kage',
+  S26: 'A Ira do Vingador',
+  S27: 'A Ascensão do Herói',
+  S28: 'Ultimate Ninja Storm 3',
+  S29: 'O Sonho Shinobi',
+  TP1: 'Pacote de Torneio 1',
+  TP2: 'Pacote de Torneio 2',
+  TP3: 'Pacote de Torneio 3',
+  TP4: 'Pacote de Torneio 4',
+  PR: 'Naruto CCG: Promos',
+};

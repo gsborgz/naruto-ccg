@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Dialog } from '@/components/Dialog';
 import { CARDS_BY_ID } from '@/data/cards';
 import { cardImageUrl, CARD_TYPE_LABEL } from '@/models/card';
+import { useCardName } from '@/lib/cardLanguage';
 
 /**
  * Buscar uma carta no deck: mostra o que há no deck (por nome, sem revelar a ordem) e leva a carta
@@ -39,14 +40,16 @@ export function SearchDeckDialog({
     };
   }, [open, load]);
 
+  const nameOf = useCardName();
   const entries = useMemo(() => {
     if (!counts) return [];
     const q = query.trim().toLowerCase();
     return Object.entries(counts)
       .map(([id, qty]) => ({ id, qty, card: CARDS_BY_ID.get(id) }))
-      .filter((e) => !q || (e.card?.name ?? e.id).toLowerCase().includes(q))
-      .sort((a, b) => (a.card?.name ?? a.id).localeCompare(b.card?.name ?? b.id, 'pt-BR'));
-  }, [counts, query]);
+      .map((e) => ({ ...e, name: e.card ? nameOf(e.card) : e.id }))
+      .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.card?.name ?? '').toLowerCase().includes(q))
+      .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+  }, [counts, query, nameOf]);
 
   return (
     <Dialog open={open} onClose={onClose} title="Buscar no deck">
@@ -64,18 +67,18 @@ export function SearchDeckDialog({
       {!counts && !error && <p className="text-sm text-muted">Carregando o deck…</p>}
       {counts && (
         <ul className="grid max-h-[55vh] grid-cols-3 gap-2 overflow-y-auto sm:grid-cols-4">
-          {entries.map(({ id, qty, card }) => (
+          {entries.map(({ id, qty, card, name }) => (
             <li key={id}>
               <button
                 type="button"
                 onClick={() => onPick(id)}
-                title={card?.name ?? id}
+                title={name}
                 className="group relative flex w-full flex-col gap-1 rounded-lg p-1 text-left hover:bg-surface-2"
               >
                 {card && (
                   <img
                     src={cardImageUrl(card, 'thumb')}
-                    alt={card.name}
+                    alt={name}
                     loading="lazy"
                     className="aspect-[5/7] w-full rounded object-cover ring-1 ring-border group-hover:ring-accent"
                   />
@@ -85,7 +88,7 @@ export function SearchDeckDialog({
                     ×{qty}
                   </span>
                 )}
-                <span className="truncate text-xs font-medium">{card?.name ?? id}</span>
+                <span className="truncate text-xs font-medium">{name}</span>
                 {card && <span className="text-[10px] text-muted">{CARD_TYPE_LABEL[card.type]}</span>}
               </button>
             </li>

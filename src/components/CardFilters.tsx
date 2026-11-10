@@ -3,11 +3,12 @@
 import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } from '@/models/card';
 import type { CardFilterState, SortKey } from '@/lib/cardFilters';
 import { SET_NAMES } from '@/data/sets';
+import { useSetName } from '@/lib/cardLanguage';
 import { ElementBadge } from './ElementBadge';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 const ELEMENTS: ElementSymbol[] = ['lightning', 'fire', 'wind', 'water', 'earth', 'void'];
-const SETS = Object.entries(SET_NAMES);
+const SETS = Object.keys(SET_NAMES);
 
 const select = 'rounded-lg border border-border bg-surface px-2 py-2 text-sm text-text';
 
@@ -29,6 +30,7 @@ export function CardFilters({
   onChange: (v: CardFilterState) => void;
   resultCount: number;
 }) {
+  const setName = useSetName();
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-3">
@@ -46,9 +48,9 @@ export function CardFilters({
           className={`${select} max-w-full ${value.set ? 'border-accent' : ''}`}
         >
           <option value="">Todas as coleções</option>
-          {SETS.map(([code, name]) => (
+          {SETS.map((code) => (
             <option key={code} value={code}>
-              {name}
+              {setName(code)}
             </option>
           ))}
         </select>
