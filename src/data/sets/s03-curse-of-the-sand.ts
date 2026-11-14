@@ -14,7 +14,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "085",
     set: "S03",
-    rarity: "Super Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -35,7 +34,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "086",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -56,7 +54,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "087",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 3"],
@@ -77,7 +74,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "088",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 1"],
@@ -98,7 +94,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "089",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: X"],
@@ -119,7 +114,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "090",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -140,7 +134,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "091",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Animal", "Growth"],
@@ -161,7 +154,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "092",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: 1"],
@@ -182,7 +174,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "093",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Byakugan", "Growth"],
@@ -203,7 +194,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "094",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -224,7 +214,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "095",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Growth"],
@@ -245,7 +234,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "096",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 1"],
@@ -266,7 +254,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "097",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Female", "Mental Power: 1"],
@@ -287,7 +274,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "098",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Medical"],
@@ -308,7 +294,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "099",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male"],
@@ -326,7 +311,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "100",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Proctor", "Mental Power: 1"],
@@ -347,7 +331,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "101",
     set: "S03",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Male"],
@@ -368,7 +351,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "102",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Toad"],
@@ -390,7 +372,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "103",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "(Genin)", "Male"],
@@ -411,7 +392,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "104",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "(Genin)", "Male"],
@@ -432,7 +412,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "105",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sound", "(Genin)", "Female"],
@@ -453,7 +432,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "106",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male"],
@@ -474,7 +452,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "107",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male"],
@@ -495,7 +472,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "108",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male", "Mental Power: 2"],
@@ -516,7 +492,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "109",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -537,7 +512,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "110",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -558,7 +532,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "111",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Dog", "Animal"],
@@ -579,7 +552,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "112",
     set: "S03",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -600,7 +572,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "113",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -621,7 +592,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "114",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -642,7 +612,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "115",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -663,7 +632,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "116",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye"],
@@ -684,7 +652,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "117",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -705,7 +672,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "118",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -726,7 +692,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "119",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -747,7 +712,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "120",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 3"],
@@ -768,7 +732,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "121",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Mental Power: 1"],
@@ -790,7 +753,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "122",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Proctor", "Mental Power: 1"],
@@ -811,7 +773,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "123",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -832,7 +793,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "124",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -853,7 +813,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "125",
     set: "S03",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Byakugan", "Growth"],
@@ -874,7 +833,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "126",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Byakugan", "Main Branch"],
@@ -895,7 +853,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "127",
     set: "S03",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Male"],
@@ -916,7 +873,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "128",
     set: "S03",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Ninja Toad"],
@@ -938,7 +894,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "129",
     set: "S03",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 2"],
@@ -958,7 +913,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "130",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sand", "Jonin", "Male"],
@@ -979,7 +933,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "131",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Waterfall", "Satoosa", "Male"],
@@ -1000,7 +953,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "132",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Waterfall", "Rogue Ninja", "(Jonin)", "Male"],
@@ -1021,7 +973,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "133",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Rain", "Rogue Ninja", "Male"],
@@ -1042,7 +993,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "134",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Rain", "Rogue Ninja", "Male"],
@@ -1063,7 +1013,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "135",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Rain", "Rogue Ninja", "Female", "Mental Power: 3"],
@@ -1085,7 +1034,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "085",
     set: "S03",
-    rarity: "Super Rare",
     cost: { symbols: ["lightning"], generic: "X" },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone status\"",
@@ -1102,7 +1050,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "086",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: [], generic: 4 },
     text: [
       "Requirements: \"Rock Lee\"",
@@ -1119,7 +1066,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "087",
     set: "S03",
-    rarity: "Super Rare",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Rock Lee\"",
@@ -1136,7 +1082,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "088",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: 1 of your Ninjas",
@@ -1152,7 +1097,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "089",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 0 },
     text: [
       "Requirements: \"Fang\" Combat Attribute",
@@ -1169,7 +1113,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "090",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Fang\" Combat Attribute",
@@ -1186,7 +1129,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "091",
     set: "S03",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1203,7 +1145,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "092",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "fire", "water", "wind", "earth"], generic: 0 },
     text: [
       "Target: 1 of your opponent's Ninjas",
@@ -1219,7 +1160,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "093",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Target: 1 Ninja",
@@ -1235,7 +1175,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "094",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Target: 1 Ninja",
@@ -1251,7 +1190,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "095",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Effect: Select and discard up to 2 of your opponent's Chakras.",
@@ -1266,7 +1204,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "096",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: "X" },
     text: [
       "Target: 1 Ninja Battling against the user",
@@ -1282,7 +1219,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "097",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute",
@@ -1299,7 +1235,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "098",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute + \"Clone status\"",
@@ -1316,7 +1251,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "099",
     set: "S03",
-    rarity: "Starter Deck",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1333,7 +1267,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "100",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1350,7 +1283,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "101",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "earth"], generic: 0 },
     text: [
       "Requirements: \"Mind\" Combat Attribute",
@@ -1367,7 +1299,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "102",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Food\" Combat Attribute",
@@ -1384,7 +1315,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "103",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Byakugan\"",
@@ -1401,7 +1331,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "104",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Effect: Search for any number of \"Kunai\" Jutsu cards in your Deck and move them to your Chakra area. Then, shuffle your Deck.",
@@ -1416,7 +1345,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "105",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: "X" },
     text: [
       "Target: X number of \"Kunai\" Jutsu cards in your Chakra area",
@@ -1432,7 +1360,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "106",
     set: "S03",
-    rarity: "Starter Deck",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Kakashi Hatake\"",
@@ -1449,7 +1376,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "107",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water", "water"], generic: 0 },
     text: [
       "Requirements: \"Zabuza Momochi\"",
@@ -1466,7 +1392,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "108",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["earth", "earth"], generic: "X" },
     text: [
       "Requirements: \"Byakugan\"",
@@ -1482,7 +1407,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "109",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Oil\" Combat Attribute",
@@ -1498,7 +1422,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "110",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 1 },
     text: [
       "Requirements: \"Male\"",
@@ -1515,7 +1438,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "111",
     set: "S03",
-    rarity: "Super Rare",
     cost: { symbols: [], generic: 5 },
     text: [
       "Requirements: \"Rock Lee\"",
@@ -1532,7 +1454,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "112",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Effect: Discard the top card of your opponent's Deck.",
@@ -1547,7 +1468,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "113",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: 1 injured Ninja",
@@ -1563,7 +1483,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "114",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["fire"], generic: 2 },
     text: [
       "Requirements: \"Special Jonin\" or higher Rank",
@@ -1580,7 +1499,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "115",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Effect: Select 1 symbol. Search for 1 card with the selected symbol in your Deck and move it to your Chakra area. Then, shuffle your Deck.",
@@ -1595,7 +1513,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "116",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Target: User",
@@ -1611,7 +1528,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "117",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: Ninja with the \"Water\" symbol",
@@ -1628,7 +1544,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "118",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Target: 1 Jutsu card with the \"Fire\" symbol being played",
@@ -1644,7 +1559,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "119",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 2 },
     text: [
       "Effect: Select 1 card in your opponent's hand at random and discard it.",
@@ -1659,7 +1573,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "120",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["water", "water"], generic: 1 },
     text: [
       "Target: User",
@@ -1675,7 +1588,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "121",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: 1 of your Ninjas",
@@ -1691,7 +1603,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "122",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Effect: Flip a Ninja Blade coin. If it's heads, draw 2 cards. If it's tails, draw 1 card. Then, move the same number of cards that you drew to your Chakra area.",
@@ -1706,7 +1617,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "123",
     set: "S03",
-    rarity: "Starter Deck",
     cost: { symbols: ["wind", "wind", "wind"], generic: 0 },
     text: [
       "Target: 1 Ninja",
@@ -1722,7 +1632,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "124",
     set: "S03",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: Your opponent's Battle Rewards",
@@ -1738,7 +1647,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "125",
     set: "S03",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Target: 1 Ninja with a lower Entrance cost than the user",
@@ -1754,7 +1662,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "126",
     set: "S03",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "fire", "water", "wind", "earth"], generic: 0 },
     text: [
       "Target: 5 of your opponent's Battle Rewards",
@@ -1771,7 +1678,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "085",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1789,7 +1695,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "086",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1805,7 +1710,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "087",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1822,7 +1726,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "088",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1839,7 +1742,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "089",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1856,7 +1758,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "090",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1874,7 +1775,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "091",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1891,7 +1791,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "092",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1908,7 +1807,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "093",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1925,7 +1823,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "094",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1942,7 +1839,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "095",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1958,7 +1854,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "096",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1974,7 +1869,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "097",
     set: "S03",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -1990,7 +1884,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "098",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2007,7 +1900,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "099",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2024,7 +1916,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "100",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2041,7 +1932,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "101",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2058,7 +1948,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "102",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2076,7 +1965,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "103",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2094,7 +1982,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "104",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2111,7 +1998,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "105",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2128,7 +2014,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "106",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2144,7 +2029,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "107",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2160,7 +2044,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "108",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2177,7 +2060,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "109",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2193,7 +2075,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "110",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2210,7 +2091,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "111",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2227,7 +2107,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "112",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2244,7 +2123,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "113",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2261,7 +2139,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "114",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2278,7 +2155,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "115",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2295,7 +2171,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "116",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2312,7 +2187,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "117",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2329,7 +2203,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning"],
     number: "118",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2345,7 +2218,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "119",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2361,7 +2233,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "120",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2378,7 +2249,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire"],
     number: "121",
     set: "S03",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2395,7 +2265,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "122",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2412,7 +2281,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "123",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2429,7 +2297,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "124",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2447,7 +2314,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water"],
     number: "125",
     set: "S03",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2463,7 +2329,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "126",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2480,7 +2345,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "127",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2497,7 +2361,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind"],
     number: "128",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2514,7 +2377,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "129",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2530,7 +2392,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "130",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2547,7 +2408,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "131",
     set: "S03",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2564,7 +2424,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["earth"],
     number: "132",
     set: "S03",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2582,7 +2441,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning", "wind"],
     number: "008",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Land of Fire", "Photographer", "Male"],
@@ -2599,7 +2457,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["water", "earth"],
     number: "009",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Waves", "Boatman", "Male"],
@@ -2616,7 +2473,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning", "fire"],
     number: "010",
     set: "S03",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Land of Waves", "Male"],
@@ -2633,7 +2489,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind", "earth"],
     number: "011",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Waves", "Female"],
@@ -2650,7 +2505,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["fire", "water"],
     number: "012",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Waterfall", "Male"],
@@ -2667,7 +2521,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["lightning", "water"],
     number: "013",
     set: "S03",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Waterfall", "Female"],
@@ -2684,7 +2537,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     elements: ["wind", "earth"],
     number: "014",
     set: "S03",
-    rarity: "Starter Deck",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Land of Wind", "Lord", "Male"],

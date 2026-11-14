@@ -14,7 +14,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "307",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: -1", "Clone Status"],
@@ -35,7 +34,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "308",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Rogue Ninja", "Male", "Sharingan Eye"],
@@ -56,7 +54,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "309",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 1"],
@@ -77,7 +74,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "310",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Growth"],
@@ -98,7 +94,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "311",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 1"],
@@ -119,7 +114,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "312",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Dog", "Animal"],
@@ -141,7 +135,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "313",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Female", "Proctor", "Mental Power: 1"],
@@ -162,7 +155,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "314",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Anbu", "Female", "Name: Anbu"],
@@ -183,7 +175,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "315",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female", "Medical", "Mental Power: 1"],
@@ -204,7 +195,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "316",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye", "Mental Power: 3"],
@@ -225,7 +215,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "317",
     set: "S09",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -246,7 +235,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "318",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 3"],
@@ -267,7 +255,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "319",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Male"],
@@ -288,7 +275,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "320",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3"],
@@ -309,7 +295,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "321",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Satoosa", "Female", "Medical", "Mental Power: 3"],
@@ -330,7 +315,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "322",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja", "Male", "Mental Power: 2"],
@@ -351,7 +335,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "323",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Mist", "Rogue Ninja", "Jonin", "Male"],
@@ -372,7 +355,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "324",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male"],
@@ -393,7 +375,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "325",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -414,7 +395,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "326",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -435,7 +415,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "327",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Medical", "Growth", "Mental Power: 3"],
@@ -456,7 +435,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "328",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Animal", "Growth"],
@@ -477,7 +455,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "329",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: 1"],
@@ -498,7 +475,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "330",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Byakugan", "Growth"],
@@ -519,7 +495,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "331",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -540,7 +515,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "332",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male", "Female", "Mental Power: 1", "Name: Konohamaru", "Name: Udon", "Name: Moegi"],
@@ -561,7 +535,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "333",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye", "Mental Power: 3"],
@@ -583,7 +556,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "334",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Sannin", "Female", "Medical", "Mental Power: 3", "Name: Tsunade"],
@@ -605,7 +577,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "335",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Prisoner", "Male", "Mental Power: 1"],
@@ -626,7 +597,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "336",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Female"],
@@ -647,7 +617,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "337",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     characteristics: ["Leaf", "Prisoner", "Male", "Mental Power: -3"],
@@ -668,7 +637,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "338",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     characteristics: ["Leaf", "Prisoner", "Male", "Mental Power: -3"],
@@ -689,7 +657,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "339",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -710,7 +677,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "340",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Stone", "Female"],
@@ -731,7 +697,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "341",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Stone", "Male"],
@@ -752,7 +717,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "342",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Stone", "Male"],
@@ -773,7 +737,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "343",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -794,7 +757,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning", "fire"],
     number: "US066",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status", "Sharingan Eye", "Platoon"],
@@ -815,7 +777,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning", "fire"],
     number: "US067",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Animal", "Platoon"],
@@ -836,7 +797,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning", "earth"],
     number: "US068",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status", "Byakugan", "Platoon"],
@@ -857,7 +817,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US069",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -878,7 +837,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US070",
     set: "S09",
-    rarity: "Super Rare (Starter Deck)",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -899,7 +857,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US071",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -920,7 +877,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US072",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Toad"],
@@ -942,7 +898,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US073",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Jonin", "Male", "Medical", "Mental Power: 2"],
@@ -963,7 +918,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US074",
     set: "S09",
-    rarity: "Starter Deck",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male", "Mental Power: 2"],
@@ -984,7 +938,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US075",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -1005,7 +958,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US076",
     set: "S09",
-    rarity: "Starter Deck",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 3"],
@@ -1026,7 +978,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US077",
     set: "S09",
-    rarity: "Starter Deck",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Female", "Medical", "Mental Power: 3"],
@@ -1047,7 +998,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US078",
     set: "S09",
-    rarity: "Super Rare (Starter Deck)",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male"],
@@ -1069,7 +1019,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning", "wind"],
     number: "US079",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Ninja Toad", "Platoon"],
@@ -1091,7 +1040,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US080",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Male"],
@@ -1112,7 +1060,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US081",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Sharingan Eye"],
@@ -1133,7 +1080,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US082",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Growth"],
@@ -1154,7 +1100,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US083",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 3"],
@@ -1176,7 +1121,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind", "earth"],
     number: "US084",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Platoon"],
@@ -1198,7 +1142,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US085",
     set: "S09",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female", "Mental Power: 1"],
@@ -1219,7 +1162,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US086",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Land of Snow", "Lord", "Male"],
@@ -1240,7 +1182,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "us087",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -1261,7 +1202,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "us088",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 3"],
@@ -1282,7 +1222,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "us089",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Mental Power: 1"],
@@ -1303,7 +1242,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "us090",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -1324,7 +1262,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "us091",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja", "Male", "Mental Power: 2"],
@@ -1345,7 +1282,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "us092",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 3"],
@@ -1367,7 +1303,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "276",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Naruto Uzumaki\"",
@@ -1385,7 +1320,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "277",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Target: User",
@@ -1401,7 +1335,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "278",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Target: Every Ninja Battling against the user",
@@ -1417,7 +1350,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "279",
     set: "S09",
-    rarity: "Super Rare",
     cost: { symbols: ["lightning", "lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Rock Lee\"",
@@ -1434,7 +1366,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "280",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Sasuke Uchiha\"",
@@ -1451,7 +1382,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "281",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirements: \"Kakashi Hatake\"",
@@ -1468,7 +1398,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "282",
     set: "S09",
-    rarity: "Starter Deck",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Target: User",
@@ -1484,7 +1413,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "283",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Secret Pills\"",
@@ -1501,7 +1429,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "284",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Fool\" Combat Attribute",
@@ -1518,7 +1445,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "285",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Insect\" Combat Attribute",
@@ -1534,7 +1460,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "286",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Insect\" Combat Attribute",
@@ -1551,7 +1476,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "287",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1568,7 +1492,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "288",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1585,7 +1508,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "289",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Mind\" Combat Attribute",
@@ -1603,7 +1525,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "290",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Hinata Hyuga\"",
@@ -1620,7 +1541,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "291",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Hinata Hyuga\"",
@@ -1637,7 +1557,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "292",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Bee\" Combat Attribute",
@@ -1654,7 +1573,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "293",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Bee\" Combat Attribute",
@@ -1671,7 +1589,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "294",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 2 },
     text: [
       "Requirements: \"Bee\" Combat Attribute",
@@ -1688,7 +1605,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "295",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Bee\" Combat Attribute",
@@ -1704,7 +1620,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "296",
     set: "S09",
-    rarity: "Super Rare",
     cost: { symbols: ["lightning", "lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\"",
@@ -1721,7 +1636,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "297",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirements: \"Sasuke Uchiha\"",
@@ -1738,7 +1652,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "298",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Shikamaru Nara\" + \"Chunin\" or higher Rank",
@@ -1755,7 +1668,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "299",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Hinata Hyuga\"",
@@ -1772,7 +1684,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "300",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Neji Hyuga\" or \"Byakugan\" + \"An Entrance cost of 4 or more\"",
@@ -1789,7 +1700,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "301",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Might Guy\"",
@@ -1806,7 +1716,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "302",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Shino Aburame\"",
@@ -1823,7 +1732,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "303",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 1 },
     text: [
       "Requirements: \"Jiraiya\"",
@@ -1840,7 +1748,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "304",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Taijutsu\" Combat Attribute",
@@ -1858,7 +1765,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US057",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: User",
@@ -1874,7 +1780,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US058",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Male\"",
@@ -1891,7 +1796,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US059",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: User",
@@ -1907,7 +1811,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US060",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Target: 1 of the Ninjas with the lowest original printed Entrance cost in the Team Battling against the user",
@@ -1923,7 +1826,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US061",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Effect: Look at all the cards in your opponent's hand and select and discard 1 Jutsu card with a \"Fire\" symbol, if they have any.",
@@ -1938,7 +1840,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US062",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Byakugan\"",
@@ -1954,7 +1855,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US063",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: User",
@@ -1970,7 +1870,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US064",
     set: "S09",
-    rarity: "Super Rare",
     cost: { symbols: ["earth", "earth"], generic: 1 },
     text: [
       "Requirements: \"Byakugan\" + \"An Entrance cost of 4 or more\"",
@@ -1988,7 +1887,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US065",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirements: \"Sasuke Uchiha\" or \"Kakashi Hatake\"",
@@ -2005,7 +1903,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US066",
     set: "S09",
-    rarity: "Super Rare",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Kakashi Hatake\"",
@@ -2022,7 +1919,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US067",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Target: User",
@@ -2038,7 +1934,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US068",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -2055,7 +1950,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US069",
     set: "S09",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Effect: Move 2 cards in your Discard Pile to your Chakra area.",
@@ -2070,7 +1964,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US070",
     set: "S09",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Target: 1 Jutsu card being used with \"Target: 1 Ninja\"",
@@ -2086,7 +1979,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US071",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Target: User",
@@ -2102,7 +1994,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US072",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Gaara of the Desert\" + \"An Entrance cost of 2 or more\"",
@@ -2118,7 +2009,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US073",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Target: (1) User",
@@ -2135,7 +2025,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US074",
     set: "S09",
-    rarity: "Starter Deck",
     cost: { symbols: ["water"], generic: "X" },
     text: [
       "Effect: Select and discard X number of your opponent's Chakras.",
@@ -2150,7 +2039,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US075",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Effect: If your opponent draws 1 or more cards by the effect of their Jutsu cards and its effect is applied successfully during this turn, randomly select and discard the same amount of cards from your opponent's hand.",
@@ -2165,7 +2053,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US076",
     set: "S09",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Target: 1 of your Jutsu cards being used with \"Target: 1 Ninja Battling against the user\"",
@@ -2182,7 +2069,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "268",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2199,7 +2085,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "269",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2216,7 +2101,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "270",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2233,7 +2117,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "271",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2250,7 +2133,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "272",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2266,7 +2148,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "273",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2282,7 +2163,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "274",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2299,7 +2179,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "275",
     set: "S09",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2315,7 +2194,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "276",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2332,7 +2210,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "277",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2349,7 +2226,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "278",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2367,7 +2243,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "279",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2384,7 +2259,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "280",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2401,7 +2275,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "281",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2417,7 +2290,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "282",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2433,7 +2305,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "283",
     set: "S09",
-    rarity: "Super Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2450,7 +2321,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "284",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2467,7 +2337,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "285",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2484,7 +2353,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning", "wind"],
     number: "US051",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2501,7 +2369,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US052",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2518,7 +2385,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning", "wind"],
     number: "US053",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2536,7 +2402,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US054",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2554,7 +2419,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US055",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2571,7 +2435,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US056",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2588,7 +2451,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US057",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2606,7 +2468,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["earth"],
     number: "US058",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2623,7 +2484,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind", "earth"],
     number: "US059",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2640,7 +2500,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US060",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2657,7 +2516,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US061",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2675,7 +2533,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US062",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2692,7 +2549,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US063",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2708,7 +2564,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US064",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2724,7 +2579,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US065",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2740,7 +2594,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US066",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2756,7 +2609,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US067",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2774,7 +2626,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US068",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2791,7 +2642,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US069",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2808,7 +2658,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US070",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2825,7 +2674,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US071",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2842,7 +2690,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US072",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2860,7 +2707,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["lightning"],
     number: "US073",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2877,7 +2723,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US074",
     set: "S09",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2894,7 +2739,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US075",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2912,7 +2756,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US076",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2929,7 +2772,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US077",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2945,7 +2787,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US078",
     set: "S09",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2962,7 +2803,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water", "lightning"],
     number: "US079",
     set: "S09",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2979,7 +2819,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water", "wind"],
     number: "US080",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2995,7 +2834,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US081",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3012,7 +2850,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water"],
     number: "US082",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3030,7 +2867,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["wind"],
     number: "US083",
     set: "S09",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3047,7 +2883,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water", "wind"],
     number: "US084",
     set: "S09",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -3064,7 +2899,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water", "wind"],
     number: "US085",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3081,7 +2915,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire"],
     number: "US086",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -3099,7 +2932,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["fire", "wind"],
     number: "037",
     set: "S09",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: [],
@@ -3116,7 +2948,6 @@ export const S09_THE_CHOSEN: Card[] = [
     elements: ["water", "wind"],
     number: "US001",
     set: "S09",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Land of Snow", "Actress", "Female", "Name: Koyuki Kazahana"],

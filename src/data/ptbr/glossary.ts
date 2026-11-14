@@ -174,16 +174,6 @@ export const CHARACTERISTICS_PTBR: Readonly<Record<string, string>> = {
   Lock: 'Tranca',
 };
 
-export const RARITY_PTBR: Readonly<Record<string, string>> = {
-  Common: 'Comum',
-  Uncommon: 'Incomum',
-  Rare: 'Rara',
-  'Super Rare': 'Super Rara',
-  'Starter Deck': 'Deck Inicial',
-  'Super Rare (Starter Deck)': 'Super Rara (Deck Inicial)',
-  Promo: 'Promo',
-};
-
 const NAME_PREFIX = 'Name:';
 const MENTAL_POWER = /^Mental Power:\s*(.+)$/;
 
@@ -200,10 +190,6 @@ export function translateCharacteristic(characteristic: string, cardName?: (en: 
   const mental = MENTAL_POWER.exec(characteristic);
   if (mental) return `Poder Mental: ${mental[1]}`;
   return CHARACTERISTICS_PTBR[characteristic] ?? characteristic;
-}
-
-export function translateRarity(rarity: string): string {
-  return RARITY_PTBR[rarity] ?? rarity;
 }
 
 /**

@@ -14,7 +14,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "136",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -35,7 +34,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "137",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -56,7 +54,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "138",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: 4"],
@@ -77,7 +74,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "139",
     set: "S04",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -98,7 +94,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "140",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Growth"],
@@ -119,7 +114,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "141",
     set: "S04",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Byakugan"],
@@ -140,7 +134,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "142",
     set: "S04",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male"],
@@ -161,7 +154,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "143",
     set: "S04",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male"],
@@ -182,7 +174,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "144",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Proctor", "Mental Power: 1"],
@@ -203,7 +194,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "145",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -224,7 +214,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "146",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -245,7 +234,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "147",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sand", "Satoosa", "Male", "Mental Power: 2"],
@@ -266,7 +254,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "148",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Male", "The Four Sound Ninja"],
@@ -287,7 +274,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "149",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Male", "The Four Sound Ninja"],
@@ -308,7 +294,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "150",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Male", "The Four Sound Ninja"],
@@ -329,7 +314,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "151",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Female", "The Four Sound Ninja"],
@@ -350,7 +334,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "152",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "(Jonin)", "Male", "Medical", "Mental Power: 2"],
@@ -371,7 +354,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "153",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 9,
     handCost: 1,
     characteristics: ["Fox Spirit", "Animal"],
@@ -392,7 +374,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "154",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status", "Growth"],
@@ -413,7 +394,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "155",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -434,7 +414,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "156",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: 1"],
@@ -455,7 +434,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "157",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male"],
@@ -473,7 +451,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "158",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -494,7 +471,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "159",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male", "Mental Power: 1"],
@@ -515,7 +491,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "160",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -536,7 +511,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "161",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -557,7 +531,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "162",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -578,7 +551,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "163",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 3"],
@@ -599,7 +571,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "164",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Animal"],
@@ -620,7 +591,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "165",
     set: "S04",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Dog", "Animal"],
@@ -641,7 +611,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "166",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3"],
@@ -662,7 +631,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "167",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 2"],
@@ -683,7 +651,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "168",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 2"],
@@ -704,7 +671,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "169",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sand", "Satoosa", "Male", "Mental Power: 2"],
@@ -725,7 +691,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "170",
     set: "S04",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -746,7 +711,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "171",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Puppet"],
@@ -767,7 +731,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning", "fire"],
     number: "172",
     set: "S04",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye", "Platoon"],
@@ -789,7 +752,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "127",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Target: User",
@@ -805,7 +767,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "128",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Target: Every Back Ninja in the user's Team",
@@ -821,7 +782,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "129",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Effect: Draw until you have 6 cards in your hand. Then, discard all the cards in your hand at the end of this turn.",
@@ -836,7 +796,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "130",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -853,7 +812,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "131",
     set: "S04",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirements: \"Sasuke Uchiha\" or \"Kakashi Hatake\"",
@@ -870,7 +828,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "132",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: "X" },
     text: [
       "Requirements: \"Medical\"",
@@ -887,7 +844,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "133",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Medical\"",
@@ -904,7 +860,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "134",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 2 },
     text: [
       "Target: Every \"Genin\" or lower Rank Ninja being sent out to Battle",
@@ -920,7 +875,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "135",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: The Four Sound Ninja",
@@ -937,7 +891,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "136",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: [], generic: "X" },
     text: [
       "Target: User",
@@ -953,7 +906,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "137",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Temari\"",
@@ -970,7 +922,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "138",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -987,7 +938,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "139",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1004,7 +954,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "140",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Shadow\" Combat Attribute",
@@ -1021,7 +970,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "141",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Byakugan\" + \"Main Branch\"",
@@ -1038,7 +986,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "142",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Byakugan\" + \"Main Branch\"",
@@ -1055,7 +1002,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "143",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Neji Hyuga\" or \"Byakugan\" + \"Main Branch\"",
@@ -1072,7 +1018,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "144",
     set: "S04",
-    rarity: "Super Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Neji Hyuga\" or \"Byakugan\" + \"An Entrance cost of 4 or more\"",
@@ -1089,7 +1034,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "145",
     set: "S04",
-    rarity: "Super Rare",
     cost: { symbols: [], generic: "X" },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone status\"",
@@ -1106,7 +1050,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "146",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Requirements: \"Clone Status\"",
@@ -1123,7 +1066,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "147",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Satoosa\" or \"Sannin\" or higher Rank",
@@ -1140,7 +1082,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "148",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Satoosa\" or \"Sannin\" or higher Rank",
@@ -1157,7 +1098,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "149",
     set: "S04",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "earth"], generic: 0 },
     text: [
       "Requirements: \"The Third Hokage\" or \"The Fourth Hokage\"",
@@ -1173,7 +1113,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "150",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Orochimaru\"",
@@ -1190,7 +1129,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "151",
     set: "S04",
-    rarity: "Super Rare",
     cost: { symbols: ["water", "water", "water"], generic: 0 },
     text: [
       "Requirements: \"Orochimaru\"",
@@ -1207,7 +1145,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "152",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Target: Each of your Ninjas",
@@ -1223,7 +1160,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "153",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["water", "water", "water"], generic: 0 },
     text: [
       "Requirements: \"The Second Hokage\"",
@@ -1240,7 +1176,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "154",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Insect\" Combat Attribute",
@@ -1257,7 +1192,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "155",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute",
@@ -1274,7 +1208,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "156",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "earth"], generic: 0 },
     text: [
       "Requirements: \"Puppet\"",
@@ -1291,7 +1224,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "157",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "wind"], generic: 0 },
     text: [
       "Requirements: \"Satoosa\" or \"Sannin\" or higher Rank",
@@ -1308,7 +1240,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "158",
     set: "S04",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: Each of your Ninjas",
@@ -1324,7 +1255,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "159",
     set: "S04",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"The First Hokage\"",
@@ -1340,7 +1270,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "160",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Mind\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1357,7 +1286,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "161",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Shadow\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1374,7 +1302,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "162",
     set: "S04",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Food\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1392,7 +1319,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "133",
     set: "S04",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1409,7 +1335,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "134",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1426,7 +1351,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "135",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1443,7 +1367,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "136",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1459,7 +1382,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "137",
     set: "S04",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1476,7 +1398,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "138",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1493,7 +1414,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "139",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1509,7 +1429,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "140",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1526,7 +1445,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "141",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1542,7 +1460,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "142",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1559,7 +1476,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "143",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1575,7 +1491,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "144",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1592,7 +1507,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "145",
     set: "S04",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1610,7 +1524,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "146",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1626,7 +1539,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "147",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1644,7 +1556,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "148",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1662,7 +1573,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "149",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1680,7 +1590,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "150",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1699,7 +1608,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "151",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -1716,7 +1624,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "152",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1732,7 +1639,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "153",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1749,7 +1655,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning"],
     number: "154",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1766,7 +1671,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "155",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1783,7 +1687,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "156",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1801,7 +1704,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "157",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1817,7 +1719,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire"],
     number: "158",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1833,7 +1734,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "159",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1850,7 +1750,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["water"],
     number: "160",
     set: "S04",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1867,7 +1766,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "161",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1885,7 +1783,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "162",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1902,7 +1799,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "163",
     set: "S04",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1918,7 +1814,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind"],
     number: "164",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1936,7 +1831,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "165",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1954,7 +1848,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "166",
     set: "S04",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1972,7 +1865,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "167",
     set: "S04",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1989,7 +1881,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["earth"],
     number: "168",
     set: "S04",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2006,7 +1897,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["fire", "water"],
     number: "015",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Female"],
@@ -2023,7 +1913,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning", "earth"],
     number: "016",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Fire", "Male"],
@@ -2040,7 +1929,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning", "wind"],
     number: "017",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Fire", "Female"],
@@ -2057,7 +1945,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["lightning", "fire"],
     number: "018",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male"],
@@ -2074,7 +1961,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     elements: ["wind", "earth"],
     number: "019",
     set: "S04",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Female"],

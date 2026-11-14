@@ -5,7 +5,6 @@ import { CARD_TRANSLATIONS_PTBR, TRANSLATED_SETS } from './index.ts';
 import {
   CHARACTERISTICS_PTBR,
   COMBAT_ATTRIBUTES_PTBR,
-  RARITY_PTBR,
   SET_NAMES_PTBR,
   translateCharacteristic,
 } from './glossary.ts';
@@ -64,11 +63,10 @@ test('tradução tem as mesmas linhas, rótulos e frase do original', () => {
   assert.deepEqual(problems, []);
 });
 
-test('glossário cobre características, raridades, Atributos de Combate e coleções', () => {
+test('glossário cobre características, Atributos de Combate e coleções', () => {
   const missing = new Set<string>();
   for (const set of Object.keys(SET_NAMES)) if (!SET_NAMES_PTBR[set]) missing.add(`coleção ${set}`);
   for (const c of CARDS) {
-    if (c.rarity && !RARITY_PTBR[c.rarity]) missing.add(`raridade ${c.rarity}`);
     if (!('characteristics' in c)) continue;
     if ('attributes' in c) for (const a of c.attributes) if (!COMBAT_ATTRIBUTES_PTBR[a]) missing.add(`atributo ${a}`);
     for (const ch of c.characteristics) {
@@ -109,7 +107,6 @@ test('localizeCard usa o inglês como reserva', () => {
   assert.equal(pt.translated, true);
   assert.equal(pt.text[0], '[Rival no Amor]');
   assert.deepEqual(pt.characteristics, ['Folha', 'Genin', 'Feminino']);
-  assert.equal(pt.rarity, 'Comum');
   assert.equal(pt.name, card.name); // personagem: nome como impresso
 
   const jutsu = localizeCard(CARDS.find((c) => c.name === 'Shadow Clone Jutsu')!, 'pt-BR', CARD_TRANSLATIONS_PTBR);

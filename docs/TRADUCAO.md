@@ -2,20 +2,16 @@
 
 Os dados das cartas (`src/data/sets/`) ficam em inglês, como impressos. A versão em português fica à parte, em `src/data/ptbr/`, e só é usada na **exibição**: as regras do jogo (montagem, Baralho de Reforço, `Name: X`…) continuam lendo os dados em inglês.
 
-No app, o seletor **EN | PT** do cabeçalho escolhe o idioma dos textos das cartas (efeitos, frases, características e raridade). A escolha fica no localStorage (`naruto-ccg:card-language`). As traduções só são baixadas quando o jogador escolhe PT. Carta sem tradução aparece em inglês, com um aviso no detalhe.
+No app, o seletor **EN | PT** do cabeçalho escolhe o idioma dos textos das cartas (efeitos, frases, e características). A escolha fica no localStorage (`naruto-ccg:card-language`). As traduções só são baixadas quando o jogador escolhe PT. Carta sem tradução aparece em inglês, com um aviso no detalhe.
 
 ## Arquivos
 
 - `src/data/ptbr/sets/<mesmo nome do arquivo em src/data/sets>.ts`: um objeto por coleção, com a chave sendo o `id` da carta e os campos `name` (só quando o nome muda; ver abaixo), `text` (mesmas linhas do original, na mesma ordem) e `flavor` (com as mesmas aspas do original).
 - `src/data/ptbr/index.ts`: junta as coleções (`CARD_TRANSLATIONS_PTBR`) e lista as que estão completas (`TRANSLATED_SETS`).
-- `src/data/ptbr/glossary.ts`: características, raridades, Atributos de Combate e nomes das coleções (iguais em todas as cartas, por isso ficam no glossário e não carta a carta).
+- `src/data/ptbr/glossary.ts`: características, Atributos de Combate e nomes das coleções (iguais em todas as cartas, por isso ficam no glossário e não carta a carta).
 - `src/data/ptbr/ptbr.test.ts`: confere ids, quantidade de linhas, títulos `[…]`, rótulos (`Alvo:`, `Efeito:`…), frases, se o glossário cobre tudo e se cartas com o mesmo nome em inglês têm o mesmo nome em PT-BR.
 
 Para traduzir uma coleção nova: crie o arquivo em `sets/`, inclua em `index.ts` (no objeto e em `TRANSLATED_SETS`) e rode `npm test`.
-
-## Uso nas cartas remasterizadas
-
-As cartas PT-BR em alta resolução (`scripts/card-remaster/`) desenham **este mesmo texto**: `translations/<set>.json` do remaster é uma cópia de `src/data/ptbr/sets/` (a frase vai sem as aspas externas) e o `glossary.json` dele segue `glossary.ts`. Ajustes de tradução são feitos aqui e copiados para lá, nunca o contrário. Assim a carta e o app mostram o mesmo texto.
 
 ## Nomes das cartas
 

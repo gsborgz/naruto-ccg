@@ -14,7 +14,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "645",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Ogre", "Priestess", "Female", "Mental Power: 2", "Name: Shion"],
@@ -35,7 +34,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "wind"],
     number: "646",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Ogre", "Quartet", "Male", "Dark Medical", "Mental Power: 2", "Surge"],
@@ -57,7 +55,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "fire"],
     number: "647",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Ogre", "Quartet", "Male", "Mental Power: 1", "Surge"],
@@ -78,7 +75,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "water"],
     number: "648",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Ogre", "Quartet", "Male", "Mental Power: 1", "Surge"],
@@ -99,7 +95,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "649",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Ogre", "Quartet", "Male", "Surge"],
@@ -120,7 +115,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "650",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 7,
     handCost: 1,
     characteristics: ["Fox Spirit", "Animal"],
@@ -142,7 +136,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "651",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Clone Status", "Growth"],
@@ -163,7 +156,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "652",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Medical", "Growth", "Mental Power: 3"],
@@ -184,7 +176,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "653",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Rogue Ninja", "Male", "Sharingan Eye", "Growth", "Mastery"],
@@ -206,7 +197,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "654",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "The Foundation", "Male", "Anbu", "Mental Power: 2", "Mastery"],
@@ -227,7 +217,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "655",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Mental Power: 2", "Mastery"],
@@ -249,7 +238,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "656",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Animal", "Growth"],
@@ -271,7 +259,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "657",
     set: "S15",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Growth", "Mental Power: 2"],
@@ -292,7 +279,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "658",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Female", "Main Branch", "Byakugan", "Growth", "Mental Power: 1"],
@@ -313,7 +299,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "659",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Byakugan", "Main Branch"],
@@ -334,7 +319,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "660",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Dog", "Animal"],
@@ -355,7 +339,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "661",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sand", "Male", "Satoosa", "Name: Gaara of the Desert"],
@@ -376,7 +359,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "662",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Male", "Jonin"],
@@ -397,7 +379,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "663",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Male", "Puppet Master", "Mental Power: 2"],
@@ -418,7 +399,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "664",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sand", "Male", "Name: Sasori"],
@@ -440,7 +420,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "665",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Mastery"],
@@ -462,7 +441,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "666",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3", "Mastery"],
@@ -484,7 +462,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "667",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Jonin", "Male", "Medical", "Ambush", "Mental Power: 2"],
@@ -505,7 +482,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "668",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Rogue Ninja", "Male", "Sharingan Eye", "Growth"],
@@ -526,7 +502,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "669",
     set: "S15",
-    rarity: "Super Rare (Starter Deck)",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Clone Status", "Growth", "Surge"],
@@ -548,7 +523,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "670",
     set: "S15",
-    rarity: "Super Rare (Starter Deck)",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Rogue Ninja", "Male", "Sharingan Eye", "Growth", "Surge"],
@@ -569,7 +543,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "671",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "The Foundation", "Male", "Anbu", "Mental Power: 2"],
@@ -590,7 +563,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "672",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Medical", "Growth", "Mental Power: 3"],
@@ -611,7 +583,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "673",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sand", "Akatsuki", "Rogue Ninja", "Puppet", "Jonin", "Satoosa", "Male", "Puppet Master", "Ambush", "Mental Power: 3", "Platoon"],
@@ -632,7 +603,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "674",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Proctor", "Male", "Mental Power: 4", "Growth"],
@@ -653,7 +623,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "675",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Jonin", "Sharingan Eye", "Mental Power: 3"],
@@ -675,7 +644,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "676",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Sharingan Eye", "Mastery"],
@@ -696,7 +664,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "677",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Mental Power: 2"],
@@ -718,7 +685,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "678",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Jonin", "Male"],
@@ -739,7 +705,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "679",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Female", "Jonin", "Mental Power: 2"],
@@ -760,7 +725,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "680",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Male"],
@@ -782,7 +746,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "681",
     set: "S15",
-    rarity: "Common",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Sannin", "Female", "Medical", "Mental Power: 3"],
@@ -803,7 +766,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "682",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Ambush", "Mental Power: 3"],
@@ -826,7 +788,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "683",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Clone Status", "Growth"],
@@ -847,7 +808,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "684",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 7,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Sannin", "Clone Status", "Squad", "Mastery"],
@@ -868,7 +828,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind", "earth"],
     number: "685",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 7,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Satoosa", "Sannin", "Medical", "Mental Power: 6", "Mastery", "Squad"],
@@ -889,7 +848,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "686",
     set: "S15",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Genin", "Anbu", "Mental Power: 2", "Clone Status", "Platoon"],
@@ -912,7 +870,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "687",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "The Foundation", "Anbu", "Clone Status", "Mental Power: 2", "Platoon"],
@@ -934,7 +891,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "wind"],
     number: "688",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Ogre", "Male", "Female", "Genin", "Priestess", "Clone Status", "Mental Power: 2", "Squad"],
@@ -956,7 +912,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "689",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Ogre", "Priestess", "Female", "Mental Power: 2"],
@@ -977,7 +932,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "690",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Ogre", "Male", "Dark Medical", "Surge"],
@@ -998,7 +952,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "691",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sand", "Male", "Satoosa", "Mental Power: 2"],
@@ -1019,7 +972,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "692",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Ninja Toad", "Animal"],
@@ -1040,7 +992,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "693",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Snake", "Animal"],
@@ -1062,7 +1013,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "694",
     set: "S15",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Pig", "Animal"],
@@ -1083,7 +1033,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "695",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Tortoise Ninja", "Animal"],
@@ -1104,7 +1053,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "696",
     set: "S15",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Tiger", "Animal"],
@@ -1125,7 +1073,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "697",
     set: "S15",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Growth", "Sharingan Eye", "Mental Power: 2", "Name: Kakashi Hatake"],
@@ -1145,7 +1092,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "698",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Growth", "Name: The Third Hokage"],
@@ -1165,7 +1111,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "699",
     set: "S15",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Growth", "Mental Power: 2", "Name: Koharu Utatane"],
@@ -1185,7 +1130,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "700",
     set: "S15",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Growth", "Mental Power: 2", "Name: Homura Mitomon"],
@@ -1205,7 +1149,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "701",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Growth", "Mental Power: 2", "Name: The Fourth Hokage"],
@@ -1225,7 +1168,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "702",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Mental Power: 2", "Name: The Fourth Hokage", "Mastery"],
@@ -1247,7 +1189,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "703",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Byakugan", "Growth", "Name: Neji Hyuga"],
@@ -1268,7 +1209,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "704",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Sharingan Eye"],
@@ -1289,7 +1229,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "705",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Sharingan Eye"],
@@ -1310,7 +1249,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "706",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Sharingan Eye"],
@@ -1331,7 +1269,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "707",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Byakugan", "Main Branch", "Mental Power: 2", "Mastery"],
@@ -1352,7 +1289,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "708",
     set: "S15",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Ninja Academy Student", "Growth", "Mental Power: 1", "Name: Iruka Umino"],
@@ -1373,7 +1309,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "541",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1, alternatives: [{ symbols: ["water"], generic: 1 }] },
     text: [
       "Requirements: \"Weapon\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1390,7 +1325,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "542",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Taijutsu\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1407,7 +1341,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "543",
     set: "S15",
-    rarity: "Starter Deck",
     cost: { symbols: ["lightning", "lightning"], generic: 1 },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\" or \"Jiraiya\" or \"The Fourth Hokage\"",
@@ -1424,7 +1357,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "544",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Nine-Tailed Fox Spirit\"",
@@ -1441,7 +1373,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "545",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1458,7 +1389,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "546",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1474,7 +1404,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "547",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1491,7 +1420,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "548",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Kakashi Hatake\"",
@@ -1508,7 +1436,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "549",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: "X" },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1524,7 +1451,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "550",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Orochimaru\" or \"Snake\" Combat Attribute",
@@ -1541,7 +1467,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "551",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"Printed Entrance cost of 5 or more\"",
@@ -1558,7 +1483,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "552",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"Printed Entrance cost of 5 or more\"",
@@ -1575,7 +1499,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "553",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Requirements: \"Tsunade\"",
@@ -1593,7 +1516,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "554",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute + \"Printed Entrance cost of 3 or more\"",
@@ -1609,7 +1531,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "555",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirement: \"Taijutsu\" Combat Attribute",
@@ -1625,7 +1546,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "556",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Effect: If you have a \"Priestess\" Ninja or \"Priestess\" Client in play, all Teams skip the Showdown of this turn. Additionally, your opponent cannot win any Battle Rewards this turn.",
@@ -1640,7 +1560,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "557",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Rock Lee\" + \"Chunin\" or higher Rank or \"Might Guy\"",
@@ -1657,7 +1576,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "558",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Rock Lee\" + \"Chunin\" or higher Rank or \"Might Guy\"",
@@ -1674,7 +1592,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "559",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\" or \"Jiraiya\" or \"The Fourth Hokage\"",
@@ -1691,7 +1608,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "560",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning", "lightning"], generic: 1 },
     text: [
       "Effect: If you have \"Taruho\" in play, you can remove it from game. In that case, put 1 Ninja card from your hand in play and place it in any of your Teams in any position.",
@@ -1706,7 +1622,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "561",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Quartet\"",
@@ -1722,7 +1637,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "water"],
     number: "562",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Quartet\"",
@@ -1739,7 +1653,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "fire"],
     number: "563",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Quartet\"",
@@ -1756,7 +1669,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "water"],
     number: "564",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Dark Medical\"",
@@ -1773,7 +1685,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "wind"],
     number: "565",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Quartet\"",
@@ -1790,7 +1701,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "566",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Quartet\"",
@@ -1807,7 +1717,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "567",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Taijutsu\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1824,7 +1733,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "568",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Naruto\" Uzumaki\" + \"Printed Entrance cost of 3 or more\"",
@@ -1841,7 +1749,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "569",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 2 },
     text: [
       "Requirements: \"Rock Lee\" + \"Chunin\" or higher Rank or \"Might Guy\"",
@@ -1858,7 +1765,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "570",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Requirements: \"The Nine-Tailed Fox Spirit\" or \"Tailed Beast Form\"",
@@ -1875,7 +1781,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "571",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Brush\" Combat Attribute",
@@ -1892,7 +1797,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "572",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Sai\"",
@@ -1909,7 +1813,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "573",
     set: "S15",
-    rarity: "Starter Deck",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Orochimaru\" or \"Sasuke Uchiha\" + \"Printed Entrance cost of 4 or more\"",
@@ -1927,7 +1830,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "574",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: ["water", "water"], generic: 1 },
     text: [
       "Requirements: \"Orochimaru\" or \"Sasuke Uchiha\" + \"Printed Entrance cost of 4 or more\"",
@@ -1945,7 +1847,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "575",
     set: "S15",
-    rarity: "Super Rare",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Sasuke Uchiha\" + \"Printed Entrance cost of 4 or more\"",
@@ -1962,7 +1863,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "576",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0, alternatives: [{ symbols: ["water"], generic: 0 }] },
     text: [
       "Requirements: \"Weapon\" Combat Attribute",
@@ -1979,7 +1879,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "577",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1, alternatives: [{ symbols: ["water"], generic: 1 }] },
     text: [
       "Requirements: \"Weapon\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1996,7 +1895,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "578",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute",
@@ -2012,7 +1910,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "579",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Byakugan\" + \"Printed Entrance cost of 3 or more\"",
@@ -2029,7 +1926,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "580",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sakura Haruno\" + \"Chunin\" or higher Rank or \"Tsunade\"",
@@ -2045,7 +1941,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "581",
     set: "S15",
-    rarity: "Super Rare",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Requirements: \"Sakura Haruno\" + \"Chunin\" or higher Rank or \"Tsunade\"",
@@ -2062,7 +1957,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "582",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Deidara\"",
@@ -2079,7 +1973,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "583",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Byakugan\"",
@@ -2096,7 +1989,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "584",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1, alternatives: [{ symbols: ["wind"], generic: 1 }] },
     text: [
       "Requirements: \"Mental Power\" of 2 or more",
@@ -2112,7 +2004,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "585",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Taijutsu\" Combat Attribute",
@@ -2129,7 +2020,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "586",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Requirements: \"Iron\" Combat Attribute",
@@ -2145,7 +2035,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "587",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -2161,7 +2050,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "588",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Iron\" Combat Attribute",
@@ -2178,7 +2066,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "589",
     set: "S15",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Kakashi Hatake\" or \"Itachi Uchiha\"",
@@ -2195,7 +2082,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "590",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Byakugan\" + \"Printed Entrance cost of 3 or more\"",
@@ -2212,7 +2098,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "591",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Effect: During your opponent's next turn, if your opponent deploys a Ninja card, they cannot move their Turn Marker up at the end of that turn.",
@@ -2227,7 +2112,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "592",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Nine-Tailed Fox Spirit\"",
@@ -2243,7 +2127,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "593",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Sasuke Uchiha\" + Printed Entrance cost of 4 or more\"",
@@ -2259,7 +2142,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "594",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -2276,7 +2158,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "595",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Brush\" Combat Attribute",
@@ -2293,7 +2174,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "596",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Target: Every Ninja in the user's Team",
@@ -2309,7 +2189,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "597",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute",
@@ -2327,7 +2206,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "598",
     set: "S15",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute",
@@ -2344,7 +2222,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "599",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -2361,7 +2238,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "600",
     set: "S15",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Orochimaru\"",
@@ -2377,7 +2253,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "601",
     set: "S15",
-    rarity: "Common",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Anbu\" or \"Satoosa\"",
@@ -2395,7 +2270,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "fire"],
     number: "500",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2416,7 +2290,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "fire"],
     number: "501",
     set: "S15",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2433,7 +2306,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "502",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2452,7 +2324,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "503",
     set: "S15",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2469,7 +2340,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "504",
     set: "S15",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2486,7 +2356,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "505",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2504,7 +2373,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "506",
     set: "S15",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2520,7 +2388,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "507",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2537,7 +2404,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "wind"],
     number: "508",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2553,7 +2419,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "wind"],
     number: "509",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2570,7 +2435,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "510",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2586,7 +2450,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "511",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2603,7 +2466,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "512",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2620,7 +2482,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "513",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2637,7 +2498,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "514",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2655,7 +2515,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth", "fire"],
     number: "515",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2672,7 +2531,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "516",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2689,7 +2547,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind", "earth"],
     number: "517",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2706,7 +2563,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "518",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2723,7 +2579,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "519",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2740,7 +2595,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "520",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2756,7 +2610,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "521",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2773,7 +2626,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "522",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2789,7 +2641,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "523",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2806,7 +2657,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "524",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2822,7 +2672,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "525",
     set: "S15",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2839,7 +2688,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "526",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2858,7 +2706,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth", "wind"],
     number: "527",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2875,7 +2722,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "528",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2892,7 +2738,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "529",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2909,7 +2754,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "530",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2925,7 +2769,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "531",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2942,7 +2785,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "532",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2959,7 +2801,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind"],
     number: "533",
     set: "S15",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2976,7 +2817,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "534",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2994,7 +2834,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "535",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3010,7 +2849,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "536",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -3027,7 +2865,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "537",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3044,7 +2881,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "538",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -3061,7 +2897,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "539",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3078,7 +2913,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "540",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3095,7 +2929,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "541",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3115,7 +2948,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "542",
     set: "S15",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -3132,7 +2964,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "543",
     set: "S15",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3150,7 +2981,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning"],
     number: "544",
     set: "S15",
-    rarity: "Common",
     entranceCost: 6,
     handCost: 1,
     text: [
@@ -3166,7 +2996,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["wind", "water"],
     number: "545",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3183,7 +3012,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["earth"],
     number: "546",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -3200,7 +3028,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "547",
     set: "S15",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3217,7 +3044,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["water"],
     number: "548",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3234,7 +3060,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["fire"],
     number: "549",
     set: "S15",
-    rarity: "Starter Deck",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3251,7 +3076,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "earth"],
     number: "049",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Ogre", "Male"],
@@ -3268,7 +3092,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "water"],
     number: "050",
     set: "S15",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Ogre", "Male"],
@@ -3285,7 +3108,6 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     elements: ["lightning", "water"],
     number: "051",
     set: "S15",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Ogre", "Priestess", "Female"],

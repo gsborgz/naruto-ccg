@@ -14,7 +14,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "001",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -32,7 +31,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "002",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -50,7 +48,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "003",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female"],
@@ -68,7 +65,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "004",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female"],
@@ -89,7 +85,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "005",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -110,7 +105,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "006",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -131,7 +125,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "007",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male"],
@@ -152,7 +145,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "008",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male"],
@@ -173,7 +165,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "009",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male"],
@@ -191,7 +182,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "010",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male"],
@@ -209,13 +199,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "011",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
     healthy: { combat: 5, support: 3 },
     injured: { combat: 3, support: 2 },
-    attributes: ["Illusion"],
+    attributes: ["Genjutsu"],
     text: [],
     flavor: "\"I'll protect you with my life. All of you.\"",
     image: "s01-n-011",
@@ -227,7 +216,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "012",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -248,7 +236,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "013",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Village Leader", "Male"],
@@ -269,7 +256,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "014",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja (Chunin)", "Male"],
@@ -287,7 +273,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "015",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja (Chunin)", "Male"],
@@ -305,7 +290,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "016",
     set: "S01",
-    rarity: "Starter Deck",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Mist", "Ninja Hunter", "Male"],
@@ -323,7 +307,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "017",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja", "Male"],
@@ -341,7 +324,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "018",
     set: "S01",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja (Jonin)", "Male"],
@@ -359,7 +341,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "019",
     set: "S01",
-    rarity: "Super Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status"],
@@ -380,7 +361,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "020",
     set: "S01",
-    rarity: "Super Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye"],
@@ -401,7 +381,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "021",
     set: "S01",
-    rarity: "Super Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female"],
@@ -422,7 +401,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "022",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male"],
@@ -443,13 +421,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "023",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
     healthy: { combat: 6, support: 3 },
     injured: { combat: 3, support: 2 },
-    attributes: ["Illusion"],
+    attributes: ["Genjutsu"],
     text: [
       "[Copy Ninja]",
       "When your opponent's Ninja Battling against this Ninja gets additional Combat by the effects of Jutsu cards, this Ninja also receives the same amount of additional Combat during this turn.",
@@ -464,7 +441,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "024",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Mist", "Rogue Ninja (Jonin)", "Male"],
@@ -485,7 +461,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "025",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -506,7 +481,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "026",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye"],
@@ -527,7 +501,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "027",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female"],
@@ -548,7 +521,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "028",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -569,7 +541,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "029",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -587,13 +558,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "030",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Byakugan"],
     healthy: { combat: 0, support: 1 },
     injured: { combat: 0, support: 0 },
-    attributes: ["Kung Fu"],
+    attributes: ["Taijutsu"],
     text: [
       "[Gentle Heart]",
       "At the beginning of your turn, you may discard 3 cards in your Chakra area. Then, heal 1 of your injured \"Genin\" Ninjas.",
@@ -608,13 +578,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "031",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
     healthy: { combat: 3, support: 0 },
     injured: { combat: 2, support: 0 },
-    attributes: ["Kung Fu"],
+    attributes: ["Taijutsu"],
     text: [
       "[No Talent]",
       "Valid: This Ninja cannot be the user of a Jutsu card that requires specific symbols in its Jutsu cost.",
@@ -629,7 +598,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "032",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female"],
@@ -647,13 +615,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "033",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan"],
     healthy: { combat: 3, support: 1 },
     injured: { combat: 3, support: 0 },
-    attributes: ["Kung Fu"],
+    attributes: ["Taijutsu"],
     text: [],
     flavor: "\"Hmph... I don't like it...\"",
     image: "s01-n-033",
@@ -665,7 +632,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "034",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male"],
@@ -686,7 +652,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "035",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Female"],
@@ -707,7 +672,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "036",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Dog", "Animal"],
@@ -728,13 +692,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "037",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
     healthy: { combat: 6, support: 3 },
     injured: { combat: 3, support: 2 },
-    attributes: ["Illusion"],
+    attributes: ["Genjutsu"],
     text: [
       "[Confidence in Subordinates]",
       "All Ninjas with both \"Leaf\" and \"Genin\" in this Ninja's Team get +0/+1 during the turn they are sent out to Battle.",
@@ -749,13 +712,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "038",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female"],
     healthy: { combat: 4, support: 3 },
     injured: { combat: 2, support: 3 },
-    attributes: ["Illusion"],
+    attributes: ["Genjutsu"],
     text: [],
     flavor: "\"The only survivor from the Uchiha Clan.\"",
     image: "s01-n-038",
@@ -767,13 +729,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "039",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
     healthy: { combat: 6, support: 0 },
     injured: { combat: 5, support: 0 },
-    attributes: ["Kung Fu"],
+    attributes: ["Taijutsu"],
     text: [
       "[Fervent Words]",
       "When the Head Ninja of this Ninja's Team is a \"Genin\" with a \"Kung Fu\" Combat Attribute, this Ninja gets +0/+4 during the turn.",
@@ -788,7 +749,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "040",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Mist", "Rogue Ninja (Jonin)", "Male"],
@@ -809,13 +769,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "041",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
     healthy: { combat: 0, support: 0 },
     injured: { combat: 1, support: 0 },
-    attributes: ["Kung Fu"],
+    attributes: ["Taijutsu"],
     text: [
       "[Genius of Efforts]",
       "When this Ninja is sent out to Battle as a Head Ninja, put a Ninja Blade coin symbolizing +1/+0 on it at the end of the turn.",
@@ -830,13 +789,12 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "042",
     set: "S01",
-    rarity: "Starter Deck",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan"],
     healthy: { combat: 3, support: 0 },
     injured: { combat: 3, support: 0 },
-    attributes: ["Kung Fu"],
+    attributes: ["Taijutsu"],
     text: [
       "[Formidable Gift]",
       "You may place 1 Ninja Blade coin (symbolizing a \"Tenketsu coin\") on each Ninja that received Damage from this Ninja's Team.",
@@ -852,7 +810,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "043",
     set: "S01",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja", "Male"],
@@ -874,7 +831,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "001",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: User",
@@ -890,7 +846,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "002",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: User",
@@ -906,7 +861,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "003",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Male\"",
@@ -923,7 +877,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "004",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Male\" + \"Clone status\"",
@@ -940,7 +893,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "005",
     set: "S01",
-    rarity: "Rare",
     cost: { symbols: ["lightning"], generic: "X" },
     text: [
       "Target: User",
@@ -956,7 +908,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "006",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -973,7 +924,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "007",
     set: "S01",
-    rarity: "Rare",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -990,7 +940,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "008",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Effect: Look at all the cards in your opponent's hand. If they have 1 or more Ninjas in their hand, draw 1 card.",
@@ -1005,7 +954,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "009",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["fire", "lightning"], generic: 0 },
     text: [
       "Target: 1 card in the Battle Reward area",
@@ -1021,7 +969,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "010",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Target: 1 Ninja",
@@ -1037,7 +984,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "011",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1054,7 +1000,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "012",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: [], generic: "X" },
     text: [
       "Target: User",
@@ -1070,7 +1015,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "013",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Target: 1 Jutsu card being played",
@@ -1086,7 +1030,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "014",
     set: "S01",
-    rarity: "Rare",
     cost: { symbols: ["water", "water", "water"], generic: 1 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1103,7 +1046,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "015",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: User",
@@ -1119,7 +1061,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "016",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Target: User",
@@ -1135,7 +1076,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "017",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Target: 1 Team",
@@ -1151,7 +1091,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "018",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Target: The Team including the user and the Team Battling against the user",
@@ -1167,7 +1106,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "019",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: 1 of your opponent's Ninjas Battling against the user",
@@ -1183,7 +1121,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "020",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: 1 Ninja",
@@ -1199,7 +1136,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "021",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1216,7 +1152,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "022",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth", "wind"], generic: 0 },
     text: [
       "Requirements: \"Mind\" Combat Attribute",
@@ -1233,7 +1168,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "023",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Shadow\" Combat Attribute",
@@ -1250,7 +1184,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "024",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Food\" Combat Attribute",
@@ -1267,7 +1200,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "025",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: User",
@@ -1283,7 +1215,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "026",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Kung Fu\" Combat Attribute",
@@ -1300,7 +1231,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "027",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Kung Fu\" Combat Attribute",
@@ -1317,7 +1247,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "028",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 0 },
     text: [
       "Requirements: \"Fang\" Combat Attribute",
@@ -1334,7 +1263,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "029",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Target: User",
@@ -1350,7 +1278,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "030",
     set: "S01",
-    rarity: "Super Rare",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Kakashi Hatake\"",
@@ -1367,7 +1294,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "031",
     set: "S01",
-    rarity: "Starter Deck",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: 1 Head Ninja",
@@ -1384,7 +1310,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "032",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Target: 1 Ninja Battling against the user",
@@ -1400,7 +1325,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "033",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 1 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1417,7 +1341,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "034",
     set: "S01",
-    rarity: "Rare",
     cost: { symbols: ["water", "water", "water"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1434,7 +1357,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "035",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Haku\"",
@@ -1451,7 +1373,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "036",
     set: "S01",
-    rarity: "Super Rare",
     cost: { symbols: ["water", "water"], generic: 1 },
     text: [
       "Requirements: \"Haku\"",
@@ -1468,7 +1389,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "037",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: User",
@@ -1484,7 +1404,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "038",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Target: 1 of your Ninjas that is being sent out to Battle",
@@ -1500,7 +1419,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "039",
     set: "S01",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Insect\" Combat Attribute",
@@ -1516,7 +1434,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "040",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Effect: Send 2 cards from the top of your Deck to your Chakra area.",
@@ -1531,7 +1448,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "041",
     set: "S01",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Target: 1 or 2 \"Ninja Dog\" Ninja(s) in your Discard Pile",
@@ -1547,7 +1463,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "042",
     set: "S01",
-    rarity: "Rare",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Byakugan\"",
@@ -1564,7 +1479,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "001",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -1581,7 +1495,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "002",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -1598,7 +1511,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "003",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1615,7 +1527,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "004",
     set: "S01",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1632,7 +1543,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "005",
     set: "S01",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -1649,7 +1559,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "006",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1665,7 +1574,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "007",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1682,7 +1590,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "008",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1699,7 +1606,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "009",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1717,7 +1623,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "010",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1734,7 +1639,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "011",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1750,7 +1654,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "012",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1767,7 +1670,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "013",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1784,7 +1686,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "014",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1801,7 +1702,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "015",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1817,7 +1717,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "016",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1833,7 +1732,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "017",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1849,7 +1747,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "018",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1865,7 +1762,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "019",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1882,7 +1778,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "020",
     set: "S01",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1899,7 +1794,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "021",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1916,7 +1810,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "022",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1933,7 +1826,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "023",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1951,7 +1843,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "024",
     set: "S01",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1967,7 +1858,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "025",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1984,7 +1874,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["lightning"],
     number: "026",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2002,7 +1891,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "027",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2020,7 +1908,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "028",
     set: "S01",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2037,7 +1924,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "029",
     set: "S01",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2054,7 +1940,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["fire"],
     number: "030",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2071,7 +1956,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "031",
     set: "S01",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2087,7 +1971,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "032",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2103,7 +1986,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "033",
     set: "S01",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2119,7 +2001,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["water"],
     number: "034",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2136,7 +2017,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "035",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2152,7 +2032,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "036",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2169,7 +2048,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "037",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2187,7 +2065,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["wind"],
     number: "038",
     set: "S01",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2204,7 +2081,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "039",
     set: "S01",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2220,7 +2096,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "040",
     set: "S01",
-    rarity: "Starter Deck",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2238,7 +2113,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "041",
     set: "S01",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2255,7 +2129,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     elements: ["earth"],
     number: "042",
     set: "S01",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [

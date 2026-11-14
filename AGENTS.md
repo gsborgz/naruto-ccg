@@ -1,5 +1,7 @@
 # Instruções para agentes de IA
 
+Evite positividade tóxica ou exagerada, seja objetivo na abordagem, não fique dando desculpas nem fazendo comentários desnecessários.
+
 Leia o `README.md` no início de cada sessão e siga as regras e convenções do projeto descritas nele. Consulte os documentos específicos abaixo sempre que a tarefa envolver o assunto correspondente. Preserve as alterações já existentes no diretório de trabalho.
 
 ## Cartas e regras
@@ -8,7 +10,6 @@ Leia o `README.md` no início de cada sessão e siga as regras e convenções do
 - Para regras do jogo e montagem de decks, consulte `docs/REGRAS.md`. Em caso de conflito entre fontes de regras, prevalece o rulebook PT-BR (Ver. 2).
 - Para revisão de cartas e frases, siga `docs/REVISAO-CARTAS.md`.
 - Para tradução das cartas, siga `docs/TRADUCAO.md`. Nomes e Atributos de Combate permanecem em inglês; as traduções em `src/data/ptbr/` são usadas para exibição, enquanto as regras leem os dados em inglês.
-- Para cartas remasterizadas, siga `scripts/card-remaster/README.md` e as instruções do `README.md`. Preserve a arte, os ícones e os textos impressos na carta original, no idioma original. Confira cada ícone com atenção redobrada contra a original, inclusive textos, valores, contornos e área ao redor; não entregue como concluída uma carta com defeitos.
 - Se uma imagem original em `cards/` mudar, execute `npm run cards:images` para atualizar as imagens otimizadas em `public/cards/`.
 
 ## Serviços e segurança

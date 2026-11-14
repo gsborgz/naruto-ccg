@@ -14,10 +14,14 @@ next-env.d.ts
 # Imagens originais das cartas (PNG, ~1,7 GB): ficam só na máquina de quem importa coleções.
 # O app usa as versões otimizadas de public/cards, geradas por `npm run cards:images` (essas vão no Git).
 /cards/
-# Cartas remasterizadas (upscale 4x + PT-BR), geradas por scripts/card-remaster: também só locais.
+# Cartas remasterizadas: também só locais.
 /cards-ptbr/
 # Ícones já remasterizados, usados como referência pela remasterização: também só locais.
 /card-icons/
+/card-layouts/
+/cards-remastered/
+/artifacts/
+.tmp-icon-split/
 
 # Ferramentas internas (scripts de dados, revisão e otimização de imagens, extensão do slideshare): ficam só na máquina local, fora do repositório.
 /scripts/
@@ -34,3 +38,4 @@ __pycache__/
 *.pyc
 .venv/
 coverage/
+.font-tools/

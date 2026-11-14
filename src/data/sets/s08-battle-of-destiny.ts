@@ -14,7 +14,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "255",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3"],
@@ -35,7 +34,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "256",
     set: "S08",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status", "Growth"],
@@ -56,7 +54,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "257",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Rogue Ninja", "Male", "Sharingan Eye", "Growth"],
@@ -78,7 +75,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "258",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -100,7 +96,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "259",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -121,7 +116,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "260",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -142,7 +136,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "261",
     set: "S08",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female"],
@@ -163,7 +156,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning", "wind"],
     number: "262",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Genin", "Jonin", "Male", "Platoon"],
@@ -185,7 +177,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "263",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Ninja Academy Student", "Jonin", "Male", "Sharingan Eye", "Platoon"],
@@ -206,7 +197,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind", "earth"],
     number: "264",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Sand", "Genin", "Chunin", "Male", "Female", "Platoon", "Mental Power: 5"],
@@ -227,7 +217,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "265",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Male", "State 2"],
@@ -249,7 +238,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "266",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Male", "Growth"],
@@ -270,7 +258,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "267",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: [],
@@ -291,7 +278,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "268",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -312,7 +298,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "269",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -333,7 +318,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "270",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -354,7 +338,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "271",
     set: "S08",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Puppet"],
@@ -376,7 +359,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind", "earth"],
     number: "272",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Puppet", "Platoon"],
@@ -398,7 +380,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "273",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Animal", "Name: \"Kiba Inuzuka\"", "Name: \"Akamaru\""],
@@ -419,7 +400,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "274",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status", "Growth"],
@@ -440,7 +420,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "275",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -461,7 +440,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "276",
     set: "S08",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -482,7 +460,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "277",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Byakugan"],
@@ -503,7 +480,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning", "earth"],
     number: "278",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Chunin", "Male", "Platoon", "Mental Power: 4"],
@@ -524,7 +500,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "279",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Male", "State 2"],
@@ -546,7 +521,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "280",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Male", "The Four Sound Ninja", "State 2"],
@@ -568,7 +542,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "281",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Male", "The Four Sound Ninja", "State 2"],
@@ -590,7 +563,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "282",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Male", "The Four Sound Ninja", "State 2"],
@@ -612,7 +584,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "283",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sound", "Female", "The Four Sound Ninja", "State 2"],
@@ -634,7 +605,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "288",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Clone Status"],
@@ -656,7 +626,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "289",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Rogue Ninja", "Male", "Sharingan Eye", "State 2"],
@@ -678,7 +647,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "290",
     set: "S08",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 3"],
@@ -699,7 +667,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "291",
     set: "S08",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Mental Power: 1"],
@@ -720,7 +687,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "292",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Female", "Medical", "Mental Power: 1"],
@@ -741,7 +707,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "293",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -762,7 +727,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "294",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Male"],
@@ -783,7 +747,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "295",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -804,7 +767,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "296",
     set: "S08",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Fuma Clan", "Female"],
@@ -825,7 +787,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "297",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Fuma Clan", "Female"],
@@ -846,7 +807,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "298",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Fuma Clan", "Male"],
@@ -867,7 +827,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "299",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Fuma Clan", "Male"],
@@ -888,7 +847,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "300",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Fuma Clan", "Male"],
@@ -909,7 +867,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "301",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Fuma Clan", "Male"],
@@ -930,7 +887,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "302",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Fuma Clan", "Female"],
@@ -952,7 +908,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "303",
     set: "S08",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Fuma Clan", "Male"],
@@ -970,7 +925,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "304",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Fuma Clan"],
@@ -992,7 +946,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "305",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Male", "State 2"],
@@ -1014,7 +967,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning", "wind"],
     number: "306",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Female", "Clone Status", "Platoon", "Mental Power: 3"],
@@ -1035,7 +987,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "US055",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3"],
@@ -1056,7 +1007,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "US056",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Male"],
@@ -1077,7 +1027,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "US057",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Male"],
@@ -1098,7 +1047,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US058",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Growth"],
@@ -1119,7 +1067,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "US059",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Sannin", "Female", "Medical", "Mental Power: 3"],
@@ -1141,7 +1088,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind", "earth"],
     number: "US060",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 8,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Female", "Medical", "Slug", "Platoon", "Mental Power: 3"],
@@ -1162,7 +1108,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US061",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Sharingan Eye"],
@@ -1183,7 +1128,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire", "earth"],
     number: "US062",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Ninja Dog", "Animal", "Platoon"],
@@ -1204,7 +1148,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "US063",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -1225,7 +1168,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "US064",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: 1"],
@@ -1246,7 +1188,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US065",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Byakugan", "Growth"],
@@ -1268,7 +1209,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "232",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: User",
@@ -1284,7 +1224,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "233",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Target: Each of your Potion coins",
@@ -1300,7 +1239,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "234",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Leaf\"",
@@ -1317,7 +1255,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "235",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Akamaru\"",
@@ -1333,7 +1270,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "236",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Double-Headed Wolf\"",
@@ -1349,7 +1285,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "237",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Jirobo\" + \"State 2\"",
@@ -1366,7 +1301,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "238",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Kidomaru\" + \"State 2\"",
@@ -1383,7 +1317,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "239",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Sakon\" or \"Ukon\"",
@@ -1400,7 +1333,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "240",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Sakon\" + \"State 2\"",
@@ -1417,7 +1349,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "241",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Ukon\" + \"State 2\"",
@@ -1433,7 +1364,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "242",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Tayuya\"",
@@ -1449,7 +1379,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "243",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Tayuya\"",
@@ -1466,7 +1395,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "244",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: "X" },
     text: [
       "Requirements: \"Tayuya\" + \"State 2\"",
@@ -1483,7 +1411,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "245",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Kimimaro\"",
@@ -1500,7 +1427,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "246",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Kimimaro\"",
@@ -1517,7 +1443,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "247",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Kimimaro\"",
@@ -1534,7 +1459,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "248",
     set: "S08",
-    rarity: "Super Rare",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Gaara of the Desert\" + \"An Entrance cost of 4 or more\"",
@@ -1551,7 +1475,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "249",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 1 },
     text: [
       "Requirements: \"Kankuro\"",
@@ -1568,7 +1491,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "250",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Requirements: \"Temari\"",
@@ -1585,7 +1507,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "251",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Shadow\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1602,7 +1523,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "252",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Kimimaro\" + \"State 2\"",
@@ -1619,7 +1539,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "253",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Kimimaro\" + \"State 2\"",
@@ -1636,7 +1555,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "254",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: User's Team",
@@ -1652,7 +1570,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "255",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 1 },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone status\"",
@@ -1669,7 +1586,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "256",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Requirements: \"Fuma Clan\" + \"An Entrance cost of 3 or more\"",
@@ -1686,7 +1602,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "259",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirements: \"Sasuke Uchiha\" + \"An Entrance cost of 3 or higher\"",
@@ -1703,7 +1618,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "260",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Fuma Clan\"",
@@ -1720,7 +1634,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "263",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Tayuya\"",
@@ -1736,7 +1649,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "264",
     set: "S08",
-    rarity: "Super Rare",
     cost: { symbols: ["water", "water", "water"], generic: 1 },
     text: [
       "Requirements: \"Kimimaro\" + \"State 2\"",
@@ -1753,7 +1665,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "265",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Fuma Clan\" + \"Satoosa\"",
@@ -1770,7 +1681,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "266",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Medical\"",
@@ -1786,7 +1696,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "267",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1803,7 +1712,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "268",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1820,7 +1728,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "269",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 1 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1837,7 +1744,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "270",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1854,7 +1760,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "271",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Jigumo\"",
@@ -1871,7 +1776,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "272",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["earth", "earth"], generic: 1 },
     text: [
       "Requirements: \"Kagero\"",
@@ -1888,7 +1792,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "273",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Kagero\" + \"Female\"",
@@ -1905,7 +1808,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "US045",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Jiraiya\"",
@@ -1922,7 +1824,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "US046",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1939,7 +1840,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "US047",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Jiraiya\"",
@@ -1956,7 +1856,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US048",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: User",
@@ -1972,7 +1871,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US049",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Taijutsu\" Combat Attribute",
@@ -1989,7 +1887,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US050",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Mental Power\" of 1 or more",
@@ -2005,7 +1902,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "US051",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Target: User",
@@ -2022,7 +1918,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US052",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 2 },
     text: [
       "Requirements: Blocker's Ninja",
@@ -2039,7 +1934,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "US053",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: Injured Ninja",
@@ -2055,7 +1949,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US054",
     set: "S08",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Target: Every Ninja with a \"Water\" Symbol Battling against the user",
@@ -2071,7 +1964,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US055",
     set: "S08",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Itachi Uchiha\"",
@@ -2088,7 +1980,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US056",
     set: "S08",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Neji Hyuga\"",
@@ -2106,7 +1997,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "236",
     set: "S08",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2123,7 +2013,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "237",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2140,7 +2029,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "238",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2158,7 +2046,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "239",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2174,7 +2061,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "240",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2190,7 +2076,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "241",
     set: "S08",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2207,7 +2092,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "242",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2224,7 +2108,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "243",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2241,7 +2124,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "244",
     set: "S08",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2258,7 +2140,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "245",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2275,7 +2156,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "246",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2292,7 +2172,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "247",
     set: "S08",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2309,7 +2188,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind", "water"],
     number: "248",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 2,
     text: [
@@ -2325,7 +2203,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "249",
     set: "S08",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2342,7 +2219,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "250",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2359,7 +2235,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "251",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2376,7 +2251,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "252",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2393,7 +2267,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning", "earth"],
     number: "253",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2410,7 +2283,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "254",
     set: "S08",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2427,7 +2299,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning", "fire"],
     number: "255",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2444,7 +2315,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "256",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2461,7 +2331,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "257",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2478,7 +2347,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "259",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     text: [
@@ -2494,7 +2362,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "260",
     set: "S08",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2510,7 +2377,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["water"],
     number: "261",
     set: "S08",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2527,7 +2393,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "262",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2543,7 +2408,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "263",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2559,7 +2423,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "265",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2576,7 +2439,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth", "water"],
     number: "266",
     set: "S08",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2593,7 +2455,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning"],
     number: "267",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2609,7 +2470,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["lightning", "fire"],
     number: "US041",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2625,7 +2485,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US042",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2641,7 +2500,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US043",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2657,7 +2515,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth"],
     number: "US044",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2674,7 +2531,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind", "lightning"],
     number: "US045",
     set: "S08",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2691,7 +2547,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind"],
     number: "US046",
     set: "S08",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2708,7 +2563,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["wind", "earth"],
     number: "US047",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2725,7 +2579,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US048",
     set: "S08",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2741,7 +2594,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire"],
     number: "US049",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2759,7 +2611,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["earth", "water"],
     number: "US050",
     set: "S08",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2778,7 +2629,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire", "earth"],
     number: "032",
     set: "S08",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Male"],
@@ -2795,7 +2645,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     elements: ["fire", "wind"],
     number: "033",
     set: "S08",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Female"],

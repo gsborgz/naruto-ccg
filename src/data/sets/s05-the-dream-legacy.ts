@@ -14,7 +14,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning", "fire"],
     number: "186",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Chunin", "Male", "Platoon", "Mental Power: 1"],
@@ -32,7 +31,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "187",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -54,7 +52,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "188",
     set: "S05",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male"],
@@ -75,7 +72,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "189",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 3"],
@@ -96,7 +92,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "190",
     set: "S05",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -114,7 +109,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "191",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Anbu", "Female"],
@@ -135,7 +129,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "192",
     set: "S05",
-    rarity: "Super Rare (Starter Deck)",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -156,7 +149,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "193",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -177,7 +169,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "194",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -198,7 +189,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "195",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Female", "Mental Power: 1"],
@@ -219,7 +209,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "196",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female"],
@@ -240,7 +229,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "197",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Dog", "Animal"],
@@ -262,7 +250,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "198",
     set: "S05",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Toad"],
@@ -283,7 +270,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "199",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Mental Power: 2"],
@@ -304,7 +290,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "200",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Female", "Mental Power: 2"],
@@ -325,7 +310,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "201",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Female", "Medical", "Mental Power: 3"],
@@ -346,7 +330,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "202",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male"],
@@ -367,7 +350,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "203",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Sharingan Eye"],
@@ -388,7 +370,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning", "earth"],
     number: "204",
     set: "S05",
-    rarity: "Super Rare (Starter Deck)",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Genin", "Sannin", "Male", "Clone Status", "Platoon"],
@@ -409,7 +390,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "205",
     set: "S05",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Clone Status"],
@@ -430,7 +410,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind", "earth"],
     number: "206",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Platoon", "Mental Power: 3"],
@@ -451,7 +430,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "207",
     set: "S05",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male", "Growth"],
@@ -472,7 +450,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "208",
     set: "S05",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Medical"],
@@ -493,7 +470,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "209",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -515,7 +491,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "210",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -537,7 +512,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "211",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Female", "Medical", "Mental Power: 1"],
@@ -558,7 +532,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "212",
     set: "S05",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Pig"],
@@ -580,7 +553,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "213",
     set: "S05",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Toad"],
@@ -602,7 +574,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "214",
     set: "S05",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Haze Ninja", "Male"],
@@ -623,7 +594,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "215",
     set: "S05",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Stone", "Chunin", "Male"],
@@ -645,7 +615,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "216",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Jonin", "Male", "Medical", "Mental Power: 2"],
@@ -666,7 +635,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "217",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3"],
@@ -687,7 +655,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "218",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Male"],
@@ -709,7 +676,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "219",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Female", "Medical", "Mental Power: 3"],
@@ -731,7 +697,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "220",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 7,
     handCost: 1,
     characteristics: ["Leaf", "Ninja Toad"],
@@ -752,7 +717,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "221",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 8,
     handCost: 1,
     characteristics: ["Sound", "Snake"],
@@ -773,7 +737,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "222",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 7,
     handCost: 1,
     characteristics: ["Leaf", "Slug"],
@@ -795,7 +758,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind", "earth"],
     number: "223",
     set: "S05",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Sannin", "Special Jonin", "Female", "Medical", "Platoon", "Mental Power: 3"],
@@ -817,7 +779,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "173",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Might Guy\"",
@@ -834,7 +795,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "174",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Might Guy\"",
@@ -851,7 +811,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "175",
     set: "S05",
-    rarity: "Super Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Jiraiya\"",
@@ -868,7 +827,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "176",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Itachi Uchiha\"",
@@ -885,7 +843,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "177",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Itachi Uchiha\"",
@@ -902,7 +859,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "178",
     set: "S05",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Itachi Uchiha\"",
@@ -919,7 +875,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "179",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: "X" },
     text: [
       "Requirements: \"Dotou Kazahana\"",
@@ -936,7 +891,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "180",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Target: User",
@@ -952,7 +906,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "181",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: "X", xCount: 2 },
     text: [
       "Effect: Discard the top X cards of your opponent's Deck. X (the Jutsu cost) can only be paid by Chakras with the \"Water\" symbol.",
@@ -967,7 +920,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "182",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 1 },
     text: [
       "Target: Every Team",
@@ -983,7 +935,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "183",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirement: \"Kidomaru\"",
@@ -1000,7 +951,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "184",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirement: \"Kisame Hoshigaki\"",
@@ -1016,7 +966,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "185",
     set: "S05",
-    rarity: "Starter Deck",
     cost: { symbols: ["water"], generic: 2 },
     text: [
       "Requirement: \"Jonin\" or higher Rank",
@@ -1033,7 +982,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "186",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sakura Haruno\"",
@@ -1050,7 +998,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "187",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute",
@@ -1067,7 +1014,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "188",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind", "wind"], generic: 0 },
     text: [
       "Requirement: \"Sand\" Combat Attribute + \"An Entrance cost of 5 or more\"",
@@ -1084,7 +1030,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "189",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: Every Chakra in both player's Chakra area with the \"Fire\" symbol",
@@ -1100,7 +1045,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "190",
     set: "S05",
-    rarity: "Starter Deck",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Target: 1 of your opponent's Ninjas",
@@ -1116,7 +1060,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "191",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: "X" },
     text: [
       "Requirements: \"Weapon\" Combat Attribute",
@@ -1133,7 +1076,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "192",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Tsunade\"",
@@ -1150,7 +1092,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "193",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 2 },
     text: [
       "Target: User",
@@ -1166,7 +1107,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "194",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirement: \"Tsunade\"",
@@ -1183,7 +1123,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "195",
     set: "S05",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirement: \"Jiraiya\"",
@@ -1200,7 +1139,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "196",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute",
@@ -1217,7 +1155,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "197",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Manda\"",
@@ -1234,7 +1171,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "198",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "wind"], generic: 0 },
     text: [
       "Requirements: \"Tsunade\"",
@@ -1251,7 +1187,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "199",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Shizune\"",
@@ -1268,7 +1203,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "200",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Target: 1 Ninja Battling against the user",
@@ -1284,7 +1218,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "201",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: "X" },
     text: [
       "Target: X number of Ninjas Battling against the user",
@@ -1300,7 +1233,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "202",
     set: "S05",
-    rarity: "Super Rare",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirement: \"Tsunade\"",
@@ -1317,7 +1249,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "203",
     set: "S05",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirement: \"Tsunade\"",
@@ -1334,7 +1265,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "204",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirement: \"Tsunade\"",
@@ -1350,7 +1280,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "205",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirement: \"Tsunade\"",
@@ -1367,7 +1296,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "206",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Katsuyu\"",
@@ -1384,7 +1312,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "207",
     set: "S05",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute",
@@ -1401,7 +1328,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "208",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: 1 Jutsu card being used by a \"Genin\" or lower Rank Ninja",
@@ -1417,7 +1343,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "209",
     set: "S05",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Target: 1 \"Ninja Toad,\" \"Snake,\" or \"Slug\" Ninja",
@@ -1434,7 +1359,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "174",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1450,7 +1374,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "175",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1467,7 +1390,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "176",
     set: "S05",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1484,7 +1406,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "177",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1501,7 +1422,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "178",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1518,7 +1438,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "179",
     set: "S05",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1534,7 +1453,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "180",
     set: "S05",
-    rarity: "Starter Deck",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1552,7 +1470,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "181",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1570,7 +1487,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "182",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1587,7 +1503,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "183",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     text: [
@@ -1604,7 +1519,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "184",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1620,7 +1534,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "185",
     set: "S05",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1638,7 +1551,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "186",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1655,7 +1567,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "187",
     set: "S05",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1672,7 +1583,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "188",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1689,7 +1599,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "189",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1706,7 +1615,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "190",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1723,7 +1631,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "191",
     set: "S05",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1739,7 +1646,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "192",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1755,7 +1661,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "193",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1771,7 +1676,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning"],
     number: "194",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1788,7 +1692,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "195",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1806,7 +1709,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "196",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1823,7 +1725,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire"],
     number: "197",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1839,7 +1740,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "198",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1856,7 +1756,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "199",
     set: "S05",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1872,7 +1771,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water"],
     number: "200",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1890,7 +1788,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "201",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1907,7 +1804,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "202",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1923,7 +1819,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "203",
     set: "S05",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1940,7 +1835,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["wind"],
     number: "204",
     set: "S05",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1956,7 +1850,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "205",
     set: "S05",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1973,7 +1866,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "206",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1990,7 +1882,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["earth"],
     number: "207",
     set: "S05",
-    rarity: "Starter Deck",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2007,7 +1898,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water", "wind"],
     number: "007",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Waves", "Female"],
@@ -2024,7 +1914,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water", "wind"],
     number: "025",
     set: "S05",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Snow", "Princess", "Actress", "Female"],
@@ -2041,7 +1930,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["water", "wind"],
     number: "026",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Fire", "Female"],
@@ -2058,7 +1946,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["lightning", "earth"],
     number: "027",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Fire", "Cat"],
@@ -2075,7 +1962,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire", "wind"],
     number: "028",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Akagi Family", "Male"],
@@ -2092,7 +1978,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     elements: ["fire", "earth"],
     number: "029",
     set: "S05",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Akagi Family", "Male"],

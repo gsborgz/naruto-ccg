@@ -14,7 +14,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning", "fire"],
     number: "590",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye", "Mental Power: 3", "Platoon"],
@@ -35,7 +34,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "591",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Clone Status", "Tailed Beast Form", "Name: Naruto Uzumaki", "Name: The Nine-Tailed Fox Spirit"],
@@ -58,7 +56,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "592",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Clone Status", "Growth"],
@@ -79,7 +76,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "593",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Medical", "Growth", "Mental Power: 3"],
@@ -100,7 +96,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "594",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "The Foundation", "Male", "Anbu", "Mental Power: 2"],
@@ -122,7 +117,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "595",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Medical", "Growth", "Mental Power: 1"],
@@ -143,7 +137,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "596",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Proctor", "Male", "Mental Power: 4", "Growth"],
@@ -164,7 +157,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "597",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Secret Pills", "Growth"],
@@ -186,7 +178,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "598",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Mental Power: 2"],
@@ -208,7 +199,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "599",
     set: "S14",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female", "Medical", "Mental Power: 1"],
@@ -229,7 +219,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "600",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "The Foundation", "Male", "Mental Power: 2"],
@@ -250,7 +239,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "601",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Female", "Puppet Master", "Medical", "Mental Power: 1"],
@@ -271,7 +259,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "602",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -292,7 +279,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "603",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -313,7 +299,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "604",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Akatsuki", "Male", "Ambush"],
@@ -334,7 +319,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "605",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Puppet", "Male", "Puppet Master", "Mental Power: 3", "Name: Sasori"],
@@ -355,7 +339,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "606",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sound", "Jonin", "Male", "Medical", "Ambush", "Mental Power: 2"],
@@ -376,7 +359,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "607",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Sound", "Sannin", "Male", "Ambush", "Mental Power: 3"],
@@ -397,7 +379,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning", "fire"],
     number: "608",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "The Foundation", "Anbu", "Clone Status", "Mental Power: 2", "Squad"],
@@ -418,7 +399,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "609",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "The Foundation", "Male", "Anbu", "Ambush", "Mental Power: 1"],
@@ -440,7 +420,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "610",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Mental Power: 2"],
@@ -462,7 +441,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "611",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Mental Power: 2"],
@@ -484,7 +462,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "612",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 2"],
@@ -505,7 +482,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "613",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 2"],
@@ -526,7 +502,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "614",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Mist", "Male", "Mental Power: 2", "Name: Haku"],
@@ -548,7 +523,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "615",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Medical", "Mental Power: 2"],
@@ -569,7 +543,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning", "earth"],
     number: "616",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Anbu", "Mental Power: 2", "Clone Status", "Squad"],
@@ -591,7 +564,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "617",
     set: "S14",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Male", "Ambush"],
@@ -612,7 +584,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "618",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Male", "Ambush"],
@@ -633,7 +604,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "619",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Female", "Ambush", "Mental Power: 1"],
@@ -654,7 +624,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "620",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "Prisoner", "Male", "Name: Kimimaro"],
@@ -676,7 +645,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "621",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male", "Female", "Mental Power: 1", "Squad"],
@@ -698,7 +666,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "622",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 1"],
@@ -719,7 +686,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "623",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Male", "Kurosuki Family", "Ambush", "Mental Power: 1"],
@@ -740,7 +706,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "624",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 7,
     handCost: 1,
     characteristics: ["Sound", "Snake"],
@@ -762,7 +727,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "625",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Mist", "Rogue Ninja", "Jonin", "Male", "Kurosuki Family", "Ambush"],
@@ -783,7 +747,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "626",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja", "Chunin", "Male"],
@@ -804,7 +767,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "627",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Mist", "Rogue Ninja", "Chunin", "Male"],
@@ -825,7 +787,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "628",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -846,7 +807,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "629",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male"],
@@ -867,7 +827,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "630",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sound", "Male"],
@@ -888,7 +847,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "631",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Growth", "Mental Power: 1"],
@@ -909,7 +867,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "632",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status", "Growth"],
@@ -930,7 +887,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning", "earth"],
     number: "633",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Animal", "Tortoise Ninja", "Platoon"],
@@ -953,7 +909,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "634",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Mental Power: 4", "Growth"],
@@ -974,7 +929,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "635",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: -1"],
@@ -995,7 +949,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "earth"],
     number: "636",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female", "Animal", "Pig", "Medical", "Mental Power: 2", "Platoon"],
@@ -1016,7 +969,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "637",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -1037,7 +989,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "638",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male", "Name: Gaara of the Desert"],
@@ -1059,7 +1010,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "lightning"],
     number: "639",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Male", "Chunin", "The Foundation", "Anbu", "Medical", "Mental Power: 5", "Squad"],
@@ -1080,7 +1030,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "640",
     set: "S14",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -1102,7 +1051,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "earth"],
     number: "641",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male", "Puppet", "Squad"],
@@ -1123,7 +1071,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "642",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -1144,7 +1091,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "643",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Sharingan Eye"],
@@ -1165,7 +1111,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "644",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Ambush"],
@@ -1188,7 +1133,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "496",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Requirements: \"Brush\" Combat Attribute",
@@ -1205,7 +1149,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "497",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Brush\" Combat Attribute",
@@ -1221,7 +1164,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "498",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1238,7 +1180,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "499",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Deidara\"",
@@ -1255,7 +1196,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "500",
     set: "S14",
-    rarity: "Super Rare",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1272,7 +1212,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "501",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Weapon\" Combat Attribute or \"Chunin\" or higher Rank",
@@ -1289,7 +1228,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "502",
     set: "S14",
-    rarity: "Super Rare",
     cost: { symbols: ["wind", "wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1306,7 +1244,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "503",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sasori\"",
@@ -1323,7 +1260,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "504",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: "X" },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute + \"An Entrance cost of 4 or more\"",
@@ -1340,7 +1276,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "505",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Chunin\" or higher Rank + \"Food\" Combat Attribute or \"Secret Pills\"",
@@ -1357,7 +1292,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "506",
     set: "S14",
-    rarity: "Super Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Shadow\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -1374,7 +1308,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "507",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute + \"Printed Entrance cost of 4 or more\"",
@@ -1390,7 +1323,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "508",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Requirements: \"Sasori\"",
@@ -1407,7 +1339,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "509",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1424,7 +1355,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "510",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1440,7 +1370,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "511",
     set: "S14",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\" + \"Jonin\" or higher Rank",
@@ -1457,7 +1386,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "512",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -1474,7 +1402,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "513",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: 1 Ninja Battling against the user",
@@ -1490,7 +1417,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "514",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Brush\" Combat Attribute",
@@ -1506,7 +1432,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "515",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -1523,7 +1448,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "516",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Snake\" Combat Attribute",
@@ -1541,7 +1465,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "517",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: [], generic: 2 },
     text: [
       "Effect: Select one of the following effects and apply it according to the number of your in-play \"Permanent\" Mission cards.",
@@ -1559,7 +1482,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "518",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Target: 1 Ninja",
@@ -1575,7 +1497,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "519",
     set: "S14",
-    rarity: "Super Rare",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: Printed Entrance cost of 4 or more",
@@ -1592,7 +1513,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "520",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Deidara\"",
@@ -1610,7 +1530,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "521",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Snake\" Combat Attribute",
@@ -1627,7 +1546,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "522",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -1644,7 +1562,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "523",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -1661,7 +1578,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "524",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Satoosa\" or \"Sannin\" or higher Rank",
@@ -1678,7 +1594,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "525",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Naruto Uzumaki (Tailed Beast Mode)\" + \"An Entrance cost of 5 or more\"",
@@ -1695,7 +1610,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "526",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Thunderbolt\" Combat Attribute",
@@ -1712,7 +1626,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "527",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute",
@@ -1730,7 +1643,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "528",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 2 },
     text: [
       "Requirements: \"Weapon\" Combat Attribute or \"Chunin\" or higher Rank",
@@ -1747,7 +1659,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "529",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Sound\" Combat Attribute",
@@ -1763,7 +1674,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "530",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Sound\" Combat Attribute",
@@ -1780,7 +1690,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "531",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Sound\" Ninja",
@@ -1797,7 +1706,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "532",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Target(1): The Head Ninja Battling against the user",
@@ -1814,7 +1722,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "533",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Kimimaro",
@@ -1831,7 +1738,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "534",
     set: "S14",
-    rarity: "Common",
     cost: { symbols: [], generic: 0 },
     text: [
       "Requirements: \"Kimimaro",
@@ -1848,7 +1754,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "535",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Target: User",
@@ -1864,7 +1769,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "536",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Tree\" Combat Attribute",
@@ -1881,7 +1785,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "537",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1898,7 +1801,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "538",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: "X" },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Printed Entrance cost of 3 or more\"",
@@ -1915,7 +1817,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "539",
     set: "S14",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute + \"Jonin\" or higher Rank",
@@ -1932,7 +1833,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "540",
     set: "S14",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Kisame Hoshigaki\"",
@@ -1950,7 +1850,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "water"],
     number: "455",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1970,7 +1869,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "456",
     set: "S14",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1987,7 +1885,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "457",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2004,7 +1901,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire", "earth"],
     number: "458",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2021,7 +1917,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "459",
     set: "S14",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2038,7 +1933,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "460",
     set: "S14",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     text: [
@@ -2056,7 +1950,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "461",
     set: "S14",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2073,7 +1966,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water", "fire"],
     number: "462",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2089,7 +1981,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "earth"],
     number: "463",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2106,7 +1997,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "earth"],
     number: "464",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2123,7 +2013,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "465",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2140,7 +2029,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "466",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2157,7 +2045,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "fire"],
     number: "467",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2174,7 +2061,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "468",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2191,7 +2077,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "469",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2208,7 +2093,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "470",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2225,7 +2109,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "471",
     set: "S14",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2241,7 +2124,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "472",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2257,7 +2139,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "473",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2274,7 +2155,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "474",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2290,7 +2170,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water", "wind"],
     number: "475",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2307,7 +2186,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "476",
     set: "S14",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2324,7 +2202,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "477",
     set: "S14",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2341,7 +2218,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "478",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2358,7 +2234,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "earth"],
     number: "479",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2375,7 +2250,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "480",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2393,7 +2267,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "481",
     set: "S14",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2410,7 +2283,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water", "fire"],
     number: "482",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2427,7 +2299,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "483",
     set: "S14",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2443,7 +2314,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water", "fire"],
     number: "484",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     text: [
@@ -2461,7 +2331,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "water"],
     number: "485",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2477,7 +2346,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "water"],
     number: "486",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2494,7 +2362,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind"],
     number: "487",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2511,7 +2378,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["lightning"],
     number: "488",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2528,7 +2394,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "489",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2545,7 +2410,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["wind", "earth"],
     number: "490",
     set: "S14",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2563,7 +2427,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth", "wind"],
     number: "491",
     set: "S14",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2580,7 +2443,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "492",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2597,7 +2459,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire", "wind"],
     number: "493",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2613,7 +2474,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth", "wind"],
     number: "494",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2628,7 +2488,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth", "wind"],
     number: "495",
     set: "S14",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2643,7 +2502,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["fire"],
     number: "496",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2660,7 +2518,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth"],
     number: "497",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2676,7 +2533,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["water"],
     number: "498",
     set: "S14",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2694,7 +2550,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     elements: ["earth", "wind"],
     number: "499",
     set: "S14",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [

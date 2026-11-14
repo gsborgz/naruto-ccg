@@ -32,6 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/jogar" className="hover:text-text">
                   Jogar
                 </Link>
+                <Link href="/criar" className="hover:text-text">
+                  Criar carta
+                </Link>
               </div>
               {/* Espaços que as páginas preenchem com <HeaderSlot> (ex.: jogadores e botões da partida). */}
               <div id="app-header-center" className="absolute left-1/2 hidden -translate-x-1/2 lg:block" />

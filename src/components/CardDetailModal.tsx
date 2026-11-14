@@ -61,7 +61,6 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-accent">
               {CARD_TYPE_LABEL[card.type]} · #{card.number} · {card.set}
-              {localized.rarity ? ` · ${localized.rarity}` : ''}
             </p>
             {setName && <p className="text-xs text-muted">{setName}</p>}
             <h2 className="text-2xl font-bold">{localized.name}</h2>

@@ -2,7 +2,7 @@ import type { Card } from '../models/card.ts';
 import type { CardLanguage, CardTranslations, LocalizedCardText } from '../models/cardTranslation.ts';
 import { CARDS_BY_ID } from '../data/cards.ts';
 import { SET_NAMES } from '../data/sets.ts';
-import { SET_NAMES_PTBR, translateAttribute, translateCharacteristic, translateRarity } from '../data/ptbr/glossary.ts';
+import { SET_NAMES_PTBR, translateAttribute, translateCharacteristic } from '../data/ptbr/glossary.ts';
 
 /** Nome em inglês → nome PT-BR, montado a partir das traduções (um mapa por conjunto de traduções). */
 const namesCache = new WeakMap<CardTranslations, ReadonlyMap<string, string>>();
@@ -47,7 +47,6 @@ export function localizeCard(
       flavor: card.flavor,
       characteristics,
       attributes,
-      rarity: card.rarity,
       translated: true,
     };
   }
@@ -59,7 +58,6 @@ export function localizeCard(
     flavor: tr?.flavor ?? card.flavor,
     characteristics: characteristics.map((c) => translateCharacteristic(c, (en) => names?.get(en))),
     attributes: attributes.map(translateAttribute),
-    rarity: card.rarity && translateRarity(card.rarity),
     // Carta sem texto nem frase não precisa de tradução por carta.
     translated: tr !== undefined || (card.text.length === 0 && !card.flavor),
   };

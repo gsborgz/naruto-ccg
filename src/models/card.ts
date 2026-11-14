@@ -5,7 +5,7 @@ export type ElementSymbol = 'lightning' | 'fire' | 'wind' | 'water' | 'earth' | 
 
 /**
  * Atributo de combate do Ninja (ícone no canto inferior direito), como impresso
- * (ex.: "Ninjutsu", "Weapon", "Kung Fu", "Illusion", "Mist"). O jogo tem muitos.
+ * (ex.: "Ninjutsu", "Weapon", "Taijutsu", "Genjutsu", "Mist"). O jogo tem muitos.
  */
 export type CombatAttribute = string;
 
@@ -27,8 +27,6 @@ interface BaseCard {
   number: string;
   /** Código do set (ex.: "S01", "TP1"); nomes em `src/data/sets.ts`. */
   set: string;
-  /** Raridade, como no CCG Trader (ex.: "Common", "Super Rare", "Starter Deck"). */
-  rarity?: string;
   /** Texto de efeito, uma linha por bloco impresso. */
   text: string[];
   /** Frase impressa acima da caixa de texto (fala do anime), quando a carta tem. Opcional. */

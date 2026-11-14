@@ -14,7 +14,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "461",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Male", "Jonin"],
@@ -36,7 +35,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "462",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     characteristics: ["Sand", "Female", "Jonin", "Mental Power: 2"],
@@ -58,7 +56,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "463",
     set: "S12",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Male", "Jonin"],
@@ -79,7 +76,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "464",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Male", "Jonin"],
@@ -100,7 +96,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "465",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sand", "Male", "Satoosa", "Name: Gaara of the Desert"],
@@ -121,7 +116,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "466",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Clone Status", "Growth"],
@@ -142,7 +136,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "467",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Medical", "Growth", "Mental Power: 3"],
@@ -163,7 +156,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "468",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Chunin", "Mental Power: 1"],
@@ -184,7 +176,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "469",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Growth"],
@@ -205,7 +196,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "470",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Genin", "Growth", "Mental Power: 2"],
@@ -226,7 +216,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "471",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Growth", "Mental Power: 2"],
@@ -247,7 +236,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "472",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Special Jonin", "Mental Power: 1"],
@@ -268,7 +256,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "473",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Jonin", "Sharingan Eye", "Mental Power: 3"],
@@ -289,7 +276,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "474",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Jonin"],
@@ -310,7 +296,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "475",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Chunin", "Growth"],
@@ -331,7 +316,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "476",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Jonin", "Byakugan", "Growth"],
@@ -352,7 +336,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "477",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Growth", "Mental Power: 2"],
@@ -373,7 +356,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "478",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Sharingan Eye"],
@@ -394,7 +376,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "479",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male"],
@@ -415,7 +396,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "480",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male"],
@@ -437,7 +417,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "481",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Puppet Master", "Mental Power: 3"],
@@ -459,7 +438,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "482",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Ambush"],
@@ -480,7 +458,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "483",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Sand", "Male", "Satoosa"],
@@ -501,7 +478,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "484",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Puppet"],
@@ -523,7 +499,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "485",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Puppet"],
@@ -545,7 +520,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "486",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Puppet"],
@@ -567,7 +541,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "487",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sand", "Male", "Puppet Master", "Mental Power: 2"],
@@ -588,7 +561,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "488",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Female", "Puppet Master", "Mental Power: 1"],
@@ -609,7 +581,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "489",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Mental Power: 2"],
@@ -630,7 +601,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "490",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Male", "Genin", "Clone Status", "Growth"],
@@ -648,7 +618,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "491",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Chunin", "Medical", "Growth", "Mental Power: 3"],
@@ -666,7 +635,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "492",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Chunin", "Growth"],
@@ -687,7 +655,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "493",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Female", "Main Branch", "Byakugan", "Growth", "Mental Power: 2"],
@@ -705,7 +672,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning", "wind"],
     number: "494",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Sand", "Genin", "Satoosa", "Male", "Clone Status", "Platoon"],
@@ -726,7 +692,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind", "earth"],
     number: "495",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Sand", "Jonin", "Male", "Female", "Mental Power: 2", "Platoon"],
@@ -747,7 +712,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "496",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye", "Growth"],
@@ -768,7 +732,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "497",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -789,7 +752,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "498",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Animal", "Growth"],
@@ -810,7 +772,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "499",
     set: "S12",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Animal", "Ninja Dog", "Name: Bull", "Name: Makino", "Name: Uhei"],
@@ -831,7 +792,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth", "wind"],
     number: "500",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Female", "Genin", "Byakugan", "Main Branch", "Platoon"],
@@ -852,7 +812,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind", "water"],
     number: "501",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Puppet Master", "Platoon"],
@@ -874,7 +833,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire", "earth"],
     number: "502",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Sharingan Eye", "Platoon"],
@@ -896,7 +854,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "503",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Animal", "Ninja Dog", "Name: Kiba Inuzuka", "Name: Akamaru"],
@@ -918,7 +875,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire", "earth"],
     number: "504",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Animal", "Genin", "Male", "Ninja Dog", "Platoon"],
@@ -939,7 +895,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "505",
     set: "S12",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -960,7 +915,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "506",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Female", "Mental Power: 1"],
@@ -981,7 +935,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "507",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Proctor", "Mental Power: 1"],
@@ -1002,7 +955,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "508",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Proctor", "Mental Power: 1"],
@@ -1023,7 +975,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "509",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Female", "Byakugan", "Growth"],
@@ -1044,7 +995,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "510",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -1065,7 +1015,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "511",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth", "Mental Power: 1"],
@@ -1086,7 +1035,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "512",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Animal", "Ninja Dog", "Mental Power: 3", "Name: Bull", "Name: Pakkun", "Name: Bisuke", "Name: Makino", "Name: Uhei", "Name: Guruko", "Name: Urushi", "Name: Shibe"],
@@ -1104,7 +1052,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "513",
     set: "S12",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Byakugan", "Growth"],
@@ -1126,7 +1073,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "514",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -1147,7 +1093,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "515",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -1169,7 +1114,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "516",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male"],
@@ -1191,7 +1135,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "517",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 0,
     characteristics: ["Leaf", "Jonin", "Male", "Mental Power: 1"],
@@ -1212,7 +1155,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "518",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Male", "Byakugan", "Main Branch"],
@@ -1233,7 +1175,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "519",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Growth"],
@@ -1254,7 +1195,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "520",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Ambush"],
@@ -1272,7 +1212,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "521",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Akatsuki", "Rogue Ninja", "Jonin", "Male", "Puppet Master", "Ambush", "Mental Power: 3"],
@@ -1291,7 +1230,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "387",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Male\"",
@@ -1308,7 +1246,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "388",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 1 },
     text: [
       "Requirements: \"Male\"",
@@ -1325,7 +1262,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "389",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1344,7 +1280,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "390",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 0 },
     text: [
       "Requirements: \"Kakashi Hatake\"",
@@ -1361,7 +1296,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "391",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1378,7 +1312,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "392",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: Every Ninja in the user's Team and the Team Battling against it.",
@@ -1394,7 +1327,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "393",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Female\"",
@@ -1411,7 +1343,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "394",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1428,7 +1359,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "395",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1445,7 +1375,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "396",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Chunin\" or higher Rank + \"Taijutsu\"",
@@ -1462,7 +1391,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "397",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Chunin\" or higher Rank + \"Taijutsu\" or \"Weapon\" Combat Attribute",
@@ -1479,7 +1407,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "398",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: "X" },
     text: [
       "Requirements: \"Might Guy\" or \"Rock Lee\" + \"Chunin\" or higher Rank",
@@ -1496,7 +1423,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "399",
     set: "S12",
-    rarity: "Super Rare",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Requirements: \"Might Guy\"",
@@ -1513,7 +1439,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "400",
     set: "S12",
-    rarity: "Super Rare",
     cost: { symbols: ["lightning"], generic: "X" },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\" + \"An Entrance cost of 3 or more\"",
@@ -1529,7 +1454,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "401",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute + \"Jonin\" or higher Rank",
@@ -1545,7 +1469,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "402",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Effect: Discard 1 in-play Mission card.",
@@ -1560,7 +1483,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "403",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Deidara\"",
@@ -1577,7 +1499,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "404",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Deidara\"",
@@ -1594,7 +1515,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "405",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Deidara\"",
@@ -1611,7 +1531,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "406",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 1 },
     text: [
       "Requirements: \"Deidara\"",
@@ -1628,7 +1547,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "407",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Zetsu\"",
@@ -1645,7 +1563,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "408",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1661,7 +1578,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "409",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1678,7 +1594,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "410",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Kisame Hoshigaki\"",
@@ -1696,7 +1611,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "411",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Akatsuki\"",
@@ -1712,7 +1626,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "412",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -1729,7 +1642,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "413",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute + \"An Entrance cost of 3 or more\"",
@@ -1745,7 +1657,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "414",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 5 or more\"",
@@ -1762,7 +1673,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "415",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 5 or more\"",
@@ -1779,7 +1689,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "416",
     set: "S12",
-    rarity: "Super Rare",
     cost: { symbols: ["wind", "wind"], generic: 1 },
     text: [
       "Requirements: \"Sand\" Combat Attribute + \"An Entrance cost of 5 or more\"",
@@ -1796,7 +1705,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "417",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: 1 of your Ninjas",
@@ -1812,7 +1720,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "418",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Puppet Master\"",
@@ -1829,7 +1736,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "419",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: [], generic: "X" },
     text: [
       "Requirements: \"Byakugan\" + \"Printed Entrance cost of 3 or more\"",
@@ -1846,7 +1752,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "420",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Requirements: \"Medicine\" Combat Attribute",
@@ -1862,7 +1767,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "421",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: \"Byakugan\" + \"Printed Entrance cost of 3 or more\"",
@@ -1879,7 +1783,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "422",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Jirobo\" + \"State 2\"",
@@ -1896,7 +1799,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "423",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: "X" },
     text: [
       "Requirements: \"Kidomaru\" + \"State 2\"",
@@ -1913,7 +1815,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "424",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 2 },
     text: [
       "Requirements: \"Sakon\" + \"State 2\" or \"Ukon\" + \"State 2\"",
@@ -1930,7 +1831,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "425",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Tayuya\" + \"State 2\"",
@@ -1947,7 +1847,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "426",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute + \"An Entrance cost of 3 or more\"",
@@ -1963,7 +1862,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "427",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Insect\" Combat Attribute",
@@ -1980,7 +1878,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "428",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Puppet\"",
@@ -1997,7 +1894,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "429",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["earth"], generic: "X" },
     text: [
       "Requirements: \"Neji Hyuga\" or \"Byakugan\" + \"Printed Entrance cost of 4 or more\"",
@@ -2014,7 +1910,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "430",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Shadow\" Combat Attribute + \"Chunin\" or higher Rank",
@@ -2034,7 +1929,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "431",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -2051,7 +1945,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "432",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"Anbu\"",
@@ -2067,7 +1960,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "433",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Chunin\" or higher Rank + \"Taijutsu\" Combat Attribute",
@@ -2083,7 +1975,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "434",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Special Jonin\" or higher Rank",
@@ -2100,7 +1991,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "435",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: [], generic: 3 },
     text: [
       "Requirements: \"The Third Hokage\" or \"The Fourth Hokage\"",
@@ -2116,7 +2006,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "436",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["lightning"], generic: "X" },
     text: [
       "Requirements: \"Naruto Uzumaki\" + \"Clone Status\"",
@@ -2132,7 +2021,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "437",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Oil\" Combat Attribute",
@@ -2148,7 +2036,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "438",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -2164,7 +2051,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "439",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["lightning"], generic: 2 },
     text: [
       "Requirements: \"Gamabunta\"",
@@ -2181,7 +2067,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "440",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 2 },
     text: [
       "Requirements: \"Shukaku\"",
@@ -2198,7 +2083,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "441",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Target: Every Ninja with a \"Fire\" symbol Battling against the user",
@@ -2214,7 +2098,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "442",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["fire", "fire"], generic: 0 },
     text: [
       "Target: 1 Ninja Battling against user",
@@ -2230,7 +2113,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "443",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -2247,7 +2129,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "444",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Requirements: \"Byakugan\"",
@@ -2264,7 +2145,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "445",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["fire", "fire"], generic: 1 },
     text: [
       "Requirements: \"Double-Headed Wolf\"",
@@ -2281,7 +2161,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "446",
     set: "S12",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Kimimaro\"",
@@ -2297,7 +2176,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "447",
     set: "S12",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute",
@@ -2313,7 +2191,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "448",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Puppet\"",
@@ -2330,7 +2207,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "449",
     set: "S12",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Effect: Discard 1 in-play Mission card or Client.",
@@ -2346,7 +2222,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire", "water"],
     number: "364",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 6,
     handCost: 1,
     text: [
@@ -2363,7 +2238,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "365",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2380,7 +2254,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "366",
     set: "S12",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2397,7 +2270,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth", "wind"],
     number: "367",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2414,7 +2286,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning", "wind"],
     number: "368",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2431,7 +2302,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "369",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2447,7 +2317,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "370",
     set: "S12",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2464,7 +2333,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "371",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 5,
     handCost: 2,
     text: [
@@ -2481,7 +2349,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water", "earth"],
     number: "372",
     set: "S12",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2497,7 +2364,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water", "fire"],
     number: "373",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2514,7 +2380,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "374",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2531,7 +2396,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "375",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2547,7 +2411,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "376",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2565,7 +2428,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "377",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2582,7 +2444,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "378",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2599,7 +2460,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "379",
     set: "S12",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2616,7 +2476,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "380",
     set: "S12",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2633,7 +2492,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "381",
     set: "S12",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2650,7 +2508,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "382",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2666,7 +2523,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "383",
     set: "S12",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2683,7 +2539,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "384",
     set: "S12",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2700,7 +2555,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "385",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2717,7 +2571,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "386",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2736,7 +2589,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "387",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2752,7 +2604,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "388",
     set: "S12",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2769,7 +2620,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "389",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2786,7 +2636,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "390",
     set: "S12",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2803,7 +2652,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "391",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2819,7 +2667,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "392",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2836,7 +2683,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "393",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2852,7 +2698,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind", "fire"],
     number: "394",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2869,7 +2714,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "395",
     set: "S12",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2886,7 +2730,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["wind"],
     number: "396",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2903,7 +2746,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "397",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2920,7 +2762,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "398",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2937,7 +2778,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "399",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2954,7 +2794,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "400",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2971,7 +2810,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "401",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2987,7 +2825,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "402",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3004,7 +2841,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water", "fire"],
     number: "403",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3021,7 +2857,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "404",
     set: "S12",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3038,7 +2873,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["earth"],
     number: "405",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3056,7 +2890,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "406",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3074,7 +2907,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["lightning"],
     number: "407",
     set: "S12",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -3090,7 +2922,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["water"],
     number: "408",
     set: "S12",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -3107,7 +2938,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "409",
     set: "S12",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -3124,7 +2954,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire"],
     number: "410",
     set: "S12",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -3141,7 +2970,6 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     elements: ["fire", "earth"],
     number: "411",
     set: "S12",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [

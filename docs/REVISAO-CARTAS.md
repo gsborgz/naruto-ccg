@@ -38,9 +38,6 @@ Abra cada folha e compare **todos os campos** com o impresso:
 | `attributes` (Ninja) | Ícone redondo no canto inferior direito (a palavra em inglês embaixo do kanji). |
 | `cost` (Jutsu) | Ícones abaixo do nome: símbolos de elemento e o círculo vermelho com o genérico (número ou X). |
 | `text` | Um item por bloco impresso. Os títulos de efeito ficam no item próprio entre colchetes, na grafia já usada na coleção (no S01 são Title Case, embora o impresso seja em maiúsculas). |
-| `rarity` | Pontos depois do copyright no rodapé. |
-
-**Pontos de raridade** (S01): nenhum = Common; 1 = Uncommon; 2 = Rare; 3 = Super Rare; ponto **vermelho** = Starter Deck. Para ver de perto: `sheets.py footer $W <ids…>` (4×). Coleções posteriores podem usar outro padrão; veja as anotações por set na memória.
 
 **Varredura de texto:** procure espaços duplos, espaços no início ou no fim e caracteres fora do ASCII nos campos `name`, `text` e `characteristics`. Antes do flavor, o S01 não tinha nenhum.
 

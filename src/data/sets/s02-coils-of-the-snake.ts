@@ -14,7 +14,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "044",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 6,
     handCost: 1,
     characteristics: ["Leaf", "Satoosa", "Male", "Mental Power: 3"],
@@ -35,7 +34,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "045",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Mental Power: 2"],
@@ -56,7 +54,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "046",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Mental Power: -1"],
@@ -77,7 +74,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "047",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye"],
@@ -98,7 +94,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "048",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Mental Power: 3"],
@@ -116,7 +111,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "049",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -134,7 +128,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "050",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -152,7 +145,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "051",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -170,7 +162,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "052",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Male", "Proctor", "Mental Power: 1"],
@@ -191,7 +182,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "053",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Tortoise Ninja"],
@@ -212,7 +202,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "054",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Puppet"],
@@ -233,7 +222,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "055",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Male"],
@@ -254,7 +242,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "056",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Male"],
@@ -275,7 +262,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "057",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Sound", "Genin", "Female", "Mental Power: 1"],
@@ -293,7 +279,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "058",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -314,7 +299,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "059",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Male"],
@@ -335,7 +319,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "060",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Sand", "Genin", "Female", "Mental Power: 1"],
@@ -356,7 +339,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "061",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status"],
@@ -377,7 +359,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "062",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye"],
@@ -398,7 +379,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "063",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Mental Power: 1"],
@@ -419,7 +399,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "064",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 5,
     handCost: 1,
     characteristics: ["Leaf", "Jonin", "Male", "Sharingan Eye"],
@@ -440,7 +419,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "065",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Female"],
@@ -461,7 +439,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "066",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Ninja Academy Student", "Male", "Mental Power: 1"],
@@ -482,7 +459,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "067",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Clone Status"],
@@ -503,7 +479,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "068",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Sharingan Eye"],
@@ -524,7 +499,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "069",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Mental Power: 3"],
@@ -545,7 +519,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "070",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Female", "Mental Power: 1"],
@@ -566,7 +539,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "071",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male", "Mental Power: 4"],
@@ -587,7 +559,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "072",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Leaf", "Genin", "Male"],
@@ -608,7 +579,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "073",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -629,7 +599,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "074",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Leaf", "Chunin", "Male", "Proctor", "Mental Power: 1"],
@@ -650,7 +619,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "075",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Snake"],
@@ -672,7 +640,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "076",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Rain", "Genin", "Male"],
@@ -690,7 +657,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "077",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Rain", "Genin", "Male"],
@@ -708,7 +674,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "078",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Rain", "Genin", "Male", "Mental Power: 1"],
@@ -726,7 +691,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "079",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Rain", "Genin", "Male"],
@@ -747,7 +711,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "080",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Rain", "Genin", "Male"],
@@ -768,7 +731,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "081",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 0,
     characteristics: ["Rain", "Genin", "Male"],
@@ -789,7 +751,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "082",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Anbu", "Male"],
@@ -810,7 +771,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "083",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Leaf", "Special Jonin", "Female", "Proctor", "Mental Power: 1"],
@@ -831,7 +791,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "084",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Sound", "Sannin", "Male", "Mental Power: 3"],
@@ -853,7 +812,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "043",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Target: 1 Ninja Battling against the user",
@@ -869,7 +827,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "044",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Target: 1 Jutsu card being played",
@@ -885,7 +842,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "045",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["lightning", "lightning"], generic: 0 },
     text: [
       "Target: 1 of your Stand-By Ninjas",
@@ -901,7 +857,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "046",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Chunin\" or higher Rank",
@@ -918,7 +873,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "047",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Proctor\"",
@@ -935,7 +889,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "048",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -952,7 +905,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "049",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["fire"], generic: 2 },
     text: [
       "Target: User",
@@ -968,7 +920,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "050",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: [], generic: 1 },
     text: [
       "Target: User",
@@ -984,7 +935,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "051",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Target: 1 Ninja",
@@ -1000,7 +950,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "052",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["water"], generic: 0 },
     text: [
       "Requirements: \"Sound\" Combat Attribute",
@@ -1017,7 +966,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "053",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: [], generic: 2 },
     text: [
       "Requirements: \"Sound\" Combat Attribute",
@@ -1034,7 +982,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "054",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Target: 1 Jutsu card being played by your opponent",
@@ -1050,7 +997,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "055",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "earth"], generic: 0 },
     text: [
       "Requirements: \"Manipulation\" Combat Attribute",
@@ -1066,7 +1012,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "056",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1083,7 +1028,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "057",
     set: "S02",
-    rarity: "Super Rare",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1100,7 +1044,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "058",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: 1 healthy Ninja",
@@ -1116,7 +1059,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "059",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["earth"], generic: 0 },
     text: [
       "Target: Every Ninja Battling against the user",
@@ -1132,7 +1074,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "060",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Requirements: 1 Ninja with \"Mental Power\" of 1 or more",
@@ -1149,7 +1090,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "061",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 0 },
     text: [
       "Target: 1 Ninja in your Chakra area with the same name as the user",
@@ -1165,7 +1105,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "062",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1182,7 +1121,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "063",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["fire"], generic: 1 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1199,7 +1137,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "064",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["wind"], generic: 1 },
     text: [
       "Target: (1) User's Team, (2) Every Back Ninja Battling against the user",
@@ -1215,7 +1152,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "065",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["earth", "earth"], generic: 0 },
     text: [
       "Target: Every Team",
@@ -1231,7 +1167,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "066",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Target: Every Ninja in the user's Team",
@@ -1247,7 +1182,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "067",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Target: 1 Ninja Battling against the user",
@@ -1263,7 +1197,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "068",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Target: (1) 1 Jutsu card in your Chakra area, (2) User",
@@ -1279,7 +1212,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "069",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["lightning"], generic: 1 },
     text: [
       "Requirements: \"Anbu\" or \"Special Jonin\" or higher Rank",
@@ -1296,7 +1228,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "070",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 0 },
     text: [
       "Target: (1) User, (2) 1 of your Teams being sent out to Battle",
@@ -1312,7 +1243,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "071",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["fire", "fire", "fire"], generic: 0 },
     text: [
       "Target: Every Ninja Battling against the user",
@@ -1328,7 +1258,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "072",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["fire"], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1345,7 +1274,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "073",
     set: "S02",
-    rarity: "Super Rare",
     cost: { symbols: ["fire", "fire", "fire"], generic: 0 },
     text: [
       "Requirements: \"Sharingan Eye\"",
@@ -1362,7 +1290,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "074",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["water", "water"], generic: 0 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1378,7 +1305,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "075",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "water"], generic: 1 },
     text: [
       "Target: 1 Ninja Battling against the user",
@@ -1394,7 +1320,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "076",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: Attacker's Ninja",
@@ -1411,7 +1336,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "077",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["water"], generic: 1 },
     text: [
       "Requirements: \"Special Jonin\" or higher Rank",
@@ -1428,7 +1352,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "078",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Sand\" Combat Attribute",
@@ -1445,7 +1368,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "079",
     set: "S02",
-    rarity: "Rare",
     cost: { symbols: ["wind", "wind", "wind"], generic: 1 },
     text: [
       "Requirements: \"Jonin\" or higher Rank",
@@ -1462,7 +1384,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "080",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["wind"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute",
@@ -1479,7 +1400,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "081",
     set: "S02",
-    rarity: "Common",
     cost: { symbols: ["wind", "wind"], generic: 0 },
     text: [
       "Requirements: \"Genjutsu\" Combat Attribute",
@@ -1496,7 +1416,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "082",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Target: User",
@@ -1512,7 +1431,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "083",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["earth"], generic: 1 },
     text: [
       "Requirements: \"Ino Yamanaka\", \"Shikamaru Nara\", and \"Choji Akimichi\"",
@@ -1529,7 +1447,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "084",
     set: "S02",
-    rarity: "Uncommon",
     cost: { symbols: ["water", "earth"], generic: 0 },
     text: [
       "Requirements: \"Orochimaru\"",
@@ -1547,7 +1464,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "043",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1563,7 +1479,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "044",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1580,7 +1495,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "045",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1597,7 +1511,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "046",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1614,7 +1527,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "047",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1632,7 +1544,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "048",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1649,7 +1560,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "049",
     set: "S02",
-    rarity: "Common",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1666,7 +1576,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "050",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -1683,7 +1592,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "051",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1700,7 +1608,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "052",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1717,7 +1624,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "053",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1733,7 +1639,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "054",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1749,7 +1654,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "055",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1766,7 +1670,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "056",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1783,7 +1686,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "057",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1799,7 +1701,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "058",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1816,7 +1717,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "059",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1833,7 +1733,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "060",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1850,7 +1749,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "061",
     set: "S02",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1867,7 +1765,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "062",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1884,7 +1781,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "063",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1900,7 +1796,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "064",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -1916,7 +1811,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "065",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -1933,7 +1827,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "066",
     set: "S02",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -1949,7 +1842,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "067",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -1966,7 +1858,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "068",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -1983,7 +1874,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "069",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2000,7 +1890,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning"],
     number: "070",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 4,
     handCost: 1,
     text: [
@@ -2016,7 +1905,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "071",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2034,7 +1922,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "072",
     set: "S02",
-    rarity: "Common",
     entranceCost: 0,
     handCost: 1,
     text: [
@@ -2050,7 +1937,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire"],
     number: "073",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2067,7 +1953,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "074",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2084,7 +1969,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "075",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2100,7 +1984,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water"],
     number: "076",
     set: "S02",
-    rarity: "Common",
     entranceCost: 5,
     handCost: 1,
     text: [
@@ -2118,7 +2001,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "077",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2135,7 +2017,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "078",
     set: "S02",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 1,
     text: [
@@ -2152,7 +2033,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "079",
     set: "S02",
-    rarity: "Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2169,7 +2049,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["wind"],
     number: "080",
     set: "S02",
-    rarity: "Super Rare",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2186,7 +2065,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "081",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2203,7 +2081,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "082",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2220,7 +2097,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "083",
     set: "S02",
-    rarity: "Uncommon",
     entranceCost: 2,
     handCost: 1,
     text: [
@@ -2236,7 +2112,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["earth"],
     number: "084",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 1,
     text: [
@@ -2254,7 +2129,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning", "water"],
     number: "001",
     set: "S02",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Waves", "Male"],
@@ -2271,7 +2145,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["water", "earth"],
     number: "002",
     set: "S02",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Waves", "Master", "Male"],
@@ -2288,7 +2161,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire", "water"],
     number: "003",
     set: "S02",
-    rarity: "Common",
     entranceCost: 3,
     handCost: 0,
     characteristics: ["Land of Waves", "President", "Male"],
@@ -2305,7 +2177,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire", "wind"],
     number: "004",
     set: "S02",
-    rarity: "Common",
     entranceCost: 1,
     handCost: 0,
     characteristics: ["Land of Fire", "Feudal Lord's Wife", "Female"],
@@ -2322,7 +2193,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["lightning", "fire"],
     number: "005",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Land of Waves", "Samurai", "Male"],
@@ -2339,7 +2209,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     elements: ["fire", "earth"],
     number: "006",
     set: "S02",
-    rarity: "Common",
     entranceCost: 2,
     handCost: 0,
     characteristics: ["Land of Waves", "Samurai", "Male"],

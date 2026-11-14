@@ -29,7 +29,6 @@ export interface LocalizedCardText {
   characteristics: string[];
   /** Atributos de Combate (só Ninjas). */
   attributes: string[];
-  rarity?: string;
   /** `false` quando o idioma é PT-BR mas a carta ainda não tem tradução (os textos ficam em inglês). */
   translated: boolean;
 }
