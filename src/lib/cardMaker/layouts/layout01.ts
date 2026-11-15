@@ -53,7 +53,7 @@ export const LAYOUT_01: LayoutSpec = {
     orColor: '#fbf3e4',
     color: '#c8962a',
   },
-  attribute: { x: 413, y: 721, size: 333, defaultFrame: '01' },
+  attribute: { x: 418, y: 721, size: 333, defaultFrame: '01' },
   village: { x: 85, y: 687.85, size: 62.7 },
   name: {
     ninja: { align: 'center', x: 340, cy: 720, maxWidth: 370, size: 50, color: '#131313' },

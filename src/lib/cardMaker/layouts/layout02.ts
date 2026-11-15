@@ -64,7 +64,7 @@ export const LAYOUT_02: LayoutSpec = {
     orColor: '#fbf3e4',
     color: '#c8962a',
   },
-  attribute: { x: 408.5, y: 718.7, size: 333, defaultFrame: '03-01' },
+  attribute: { x: 418, y: 718.7, size: 333, defaultFrame: '03-01' },
   // A vila fica na linha do nome (no exemplo da Hinata, os dois em y≈706; ver a nota sobre a linha vermelha).
   village: { x: 76.65, y: 659.65, size: 62.7 },
   name: {
