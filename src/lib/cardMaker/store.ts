@@ -1,7 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
-import type { CustomCard } from './model.ts';
+import { migrateCustomCard, type CustomCard } from './model.ts';
 
 /** Cartas do criador, no localStorage (a arte vai junto, como data URL reduzida). */
 interface StoredData {
@@ -19,7 +19,7 @@ function read(): CustomCard[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     const parsed = raw ? (JSON.parse(raw) as StoredData) : null;
-    cache = parsed?.version === 1 && Array.isArray(parsed.cards) ? parsed.cards : [];
+    cache = parsed?.version === 1 && Array.isArray(parsed.cards) ? parsed.cards.map(migrateCustomCard) : [];
   } catch {
     cache = [];
   }

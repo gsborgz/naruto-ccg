@@ -1,10 +1,15 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
-import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
+import { CARD_TYPE_LABEL, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
+import type { LayoutSizeField } from '@/lib/devCardLayoutEdit';
+import { CardFace } from './CardFace';
+import { DevNameSizeTuner } from './DevNameSizeTuner';
 import { ElementBadge } from './ElementBadge';
+
+type CardView = 'original' | 'rendered';
 
 interface Props {
   card: Card | null;
@@ -30,7 +35,7 @@ export function CardDetailModal({ card, onClose, actions }: Props) {
       onClick={(e) => e.target === e.currentTarget && onClose()}
       className="m-auto w-[min(56rem,calc(100vw-2rem))] rounded-xl border border-border bg-surface p-0 text-text backdrop:bg-black/70"
     >
-      {card && <CardDetails card={card} onClose={onClose} actions={actions} />}
+      {card && <CardDetails key={card.id} card={card} onClose={onClose} actions={actions} />}
     </dialog>
   );
 }
@@ -39,22 +44,48 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
   const { language } = useCardLanguage();
   const localized = useLocalizedCard(card);
   const setName = useSetName()(card.set);
+  // A carta montada vem primeiro (cartas escaneadas); a original fica a um clique.
+  const [view, setView] = useState<CardView>('rendered');
+  // Desenvolvimento: ajuste do tamanho do nome, aplicado na carta montada antes de gravar no arquivo da coleção.
+  // Nome traduzido na tela → `nameSizePtBr`; senão `nameSize` (como em `withLocalizedText`).
+  const [sizeEdits, setSizeEdits] = useState<Partial<Record<LayoutSizeField, number>>>({});
+  const sizeField: LayoutSizeField = language === 'pt-BR' && localized.name !== card.name ? 'nameSizePtBr' : 'nameSize';
+  const shown = card.layout && Object.keys(sizeEdits).length > 0 ? { ...card, layout: { ...card.layout, ...sizeEdits } } : card;
   return (
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
-      {/* A miniatura (já em cache pela grade) aparece por baixo enquanto a imagem grande carrega. */}
-      <div
-        className="mx-auto aspect-[5/7] w-full max-w-xs self-start overflow-hidden rounded-lg bg-surface-2 bg-cover shadow-xl sm:max-w-none"
-        style={{ backgroundImage: `url(${cardImageUrl(card, 'thumb')})` }}
-      >
-        <img
-          key={card.id}
-          src={cardImageUrl(card)}
-          alt={card.name}
-          width={429}
-          height={600}
-          decoding="async"
-          className="size-full object-cover"
-        />
+      <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:max-w-none">
+        <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
+        {process.env.NODE_ENV === 'development' && card.layout && view === 'rendered' && (
+          <DevNameSizeTuner
+            key={sizeField}
+            cardId={card.id}
+            field={sizeField}
+            saved={card.layout[sizeField] ?? 0}
+            value={sizeEdits[sizeField] ?? card.layout[sizeField] ?? 0}
+            onChange={(value) => setSizeEdits((edits) => ({ ...edits, [sizeField]: value }))}
+          />
+        )}
+        {/* Cartas escaneadas (`card.layout`) também podem ser vistas montadas a partir do layout e das artes. */}
+        {card.layout && (
+          <div role="group" aria-label="Imagem da carta" className="flex justify-center gap-1 text-sm">
+            {(
+              [
+                ['rendered', 'Montada'],
+                ['original', 'Original'],
+              ] as const
+            ).map(([value, label]) => (
+              <button
+                key={value}
+                type="button"
+                aria-pressed={view === value}
+                onClick={() => setView(value)}
+                className={`rounded-md px-3 py-1 ${view === value ? 'bg-accent font-semibold text-bg' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
       <div className="flex min-w-0 flex-col gap-4">
         <div className="flex items-start justify-between gap-4">

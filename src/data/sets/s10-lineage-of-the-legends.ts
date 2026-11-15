@@ -26,6 +26,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Our route has been more difficult than we expected.\"",
     image: "s10-n-344",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-345",
@@ -46,6 +53,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Yesterday, I found it injured, so I tried to cure it...\"",
     image: "s10-n-345",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-346",
@@ -66,6 +80,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Oh! The world is spinning.\"",
     image: "s10-n-346",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-347",
@@ -86,6 +107,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I won't stop... until I can see much further...\"",
     image: "s10-n-347",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-348",
@@ -106,6 +134,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Get ready!\"",
     image: "s10-n-348",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-349",
@@ -126,6 +161,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I guarantee that my pupils will complete the mission without any trouble!\"",
     image: "s10-n-349",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-350",
@@ -146,6 +188,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Of course. We've been improving our disguise techniques for this day...\"",
     image: "s10-n-350",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-351",
@@ -166,6 +215,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Wow! We really look like them!\"",
     image: "s10-n-351",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-352",
@@ -186,6 +242,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You should've heard about the irresistible hero who defeats other ninja easily but is rather vulnerable to feminine charm. The famous Leaf Ninja, Jiraiya, is me!!\"",
     image: "s10-n-352",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-353",
@@ -206,6 +269,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm going to get every Jutsu and grasp all the truths of this world...\"",
     image: "s10-n-353",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-354",
@@ -226,6 +296,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Say what?\"",
     image: "s10-n-354",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-355",
@@ -247,6 +324,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'll give you a funeral!\"",
     image: "s10-n-355",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-356",
@@ -268,6 +352,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"For me, to live was to be with you...\"",
     image: "s10-n-356",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-357",
@@ -289,6 +380,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Get into formation!\"",
     image: "s10-n-357",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-358",
@@ -310,6 +408,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm a bounty hunter, Sazanami.\"",
     image: "s10-n-358",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-359",
@@ -331,6 +436,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm also a bounty hunter. We're in the same profession!\"",
     image: "s10-n-359",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-360",
@@ -351,6 +463,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Unfortunately... I have an important job to do...\"",
     image: "s10-n-360",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-361",
@@ -371,6 +490,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Squad Formation! Cheesecake Jutsu!!\"",
     image: "s10-n-361",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-362",
@@ -391,6 +517,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You had us fetch your documents to get some sleep, didn't you!\" \"By the way, I have something to report to you.\"",
     image: "s10-n-362",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-363",
@@ -412,6 +545,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The time feels long when you're waiting for what you want...\" \"Sasuke... I can't wait to see him.\"",
     image: "s10-n-363",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: -2.8, y: 8.5, zoom: 1.0114, print: true } },
+    },
   },
   {
     id: "s10-n-364",
@@ -432,6 +572,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I will never forgive them...\"",
     image: "s10-n-364",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-365",
@@ -452,6 +599,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The next 72 hours will be nothing but this. Over and over.\"",
     image: "s10-n-365",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-366",
@@ -472,6 +626,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This guy is getting on my nerves. Can I kill him?\"",
     image: "s10-n-366",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-367",
@@ -492,6 +653,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Naruto... You're coming with us.\" \"Hard to believe that such a child carries the Nine-Tailed Fox...\"",
     image: "s10-n-367",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-368",
@@ -512,6 +680,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "A hero who created stability in the war-torn era and founded the Leaf Village. He captured enemies with complete control of a source of life: trees.",
     image: "s10-n-368",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-369",
@@ -532,6 +707,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Following in his brother's footsteps, he strove for the development of the village. With powerful Water-Style Jutsu, he generated great waves in waterless places.",
     image: "s10-n-369",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-370",
@@ -552,6 +734,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "A guardian of the Leaf Village, who worked for the village for many years. He was called \"professor\" due to his exceptional ability, which was not lost even in his old age.",
     image: "s10-n-370",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-371",
@@ -573,6 +762,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "A young leader who sacrificed his life to protect the village from a disaster. His brave figure moved swiftly through the battleground like a flash.",
     image: "s10-n-371",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-372",
@@ -594,6 +790,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "A Kunoichi who is known as a legend due to many anecdotes. No one can rival her in physical strength and medical expertise.",
     image: "s10-n-372",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-373",
@@ -614,6 +817,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I will never let her join you!\"",
     image: "s10-n-373",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-374",
@@ -634,6 +844,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Fight me...\"",
     image: "s10-n-374",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-375",
@@ -654,6 +871,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Let me handle it!\"",
     image: "s10-n-375",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-376",
@@ -674,6 +898,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The pain is getting stronger...\"",
     image: "s10-n-376",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-377",
@@ -694,6 +925,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"It's because I saw your Jutsu with my eye...\"",
     image: "s10-n-377",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-378",
@@ -715,6 +953,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"What a place you've summoned us to!\" \"Good evening.\"",
     image: "s10-n-378",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-379",
@@ -735,6 +980,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I was tricked by the Leaf ninja...!\"",
     image: "s10-n-379",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-380",
@@ -755,6 +1007,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"We visit various Ninja villages, steal their Jutsu, and create new Ninjutsu.\"",
     image: "s10-n-380",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-381",
@@ -775,6 +1034,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I use the name 'Moso' to deceive the public.\"",
     image: "s10-n-381",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-382",
@@ -795,6 +1061,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I must start my brother's time again...\"",
     image: "s10-n-382",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-383",
@@ -815,6 +1088,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Don't talk about irrelevant things.\"",
     image: "s10-n-383",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-384",
@@ -835,6 +1115,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I just happened to be there...\"",
     image: "s10-n-384",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-385",
@@ -856,6 +1143,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm a perfect fighter created by improving her version!\"",
     image: "s10-n-385",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-386",
@@ -876,6 +1170,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm different from that time!\"",
     image: "s10-n-386",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-387",
@@ -896,6 +1197,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Heh-heh... You dropped your guard.\"",
     image: "s10-n-387",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-388",
@@ -916,6 +1224,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"We made efforts to serve delicious dishes to ninjas while they are on missions.\"",
     image: "s10-n-388",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us093",
@@ -937,6 +1252,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"They're just soldiers dedicated to the cause...\"",
     image: "s10-n-us093",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us094",
@@ -957,6 +1279,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"We've traveled far and wide, trying to create a utopia.\"",
     image: "s10-n-us094",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us095",
@@ -978,6 +1307,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"...\"",
     image: "s10-n-us095",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us096",
@@ -999,6 +1335,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Prepare yourself... for an eternity of anguish.\"",
     image: "s10-n-us096",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us097",
@@ -1020,6 +1363,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"What's the matter, don't you wanna play?!?!\"",
     image: "s10-n-us097",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us098",
@@ -1041,6 +1391,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I can smell your blood, that's all I need!\"",
     image: "s10-n-us098",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us099",
@@ -1062,6 +1419,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I know more about the stones than anybody. It was given to me by my master, Haido.\"",
     image: "s10-n-us099",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 5.3, y: 1.5, zoom: 1.0095, print: true } },
+    },
   },
   {
     id: "s10-n-us100",
@@ -1083,6 +1447,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"That's not going to work on me!\"",
     image: "s10-n-us100",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us101",
@@ -1103,6 +1474,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"If I haven't the courage to face this demon, how can I ever hope to face him?\"",
     image: "s10-n-us101",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us102",
@@ -1123,6 +1501,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Okay, Team Ino, let's show 'em who's boss.\"",
     image: "s10-n-us102",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us103",
@@ -1144,6 +1529,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm finally freeee!! ~ Here I come, baby!\"",
     image: "s10-n-us103",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us104",
@@ -1164,6 +1556,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Sorry, but you can forget about being Hokage. Cuz I'm the... top dog around here\"",
     image: "s10-n-us104",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us105",
@@ -1184,6 +1583,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Not in front of the person I admire most, who's finally seeing the real me.\"",
     image: "s10-n-us105",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us106",
@@ -1204,6 +1610,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Alright... Let's end this!\"",
     image: "s10-n-us106",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us107",
@@ -1224,6 +1637,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Super Expansion Jutsu!\"",
     image: "s10-n-us107",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us108",
@@ -1244,6 +1664,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Sorry, Naruto...Change of plan. I'm not ready to die quite yet.\"",
     image: "s10-n-us108",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us109",
@@ -1264,6 +1691,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Let's go, Enma!!\" \"I'm right behind you!\"",
     image: "s10-n-us109",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us110",
@@ -1284,6 +1718,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The dear old faces reunited once again. I think I'm going to cry.\" \"I didn't summon you after all this time just to listen to your stupid jokes.\"",
     image: "s10-n-us110",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us111",
@@ -1304,6 +1745,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Don't worry. Give me ten minutes and I'll come after you to see if you're okay.\"",
     image: "s10-n-us111",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us112",
@@ -1325,6 +1773,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Think only of yourself, love only yourself! That is what it means to be the strongest.\"",
     image: "s10-n-us112",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us113",
@@ -1345,6 +1800,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Stand up, Hanabi.\" \"...\"",
     image: "s10-n-us113",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us114",
@@ -1365,6 +1827,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Well, I finally caught up to you guys.\"",
     image: "s10-n-us114",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us115",
@@ -1385,6 +1854,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Haaaaa!!!",
     image: "s10-n-us115",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us116",
@@ -1405,6 +1881,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Here I come!\"",
     image: "s10-n-us116",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us117",
@@ -1426,6 +1909,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Normally... the human body contains two hundred and six bones. But in my case that number is somewhat more negotiable...\"",
     image: "s10-n-us117",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us118",
@@ -1446,6 +1936,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You .. fool.. You're the one who's going to die here.\"",
     image: "s10-n-us118",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us119",
@@ -1466,6 +1963,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Don't be off your guard!\" \"Right back at you!\"",
     image: "s10-n-us119",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us120",
@@ -1486,6 +1990,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Even if it means I die... I've got to win.\"",
     image: "s10-n-us120",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us121",
@@ -1506,6 +2017,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Give me an analysis of her skills and battle style.\"",
     image: "s10-n-us121",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us122",
@@ -1527,6 +2045,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Sasuke...you...\"",
     image: "s10-n-us122",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us123",
@@ -1548,6 +2073,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This is the best place for us, don't you think Naruto?\"",
     image: "s10-n-us123",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-n-us124",
@@ -1569,6 +2101,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"It seems like... I don't have much time left.\"",
     image: "s10-n-us124",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1586,6 +2125,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Useless! That's not gonna work against my plasma ball!\"",
     image: "s10-j-257",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.9, y: 4.8, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s10-j-258",
@@ -1602,6 +2148,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Tornado Lightning!!\"",
     image: "s10-j-258",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 1.1, y: 4.9, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s10-j-261",
@@ -1618,6 +2171,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Amazing, isn't it?-I can blow things away without touching them.\"",
     image: "s10-j-261",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 2.3, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s10-j-262",
@@ -1634,6 +2194,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Rising Thunder!!\"",
     image: "s10-j-262",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.9, y: 2.7, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-274",
@@ -1650,6 +2217,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Hear the cries of those who've stood against us... doomed to wander the Land of Death.\"",
     image: "s10-j-274",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 4.3, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s10-j-275",
@@ -1666,6 +2240,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Grrrr......\"",
     image: "s10-j-275",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 5.1, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-305",
@@ -1682,6 +2263,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Clone Spinning Axe Kick!\"",
     image: "s10-j-305",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 3.1, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-306",
@@ -1697,6 +2285,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"He's still unconscious...\"",
     image: "s10-j-306",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.6, y: 2.9, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s10-j-307",
@@ -1713,6 +2308,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"We don't care anymore!\"",
     image: "s10-j-307",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 2.8, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-308",
@@ -1729,6 +2331,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Take this!\"",
     image: "s10-j-308",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 2.7, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s10-j-309",
@@ -1745,6 +2354,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I won't forgive you!!\"",
     image: "s10-j-309",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.3, y: 2.8, zoom: 1.0037, print: true } },
+    },
   },
   {
     id: "s10-j-310",
@@ -1760,6 +2376,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Ninja Art: Boulder Avalanche!!\"",
     image: "s10-j-310",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 2.8, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s10-j-311",
@@ -1776,6 +2399,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I can't give you a funeral, but don't worry. Nothing will be left of you...\"",
     image: "s10-j-311",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -5, y: 2.7, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s10-j-312",
@@ -1791,6 +2421,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Ninja Art: Lightning Fangs!\"",
     image: "s10-j-312",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 2.8, zoom: 1.0053, print: true } },
+    },
   },
   {
     id: "s10-j-313",
@@ -1807,6 +2444,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Why don't you give up?\"",
     image: "s10-j-313",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 2.8, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s10-j-314",
@@ -1822,6 +2466,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Has he evaporated completely...?\"",
     image: "s10-j-314",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 2.8, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s10-j-315",
@@ -1838,6 +2489,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Ninja Art: Black Tornado!!\"",
     image: "s10-j-315",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.2, y: 2.9, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-316",
@@ -1854,6 +2512,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Cheesecake!♥\"",
     image: "s10-j-316",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.4, y: 2.5, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s10-j-317",
@@ -1870,6 +2535,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Gentle Fist!\"",
     image: "s10-j-317",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 4.7, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s10-j-318",
@@ -1886,6 +2558,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Ha!\"",
     image: "s10-j-318",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 5.1, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s10-j-319",
@@ -1902,6 +2581,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Yah!\"",
     image: "s10-j-319",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 4.6, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s10-j-320",
@@ -1918,6 +2604,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You can't move anymore!\"",
     image: "s10-j-320",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.7, y: 5.1, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s10-j-321",
@@ -1934,6 +2627,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Ninja Art: Flying Nail Mist!\"",
     image: "s10-j-321",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -4.2, y: 5, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s10-j-322",
@@ -1949,6 +2649,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"And twenty-four hours from now... you'll be weaker still.\"",
     image: "s10-j-322",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 2.4, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s10-j-323",
@@ -1965,6 +2672,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Forget the legs... Maybe I outta start off with those arms of his...\"",
     image: "s10-j-323",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 3.3, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s10-j-324",
@@ -1981,6 +2695,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You'll be the first to meet them in Hell...\"",
     image: "s10-j-324",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 2.5, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-325",
@@ -1995,6 +2716,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Striking Shadow Snake!!\"",
     image: "s10-j-325",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.4, y: 2.7, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-326",
@@ -2011,6 +2739,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"What's this strange Chakra...?\"",
     image: "s10-j-326",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.9, y: 3.1, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s10-j-327",
@@ -2027,6 +2762,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Yes, I am a dog. Any complaints?\"",
     image: "s10-j-327",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 2.7, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s10-j-328",
@@ -2044,6 +2786,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"...There!!\"",
     image: "s10-j-328",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.9, y: 2.6, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-329",
@@ -2060,6 +2809,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"...All right.\"",
     image: "s10-j-329",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 2.8, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-330",
@@ -2075,6 +2831,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Soon you'll be unable to breathe...!\"",
     image: "s10-j-330",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 3.1, zoom: 1.0051, print: true } },
+    },
   },
   {
     id: "s10-j-331",
@@ -2089,6 +2852,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"What do you think about my improved Chakra Absorption Jutsu?\"",
     image: "s10-j-331",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -3.6, y: 3.1, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-332",
@@ -2104,6 +2874,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm going to unleash all the Chakra I've absorbed!\"",
     image: "s10-j-332",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.2, y: 2.9, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-333",
@@ -2120,6 +2897,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Eat this!\"",
     image: "s10-j-333",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.2, y: 2.8, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-334",
@@ -2135,6 +2919,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Sea Monster doesn't die! It's immortal...\"",
     image: "s10-j-334",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 2.8, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s10-j-335",
@@ -2150,6 +2941,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"He's gonna set fire!\"",
     image: "s10-j-335",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 2.9, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s10-j-336",
@@ -2166,6 +2964,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This Jutsu is one example...\"",
     image: "s10-j-336",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 1, y: 5.2, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-337",
@@ -2182,6 +2987,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"He uses the same Jutsu as Gaara...!\"",
     image: "s10-j-337",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 4.8, zoom: 1.0051, print: true } },
+    },
   },
   {
     id: "s10-j-338",
@@ -2198,6 +3010,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Phew... Just in time.\"",
     image: "s10-j-338",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.5, y: 4.9, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s10-j-339",
@@ -2214,6 +3033,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Does he take the properties of rock in his body?\"",
     image: "s10-j-339",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.5, y: 4.4, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s10-j-340",
@@ -2230,6 +3056,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Get crushed!\"",
     image: "s10-j-340",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.9, y: 4.8, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s10-j-341",
@@ -2246,6 +3079,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Give me a rest!\"",
     image: "s10-j-341",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -3.7, y: 5.1, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-us077",
@@ -2262,6 +3102,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Water Jutsu: Giant Vortex Jutsu!!!\"",
     image: "s10-j-us077",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -2, y: 2.6, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s10-j-us078",
@@ -2278,6 +3125,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Flower!\"",
     image: "s10-j-us078",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.4, y: 2.8, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-us079",
@@ -2293,6 +3147,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Paper Bomb!!\"",
     image: "s10-j-us079",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 5, zoom: 1.0053, print: true } },
+    },
   },
   {
     id: "s10-j-us080",
@@ -2308,6 +3169,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Gentle Fist Style: 8 Trigrams 64 Palms!!\"",
     image: "s10-j-us080",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.1, y: 5.4, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s10-j-us081",
@@ -2323,6 +3191,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Nice trick!!\"",
     image: "s10-j-us081",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.2, y: 4.7, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-us082",
@@ -2338,6 +3213,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Sazanami!!\"",
     image: "s10-j-us082",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.4, y: 2.5, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s10-j-us083",
@@ -2352,6 +3234,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s10-j-us083",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -5.9, y: 3, zoom: 1.0057, print: true } },
+    },
   },
   {
     id: "s10-j-us084",
@@ -2366,6 +3255,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s10-j-us084",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.9, y: 4.6, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s10-j-us085",
@@ -2381,6 +3277,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You guys keep following him!\"",
     image: "s10-j-us085",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 3.1, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s10-j-us086",
@@ -2396,6 +3299,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Calm down. You need a little more time and patience...\"",
     image: "s10-j-us086",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.2, y: 2.5, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s10-j-us087",
@@ -2410,6 +3320,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s10-j-us087",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 2.7, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s10-j-us088",
@@ -2426,6 +3343,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Toad Sword!\"",
     image: "s10-j-us088",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.2, y: 2.8, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s10-j-us089",
@@ -2442,6 +3366,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"So... fast!\" \"Not just fast. Powerful.\"",
     image: "s10-j-us089",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.5, y: 2.4, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s10-j-us090",
@@ -2457,6 +3388,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I don't need his body... Every part of him is a lethal weapon!\"",
     image: "s10-j-us090",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 2.8, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-us091",
@@ -2475,6 +3413,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Wha.. what! I was just about to create a vortex, but HE created one first!\"",
     image: "s10-j-us091",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-j-us092",
@@ -2490,6 +3435,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Impossible...Those eyes...The Sharingan...\"",
     image: "s10-j-us092",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -6.6, y: 3, zoom: 1.0055, print: true } },
+    },
   },
   {
     id: "s10-j-us093",
@@ -2505,6 +3457,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Take this!\"",
     image: "s10-j-us093",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 2.3, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s10-j-us094",
@@ -2520,6 +3479,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Huh? She's let her guard down...\"",
     image: "s10-j-us094",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 3, zoom: 1.0052, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2537,6 +3503,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"What the..?\"",
     image: "s10-m-264",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-286",
@@ -2553,6 +3526,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This is not a picnic!\"",
     image: "s10-m-286",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 2.7, zoom: 1.0036, print: true } },
+    },
   },
   {
     id: "s10-m-287",
@@ -2569,6 +3549,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"It's a curry Sansho made for us. Let's eat it!\"",
     image: "s10-m-287",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.2, y: 1.5, zoom: 0.9988, print: true } },
+    },
   },
   {
     id: "s10-m-288",
@@ -2585,6 +3572,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"There were three exceptional Ninja in the verdurous Land of Fire.\"",
     image: "s10-m-288",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2, zoom: 1.0034, print: true } },
+    },
   },
   {
     id: "s10-m-289",
@@ -2602,6 +3596,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"From now on, my name is Guy. A Leaf Ninja, Mondai Guy!\"",
     image: "s10-m-289",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.9, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s10-m-290",
@@ -2618,6 +3619,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You must get some rest!\"",
     image: "s10-m-290",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.5, zoom: 1.002, print: true } },
+    },
   },
   {
     id: "s10-m-291",
@@ -2634,6 +3642,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This is going to be a competition for crystals, where Jonin, Chunin, and Genin entrants will fight one another!\"",
     image: "s10-m-291",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-292",
@@ -2650,6 +3665,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I can't believe how gullible he is.\"",
     image: "s10-m-292",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.7, y: 1.4, zoom: 1.0008, print: true } },
+    },
   },
   {
     id: "s10-m-293",
@@ -2667,6 +3689,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I didn't commit such a crime...\"",
     image: "s10-m-293",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 1.3, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s10-m-294",
@@ -2683,6 +3712,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I'm going to track the target on my own... Let's see who gets him first!\"",
     image: "s10-m-294",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-295",
@@ -2698,6 +3734,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"It's getting interesting, isn't it?\"",
     image: "s10-m-295",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 1.6, zoom: 1.0009, print: true } },
+    },
   },
   {
     id: "s10-m-296",
@@ -2714,6 +3757,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"...Are you not going to rethink, Orochimaru?\"",
     image: "s10-m-296",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.5, y: 2.5, zoom: 1.0003, print: true } },
+    },
   },
   {
     id: "s10-m-297",
@@ -2730,6 +3780,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Guy, an S-ranked mission is already waiting for you.\"",
     image: "s10-m-297",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 2.4, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s10-m-298",
@@ -2746,6 +3803,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I have no doubt that we're completely lost.\"",
     image: "s10-m-298",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 2.3, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s10-m-299",
@@ -2761,6 +3825,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"What's this? ...A wanted poster?\"",
     image: "s10-m-299",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-300",
@@ -2777,6 +3848,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Even Naruto could be of some use...\"",
     image: "s10-m-300",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.8, zoom: 1.0018, print: true } },
+    },
   },
   {
     id: "s10-m-301",
@@ -2792,6 +3870,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Whatever happens, we'll finish before anyone else! Are you ready?\"",
     image: "s10-m-301",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.3, zoom: 1.0012, print: true } },
+    },
   },
   {
     id: "s10-m-302",
@@ -2807,6 +3892,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Funerals are good. They make me emotional...\"",
     image: "s10-m-302",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 1.4, zoom: 1.0018, print: true } },
+    },
   },
   {
     id: "s10-m-303",
@@ -2822,6 +3914,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Then, it'll be an easy victory.\"",
     image: "s10-m-303",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.1, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s10-m-304",
@@ -2838,6 +3937,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"We last met like this seven years ago... when Orochimaru left this organization...\"",
     image: "s10-m-304",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-305",
@@ -2853,6 +3959,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"He's as energetic as always...\"",
     image: "s10-m-305",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 0.8, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s10-m-306",
@@ -2868,6 +3981,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"They know that when you're alone, you tend to neglect your training.\"",
     image: "s10-m-306",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.6, y: 2.3, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s10-m-307",
@@ -2884,6 +4004,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I didn't have enough money for the request, so I also gave them all my pocket money...\"",
     image: "s10-m-307",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.3, y: 2, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s10-m-308",
@@ -2900,6 +4027,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Are you not hurt...?\"",
     image: "s10-m-308",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 2.5, zoom: 1.0018, print: true } },
+    },
   },
   {
     id: "s10-m-309",
@@ -2915,6 +4049,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Let's start the cooking match!\"",
     image: "s10-m-309",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.4, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s10-m-310",
@@ -2931,6 +4072,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You know...\"",
     image: "s10-m-310",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.6, zoom: 1.0011, print: true } },
+    },
   },
   {
     id: "s10-m-311",
@@ -2947,6 +4095,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Those who approached that island disappeared one after another...\"",
     image: "s10-m-311",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 1.1, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s10-m-312",
@@ -2963,6 +4118,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"You look like... Are you the sea monster?\"",
     image: "s10-m-312",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.3, zoom: 1.0015, print: true } },
+    },
   },
   {
     id: "s10-m-313",
@@ -2978,6 +4140,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The curse mark aches. It's a clear indication of his presence...\"",
     image: "s10-m-313",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 1.7, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s10-m-314",
@@ -2994,6 +4163,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Where... where is this place...?\"",
     image: "s10-m-314",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 1.7, zoom: 1.0021, print: true } },
+    },
   },
   {
     id: "s10-m-315",
@@ -3010,6 +4186,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I would like to work to rebuild this country till the end of my life!\"",
     image: "s10-m-315",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 1.5, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s10-m-316",
@@ -3026,6 +4209,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The samurai is clothed in white armor, carrying a pike, and wearing a terrifying mask...\"",
     image: "s10-m-316",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.9, zoom: 1.0015, print: true } },
+    },
   },
   {
     id: "s10-m-317",
@@ -3042,6 +4232,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Even the summoned dragons are false...\"",
     image: "s10-m-317",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-318",
@@ -3058,6 +4255,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Your mission is finished... Don't do anything that is not part of the mission.\"",
     image: "s10-m-318",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.3, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s10-m-319",
@@ -3073,6 +4277,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"...\"",
     image: "s10-m-319",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.9, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s10-m-320",
@@ -3089,6 +4300,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Ninja of the Land of Fire, where leaves shine vibrantly. Their determination to love and protect their village creates unity and fosters their abilities as true Ninjas.",
     image: "s10-m-320",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 2.5, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s10-m-321",
@@ -3105,6 +4323,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Ninja of the Land of Wind, where sandstorms occur frequently. The harsh environment sharpens their senses, helping them to be elite Ninjas.",
     image: "s10-m-321",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-us087",
@@ -3121,6 +4346,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Their Taijutsu is a unique one that's been passed down for generations.\"",
     image: "s10-m-us087",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.6, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s10-m-us088",
@@ -3138,6 +4370,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Ohhhhhhhhhh!!!!\"",
     image: "s10-m-us088",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.2, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s10-m-us089",
@@ -3154,6 +4393,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"My watch had stopped beating time since then...\"",
     image: "s10-m-us089",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.5, y: 2.6, zoom: 1.0016, print: true } },
+    },
   },
   {
     id: "s10-m-us090",
@@ -3169,6 +4415,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Hi, long time no see. Got some candies for me?\" \"Why you guys all the time?\"",
     image: "s10-m-us090",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.3, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s10-m-us091",
@@ -3184,6 +4437,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"He he he... we got the 'Scum Recipe', you know.\"",
     image: "s10-m-us091",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.4, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s10-m-us092",
@@ -3199,6 +4459,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"South is about where 12 is. Don't forget this.\"",
     image: "s10-m-us092",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.7, y: 1.5, zoom: 1.0012, print: true } },
+    },
   },
   {
     id: "s10-m-us093",
@@ -3215,6 +4482,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"If you walk out at night, you will encounter a ghost in a white armor.\"",
     image: "s10-m-us093",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.7, y: 2, zoom: 1.0039, print: true } },
+    },
   },
   {
     id: "s10-m-us094",
@@ -3230,6 +4504,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"See? Can you see the difference between them?\"",
     image: "s10-m-us094",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 1.8, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s10-m-us095",
@@ -3247,6 +4528,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The Fox Spirit that killed Iruka's parents and destroyed our village has taken over YOUR body! You ARE the Nine-Tailed Fox!\"",
     image: "s10-m-us095",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 1.8, zoom: 1.0036, print: true } },
+    },
   },
   {
     id: "s10-m-us096",
@@ -3264,6 +4552,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Well, Orochimaru? Why have you dragged me here? You know I don't like being summoned.\" \"...\"",
     image: "s10-m-us096",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.7, y: 1.7, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s10-m-us097",
@@ -3280,6 +4575,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This is already announced to the Ninja Academy students.\"",
     image: "s10-m-us097",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.4, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s10-m-us098",
@@ -3295,6 +4597,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"This file...some part of the records after 10 years old are missing.\"",
     image: "s10-m-us098",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.5, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s10-m-us099",
@@ -3310,6 +4619,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s10-m-us099",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.6, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s10-m-us100",
@@ -3326,6 +4642,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"It seems like the land of Sea sent them over here.\" \"Well then, we need to treat them nicely.\"",
     image: "s10-m-us100",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.7, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s10-m-us101",
@@ -3342,6 +4665,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Genjutsu: It drags the target to the world of illusion where their spirit and body gets exhausted and deranged.",
     image: "s10-m-us101",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.4, y: 2.9, zoom: 1.001, print: true } },
+    },
   },
   {
     id: "s10-m-us102",
@@ -3358,6 +4688,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Narutoooo!\" \"Sasukeeeee!\"",
     image: "s10-m-us102",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-us103",
@@ -3373,6 +4710,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Let's go home!\" \"Yeah!\"",
     image: "s10-m-us103",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.2, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s10-m-us104",
@@ -3389,6 +4733,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Weapons: They are highly sophisticated and essential to the deadly ninja battles as well as training in Ninja arts.",
     image: "s10-m-us104",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 2, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s10-m-us105",
@@ -3405,6 +4756,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "Their ambitions lead them to the deeper darkness.",
     image: "s10-m-us105",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 1.2, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s10-m-us106",
@@ -3421,6 +4779,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s10-m-us106",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 1.7, zoom: 1.002, print: true } },
+    },
   },
   {
     id: "s10-m-us107",
@@ -3436,6 +4801,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The fact that you know our names must mean that you're a shinobi formerly of this village.\"",
     image: "s10-m-us107",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-us108",
@@ -3452,6 +4824,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Well, okay then, it's time I give 'em what they want!\"",
     image: "s10-m-us108",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 2.7, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s10-m-us109",
@@ -3469,6 +4848,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Curse Sealing Jutsu!!\"",
     image: "s10-m-us109",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.3, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s10-m-us110",
@@ -3486,6 +4872,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Fairly basic training equipment...\"",
     image: "s10-m-us110",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-m-us111",
@@ -3502,6 +4895,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"In the ninja world, those who break the rules are scum. That's true....those who abandon their friends are worse than scum.\"",
     image: "s10-m-us111",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 2.2, zoom: 1.0032, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -3519,6 +4919,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"It's time this thing was eliminated from the world once and for all. Even if it means our doom.\"",
     image: "s10-c-034",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-035",
@@ -3535,6 +4942,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The land we hail from was destroyed, and we've been traveling ever since.\"",
     image: "s10-c-035",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-036",
@@ -3553,6 +4967,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Squeak\"",
     image: "s10-c-036",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-038",
@@ -3569,6 +4990,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"Oh, I'm busy.\"",
     image: "s10-c-038",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-039",
@@ -3585,6 +5013,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"After all this, I can't go back to the curry shop.\"",
     image: "s10-c-039",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-040",
@@ -3603,6 +5038,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"We must protect Lady Toki at any cost...\"",
     image: "s10-c-040",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-041",
@@ -3619,6 +5061,13 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"I see... So this is what you want...\"",
     image: "s10-c-041",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s10-c-042",
@@ -3635,5 +5084,12 @@ export const S10_LINEAGE_OF_THE_LEGENDS: Card[] = [
     ],
     flavor: "\"The money ship sails at an earlier time.\"",
     image: "s10-c-042",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

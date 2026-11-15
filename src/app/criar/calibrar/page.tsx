@@ -11,13 +11,15 @@ const DEFAULT_IDS = ['s10-n-us098', 's10-j-us078', 's10-m-us087', 's10-n-us101']
 
 /**
  * Calibração do mapa do layout (`/criar/calibrar?ids=s10-n-us098,...`): a carta montada pelo criador,
- * a imagem original e as duas sobrepostas, para conferir a posição de cada elemento.
+ * a imagem original e as duas sobrepostas, para conferir a posição de cada elemento. Cartas escaneadas
+ * (`card.layout`) vêm com as artes extraídas (ex.: `?ids=s01-n-001,s01-j-001`).
  */
 function Calibration() {
   const params = useSearchParams();
   const ids = params.get('ids')?.split(',').filter(Boolean) ?? DEFAULT_IDS;
   const width = Number(params.get('w')) || 360;
-  const layout = (params.get('layout') ?? 'layout-01') as LayoutId;
+  // Sem `layout`: o da carta (cartas escaneadas, com as artes) ou o layout 1.
+  const layout = (params.get('layout') ?? undefined) as LayoutId | undefined;
   const now = '2026-01-01T00:00:00.000Z';
 
   return (

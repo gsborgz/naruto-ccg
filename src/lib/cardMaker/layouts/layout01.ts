@@ -58,7 +58,7 @@ export const LAYOUT_01: LayoutSpec = {
   name: {
     ninja: { align: 'center', x: 340, cy: 720, maxWidth: 370, size: 50, color: '#131313' },
     client: { align: 'center', x: 347, cy: 718, maxWidth: 370, size: 46, color: '#131313' },
-    mission: { align: 'left', x: 116, cy: 725, maxWidth: 400, size: 50, color: '#131313' },
+    mission: { align: 'left', x: 116, cy: 735, maxWidth: 400, size: 50, color: '#131313' },
     jutsu: { align: 'left', x: 140, cy: 697, maxWidth: 560, size: 46, color: '#fbf3e4', stroke: '#2a160b' },
   },
   characteristics: {

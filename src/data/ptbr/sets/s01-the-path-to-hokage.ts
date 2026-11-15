@@ -295,7 +295,7 @@ export const S01_THE_PATH_TO_HOKAGE_PTBR: CardTranslations = {
     flavor: "\"Pode vir com tudo, idiota. Eu devolvo mil vezes mais!\"",
   },
   "s01-j-006": {
-    name: "Fórmula do Selo de Adivinhação dos 8 Trigramas",
+    name: "Fórmula do Selo de Adivinhação dos Oito Trigramas",
     text: [
       "Requerimentos: \"Jonin\" ou Hierarquia superior",
       "Alvo: 1 Ninja",
@@ -787,7 +787,7 @@ export const S01_THE_PATH_TO_HOKAGE_PTBR: CardTranslations = {
     flavor: "\"Aquele também é um clone!!\"",
   },
   "s01-m-024": {
-    name: "O Juramento de Pain",
+    name: "O Juramento de Dor",
     text: [
       "Efeito: Organize todos os cards da sua mão na ordem que quiser e devolva-os ao fundo do seu Deck. Depois, compre do seu Deck a mesma quantidade de cards.",
     ],

@@ -88,3 +88,37 @@ export function filterCards(cards: Card[], f: CardFilterState, translations?: Ca
     return byType(a, b) || byCost(a, b) || byName(a, b);
   });
 }
+
+const SORT_KEYS: readonly SortKey[] = ['type', 'name', 'cost'];
+const CARD_TYPES = Object.keys(TYPE_ORDER) as CardType[];
+const ELEMENTS: readonly ElementSymbol[] = ['lightning', 'fire', 'wind', 'water', 'earth', 'void'];
+
+/**
+ * Filtros na URL (`?q=naruto&set=S01&type=ninja,jutsu&element=fire&sort=name`), para sobreviverem a um
+ * recarregamento e poderem ser compartilhados. Só entram os campos diferentes do padrão.
+ */
+export function filtersToSearchParams(f: CardFilterState): URLSearchParams {
+  const params = new URLSearchParams();
+  if (f.query) params.set('q', f.query);
+  if (f.set) params.set('set', f.set);
+  if (f.types.length) params.set('type', f.types.join(','));
+  if (f.elements.length) params.set('element', f.elements.join(','));
+  if (f.sort !== INITIAL_FILTERS.sort) params.set('sort', f.sort);
+  return params;
+}
+
+/** Inverso de `filtersToSearchParams`; valores desconhecidos são ignorados. */
+export function filtersFromSearchParams(params: { get(name: string): string | null }): CardFilterState {
+  const list = <T extends string>(name: string, allowed: readonly T[]): T[] => {
+    const values = (params.get(name) ?? '').split(',').filter((v): v is T => allowed.includes(v as T));
+    return [...new Set(values)];
+  };
+  const sort = params.get('sort') as SortKey | null;
+  return {
+    query: params.get('q') ?? '',
+    set: params.get('set') ?? '',
+    types: list('type', CARD_TYPES),
+    elements: list('element', ELEMENTS),
+    sort: sort && SORT_KEYS.includes(sort) ? sort : INITIAL_FILTERS.sort,
+  };
+}

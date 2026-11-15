@@ -26,7 +26,15 @@ import {
   type PlacedNumber,
 } from '@/lib/cardMaker/layouts';
 import { ATTRIBUTE_SHADOW } from '@/lib/cardMaker/icons';
-import { cardVillages, hasCharacteristics, hasEntranceCost, parseCardText, type CustomCard, type JutsuCostPart } from '@/lib/cardMaker/model';
+import {
+  cardVillages,
+  hasCharacteristics,
+  hasEntranceCost,
+  nameFontSize,
+  parseCardText,
+  type CustomCard,
+  type JutsuCostPart,
+} from '@/lib/cardMaker/model';
 import { CARD_FONT_VARIABLES, TEXT_BOLD_WEIGHT } from './fonts';
 
 const TITLE_FONT = 'var(--font-card-title), var(--font-card-name), Georgia, serif';
@@ -169,7 +177,7 @@ function splitParentheses(name: string): [string, string | null] {
 const NAME_LINE_HEIGHT = 0.95;
 
 /** Fonte do nome em mais de uma linha, em relação ao tamanho de uma linha só. */
-const NAME_MULTILINE_SCALE = 0.85;
+const NAME_MULTILINE_SCALE = 0.78;
 
 /**
  * Ajusta o nome: numa linha só, reduz a fonte até 80%; se ainda não couber (ou se o nome tiver
@@ -219,8 +227,11 @@ function CardName({ card, spec }: PartProps) {
   const full = card.name.trim() ? card.name.replace(/^[\r\n]+|[\r\n]+$/g, '') : 'Nome da carta';
   const [main, sub] = style.parenthesesBelow ? splitParentheses(full) : [full, null];
   const height = style.maxHeight ?? style.size * 1.5;
-  useFitName(ref, style.size, style.maxWidth, height, [main, card.type, spec.id]);
-  useFit(subRef, style.parenthesesBelow?.size ?? 0, [sub, card.type, spec.id], style.maxWidth);
+  // Fonte do layout mais o ajuste da carta (a área do nome continua a mesma); a 2ª linha acompanha na mesma proporção.
+  const size = nameFontSize(style.size, card.nameSize);
+  const subSize = (style.parenthesesBelow?.size ?? 0) * (size / style.size);
+  useFitName(ref, size, style.maxWidth, height, [main, card.type, spec.id]);
+  useFit(subRef, subSize, [sub, card.type, spec.id], style.maxWidth);
   // A fonte do título já tem a espessura impressa: sem negrito sintetizado.
   const text = (size: number): CSSProperties => ({
     fontFamily: TITLE_FONT,
@@ -248,13 +259,13 @@ function CardName({ card, spec }: PartProps) {
   return (
     <>
       <div style={line(style.cy, height)}>
-        <div ref={ref} style={text(style.size)}>
+        <div ref={ref} style={text(size)}>
           {main}
         </div>
       </div>
       {sub && style.parenthesesBelow && (
         <div style={line(style.cy + style.parenthesesBelow.dy, style.parenthesesBelow.size * 1.4)}>
-          <div ref={subRef} style={text(style.parenthesesBelow.size)}>
+          <div ref={subRef} style={text(subSize)}>
             {sub}
           </div>
         </div>
@@ -336,9 +347,17 @@ function EffectText({ card, spec }: PartProps) {
   );
 }
 
+/**
+ * Sombreado da frase quando a arte de fundo é a carta impressa (`printedFlavor`): um brilho escuro em volta das
+ * letras (camadas de `text-shadow`, da mais justa à mais aberta) que apaga de leve a frase impressa por baixo,
+ * acompanhando o texto em vez de uma caixa.
+ */
+const FLAVOR_SHADE = '0 0 4px rgba(10,10,14,0.8), 0 0 9px rgba(10,10,14,0.6), 0 0 16px rgba(10,10,14,0.45)';
+
 function Flavor({ card, spec }: PartProps) {
   const style = spec.flavor[card.type];
   if (!card.flavor.trim()) return null;
+  const shade = card.printedFlavor !== undefined && (card.flavorShade ?? true);
   return (
     <div
       style={{
@@ -352,6 +371,7 @@ function Flavor({ card, spec }: PartProps) {
         lineHeight: `${style.lineHeight}px`,
         color: '#fff',
         ...stroke('rgba(20,20,20,0.85)', 4),
+        ...(shade && { textShadow: FLAVOR_SHADE }),
       }}
     >
       {card.flavor}
@@ -634,7 +654,8 @@ export function CardRender({ card, width, referenceOpacity = 0, onArtMove, class
   return (
     <div
       className={className}
-      style={{ position: 'relative', width, height: width * (CARD_H / CARD_W), overflow: 'hidden', borderRadius: width * 0.035 }}
+      // textAlign: a carta não herda o alinhamento de quem a contém (ex.: o <button> da grade centraliza o texto).
+      style={{ position: 'relative', width, height: width * (CARD_H / CARD_W), overflow: 'hidden', borderRadius: width * 0.035, textAlign: 'left' }}
     >
       <div
         className={CARD_FONT_VARIABLES}

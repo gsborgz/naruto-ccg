@@ -22,6 +22,9 @@ next-env.d.ts
 /cards-remastered/
 /artifacts/
 .tmp-icon-split/
+# Montagens de conferência do scan das cartas (scripts/card-scan/scan.py).
+.tmp-card-scan/
+.tmp-card-extract/
 
 # Ferramentas internas (scripts de dados, revisão e otimização de imagens, extensão do slideshare): ficam só na máquina local, fora do repositório.
 /scripts/

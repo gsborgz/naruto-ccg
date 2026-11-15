@@ -1,4 +1,16 @@
 import { cardImageUrl, type Card, type CardType, type ElementSymbol } from '../../models/card.ts';
+import type { LocalizedCardText } from '../../models/cardTranslation.ts';
+import {
+  cardArtUrl,
+  type ArtLayer,
+  type AttributeFrame,
+  type CardArtPlacement,
+  type CardLayoutInfo,
+  type ElementVariant,
+  type EntranceIcon,
+  type HandIcon,
+  type LayoutId,
+} from '../../models/cardLayout.ts';
 import { getLayout } from './layouts/index.ts';
 
 /**
@@ -6,7 +18,7 @@ import { getLayout } from './layouts/index.ts';
  * Os valores ficam como texto (ex.: custo "X", força "7/2") porque a carta é montada como impressa.
  */
 
-export type LayoutId = 'layout-01' | 'layout-02' | 'layout-03' | 'layout-04' | 'layout-05';
+export type { ArtLayer, AttributeFrame, ElementVariant, EntranceIcon, HandIcon, LayoutId };
 
 /** Símbolos de vila (arquivos `village-<vila>` e `village-<vila>-rogue` em card-layouts/icons/village). */
 export const VILLAGES = [
@@ -39,31 +51,20 @@ export interface VillageMark {
 /** Quantas vilas cabem à esquerda do nome (2 ficam na diagonal, 3 em triângulo). */
 export const MAX_VILLAGES = 3;
 
-/**
- * Variante do ícone de elemento (arquivos `element-<elemento>-<variante>`). O layout 1 usa a 01; a 03 é
- * alternativa (não existe para o Vazio).
- */
-export type ElementVariant = '01' | '02' | '03';
-
 export interface CardElement {
   element: ElementSymbol;
   variant: ElementVariant;
 }
 
-export type EntranceIcon = 'entrance-01' | 'entrance-02' | 'entrance-03' | 'entrance-04';
-export type HandIcon = 'hand-01' | 'hand-02' | 'hand-03';
-
-/** Moldura do Atributo de Combate (arquivos `combat-attributes-<variante>`). */
-export type AttributeFrame = '01' | '02' | '03-01' | '03-02' | '05' | '06-01' | '06-02' | '06-03' | '07';
 export const ATTRIBUTE_FRAMES: AttributeFrame[] = ['01', '02', '03-01', '03-02', '05', '06-01', '06-02', '06-03', '07'];
 
-export interface CustomCardArt {
-  /** Imagem como data URL (reduzida no upload), ou null sem arte. */
+/** Deslocamento em unidades da carta (750×1050) e zoom sobre o enquadramento "cobrir" (`CardArtPlacement`). */
+export interface CustomCardArt extends CardArtPlacement {
+  /**
+   * Imagem como data URL (reduzida no upload), URL da arte extraída de uma carta do catálogo
+   * (`cardArtUrl`), ou null sem arte.
+   */
   src: string | null;
-  /** Deslocamento em unidades da carta (750×1050) e zoom sobre o enquadramento "cobrir". */
-  x: number;
-  y: number;
-  zoom: number;
 }
 
 export interface CustomCard {
@@ -114,17 +115,28 @@ export interface CustomCard {
   artLinked?: boolean;
   /** Mancha preta atrás do nome (layouts com o nome no topo). Sem valor: o padrão do layout. */
   nameBanner?: boolean;
+  /**
+   * Ajuste da fonte do nome, em pixels da carta, sobre o tamanho do layout (`NameStyle.size`):
+   * negativo diminui, positivo aumenta. 0 (ou sem valor, nas cartas antigas): o tamanho do layout.
+   */
+  nameSize?: number;
   /** Versão alternativa do painel de dados (`LayoutSpec.panelVariants`). Sem valor: o painel padrão. */
   panelVariant?: string;
   /** Ícone alternativo do tipo (`TYPE_ICON_VARIANTS` em icons/index.ts). Sem valor: o ícone padrão. */
   typeVariant?: string;
   /** Imagem da carta original, quando importada do catálogo (para comparar o mapeamento). */
   reference?: string;
+  /**
+   * Frase que já vem impressa na arte de fundo (carta do catálogo com a impressa de fundo, `print`). Com valor, a
+   * frase montada ganha um sombreado por trás que apaga de leve a impressa; o sombreado cobre o maior dos dois
+   * blocos (a frase montada pode ter outro número de linhas, ex.: em PT-BR). Sem valor: sem sombreado.
+   */
+  printedFlavor?: string;
+  /** Liga ou desliga o sombreado da frase (só vale com `printedFlavor`). Sem valor: ligado. */
+  flavorShade?: boolean;
   createdAt: string;
   updatedAt: string;
 }
-
-export type ArtLayer = 'back' | 'front';
 
 const EMPTY_ART: CustomCardArt = { src: null, x: 0, y: 0, zoom: 1 };
 const artKey = (layer: ArtLayer) => (layer === 'back' ? 'art' : 'artFront');
@@ -170,7 +182,10 @@ export function resetArt(card: CustomCard, layer: ArtLayer): CustomCard {
 export function setArtImage(card: CustomCard, layer: ArtLayer, src: string | null): CustomCard {
   const other = getArt(card, layer === 'back' ? 'front' : 'back');
   const frame = (card.artLinked ?? true) && other.src ? { x: other.x, y: other.y, zoom: other.zoom } : {};
-  return { ...card, [artKey(layer)]: { ...EMPTY_ART, ...frame, src } };
+  const next: CustomCard = { ...card, [artKey(layer)]: { ...EMPTY_ART, ...frame, src } };
+  // Outra arte de fundo: a frase impressa da original não está mais lá.
+  if (layer === 'back') delete next.printedFlavor;
+  return next;
 }
 
 /** Uma forma de pagar o custo do Jutsu: símbolos de elemento + Chakra genérico. */
@@ -207,9 +222,30 @@ export function newCustomCard(type: CardType = 'ninja', now = new Date().toISOSt
     attribute: { frame: '01', label: '' },
     jutsuCost: { symbols: [], generic: '' },
     art: { src: null, x: 0, y: 0, zoom: 1 },
+    nameSize: 0,
     createdAt: now,
     updatedAt: now,
   };
+}
+
+/** Menor fonte do nome, em pixels da carta, por mais negativo que seja o ajuste (`nameSize`). */
+const MIN_NAME_FONT_SIZE = 4;
+
+/** Fonte do nome: a do layout (`base`) mais o ajuste da carta (`nameSize`, padrão 0). */
+export function nameFontSize(base: number, nameSize: number | undefined): number {
+  return Math.max(MIN_NAME_FONT_SIZE, base + (Number.isFinite(nameSize) ? (nameSize as number) : 0));
+}
+
+/**
+ * Cartas gravadas antes do `nameSize` tinham `nameScale` (fração do tamanho do layout, ex.: 0.9):
+ * vira o ajuste equivalente em pixels.
+ */
+export function migrateCustomCard(card: CustomCard & { nameScale?: number }): CustomCard {
+  if (card.nameScale === undefined) return card;
+  const { nameScale, ...rest } = card;
+  if (rest.nameSize !== undefined) return rest;
+  const base = getLayout(rest.layout).name[rest.type]?.size;
+  return { ...rest, nameSize: base ? Math.round(base * (nameScale - 1) * 4) / 4 : 0 };
 }
 
 /** Característica impressa → símbolo da vila (só os nomes exatos; "Rock", "Land of Snow" etc. ficam de fora). */
@@ -245,18 +281,85 @@ export function withVillages(card: CustomCard, villages: VillageMark[]): CustomC
   return { ...rest, villages: villages.slice(0, MAX_VILLAGES) };
 }
 
-/** "Rogue Ninja", "Rogue Ninja (Jonin)" etc. */
-const isRogue = (characteristic: string) => characteristic.startsWith('Rogue Ninja');
+/**
+ * Vila com o símbolo riscado (renegado): só os membros da Akatsuki (característica "Akatsuki"). "Rogue Ninja"
+ * não risca o símbolo: a vila sai normal.
+ */
+const isRogue = (characteristic: string) => characteristic.startsWith('Akatsuki');
 
 const power = (p: { combat: number | 'X'; support: number | 'X' }) => `${p.combat}/${p.support}`;
 const cost = (n: number) => (n < 0 ? 'X' : String(n));
 
 /**
  * Preenche uma carta do criador com os dados de uma carta do catálogo (texto em inglês, como impresso).
- * A arte não vem junto (a imagem do catálogo já tem a moldura); ela fica só como referência.
+ * A imagem do catálogo (que já tem a moldura) fica só como referência.
+ *
+ * Carta já escaneada (`card.layout`): vem no layout dela (se nenhum outro for pedido) e com as artes
+ * extraídas, enquadradas como na impressa (sem arte extraída, a impressa faz o fundo: `print`). Os ícones e o design só valem no layout da carta: pedindo outro
+ * layout, a carta vem com os ícones padrão dele (`withLayoutIcons`).
  */
-export function fromCatalogCard(card: Card, now = new Date().toISOString(), layout: LayoutId = 'layout-01'): CustomCard {
-  return withLayoutIcons(withLayout(catalogFields(card, now), layout));
+export function fromCatalogCard(card: Card, now = new Date().toISOString(), layout?: LayoutId): CustomCard {
+  const info = card.layout;
+  const target = layout ?? info?.layout ?? 'layout-01';
+  const result = withLayoutIcons(withLayout(catalogFields(card, now), target));
+  if (!info) return result;
+  const art = (layer: ArtLayer): CustomCardArt | undefined => {
+    const placement = info.art[layer];
+    const src = !placement?.print
+      ? cardArtUrl(card.id, layer)
+      : placement.clean
+        ? cardArtUrl(card.id, 'print-clean')
+        : cardImageUrl(card, 'full');
+    return placement && { src, x: placement.x, y: placement.y, zoom: placement.zoom };
+  };
+  const front = art('front');
+  const withArt: CustomCard = {
+    ...result,
+    art: art('back') ?? result.art,
+    ...(front && { artFront: front }),
+    // Fundo = a impressa: a frase dela aparece por baixo da montada.
+    ...(info.art.back?.print && { printedFlavor: card.flavor ?? '' }),
+  };
+  return target === info.layout ? withCardIcons(withArt, info) : withArt;
+}
+
+/**
+ * Troca nome, textos, frase e características pelos de outro idioma (ex.: PT-BR, de `localizeCard`). O Atributo
+ * de Combate fica em inglês, pois escolhe o kanji impresso; as vilas já vieram das características em inglês.
+ */
+export function withLocalizedText(
+  card: CustomCard,
+  localized: Pick<LocalizedCardText, 'name' | 'text' | 'flavor' | 'characteristics'>,
+  source?: Card,
+): CustomCard {
+  // Nome traduzido de carta escaneada, no layout dela: o ajuste da fonte do nome traduzido.
+  const info = source?.layout;
+  const translatedName = info && card.layout === info.layout && localized.name !== source.name;
+  return {
+    ...card,
+    ...(translatedName && { nameSize: info.nameSizePtBr ?? 0 }),
+    name: localized.name,
+    text: localized.text.map(catalogTextToMarkup).join('\n'),
+    flavor: localized.flavor ?? '',
+    characteristics: [...localized.characteristics],
+  };
+}
+
+/** Ícones e design impressos na carta escaneada (`CardLayoutInfo`); o que a carta não tiver fica como está. */
+function withCardIcons(card: CustomCard, info: CardLayoutInfo): CustomCard {
+  const { icons } = info;
+  const next: CustomCard = {
+    ...card,
+    elements: card.elements.map((el, i) => ({ ...el, variant: icons.elements[i] ?? el.variant })),
+    entranceIcon: icons.entrance ?? card.entranceIcon,
+    handIcon: icons.hand ?? card.handIcon,
+    attribute: { ...card.attribute, frame: icons.attribute ?? card.attribute.frame },
+  };
+  if (icons.type !== 'default') next.typeVariant = icons.type;
+  if (info.panelVariant) next.panelVariant = info.panelVariant;
+  if (info.nameBanner !== undefined) next.nameBanner = info.nameBanner;
+  next.nameSize = info.nameSize ?? 0;
+  return next;
 }
 
 function catalogFields(card: Card, now: string): CustomCard {
@@ -336,9 +439,9 @@ export interface TextRun {
 }
 
 /** Linhas de duração de Missão, impressas inteiras em negrito (ex.: "Permanent (3)"). */
-const DURATION_LINE = /^[A-Z][A-Za-z ]*\(\s*[\dX]+\s*\)$/;
-/** Rótulo no começo do bloco, impresso em negrito (ex.: "Effect:", "Requirements:", "Valid:"). */
-const LABEL = /^([A-Z][A-Za-z' ]{0,30}:)(?=\s|$)/;
+const DURATION_LINE = /^\p{Lu}[\p{L} ]*\(\s*[\dX]+\s*\)$/u;
+/** Rótulo no começo do bloco, impresso em negrito (ex.: "Effect:", "Requirements:", "Valid:"; em PT-BR, "Válido:"). */
+const LABEL = /^(\p{Lu}[\p{L}' ]{0,30}:)(?=\s|$)/u;
 
 /** Marcações: o par de abertura/fechamento e o que ele aplica. */
 const MARKS: Record<string, { close: string; apply: (s: Style) => Style }> = {

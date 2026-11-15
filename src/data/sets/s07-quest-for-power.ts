@@ -26,6 +26,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Sasukeee!!\"",
     image: "s07-n-224",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-225",
@@ -46,6 +53,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Narutooo!!\"",
     image: "s07-n-225",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-226",
@@ -66,6 +80,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Now, try triple spins! Take careful aim!!\" \"Arf!\"",
     image: "s07-n-226",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-227",
@@ -87,6 +108,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Don't laugh.\"",
     image: "s07-n-227",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-228",
@@ -107,6 +135,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The pleasure of this last piece of meat is allowed only to me!\"",
     image: "s07-n-228",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-229",
@@ -127,6 +162,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"This is a bit too much for a fight between friends.\"",
     image: "s07-n-229",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-230",
@@ -147,6 +189,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"No more hiding!\"",
     image: "s07-n-230",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-231",
@@ -167,6 +216,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"...... There were eight birds ...\"",
     image: "s07-n-231",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-232",
@@ -187,6 +243,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I have the responsibility to protect your lives.\"",
     image: "s07-n-232",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-233",
@@ -208,6 +271,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"From now on ... we're rivals.\"",
     image: "s07-n-233",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-234",
@@ -228,6 +298,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Choji ... I knew you would do a great job!\" \"Thanks!\"",
     image: "s07-n-234",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-235",
@@ -248,6 +325,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's a lifelong promise!!\"",
     image: "s07-n-235",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-236",
@@ -268,6 +352,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"From now, we just go ... our separate ways.\"",
     image: "s07-n-236",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-237",
@@ -288,6 +379,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Please ... please bring back Sasuke ...\"",
     image: "s07-n-237",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-238",
@@ -308,6 +406,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"We'll move in a single file formation.\"",
     image: "s07-n-238",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-239",
@@ -328,6 +433,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Yes ... I have a card up my sleeve ...\"",
     image: "s07-n-239",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-240",
@@ -348,6 +460,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"He's strong ... much stronger than me.\"",
     image: "s07-n-240",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-241",
@@ -368,6 +487,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I can smell blood ... nearby.\"",
     image: "s07-n-241",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-242",
@@ -388,6 +514,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Arf! Arf!\"",
     image: "s07-n-242",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-243",
@@ -408,6 +541,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"What's in that tub?\"",
     image: "s07-n-243",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-244",
@@ -428,6 +568,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The surprise attack you made last time doesn't work this time.\"",
     image: "s07-n-244",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-245",
@@ -448,6 +595,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Phew, I'm exhausted.\"",
     image: "s07-n-245",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-246",
@@ -468,6 +622,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I can't believe ... they've been defeated ...!\"",
     image: "s07-n-246",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-247",
@@ -488,6 +649,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"There's one kid ... I'd like to recommend ...\"",
     image: "s07-n-247",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-248",
@@ -508,6 +676,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's the biggest mistake of the swift runner Idate!\"",
     image: "s07-n-248",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-249",
@@ -528,6 +703,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Now you can neither run nor stand up ...\"",
     image: "s07-n-249",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-250",
@@ -548,6 +730,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"OK. ... I admit the challenge level of this game is rather high\"",
     image: "s07-n-250",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-251",
@@ -568,6 +757,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Don't push your luck ...!\"",
     image: "s07-n-251",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-252",
@@ -588,6 +784,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Stop barking! Stupid dog!!\"",
     image: "s07-n-252",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-253",
@@ -608,6 +811,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Now ... You're a cornered rat.\"",
     image: "s07-n-253",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-254",
@@ -629,6 +839,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The sensation of being in contact with Lord Orochimaru's dream ...\"",
     image: "s07-n-254",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-284",
@@ -649,6 +866,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"All right! Everyone! Look out! Here I go!\"",
     image: "s07-n-284",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-285",
@@ -669,6 +893,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"When did Shikamaru become this dedicated?!\"",
     image: "s07-n-285",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-286",
@@ -689,6 +920,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Even I cannot avoid responsibility...I am in charge of all of you.\"",
     image: "s07-n-286",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-287",
@@ -709,6 +947,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's almost like a living thing. It will come to Gaara's defense without his doing anything.\"",
     image: "s07-n-287",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c001",
@@ -729,6 +974,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I can finally beat you ... here!\"",
     image: "s07-n-c001",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c002",
@@ -749,6 +1001,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"What is ... this power ...?\"",
     image: "s07-n-c002",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c003",
@@ -769,6 +1028,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Catch these!\"",
     image: "s07-n-c003",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c004",
@@ -789,6 +1055,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The first attack is meant to be a fake.\"",
     image: "s07-n-c004",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c005",
@@ -809,6 +1082,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The handsome devil of the Leaf Village is back\"",
     image: "s07-n-c005",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c006",
@@ -829,6 +1109,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Just stay there while I trim the enemy's numbers down to size.\"",
     image: "s07-n-c006",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c007",
@@ -849,6 +1136,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You will never learn the secret.\"",
     image: "s07-n-c007",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c008",
@@ -869,6 +1163,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Your hatred is ... not enough ...\"",
     image: "s07-n-c008",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c009",
@@ -889,6 +1190,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Will ya fight along side me today, Chief Toad?\" \"Take a hike.\"",
     image: "s07-n-c009",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c010",
@@ -909,6 +1217,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Stay back, Sakura!\" \"Sasuke!\"",
     image: "s07-n-c010",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c011",
@@ -929,6 +1244,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Tenten, handle the one on the right!\" \"All right!\"",
     image: "s07-n-c011",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c012",
@@ -949,6 +1271,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Kakashi sensei!\" \"... Yes, Iruka sensei.\"",
     image: "s07-n-c012",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c013",
@@ -969,6 +1298,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Look sharp! Something's wrong!!\" \"Yes .... It's too quiet ...!\"",
     image: "s07-n-c013",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c014",
@@ -989,6 +1325,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Fantastic! Simply fantastic!\" \"... You never change!\"",
     image: "s07-n-c014",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c015",
@@ -1009,6 +1352,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Oh! It was the smell of this.\" \"Oink!\"",
     image: "s07-n-c015",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-c016",
@@ -1029,6 +1379,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Think of me as but a weapon to be kept at your side.\" \"Well said, child.\"",
     image: "s07-n-c016",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us041",
@@ -1049,6 +1406,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "60 years ago, a Ninja, who had an outstanding power and skill, decided to found a new village in a deep forest with many other Ninjas.",
     image: "s07-n-us041",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us042",
@@ -1069,6 +1433,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "After the death of the First Hokage, a Ninja, who was his brother, succeeded his will and became the Second Hokage.",
     image: "s07-n-us042",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us043",
@@ -1090,6 +1461,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Are you shocked by my true form?\"",
     image: "s07-n-us043",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us044",
@@ -1110,6 +1488,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"When we finally fight... it won't be to advance to the next stage, but solely for survival. One seeking to destroy the other.\"",
     image: "s07-n-us044",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us045",
@@ -1130,6 +1515,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I'll show you what the Sharingan can do when it's wielded by a true heir of the bloodline.\"",
     image: "s07-n-us045",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us046",
@@ -1150,6 +1542,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The most important thing for a Ninja is...to never give up.\"",
     image: "s07-n-us046",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us047",
@@ -1170,6 +1569,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I'm the number one ninja in the village! Konohamaru.\"",
     image: "s07-n-us047",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 6.3, y: -1.9, zoom: 1.0097, print: true } },
+    },
   },
   {
     id: "s07-n-us048",
@@ -1190,6 +1596,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Pakkun here will track down Sasuke by scent.\"",
     image: "s07-n-us048",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us049",
@@ -1210,6 +1623,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"From now on, I am the Fifth Hokage, the one who governs this village.\"",
     image: "s07-n-us049",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us050",
@@ -1230,6 +1650,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Mind Distraction Jutsu!!\" \"Mind Transfer Jutsu!!\"",
     image: "s07-n-us050",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us051",
@@ -1250,6 +1677,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Come on, Lee! Pull it together! Snap out of it already, alright?\"",
     image: "s07-n-us051",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us052",
@@ -1270,6 +1704,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Huh!.. It won't work, whatever it is.\"",
     image: "s07-n-us052",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us053",
@@ -1290,6 +1731,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Shikamaru, just take care of my body while I'm gone.\"",
     image: "s07-n-us053",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-n-us054",
@@ -1310,6 +1758,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You'd think that maybe — just this once — when it's life or death... you'd think just maybe I could come through..!\"",
     image: "s07-n-us054",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1327,6 +1782,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s07-j-210",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -2, y: 4.2, zoom: 1.008, print: true } },
+    },
   },
   {
     id: "s07-j-211",
@@ -1343,6 +1805,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I'll finish this with one blow!\"",
     image: "s07-j-211",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 3.2, zoom: 1.0063, print: true } },
+    },
   },
   {
     id: "s07-j-212",
@@ -1358,6 +1827,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Sign of the Tiger!!\"",
     image: "s07-j-212",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-j-213",
@@ -1373,6 +1849,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's a smoke bomb with pepper! Don't approach it, or you'll trigger a disaster!\"",
     image: "s07-j-213",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 3.1, zoom: 1.0057, print: true } },
+    },
   },
   {
     id: "s07-j-214",
@@ -1388,6 +1871,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's an application of the first stage of my Rasengan training!\"",
     image: "s07-j-214",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.2, y: 3.4, zoom: 1.0056, print: true } },
+    },
   },
   {
     id: "s07-j-215",
@@ -1404,6 +1894,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"This Blade of the Thunder God can slash anything.\"",
     image: "s07-j-215",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.4, y: 0.4, zoom: 1.0032, print: true } },
+    },
   },
   {
     id: "s07-j-216",
@@ -1419,6 +1916,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You're merely Orochimaru's tools .... Don't play down the ability of Leaf Ninja.\"",
     image: "s07-j-216",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -5.9, y: 1.3, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s07-j-217",
@@ -1434,6 +1938,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You've immobilized my feet with strings ...!\"",
     image: "s07-j-217",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 1.7, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s07-j-218",
@@ -1449,6 +1960,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Way to go, Akamaru! That was perfect!\"",
     image: "s07-j-218",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 1.8, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s07-j-219",
@@ -1465,6 +1983,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Tunneling Fang!!\"",
     image: "s07-j-219",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 1.8, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s07-j-220",
@@ -1480,6 +2005,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Leave them to me. I want to recover as much as possible.\"",
     image: "s07-j-220",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-j-221",
@@ -1496,6 +2028,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"This has to be a joke!\"",
     image: "s07-j-221",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 2.9, zoom: 1.0056, print: true } },
+    },
   },
   {
     id: "s07-j-222",
@@ -1510,6 +2049,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Earth Style: Terra Shield!!\"",
     image: "s07-j-222",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 1, y: 3.5, zoom: 1.0067, print: true } },
+    },
   },
   {
     id: "s07-j-223",
@@ -1526,6 +2072,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You think that can affect me?\"",
     image: "s07-j-223",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 3.2, zoom: 1.0065, print: true } },
+    },
   },
   {
     id: "s07-j-224",
@@ -1542,6 +2095,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The color is different from the previous threads!\"",
     image: "s07-j-224",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 2.9, zoom: 1.0063, print: true } },
+    },
   },
   {
     id: "s07-j-225",
@@ -1557,6 +2117,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Get in position! ... Begin!!\"",
     image: "s07-j-225",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.3, y: 1.5, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s07-j-226",
@@ -1572,6 +2139,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"...OK, it's settled for now.\"",
     image: "s07-j-226",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.8, y: 1.6, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s07-j-227",
@@ -1586,6 +2160,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's a kind of trapping Ninjutsu.\"",
     image: "s07-j-227",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: 2, zoom: 1.0052, print: true } },
+    },
   },
   {
     id: "s07-j-228",
@@ -1604,6 +2185,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"He used Kunai Knives as spikes for faster rotation and greater destructive force...\"",
     image: "s07-j-228",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.5, y: 4, zoom: 1.0055, print: true } },
+    },
   },
   {
     id: "s07-j-229",
@@ -1620,6 +2208,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Leg Expansion!\"",
     image: "s07-j-229",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -2, y: 3.6, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s07-j-230",
@@ -1636,6 +2231,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Take this!! Super Expansion Jutsu!!!\"",
     image: "s07-j-230",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 5, zoom: 1.0058, print: true } },
+    },
   },
   {
     id: "s07-j-231",
@@ -1652,6 +2254,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Chakra-based substances are meaningless against my 'Gentle Fist,' which destroys the target by injecting Chakra.\"",
     image: "s07-j-231",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.2, y: 5.2, zoom: 1.0063, print: true } },
+    },
   },
   {
     id: "s07-j-us021",
@@ -1668,6 +2277,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Yaaaah!!\"",
     image: "s07-j-us021",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.2, y: 3, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s07-j-us022",
@@ -1684,6 +2300,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The chakra actually becomes visible, and gives off that distinctive sound that you hear... Like birds chirping...\"",
     image: "s07-j-us022",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 3.2, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s07-j-us023",
@@ -1700,6 +2323,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Amazing!... to cast so powerful a Water Style jutsu where there is no water...\"",
     image: "s07-j-us023",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.5, y: 3.1, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s07-j-us024",
@@ -1716,6 +2346,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"So this is the legendary Secret Earth Jutsu of the First Hokage, who brought peace to the land and founded the Hidden Leaf Village!\"",
     image: "s07-j-us024",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.5, y: 5.6, zoom: 1.0062, print: true } },
+    },
   },
   {
     id: "s07-j-us025",
@@ -1731,6 +2368,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Now, even the giant snake cannot make a move.\"",
     image: "s07-j-us025",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 3.4, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s07-j-us026",
@@ -1747,6 +2391,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Raaah\"",
     image: "s07-j-us026",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 3.2, zoom: 1.0055, print: true } },
+    },
   },
   {
     id: "s07-j-us027",
@@ -1763,6 +2414,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"If I were you, I'd let Akamaru go.\"",
     image: "s07-j-us027",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 2.6, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s07-j-us028",
@@ -1779,6 +2437,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Water Style: Giant Vortex Jutsu!!\"",
     image: "s07-j-us028",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 1.1, y: 3.2, zoom: 1.0052, print: true } },
+    },
   },
   {
     id: "s07-j-us029",
@@ -1795,6 +2460,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Wind Style: Infinite Sand Storm Devastation!!\"",
     image: "s07-j-us029",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.5, y: 0.4, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s07-j-us030",
@@ -1811,6 +2483,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Wind Style: Air Bullets!!\"",
     image: "s07-j-us030",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 2.3, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s07-j-us031",
@@ -1826,6 +2505,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"A combined transformation!\"",
     image: "s07-j-us031",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 7.7, zoom: 0.9965, print: true } },
+    },
   },
   {
     id: "s07-j-us032",
@@ -1842,6 +2528,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Genjutsu: Infinite Darkness Jutsu!!\"",
     image: "s07-j-us032",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 5.6, zoom: 1.006, print: true } },
+    },
   },
   {
     id: "s07-j-us033",
@@ -1856,6 +2549,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Just doing a little research.\"",
     image: "s07-j-us033",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 3, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s07-j-us034",
@@ -1872,6 +2572,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"All my chakra into... my left hand\"",
     image: "s07-j-us034",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.5, y: 5, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s07-j-us035",
@@ -1886,6 +2593,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"No matter what happens...I swear I'm going to protect you!!\"",
     image: "s07-j-us035",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 3.1, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s07-j-us036",
@@ -1902,6 +2616,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Ten Finger Bullets!!\"",
     image: "s07-j-us036",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 2.3, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s07-j-us037",
@@ -1918,6 +2639,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Raaaaaaaaaah!!\"",
     image: "s07-j-us037",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.9, y: 2.6, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s07-j-us038",
@@ -1934,6 +2662,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Let's finish this now!\"",
     image: "s07-j-us038",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 2.7, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s07-j-us039",
@@ -1950,6 +2685,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"The ability to activate the cells and make new ones...\"",
     image: "s07-j-us039",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.4, y: 2.3, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s07-j-us040",
@@ -1966,6 +2708,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Summoning Jutsu: Blade Dance\"",
     image: "s07-j-us040",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 2.3, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s07-j-us041",
@@ -1982,6 +2731,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Why should we wait 'til later... When I can just wipe the floor with ya both now.\"",
     image: "s07-j-us041",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 4.9, zoom: 1.0059, print: true } },
+    },
   },
   {
     id: "s07-j-us042",
@@ -1998,6 +2754,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"His speed's basically the same as Lee's with his weights removed!\"",
     image: "s07-j-us042",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -2.3, y: 2.8, zoom: 1.0055, print: true } },
+    },
   },
   {
     id: "s07-j-us043",
@@ -2014,6 +2777,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Stay here for now, Shikamaru. You've earned it.\"",
     image: "s07-j-us043",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 5.6, zoom: 1.0066, print: true } },
+    },
   },
   {
     id: "s07-j-us044",
@@ -2030,6 +2800,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I am the Fifth Hokage of the Hidden Village in the Leaves!!\"",
     image: "s07-j-us044",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 2.7, zoom: 1.0038, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2046,6 +2823,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"That's not your toy ... you know ...\"",
     image: "s07-m-208",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 1.2, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-m-209",
@@ -2062,6 +2846,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You're late, Iruka sensei!\"",
     image: "s07-m-209",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2.4, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s07-m-210",
@@ -2077,6 +2868,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"... He might have extremely thick lips ...\"",
     image: "s07-m-210",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2.6, zoom: 1.0031, print: true } },
+    },
   },
   {
     id: "s07-m-211",
@@ -2093,6 +2891,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"We did it!\"",
     image: "s07-m-211",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.1, y: 2.1, zoom: 1.0035, print: true } },
+    },
   },
   {
     id: "s07-m-212",
@@ -2109,6 +2914,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Sasuke ...\"",
     image: "s07-m-212",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2.1, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s07-m-213",
@@ -2124,6 +2936,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Get off me, you porker!!\" \"Why should I?\"",
     image: "s07-m-213",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.3, y: 1.7, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s07-m-214",
@@ -2140,6 +2959,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I will bring back Sasuke, no matter what happens!\"",
     image: "s07-m-214",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 2, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s07-m-215",
@@ -2156,6 +2982,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's what gives us the strength to defend our village...\"",
     image: "s07-m-215",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.8, y: 1.4, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s07-m-216",
@@ -2172,6 +3005,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Sasuke, forget about your revenge.\"",
     image: "s07-m-216",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.4, y: 1.3, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s07-m-217",
@@ -2189,6 +3029,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's the supreme order given to us by our organization, 'Akatsuki.'\"",
     image: "s07-m-217",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.6, y: 1.4, zoom: 1.0031, print: true } },
+    },
   },
   {
     id: "s07-m-218",
@@ -2206,6 +3053,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"He even surpasses me in my prime in sense and strength of Jutsu ...!\"",
     image: "s07-m-218",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.8, y: 2.1, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s07-m-219",
@@ -2223,6 +3077,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"So ... please stay here!!\"",
     image: "s07-m-219",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 3.1, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s07-m-220",
@@ -2239,6 +3100,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You mean the competition is ...\" \"Yes, the Dedication Ceremony held at Todoroki Great Shrine every four years.\"",
     image: "s07-m-220",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2.7, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s07-m-221",
@@ -2255,6 +3123,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Alright, everyone! Follow me!!\"",
     image: "s07-m-221",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.2, y: 1.8, zoom: 1.0061, print: true } },
+    },
   },
   {
     id: "s07-m-222",
@@ -2273,6 +3148,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"This is what I call ... the training for inviting victory!\"",
     image: "s07-m-222",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 3.1, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s07-m-223",
@@ -2289,6 +3171,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Let's go ...... to start everything!!\"",
     image: "s07-m-223",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 0.8, zoom: 1.0005, print: true } },
+    },
   },
   {
     id: "s07-m-224",
@@ -2306,6 +3195,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"We must ask you to end your life once.\"",
     image: "s07-m-224",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.4, y: 1.8, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s07-m-225",
@@ -2322,6 +3218,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"However, ...somehow, there are certain Kunai Knives he cannot avoid.\"",
     image: "s07-m-225",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2.3, zoom: 1.0034, print: true } },
+    },
   },
   {
     id: "s07-m-226",
@@ -2338,6 +3241,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"They all have the Curse Mark ...\"",
     image: "s07-m-226",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 1.5, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s07-m-227",
@@ -2353,6 +3263,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I'm gonna play a game of guessing the real one.\"",
     image: "s07-m-227",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.6, y: 1.7, zoom: 1.001, print: true } },
+    },
   },
   {
     id: "s07-m-228",
@@ -2369,6 +3286,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Except for the minimum personnel required in the Village, most Jonin are away on missions.\"",
     image: "s07-m-228",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 3.1, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s07-m-229",
@@ -2386,6 +3310,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You're Orochimaru's ...\"",
     image: "s07-m-229",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2.3, zoom: 1.0037, print: true } },
+    },
   },
   {
     id: "s07-m-230",
@@ -2402,6 +3333,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Those three-color pills are not ordinary food pills .... What are they?\"",
     image: "s07-m-230",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 3.2, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s07-m-231",
@@ -2418,6 +3356,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I can emit Chakra not only from my hands but also from the Chakra Points throughout my body.\"",
     image: "s07-m-231",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -3.8, y: 2.2, zoom: 1.0078, print: true } },
+    },
   },
   {
     id: "s07-m-232",
@@ -2434,6 +3379,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"So the logical conclusion is, 'the slower the recovery, the thinner the Chakra layer.'\"",
     image: "s07-m-232",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.7, y: 2.6, zoom: 1.0036, print: true } },
+    },
   },
   {
     id: "s07-m-233",
@@ -2450,6 +3402,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I'm a hundred times stronger than in the previous state!\"",
     image: "s07-m-233",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2, y: 1.9, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s07-m-234",
@@ -2466,6 +3425,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"We've lost a minute or two .... Let's hurry\"",
     image: "s07-m-234",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2, y: 0.9, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s07-m-235",
@@ -2481,6 +3447,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Are you with me so far? I'm gonna explain more with a diagram.\"",
     image: "s07-m-235",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s07-m-us021",
@@ -2497,6 +3470,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Let's beat Orochimaru here now!\"",
     image: "s07-m-us021",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -4.9, y: 0.3, zoom: 1.01, print: true } },
+    },
   },
   {
     id: "s07-m-us022",
@@ -2513,6 +3493,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Sure enough, this kid has no talent whatsoever.\"",
     image: "s07-m-us022",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.7, y: 1.5, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s07-m-us023",
@@ -2528,6 +3515,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Then four squad members .. that means you'll be coming with us, right?\"",
     image: "s07-m-us023",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.5, y: -2, zoom: 1.008, print: true } },
+    },
   },
   {
     id: "s07-m-us024",
@@ -2544,6 +3538,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"A ninja must see through deception.\"",
     image: "s07-m-us024",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-m-us025",
@@ -2559,6 +3560,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"We're looking for something and we know it's here.\"",
     image: "s07-m-us025",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 1.7, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s07-m-us026",
@@ -2576,6 +3584,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I used to be a member of Anbu\".",
     image: "s07-m-us026",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.2, y: 2.2, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s07-m-us027",
@@ -2592,6 +3607,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Shall I kill you?\"",
     image: "s07-m-us027",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2, y: 1.1, zoom: 1.0034, print: true } },
+    },
   },
   {
     id: "s07-m-us028",
@@ -2608,6 +3630,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I was born a monster.\"",
     image: "s07-m-us028",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.3, y: -0.2, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s07-m-us029",
@@ -2623,6 +3652,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"What happened to the other three? Shame on you... you guys used to be the members of the Sound Ninja Five...\"",
     image: "s07-m-us029",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -7.6, y: 2.4, zoom: 1.0198, print: true } },
+    },
   },
   {
     id: "s07-m-us030",
@@ -2638,6 +3674,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"In 30 minutes...gather as many Genin ninjas that you think are talented and leave!\"",
     image: "s07-m-us030",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.7, y: 0.9, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s07-m-us031",
@@ -2654,6 +3697,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Three days is enough for me to master this kind of Jutsu!\" \"Remember that and don't go back on your word!\"",
     image: "s07-m-us031",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.1, y: 1.8, zoom: 1.0017, print: true } },
+    },
   },
   {
     id: "s07-m-us032",
@@ -2669,6 +3719,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"All right, then... if you are both ready...Begin!\"",
     image: "s07-m-us032",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2, y: 2, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s07-m-us033",
@@ -2685,6 +3742,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It's like an art project on my face, only cooler.\" \"Take it again.\"",
     image: "s07-m-us033",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.6, y: 2.7, zoom: 1.0016, print: true } },
+    },
   },
   {
     id: "s07-m-us034",
@@ -2700,6 +3764,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Chakra cannot be seen... yet it's clearly visible!\"",
     image: "s07-m-us034",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.6, y: 2.4, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s07-m-us035",
@@ -2715,6 +3786,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Who you calling fat?–I'm just a little bit chubby, okay?!\"",
     image: "s07-m-us035",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2.2, y: 2.3, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s07-m-us036",
@@ -2732,6 +3810,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Okay, you stinkin' fox... if you're there, give me your strength!\"",
     image: "s07-m-us036",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.1, y: 2.8, zoom: 1.0016, print: true } },
+    },
   },
   {
     id: "s07-m-us037",
@@ -2749,6 +3834,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"So, you'll help me with my training now, right?\"",
     image: "s07-m-us037",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.6, y: 3.1, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s07-m-us038",
@@ -2765,6 +3857,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"You bet!\"",
     image: "s07-m-us038",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.5, y: 1.7, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s07-m-us039",
@@ -2780,6 +3879,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"Y- You're...\"",
     image: "s07-m-us039",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 1.6, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s07-m-us040",
@@ -2795,6 +3901,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"They look just the same as I remember.\"",
     image: "s07-m-us040",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 1.5, zoom: 1.0029, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -2812,6 +3925,13 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"It was decided that the leader of our town should be chosen by a competition rather than a fight.\"",
     image: "s07-c-030",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s07-c-031",
@@ -2828,5 +3948,12 @@ export const S07_QUEST_FOR_POWER: Card[] = [
     ],
     flavor: "\"I'll take a quick run!\"",
     image: "s07-c-031",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

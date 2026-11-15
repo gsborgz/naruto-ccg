@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import { CardEditor } from '@/components/cardMaker/CardEditor';
 import { CardRender } from '@/components/cardMaker/CardRender';
 import { CARD_H, CARD_W } from '@/lib/cardMaker/layouts';
-import { CatalogImportDialog } from '@/components/cardMaker/CatalogImportDialog';
+import { CatalogImportDialog, importCatalogCard } from '@/components/cardMaker/CatalogImportDialog';
 import { CARDS_BY_ID } from '@/data/cards';
+import { useCardLanguage } from '@/lib/cardLanguage';
 import {
-  fromCatalogCard,
   moveArt,
   newCustomCard,
   withLayout,
@@ -77,19 +77,24 @@ export default function CardMakerPage() {
     return () => clearTimeout(timer);
   }, [draft]);
 
-  // `/criar?importar=<id da carta>[&layout=layout-02]`: começa uma carta nova a partir de uma carta do catálogo.
+  // `/criar?importar=<id da carta>[&layout=layout-02]`: começa uma carta nova a partir de uma carta do catálogo
+  // (sem `layout`: o da carta, se ela já foi escaneada, ou o layout 1).
+  // Em PT-BR, espera as traduções carregarem para importar com os textos traduzidos.
+  const { language, translations } = useCardLanguage();
+  const translationsReady = language === 'en' || !!translations;
   const imported = useRef(false);
   useEffect(() => {
+    if (!translationsReady) return;
     const params = new URLSearchParams(window.location.search);
     const id = params.get('importar');
-    const layout = (params.get('layout') ?? 'layout-01') as LayoutId;
+    const layout = (params.get('layout') ?? undefined) as LayoutId | undefined;
     if (!id || imported.current) return;
     imported.current = true;
     const source = CARDS_BY_ID.get(id);
-    if (source) create(fromCatalogCard(source, undefined, layout));
+    if (source) create(importCatalogCard(source, language, translations, layout));
     window.history.replaceState(null, '', '/criar');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [translationsReady]);
 
   const open = (card: CustomCard) => {
     if (draft) customCardActions.save(draft);

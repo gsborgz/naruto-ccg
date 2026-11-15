@@ -1,11 +1,12 @@
 'use client';
 
-import { memo, useDeferredValue, useMemo, useState } from 'react';
+import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { CARDS } from '@/data/cards';
-import { filterCards, INITIAL_FILTERS } from '@/lib/cardFilters';
+import { filterCards, INITIAL_FILTERS, type CardFilterState } from '@/lib/cardFilters';
 import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
+import { CardFace } from './CardFace';
 import { CardFilters } from './CardFilters';
 import { QtyControls } from './QtyControls';
 
@@ -34,6 +35,10 @@ interface Props {
   gridClassName?: string;
   /** Classes extras do bloco de filtros (ex.: fixá-lo no topo de uma coluna com rolagem própria). */
   filtersClassName?: string;
+  /** Filtros iniciais (ex.: lidos da URL). Só valem na montagem. */
+  initialFilters?: CardFilterState;
+  /** Avisado a cada mudança dos filtros (ex.: para gravá-los na URL). */
+  onFiltersChange?: (filters: CardFilterState) => void;
 }
 
 interface TileProps {
@@ -61,16 +66,7 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
         className="relative overflow-hidden rounded-lg ring-1 ring-border transition hover:-translate-y-0.5 hover:ring-accent"
         aria-label={`Ver detalhes de ${name}`}
       >
-        <img
-          src={cardImageUrl(card, 'thumb')}
-          alt={card.name}
-          width={300}
-          height={420}
-          loading={eager ? 'eager' : 'lazy'}
-          fetchPriority={eager ? 'high' : 'auto'}
-          decoding="async"
-          className="aspect-[5/7] w-full object-cover"
-        />
+        <CardFace card={card} size="thumb" eager={eager} />
         {count > 0 && (
           <span className="absolute right-1.5 top-1.5 grid size-7 place-items-center rounded-full bg-accent text-sm font-bold text-bg shadow">
             {count}
@@ -99,8 +95,18 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
   );
 });
 
-export function CardBrowser({ onSelect, countOf, blockedOf, onSetQty, gridClassName, filtersClassName }: Props) {
-  const [filters, setFilters] = useState(INITIAL_FILTERS);
+export function CardBrowser({
+  onSelect,
+  countOf,
+  blockedOf,
+  onSetQty,
+  gridClassName,
+  filtersClassName,
+  initialFilters,
+  onFiltersChange,
+}: Props) {
+  const [filters, setFilters] = useState(initialFilters ?? INITIAL_FILTERS);
+  useEffect(() => onFiltersChange?.(filters), [filters, onFiltersChange]);
   // Os filtros (e a contagem) atualizam na hora; a grade pesada segue logo depois, sem travar a digitação.
   const deferredFilters = useDeferredValue(filters);
   const { language, translations } = useCardLanguage();

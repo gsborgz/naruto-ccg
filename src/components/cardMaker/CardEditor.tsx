@@ -21,6 +21,7 @@ import {
   getArt,
   hasCharacteristics,
   hasEntranceCost,
+  nameFontSize,
   resetArt,
   setArtImage,
   setArtFrame,
@@ -40,6 +41,11 @@ import {
   type CardType,
   type ElementSymbol,
 } from '@/models/card';
+
+/** Alcance do controle deslizante do ajuste do nome (px); o campo numérico aceita qualquer valor. */
+const NAME_SIZE_RANGE = 30;
+
+const formatSize = (n: number) => String(Math.round(n * 100) / 100);
 
 const ELEMENTS: ElementSymbol[] = [
   'fire',
@@ -389,6 +395,8 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
     onChange({ ...card, [key]: value });
   const type = card.type;
   const spec = getLayout(card.layout);
+  const baseNameSize = spec.name[type].size;
+  const nameSize = card.nameSize ?? 0;
 
   // Características: o campo guarda o texto digitado (com espaços e "|" no fim) e a carta, a lista.
   const [characteristicsRaw, setCharacteristicsRaw] = useState(
@@ -491,6 +499,49 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
           />
           <span className="font-normal">Quebra sozinho quando não cabe; Enter pula linha.</span>
         </label>
+        {/* div, e não label: o botão Restaurar seria o alvo do clique no rótulo. */}
+        <div className={label}>
+          <span className="flex items-center justify-between">
+            <span>
+              Tamanho do nome: {formatSize(nameFontSize(baseNameSize, nameSize))} px
+              <span className="font-normal"> (layout: {formatSize(baseNameSize)})</span>
+            </span>
+            {nameSize !== 0 && (
+              <button
+                type="button"
+                className="font-normal text-accent hover:underline"
+                onClick={() => set('nameSize', 0)}
+              >
+                Restaurar
+              </button>
+            )}
+          </span>
+          <span className="flex items-center gap-2">
+            <input
+              type="range"
+              className="min-w-0 flex-1"
+              min={-NAME_SIZE_RANGE}
+              max={NAME_SIZE_RANGE}
+              step={0.5}
+              value={Math.max(-NAME_SIZE_RANGE, Math.min(NAME_SIZE_RANGE, nameSize))}
+              onChange={(e) => set('nameSize', Number(e.target.value))}
+              aria-label="Ajuste do tamanho do nome"
+            />
+            <input
+              type="number"
+              // Sem `input` (que tem w-full): com ele o campo ocupa a linha e o slider some.
+              className={`${field} w-20 shrink-0`}
+              step={0.5}
+              value={nameSize}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                set('nameSize', Number.isFinite(value) ? value : 0);
+              }}
+              aria-label="Ajuste do tamanho do nome (px)"
+            />
+          </span>
+          <span className="font-normal">Negativo diminui, positivo aumenta; 0 usa o tamanho do layout.</span>
+        </div>
         {spec.nameBanner && (
           <label className="flex items-center gap-2 text-xs font-semibold text-muted">
             <input
@@ -618,6 +669,16 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
             placeholder={'"Fala do personagem."'}
           />
         </label>
+        {card.printedFlavor !== undefined && (
+          <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+            <input
+              type="checkbox"
+              checked={card.flavorShade ?? true}
+              onChange={(e) => set('flavorShade', e.target.checked)}
+            />
+            Sombreado atrás da frase (apaga de leve a frase impressa no fundo)
+          </label>
+        )}
       </Section>
 
       <Section title="Dados">

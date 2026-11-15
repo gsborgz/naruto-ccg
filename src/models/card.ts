@@ -1,3 +1,5 @@
+import type { CardLayoutInfo } from './cardLayout.ts';
+
 export type CardType = 'ninja' | 'jutsu' | 'mission' | 'client';
 
 /** Símbolos elementais impressos no canto superior direito da carta. `void` (無) aparece a partir do S19. */
@@ -33,6 +35,11 @@ interface BaseCard {
   flavor?: string;
   /** Nome do arquivo da imagem, sem extensão (ver `cardImageUrl`). */
   image: string;
+  /**
+   * Layout da carta e enquadramento das artes extraídas, para montá-la virtualmente (ver `cardLayout.ts`).
+   * Só nas cartas já escaneadas.
+   */
+  layout?: CardLayoutInfo;
 }
 
 export interface NinjaCard extends BaseCard {

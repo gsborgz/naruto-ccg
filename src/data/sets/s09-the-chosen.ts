@@ -26,6 +26,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"If that is considered wise, I choose to be stupid for life...\"",
     image: "s09-n-307",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-308",
@@ -46,6 +53,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Then, I'll just break those ties!\"",
     image: "s09-n-308",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-309",
@@ -66,6 +80,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Take it away, Choji!\"",
     image: "s09-n-309",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-310",
@@ -86,6 +107,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I won't stop... until I can see much further...\"",
     image: "s09-n-310",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-311",
@@ -106,6 +134,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Okay, if you insist... Remember, you asked for it.\"",
     image: "s09-n-311",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-312",
@@ -127,6 +162,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Don't worry! They're close... This way!!\"",
     image: "s09-n-312",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-313",
@@ -147,6 +189,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You've got to be taken down, and it's only fitting that I'm the one to do it.\"",
     image: "s09-n-313",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-314",
@@ -167,6 +216,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Hayate...\"",
     image: "s09-n-314",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-315",
@@ -187,6 +243,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"...He's out of critical condition!\"",
     image: "s09-n-315",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-316",
@@ -207,6 +270,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Falling into my trap... You disappoint me.\"",
     image: "s09-n-316",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-317",
@@ -227,6 +297,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Also, by doing the 500 laps, you can train yourself hard. Therefore this is the ultimate two-step strategy.\"",
     image: "s09-n-317",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-318",
@@ -247,6 +324,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I am still here .. talk about me in the present tense.\"",
     image: "s09-n-318",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-319",
@@ -267,6 +351,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"A Ninja is someone who endures hardship.\"",
     image: "s09-n-319",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-320",
@@ -287,6 +378,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"A Ninja's talent lies in the use and mastery of every Jutsu that exists in this world.\"",
     image: "s09-n-320",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-321",
@@ -307,6 +405,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Here I come!\"",
     image: "s09-n-321",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-322",
@@ -327,6 +432,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It's difficult for me to act purely as a shinobi.\"",
     image: "s09-n-322",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-323",
@@ -347,6 +459,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"No, my friend, it's the other place we're going to. You and me both, Gato!\"",
     image: "s09-n-323",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-324",
@@ -367,6 +486,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"My Shark Skin cuts off your Chakra... and devours it!!\"",
     image: "s09-n-324",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-325",
@@ -387,6 +513,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"He might know something about Sasuke!\"",
     image: "s09-n-325",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-326",
@@ -407,6 +540,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You can't even scratch my forehead!\"",
     image: "s09-n-326",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-327",
@@ -427,6 +567,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Please accept me as your pupil.\"",
     image: "s09-n-327",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-328",
@@ -447,6 +594,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I'll never let Akamaru suffer like that again...\"",
     image: "s09-n-328",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-329",
@@ -467,6 +621,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Do you suppose I did nothing while we were captured?\"",
     image: "s09-n-329",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-330",
@@ -487,6 +648,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"But... I have to be strong now!\"",
     image: "s09-n-330",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-331",
@@ -507,6 +675,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Life is too short!!\"",
     image: "s09-n-331",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-332",
@@ -527,6 +702,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I think we used a little too much gunpowder, you guys.\"",
     image: "s09-n-332",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-333",
@@ -548,6 +730,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Go!\"",
     image: "s09-n-333",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-334",
@@ -569,6 +758,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Desk work isn't really my thing...\"",
     image: "s09-n-334",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-335",
@@ -589,6 +785,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I'm going to gain Lord Orochimaru's ultimate power and teach a lesson to everyone in this village!\"",
     image: "s09-n-335",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-336",
@@ -609,6 +812,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Please get your old self back... Mizuki...\"",
     image: "s09-n-336",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-337",
@@ -629,6 +839,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Are you aware that we're the famous brothers, Fujin and Raijin...?\"",
     image: "s09-n-337",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-338",
@@ -649,6 +866,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You don't have a single offering for us...?\"",
     image: "s09-n-338",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-339",
@@ -669,6 +893,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It was really a narrow escape.\"",
     image: "s09-n-339",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-340",
@@ -689,6 +920,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"This is an opportunity to make a name for ourselves as the Kamizuru clan.\"",
     image: "s09-n-340",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-341",
@@ -709,6 +947,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"They say that the book explains various forbidden Jutsu for insect tamers...\"",
     image: "s09-n-341",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-342",
@@ -729,6 +974,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Our first leader's secret book...\"",
     image: "s09-n-342",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-343",
@@ -749,6 +1001,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Don't underestimate the green beast of the Leaf Village!\"",
     image: "s09-n-343",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us066",
@@ -769,6 +1028,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Chidori!!\" \"Rasengan!!\"",
     image: "s09-n-us066",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us067",
@@ -789,6 +1055,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Now, I'll finish this with our new technique!\" \"Arf!\"",
     image: "s09-n-us067",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us068",
@@ -809,6 +1082,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Now, go! I'll catch up to you later!\" \"I got it!\"",
     image: "s09-n-us068",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us069",
@@ -829,6 +1109,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I'm not a fool but you are. It's nothing for me to create the sand under the ground.\"",
     image: "s09-n-us069",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us070",
@@ -849,6 +1136,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Sand Coffin!!\"",
     image: "s09-n-us070",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us071",
@@ -869,6 +1163,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Do you really think that distance is safe for you?\"",
     image: "s09-n-us071",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us072",
@@ -890,6 +1191,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Well, whatever it is, I hope you brought along some treats.\"",
     image: "s09-n-us072",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us073",
@@ -910,6 +1218,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Yes. She and I are from the medical corps. I could tell she was building up her Chakra for an attack.\"",
     image: "s09-n-us073",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us074",
@@ -930,6 +1245,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Maybe I can help you kids out a little...with my Ninja Info Cards.\"",
     image: "s09-n-us074",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us075",
@@ -950,6 +1272,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Imagine something more monstrous than your worst nightmare, only it's real.\"",
     image: "s09-n-us075",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us076",
@@ -970,6 +1299,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I mean, a girl's gotta be tough if she's going to survive something like this!\" \"Cha!\"",
     image: "s09-n-us076",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us077",
@@ -990,6 +1326,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"She combines unrivaled skills as a warrior, with the ability to heal others.\"",
     image: "s09-n-us077",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us078",
@@ -1011,6 +1354,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It doesn't slice! It cuts you to ribbons!!\"",
     image: "s09-n-us078",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us079",
@@ -1032,6 +1382,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Gimme a break! I'm not old enough to make any kind of a deal yet!\" \"Aw, come on, Pops, don't be like that, why don't 'cha just settle down and hear the kid out?\"",
     image: "s09-n-us079",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us080",
@@ -1052,6 +1409,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"The reason why I let you stay alive is because you still have a mission to accomplish here.\"",
     image: "s09-n-us080",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us081",
@@ -1072,6 +1436,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Even the strongest of opponents...always has a weakness.\"",
     image: "s09-n-us081",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us082",
@@ -1092,6 +1463,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Special tip for you. I can radiate my chakra from any chakra points on my body.\"",
     image: "s09-n-us082",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us083",
@@ -1113,6 +1491,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Quickly! Enma! Adamantine Nyoi!\"",
     image: "s09-n-us083",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us084",
@@ -1134,6 +1519,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You live only to protect Lady Hinata and to preserve the power of our clan's main household.\" \"I understand, Father.\"",
     image: "s09-n-us084",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us085",
@@ -1154,6 +1546,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Alright... Let's end this!\"",
     image: "s09-n-us085",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us086",
@@ -1174,6 +1573,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Once I've possession of the Kazahana fortune, our country can attain military superiority over the Five Great Nations!\"",
     image: "s09-n-us086",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us087",
@@ -1194,6 +1600,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I'm NOT fat!\"",
     image: "s09-n-us087",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us088",
@@ -1214,6 +1627,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"There's no longer any need to worry.\"",
     image: "s09-n-us088",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us089",
@@ -1234,6 +1654,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Naruto! Get down!\"",
     image: "s09-n-us089",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us090",
@@ -1254,6 +1681,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Stay calm... Focus... Concentrate... See everything!!\"",
     image: "s09-n-us090",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us091",
@@ -1274,6 +1708,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I will show you what speed really means!\"",
     image: "s09-n-us091",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-n-us092",
@@ -1294,6 +1735,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Okay ... No more caving ...\"",
     image: "s09-n-us092",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1312,6 +1760,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I name it Uzumaki Formation!\"",
     image: "s09-j-276",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 2, zoom: 1.0037, print: true } },
+    },
   },
   {
     id: "s09-j-277",
@@ -1327,6 +1782,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"When I suggested making a detour, you didn't say anything...\"",
     image: "s09-j-277",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 2.7, zoom: 1.0051, print: true } },
+    },
   },
   {
     id: "s09-j-278",
@@ -1342,6 +1804,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Darn it... This is a trap!\"",
     image: "s09-j-278",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.3, y: 3.1, zoom: 1.0058, print: true } },
+    },
   },
   {
     id: "s09-j-279",
@@ -1358,6 +1827,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Take this! Mad Dance of Infinity!\"",
     image: "s09-j-279",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 1.8, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s09-j-280",
@@ -1374,6 +1850,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I can see... every movement!\"",
     image: "s09-j-280",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.5, y: 3.2, zoom: 1.006, print: true } },
+    },
   },
   {
     id: "s09-j-281",
@@ -1390,6 +1873,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You can't beat me...\"",
     image: "s09-j-281",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.3, y: 1, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s09-j-282",
@@ -1405,6 +1895,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It's beautiful, isn't it...?\"",
     image: "s09-j-282",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-j-283",
@@ -1421,6 +1918,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Wh-what...?\"",
     image: "s09-j-283",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.2, y: 1.7, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s09-j-284",
@@ -1437,6 +1941,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Whoa!\"",
     image: "s09-j-284",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 1.6, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s09-j-285",
@@ -1452,6 +1963,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Insect Attractant Jutsu...\"",
     image: "s09-j-285",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.5, y: 1.7, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s09-j-286",
@@ -1468,6 +1986,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Insect Wall Jutsu!\"",
     image: "s09-j-286",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.1, y: 2.1, zoom: 1.0037, print: true } },
+    },
   },
   {
     id: "s09-j-287",
@@ -1484,6 +2009,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I usually move sand, but I got on it this time. That's all...\"",
     image: "s09-j-287",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: 3, zoom: 1.0057, print: true } },
+    },
   },
   {
     id: "s09-j-288",
@@ -1500,6 +2032,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Sand Blade... Dual Attack!!\"",
     image: "s09-j-288",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 3.1, zoom: 1.0056, print: true } },
+    },
   },
   {
     id: "s09-j-289",
@@ -1517,6 +2056,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It's a new Jutsu from Ino's spring collection.\"",
     image: "s09-j-289",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 5.3, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s09-j-290",
@@ -1533,6 +2079,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I...did it...!\"",
     image: "s09-j-290",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 4.9, zoom: 1.0051, print: true } },
+    },
   },
   {
     id: "s09-j-291",
@@ -1549,6 +2102,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It can perfectly block attacks from any direction...\"",
     image: "s09-j-291",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -2.3, y: 3.7, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s09-j-292",
@@ -1565,6 +2125,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Thousand Bee Stings Jutsu!\"",
     image: "s09-j-292",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -6, y: 4.1, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s09-j-293",
@@ -1581,6 +2148,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Bee Bomb Jutsu!\"",
     image: "s09-j-293",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 3.7, zoom: 1.0045, print: true } },
+    },
   },
   {
     id: "s09-j-294",
@@ -1597,6 +2171,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"That's honey. It sticks fast like an adhesive agent...\"",
     image: "s09-j-294",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.5, y: 3.8, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s09-j-295",
@@ -1612,6 +2193,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Summoning Jutsu!\"",
     image: "s09-j-295",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 3.9, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s09-j-296",
@@ -1628,6 +2216,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Go away!!!\"",
     image: "s09-j-296",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 1.5, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s09-j-297",
@@ -1644,6 +2239,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Get out of my sight.\"",
     image: "s09-j-297",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 3, zoom: 1.0056, print: true } },
+    },
   },
   {
     id: "s09-j-298",
@@ -1660,6 +2262,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Checkmate. Shadow of the Crushing Hand Jutsu!!\"",
     image: "s09-j-298",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 5, zoom: 1.0055, print: true } },
+    },
   },
   {
     id: "s09-j-299",
@@ -1676,6 +2285,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Have I managed to... change myself...?\"",
     image: "s09-j-299",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.3, y: 5, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s09-j-300",
@@ -1692,6 +2308,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"There are no blind spots!\"",
     image: "s09-j-300",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 5.3, zoom: 1.0061, print: true } },
+    },
   },
   {
     id: "s09-j-301",
@@ -1708,6 +2331,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"If I can't attack my opponent 100 times while he's falling, I'll do 200 push-ups!!\"",
     image: "s09-j-301",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-j-302",
@@ -1724,6 +2354,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Experience the power of my parasitic insects...\"",
     image: "s09-j-302",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -4.4, y: 1.9, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s09-j-303",
@@ -1740,6 +2377,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Get ready for the raging flames.\"",
     image: "s09-j-303",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.2, y: 1.6, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s09-j-304",
@@ -1757,6 +2401,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Clench your teeth!\"",
     image: "s09-j-304",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.4, y: 1.5, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s09-j-us057",
@@ -1772,6 +2423,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Akamaru, here's the food pill!\" \"Arf! ...Grrrrrrr...\"",
     image: "s09-j-us057",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.2, y: 2.2, zoom: 1.0039, print: true } },
+    },
   },
   {
     id: "s09-j-us058",
@@ -1788,6 +2446,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I'll do it if you promise to stay like that the whole time.\"",
     image: "s09-j-us058",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 1.3, y: 3.4, zoom: 1.0057, print: true } },
+    },
   },
   {
     id: "s09-j-us059",
@@ -1803,6 +2468,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"An energy booster that's so powerful the troops who take it can fight for three days and nights without a break.\"",
     image: "s09-j-us059",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.2, y: 3, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s09-j-us060",
@@ -1818,6 +2490,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"He attacked at the base of the tail, where the defense is weakest...\"",
     image: "s09-j-us060",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.4, y: 2.9, zoom: 1.0053, print: true } },
+    },
   },
   {
     id: "s09-j-us061",
@@ -1832,6 +2511,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Sealing Jutsu: Fire Seal!!\"",
     image: "s09-j-us061",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.7, y: 5.2, zoom: 1.0057, print: true } },
+    },
   },
   {
     id: "s09-j-us062",
@@ -1847,6 +2533,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I won't run away...Never again...No more hiding! Byakugan!\"",
     image: "s09-j-us062",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.9, y: 3.5, zoom: 1.0039, print: true } },
+    },
   },
   {
     id: "s09-j-us063",
@@ -1862,6 +2555,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Sometimes I wish I was just a cloud... Just floatin' along...\"",
     image: "s09-j-us063",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -5.8, y: 3.7, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s09-j-us064",
@@ -1879,6 +2579,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"The Leaf Village's spirit is strong... You'd do well to remember.\"",
     image: "s09-j-us064",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.3, y: 3.6, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s09-j-us065",
@@ -1895,6 +2602,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"He chose me to be the one to kill him!\"",
     image: "s09-j-us065",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1, y: 1.6, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s09-j-us066",
@@ -1911,6 +2625,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"By attacking one you infect all. And you don't care. That is not the way of the Shinobi.\"",
     image: "s09-j-us066",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.9, y: 2, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s09-j-us067",
@@ -1926,6 +2647,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s09-j-us067",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.4, y: 2.4, zoom: 1.0037, print: true } },
+    },
   },
   {
     id: "s09-j-us068",
@@ -1942,6 +2670,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Huh?!? What..?\"",
     image: "s09-j-us068",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.3, y: 3, zoom: 1.0056, print: true } },
+    },
   },
   {
     id: "s09-j-us069",
@@ -1956,6 +2691,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"The whole time I thought I was keeping out of range of his shadow jutsu — when I was really walking right into it.\"",
     image: "s09-j-us069",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.1, y: 2.9, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s09-j-us070",
@@ -1971,6 +2713,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Alright, listen, little girl! .. Don't you dare go around saying I'm just some cute puppy!\" \"But .. I didn't even say cute.\"",
     image: "s09-j-us070",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 3.3, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s09-j-us071",
@@ -1986,6 +2735,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Okay, focus, Sakura, focus. This is where you show your stuff.\"",
     image: "s09-j-us071",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.8, y: 2.2, zoom: 1.0031, print: true } },
+    },
   },
   {
     id: "s09-j-us072",
@@ -2001,6 +2757,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You are my prey! My prey!!\"",
     image: "s09-j-us072",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.3, y: 1.6, zoom: 1.0044, print: true } },
+    },
   },
   {
     id: "s09-j-us073",
@@ -2017,6 +2780,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"!\" \"Za-bu-za...\"",
     image: "s09-j-us073",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -5.1, y: 1.7, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s09-j-us074",
@@ -2031,6 +2801,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"The thing is Sasuke, Yoroi's unique skills are going to be disastrous for you.\"",
     image: "s09-j-us074",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0.4, y: 1.9, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s09-j-us075",
@@ -2045,6 +2822,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Nice try, but.....I'm not that easy to fool.\"",
     image: "s09-j-us075",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.6, y: 1.9, zoom: 1.0049, print: true } },
+    },
   },
   {
     id: "s09-j-us076",
@@ -2060,6 +2844,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I can't even tell where the attacks are coming from!\"",
     image: "s09-j-us076",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -0.1, y: 1.7, zoom: 1.003, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2077,6 +2868,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"We couldn't get any information concerning Orochimaru...\"",
     image: "s09-m-268",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.7, zoom: 1.0013, print: true } },
+    },
   },
   {
     id: "s09-m-269",
@@ -2093,6 +2891,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Think harder, Raijin. You can also use my hands, can't you?\" \"Oh, of course! You're so intelligent!\"",
     image: "s09-m-269",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.4, y: 2.6, zoom: 1.0015, print: true } },
+    },
   },
   {
     id: "s09-m-270",
@@ -2109,6 +2914,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Iruka, I have an urgent mission for you!\"",
     image: "s09-m-270",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.6, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s09-m-271",
@@ -2125,6 +2937,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It's no longer possible...\"",
     image: "s09-m-271",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 3.2, zoom: 1.0014, print: true } },
+    },
   },
   {
     id: "s09-m-272",
@@ -2140,6 +2959,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"This should be what Orochimaru was trying to do...\"",
     image: "s09-m-272",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 2.2, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s09-m-273",
@@ -2155,6 +2981,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Shino, now!\"",
     image: "s09-m-273",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-274",
@@ -2171,6 +3004,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Our clan may be destined to perish some day...\"",
     image: "s09-m-274",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2, y: 1.8, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s09-m-275",
@@ -2186,6 +3026,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"If this is a welcome party for us, you're rather too excited!\"",
     image: "s09-m-275",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 1.5, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s09-m-276",
@@ -2202,6 +3049,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Unfortunately... those who're useless on the battlefield are nothing but drags.\"",
     image: "s09-m-276",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.7, y: 1.3, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s09-m-277",
@@ -2218,6 +3072,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"My lunch has been... squashed!\"",
     image: "s09-m-277",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 1.7, zoom: 1.001, print: true } },
+    },
   },
   {
     id: "s09-m-278",
@@ -2235,6 +3096,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"She has improved so much with just three months of training...\"",
     image: "s09-m-278",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 3.7, zoom: 0.9997, print: true } },
+    },
   },
   {
     id: "s09-m-279",
@@ -2251,6 +3119,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Naruto is... Naruto is so close to me...\"",
     image: "s09-m-279",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 3.3, zoom: 1.0007, print: true } },
+    },
   },
   {
     id: "s09-m-280",
@@ -2267,6 +3142,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I can give you the information.\"",
     image: "s09-m-280",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 2.1, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s09-m-281",
@@ -2282,6 +3164,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"The unprecedented battle between insect tamers ended with the Aburame clan's victory...\"",
     image: "s09-m-281",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-282",
@@ -2297,6 +3186,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I need to control my Chakra with more precision to find small things like insects.\"",
     image: "s09-m-282",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1, y: 2.6, zoom: 1.0007, print: true } },
+    },
   },
   {
     id: "s09-m-283",
@@ -2313,6 +3209,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "The kunoichi is with us...\"",
     image: "s09-m-283",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.4, y: 1.2, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s09-m-284",
@@ -2329,6 +3232,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"How can you NOT see the differences from this?\"",
     image: "s09-m-284",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-285",
@@ -2345,6 +3255,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"The larvae in this hive love Chakra.\"",
     image: "s09-m-285",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-us051",
@@ -2361,6 +3278,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Show me your strength. Let me grind it into dust before your eyes.\"",
     image: "s09-m-us051",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 3.1, zoom: 1.0011, print: true } },
+    },
   },
   {
     id: "s09-m-us052",
@@ -2377,6 +3301,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Don't turn away. When you live like a warrior, this is how it ends.\"",
     image: "s09-m-us052",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.8, zoom: 1.0009, print: true } },
+    },
   },
   {
     id: "s09-m-us053",
@@ -2394,6 +3325,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Until I become Hokage... I don't care what happens, I'm not gonna die!!\"",
     image: "s09-m-us053",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.5, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s09-m-us054",
@@ -2411,6 +3349,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Ha ha ha, it doesn't look right on you.\" \"Don't laugh, OK?\"",
     image: "s09-m-us054",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.4, y: 1.8, zoom: 1.0034, print: true } },
+    },
   },
   {
     id: "s09-m-us055",
@@ -2427,6 +3372,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I will let nobody have the last bite!\" \"That's not funny at all, you idiot!\"",
     image: "s09-m-us055",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.6, y: 3.1, zoom: 1.0018, print: true } },
+    },
   },
   {
     id: "s09-m-us056",
@@ -2443,6 +3395,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Man! Since when did she get this strong!?\" \"I can do this! .. I know I can!\"",
     image: "s09-m-us056",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.8, y: 2, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s09-m-us057",
@@ -2460,6 +3419,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Who told you that you could fight? You want to fail before we've even begun?\"",
     image: "s09-m-us057",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -2, y: 2.1, zoom: 1.0022, print: true } },
+    },
   },
   {
     id: "s09-m-us058",
@@ -2476,6 +3442,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You guys are the heroes of this final competition!\"",
     image: "s09-m-us058",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.6, y: 1.4, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s09-m-us059",
@@ -2492,6 +3465,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Five strikes and you're out. You just failed the test.\"",
     image: "s09-m-us059",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 0.7, zoom: 1.0005, print: true } },
+    },
   },
   {
     id: "s09-m-us060",
@@ -2508,6 +3488,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"What is this?! .. It's huge!\"",
     image: "s09-m-us060",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 1.7, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s09-m-us061",
@@ -2525,6 +3512,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Hopeless!–Why do I waste my time with you?!\"",
     image: "s09-m-us061",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.3, y: 2.4, zoom: 1.0017, print: true } },
+    },
   },
   {
     id: "s09-m-us062",
@@ -2541,6 +3535,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Sakura, I already told you...I will protect you until I die.\"",
     image: "s09-m-us062",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-us063",
@@ -2556,6 +3557,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"All right.. it's over.. You don't need to say any more.\" \"Senseiii!\"",
     image: "s09-m-us063",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.3, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s09-m-us064",
@@ -2571,6 +3579,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Hey... It's the Pervy Sage's check book. One... Ten... One hundred...Luh- look at all those zeros!!\"",
     image: "s09-m-us064",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.8, y: 2.7, zoom: 1.0008, print: true } },
+    },
   },
   {
     id: "s09-m-us065",
@@ -2586,6 +3601,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Oh baby! That is one fat frog you've got! You're filthy rich!\"",
     image: "s09-m-us065",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.5, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s09-m-us066",
@@ -2601,6 +3623,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Gya ha ha! What can I say, I love the ladies!\"",
     image: "s09-m-us066",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.6, y: 0.8, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s09-m-us067",
@@ -2618,6 +3647,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Sakura...thank you...\"",
     image: "s09-m-us067",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.7, y: 0.9, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s09-m-us068",
@@ -2634,6 +3670,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Stop it!\"",
     image: "s09-m-us068",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.6, y: 1.4, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s09-m-us069",
@@ -2650,6 +3693,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"So, uh... What's this crazy nickname she's got?\" \"The Legendary... Sitting Duck!\"",
     image: "s09-m-us069",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-us070",
@@ -2666,6 +3716,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"It's about time I learned the lesson...\"",
     image: "s09-m-us070",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 1.8, zoom: 1.0017, print: true } },
+    },
   },
   {
     id: "s09-m-us071",
@@ -2682,6 +3739,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Lord Hokage's face is beginning to crack.\" \"That's ominous...\"",
     image: "s09-m-us071",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.9, zoom: 1.0015, print: true } },
+    },
   },
   {
     id: "s09-m-us072",
@@ -2699,6 +3763,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\".........\"",
     image: "s09-m-us072",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 3.2, zoom: 1.0016, print: true } },
+    },
   },
   {
     id: "s09-m-us073",
@@ -2715,6 +3786,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Remember this... to be Hokage, that is my dream!",
     image: "s09-m-us073",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-m-us074",
@@ -2731,6 +3809,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s09-m-us074",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2.1, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s09-m-us075",
@@ -2748,6 +3833,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"What is that? That thing ...is the Reaper??\"",
     image: "s09-m-us075",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.4, y: 2.1, zoom: 1.0018, print: true } },
+    },
   },
   {
     id: "s09-m-us076",
@@ -2764,6 +3856,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I'm sorry, Sasuke. Some other time, OK?\"",
     image: "s09-m-us076",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 2, zoom: 1.0006, print: true } },
+    },
   },
   {
     id: "s09-m-us077",
@@ -2779,6 +3878,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"What was that... I could'a sworn there was someone there...\"",
     image: "s09-m-us077",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.9, y: 2, zoom: 1.002, print: true } },
+    },
   },
   {
     id: "s09-m-us078",
@@ -2795,6 +3901,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Naruto...\"",
     image: "s09-m-us078",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.7, y: 0.8, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s09-m-us079",
@@ -2811,6 +3924,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Heey! Ka- Kabuto?\" \"Naruto\" \"You've met this guy before, Naruto?\"",
     image: "s09-m-us079",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.2, y: 1.9, zoom: 1.0023, print: true } },
+    },
   },
   {
     id: "s09-m-us080",
@@ -2826,6 +3946,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"This is the plan that you're to carry out.\"",
     image: "s09-m-us080",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.4, y: 1.8, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s09-m-us081",
@@ -2842,6 +3969,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"I was feeling so sleepy .. But now it seems I'm finally awake.\"",
     image: "s09-m-us081",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.9, zoom: 1.0015, print: true } },
+    },
   },
   {
     id: "s09-m-us082",
@@ -2859,6 +3993,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Where...where is Sasuke?\" \"Time is up. We cannot wait any longer.\"",
     image: "s09-m-us082",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 3.1, zoom: 1.0017, print: true } },
+    },
   },
   {
     id: "s09-m-us083",
@@ -2875,6 +4016,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Those eyebrows can't be real! No-o-o! Your hairstyle is horrible, too... and those eyebrows are so bushy! You're such a weirdo!\"",
     image: "s09-m-us083",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.8, y: 2.6, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s09-m-us084",
@@ -2891,6 +4039,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"A good thing he arrived in time to see the evil intent hidden in those healing hands of yours.\"",
     image: "s09-m-us084",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -0.9, y: 2.5, zoom: 1.0016, print: true } },
+    },
   },
   {
     id: "s09-m-us085",
@@ -2907,6 +4062,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Boys can be so pathetic.\"",
     image: "s09-m-us085",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.1, y: 2.1, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s09-m-us086",
@@ -2923,6 +4085,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Eatin' chips and watchin' clouds... man, this is the best.\" \"Yep!\"",
     image: "s09-m-us086",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: -1.5, y: 0.7, zoom: 1.0013, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -2940,6 +4109,13 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"Buzz\"",
     image: "s09-c-037",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s09-c-us001",
@@ -2956,5 +4132,12 @@ export const S09_THE_CHOSEN: Card[] = [
     ],
     flavor: "\"You mustn't give up!\"",
     image: "s09-c-us001",
+    layout: {
+      layout: "layout-01",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];
