@@ -29,11 +29,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/cards" className="hover:text-text">
                   Cartas
                 </Link>
-                <Link href="/jogar" className="hover:text-text">
-                  Jogar
-                </Link>
                 <Link href="/criar" className="hover:text-text">
                   Criar carta
+                </Link>
+                <Link href="/jogar" className="hover:text-text">
+                  Jogar
                 </Link>
               </div>
               {/* Espaços que as páginas preenchem com <HeaderSlot> (ex.: jogadores e botões da partida). */}
