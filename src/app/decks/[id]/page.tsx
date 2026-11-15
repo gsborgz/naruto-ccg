@@ -80,7 +80,7 @@ export default function DeckBuilderPage() {
     // No desktop a tela ocupa a altura toda (descontando cabeçalho e padding: --app-chrome em globals.css; em tela cheia o cabeçalho some):
     // cada coluna rola sozinha, como no TCG Live — cartas disponíveis à esquerda, deck à direita.
     <div className="grid gap-6 lg:h-[calc(100dvh-var(--app-chrome))] lg:grid-cols-[minmax(0,1fr)_26rem] xl:grid-cols-[minmax(0,1fr)_minmax(30rem,38%)]">
-      <section className="flex min-w-0 flex-col gap-4 lg:-mr-2 lg:overflow-y-auto lg:pr-2" aria-label="Cartas disponíveis">
+      <section className="flex min-w-0 flex-col gap-4 lg:-mx-2 lg:overflow-y-auto lg:px-2 lg:pt-1 lg:pb-4" aria-label="Cartas disponíveis">
         <CardBrowser
           cards={available}
           onSelect={setSelected}

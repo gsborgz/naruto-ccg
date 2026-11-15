@@ -1,63 +1,88 @@
 'use client';
 
-import { useState } from 'react';
+import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { CardDetailModal } from '@/components/CardDetailModal';
 import { Dialog } from '@/components/Dialog';
 import { CARDS_BY_ID } from '@/data/cards';
 import {
   BATTLEFIELD_MAX_TEAMS,
   countTeams,
+  PHASES,
   TEAM_MAX,
   teamGroups,
+  TURN_MAX,
   type CardInstance,
+  type LogEntryView,
+  type Side,
   type SideView,
   type ZoneName,
 } from '@/lib/game/state';
+import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
+import { formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
 import { cardImageUrl, type Card } from '@/models/card';
 import { useCardName } from '@/lib/cardLanguage';
+import styles from './GameArena.module.css';
 
 /**
- * Arena da partida: uma mesa com os dois Painéis de Jogo frente a frente (docs/REGRAS.md, "Painel de Jogo").
+ * Arena da partida (design "Campo de Jogo", tokens Nocturne): os dois lados da mesa frente a frente.
  *
- * - Embaixo fica o seu painel, como no painel impresso: Campo de Batalha virado para o oponente,
- *   Prêmios de Batalha à esquerda, Vila no centro, Deck / Descartes / Chakra à direita.
- * - Em cima fica o painel do oponente, espelhado como se ele estivesse do outro lado da mesa.
- * - As mãos ficam nas bordas da mesa (a sua embaixo, em leque; a do oponente em cima, virada para baixo).
- * - Baralho de Reforço e Removidos de Jogo (fora do painel impresso) ficam ao lado da mão.
+ * - Tudo é desenhado num palco fixo de 1600×900, escalado para caber inteiro na área disponível
+ *   (sem rolagem): `scale = min(largura / 1600, altura / 900)`.
+ * - Em cima: a mão do oponente (só o verso) e a linha dele: Deck, Descartes, Chakra, Vila e Prêmios.
+ * - No meio: o Campo de Batalha octogonal, com os Times dos dois e a fase atual no centro.
+ * - Embaixo: a sua linha, espelhada (Prêmios, Vila, Chakra, Descartes, Deck) e a sua mão em leque.
+ * - À esquerda: a placa de cada jogador (Prêmios, Marcador de Turnos, mão, Reforço, Removidos), o turno
+ *   e as fases, com o botão "Próxima fase" (ou "Passar turno" na Fase Final) para o Atacante.
  *
  * Você arrasta as SUAS cartas entre as SUAS zonas; o servidor confere e devolve o novo estado.
  * Cartas que você não pode ver (mão do oponente, Deck, Prêmios) chegam só como contagem.
- *
- * O tamanho das cartas acompanha a altura de cada painel (unidades `cqh` de container query).
  */
 
-/** Classes do contêiner de uma tela de partida: altura exata da janela (sem rolagem) no desktop. */
-export const ARENA_SCREEN = 'flex flex-col gap-2 lg:h-[calc(100dvh-var(--app-chrome))]';
+/**
+ * Classes do contêiner de uma tela de partida: altura exata da janela (sem rolagem). `arena-screen` faz a
+ * arena ocupar a tela inteira em tela cheia (globals.css).
+ */
+export const ARENA_SCREEN = 'arena-screen flex h-[calc(100dvh-var(--app-chrome))] flex-col gap-2';
 
 export interface ArenaSide {
   nickname: string;
   zones: SideView;
   /** Posição do Marcador de Turnos. */
   turn: number;
+  /** É o jogador do turno (Atacante)? */
+  attacker: boolean;
 }
 
 /** Ações do jogador sobre as próprias cartas. Sem isto, a arena é só para ver. */
 export interface ArenaControls {
-  onMove: (uid: string, to: ZoneName) => void;
+  /** Move a carta `uid` para a zona `to`; com `before`, antes do Time dessa carta (reordenar Times). */
+  onMove: (uid: string, to: ZoneName, before?: string) => void;
   onDraw: () => void;
   onShuffle: () => void;
+  /** Devolve a mão inteira ao Deck e embaralha (o mulligan; o botão pede confirmação antes). */
+  onReturnHand: () => void;
   /** Abre a busca de uma carta no deck (quem usa a arena mostra o diálogo). */
   onSearch: () => void;
   /** Junta o Ninja `uid` ao Time do Ninja `target` (soltar uma carta sobre a outra). */
   onJoinTeam: (uid: string, target: string) => void;
-  /** Move o Time inteiro do Ninja `uid` (arrastar pela alça do Time). */
-  onMoveTeam: (uid: string, to: ZoneName) => void;
+  /** Move o Time inteiro do Ninja `uid` (arrastar pela alça do Time); com `before`, antes do Time dessa carta. */
+  onMoveTeam: (uid: string, to: ZoneName, before?: string) => void;
   /** Torna o Ninja `uid` o Líder do Time dele. */
   onSetLeader: (uid: string) => void;
+  /** Vira o Ninja `uid` para Ferido (horizontal) ou de volta para Saudável. */
+  onSetInjured: (uid: string, injured: boolean) => void;
   /** Manda uma carta sua para os Prêmios do OPONENTE (sem `uid`: o topo do seu Deck). */
   onGiveReward: (uid?: string) => void;
+  /** Avança para a próxima fase do turno (só quando você é o Atacante). */
+  onNextPhase: () => void;
+  /** Passa o turno para o oponente (só quando você é o Atacante). */
+  onPassTurn: () => void;
   busy?: boolean;
 }
+
+/** Tamanho do palco do design. */
+const STAGE_W = 1600;
+const STAGE_H = 900;
 
 /** Arrastar uma carta (o uid dela) / um Time inteiro (o uid de um membro). */
 const CARD_MIME = 'application/x-naruto-ccg-card';
@@ -67,10 +92,11 @@ const DECK_TOP_MIME = 'application/x-naruto-ccg-deck-top';
 
 const isNinja = (cardId: string) => CARDS_BY_ID.get(cardId)?.type === 'ninja';
 
-/** Casas do Indicador de Turnos (o marcador começa em 0). */
-const TURN_SLOTS = 11;
+/** Prêmios de Batalha para vencer (docs/REGRAS.md, Condições de Vitória). */
+const REWARDS_TO_WIN = 10;
 
-const PHASES = ['Inicial', 'Missão', 'Organização', 'Batalha', 'Final'] as const;
+/** Kanji de cada fase (na ordem de `PHASES`). */
+const PHASE_KANJI = ['始', '任', '編', '戦', '終'] as const;
 
 const ZONE_LABEL: Record<ZoneName, string> = {
   deck: 'Topo do Deck',
@@ -84,55 +110,187 @@ const ZONE_LABEL: Record<ZoneName, string> = {
   removed: 'Removidos',
 };
 
-/** Largura das cartas na mesa: proporcional à altura do painel (container `mat`). */
-const TABLE_CARD = 'w-[clamp(2.25rem,21cqh,6.5rem)]';
-/** Cartas da Vila: a área mais alta do painel, então cartas maiores. */
-const VILLAGE_CARD = 'w-[clamp(2.75rem,27cqh,8rem)]';
-/** Largura das cartas na sua mão: proporcional à altura da janela (variável usada também na sobreposição). */
-const HAND_CARD_WIDTH = 'clamp(3rem,9.5vh,6.25rem)';
-const HAND_CARD = 'w-[var(--hand-w)]';
+/** Tamanhos (px do palco) das cartas em cada lugar. */
+const FIELD_CARD = { w: 96, h: 134 };
+const MINI_CARD = { w: 62, h: 87 };
+const HAND_CARD = { w: 112, h: 157 };
+/** Largura útil da Vila: a linha menos as outras zonas, os espaços e o padding da Vila. */
+const VILLAGE_INNER = 1332 - 132 - 150 - 100 - 118 - 4 * 10 - 24;
 
-/** Hover das cartas na mesa: sobem um pouco. */
-const TABLE_HOVER = 'hover:z-10 hover:-translate-y-1';
-/** Hover das cartas na mão: sobem e crescem bastante, por cima de tudo (crescem a partir da base). */
-const HAND_HOVER = 'origin-bottom hover:z-50 hover:-translate-y-[18%] hover:scale-[1.7]';
-
-/**
- * Quanto cada carta da mão cobre a anterior (fração da largura): pouco com mão pequena,
- * mais conforme a mão cresce, para caber sem barra de rolagem.
- */
-function handOverlap(n: number): number {
-  return Math.min(0.72, 0.18 + Math.max(0, n - 6) * 0.06);
+function cx(...names: (string | false | null | undefined)[]): string {
+  return names.filter(Boolean).join(' ');
 }
 
-/** Liga uma área como destino de arrastar (só nas suas zonas). */
-function useDrop(to: ZoneName, controls: ArenaControls | undefined) {
+/** Carta sob o mouse (e onde o mouse está), para a ampliação com Alt. */
+interface HoveredCard {
+  card: Card;
+  clientX: number;
+}
+const HoverContext = createContext<(hovered: HoveredCard | null) => void>(() => {});
+
+/** Alt pressionado agora? (Soltar fora da janela também conta: perder o foco zera.) */
+function useAltKey(): boolean {
+  const [alt, setAlt] = useState(false);
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if (e.key !== 'Alt') return;
+      e.preventDefault(); // no Windows, soltar o Alt sozinho ativaria o menu do navegador
+      setAlt(e.type === 'keydown');
+    };
+    const move = (e: MouseEvent) => setAlt(e.altKey);
+    const reset = () => setAlt(false);
+    window.addEventListener('keydown', key);
+    window.addEventListener('keyup', key);
+    window.addEventListener('mousemove', move);
+    window.addEventListener('blur', reset);
+    return () => {
+      window.removeEventListener('keydown', key);
+      window.removeEventListener('keyup', key);
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('blur', reset);
+    };
+  }, []);
+  return alt;
+}
+
+/** Escala do palco para caber inteiro no elemento (recalcula ao redimensionar). */
+function useStageScale(ref: React.RefObject<HTMLElement | null>): number {
+  const [scale, setScale] = useState(0);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let raf = 0;
+    const fit = () => {
+      const w = el.clientWidth;
+      const h = el.clientHeight;
+      // Medida 0 (ainda sem layout): tenta de novo no próximo quadro, senão o palco sairia cortado.
+      if (!w || !h) {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(fit);
+        return;
+      }
+      setScale(Math.min(w / STAGE_W, h / STAGE_H));
+    };
+    const ro = new ResizeObserver(fit);
+    ro.observe(el);
+    window.addEventListener('resize', fit);
+    fit();
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', fit);
+      cancelAnimationFrame(raf);
+    };
+  }, [ref]);
+  return scale;
+}
+
+interface DropTarget {
+  over: boolean;
+  handlers: Partial<Pick<React.HTMLAttributes<HTMLElement>, 'onDragOver' | 'onDragLeave' | 'onDrop'>>;
+}
+
+/** Onde um Time solto entraria entre os Times da zona (posições em % da zona, para a barra de inserção). */
+interface Insertion {
+  /** Primeira carta do Time da frente; `undefined` = no fim. */
+  before?: string;
+  left: number;
+  top: number;
+  height: number;
+}
+
+/**
+ * Marca no `nativeEvent` do arraste que ele está sobre um Ninja que aceita formar Time: a zona embaixo
+ * esconde a barra de inserção (soltar ali junta ao Time, não reordena).
+ */
+const JOIN_TARGET = Symbol('joinTarget');
+
+/** Atributo dos Times na tela (o uid do primeiro membro), lido para calcular a posição de inserção. */
+const TEAM_ATTR = 'data-team-first';
+
+/** Posição de inserção na zona `el` para o mouse em `clientX`: antes do primeiro Time cujo meio está à direita. */
+function insertionAt(el: HTMLElement, clientX: number): Insertion | null {
+  const groups = [...el.querySelectorAll<HTMLElement>(`[${TEAM_ATTR}]`)];
+  if (groups.length === 0) return null;
+  const box = el.getBoundingClientRect();
+  const rects = groups.map((g) => g.getBoundingClientRect());
+  let i = rects.findIndex((r) => clientX < r.left + r.width / 2);
+  if (i < 0) i = groups.length;
+  const x =
+    i === 0
+      ? rects[0].left - 8
+      : i === groups.length
+        ? rects[i - 1].right + 8
+        : (rects[i - 1].right + rects[i].left) / 2;
+  const top = Math.min(...rects.map((r) => r.top));
+  const bottom = Math.max(...rects.map((r) => r.bottom));
+  return {
+    before: groups[i]?.getAttribute(TEAM_ATTR) ?? undefined,
+    left: ((x - box.left) / box.width) * 100,
+    top: ((top - box.top) / box.height) * 100,
+    height: ((bottom - top) / box.height) * 100,
+  };
+}
+
+/**
+ * Liga uma área como destino de arrastar (só nas suas zonas). Com `ordered` (Vila e Campo de Batalha),
+ * soltar entre os Times escolhe a posição: a barra `insert` mostra onde vai entrar.
+ */
+function useDrop(
+  to: ZoneName,
+  controls: ArenaControls | undefined,
+  ordered = false,
+): DropTarget & { insert: Insertion | null } {
   const [over, setOver] = useState(false);
-  if (!controls) return { over: false, handlers: {} };
+  const [insert, setInsert] = useState<Insertion | null>(null);
+  if (!controls) return { over: false, insert: null, handlers: {} };
   return {
     over,
+    insert,
     handlers: {
-      onDragOver: (e: React.DragEvent) => {
+      onDragOver: (e) => {
         const types = e.dataTransfer.types;
         if (!types.includes(CARD_MIME) && !types.includes(TEAM_MIME)) return;
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
         setOver(true);
+        if (ordered) {
+          const joining = (e.nativeEvent as unknown as Record<symbol, boolean>)[JOIN_TARGET];
+          const next = joining ? null : insertionAt(e.currentTarget, e.clientX);
+          setInsert((prev) =>
+            prev?.before === next?.before && prev?.left === next?.left && prev?.top === next?.top ? prev : next,
+          );
+        }
       },
-      onDragLeave: (e: React.DragEvent) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOver(false);
-      },
-      onDrop: (e: React.DragEvent) => {
+      onDragLeave: (e) => {
+        if (e.currentTarget.contains(e.relatedTarget as Node | null)) return;
         setOver(false);
+        setInsert(null);
+      },
+      onDrop: (e) => {
+        setOver(false);
+        setInsert(null);
         const team = e.dataTransfer.getData(TEAM_MIME);
         const uid = e.dataTransfer.getData(CARD_MIME);
         if (!team && !uid) return;
         e.preventDefault();
-        if (team) controls.onMoveTeam(team, to);
-        else controls.onMove(uid, to);
+        const before = ordered ? insertionAt(e.currentTarget, e.clientX)?.before : undefined;
+        if (team) controls.onMoveTeam(team, to, before);
+        else controls.onMove(uid, to, before);
       },
     },
   };
+}
+
+/** Barra brilhante entre os Times: onde o Time arrastado vai entrar. */
+function InsertBar({ at }: { at: Insertion | null }) {
+  if (!at) return null;
+  return (
+    <div
+      className={styles.insertBar}
+      style={{ left: `${at.left}%`, top: `${at.top}%`, height: `${at.height}%` }}
+      aria-hidden
+    />
+  );
 }
 
 interface CustomDrop {
@@ -144,22 +302,22 @@ interface CustomDrop {
 }
 
 /** Destino de arrastar com tratamento próprio (ex.: Prêmios do oponente). */
-function useCustomDrop(drop: CustomDrop | undefined) {
+function useCustomDrop(drop: CustomDrop | undefined): DropTarget {
   const [over, setOver] = useState(false);
   if (!drop) return { over: false, handlers: {} };
   return {
     over,
     handlers: {
-      onDragOver: (e: React.DragEvent) => {
+      onDragOver: (e) => {
         if (!drop.accept.some((t) => e.dataTransfer.types.includes(t))) return;
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
         setOver(true);
       },
-      onDragLeave: (e: React.DragEvent) => {
+      onDragLeave: (e) => {
         if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOver(false);
       },
-      onDrop: (e: React.DragEvent) => {
+      onDrop: (e) => {
         setOver(false);
         if (!drop.accept.some((t) => e.dataTransfer.types.includes(t))) return;
         e.preventDefault();
@@ -169,434 +327,63 @@ function useCustomDrop(drop: CustomDrop | undefined) {
   };
 }
 
-/** Uma carta virada para cima. Arrastável se for sua; clique abre o detalhe. */
-function ArenaCard({
+/** Uma carta virada para cima. Arrastável se for sua; clique abre o detalhe (ou `onClick`). */
+function TableCard({
   inst,
-  draggable,
+  w,
+  h,
+  mine,
   onInspect,
-  sizeClass = TABLE_CARD,
-  hoverClass = TABLE_HOVER,
-  className = '',
+  onClick,
+  className,
   style,
 }: {
   inst: CardInstance;
-  draggable: boolean;
+  w: number;
+  h: number;
+  mine: boolean;
   onInspect: (card: Card) => void;
-  sizeClass?: string;
-  hoverClass?: string;
+  onClick?: () => void;
   className?: string;
   style?: React.CSSProperties;
 }) {
   const card = CARDS_BY_ID.get(inst.cardId);
   const nameOf = useCardName();
+  const setHovered = useContext(HoverContext);
+  const open = () => (onClick ? onClick() : card && onInspect(card));
   return (
     <div
       role="button"
       tabIndex={0}
-      draggable={draggable}
+      draggable={mine}
+      onMouseEnter={(e) => card && setHovered({ card, clientX: e.clientX })}
+      onMouseLeave={() => setHovered(null)}
       onDragStart={(e) => {
+        e.stopPropagation();
         e.dataTransfer.setData(CARD_MIME, inst.uid);
         e.dataTransfer.effectAllowed = 'move';
       }}
-      onClick={() => card && onInspect(card)}
-      onKeyDown={(e) => e.key === 'Enter' && card && onInspect(card)}
+      onClick={open}
+      onKeyDown={(e) => e.key === 'Enter' && open()}
       title={card ? nameOf(card) : inst.cardId}
-      style={style}
-      className={`${sizeClass} relative shrink-0 overflow-hidden rounded-[6%/4.3%] shadow-[0_2px_6px_rgb(0_0_0/0.5)] ring-1 ring-black/40 transition duration-150 hover:ring-2 hover:ring-accent ${hoverClass} ${
-        draggable ? 'cursor-grab active:cursor-grabbing' : 'cursor-pointer'
-      } ${className}`}
+      className={cx(styles.card, mine && styles.mine, className)}
+      style={{ width: w, height: h, ...style }}
     >
-      {card ? (
-        <img
-          src={cardImageUrl(card, 'thumb')}
-          alt={nameOf(card)}
-          draggable={false}
-          loading="lazy"
-          className="aspect-[5/7] w-full object-cover"
-        />
-      ) : (
-        <div className="aspect-[5/7] w-full bg-surface-2" />
-      )}
+      {card && <img src={cardImageUrl(card, 'thumb')} alt={nameOf(card)} draggable={false} loading="lazy" />}
     </div>
   );
 }
 
-/** Verso de carta. */
-function CardBack({ sizeClass = TABLE_CARD, className = '' }: { sizeClass?: string; className?: string }) {
+function ZoneLabel({ text, kanji }: { text: string; kanji?: string }) {
   return (
-    <div
-      className={`${sizeClass} grid aspect-[5/7] shrink-0 place-items-center rounded-[6%/4.3%] border border-accent/50 bg-[radial-gradient(circle_at_50%_40%,color-mix(in_srgb,var(--color-accent)_35%,transparent),transparent_60%),linear-gradient(135deg,#2b1d14,#14161d)] shadow-[0_2px_6px_rgb(0_0_0/0.5)] ${className}`}
-    >
-      <span className="text-[clamp(0.7rem,40%,1.6rem)] text-accent/80">忍</span>
+    <div className={styles.label}>
+      {kanji && <span className={styles.kanji}>{kanji}</span>}
+      <span>{text}</span>
     </div>
   );
 }
 
-/** Marca d'água com o nome da zona (some atrás das cartas). */
-function Watermark({ label, en }: { label: string; en: string }) {
-  return (
-    <span
-      className="pointer-events-none absolute inset-0 grid place-items-center text-center text-[11px] font-bold uppercase tracking-[0.25em] text-white/[0.09] select-none"
-      title={`${label} [${en}]`}
-    >
-      {label}
-    </span>
-  );
-}
-
-function Badge({ n, title }: { n: number; title?: string }) {
-  return (
-    <span
-      title={title}
-      className="absolute -bottom-1.5 -right-1.5 z-10 min-w-6 rounded-full bg-bg px-1.5 text-center font-mono text-[11px] font-bold leading-5 text-text ring-1 ring-border"
-    >
-      {n}
-    </span>
-  );
-}
-
-/**
- * Espaço do tamanho de uma carta para uma pilha (Deck, Descartes, Prêmios): contorno quando vazio,
- * verso empilhado ou a carta de cima quando tem cartas, e a contagem no canto.
- */
-function PileSlot({
-  zone,
-  label,
-  en,
-  count,
-  top,
-  faceDown,
-  controls,
-  mine,
-  onInspect,
-  onOpen,
-  customDrop,
-  dragTop,
-  children,
-}: {
-  zone: ZoneName;
-  label: string;
-  en: string;
-  count: number;
-  /** Carta de cima, se for visível (Descartes). */
-  top?: CardInstance;
-  faceDown?: boolean;
-  controls?: ArenaControls;
-  mine: boolean;
-  onInspect: (card: Card) => void;
-  /** Clique na pilha abre a lista (Descartes). */
-  onOpen?: () => void;
-  /** Recebe cartas soltas aqui de outro jeito que "mover para esta zona" (Prêmios do oponente). */
-  customDrop?: CustomDrop;
-  /** A pilha pode ser arrastada (o topo do seu Deck). */
-  dragTop?: boolean;
-  children?: React.ReactNode;
-}) {
-  const zoneDrop = useDrop(zone, customDrop ? undefined : controls);
-  const custom = useCustomDrop(customDrop);
-  const drop = customDrop ? custom : zoneDrop;
-  return (
-    <div
-      className="flex flex-col items-center gap-1"
-      title={
-        customDrop?.hint ??
-        (dragTop ? `${label} [${en}]: arraste o topo para os Prêmios do oponente` : `${label} [${en}]`)
-      }
-    >
-      <div
-        {...drop.handlers}
-        draggable={dragTop && count > 0}
-        onDragStart={
-          dragTop
-            ? (e) => {
-                e.dataTransfer.setData(DECK_TOP_MIME, '1');
-                e.dataTransfer.effectAllowed = 'move';
-              }
-            : undefined
-        }
-        className={`relative rounded-[6%/4.3%] ${drop.over ? 'ring-2 ring-accent ring-offset-2 ring-offset-transparent' : ''} ${
-          dragTop && count > 0 ? 'cursor-grab active:cursor-grabbing' : ''
-        }`}
-      >
-        {count === 0 ? (
-          <div
-            className={`${TABLE_CARD} grid aspect-[5/7] place-items-center rounded-[6%/4.3%] border border-dashed border-white/15 bg-black/10 p-1 text-center text-[9px] font-bold uppercase tracking-widest text-white/25`}
-          >
-            {label}
-          </div>
-        ) : top && !faceDown ? (
-          <div onClick={onOpen} className="relative">
-            {count > 1 && <CardBack className="absolute left-[3px] top-[3px] opacity-60" />}
-            <ArenaCard inst={top} draggable={mine} onInspect={onOpen ? () => onOpen() : onInspect} className="relative" />
-          </div>
-        ) : (
-          <div className="relative">
-            {count > 2 && <CardBack className="absolute left-[4px] top-[4px] opacity-50" />}
-            {count > 1 && <CardBack className="absolute left-[2px] top-[2px] opacity-75" />}
-            <CardBack className="relative" />
-          </div>
-        )}
-        {count > 0 && <Badge n={count} title={faceDown ? 'Face para baixo: dá para contar, não para ver' : undefined} />}
-      </div>
-      <span className="text-[9px] font-semibold uppercase tracking-widest text-white/35">{label}</span>
-      {children}
-    </div>
-  );
-}
-
-/**
- * Ninja na Vila / Campo de Batalha: além de arrastável, recebe outra carta solta em cima dele
- * para formar (ou aumentar) um Time.
- */
-function TeamCard({
-  inst,
-  controls,
-  mine,
-  onInspect,
-  leader,
-  inTeam,
-  sizeClass,
-}: {
-  inst: CardInstance;
-  controls?: ArenaControls;
-  mine: boolean;
-  onInspect: (card: Card) => void;
-  leader: boolean;
-  inTeam: boolean;
-  sizeClass?: string;
-}) {
-  const [over, setOver] = useState(false);
-  const accepts = !!controls && isNinja(inst.cardId);
-  return (
-    <div
-      className={`relative rounded-[6%/4.3%] transition ${over ? 'scale-105 ring-2 ring-accent ring-offset-2 ring-offset-bg' : ''}`}
-      onDragOver={(e) => {
-        if (!accepts || !e.dataTransfer.types.includes(CARD_MIME)) return;
-        e.preventDefault();
-        e.stopPropagation();
-        e.dataTransfer.dropEffect = 'move';
-        setOver(true);
-      }}
-      onDragLeave={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOver(false);
-      }}
-      onDrop={(e) => {
-        setOver(false);
-        if (!accepts) return;
-        const uid = e.dataTransfer.getData(CARD_MIME);
-        if (!uid) return;
-        e.preventDefault();
-        e.stopPropagation(); // não deixa a zona tratar como "mover para a zona"
-        if (uid !== inst.uid) controls!.onJoinTeam(uid, inst.uid);
-      }}
-      title={accepts ? 'Solte outro Ninja aqui para formar um Time' : undefined}
-    >
-      <ArenaCard inst={inst} draggable={mine} onInspect={onInspect} sizeClass={sizeClass} />
-      {inTeam && leader && (
-        <span
-          className="pointer-events-none absolute -left-1 -top-1 z-10 rounded-full bg-accent px-1.5 text-[9px] font-black leading-4 text-bg shadow"
-          title="Ninja Líder [Head Ninja]"
-        >
-          LÍDER
-        </span>
-      )}
-      {inTeam && !leader && mine && controls && (
-        <button
-          type="button"
-          onClick={() => controls.onSetLeader(inst.uid)}
-          disabled={controls.busy}
-          className="absolute -left-1 -top-1 z-10 grid size-5 place-items-center rounded-full bg-black/70 text-[10px] text-accent ring-1 ring-accent/60 hover:bg-accent hover:text-bg"
-          title="Tornar Ninja Líder"
-          aria-label="Tornar Ninja Líder"
-        >
-          ★
-        </button>
-      )}
-    </div>
-  );
-}
-
-/** Um Time: Ninjas juntos numa moldura, com alça para arrastar o Time inteiro. Ninja sozinho = Time de 1. */
-function TeamGroup({
-  group,
-  controls,
-  mine,
-  onInspect,
-  sizeClass,
-}: {
-  group: CardInstance[];
-  controls?: ArenaControls;
-  mine: boolean;
-  onInspect: (card: Card) => void;
-  sizeClass?: string;
-}) {
-  const inTeam = group.length > 1;
-  const cards = group.map((c, i) => (
-    <TeamCard
-      key={c.uid}
-      inst={c}
-      controls={controls}
-      mine={mine}
-      onInspect={onInspect}
-      leader={i === 0}
-      inTeam={inTeam}
-      sizeClass={sizeClass}
-    />
-  ));
-  if (!inTeam) return <>{cards}</>;
-  return (
-    <div className="relative flex items-end gap-1 rounded-xl bg-accent/[0.07] p-1.5 ring-1 ring-accent/35">
-      {/*
-        Selo na borda de BAIXO (não ocupa altura e não cobre os selos LÍDER/★, que ficam no topo de cada
-        carta): é também a alça para arrastar o Time inteiro.
-      */}
-      <div
-        draggable={mine}
-        onDragStart={(e) => {
-          e.dataTransfer.setData(TEAM_MIME, group[0].uid);
-          e.dataTransfer.effectAllowed = 'move';
-        }}
-        className={`absolute bottom-0 left-1/2 z-20 flex -translate-x-1/2 translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full bg-bg px-2 text-[9px] font-bold uppercase leading-4 tracking-widest text-accent ring-1 ring-accent/50 ${
-          mine ? 'cursor-grab hover:bg-accent hover:text-bg active:cursor-grabbing' : ''
-        }`}
-        title={mine ? 'Arraste por aqui para mover o Time inteiro' : 'Time [Team]'}
-      >
-        {mine && <span aria-hidden>⠿</span>}
-        Time {group.length}/{TEAM_MAX}
-      </div>
-      {cards}
-    </div>
-  );
-}
-
-/** Área larga (Vila, Campo de Batalha, Chakra): cartas lado a lado sobre a mesa. */
-function SpreadZone({
-  zone,
-  label,
-  en,
-  cards,
-  controls,
-  mine,
-  onInspect,
-  className = '',
-  style,
-  stacked,
-  cardSize = TABLE_CARD,
-}: {
-  zone: ZoneName;
-  label: string;
-  en: string;
-  cards: CardInstance[] | undefined;
-  controls?: ArenaControls;
-  mine: boolean;
-  onInspect: (card: Card) => void;
-  className?: string;
-  style?: React.CSSProperties;
-  /** Cartas sobrepostas em leque, numa linha só (zonas estreitas, como o Chakra). */
-  stacked?: boolean;
-  /** Tamanho das cartas nesta zona (padrão: o da mesa). */
-  cardSize?: string;
-}) {
-  const drop = useDrop(zone, controls);
-  const teamsHere = zone === 'village' || zone === 'battlefield';
-  return (
-    <section
-      aria-label={label}
-      style={style}
-      {...drop.handlers}
-      className={`relative min-h-0 min-w-0 rounded-xl transition-colors ${
-        drop.over ? 'bg-accent/15 ring-2 ring-accent/70' : ''
-      } ${className}`}
-    >
-      {!cards?.length && <Watermark label={label} en={en} />}
-      {!!cards?.length &&
-        (stacked ? (
-          <div className="flex h-full w-full items-center justify-center overflow-hidden p-2">
-            {cards.map((c, i) => (
-              <ArenaCard
-                key={c.uid}
-                inst={c}
-                draggable={mine}
-                onInspect={onInspect}
-                className={i > 0 ? '-ml-[clamp(1.5rem,15cqh,4.5rem)]' : ''}
-              />
-            ))}
-          </div>
-        ) : teamsHere ? (
-          // O Campo de Batalha tem no máximo 3 Times numa linha: sem rolagem (o selo do Time pode passar da borda).
-          <div
-            className={`flex h-full w-full flex-wrap content-center items-center justify-center gap-x-2.5 gap-y-4 px-2 ${
-              zone === 'battlefield' ? 'overflow-visible py-1' : 'overflow-auto pb-3 pt-3'
-            }`}
-          >
-            {teamGroups(cards).map((group) => (
-              <TeamGroup
-                key={group[0].uid}
-                group={group}
-                controls={controls}
-                mine={mine}
-                onInspect={onInspect}
-                sizeClass={cardSize}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="flex h-full w-full flex-wrap content-center items-center justify-center gap-1.5 overflow-auto p-2">
-            {cards.map((c) => (
-              <ArenaCard key={c.uid} inst={c} draggable={mine} onInspect={onInspect} />
-            ))}
-          </div>
-        ))}
-      {zone === 'battlefield' && !!cards?.length && (
-        <span
-          className="absolute left-2 top-1.5 rounded-full bg-black/40 px-2 text-[10px] font-semibold uppercase tracking-widest text-white/50"
-          title={`Até ${BATTLEFIELD_MAX_TEAMS} Times enviados à Batalha por turno`}
-        >
-          Times {countTeams(cards, isNinja)}/{BATTLEFIELD_MAX_TEAMS}
-        </span>
-      )}
-    </section>
-  );
-}
-
-function IconButton({ label, children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { label: string }) {
-  return (
-    <button
-      type="button"
-      {...props}
-      aria-label={label}
-      title={label}
-      className="grid size-6 place-items-center rounded-full bg-black/50 font-mono text-[11px] font-bold text-text ring-1 ring-white/15 hover:bg-accent hover:text-bg disabled:cursor-not-allowed disabled:opacity-30"
-    >
-      {children}
-    </button>
-  );
-}
-
-/** Marcador de Turnos compacto: trilha de casas com a atual destacada. */
-function TurnTrack({ turn }: { turn: number }) {
-  return (
-    <div className="flex items-center gap-1.5" aria-label={`Indicador de Turnos: ${turn}`} title="Indicador de Turnos [Turn Indicator]">
-      <span className="text-[9px] font-semibold uppercase tracking-widest text-white/40">Turno</span>
-      <ol className="flex items-center gap-[3px]">
-        {Array.from({ length: TURN_SLOTS }, (_, i) => (
-          <li
-            key={i}
-            className={
-              i === turn
-                ? 'grid size-5 place-items-center rounded-full bg-accent font-mono text-[10px] font-bold text-bg shadow-[0_0_8px_var(--color-accent)]'
-                : `size-1.5 rounded-full ${i < turn ? 'bg-accent/60' : 'bg-white/20'}`
-            }
-          >
-            {i === turn ? i : null}
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
-}
-
-/** Lista de uma zona (Descartes, Reforço, Removidos) com botões para mover as suas cartas. */
+/** Lista de uma zona (Descartes, Chakra, Reforço, Removidos) com botões para mover as suas cartas. */
 function ZoneListDialog({
   title,
   zone,
@@ -624,7 +411,18 @@ function ZoneListDialog({
             const card = CARDS_BY_ID.get(c.cardId);
             return (
               <li key={c.uid} className="flex items-center gap-3">
-                <ArenaCard inst={c} draggable={false} onInspect={onInspect} sizeClass="w-12" />
+                <button
+                  type="button"
+                  onClick={() => card && onInspect(card)}
+                  className="w-12 shrink-0 overflow-hidden rounded ring-1 ring-border hover:ring-accent"
+                  title={card ? nameOf(card) : c.cardId}
+                >
+                  {card ? (
+                    <img src={cardImageUrl(card, 'thumb')} alt={nameOf(card)} className="aspect-[5/7] w-full object-cover" />
+                  ) : (
+                    <div className="aspect-[5/7] w-full bg-surface-2" />
+                  )}
+                </button>
                 <div className="flex min-w-0 flex-1 flex-col gap-1">
                   <span className="truncate text-sm font-medium">{card ? nameOf(card) : c.cardId}</span>
                   {controls && (
@@ -652,270 +450,1219 @@ function ZoneListDialog({
   );
 }
 
-/** O painel de um jogador sobre a mesa. `flipped` = oponente (espelhado). `controls` só no seu. */
-function PlayerMat({
-  side,
-  flipped,
+/* ── Times ──────────────────────────────────────────────────────────────── */
+
+/** Quanto um Ninja de Apoio cobre o anterior (fração da largura), em pé e Ferido (design: 46 e 20 de 96). */
+const SUPPORT_OVERLAP = 46 / 96;
+const INJURED_OVERLAP = 20 / 96;
+/** Deslocamento vertical do Apoio (design: 14 de 134), para baixo no seu lado e para cima no do oponente. */
+const SUPPORT_DROP = 14 / 134;
+
+/** Poder impresso de um Ninja do catálogo (Saudável e Ferido). */
+const ninjaPower: PowerLookup = (cardId) => {
+  const card = CARDS_BY_ID.get(cardId);
+  return card?.type === 'ninja' ? card : undefined;
+};
+
+/** Dica do chip: a conta do Poder do Time (docs/REGRAS.md 3.5.4). */
+function powerTitle(power: TeamPower, members: number): string {
+  const [leader, ...supports] = power.parts;
+  if (supports.length === 0) return `Poder: ${leader} (Combate do Ninja)`;
+  return (
+    `Poder do Time (${members}/${TEAM_MAX} Ninjas): ${leader} (Combate do Líder) + ` +
+    `${supports.join(' + ')} (Suporte dos Apoios) = ${formatTeamPower(power)}`
+  );
+}
+
+/** Largura que um Time ocupa na mesa (para encolher a Vila quando há muitas cartas). */
+function teamWidth(group: CardInstance[], w: number, h: number): number {
+  return group.reduce((sum, c, i) => {
+    if (i === 0) return sum + (c.injured ? h : w);
+    return sum + w - w * (c.injured ? INJURED_OVERLAP : SUPPORT_OVERLAP);
+  }, 0);
+}
+
+/**
+ * Um Ninja do Time: além de arrastável, recebe outro Ninja solto em cima dele para formar (ou aumentar)
+ * um Time. O Líder fica por cima dos Apoios; Ferido = girado 90°.
+ */
+function TeamMember({
+  inst,
+  index,
+  size,
+  inTeam,
+  controls,
+  mine,
+  onInspect,
+  marginLeft,
+  marginRight,
+  dy,
+  z,
+}: {
+  inst: CardInstance;
+  index: number;
+  size: { w: number; h: number };
+  inTeam: boolean;
+  controls?: ArenaControls;
+  mine: boolean;
+  onInspect: (card: Card) => void;
+  marginLeft: number;
+  marginRight: number;
+  dy: number;
+  z: number;
+}) {
+  const [over, setOver] = useState(false);
+  const ninja = isNinja(inst.cardId);
+  const accepts = !!controls && ninja;
+  const leader = index === 0;
+  const roleClass = leader ? (mine ? styles.leaderMine : styles.leaderOpp) : styles.support;
+  return (
+    <div
+      className={cx(styles.member, roleClass, over && styles.memberOver)}
+      style={{ width: size.w, height: size.h, marginLeft, marginRight, transform: `translateY(${dy}px)`, zIndex: z }}
+      onDragOver={(e) => {
+        if (!accepts || !e.dataTransfer.types.includes(CARD_MIME)) return;
+        e.preventDefault();
+        // Sem stopPropagation: a zona precisa saber para esconder a barra de inserção.
+        (e.nativeEvent as unknown as Record<symbol, boolean>)[JOIN_TARGET] = true;
+        e.dataTransfer.dropEffect = 'move';
+        setOver(true);
+      }}
+      onDragLeave={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOver(false);
+      }}
+      onDrop={(e) => {
+        setOver(false);
+        if (!accepts) return;
+        const uid = e.dataTransfer.getData(CARD_MIME);
+        if (!uid) return;
+        e.preventDefault();
+        e.stopPropagation(); // não deixa a zona tratar como "mover para a zona"
+        if (uid !== inst.uid) controls!.onJoinTeam(uid, inst.uid);
+      }}
+    >
+      <TableCard
+        inst={inst}
+        w={size.w}
+        h={size.h}
+        mine={mine}
+        onInspect={onInspect}
+        style={{ transform: inst.injured ? 'rotate(90deg)' : undefined }}
+      />
+      {mine && controls && ninja && (
+        <div className={styles.memberTools}>
+          {inTeam && !leader && (
+            <button
+              type="button"
+              className={styles.tool}
+              onClick={() => controls.onSetLeader(inst.uid)}
+              disabled={controls.busy}
+              title="Tornar Ninja Líder [Head Ninja]"
+              aria-label="Tornar Ninja Líder"
+            >
+              ★
+            </button>
+          )}
+          <button
+            type="button"
+            className={styles.tool}
+            onClick={() => controls.onSetInjured(inst.uid, !inst.injured)}
+            disabled={controls.busy}
+            title={inst.injured ? 'Curar: voltar ao Estado Saudável' : 'Ferir: Estado Ferido (carta na horizontal)'}
+            aria-label={inst.injured ? 'Curar Ninja' : 'Ferir Ninja'}
+          >
+            {inst.injured ? '↺' : '↻'}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Um Time (Ninja sozinho = Time de 1), com a alça para arrastar o Time inteiro. */
+function TeamStack({
+  group,
+  size,
+  mine,
   controls,
   onInspect,
-  onOpenList,
-  rewardDrop,
+  style,
 }: {
+  group: CardInstance[];
+  size: { w: number; h: number };
+  mine: boolean;
+  controls?: ArenaControls;
+  onInspect: (card: Card) => void;
+  style?: React.CSSProperties;
+}) {
+  const inTeam = group.length > 1;
+  // Recalculado a cada estado: ferir/curar um membro ou trocar o Líder muda o Poder na hora.
+  const power = teamPower(group, ninjaPower);
+  const drop = Math.round(size.h * SUPPORT_DROP) * (mine ? 1 : -1);
+  const bulge = (size.h - size.w) / 2; // quanto a carta girada passa da largura dela, de cada lado
+  return (
+    <div className={styles.team} style={style} {...{ [TEAM_ATTR]: group[0].uid }}>
+      {group.map((c, i) => {
+        const first = i === 0;
+        const last = i === group.length - 1;
+        const marginLeft = first
+          ? c.injured
+            ? bulge
+            : 0
+          : -size.w * (c.injured ? INJURED_OVERLAP : SUPPORT_OVERLAP);
+        return (
+          <TeamMember
+            key={c.uid}
+            inst={c}
+            index={i}
+            size={size}
+            inTeam={inTeam}
+            controls={controls}
+            mine={mine}
+            onInspect={onInspect}
+            marginLeft={marginLeft}
+            marginRight={first && last && c.injured ? bulge : 0}
+            dy={first ? 0 : drop}
+            z={group.length - i}
+          />
+        );
+      })}
+      {power && (
+        <div
+          draggable={mine}
+          onDragStart={(e) => {
+            e.dataTransfer.setData(TEAM_MIME, group[0].uid);
+            e.dataTransfer.effectAllowed = 'move';
+          }}
+          className={cx(styles.teamHandle, mine && styles.draggable)}
+          title={powerTitle(power, group.length) + (mine ? '\nArraste por aqui para mover o Time inteiro.' : '')}
+          aria-label={`Poder do Time: ${formatTeamPower(power)}`}
+        >
+          {mine && (
+            <span aria-hidden className={styles.teamGrip}>
+              ⠿
+            </span>
+          )}
+          Poder
+          <span className={styles.teamCount}>{formatTeamPower(power)}</span>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ── Zonas das linhas ───────────────────────────────────────────────────── */
+
+interface RowProps {
   side: ArenaSide;
-  flipped: boolean;
+  mine: boolean;
   controls?: ArenaControls;
   onInspect: (card: Card) => void;
   onOpenList: (zone: ZoneName) => void;
-  /** Só no painel do oponente: você solta aqui uma carta sua (ou o topo do seu Deck) como Prêmio dele. */
+  /** Só na linha do oponente: você solta aqui uma carta sua (ou o topo do seu Deck) como Prêmio dele. */
   rewardDrop?: CustomDrop;
-}) {
-  const z = side.zones;
-  const mine = !!controls;
+}
 
-  // Espelhar = inverter linhas e colunas, mantendo o texto de pé.
-  const areas = flipped
-    ? `"piles village reward" "battle battle battle"`
-    : `"battle battle battle" "reward village piles"`;
-  const columns = flipped ? 'auto minmax(0,1fr) auto' : 'auto minmax(0,1fr) auto';
-  const rows = flipped ? 'minmax(0,1.35fr) minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1.35fr)';
-
-  const deckButtons = controls && (
-    <div className="flex gap-1">
-      <IconButton label="Comprar 1 carta" onClick={controls.onDraw} disabled={controls.busy || z.deck.count === 0}>
-        +1
-      </IconButton>
-      <IconButton label="Embaralhar o deck" onClick={controls.onShuffle} disabled={controls.busy || z.deck.count < 2}>
-        ⇄
-      </IconButton>
-      <IconButton
-        label="Buscar uma carta no deck (embaralha depois)"
-        onClick={controls.onSearch}
-        disabled={controls.busy || z.deck.count === 0}
-      >
-        ⌕
-      </IconButton>
-    </div>
-  );
-
+function DeckZone({ side, mine, controls }: RowProps) {
+  const drop = useDrop('deck', controls);
+  const count = side.zones.deck.count;
+  const ty = mine ? -1 : 1; // as camadas sobem no seu lado e descem no do oponente
   return (
     <div
-      className="grid min-h-[18rem] flex-1 gap-x-3 gap-y-2 px-3 py-2 [container-type:size] lg:min-h-0"
-      style={{ gridTemplateAreas: areas, gridTemplateColumns: columns, gridTemplateRows: rows }}
-      aria-label={mine ? 'Seu painel' : `Painel de ${side.nickname}`}
+      {...drop.handlers}
+      className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.deck, drop.over && styles.over)}
+      aria-label={mine ? 'Seu Deck' : `Deck de ${side.nickname}`}
     >
-      {/* G — Campo de Batalha: encosta no do oponente, no meio da mesa. */}
-      <SpreadZone
-        zone="battlefield"
-        label="Campo de Batalha"
-        en="Battlefield"
-        cards={z.battlefield.cards}
-        controls={controls}
-        mine={mine}
-        onInspect={onInspect}
-        style={{ gridArea: 'battle' }}
-        className="bg-gradient-to-b from-danger/10 to-danger/5 ring-1 ring-danger/20"
-      />
-
-      {/* A — Prêmios de Batalha (face para baixo; 10 vence). */}
-      <div style={{ gridArea: 'reward' }} className="flex items-center">
-        {/* Ninguém coloca cartas nos próprios Prêmios: eles vêm do Deck do oponente (docs/REGRAS.md 3.5.4). */}
-        <PileSlot
-          zone="rewards"
-          label="Prêmios"
-          en="Battle Reward Area"
-          count={z.rewards.count}
-          faceDown
-          mine={mine}
-          onInspect={onInspect}
-          customDrop={rewardDrop}
-        />
-      </div>
-
-      {/* E — Vila: Ninjas, Clientes e Missões Permanentes. */}
-      <SpreadZone
-        zone="village"
-        label="Vila"
-        en="Village"
-        cards={z.village.cards}
-        controls={controls}
-        mine={mine}
-        onInspect={onInspect}
-        style={{ gridArea: 'village' }}
-        cardSize={VILLAGE_CARD}
-        className="bg-white/[0.025] ring-1 ring-white/[0.06]"
-      />
-
-      {/* B, C, D — Deck, Descartes e Chakra (espelhados no oponente). */}
-      <div
-        style={{ gridArea: 'piles' }}
-        className={`flex min-h-0 items-stretch gap-3 ${flipped ? 'flex-row-reverse' : ''}`}
-      >
-        <SpreadZone
-          zone="chakra"
-          label="Chakra"
-          en="Chakra Area"
-          cards={z.chakra.cards}
-          controls={controls}
-          mine={mine}
-          onInspect={onInspect}
-          stacked
-          className="w-[clamp(6rem,40cqh,14rem)] bg-sky-500/[0.06] ring-1 ring-sky-400/15"
-        />
-        <div className={`flex items-center gap-3 ${flipped ? 'flex-row-reverse' : ''}`}>
-          <PileSlot
-            zone="discard"
-            label="Descartes"
-            en="Discard Pile"
-            count={z.discard.count}
-            top={z.discard.cards?.at(-1)}
-            controls={controls}
-            mine={mine}
-            onInspect={onInspect}
-            onOpen={() => onOpenList('discard')}
+      <ZoneLabel text="Deck" />
+      {count === 0 ? (
+        <div className={styles.empty} />
+      ) : (
+        <div className={styles.deckStack}>
+          {count > 2 && <div className={styles.backLayer} style={{ transform: `translate(4px, ${4 * ty}px)` }} />}
+          {count > 1 && <div className={styles.backLayer} style={{ transform: `translate(2px, ${2 * ty}px)` }} />}
+          <div
+            role={controls ? 'button' : undefined}
+            tabIndex={controls ? 0 : undefined}
+            draggable={!!controls}
+            onDragStart={(e) => {
+              e.dataTransfer.setData(DECK_TOP_MIME, '1');
+              e.dataTransfer.effectAllowed = 'move';
+            }}
+            onClick={() => controls && !controls.busy && controls.onDraw()}
+            onKeyDown={(e) => e.key === 'Enter' && controls && !controls.busy && controls.onDraw()}
+            className={cx(styles.back, styles.deckTop, controls && styles.drawable)}
+            title={
+              controls
+                ? 'Clique para comprar 1 carta · arraste o topo para os Prêmios do oponente'
+                : 'Face para baixo: dá para contar, não para ver'
+            }
           />
-          <PileSlot
-            zone="deck"
-            label="Deck"
-            en="Deck Area"
-            count={z.deck.count}
-            faceDown
-            controls={controls}
-            mine={mine}
-            onInspect={onInspect}
-            dragTop={mine}
+        </div>
+      )}
+      <div className={styles.pill}>{count}</div>
+      {controls && (
+        <div className={styles.deckTools}>
+          <button
+            type="button"
+            className={styles.tool}
+            onClick={controls.onShuffle}
+            disabled={controls.busy || count < 2}
+            title="Embaralhar o deck"
+            aria-label="Embaralhar o deck"
           >
-            {deckButtons}
-          </PileSlot>
+            ⇄
+          </button>
+          <button
+            type="button"
+            className={styles.tool}
+            onClick={controls.onSearch}
+            disabled={controls.busy || count === 0}
+            title="Buscar uma carta no deck (embaralha depois)"
+            aria-label="Buscar uma carta no deck"
+          >
+            ⌕
+          </button>
+        </div>
+      )}
+      {/* Logo abaixo do seu Deck (fora do arco da mão): devolver a mão ao Deck, com confirmação. */}
+      {controls && (
+        <button
+          type="button"
+          className={styles.returnHand}
+          onClick={() => {
+            const n = side.zones.hand.count;
+            const cards = n === 1 ? '1 carta' : `${n} cartas`;
+            if (confirm(`Devolver a mão inteira (${cards}) ao Deck e embaralhar? Depois você compra as novas cartas.`)) {
+              controls.onReturnHand();
+            }
+          }}
+          disabled={controls.busy || side.zones.hand.count === 0}
+          title="Mulligan: devolve todas as cartas da mão ao Deck e embaralha (pede confirmação)"
+        >
+          ↩ Mão → Deck
+        </button>
+      )}
+    </div>
+  );
+}
+
+function DiscardZone({ side, mine, controls, onInspect, onOpenList }: RowProps) {
+  const drop = useDrop('discard', controls);
+  const { count, cards } = side.zones.discard;
+  const top = cards?.at(-1);
+  return (
+    <div
+      {...drop.handlers}
+      onClick={() => onOpenList('discard')}
+      className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.discard, styles.clickable, drop.over && styles.over)}
+      title="Descartes [Discard Pile]: clique para ver a pilha"
+    >
+      <ZoneLabel text="Descarte" />
+      {top ? (
+        <TableCard
+          inst={top}
+          {...MINI_CARD}
+          mine={mine}
+          onInspect={onInspect}
+          onClick={() => onOpenList('discard')}
+          style={{ transform: `rotate(${mine ? 3 : -4}deg)` }}
+        />
+      ) : (
+        <div className={styles.empty} />
+      )}
+      {count > 0 && <div className={styles.count}>{count}</div>}
+    </div>
+  );
+}
+
+/** Rotação das cartas empilhadas no Chakra (a de cima por último). */
+const CHAKRA_TILT = [-10, -3, 5];
+
+function ChakraZone({ side, mine, controls, onInspect, onOpenList }: RowProps) {
+  const drop = useDrop('chakra', controls);
+  const { count, cards = [] } = side.zones.chakra;
+  const shown = cards.slice(-3);
+  return (
+    <div
+      {...drop.handlers}
+      onClick={() => onOpenList('chakra')}
+      className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.chakra, styles.clickable, drop.over && styles.over)}
+      title="Área de Chakra [Chakra Area]: clique para ver as cartas"
+    >
+      <div className={styles.label}>
+        <span className={styles.kanji} style={{ fontSize: 11 }}>
+          チャクラ
+        </span>
+      </div>
+      <div className={styles.chakraStack}>
+        {shown.length === 0
+          ? CHAKRA_TILT.map((r) => <div key={r} className={styles.chakraSlot} style={{ transform: `rotate(${r}deg)`, opacity: 0.45 }} />)
+          : shown.map((c, i) => (
+              <TableCard
+                key={c.uid}
+                inst={c}
+                w={46}
+                h={64}
+                mine={mine}
+                onInspect={onInspect}
+                onClick={() => onOpenList('chakra')}
+                style={{ position: 'absolute', inset: 0, borderRadius: 4, transform: `rotate(${CHAKRA_TILT[i + 3 - shown.length]}deg)` }}
+              />
+            ))}
+      </div>
+      <div className={styles.bigCount}>
+        <b>{count}</b>
+        <span>CHAKRA</span>
+      </div>
+    </div>
+  );
+}
+
+function VillageZone({ side, mine, controls, onInspect }: RowProps) {
+  const drop = useDrop('village', controls, true);
+  const cards = side.zones.village.cards ?? [];
+  const groups = teamGroups(cards);
+  // Muitas cartas: os Times passam a se sobrepor para caber na linha.
+  const widths = groups.map((g) => teamWidth(g, MINI_CARD.w, MINI_CARD.h));
+  const total = widths.reduce((a, b) => a + b, 0);
+  const gap = groups.length < 2 ? 12 : Math.min(12, (VILLAGE_INNER - total) / (groups.length - 1));
+  return (
+    <div
+      {...drop.handlers}
+      className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.village, drop.over && styles.over)}
+      aria-label={mine ? 'Sua Vila' : `Vila de ${side.nickname}`}
+    >
+      <ZoneLabel text="Vila" kanji="里" />
+      <InsertBar at={drop.insert} />
+      {groups.length === 0 && <span className={styles.zoneHint}>{mine && controls ? 'Solte cartas aqui' : 'Vazia'}</span>}
+      {groups.map((g, i) => (
+        <TeamStack
+          key={g[0].uid}
+          group={g}
+          size={MINI_CARD}
+          mine={mine}
+          controls={controls}
+          onInspect={onInspect}
+          style={{ marginLeft: i === 0 ? 0 : gap - 12, zIndex: i }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function RewardZone({ side, mine, rewardDrop }: RowProps) {
+  const drop = useCustomDrop(rewardDrop);
+  const count = side.zones.rewards.count;
+  return (
+    <div
+      {...drop.handlers}
+      className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.reward, drop.over && styles.over)}
+      title={
+        rewardDrop?.hint ??
+        'Prêmios de Batalha [Battle Rewards]: face para baixo; vêm do Deck do oponente. Com 10, você vence.'
+      }
+    >
+      <ZoneLabel text="Prêmios" />
+      <div className={styles.rewardStack}>
+        {count === 0 ? (
+          <div className={styles.empty} style={{ width: 50, height: 70 }} />
+        ) : (
+          <>
+            {count > 1 && <div className={styles.backLayer} style={{ transform: 'translate(4px,-4px)' }} />}
+            {/* Face para baixo: as costas da carta; no seu lado, com o contorno roxo. */}
+            <div
+              className={styles.back}
+              style={mine ? { boxShadow: '0 0 0 1px var(--color-accent-500)' } : undefined}
+            />
+          </>
+        )}
+      </div>
+      <div className={styles.rewardNum}>{count}</div>
+    </div>
+  );
+}
+
+/** Linha de zonas de um jogador. A do oponente vai da esquerda para a direita; a sua, espelhada. */
+function ZoneRow(props: RowProps) {
+  return (
+    <div className={cx(styles.row, props.mine ? styles.rowMine : styles.rowOpp)}>
+      <DeckZone {...props} />
+      <DiscardZone {...props} />
+      <ChakraZone {...props} />
+      <VillageZone {...props} />
+      <RewardZone {...props} />
+    </div>
+  );
+}
+
+/* ── Campo de Batalha ───────────────────────────────────────────────────── */
+
+function Field({
+  side,
+  mine,
+  controls,
+  onInspect,
+}: {
+  side: ArenaSide;
+  mine: boolean;
+  controls?: ArenaControls;
+  onInspect: (card: Card) => void;
+}) {
+  const drop = useDrop('battlefield', controls, true);
+  const cards = side.zones.battlefield.cards ?? [];
+  const typeOf = (c: CardInstance) => CARDS_BY_ID.get(c.cardId)?.type;
+  const missions = cards.filter((c) => typeOf(c) === 'mission');
+  const jutsus = cards.filter((c) => typeOf(c) === 'jutsu');
+  const teams = teamGroups(cards.filter((c) => typeOf(c) !== 'mission' && typeOf(c) !== 'jutsu'));
+  // Missões à esquerda da tela e Jutsus à direita, para os dois jogadores (sem espelhar o oponente).
+  const [left, right] = [missions, jutsus];
+  return (
+    <div
+      {...drop.handlers}
+      className={cx(styles.field, mine ? styles.fieldMine : styles.fieldOpp, drop.over && styles.over)}
+      aria-label={mine ? 'Seu Campo de Batalha' : `Campo de Batalha de ${side.nickname}`}
+    >
+      <InsertBar at={drop.insert} />
+      {teams.length === 0 ? (
+        // Sem Ninjas no Campo: Missões e Jutsus ficam no centro, na mesma ordem (Missões à esquerda do jogador).
+        <div className={cx(styles.teams, styles.fieldTeams, styles.fieldLoose)}>
+          {[...left, ...right].map((c) => (
+            <TableCard key={c.uid} inst={c} {...FIELD_CARD} mine={mine} onInspect={onInspect} className={styles.fieldSideCard} />
+          ))}
+        </div>
+      ) : (
+        <>
+          <FieldSide cards={left} edge="left" mine={mine} onInspect={onInspect} />
+          {/* Centro: só os Times (a barra de reordenar só conta estes). */}
+          <div className={cx(styles.teams, styles.fieldTeams)}>
+            {teams.map((g) => (
+              <TeamStack key={g[0].uid} group={g} size={FIELD_CARD} mine={mine} controls={controls} onInspect={onInspect} />
+            ))}
+          </div>
+          <FieldSide cards={right} edge="right" mine={mine} onInspect={onInspect} />
+        </>
+      )}
+    </div>
+  );
+}
+
+/** Largura das faixas laterais do Campo (Missões e Jutsus), entre a borda chanfrada e os Times. */
+const FIELD_SIDE_SPACE = 230;
+
+/** Missões ou Jutsus jogados no Campo de Batalha, numa faixa lateral, sobrepostos se forem muitos. */
+function FieldSide({
+  cards,
+  edge,
+  mine,
+  onInspect,
+}: {
+  cards: CardInstance[];
+  edge: 'left' | 'right';
+  mine: boolean;
+  onInspect: (card: Card) => void;
+}) {
+  if (cards.length === 0) return null;
+  const n = cards.length;
+  const overlap = n > 1 ? Math.max(30, (n * FIELD_CARD.w - FIELD_SIDE_SPACE) / (n - 1)) : 0;
+  return (
+    <div className={cx(styles.fieldSide, edge === 'left' ? styles.fieldSideLeft : styles.fieldSideRight)}>
+      {cards.map((c, i) => (
+        <TableCard
+          key={c.uid}
+          inst={c}
+          {...FIELD_CARD}
+          mine={mine}
+          onInspect={onInspect}
+          className={styles.fieldSideCard}
+          style={{ marginLeft: i === 0 ? 0 : -overlap, zIndex: i }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function Arena({
+  you,
+  opponent,
+  phase,
+  controls,
+  onInspect,
+}: {
+  you: ArenaSide;
+  opponent: ArenaSide;
+  phase: number;
+  controls?: ArenaControls;
+  onInspect: (card: Card) => void;
+}) {
+  const teams = (side: ArenaSide) => countTeams(side.zones.battlefield.cards ?? [], isNinja);
+  return (
+    <div className={styles.arena}>
+      <div className={styles.arenaInner}>
+        <div className={cx(styles.ring, styles.ringOuter)} />
+        <div className={cx(styles.ring, styles.ringInner)} />
+        <div className={cx(styles.arenaLabel, styles.arenaLabelOpp)}>
+          <span>戦場</span>
+          <span>
+            Campo de Batalha · {opponent.nickname} · {teams(opponent)}/{BATTLEFIELD_MAX_TEAMS} Times
+          </span>
+        </div>
+        <div className={cx(styles.arenaLabel, styles.arenaLabelMine)}>
+          <span>戦場</span>
+          <span>
+            Campo de Batalha · Você · {teams(you)}/{BATTLEFIELD_MAX_TEAMS} Times
+          </span>
+        </div>
+        <div className={styles.centerLine} />
+        <Field side={opponent} mine={false} onInspect={onInspect} />
+        <Field side={you} mine controls={controls} onInspect={onInspect} />
+        <div className={styles.phasePill} aria-label={`Fase ${PHASES[phase]}`}>
+          <span>{PHASE_KANJI[phase]}</span>
+          <span>{PHASES[phase]}</span>
         </div>
       </div>
     </div>
   );
 }
 
-/** Borda da mesa de um jogador: placa (apelido + turno), mão e as áreas fora do painel. */
-function HandRail({
-  side,
-  you,
-  controls,
-  onInspect,
-  onOpenList,
-}: {
-  side: ArenaSide;
-  you: boolean;
-  controls?: ArenaControls;
-  onInspect: (card: Card) => void;
-  onOpenList: (zone: ZoneName) => void;
-}) {
-  const z = side.zones;
-  const mine = !!controls;
-  const handDrop = useDrop('hand', controls);
-  const reinforcementDrop = useDrop('reinforcement', controls);
-  const removedDrop = useDrop('removed', controls);
-  const hand = z.hand.cards ?? [];
+/* ── Mãos ───────────────────────────────────────────────────────────────── */
 
-  const chip = (over: boolean) =>
-    `rounded-full px-2.5 py-1 text-[11px] text-white/70 ring-1 transition-colors ${
-      over ? 'bg-accent/30 ring-accent' : 'bg-black/40 ring-white/10 hover:bg-black/60'
-    }`;
+function OpponentHand({ side }: { side: ArenaSide }) {
+  const n = Math.min(side.zones.hand.count, 12);
+  return (
+    <div className={styles.oppHand} title={`${side.zones.hand.count} cartas na mão de ${side.nickname}`}>
+      {Array.from({ length: n }, (_, i) => (
+        <div key={i} className={styles.back} style={{ transform: `rotate(${(i - (n - 1) / 2) * -3}deg)` }} />
+      ))}
+    </div>
+  );
+}
+
+/** Distância entre as cartas da mão (design: 112px com 22px de sobreposição). */
+const HAND_STEP = HAND_CARD.w - 22;
+/** Menor distância entre as cartas, com a mão cheia. */
+const HAND_MIN_STEP = 56;
+/** Até quantas pilhas a mão usa a distância do design; depois, cada pilha a mais aproxima as cartas. */
+const HAND_ROOMY = 6;
+/** Quanto as cartas se aproximam a cada pilha a mais. */
+const HAND_SQUEEZE = 5;
+/** Cartas inteiras de cada lado da carta central do arco, na distância do design; as outras somem e a mão rola. */
+const HAND_RADIUS = 4;
+
+/**
+ * Distância entre as cartas e quantas ficam inteiras de cada lado da central: quanto mais pilhas na mão,
+ * mais juntas (e mais cartas cabem na mesma largura do arco); quando a mão diminui, voltam a se afastar.
+ */
+function handSpacing(n: number): { step: number; radius: number } {
+  const step = Math.max(HAND_MIN_STEP, HAND_STEP - Math.max(0, n - HAND_ROOMY) * HAND_SQUEEZE);
+  return { step, radius: Math.max(HAND_RADIUS, Math.floor((HAND_RADIUS * HAND_STEP) / step)) };
+}
+/** Roda do mouse / touchpad: quanto de deslocamento vale uma carta. */
+const WHEEL_STEP = 60;
+
+/**
+ * Sua mão em arco, como um carrossel: o arco gira em torno de uma carta central (`focus`), com
+ * `HAND_RADIUS` cartas inteiras de cada lado. Com mais cartas, a roda do mouse (ou o deslize do touchpad)
+ * gira o arco, e os chips nas pontas mostram quantas estão escondidas de cada lado.
+ */
+function Hand({ side, controls, onInspect }: { side: ArenaSide; controls?: ArenaControls; onInspect: (card: Card) => void }) {
+  const drop = useDrop('hand', controls);
+  const stacks = stackByCard(side.zones.hand.cards ?? []);
+  const n = stacks.length;
+  const center = (n - 1) / 2;
+  const { step, radius } = handSpacing(n);
+  // Faixa da carta central: com até 2×radius+1 cartas, fica no meio e nada rola.
+  const minFocus = Math.min(radius, center);
+  const maxFocus = Math.max(n - 1 - radius, center);
+  const [wanted, setWanted] = useState<number | null>(null);
+  const focus = wanted === null ? center : Math.min(maxFocus, Math.max(minFocus, wanted));
+  const scrollable = maxFocus > minFocus;
+  const scrollBy = (cards: number) => setWanted(Math.min(maxFocus, Math.max(minFocus, focus + cards)));
+
+  // Roda do mouse: ouvinte nativo (não passivo) para impedir a rolagem da página.
+  const ref = useRef<HTMLDivElement>(null);
+  const wheel = useRef({ acc: 0, scrollBy });
+  wheel.current.scrollBy = scrollBy;
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !scrollable) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      const px = e.deltaMode === 0 ? d : d * 40; // linhas/páginas → px
+      const w = wheel.current;
+      if (Math.abs(px) >= WHEEL_STEP) {
+        w.acc = 0; // um "clique" da roda = uma carta
+        w.scrollBy(Math.sign(px));
+        return;
+      }
+      w.acc += px; // touchpad: soma os deslocamentos pequenos
+      if (Math.abs(w.acc) >= WHEEL_STEP) {
+        w.scrollBy(Math.sign(w.acc));
+        w.acc = 0;
+      }
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, [scrollable]);
+
+  const hiddenLeft = stacks.filter((_, i) => i < focus - radius - 0.5).length;
+  const hiddenRight = stacks.filter((_, i) => i > focus + radius + 0.5).length;
+  // Chips logo depois das cartas inteiras do arco.
+  const chipOffset = (radius + 0.5) * step + HAND_CARD.w / 2;
 
   return (
-    <div className={`relative z-20 flex items-end gap-3 px-3 ${you ? 'pb-2' : 'flex-row-reverse items-start pt-2'}`}>
-      {/* Placa do jogador. */}
-      <div className={`flex w-56 shrink-0 flex-col gap-1 ${you ? '' : 'items-end'}`}>
-        <span className="truncate text-sm font-bold">
-          {side.nickname}
-          {you && <span className="font-normal text-white/50"> (você)</span>}
-        </span>
-        <TurnTrack turn={side.turn} />
-      </div>
-
-      {/* Mão: a sua em leque (cartas sobem ao passar o mouse); a do oponente, só o verso. */}
-      <section
-        aria-label={you ? 'Sua mão' : `Mão de ${side.nickname}`}
-        {...handDrop.handlers}
-        className={`flex min-w-0 flex-1 justify-center rounded-xl transition-colors ${
-          handDrop.over ? 'bg-accent/15 ring-2 ring-accent/60' : ''
-        } ${you ? 'min-h-[clamp(4.5rem,13vh,8.75rem)] items-end' : 'items-start'}`}
-      >
-        {you ? (
-          hand.length === 0 ? (
-            <span className="self-center text-[11px] uppercase tracking-widest text-white/25">Mão vazia</span>
-          ) : (
-            // Sem overflow aqui: um contêiner com rolagem cortaria a carta ampliada no hover.
-            <div
-              className="flex max-w-full items-end px-4 pt-3"
-              style={{ '--hand-w': HAND_CARD_WIDTH } as React.CSSProperties}
-            >
-              {hand.map((c, i) => (
-                <ArenaCard
-                  key={c.uid}
-                  inst={c}
-                  draggable={mine}
-                  onInspect={onInspect}
-                  sizeClass={HAND_CARD}
-                  hoverClass={HAND_HOVER}
-                  style={i > 0 ? { marginLeft: `calc(var(--hand-w) * -${handOverlap(hand.length)})` } : undefined}
-                />
-              ))}
+    <div
+      ref={ref}
+      {...drop.handlers}
+      className={cx(styles.hand, drop.over && styles.over)}
+      aria-label="Sua mão"
+      title={scrollable ? 'Role o mouse sobre a mão para ver as outras cartas' : undefined}
+    >
+      {n === 0 && <span className={styles.handEmpty}>Mão vazia</span>}
+      {stacks.map(({ top, count }, i) => {
+        // Posição no arco em relação à carta central. A curva do design (gira 4° e desce u²×3px) usa a
+        // distância na tela (u, em cartas do design): cartas mais juntas não despencam nas pontas.
+        const o = i - focus;
+        const u = (o * step) / HAND_STEP;
+        const far = Math.abs(o) - radius; // > 0: fora da janela
+        const opacity = far <= 0 ? 1 : far >= 1 ? 0 : 1 - far;
+        return (
+          <div
+            key={top.cardId}
+            className={cx(styles.handSlot, count > 1 && styles.handStack)}
+            style={{
+              zIndex: i + 1,
+              opacity,
+              pointerEvents: opacity < 0.5 ? 'none' : undefined,
+              transform: `translateX(${o * step - HAND_CARD.w / 2}px) translateY(${u * u * 3}px) rotate(${u * 4}deg)`,
+            }}
+            aria-hidden={opacity === 0 || undefined}
+          >
+            <div className={styles.handLift}>
+              {/* Arrastar a pilha leva uma cópia (a primeira que entrou na mão). */}
+              <TableCard inst={top} {...HAND_CARD} mine={!!controls} onInspect={onInspect} className={styles.handCard} />
+              {count > 1 && (
+                <span className={styles.stackBadge} title={`${count} cópias desta carta na mão`}>
+                  ×{count}
+                </span>
+              )}
             </div>
-          )
-        ) : (
-          <div className="flex items-start" title={`${z.hand.count} cartas na mão`}>
-            {Array.from({ length: Math.min(z.hand.count, 15) }, (_, i) => (
-              <CardBack
-                key={i}
-                sizeClass="w-[clamp(1.5rem,3.6vh,2.5rem)]"
-                className={i > 0 ? '-ml-[clamp(0.9rem,2.2vh,1.5rem)]' : ''}
-              />
-            ))}
-            {z.hand.count > 0 && (
-              <span className="ml-2 self-center font-mono text-xs text-white/60">{z.hand.count}</span>
-            )}
           </div>
-        )}
-      </section>
+        );
+      })}
+      {hiddenLeft > 0 && (
+        <button
+          type="button"
+          className={styles.handMore}
+          style={{ right: `calc(50% + ${chipOffset}px)` }}
+          onClick={() => scrollBy(-radius)}
+          title={`${hiddenLeft} carta(s) à esquerda`}
+          aria-label={`Ver ${hiddenLeft} carta(s) à esquerda`}
+        >
+          ‹ {hiddenLeft}
+        </button>
+      )}
+      {hiddenRight > 0 && (
+        <button
+          type="button"
+          className={styles.handMore}
+          style={{ left: `calc(50% + ${chipOffset}px)` }}
+          onClick={() => scrollBy(radius)}
+          title={`${hiddenRight} carta(s) à direita`}
+          aria-label={`Ver ${hiddenRight} carta(s) à direita`}
+        >
+          {hiddenRight} ›
+        </button>
+      )}
+    </div>
+  );
+}
 
-      {/* I e J: fora do painel impresso. */}
-      <div className={`flex w-56 shrink-0 gap-2 ${you ? 'justify-end' : 'justify-start'}`}>
-        <button
-          type="button"
-          {...reinforcementDrop.handlers}
-          onClick={() => z.reinforcement.cards && onOpenList('reinforcement')}
-          className={chip(reinforcementDrop.over)}
-          title="Baralho de Reforço [Reinforcement Deck]: face para baixo (só o dono vê)"
-        >
-          Reforço <strong className="font-mono text-text">{z.reinforcement.count}</strong>
-        </button>
-        <button
-          type="button"
-          {...removedDrop.handlers}
-          onClick={() => onOpenList('removed')}
-          className={chip(removedDrop.over)}
-          title="Área de Removidos de Jogo [Removed from Game Area]: face para cima"
-        >
-          Removidos <strong className="font-mono text-text">{z.removed.count}</strong>
-        </button>
+/** Ordem dos tipos na sua mão: Ninjas → Clientes → Missões → Jutsus. */
+const HAND_TYPE_ORDER: Record<string, number> = { ninja: 0, client: 1, mission: 2, jutsu: 3 };
+
+/**
+ * Cartas iguais (mesmo `cardId`) juntas numa pilha, organizadas por tipo (`HAND_TYPE_ORDER`). Dentro do
+ * mesmo tipo, na ordem em que a primeira cópia entrou na mão.
+ */
+function stackByCard(cards: readonly CardInstance[]): { top: CardInstance; count: number }[] {
+  const stacks = new Map<string, { top: CardInstance; count: number }>();
+  for (const c of cards) {
+    const s = stacks.get(c.cardId);
+    if (s) s.count++;
+    else stacks.set(c.cardId, { top: c, count: 1 });
+  }
+  const rank = (cardId: string) => HAND_TYPE_ORDER[CARDS_BY_ID.get(cardId)?.type ?? ''] ?? 4;
+  // sort é estável: dentro do mesmo tipo, mantém a ordem de chegada.
+  return [...stacks.values()].sort((a, b) => rank(a.top.cardId) - rank(b.top.cardId));
+}
+
+/* ── Coluna de informações (à esquerda) ─────────────────────────────────── */
+
+function Pips({ label, value, max }: { label: string; value: number; max: number }) {
+  return (
+    <div className={styles.bar}>
+      <div className={styles.barHead}>
+        <span>{label}</span>
+        <b>
+          {value}/{max}
+        </b>
+      </div>
+      <div className={styles.pips}>
+        {Array.from({ length: max }, (_, i) => (
+          <i key={i} className={i < value ? styles.on : undefined} />
+        ))}
       </div>
     </div>
   );
 }
 
-/** Linha do meio da mesa, com o Andamento do Jogo (fases do turno). */
-function CenterLine() {
+function Counter({
+  label,
+  value,
+  title,
+  onClick,
+  drop,
+}: {
+  label: string;
+  value: number;
+  title: string;
+  onClick?: () => void;
+  drop?: DropTarget;
+}) {
+  const body = (
+    <>
+      <b>{value}</b>
+      <span>{label}</span>
+    </>
+  );
+  if (!onClick && !drop) {
+    return (
+      <div className={styles.counter} title={title}>
+        {body}
+      </div>
+    );
+  }
   return (
-    <div className="relative flex h-6 shrink-0 items-center justify-center" aria-label="Andamento do Jogo [Turn Sequence]">
-      <div className="absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-      <ol className="relative flex items-center gap-1 rounded-full bg-bg/90 px-3 py-0.5 text-[10px] uppercase tracking-widest text-white/45 ring-1 ring-white/10">
+    <button type="button" {...drop?.handlers} onClick={onClick} className={cx(styles.counter, drop?.over && styles.over)} title={title}>
+      {body}
+    </button>
+  );
+}
+
+function Plate({
+  side,
+  mine,
+  controls,
+  onOpenList,
+}: {
+  side: ArenaSide;
+  mine: boolean;
+  controls?: ArenaControls;
+  onOpenList: (zone: ZoneName) => void;
+}) {
+  const z = side.zones;
+  const reinforcementDrop = useDrop('reinforcement', controls);
+  const removedDrop = useDrop('removed', controls);
+  const who = (
+    <div className={styles.who}>
+      <div className={styles.avatar} aria-hidden>
+        {side.nickname.trim().charAt(0).toUpperCase() || '?'}
+      </div>
+      <div className={styles.whoText}>
+        <b title={side.nickname}>{side.nickname}</b>
+        <span>
+          {mine ? 'Você' : 'Oponente'}
+          {side.attacker && <span className={styles.attackerTag}>{mine ? ' · sua vez' : ' · Atacante'}</span>}
+        </span>
+      </div>
+    </div>
+  );
+  const bars = (
+    <>
+      <Pips label="Prêmios" value={Math.min(z.rewards.count, REWARDS_TO_WIN)} max={REWARDS_TO_WIN} />
+      <Pips label="Marcador" value={side.turn} max={TURN_MAX} />
+    </>
+  );
+  const counters = (
+    <div className={styles.counters}>
+      <Counter label="MÃO" value={z.hand.count} title={mine ? 'Cartas na sua mão' : `Cartas na mão de ${side.nickname}`} />
+      <Counter
+        label="REFORÇO"
+        value={z.reinforcement.count}
+        title="Baralho de Reforço [Reinforcement Deck]: só o dono vê"
+        onClick={z.reinforcement.cards ? () => onOpenList('reinforcement') : undefined}
+        drop={controls ? reinforcementDrop : undefined}
+      />
+      <Counter
+        label="REMOV."
+        value={z.removed.count}
+        title="Removidos de Jogo [Removed from Game]: face para cima"
+        onClick={() => onOpenList('removed')}
+        drop={controls ? removedDrop : undefined}
+      />
+    </div>
+  );
+  return (
+    <div className={cx(styles.plate, mine && styles.plateMine)} aria-label={mine ? 'Sua placa' : `Placa de ${side.nickname}`}>
+      {mine ? (
+        <>
+          {counters}
+          {bars}
+          {who}
+        </>
+      ) : (
+        <>
+          {who}
+          {bars}
+          {counters}
+        </>
+      )}
+    </div>
+  );
+}
+
+function TurnPanel({
+  turnNumber,
+  phase,
+  you,
+  opponent,
+  controls,
+}: {
+  turnNumber: number;
+  phase: number;
+  you: ArenaSide;
+  opponent: ArenaSide;
+  controls?: ArenaControls;
+}) {
+  const last = phase >= PHASES.length - 1;
+  return (
+    <div className={styles.turnBox} aria-label="Andamento do Jogo [Turn Sequence]">
+      <div className={styles.turnHead}>
+        <span>TURNO</span>
+        <b>{turnNumber}</b>
+        <span className={styles.turnWho}>{you.attacker ? 'Seu turno' : opponent.attacker ? opponent.nickname : ''}</span>
+      </div>
+      <ol className={styles.phases}>
         {PHASES.map((p, i) => (
-          <li key={p} className="flex items-center gap-1">
-            {i > 0 && <span aria-hidden className="text-white/20">›</span>}
+          <li
+            key={p}
+            className={cx(styles.phase, i === phase && styles.phaseActive, i < phase && styles.phaseDone)}
+            aria-current={i === phase ? 'step' : undefined}
+          >
+            <span>{PHASE_KANJI[i]}</span>
             <span>{p}</span>
           </li>
         ))}
       </ol>
+      {controls &&
+        (you.attacker ? (
+          <button
+            type="button"
+            className={styles.btn}
+            disabled={controls.busy}
+            onClick={last ? controls.onPassTurn : controls.onNextPhase}
+            title={
+              last
+                ? 'Fim do turno: o seu Marcador de Turnos avança 1 casa e o oponente vira o Atacante (até 6 cartas na mão)'
+                : `Ir para a Fase ${PHASES[phase + 1]}`
+            }
+          >
+            {last ? 'Passar turno' : 'Próxima fase'}
+          </button>
+        ) : (
+          <button type="button" className={styles.btn} disabled>
+            Turno de {opponent.nickname}
+          </button>
+        ))}
     </div>
   );
 }
+
+/* ── Registro de jogo ───────────────────────────────────────────────────── */
+
+/** "para a Vila", "da mão"… (as zonas são de quem jogou). */
+const ZONE_TO: Record<ZoneName, string> = {
+  deck: 'para o topo do Deck',
+  hand: 'para a mão',
+  village: 'para a Vila',
+  battlefield: 'para o Campo de Batalha',
+  chakra: 'para o Chakra',
+  discard: 'para os Descartes',
+  rewards: 'para os Prêmios',
+  reinforcement: 'para o Reforço',
+  removed: 'para Removidos de Jogo',
+};
+const ZONE_FROM: Record<ZoneName, string> = {
+  deck: 'do Deck',
+  hand: 'da mão',
+  village: 'da Vila',
+  battlefield: 'do Campo de Batalha',
+  chakra: 'do Chakra',
+  discard: 'dos Descartes',
+  rewards: 'dos Prêmios',
+  reinforcement: 'do Reforço',
+  removed: 'de Removidos de Jogo',
+};
+const ZONE_IN: Record<ZoneName, string> = {
+  deck: 'no Deck',
+  hand: 'na mão',
+  village: 'na Vila',
+  battlefield: 'no Campo de Batalha',
+  chakra: 'no Chakra',
+  discard: 'nos Descartes',
+  rewards: 'nos Prêmios',
+  reinforcement: 'no Reforço',
+  removed: 'em Removidos de Jogo',
+};
+
+/** Uma entrada do registro em texto, com os nomes das cartas clicáveis. */
+function LogLine({
+  e,
+  who,
+  other,
+  onInspect,
+}: {
+  e: LogEntryView;
+  /** Nome de quem jogou ("Você" ou o apelido). */
+  who: string;
+  /** Nome do outro jogador (para os Prêmios dados a ele). */
+  other: string;
+  onInspect: (card: Card) => void;
+}) {
+  const nameOf = useCardName();
+  const card = (cardId: string | undefined) => {
+    const c = cardId ? CARDS_BY_ID.get(cardId) : undefined;
+    if (!c) return <b>{cardId ?? 'carta'}</b>;
+    return (
+      <button type="button" className={styles.logCard} onClick={() => onInspect(c)} title="Ver a carta">
+        {nameOf(c)}
+      </button>
+    );
+  };
+  const main = e.hidden ? 'uma carta' : card(e.cards?.[0]);
+  const from = e.from ? ` ${ZONE_FROM[e.from]}` : '';
+  let text: React.ReactNode;
+  switch (e.type) {
+    case 'move':
+      text =
+        e.from && e.from === e.to ? (
+          <>reposicionou {main} {ZONE_IN[e.from]}</>
+        ) : (
+          <>
+            moveu {main}
+            {from} {e.to && ZONE_TO[e.to]}
+          </>
+        );
+      break;
+    case 'moveTeam': {
+      const [leader, ...rest] = e.cards ?? [];
+      const what = e.hidden ? (
+        'um Time'
+      ) : (
+        <>
+          o Time de {card(leader)}
+          {rest.length > 0 && (
+            <>
+              {' '}
+              ({rest.map((id, i) => (
+                <span key={i}>
+                  {i > 0 && ', '}
+                  {card(id)}
+                </span>
+              ))})
+            </>
+          )}
+        </>
+      );
+      text =
+        e.from && e.from === e.to ? (
+          <>reposicionou {what} {ZONE_IN[e.from]}</>
+        ) : (
+          <>
+            moveu {what}
+            {from} {e.to && ZONE_TO[e.to]}
+          </>
+        );
+      break;
+    }
+    case 'draw':
+      text = <>comprou {main}</>;
+      break;
+    case 'search':
+      text = <>buscou {main} no Deck e embaralhou</>;
+      break;
+    case 'shuffle':
+      text = <>embaralhou o Deck</>;
+      break;
+    case 'returnHand':
+      text = e.hidden ? (
+        <>
+          devolveu {e.count === 1 ? '1 carta' : `${e.count ?? 'as'} cartas`} da mão ao Deck e embaralhou
+        </>
+      ) : (
+        <>
+          devolveu a mão ao Deck e embaralhou:{' '}
+          {(e.cards ?? []).map((id, i) => (
+            <span key={i}>
+              {i > 0 && ', '}
+              {card(id)}
+            </span>
+          ))}
+        </>
+      );
+      break;
+    case 'joinTeam':
+      text = (
+        <>
+          juntou {main} ao Time de {card(e.target)}
+          {e.from && e.from !== e.to && <> (veio {ZONE_FROM[e.from]})</>}
+        </>
+      );
+      break;
+    case 'setLeader':
+      text = <>tornou {main} o Ninja Líder</>;
+      break;
+    case 'setInjured':
+      text = e.injured ? <>feriu {main}</> : <>curou {main}</>;
+      break;
+    case 'giveReward':
+      text = (
+        <>
+          deu {e.hidden && e.from === 'deck' ? 'a carta do topo do Deck' : main}
+          {!(e.hidden && e.from === 'deck') && from} como Prêmio de Batalha para {other}
+        </>
+      );
+      break;
+    case 'nextPhase':
+      text = <>avançou para a Fase {PHASES[e.phase ?? 0]}</>;
+      break;
+    case 'passTurn':
+      text = <>passou o turno</>;
+      break;
+    default:
+      text = null;
+  }
+  return (
+    <>
+      <b>{who}</b> {text}.
+    </>
+  );
+}
+
+/**
+ * Registro de jogo: botão no canto inferior direito da arena (com o número de jogadas novas) que abre um
+ * painel lateral com as jogadas, da mais antiga para a mais nova.
+ */
+function GameLog({
+  log,
+  yourSide,
+  you,
+  opponent,
+  onInspect,
+}: {
+  log: LogEntryView[];
+  yourSide: Side;
+  you: ArenaSide;
+  opponent: ArenaSide;
+  onInspect: (card: Card) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const latest = log.at(-1)?.n ?? 0;
+  // Jogadas já vistas: as que existiam ao abrir a tela não contam como novas.
+  const [seen, setSeen] = useState(latest);
+  const unread = open ? 0 : log.filter((e) => e.n > seen).length;
+  const listRef = useRef<HTMLOListElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    setSeen(latest);
+    listRef.current?.scrollTo({ top: listRef.current.scrollHeight });
+  }, [open, latest]);
+
+  const nameOf = (side: Side) => (side === yourSide ? 'Você' : opponent.nickname);
+  const otherOf = (side: Side) => (side === yourSide ? opponent.nickname : 'você');
+
+  return (
+    <>
+      <button
+        type="button"
+        className={cx(styles.logToggle, open && styles.logToggleOpen)}
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        title="Registro de jogo"
+      >
+        📜 Registro
+        {unread > 0 && <span className={styles.logUnread}>{unread > 99 ? '99+' : unread}</span>}
+      </button>
+      {open && (
+        <aside className={styles.logPanel} aria-label="Registro de jogo">
+          <div className={styles.logHead}>
+            <span>Registro de jogo</span>
+            <button type="button" onClick={() => setOpen(false)} aria-label="Fechar o registro" className={styles.logClose}>
+              ✕
+            </button>
+          </div>
+          {log.length === 0 ? (
+            <p className={styles.logEmpty}>Nenhuma jogada ainda.</p>
+          ) : (
+            <ol ref={listRef} className={styles.logList}>
+              {log.map((e, i) => (
+                <li key={e.n} className={cx(styles.logItem, e.who === yourSide ? styles.logMine : styles.logTheirs)}>
+                  {(i === 0 || log[i - 1].turn !== e.turn) && <div className={styles.logTurn}>Turno {e.turn}</div>}
+                  <LogLine e={e} who={nameOf(e.who)} other={otherOf(e.who)} onInspect={onInspect} />
+                </li>
+              ))}
+            </ol>
+          )}
+          <p className={styles.logFoot}>
+            {you.nickname} × {opponent.nickname} · últimas jogadas da partida
+          </p>
+        </aside>
+      )}
+    </>
+  );
+}
+
+/* ── Seletor de tema ────────────────────────────────────────────────────── */
+
+/**
+ * Troca o tema da arena (fica fora da arena, no cabeçalho do site durante a partida). Vale só para quem
+ * troca: a escolha fica neste navegador (`src/lib/arenaTheme.ts`) e o oponente continua com o tema dele.
+ */
+export function ArenaThemePicker({
+  value,
+  onChange,
+  disabled,
+}: {
+  value: string | undefined;
+  onChange: (theme: string) => void;
+  disabled?: boolean;
+}) {
+  return (
+    <label
+      className="flex items-center gap-2 rounded-lg py-1 pl-3 pr-1 text-sm text-muted ring-1 ring-border"
+      title="Tema da arena (só para você; fica salvo neste navegador)"
+    >
+      <span aria-hidden>🎨</span>
+      <span className="sr-only">Tema da arena</span>
+      <select
+        value={boardTheme(value).id}
+        onChange={(e) => onChange(e.target.value)}
+        disabled={disabled}
+        className="rounded-md bg-bg px-2 py-1 text-text outline-none hover:bg-surface-2 focus-visible:ring-2 focus-visible:ring-accent disabled:opacity-50"
+      >
+        {BOARD_THEMES.map((t) => (
+          <option key={t.id} value={t.id}>
+            {t.name}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+/* ── Arena ──────────────────────────────────────────────────────────────── */
 
 /**
  * Ocupa a altura que o pai der (flex-1): quem usa a arena define a altura total da tela
@@ -925,47 +1672,113 @@ export function GameArena({
   you,
   opponent,
   controls,
+  turnNumber = 1,
+  phase = 0,
+  theme,
+  fullscreenMenu,
+  notice,
+  log,
+  yourSide = 'host',
 }: {
   you: ArenaSide;
   opponent: ArenaSide;
   controls?: ArenaControls;
+  /** Número do turno da partida. */
+  turnNumber?: number;
+  /** Fase do turno (índice em `PHASES`). */
+  phase?: number;
+  /** Tema visual (id em `BOARD_THEMES`); sem tema, o padrão. */
+  theme?: string;
+  /**
+   * Controles da partida (tema, encerrar, sair) para a tela cheia, quando o cabeçalho do site some: ficam
+   * no menu ⋯ do canto superior direito da arena. Fora da tela cheia, o menu não aparece.
+   */
+  fullscreenMenu?: React.ReactNode;
+  /** Aviso (ex.: erro da última jogada), mostrado ao lado do menu em tela cheia. */
+  notice?: string | null;
+  /** Registro de jogo (como este jogador o vê). Sem ele, o botão do registro não aparece. */
+  log?: LogEntryView[];
+  /** Seu lado na partida (para o registro dizer "Você" nas suas jogadas). */
+  yourSide?: Side;
 }) {
+  const look = boardTheme(theme);
+  const themeStyle = {
+    ...look.vars,
+    '--board-font': look.fontFamily,
+    '--page-bg': look.pageBg,
+    '--arena-border': look.arenaBorder,
+    '--arena-bg': look.arenaBg,
+    ...(look.zoneFillOpp ? { '--zone-fill-opp': look.zoneFillOpp } : {}),
+    ...(look.zoneFillMine ? { '--zone-fill-mine': look.zoneFillMine } : {}),
+  } as React.CSSProperties;
+  const rootRef = useRef<HTMLDivElement>(null);
+  const scale = useStageScale(rootRef);
   const [inspect, setInspect] = useState<Card | null>(null);
   const [list, setList] = useState<{ side: 'you' | 'opponent'; zone: ZoneName } | null>(null);
   const listSide = list ? (list.side === 'you' ? you : opponent) : null;
+  const openMine = (zone: ZoneName) => setList({ side: 'you', zone });
+  const openTheirs = (zone: ZoneName) => setList({ side: 'opponent', zone });
+  const currentPhase = Math.max(0, Math.min(PHASES.length - 1, phase));
+  const [hovered, setHovered] = useState<HoveredCard | null>(null);
+  const alt = useAltKey();
+  const nameOf = useCardName();
+  const zoomed = alt && hovered ? hovered : null;
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl bg-[radial-gradient(ellipse_at_50%_50%,#262b38_0%,#191c25_55%,#11131a_100%)] shadow-[inset_0_0_80px_rgb(0_0_0/0.6)] ring-1 ring-white/5">
-      <HandRail side={opponent} you={false} onInspect={setInspect} onOpenList={(zone) => setList({ side: 'opponent', zone })} />
-      <PlayerMat
-        side={opponent}
-        flipped
-        onInspect={setInspect}
-        onOpenList={(zone) => setList({ side: 'opponent', zone })}
-        rewardDrop={
-          controls && {
-            accept: [CARD_MIME, DECK_TOP_MIME],
-            onDrop: (data) => controls.onGiveReward(data.getData(CARD_MIME) || undefined),
-            hint: 'Solte uma carta sua (ou o topo do seu Deck) como Prêmio de Batalha do oponente',
-          }
-        }
-      />
-      <CenterLine />
-      <PlayerMat
-        side={you}
-        flipped={false}
-        controls={controls}
-        onInspect={setInspect}
-        onOpenList={(zone) => setList({ side: 'you', zone })}
-      />
-      <HandRail
-        side={you}
-        you
-        controls={controls}
-        onInspect={setInspect}
-        onOpenList={(zone) => setList({ side: 'you', zone })}
-      />
+    <HoverContext.Provider value={setHovered}>
+    {/* Fonte do tema: o React move o <link> para o <head> (uma vez por endereço) e só carrega com a arena aberta. */}
+    <link rel="stylesheet" href={look.fontHref} precedence="default" />
+    <div ref={rootRef} className={styles.root} style={themeStyle} data-theme={look.id}>
+      <div className={styles.box} style={{ width: STAGE_W * scale, height: STAGE_H * scale, visibility: scale ? 'visible' : 'hidden' }}>
+        <div className={styles.stage} style={{ transform: `scale(${scale})` }}>
+          <OpponentHand side={opponent} />
+          <ZoneRow
+            side={opponent}
+            mine={false}
+            onInspect={setInspect}
+            onOpenList={openTheirs}
+            rewardDrop={
+              controls && {
+                accept: [CARD_MIME, DECK_TOP_MIME],
+                onDrop: (data) => controls.onGiveReward(data.getData(CARD_MIME) || undefined),
+                hint: 'Solte uma carta sua (ou o topo do seu Deck) como Prêmio de Batalha do oponente',
+              }
+            }
+          />
+          <Arena you={you} opponent={opponent} phase={currentPhase} controls={controls} onInspect={setInspect} />
+          <ZoneRow side={you} mine controls={controls} onInspect={setInspect} onOpenList={openMine} />
+          <Hand side={you} controls={controls} onInspect={setInspect} />
+          <div className={styles.rail}>
+            <Plate side={opponent} mine={false} onOpenList={openTheirs} />
+            <TurnPanel turnNumber={turnNumber} phase={currentPhase} you={you} opponent={opponent} controls={controls} />
+            <Plate side={you} mine controls={controls} onOpenList={openMine} />
+          </div>
+        </div>
+      </div>
 
+      {/* Registro de jogo (fora do palco: o texto não encolhe com a escala). */}
+      {log && <GameLog log={log} yourSide={yourSide} you={you} opponent={opponent} onInspect={setInspect} />}
+
+      {/* Tela cheia: os controles da partida num menu ⋯ (fora do palco, sem a escala). */}
+      {(fullscreenMenu || notice) && (
+        <div className={cx('fullscreen-only', styles.fsMenu)}>
+          {notice && (
+            <span className={styles.fsError} role="alert">
+              {notice}
+            </span>
+          )}
+          {fullscreenMenu && (
+            <details>
+              <summary aria-label="Menu da partida" title="Menu da partida">
+                ⋯
+              </summary>
+              <div className={styles.fsMenuPanel}>{fullscreenMenu}</div>
+            </details>
+          )}
+        </div>
+      )}
+
+      {/* Fora do palco: os diálogos não podem herdar a escala. */}
       {list && listSide && (
         <ZoneListDialog
           title={`${ZONE_LABEL[list.zone]} de ${listSide.nickname}`}
@@ -977,6 +1790,17 @@ export function GameArena({
         />
       )}
       <CardDetailModal card={inspect} onClose={() => setInspect(null)} />
+
+      {/* Alt + mouse sobre uma carta: a carta ampliada, do lado oposto ao mouse (fora do palco, sem a escala). */}
+      {zoomed && (
+        <img
+          src={cardImageUrl(zoomed.card, 'full')}
+          alt={nameOf(zoomed.card)}
+          className={cx(styles.zoom, zoomed.clientX < window.innerWidth / 2 ? styles.zoomRight : styles.zoomLeft)}
+          draggable={false}
+        />
+      )}
     </div>
+    </HoverContext.Provider>
   );
 }

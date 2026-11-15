@@ -197,14 +197,43 @@ Quando a sala chega em `starting`, a tela da sala troca a sala de espera pela **
 (`src/components/arena/GameArena.tsx`): dois Painéis de Jogo frente a frente, como na mesa
 (docs/REGRAS.md, "Painel de Jogo").
 
-- **Seu painel (embaixo):** Campo de Batalha em cima (virado para o oponente), Prêmios de Batalha à
-  esquerda, Vila no centro, Deck e Descartes à direita com a Área de Chakra embaixo deles. No rodapé:
-  apelido e mão, Andamento do Jogo, Baralho de Reforço, Removidos de Jogo e Indicador de Turnos.
-- **Painel do oponente (em cima):** o mesmo, **espelhado** como se ele estivesse do outro lado da mesa
-  (as áreas trocam de lado e o Campo de Batalha dele encosta no seu, no meio da tela). Os textos e os
-  números do Indicador de Turnos continuam legíveis.
-- Por enquanto só desenha as zonas e as contagens que a sala já conhece (tamanho do Deck e do Reforço).
-  As cartas entram com o motor do jogo.
+O visual segue o design **"Campo de Jogo"**, com **7 temas** (TEMAS.md do design): **Madeira antiga**,
+**Nuvens**, **Papel antigo** (o único claro), **Folhas**, **Bambu**, **Areia** e **Água**. O layout é o mesmo em
+todos; mudam só as cores e sombras (`--color-*`, `--shadow-*`), a fonte (Zen Old Mincho ou Shippori Mincho, do
+Google Fonts, carregada só com a arena aberta) e as texturas (fundo da mesa, borda e miolo do Campo de Batalha,
+em `public/textures/`). Os temas ficam em `src/lib/game/boardThemes.ts`, e o GameArena aplica o escolhido como
+variáveis na raiz da arena. Areia e Água têm a mesa clara, então definem também o fundo das zonas
+(`zoneFillOpp`/`zoneFillMine`: um degradê escuro translúcido que deixa cartas e rótulos legíveis).
+
+- **Cada jogador escolhe o seu tema** pelo seletor 🎨 no cabeçalho do site durante a partida (no menu ⋯ em
+  tela cheia). A escolha vale só para quem troca e fica salva no navegador (`naruto-ccg:arena-theme`, em
+  `src/lib/arenaTheme.ts`), valendo também nas próximas partidas; o oponente continua com o tema dele. Quem
+  nunca escolheu vê o tema sorteado no início da partida (`GameState.theme`; partidas criadas antes dos temas
+  abrem em Madeira antiga). Não há jogada para trocar o tema: o servidor não guarda a escolha de ninguém. Na
+  prévia, `/arena?tema=papel` força um tema até escolher outro no seletor.
+- As costas das cartas usam a imagem da carta física (`public/cards/card-back.webp`) em todos os temas.
+- **Tela cheia (F11):** a arena ocupa a tela inteira (sem o cabeçalho do site, sem barra e sem espaçamento;
+  classe `arena-screen` em globals.css). Os controles da partida (tema, Encerrar partida, Sair da sala; na
+  prévia, tema e Nova partida) ficam no menu **⋯** do canto superior direito da arena, e o erro da última
+  jogada aparece ao lado dele (`fullscreenMenu` e `notice` do GameArena).
+
+Tudo é desenhado num **palco fixo
+de 1600×900** escalado para caber inteiro na área abaixo do cabeçalho (`scale = min(largura/1600, altura/900)`,
+recalculado com ResizeObserver), sem rolagem em nenhum tamanho de janela.
+
+- **Em cima:** a mão do oponente (só o verso, em leque, saindo da borda) e a linha dele, da esquerda para a
+  direita: Deck, Descartes, Chakra, Vila e Prêmios de Batalha.
+- **No meio:** o Campo de Batalha octogonal, com os Times do oponente em cima, os seus embaixo e a fase atual
+  no centro. Missões jogadas no Campo ficam à esquerda da tela e Jutsus à direita, para os dois jogadores (o
+  oponente não é espelhado aqui), deixando o centro para os Times. Sem Ninjas no Campo, Missões e Jutsus ficam
+  no centro. Os Ninjas de Apoio ficam atrás do Líder (deslocados), e o Ninja Ferido aparece girado 90°.
+- **Embaixo:** a sua linha, espelhada (Prêmios, Vila, Chakra, Descartes, Deck) e a sua mão em leque, saindo
+  da borda (a carta sobe e cresce ao passar o mouse).
+- **À esquerda:** a placa de cada jogador (apelido, Prêmios n/10, Marcador de Turnos n/10, Mão, Reforço e
+  Removidos), o número do turno, as 5 fases e o botão do Atacante (**Próxima fase**, e **Passar turno** na
+  Fase Final).
+- Os tokens ficam escopados à arena (`GameArena.module.css`): o resto do app continua com o tema laranja,
+  e os diálogos abertos pela arena herdam o tema da arena.
 - Prévia com dados de exemplo em **`/arena`** (fora do menu), para ajustar o layout sem dois jogadores.
 
 ## Partida: tabuleiro manual
@@ -214,12 +243,34 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 
 - **Início:** quando os dois marcam Pronto, cada deck vira cartas na Área do Deck, **embaralhadas no
   servidor** (sorteio criptográfico), as cartas de Esquadrão vão para o Baralho de Reforço e cada jogador
-  compra **6 cartas** (docs/REGRAS.md 2.3). O mulligan é manual (devolver ao deck + embaralhar).
+  compra **6 cartas** (docs/REGRAS.md 2.3). O mulligan é manual: **Mão → Deck** (devolve a mão e embaralha) e depois comprar.
 - **Jogadas** (`POST /api/rooms/<id>/actions` com `{ type: 'game', action }`):
   - `{ type: 'move', uid, to }`: arrastar uma carta SUA para outra zona SUA (devolvida ao Deck, vai para o topo);
   - `{ type: 'draw' }`: comprar o topo do deck;
   - `{ type: 'shuffle' }`: embaralhar o deck;
-  - `{ type: 'search', cardId }`: buscar uma carta específica do deck para a mão **e embaralhar em seguida**.
+  - `{ type: 'search', cardId }`: buscar uma carta específica do deck para a mão **e embaralhar em seguida**;
+  - `{ type: 'returnHand' }`: devolver a mão inteira ao Deck e embaralhar (o mulligan, docs/REGRAS.md 2, passo
+    4-A; a compra das novas cartas continua manual). Na tela é o botão **↩ Mão → Deck** logo abaixo do seu Deck
+    (fora do arco da mão), com confirmação. No registro, o dono vê quais cartas
+    voltaram; o oponente vê só quantas;
+  - `{ type: 'nextPhase' }`: avançar a fase do turno (ver "Turnos");
+  - `{ type: 'setInjured', uid, injured }`: virar um Ninja seu para Ferido ou Saudável (ver "Ninja Ferido");
+  - `{ type: 'passTurn' }`: passar o turno (ver "Turnos").
+- **Turnos** (docs/REGRAS.md 3.1 e 3.6): quem começa é **sorteado** no início da partida (`GameState.active`,
+  o Atacante; `turnNumber` conta os turnos a partir de 1). Só o Atacante passa o turno, e só com **até 6 cartas
+  na mão** (etapa M: senão o servidor pede para descartar antes). Ao passar, o **Marcador de Turnos dele avança
+  1 casa** (até 10, `TURN_MAX`) e o oponente vira o Atacante. A compra do início do turno continua manual
+  (botão `+1`), porque os efeitos "No Início do Turno" vêm antes dela e o primeiro jogador não compra no
+  primeiro turno. **Fases** (`GameState.phase`, índice em `PHASES`: Inicial, Missão, Organização, Batalha,
+  Final): o Atacante avança com **Próxima fase** (`nextPhase`); na Fase Final o botão vira **Passar turno**, e o
+  turno seguinte começa na Inicial. As fases são só a referência dos dois jogadores: o que cada uma permite
+  ainda não é controlado. Na tela, a placa do Atacante diz "sua vez" / "Atacante" e o oponente vê o botão
+  desligado "Turno de X". Na prévia `/arena`, o oponente devolve o turno na hora. Os outros botões
+  continuam valendo para os dois jogadores em qualquer turno (o Bloqueador também mexe nas cartas dele).
+- **Ninja Ferido** (docs/REGRAS.md 3.5.4, "Dano e Ninjas Feridos"): o botão ↻ (ao passar o mouse num Ninja seu
+  na Vila ou no Campo de Batalha) vira a carta para a horizontal; ↺ cura. Fica guardado na carta
+  (`CardInstance.injured`), continua ao entrar num Time e ao voltar do Campo para a Vila, e some quando a carta
+  sai da Vila/Campo.
 - **Prêmios de Batalha** (docs/REGRAS.md 3.5.4): ninguém coloca cartas nos **próprios** Prêmios. Você manda
   uma carta SUA para a Área de Prêmios do **oponente** (ação `giveReward`): arrastando o seu Deck (vai a carta do
   topo, sem revelar qual é) ou uma carta específica para os Prêmios dele. Cartas nos Prêmios ficam lá (face para
@@ -229,29 +280,50 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   inteiro para outra zona, arrastando pela alça "Time n/3") e `setLeader` (botão ★).
   - De **1 a 3 Ninjas** por Time (`TEAM_MAX`); na Vila o número de Times é livre (Ninja sozinho = Time de 1).
   - No máximo **3 Times no Campo de Batalha** (`BATTLEFIELD_MAX_TEAMS`); só Times de Ninjas contam.
-  - O primeiro Ninja do Time é o **Ninja Líder** (selo "LÍDER"); quem entra fica atrás, como Ninja de Apoio.
+  - O primeiro Ninja do Time é o **Ninja Líder** (por cima, com o anel brilhante); quem entra fica atrás, como Ninja de Apoio.
   - Arrastar um membro sozinho para fora (ou para um espaço vazio da mesma zona) o tira do Time; Time que
     fica com 1 Ninja se desfaz. Fora da Vila/Campo não existem Times.
   - O Time fica guardado na própria carta (`CardInstance.team`), e os membros ficam juntos na zona.
+  - **Reordenar:** arrastar um Time (pelo chip) ou uma carta para os lados, entre os outros Times da Vila ou
+    do Campo de Batalha, muda a posição; uma barra brilhante mostra onde vai entrar. Vindo de outra zona,
+    entra na posição marcada. As ações `move` e `moveTeam` aceitam `before` (uid de uma carta da zona de
+    destino: entra antes do Time dela; sem `before`, entra no fim). Soltar em cima de um Ninja continua
+    formando Time.
+  - Cada Time (inclusive Ninja sozinho, nos dois lados) tem o chip **PODER n**: o **Poder do Time**
+    (docs/REGRAS.md 3.5.4) = Combate do Líder + Suporte de cada Apoio, no estado atual de cada um (Saudável ou
+    Ferido), recalculado ao ferir/curar ou trocar o Líder (`src/lib/game/teamPower.ts`). Valores "X" aparecem
+    como "5+X". A dica do chip mostra a conta. No seu lado, o chip é a alça para arrastar o Time inteiro.
 - **Encerrar partida** (`{ type: 'endGame' }`, qualquer um dos dois): volta para a escolha de decks (decks
   mantidos, ninguém pronto). Sair da sala no meio da partida também a encerra.
+- **Registro de jogo** (`GameState.log`, as últimas `LOG_MAX` = 80 jogadas): toda jogada que muda algo é
+  anotada no servidor com quem fez, o turno, as cartas (pelo `cardId`) e de onde para onde foram (mover,
+  mover Time, reposicionar, comprar, buscar, embaralhar, juntar ao Time, Líder, ferir/curar, Prêmio, fase,
+  passar turno). Só o que é do jogo: jogadas sem efeito e a troca de tema não entram. Na visão de cada jogador, o nome da carta só aparece
+  se ele pode vê-la na zona de origem ou na de destino (ex.: o oponente vê "comprou uma carta"; Prêmios
+  dados do topo do Deck ficam ocultos para os dois). Na tela, o botão **📜 Registro** no canto inferior
+  direito da arena (com o número de jogadas novas) abre o painel, agrupado por turno, com os nomes das cartas
+  clicáveis para ver o detalhe.
 - **Visibilidade** (docs/REGRAS.md, "Zonas"): Vila, Campo de Batalha, Chakra, Descartes e Removidos são
   públicos; Mão e Reforço só o dono vê; Deck e Prêmios ninguém vê. O que não pode ser visto chega ao
   navegador só como contagem (`ZoneView.count`, sem `cards`).
 - **Busca:** `GET /api/rooms/<id>/deck` (só o dono, só durante a partida) devolve a quantidade por carta no
   deck, **sem a ordem**. A tela mostra em ordem alfabética.
-- **Na tela:** arrastar (HTML5 drag and drop) entre as suas zonas, inclusive mão, Reforço e Removidos; no
-  Deck, os botões `+1` (comprar), `⇄` (embaralhar) e `⌕` (buscar); clique na pilha de Descartes ou em
-  Reforço/Removidos abre a lista com botões para mover; clique numa carta visível abre o detalhe.
-- **Visual:** uma mesa só, com os painéis sem moldura de "sistema": pilhas (Deck, Descartes, Prêmios) como
-  espaços do tamanho de uma carta com a contagem na pilha, áreas largas (Vila, Campo de Batalha, Chakra) com
-  o nome em marca d'água, mãos nas bordas da mesa (a sua em leque), fases do turno na linha do meio. O
-  tamanho das cartas acompanha a altura de cada painel (`cqh`).
+- **Na tela:** arrastar (HTML5 drag and drop) entre as suas zonas, inclusive mão e os contadores Reforço e
+  Removidos da sua placa; clique no seu Deck compra 1 carta, e os botões `⇄` (embaralhar) e `⌕` (buscar) ficam
+  no canto do Deck; clique nos Descartes, no Chakra ou em Reforço/Removidos abre a lista com botões para mover;
+  na sua mão, cópias iguais (mesmo `cardId`) aparecem como uma pilha só, com a badge **×N** (arrastar a pilha
+  leva uma cópia), e a mão fica sempre organizada por tipo: Ninjas → Clientes → Missões → Jutsus (dentro do
+  tipo, na ordem em que chegaram). A mão é um **arco rolável**: as cartas se aproximam a cada pilha a mais
+  (de 90px até 56px entre elas) e voltam a se afastar quando a mão diminui; quando nem assim cabem, a **roda
+  do mouse** (ou o deslize do touchpad) sobre a mão gira o arco, uma carta por vez, e os chips **‹ N** / **N ›**
+  nas pontas mostram quantas estão escondidas de cada lado (clique gira o arco). Na prévia, `/arena?mao=15`
+  compra 15 cartas a mais. Clique numa carta visível abre o detalhe; **Alt + mouse** sobre uma carta visível mostra a carta ampliada
+  (do lado oposto ao mouse, em pé mesmo se o Ninja estiver Ferido), enquanto o Alt estiver pressionado.
 - **Código:** regras puras em `src/lib/game/state.ts` (testes em `state.test.ts`); integração na sala em
   `src/lib/rooms/model.ts` (ações `game`/`endGame`, campo `game` na sala e na `RoomView`); arena em
-  `src/components/arena/` (`GameArena.tsx`, `SearchDeckDialog.tsx`). A prévia `/arena` roda uma partida
-  local com dois decks de exemplo.
-- **Ainda não:** turnos/fases e Marcador de Turnos, mexer em outras cartas do oponente, virar cartas (Ninja ferido), mulligan automático.
+  `src/components/arena/` (`GameArena.tsx`, `GameArena.module.css`, `SearchDeckDialog.tsx`). A prévia
+  `/arena` roda uma partida local com dois decks de exemplo.
+- **Ainda não:** o que cada fase permite, mexer em outras cartas do oponente, mulligan automático.
 
 ## Ligação com a partida (MVP 4)
 

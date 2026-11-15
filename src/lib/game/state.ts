@@ -10,6 +10,8 @@
  * - Deck e Prêmios de Batalha: face para baixo, ninguém vê (nem o dono); só a contagem.
  */
 
+import { BOARD_THEME_IDS, DEFAULT_BOARD_THEME } from './boardThemes.ts';
+
 export type Side = 'host' | 'guest';
 
 export const ZONES = [
@@ -37,6 +39,11 @@ export interface CardInstance {
    * juntos na zona, e o primeiro deles é o Ninja Líder. Ninja sem `team` = Time de 1.
    */
   team?: string;
+  /**
+   * Ninja Ferido [Injured]: a carta fica na horizontal (docs/REGRAS.md 3.5.4, "Dano e Ninjas Feridos").
+   * Só na Vila e no Campo de Batalha; continua ferido ao voltar do Campo para a Vila.
+   */
+  injured?: true;
 }
 
 export type PlayerZones = Record<ZoneName, CardInstance[]>;
@@ -47,27 +54,90 @@ export interface GameState {
   players: Record<Side, PlayerZones>;
   /** Posição do Marcador de Turnos de cada jogador. */
   turn: Record<Side, number>;
+  /** Jogador do turno, o Atacante [Attacker] (docs/REGRAS.md 3.1). O outro é o Bloqueador. */
+  active: Side;
+  /** Número do turno da partida (começa em 1 e sobe a cada "passar turno"). */
+  turnNumber: number;
+  /** Fase do turno do Atacante (índice em `PHASES`). Só referência: as regras de cada fase ainda não valem. */
+  phase?: number;
+  /**
+   * Tema da arena sorteado na partida (id em `BOARD_THEMES`): o padrão de quem ainda não escolheu um tema no
+   * seletor. A escolha de cada jogador fica no navegador dele (`src/lib/arenaTheme.ts`), não aqui.
+   */
+  theme?: string;
+  /** Registro de jogo: as últimas jogadas (até `LOG_MAX`), da mais antiga para a mais nova. */
+  log?: LogEntry[];
 }
+
+/** Quantas entradas do registro de jogo ficam guardadas na partida. */
+export const LOG_MAX = 80;
+
+/**
+ * Uma jogada no registro de jogo. Guarda o `cardId` das cartas (não o uid); quem vê o nome é decidido na
+ * visão de cada jogador (`gameView`), com as mesmas regras das zonas.
+ */
+export interface LogEntry {
+  /** Número da entrada na partida (sobe sempre, mesmo quando as antigas saem do registro). */
+  n: number;
+  who: Side;
+  /** Turno da partida em que a jogada aconteceu. */
+  turn: number;
+  type: GameAction['type'];
+  /** Cartas envolvidas (a primeira é a principal; no Time, o Líder primeiro). */
+  cards?: string[];
+  from?: ZoneName;
+  to?: ZoneName;
+  /** joinTeam: o Ninja do Time em que a carta entrou. */
+  target?: string;
+  /** setInjured: ferido (true) ou curado (false). */
+  injured?: boolean;
+  /** nextPhase: a fase nova. */
+  phase?: number;
+  /** returnHand: quantas cartas voltaram (o oponente vê só isso, sem os nomes). */
+  count?: number;
+}
+
+/** Fases do turno (docs/REGRAS.md 3.2 a 3.6). */
+export const PHASES = ['Inicial', 'Missão', 'Organização', 'Batalha', 'Final'] as const;
 
 /** Gerador de números em [0, 1). No servidor é criptográfico; nos testes, previsível. */
 export type Rng = () => number;
 
 export type GameAction =
-  | { type: 'move'; uid: string; to: ZoneName }
+  /**
+   * Mover uma carta sua para outra zona. Com `before` (uid de uma carta na zona de destino), entra logo antes
+   * do Time dessa carta: é o que reordena os Times na Vila e no Campo de Batalha. Sem `before`, entra por último
+   * (na Vila e no Campo, também dentro da mesma zona: vai para o fim).
+   */
+  | { type: 'move'; uid: string; to: ZoneName; before?: string }
   | { type: 'draw' }
   | { type: 'shuffle' }
   | { type: 'search'; cardId: string }
+  /**
+   * Devolver a mão inteira ao Deck e embaralhar (docs/REGRAS.md 2, passo 4-A: o mulligan). A compra das
+   * novas cartas continua manual.
+   */
+  | { type: 'returnHand' }
   /** Juntar o Ninja `uid` ao Time do Ninja `target` (arrastar uma carta para cima da outra). */
   | { type: 'joinTeam'; uid: string; target: string }
   /** Mover o Time inteiro do Ninja `uid` para outra zona (ex.: enviar para o Campo de Batalha). */
-  | { type: 'moveTeam'; uid: string; to: ZoneName }
+  | { type: 'moveTeam'; uid: string; to: ZoneName; before?: string }
   /** Tornar o Ninja `uid` o Ninja Líder do Time dele. */
   | { type: 'setLeader'; uid: string }
+  /** Virar o Ninja `uid` para Ferido (horizontal) ou de volta para Saudável. */
+  | { type: 'setInjured'; uid: string; injured: boolean }
+  /** Avançar para a próxima fase do turno (só o Atacante; a Fase Final termina com "passar turno"). */
+  | { type: 'nextPhase' }
   /**
    * Prêmio de Batalha para o OPONENTE (docs/REGRAS.md 3.5.4): uma carta sua vai para a Área de Prêmios
    * dele, face para baixo. Sem `uid`, vai a carta do topo do seu Deck (o caso normal).
    */
-  | { type: 'giveReward'; uid?: string };
+  | { type: 'giveReward'; uid?: string }
+  /**
+   * Passar o turno (docs/REGRAS.md 3.6 M e N): só o Atacante. Ele precisa estar com no máximo 6 cartas na
+   * mão, avança o próprio Marcador de Turnos 1 casa e o oponente vira o Atacante.
+   */
+  | { type: 'passTurn' };
 
 export class GameError extends Error {}
 
@@ -116,14 +186,25 @@ export function teamGroups(cards: readonly CardInstance[]): CardInstance[][] {
   return [...groups.values()];
 }
 
-/** Limpa Times desfeitos: fora da Vila/Campo não há Time, e um Time de 1 é só um Ninja. */
+/** Uma carta só com os campos dados (sem `team`/`injured` indefinidos no JSON). */
+function card(uid: string, cardId: string, team?: string, injured?: boolean): CardInstance {
+  return { uid, cardId, ...(team ? { team } : {}), ...(injured ? { injured: true as const } : {}) };
+}
+
+/**
+ * Limpa Times desfeitos e estados fora de lugar: fora da Vila/Campo não há Time nem Ninja Ferido,
+ * e um Time de 1 é só um Ninja.
+ */
 function normalizeTeams(zones: PlayerZones) {
   for (const zone of ZONES) {
     const counts = new Map<string, number>();
     for (const c of zones[zone]) if (c.team) counts.set(c.team, (counts.get(c.team) ?? 0) + 1);
-    zones[zone] = zones[zone].map((c) =>
-      c.team && (!TEAM_ZONES.has(zone) || (counts.get(c.team) ?? 0) < 2) ? { uid: c.uid, cardId: c.cardId } : c,
-    );
+    const here = TEAM_ZONES.has(zone);
+    zones[zone] = zones[zone].map((c) => {
+      const team = here && c.team && (counts.get(c.team) ?? 0) >= 2 ? c.team : undefined;
+      const injured = here && !!c.injured;
+      return team === c.team && injured === !!c.injured ? c : card(c.uid, c.cardId, team, injured);
+    });
   }
 }
 
@@ -135,6 +216,15 @@ function checkBattlefield(zones: PlayerZones, rules: CardRules) {
 
 /** Cartas compradas na preparação (docs/REGRAS.md 2.3). */
 export const OPENING_HAND = 6;
+/** Mão máxima do Atacante ao fim do turno (docs/REGRAS.md 3.6 M). */
+export const HAND_LIMIT = 6;
+/** Última casa do Indicador de Turnos (o marcador começa em 0). */
+export const TURN_MAX = 10;
+
+/** Jogador do turno. Partidas criadas antes do campo existir começam pelo anfitrião. */
+export function activeSide(game: GameState): Side {
+  return game.active ?? 'host';
+}
 
 /** Fisher–Yates com o gerador dado. Não altera o original. */
 export function shuffle<T>(items: readonly T[], rng: Rng): T[] {
@@ -174,7 +264,22 @@ export function createGame(
     zones.hand = zones.deck.splice(0, OPENING_HAND);
     players[side] = zones;
   }
-  return { version: 1, players, turn: { host: 0, guest: 0 } };
+  // Quem começa é sorteado (docs/REGRAS.md 2.3, passo 3).
+  const active: Side = rng() < 0.5 ? 'host' : 'guest';
+  // Tema da arena sorteado na partida (salvo nela, para os dois verem o mesmo).
+  const theme = BOARD_THEME_IDS[Math.floor(rng() * BOARD_THEME_IDS.length)] ?? DEFAULT_BOARD_THEME;
+  return { version: 1, players, turn: { host: 0, guest: 0 }, active, turnNumber: 1, phase: 0, theme };
+}
+
+/**
+ * Põe `cards` na lista logo antes do Time da carta `before` (o primeiro membro dele), ou no fim se `before`
+ * não estiver na lista.
+ */
+function insertBefore(list: CardInstance[], cards: CardInstance[], before: string | undefined) {
+  const target = before ? list.find((c) => c.uid === before) : undefined;
+  const index = target ? list.findIndex((c) => groupKey(c) === groupKey(target)) : -1;
+  if (index < 0) list.push(...cards);
+  else list.splice(index, 0, ...cards);
 }
 
 function findCard(zones: PlayerZones, uid: string): { zone: ZoneName; index: number } | null {
@@ -186,12 +291,95 @@ function findCard(zones: PlayerZones, uid: string): { zone: ZoneName; index: num
 }
 
 /** Aplica uma ação do jogador `who` nas zonas DELE. Lança GameError se não for possível. */
+/**
+ * Aplica uma ação do jogador `who` e, se ela mudou algo, anota no registro de jogo. Lança GameError se não
+ * for possível.
+ */
 export function applyGameAction(
   game: GameState,
   who: Side,
   action: GameAction,
   rng: Rng,
   rules: CardRules = ANY_CARD,
+): GameState {
+  const next = applyAction(game, who, action, rng, rules);
+  if (next === game) return game;
+  // Reordenar na mesma zona sem mudar a ordem (ex.: soltar a última carta no fim): nada a fazer nem anotar.
+  if ((action.type === 'move' || action.type === 'moveTeam') && action.to !== 'deck') {
+    const from = findCard(game.players[who], action.uid)?.zone;
+    if (from === action.to && JSON.stringify(game.players[who][from]) === JSON.stringify(next.players[who][from])) {
+      return game;
+    }
+  }
+  const entry = describe(game, next, who, action);
+  const log = game.log ?? [];
+  const n = (log.at(-1)?.n ?? 0) + 1;
+  return { ...next, log: [...log, { n, who, turn: game.turnNumber ?? 1, ...entry }].slice(-LOG_MAX) };
+}
+
+/** O que a jogada fez, lido do estado de ANTES (onde as cartas estavam) e do de depois. */
+function describe(
+  before: GameState,
+  after: GameState,
+  who: Side,
+  action: GameAction,
+): Omit<LogEntry, 'n' | 'who' | 'turn'> {
+  const zones = before.players[who];
+  const at = (uid: string) => {
+    const found = findCard(zones, uid);
+    return found ? { zone: found.zone, card: zones[found.zone][found.index] } : null;
+  };
+  switch (action.type) {
+    case 'move': {
+      const c = at(action.uid);
+      return { type: 'move', cards: c ? [c.card.cardId] : [], from: c?.zone, to: action.to };
+    }
+    case 'moveTeam': {
+      const c = at(action.uid);
+      if (!c) return { type: 'moveTeam', to: action.to };
+      const key = groupKey(c.card);
+      const members = zones[c.zone].filter((x) => groupKey(x) === key).map((x) => x.cardId);
+      return { type: 'moveTeam', cards: members, from: c.zone, to: action.to };
+    }
+    case 'draw':
+      return { type: 'draw', cards: zones.deck[0] ? [zones.deck[0].cardId] : [], from: 'deck', to: 'hand' };
+    case 'search':
+      return { type: 'search', cards: [action.cardId], from: 'deck', to: 'hand' };
+    case 'returnHand':
+      return { type: 'returnHand', cards: zones.hand.map((c) => c.cardId), count: zones.hand.length, from: 'hand', to: 'deck' };
+    case 'joinTeam': {
+      const c = at(action.uid);
+      const t = at(action.target);
+      return { type: 'joinTeam', cards: c ? [c.card.cardId] : [], from: c?.zone, to: t?.zone, target: t?.card.cardId };
+    }
+    case 'setLeader':
+    case 'setInjured': {
+      const c = at(action.uid);
+      return {
+        type: action.type,
+        cards: c ? [c.card.cardId] : [],
+        from: c?.zone,
+        ...(action.type === 'setInjured' ? { injured: action.injured } : {}),
+      };
+    }
+    case 'giveReward': {
+      const c = action.uid ? at(action.uid) : zones.deck[0] ? { zone: 'deck' as const, card: zones.deck[0] } : null;
+      return { type: 'giveReward', cards: c ? [c.card.cardId] : [], from: c?.zone, to: 'rewards' };
+    }
+    case 'nextPhase':
+      return { type: 'nextPhase', phase: after.phase ?? 0 };
+    case 'shuffle':
+    case 'passTurn':
+      return { type: action.type };
+  }
+}
+
+function applyAction(
+  game: GameState,
+  who: Side,
+  action: GameAction,
+  rng: Rng,
+  rules: CardRules,
 ): GameState {
   const zones: PlayerZones = Object.fromEntries(ZONES.map((z) => [z, [...game.players[who][z]]])) as PlayerZones;
   const done = (): GameState => {
@@ -210,13 +398,15 @@ export function applyGameAction(
       if (action.to === 'rewards') throw new GameError(REWARDS_FROM_OPPONENT);
       const at = mustFind(action.uid);
       if (at.zone === 'rewards') throw new GameError(REWARDS_LOCKED);
-      const card = zones[at.zone][at.index];
-      if (at.zone === action.to && !card.team) return game;
+      const moved = zones[at.zone][at.index];
+      // Na mesma zona, só a Vila e o Campo reordenam (sem `before` = para o fim); nas outras, nada muda.
+      if (at.zone === action.to && !moved.team && !TEAM_ZONES.has(at.zone)) return game;
+      if (action.before === moved.uid) return game;
       zones[at.zone].splice(at.index, 1);
-      const solo = { uid: card.uid, cardId: card.cardId }; // mover uma carta sozinha a tira do Time
-      // Carta devolvida ao Deck vai para o topo; nas outras zonas, entra por último.
+      const solo = card(moved.uid, moved.cardId, undefined, moved.injured); // mover uma carta sozinha a tira do Time
+      // Carta devolvida ao Deck vai para o topo; nas outras zonas, antes do Time de `before` ou por último.
       if (action.to === 'deck') zones.deck.unshift(solo);
-      else zones[action.to].push(solo);
+      else insertBefore(zones[action.to], [solo], action.before);
       return done();
     }
     case 'draw': {
@@ -228,6 +418,12 @@ export function applyGameAction(
     case 'shuffle':
       zones.deck = shuffle(zones.deck, rng);
       return done();
+    case 'returnHand': {
+      if (zones.hand.length === 0) throw new GameError('Sua mão está vazia.');
+      zones.deck = shuffle([...zones.deck, ...zones.hand.map((c) => card(c.uid, c.cardId))], rng);
+      zones.hand = [];
+      return done();
+    }
     case 'search': {
       const index = zones.deck.findIndex((c) => c.cardId === action.cardId);
       if (index < 0) throw new GameError('Essa carta não está no seu deck.');
@@ -238,15 +434,15 @@ export function applyGameAction(
     case 'joinTeam': {
       if (action.uid === action.target) return game;
       const from = mustFind(action.uid);
-      const card = zones[from.zone][from.index];
+      const joining = zones[from.zone][from.index];
       const targetAt = mustFind(action.target);
       const target = zones[targetAt.zone][targetAt.index];
       if (!TEAM_ZONES.has(targetAt.zone)) throw new GameError('Times só existem na Vila e no Campo de Batalha.');
-      if (!rules.isNinja(card.cardId) || !rules.isNinja(target.cardId)) {
+      if (!rules.isNinja(joining.cardId) || !rules.isNinja(target.cardId)) {
         throw new GameError('Só Ninjas formam Times.');
       }
       const teamId = target.team ?? `t-${target.uid}`;
-      if (card.team === teamId) return game;
+      if (joining.team === teamId) return game;
       const size = zones[targetAt.zone].filter((c) => c.uid === target.uid || (!!target.team && c.team === target.team)).length;
       if (size >= TEAM_MAX) throw new GameError(`Um Time tem no máximo ${TEAM_MAX} Ninjas.`);
 
@@ -255,46 +451,75 @@ export function applyGameAction(
       for (let i = 0; i < list.length; i++) if (list[i].uid === target.uid) list[i] = { ...list[i], team: teamId };
       // Entra logo depois do último membro: o Líder continua sendo o primeiro.
       const last = list.reduce((acc, c, i) => (c.team === teamId ? i : acc), -1);
-      list.splice(last + 1, 0, { uid: card.uid, cardId: card.cardId, team: teamId });
+      list.splice(last + 1, 0, card(joining.uid, joining.cardId, teamId, joining.injured));
       return done();
     }
     case 'moveTeam': {
       if (action.to === 'rewards') throw new GameError(REWARDS_FROM_OPPONENT);
       const at = mustFind(action.uid);
       if (at.zone === 'rewards') throw new GameError(REWARDS_LOCKED);
-      if (at.zone === action.to) return game;
+      if (at.zone === action.to && !TEAM_ZONES.has(at.zone)) return game;
       const key = groupKey(zones[at.zone][at.index]);
       const members = zones[at.zone].filter((c) => groupKey(c) === key);
+      if (action.before && members.some((c) => c.uid === action.before)) return game; // antes de si mesmo
       zones[at.zone] = zones[at.zone].filter((c) => groupKey(c) !== key);
       if (action.to === 'deck') zones.deck.unshift(...members);
-      else zones[action.to].push(...members);
+      else insertBefore(zones[action.to], members, action.before);
       return done();
     }
     case 'giveReward': {
-      let card: CardInstance | undefined;
+      let given: CardInstance | undefined;
       if (action.uid) {
         const at = mustFind(action.uid);
         if (at.zone === 'rewards') throw new GameError(REWARDS_LOCKED);
-        card = zones[at.zone].splice(at.index, 1)[0];
+        given = zones[at.zone].splice(at.index, 1)[0];
       } else {
-        card = zones.deck.shift();
-        if (!card) throw new GameError('Seu deck está vazio.');
+        given = zones.deck.shift();
+        if (!given) throw new GameError('Seu deck está vazio.');
       }
       const opponent = otherSide(who);
-      const theirs = { ...game.players[opponent], rewards: [...game.players[opponent].rewards, { uid: card.uid, cardId: card.cardId }] };
+      const theirs = { ...game.players[opponent], rewards: [...game.players[opponent].rewards, card(given.uid, given.cardId)] };
       normalizeTeams(zones);
       checkBattlefield(zones, rules);
       return { ...game, players: { ...game.players, [who]: zones, [opponent]: theirs } as Record<Side, PlayerZones> };
     }
+    case 'passTurn': {
+      if (activeSide(game) !== who) throw new GameError('Só o Atacante (o jogador do turno) pode passar o turno.');
+      if (zones.hand.length > HAND_LIMIT) {
+        throw new GameError(`Descarte até ficar com ${HAND_LIMIT} cartas na mão antes de passar o turno.`);
+      }
+      return {
+        ...game,
+        turn: { ...game.turn, [who]: Math.min(TURN_MAX, game.turn[who] + 1) } as Record<Side, number>,
+        active: otherSide(who),
+        turnNumber: (game.turnNumber ?? 1) + 1,
+        phase: 0,
+      };
+    }
+    case 'nextPhase': {
+      if (activeSide(game) !== who) throw new GameError('Só o Atacante (o jogador do turno) avança as fases.');
+      const phase = game.phase ?? 0;
+      if (phase >= PHASES.length - 1) throw new GameError('Esta é a Fase Final: passe o turno.');
+      return { ...game, phase: phase + 1 };
+    }
+    case 'setInjured': {
+      const at = mustFind(action.uid);
+      const target = zones[at.zone][at.index];
+      if (!TEAM_ZONES.has(at.zone)) throw new GameError('Só Ninjas na Vila ou no Campo de Batalha ficam Feridos.');
+      if (!rules.isNinja(target.cardId)) throw new GameError('Só Ninjas ficam Feridos.');
+      if (!!target.injured === action.injured) return game;
+      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, action.injured);
+      return done();
+    }
     case 'setLeader': {
       const at = mustFind(action.uid);
       const list = zones[at.zone];
-      const card = list[at.index];
-      if (!card.team) return game;
-      const first = list.findIndex((c) => c.team === card.team);
+      const leader = list[at.index];
+      if (!leader.team) return game;
+      const first = list.findIndex((c) => c.team === leader.team);
       if (first === at.index) return game;
       list.splice(at.index, 1);
-      list.splice(first, 0, card);
+      list.splice(first, 0, leader);
       return done();
     }
   }
@@ -311,6 +536,30 @@ export type SideView = Record<ZoneName, ZoneView>;
 export interface GameView {
   players: Record<Side, SideView>;
   turn: Record<Side, number>;
+  /** Jogador do turno (Atacante). */
+  active: Side;
+  turnNumber: number;
+  /** Fase do turno (índice em `PHASES`). */
+  phase: number;
+  /** Tema visual da arena. */
+  theme: string;
+  /** Registro de jogo, com o nome das cartas só quando o jogador pode vê-las. */
+  log: LogEntryView[];
+}
+
+/** Entrada do registro como um jogador a vê: sem `cards` (e com `hidden`) se ele não pode ver as cartas. */
+export type LogEntryView = LogEntry & { hidden?: boolean };
+
+/**
+ * Quem vê as cartas de uma jogada: quem pode vê-las na zona de origem ou na de destino (as zonas são de
+ * quem jogou; os Prêmios dados ao oponente são face para baixo para todos).
+ */
+function logView(entry: LogEntry, viewer: Side | null): LogEntryView {
+  if (!entry.cards?.length) return entry;
+  const sees = (zone: ZoneName | undefined) => !!zone && zone !== 'rewards' && canSee(zone, entry.who, viewer);
+  if (sees(entry.from) || sees(entry.to)) return entry;
+  const { cards: _hidden, ...rest } = entry;
+  return { ...rest, hidden: true };
 }
 
 export function canSee(zone: ZoneName, owner: Side, viewer: Side | null): boolean {
@@ -325,7 +574,16 @@ export function gameView(game: GameState, viewer: Side | null): GameView {
         return [z, canSee(z, owner, viewer) ? { count: cards.length, cards } : { count: cards.length }];
       }),
     ) as SideView;
-  return { players: { host: side('host'), guest: side('guest') }, turn: game.turn };
+  return {
+    players: { host: side('host'), guest: side('guest') },
+    turn: game.turn,
+    active: activeSide(game),
+    turnNumber: game.turnNumber ?? 1,
+    phase: game.phase ?? 0,
+    theme: game.theme ?? DEFAULT_BOARD_THEME,
+    // Entradas de tema gravadas quando o tema era da partida (antes de virar preferência de cada um) não aparecem.
+    log: (game.log ?? []).filter((e) => (e.type as string) !== 'setTheme').map((e) => logView(e, viewer)),
+  };
 }
 
 /**
@@ -340,16 +598,22 @@ export function deckContents(game: GameState, who: Side): Record<string, number>
 
 export function parseGameAction(x: unknown): GameAction | null {
   const a = (typeof x === 'object' && x !== null ? x : {}) as Record<string, unknown>;
+  const before = (o: Record<string, unknown>) => (typeof o.before === 'string' ? { before: o.before } : {});
   if (a.type === 'move' && typeof a.uid === 'string' && (ZONES as readonly unknown[]).includes(a.to)) {
-    return { type: 'move', uid: a.uid, to: a.to as ZoneName };
+    return { type: 'move', uid: a.uid, to: a.to as ZoneName, ...before(a) };
   }
-  if (a.type === 'draw' || a.type === 'shuffle') return { type: a.type };
+  if (a.type === 'draw' || a.type === 'shuffle' || a.type === 'passTurn' || a.type === 'nextPhase' || a.type === 'returnHand') {
+    return { type: a.type };
+  }
+  if (a.type === 'setInjured' && typeof a.uid === 'string' && typeof a.injured === 'boolean') {
+    return { type: 'setInjured', uid: a.uid, injured: a.injured };
+  }
   if (a.type === 'search' && typeof a.cardId === 'string') return { type: 'search', cardId: a.cardId };
   if (a.type === 'joinTeam' && typeof a.uid === 'string' && typeof a.target === 'string') {
     return { type: 'joinTeam', uid: a.uid, target: a.target };
   }
   if (a.type === 'moveTeam' && typeof a.uid === 'string' && (ZONES as readonly unknown[]).includes(a.to)) {
-    return { type: 'moveTeam', uid: a.uid, to: a.to as ZoneName };
+    return { type: 'moveTeam', uid: a.uid, to: a.to as ZoneName, ...before(a) };
   }
   if (a.type === 'setLeader' && typeof a.uid === 'string') return { type: 'setLeader', uid: a.uid };
   if (a.type === 'giveReward' && (a.uid === undefined || typeof a.uid === 'string')) {

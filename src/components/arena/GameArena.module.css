@@ -1,0 +1,1394 @@
+/*
+ * Arena da partida: design "Campo de Jogo", com os temas de TEMAS.md (madeira, nuvens, papel, folhas, bambu).
+ *
+ * Mesmo layout em todos os temas: as cores, as sombras, a fonte e as texturas vêm das variáveis que o
+ * GameArena põe na raiz (.root) a partir de `src/lib/game/boardThemes.ts`:
+ * --color-*, --shadow-*, --board-font, --page-bg, --arena-border e --arena-bg.
+ *
+ * Os tokens valem só dentro da arena: as cores do resto do app continuam as de globals.css. Como as
+ * utilidades do Tailwind leem as mesmas variáveis (--color-accent, --color-surface…), os diálogos abertos
+ * pela arena também ficam no tema. As costas das cartas (.back, .backLayer) têm cores próprias, fora dos
+ * tokens: são a imagem da carta física em qualquer tema.
+ *
+ * Tudo é desenhado num palco fixo de 1600×900 (.stage), escalado para caber inteiro (ver GameArena.tsx).
+ */
+
+.root {
+  /* Derivados dos tokens do tema (usados pelas utilidades do Tailwind nos diálogos). */
+  --color-surface-2: var(--color-neutral-900);
+  --color-muted: var(--color-neutral-400);
+  --color-border: var(--color-neutral-800);
+  --color-accent-strong: var(--color-accent-400);
+  --color-section-ghost: var(--color-section-glow);
+
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 14px;
+  /* Fundo da mesa (fora do palco escalado), do tema. */
+  background: var(--page-bg);
+  color: var(--color-text);
+  font-family: var(--board-font, serif);
+  user-select: none;
+}
+
+.root :focus {
+  outline: none;
+}
+.root :focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.box {
+  position: relative;
+  flex: none;
+}
+
+.stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1600px;
+  height: 900px;
+  transform-origin: 0 0;
+}
+
+/* ── Cartas ─────────────────────────────────────────────────────────────── */
+
+.card {
+  position: relative;
+  flex: none;
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--color-neutral-900);
+  box-shadow: 0 0 0 1px var(--color-neutral-700), 0 4px 10px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition:
+    transform 0.25s,
+    box-shadow 0.18s;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.card.mine {
+  box-shadow: 0 0 0 1px var(--color-accent-700), 0 4px 10px rgba(0, 0, 0, 0.45);
+  cursor: grab;
+}
+.card.mine:active {
+  cursor: grabbing;
+}
+.card:hover {
+  box-shadow: 0 0 0 1px var(--color-accent-400), 0 0 16px var(--color-accent-700);
+}
+
+.back {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* Costas da carta física (public/cards/card-back.webp). */
+  background: #26262c url('/cards/card-back.webp') center / cover no-repeat;
+  box-shadow: 0 0 0 1px #55555e;
+}
+/* Camadas da pilha (Deck): a borda das cartas de baixo, no grafite das costas. */
+.backLayer {
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  background: #2b2b31;
+  box-shadow: 0 0 0 1px #4a4a52;
+}
+
+/* ── Mão do oponente ────────────────────────────────────────────────────── */
+
+.oppHand {
+  position: absolute;
+  left: 244px;
+  top: -46px;
+  width: 1332px;
+  display: flex;
+  justify-content: center;
+}
+.oppHand .back {
+  width: 58px;
+  height: 82px;
+  margin-left: -14px;
+  box-shadow: 0 0 0 1px #55555e, 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+.oppHand .back:first-child {
+  margin-left: 0;
+}
+
+/* ── Linhas de zonas ────────────────────────────────────────────────────── */
+
+.row {
+  position: absolute;
+  left: 244px;
+  width: 1332px;
+  height: 128px;
+  display: flex;
+  gap: 10px;
+}
+.rowOpp {
+  top: 44px;
+}
+.rowMine {
+  top: 652px;
+  flex-direction: row-reverse;
+}
+
+.zone {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition:
+    box-shadow 0.15s,
+    background-color 0.15s;
+}
+/*
+ * Todas as zonas das linhas (Deck, Descartes, Chakra, Vila, Prêmios) têm o degradê de fundo, que separa as
+ * cartas e os rótulos da textura da mesa. O do oponente escurece em cima; o seu, embaixo.
+ */
+.zoneOpp {
+  --zone-fill: var(--zone-fill-opp, linear-gradient(180deg, var(--color-neutral-900), transparent));
+  background: var(--zone-fill);
+  box-shadow: inset 0 0 0 1px var(--color-neutral-800);
+}
+.zoneMine {
+  --zone-fill: var(--zone-fill-mine, linear-gradient(0deg, var(--color-accent-900), transparent));
+  background: var(--zone-fill);
+  box-shadow: inset 0 0 0 1px var(--color-accent-800);
+}
+.zone.over {
+  background-color: color-mix(in srgb, var(--color-accent-500) 14%, transparent);
+  box-shadow:
+    inset 0 0 0 2px var(--color-accent-400),
+    0 0 18px var(--color-accent-800);
+}
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  background-color: color-mix(in srgb, var(--color-accent-500) 8%, transparent);
+}
+
+.label {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-neutral-400);
+  pointer-events: none;
+}
+.zoneMine .label {
+  color: var(--color-accent-300);
+}
+.kanji {
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--color-accent-400);
+}
+
+.count {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-size: 11px;
+  color: var(--color-neutral-300);
+  pointer-events: none;
+}
+.pill {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  display: flex;
+  min-width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border-radius: 11px;
+  background: var(--color-bg);
+  box-shadow: 0 0 0 1px var(--color-neutral-700);
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+}
+.zoneMine .pill {
+  box-shadow: 0 0 0 1px var(--color-accent-600);
+}
+
+.empty {
+  width: 62px;
+  height: 87px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px var(--color-neutral-800);
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0 6px,
+    color-mix(in srgb, var(--color-neutral-800) 35%, transparent) 6px 7px
+  );
+}
+.zoneHint {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-neutral-600);
+  pointer-events: none;
+}
+
+/* Deck */
+.deck {
+  width: 118px;
+}
+.deckStack {
+  position: relative;
+  width: 62px;
+  height: 87px;
+}
+.deckTop {
+  position: absolute;
+  inset: 0;
+  transition: box-shadow 0.15s;
+}
+.deckTop.drawable {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px var(--color-accent-600);
+}
+.deckTop.drawable:hover {
+  box-shadow:
+    0 0 0 1px var(--color-accent-300),
+    0 0 18px var(--color-accent-600);
+}
+.deckTools {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  display: flex;
+  gap: 4px;
+}
+.tool {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-bg);
+  box-shadow: 0 0 0 1px var(--color-accent-700);
+  color: var(--color-accent-300);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+.tool:hover:not(:disabled) {
+  background: var(--color-accent-800);
+  box-shadow: 0 0 0 1px var(--color-accent-400);
+  color: var(--color-accent-100);
+}
+.tool:active:not(:disabled) {
+  background: var(--color-accent-700);
+}
+.tool:disabled {
+  opacity: 0.35;
+}
+
+/* Descartes */
+.discard {
+  width: 100px;
+}
+
+/* Chakra */
+.chakra {
+  width: 150px;
+  gap: 12px;
+}
+/* O brilho do Chakra fica por cima do degradê da zona. */
+.zoneOpp.chakra {
+  background: radial-gradient(circle at 50% 60%, var(--color-section-glow), transparent 70%), var(--zone-fill);
+}
+.zoneMine.chakra {
+  background: radial-gradient(circle at 50% 50%, var(--color-section-glow), transparent 72%), var(--zone-fill);
+  box-shadow:
+    inset 0 0 0 1px var(--color-accent-700),
+    0 0 20px var(--color-accent-900);
+}
+.chakraStack {
+  position: relative;
+  width: 46px;
+  height: 64px;
+}
+.chakraStack > * {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+}
+.chakraSlot {
+  background: var(--color-accent-900);
+  box-shadow: 0 0 0 1px var(--color-accent-800);
+}
+.bigCount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bigCount b {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-accent-200);
+}
+.bigCount span {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--color-neutral-400);
+}
+.zoneMine .bigCount span {
+  color: var(--color-accent-300);
+}
+
+/* Vila */
+.village {
+  flex: 1;
+  min-width: 0;
+  gap: 12px;
+  padding: 18px 12px 8px;
+}
+
+/* Prêmios */
+.reward {
+  width: 132px;
+  gap: 10px;
+}
+.rewardStack {
+  position: relative;
+  width: 50px;
+  height: 70px;
+  margin-top: 10px;
+}
+.rewardStack > * {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+}
+.rewardNum {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--color-neutral-200);
+}
+.zoneMine .rewardNum {
+  color: var(--color-accent-200);
+}
+
+/* ── Times ──────────────────────────────────────────────────────────────── */
+
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+.member {
+  position: relative;
+  flex: none;
+  transition:
+    transform 0.25s,
+    margin 0.25s;
+}
+.member .card {
+  width: 100%;
+  height: 100%;
+}
+.memberOver .card {
+  box-shadow:
+    0 0 0 2px var(--color-accent-300),
+    0 0 22px var(--color-accent-600) !important;
+}
+/*
+ * No canto direito: os Apoios ficam atrás do Líder, deslocados para a direita, e só essa parte da carta
+ * aparece (no centro, os botões ficariam cobertos pelo Líder).
+ */
+.memberTools {
+  position: absolute;
+  right: 2px;
+  top: -10px;
+  z-index: 30;
+  display: none;
+  gap: 4px;
+}
+.member:hover .memberTools,
+.member:focus-within .memberTools {
+  display: flex;
+}
+.teamHandle {
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  padding: 0 10px 0 8px;
+  transform: translateX(-50%);
+  border-radius: 11px;
+  background: var(--color-accent-900);
+  box-shadow:
+    0 0 0 1px var(--color-accent-500),
+    0 4px 10px rgba(0, 0, 0, 0.55);
+  color: var(--color-accent-200);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.teamGrip {
+  font-size: 12px;
+  color: var(--color-accent-400);
+}
+.teamCount {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-accent-100);
+}
+.teamHandle.draggable {
+  cursor: grab;
+}
+.teamHandle.draggable:hover {
+  background: var(--color-accent-800);
+  box-shadow:
+    0 0 0 1px var(--color-accent-300),
+    0 0 14px var(--color-accent-700);
+}
+.teamHandle.draggable:active {
+  cursor: grabbing;
+  background: var(--color-accent-700);
+}
+
+/* ── Arena (Campo de Batalha) ───────────────────────────────────────────── */
+
+.arena {
+  position: absolute;
+  left: 244px;
+  top: 184px;
+  width: 1332px;
+  height: 456px;
+  clip-path: polygon(
+    44px 0,
+    calc(100% - 44px) 0,
+    100% 44px,
+    100% calc(100% - 44px),
+    calc(100% - 44px) 100%,
+    44px 100%,
+    0 calc(100% - 44px),
+    0 44px
+  );
+  /* Borda do octógono (1px), do tema. */
+  background: var(--arena-border);
+}
+.arenaInner {
+  position: absolute;
+  inset: 1px;
+  clip-path: polygon(
+    43px 0,
+    calc(100% - 43px) 0,
+    100% 43px,
+    100% calc(100% - 43px),
+    calc(100% - 43px) 100%,
+    43px 100%,
+    0 calc(100% - 43px),
+    0 43px
+  );
+  /* Miolo do Campo de Batalha, do tema. */
+  background: var(--arena-bg);
+}
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.ringOuter {
+  width: 420px;
+  height: 420px;
+  box-shadow: inset 0 0 0 1px var(--color-neutral-800);
+}
+.ringInner {
+  width: 280px;
+  height: 280px;
+  box-shadow: inset 0 0 0 1px var(--color-accent-900);
+}
+.arenaLabel {
+  position: absolute;
+  left: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-neutral-500);
+  pointer-events: none;
+  z-index: 1;
+}
+.arenaLabel > span:first-child {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.arenaLabelOpp {
+  top: 16px;
+}
+.arenaLabelMine {
+  bottom: 16px;
+  color: var(--color-accent-400);
+}
+.arenaLabelMine > span:first-child {
+  color: var(--color-accent-500);
+}
+.centerLine {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent-700) 20%,
+    var(--color-accent-700) 80%,
+    transparent
+  );
+  pointer-events: none;
+}
+.phasePill {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background: var(--color-bg);
+  box-shadow:
+    0 0 0 1px var(--color-accent-600),
+    0 0 24px var(--color-accent-800);
+  pointer-events: none;
+}
+.phasePill > span:first-child {
+  font-size: 13px;
+  color: var(--color-accent-400);
+}
+.phasePill > span:last-child {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-accent-200);
+}
+.field {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+.fieldOpp {
+  top: 0;
+  height: 50%;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+.fieldMine {
+  bottom: 0;
+  height: 50%;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+.fieldMine.over {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--color-accent-500) 18%, transparent), transparent);
+}
+.fieldTeams {
+  height: 200px;
+  gap: 56px;
+}
+
+/* ── Sua mão ────────────────────────────────────────────────────────────── */
+
+.hand {
+  position: absolute;
+  left: 244px;
+  top: 784px;
+  z-index: 20;
+  width: 1332px;
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 8px;
+  border-radius: 12px 12px 0 0;
+  transition: background-color 0.15s;
+}
+.hand.over {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--color-accent-500) 22%, transparent), transparent);
+}
+/* Cada carta fica no centro da mão e é posicionada no arco pelo transform (ver Hand no GameArena). */
+.handSlot {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform-origin: 50% 120%;
+  transition:
+    transform 0.25s ease-out,
+    opacity 0.2s;
+}
+.handCard {
+  width: 112px;
+  height: 157px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s;
+}
+.handCard.mine {
+  box-shadow: var(--shadow-md);
+}
+.handSlot:hover {
+  z-index: 1000 !important;
+}
+/* Sobe com a carta no hover (leva junto a badge de cópias, que fica fora do recorte da carta). */
+.handLift {
+  position: relative;
+  transition: transform 0.18s;
+}
+.handSlot:hover .handLift {
+  transform: translateY(-78px) scale(1.12);
+}
+.handSlot:hover .handCard,
+.handSlot.handStack:hover .handCard.mine {
+  box-shadow:
+    0 0 0 2px var(--color-accent-400),
+    0 0 28px var(--color-accent-700),
+    0 16px 40px rgba(0, 0, 0, 0.65);
+}
+/*
+ * Cópias iguais empilhadas: as bordas das cartas de baixo aparecem atrás. Tudo do lado ESQUERDO: no leque,
+ * cada carta cobre a borda direita da anterior, então só o lado esquerdo fica sempre à vista.
+ */
+.handStack .handCard,
+.handStack .handCard.mine {
+  box-shadow:
+    var(--shadow-md),
+    -5px -5px 0 -1px var(--color-neutral-600),
+    -10px -10px 0 -2px var(--color-neutral-700);
+}
+.stackBadge {
+  position: absolute;
+  top: -14px;
+  left: -12px;
+  z-index: 2;
+  display: flex;
+  min-width: 30px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7px;
+  border-radius: 13px;
+  background: var(--color-accent-700);
+  box-shadow:
+    0 0 0 2px var(--color-bg),
+    0 0 0 3px var(--color-accent-400),
+    0 4px 10px rgba(0, 0, 0, 0.6);
+  color: var(--color-accent-100);
+  font-size: 14px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.handEmpty {
+  margin-top: 40px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-neutral-600);
+}
+
+/* ── Coluna de informações: à esquerda (x=24); a área de jogo começa em x=244 ──── */
+
+.rail {
+  position: absolute;
+  left: 24px;
+  top: 44px;
+  width: 200px;
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+.plateMine {
+  box-shadow:
+    0 0 0 1px var(--color-accent-700),
+    0 0 24px var(--color-accent-900);
+}
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.avatar {
+  display: flex;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-neutral-800);
+  box-shadow: 0 0 0 1px var(--color-neutral-600);
+  color: var(--color-neutral-200);
+  font-size: 16px;
+}
+.plateMine .avatar {
+  background: var(--color-accent-800);
+  box-shadow: 0 0 0 1px var(--color-accent-500);
+  color: var(--color-accent-200);
+}
+.whoText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+.whoText b {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.whoText span {
+  font-size: 10px;
+  color: var(--color-neutral-400);
+}
+.plateMine .whoText span {
+  color: var(--color-accent-300);
+}
+.attackerTag {
+  color: var(--color-accent-300);
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.barHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-neutral-400);
+}
+.barHead b {
+  font-weight: 400;
+  color: var(--color-neutral-200);
+}
+.plateMine .barHead {
+  color: var(--color-accent-300);
+}
+.plateMine .barHead b {
+  color: var(--color-accent-100);
+}
+.pips {
+  display: flex;
+  gap: 3px;
+}
+.pips > i {
+  flex: 1;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--color-neutral-800);
+}
+.pips > i.on {
+  background: var(--color-neutral-300);
+}
+.plateMine .pips > i.on {
+  background: var(--color-accent-400);
+}
+.counters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+}
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-neutral-900);
+  color: inherit;
+  font: inherit;
+  transition:
+    background-color 0.15s,
+    box-shadow 0.15s;
+}
+.counter b {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-neutral-200);
+}
+.counter span {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  color: var(--color-neutral-400);
+}
+.plateMine .counter {
+  background: var(--color-accent-900);
+}
+.plateMine .counter b {
+  color: var(--color-accent-100);
+}
+.plateMine .counter span {
+  color: var(--color-accent-300);
+}
+button.counter:not(:disabled) {
+  cursor: pointer;
+}
+button.counter:hover:not(:disabled) {
+  box-shadow: 0 0 0 1px var(--color-accent-500);
+}
+button.counter:active:not(:disabled) {
+  background: var(--color-accent-800);
+}
+.counter.over {
+  box-shadow:
+    0 0 0 2px var(--color-accent-400),
+    0 0 14px var(--color-accent-700);
+}
+
+/* Turno e fases num painel como as placas: legível sobre qualquer textura de mesa. */
+.turnBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-surface);
+  box-shadow:
+    var(--shadow-sm),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.turnHead {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.turnHead span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--color-neutral-400);
+}
+.turnHead b {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+}
+.turnWho {
+  margin-left: auto;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-neutral-400);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.phases {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.phase {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: var(--color-neutral-300);
+}
+.phase > span:first-child {
+  width: 14px;
+  font-size: 12px;
+  color: var(--color-neutral-500);
+}
+.phase > span:last-child {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.phaseDone {
+  color: var(--color-neutral-500);
+}
+.phaseActive {
+  background: var(--color-accent-900);
+  box-shadow:
+    0 0 0 1px var(--color-accent-500),
+    0 0 16px var(--color-accent-800);
+  color: var(--color-accent-100);
+}
+.phaseActive > span:first-child {
+  color: var(--color-accent-300);
+}
+
+.btn {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 5.6px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5.6px 10px;
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-accent);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+.btn:active:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+.btn:disabled {
+  opacity: 0.45;
+}
+
+/* Líder por cima, com o anel; Apoios com a sombra média. */
+.leaderMine > .card {
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    0 0 22px var(--color-accent-800),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+}
+.leaderOpp > .card {
+  box-shadow:
+    0 0 0 1px var(--color-neutral-500),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+}
+.support > .card {
+  box-shadow: var(--shadow-md);
+}
+.member > .card:hover {
+  box-shadow:
+    0 0 0 2px var(--color-accent-400),
+    0 0 22px var(--color-accent-700);
+}
+
+/* ── Alt + mouse: carta ampliada ────────────────────────────────────────── */
+
+.zoom {
+  position: fixed;
+  top: 50%;
+  z-index: 60;
+  height: min(88vh, 860px);
+  aspect-ratio: 5 / 7;
+  transform: translateY(-50%);
+  border-radius: 3.5% / 2.5%;
+  box-shadow:
+    0 0 0 2px var(--color-accent-400),
+    0 0 40px var(--color-accent-700),
+    0 24px 60px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+  animation: zoomIn 0.12s ease-out;
+}
+.zoomLeft {
+  left: 24px;
+}
+.zoomRight {
+  right: 24px;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.96);
+  }
+}
+
+/* Barra de inserção ao arrastar um Time entre outros (reordenar na Vila e no Campo de Batalha). */
+.insertBar {
+  position: absolute;
+  z-index: 50;
+  width: 4px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: var(--color-accent-300);
+  box-shadow:
+    0 0 0 1px var(--color-accent-500),
+    0 0 14px var(--color-accent-400),
+    0 0 28px var(--color-accent-600);
+  pointer-events: none;
+}
+
+/* Faixas laterais do Campo de Batalha: Missões à esquerda do jogador, Jutsus à direita (Times no centro). */
+.fieldSide {
+  position: absolute;
+  display: flex;
+  height: 200px;
+  max-width: 230px;
+  align-items: center;
+}
+.fieldOpp .fieldSide {
+  top: 20px;
+}
+.fieldMine .fieldSide {
+  bottom: 20px;
+}
+.fieldSideLeft {
+  left: 64px;
+}
+.fieldSideRight {
+  right: 64px;
+  flex-direction: row;
+}
+.fieldSideCard {
+  border-radius: 7px;
+  box-shadow: var(--shadow-md);
+}
+.fieldSideCard:hover {
+  z-index: 20 !important;
+}
+/* Sem Ninjas no Campo: Missões e Jutsus juntos no centro. */
+.fieldLoose {
+  gap: 16px;
+}
+
+/* Tela cheia: sem cantos arredondados. */
+:global(:root[data-fullscreen]) .root {
+  border-radius: 0;
+}
+@media (display-mode: fullscreen) {
+  .root {
+    border-radius: 0;
+  }
+}
+
+/* Menu da partida em tela cheia (canto superior direito, na faixa vazia acima das zonas do oponente). */
+.fsMenu {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  z-index: 70;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: system-ui, sans-serif;
+}
+.fsMenu details {
+  position: relative;
+}
+.fsMenu summary {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  list-style: none;
+  cursor: pointer;
+}
+.fsMenu summary::-webkit-details-marker {
+  display: none;
+}
+.fsMenu summary:hover,
+.fsMenu details[open] summary {
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    0 0 14px var(--color-accent-700);
+}
+.fsMenuPanel {
+  position: absolute;
+  right: 0;
+  top: 38px;
+  display: flex;
+  min-width: 220px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+.fsError {
+  max-width: 360px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: color-mix(in srgb, #ef5b5b 85%, black);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.3;
+  box-shadow: var(--shadow-md);
+}
+
+/* Chips nas pontas da mão: quantas cartas estão escondidas de cada lado (clique gira o arco). */
+.handMore {
+  position: absolute;
+  top: 46px;
+  z-index: 1001;
+  display: flex;
+  height: 28px;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+.handMore:hover {
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    0 0 14px var(--color-accent-700);
+}
+.handMore:active {
+  background: var(--color-accent-900);
+}
+
+/* ── Registro de jogo ───────────────────────────────────────────────────── */
+
+.logToggle {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 66;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+.logToggle:hover,
+.logToggleOpen {
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    0 0 14px var(--color-accent-700);
+}
+.logUnread {
+  display: flex;
+  min-width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--color-accent-500);
+  color: var(--color-accent-100);
+  font-size: 11px;
+  font-weight: 700;
+}
+.logPanel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 52px;
+  z-index: 65;
+  display: flex;
+  width: min(360px, calc(100% - 20px));
+  flex-direction: column;
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-text);
+  user-select: text;
+}
+.logHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 8px 14px;
+  border-bottom: 1px solid var(--color-neutral-800);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-neutral-300);
+}
+.logClose {
+  display: flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-neutral-400);
+}
+.logClose:hover {
+  background: var(--color-neutral-900);
+  color: var(--color-text);
+}
+.logList {
+  flex: 1;
+  margin: 0;
+  padding: 6px 10px 10px;
+  overflow-y: auto;
+  list-style: none;
+}
+.logItem {
+  padding: 5px 8px;
+  border-left: 3px solid transparent;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.logItem b {
+  font-weight: 600;
+}
+.logMine {
+  border-left-color: var(--color-accent-500);
+}
+.logTheirs {
+  border-left-color: var(--color-neutral-600);
+}
+.logItem + .logItem {
+  margin-top: 2px;
+}
+.logTurn {
+  margin: 6px 0 4px -8px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-neutral-500);
+}
+.logCard {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-accent-300);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.logCard:hover {
+  color: var(--color-accent-200);
+}
+.logEmpty,
+.logFoot {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--color-neutral-400);
+}
+.logFoot {
+  border-top: 1px solid var(--color-neutral-800);
+  font-size: 11px;
+}
+
+/* Logo abaixo do seu Deck: devolver a mão ao Deck (o mulligan). Discreto, com confirmação. */
+.returnHand {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  height: 24px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-neutral-300);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.returnHand:hover:not(:disabled) {
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    0 0 12px var(--color-accent-700);
+  color: var(--color-text);
+}
+.returnHand:active:not(:disabled) {
+  background: var(--color-accent-900);
+}
+.returnHand:disabled {
+  opacity: 0.4;
+}

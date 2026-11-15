@@ -3,8 +3,15 @@
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
-import { ARENA_SCREEN, GameArena, type ArenaControls, type ArenaSide } from '@/components/arena/GameArena';
+import {
+  ARENA_SCREEN,
+  ArenaThemePicker,
+  GameArena,
+  type ArenaControls,
+  type ArenaSide,
+} from '@/components/arena/GameArena';
 import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
+import { setArenaTheme, useArenaTheme } from '@/lib/arenaTheme';
 import { HeaderSlot } from '@/components/HeaderSlot';
 import { DeckSelect, NicknameForm, useValidDecks } from '@/components/PlayerSetup';
 import { DECK_RULES } from '@/lib/deckRules';
@@ -132,24 +139,32 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
   const play = useCallback((action: GameAction) => act({ type: 'game', action }), [act]);
   const loadDeck = useCallback(async () => (await roomApi.deck(view.id)).cards, [view.id]);
+  // Tema escolhido por você (só neste navegador); sem escolha, o sorteado na partida.
+  const myTheme = useArenaTheme();
 
   if (!game || !you) return <p className="text-muted">Carregando a partida…</p>;
+  const theme = myTheme ?? game.theme;
 
   const controls: ArenaControls = {
-    onMove: (uid, to) => play({ type: 'move', uid, to }),
+    onMove: (uid, to, before) => play({ type: 'move', uid, to, ...(before ? { before } : {}) }),
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
+    onReturnHand: () => play({ type: 'returnHand' }),
     onSearch: () => setSearching(true),
     onJoinTeam: (uid, target) => play({ type: 'joinTeam', uid, target }),
-    onMoveTeam: (uid, to) => play({ type: 'moveTeam', uid, to }),
+    onMoveTeam: (uid, to, before) => play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}) }),
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
+    onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
+    onNextPhase: () => play({ type: 'nextPhase' }),
+    onPassTurn: () => play({ type: 'passTurn' }),
     busy: room.busy,
   };
   const side = (seat: SeatName, nickname: string | undefined): ArenaSide => ({
     nickname: nickname ?? '…',
     zones: game.players[seat],
     turn: game.turn[seat],
+    attacker: game.active === seat,
   });
 
   const endGame = () => {
@@ -161,9 +176,14 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
       <strong className="text-text">{me?.nickname}</strong> × <strong className="text-text">{opponent?.nickname}</strong>
     </p>
   );
-  const actions = (
+  // Os mesmos controles vão para o cabeçalho e, em tela cheia (sem cabeçalho), para o menu ⋯ da arena.
+  const controlsBar = (
     <>
-      {room.actionError && <span className="text-sm text-danger">{room.actionError}</span>}
+      <ArenaThemePicker
+        value={theme}
+        onChange={setArenaTheme}
+        disabled={room.busy}
+      />
       <button
         type="button"
         onClick={endGame}
@@ -179,13 +199,22 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   return (
     <div className={ARENA_SCREEN}>
       <HeaderSlot name="center">{players}</HeaderSlot>
-      <HeaderSlot name="actions">{actions}</HeaderSlot>
-      {/* Em tela cheia o cabeçalho some: a mesma barra aparece aqui. */}
-      <div className="fullscreen-only flex-wrap items-center justify-between gap-2">
-        {players}
-        <div className="flex items-center gap-2">{actions}</div>
-      </div>
-      <GameArena you={side(you, me?.nickname)} opponent={side(opponentSeat, opponent?.nickname)} controls={controls} />
+      <HeaderSlot name="actions">
+        {room.actionError && <span className="text-sm text-danger">{room.actionError}</span>}
+        {controlsBar}
+      </HeaderSlot>
+      <GameArena
+        you={side(you, me?.nickname)}
+        opponent={side(opponentSeat, opponent?.nickname)}
+        controls={controls}
+        turnNumber={game.turnNumber}
+        phase={game.phase}
+        theme={theme}
+        fullscreenMenu={controlsBar}
+        notice={room.actionError}
+        log={game.log}
+        yourSide={you}
+      />
       <SearchDeckDialog
         open={searching}
         load={loadDeck}

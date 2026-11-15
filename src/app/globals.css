@@ -109,3 +109,34 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
 }
+
+/*
+ * Tela cheia numa partida (.arena-screen = ARENA_SCREEN): a arena ocupa a tela inteira, sem o espaçamento do
+ * <main>. Os controles da partida ficam no menu ⋯ dentro da arena (GameArena, `fullscreenMenu`).
+ */
+@media (display-mode: fullscreen) {
+  .app-main:has(.arena-screen) {
+    padding: 0;
+  }
+  .arena-screen {
+    height: 100dvh !important;
+    gap: 0 !important;
+  }
+}
+:root[data-fullscreen] .app-main:has(.arena-screen) {
+  padding: 0;
+}
+:root[data-fullscreen] .arena-screen {
+  height: 100dvh !important;
+  gap: 0 !important;
+}
+
+/* Some em tela cheia (ex.: a barra da prévia /arena, cujos controles vão para o menu da arena). */
+@media (display-mode: fullscreen) {
+  .fullscreen-hidden {
+    display: none !important;
+  }
+}
+:root[data-fullscreen] .fullscreen-hidden {
+  display: none !important;
+}

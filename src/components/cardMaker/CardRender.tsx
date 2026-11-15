@@ -305,11 +305,15 @@ function Characteristics({ card, spec }: PartProps) {
   );
 }
 
+/** Escala da fonte do texto de efeito sobre o tamanho do layout (vale para todas as cartas montadas). */
+const EFFECT_TEXT_SCALE = 0.92;
+
 function EffectText({ card, spec }: PartProps) {
   const style = spec.textBox[card.type];
   const ref = useRef<HTMLDivElement>(null);
   const blocks = parseCardText(card.text);
-  useFit(ref, style?.size ?? 0, [card.text, card.type, spec.id], undefined, style ? style.bottom - style.top : undefined);
+  const size = (style?.size ?? 0) * EFFECT_TEXT_SCALE;
+  useFit(ref, size, [card.text, card.type, spec.id], undefined, style ? style.bottom - style.top : undefined);
   // Layouts sem texto de efeito (ex.: layout 5).
   if (!style) return null;
   return (
@@ -321,7 +325,7 @@ function EffectText({ card, spec }: PartProps) {
         top: style.top,
         width: style.w,
         fontFamily: BODY_FONT,
-        fontSize: style.size,
+        fontSize: size,
         fontWeight: style.weight ?? 600,
         lineHeight: style.lineHeight / style.size,
         color: style.color,
