@@ -26,6 +26,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"There!\"",
     image: "s11-n-389",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-390",
@@ -46,6 +53,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Yes... this is the passion of youth!!\"",
     image: "s11-n-390",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-391",
@@ -66,6 +80,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "A man and a beast who fight against the Nine-Tailed Fox Spirit. That man sacrificed his life to seal the phenomenal disaster.",
     image: "s11-n-391",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-392",
@@ -86,6 +107,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"This suit really fits me!\" \"Let's go, Naruto!\"",
     image: "s11-n-392",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-393",
@@ -107,6 +135,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Don't thank me, I only saved your life, is all!\"",
     image: "s11-n-393",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-394",
@@ -128,6 +163,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Amazing, this guy bought the whole circus?\"",
     image: "s11-n-394",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-395",
@@ -149,6 +191,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Remarkable. The boy has talent.\"",
     image: "s11-n-395",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-396",
@@ -170,6 +219,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Just deal with it. Remember what Lady Tsunade said...\"",
     image: "s11-n-396",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-397",
@@ -190,6 +246,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I'm not gonna let anything bad happen to you... I promise.\"",
     image: "s11-n-397",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-398",
@@ -210,6 +273,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I made a promise...\"",
     image: "s11-n-398",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-399",
@@ -230,6 +300,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"In spite of many difficulties, I kept my promise!\"",
     image: "s11-n-399",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-400",
@@ -250,6 +327,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Must've overused my Sharingan...But this is no time for complaining.\"",
     image: "s11-n-400",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-401",
@@ -271,6 +355,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Grrrrrrrrr....\"",
     image: "s11-n-401",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-402",
@@ -292,6 +383,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Kiii......\"",
     image: "s11-n-402",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-403",
@@ -313,6 +411,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I've heard you're good. But I wonder, are you as good as I am?\"",
     image: "s11-n-403",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-404",
@@ -333,6 +438,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Little punk.\"",
     image: "s11-n-404",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-405",
@@ -353,6 +465,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Tsk, tsk, I have to say, I expected this to be more fun.\"",
     image: "s11-n-405",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-406",
@@ -373,6 +492,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Here I come!!\"",
     image: "s11-n-406",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-407",
@@ -393,6 +519,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I can handle this with my Jutsu!\"",
     image: "s11-n-407",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-408",
@@ -413,6 +546,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Our clan, Kedoin, is known for its secret jutsu 'Face Copying Jutsu!!\"",
     image: "s11-n-408",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-409",
@@ -433,6 +573,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Then, I will become the Hoshikage!!\"",
     image: "s11-n-409",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-410",
@@ -453,6 +600,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I apologize for the rough treatment!\"",
     image: "s11-n-410",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-411",
@@ -474,6 +628,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"But, I am no longer...\"",
     image: "s11-n-411",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-412",
@@ -494,6 +655,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You must be mad at me, Sumaru...\"",
     image: "s11-n-412",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-413",
@@ -515,6 +683,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I will grow our village as big as 'The Five Villages' in our generation!\"",
     image: "s11-n-413",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-414",
@@ -535,6 +710,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Sasuke, you are the chosen.\" \"I don't care...give me the power now.\"",
     image: "s11-n-414",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-415",
@@ -555,6 +737,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Now, I can see his movements which I couldn't before!\"",
     image: "s11-n-415",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-416",
@@ -575,6 +764,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Please leave it to me...\"",
     image: "s11-n-416",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-417",
@@ -595,6 +791,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"What's going on... I'm about to be eaten alive...!\"",
     image: "s11-n-417",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-418",
@@ -615,6 +818,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I just found... His weakness!\"",
     image: "s11-n-418",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-419",
@@ -635,6 +845,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I found you!\"",
     image: "s11-n-419",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-420",
@@ -655,6 +872,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"It's not like that.\"",
     image: "s11-n-420",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-421",
@@ -675,6 +899,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You have grown up... Naruto.\"",
     image: "s11-n-421",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-422",
@@ -695,6 +926,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Hump...you are just like a kid.\"",
     image: "s11-n-422",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-423",
@@ -715,6 +953,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You guys greeted enough didn't you, Kakashi?\"",
     image: "s11-n-423",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-424",
@@ -735,6 +980,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Naruto\"",
     image: "s11-n-424",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-425",
@@ -755,6 +1007,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Let's do it!!\"",
     image: "s11-n-425",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-426",
@@ -775,6 +1034,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I will beat you!\"",
     image: "s11-n-426",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-427",
@@ -795,6 +1061,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"All right!!\"",
     image: "s11-n-427",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-428",
@@ -815,6 +1088,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"When we fight, no matter how puny our opponent is, we don't mock them, we face them with full strength.\"",
     image: "s11-n-428",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-429",
@@ -835,6 +1115,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I can do this!\"",
     image: "s11-n-429",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-430",
@@ -852,6 +1139,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     text: [],
     flavor: "\"I can take care of things here.\"",
     image: "s11-n-430",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-431",
@@ -869,6 +1163,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     text: [],
     flavor: "\"OK!\"",
     image: "s11-n-431",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-432",
@@ -886,6 +1187,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     text: [],
     flavor: "\"It's game over...\"",
     image: "s11-n-432",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-433",
@@ -906,6 +1214,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You are...an idiot aren't you?\"",
     image: "s11-n-433",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-434",
@@ -926,6 +1241,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"When I finish this, let's train together!\"",
     image: "s11-n-434",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-435",
@@ -947,6 +1269,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Arf!\"",
     image: "s11-n-435",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-436",
@@ -964,6 +1293,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     text: [],
     flavor: "\"Good luck!\"",
     image: "s11-n-436",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-437",
@@ -981,6 +1317,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     text: [],
     flavor: "\"Not just fast.\"",
     image: "s11-n-437",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-438",
@@ -998,6 +1341,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     text: [],
     flavor: "\"What are you doing here, aside from catching up on your reading?\"",
     image: "s11-n-438",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-439",
@@ -1018,6 +1368,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\".. Seems I have no choice but to fight.\"",
     image: "s11-n-439",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-440",
@@ -1038,6 +1395,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You've got to be taken down, and it's only fitting that I'm the one to do it.\"",
     image: "s11-n-440",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-441",
@@ -1058,6 +1422,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Now, it's our turn!\" \"Right. Let's go!\"",
     image: "s11-n-441",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-442",
@@ -1078,6 +1449,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"\"I can do things you've never even dreamed of.\"",
     image: "s11-n-442",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-443",
@@ -1098,6 +1476,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I'll take care of these two.\"",
     image: "s11-n-443",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-444",
@@ -1118,6 +1503,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Then I will kill the kindness in my own heart and fully embrace the shinobi way.\"",
     image: "s11-n-444",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-445",
@@ -1139,6 +1531,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Who do you think I am?\"",
     image: "s11-n-445",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-446",
@@ -1160,6 +1559,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"My body is too devastated to move on its own anymore...I use the power of my mind.\"",
     image: "s11-n-446",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-447",
@@ -1180,6 +1586,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"At least you've made this a little more interesting.\"",
     image: "s11-n-447",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-448",
@@ -1200,6 +1613,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Don't worry! You haven't changed a bit!!\"",
     image: "s11-n-448",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-449",
@@ -1220,6 +1640,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I've become more feminine, haven't I?\"",
     image: "s11-n-449",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-450",
@@ -1240,6 +1667,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I guess now'd be the time to tell ya I'm not the fighting type.\"",
     image: "s11-n-450",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-451",
@@ -1260,6 +1694,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Let me treat your wounds!\"",
     image: "s11-n-451",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-452",
@@ -1280,6 +1721,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Pretty cool, huh?\"",
     image: "s11-n-452",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-453",
@@ -1300,6 +1748,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Your way is inefficient and unnecessarily risky. Don't lose sight of our goal.\"",
     image: "s11-n-453",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-454",
@@ -1321,6 +1776,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I wouldn't be looking over there if I were you.\"",
     image: "s11-n-454",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-455",
@@ -1342,6 +1804,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Will ya fight along side me today, Chief Toad?\" \"Sit tight. I'll show you what duty... is all about.\"",
     image: "s11-n-455",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-456",
@@ -1363,6 +1832,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Your special abilities belong to me from this day forward.\"",
     image: "s11-n-456",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.3, y: -8.7, zoom: 1.0237, print: true } },
+    },
   },
   {
     id: "s11-n-457",
@@ -1384,6 +1860,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Stop your prattling... you little weakling...\"",
     image: "s11-n-457",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-458",
@@ -1405,6 +1888,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"\"I've never let a captive go before.\"",
     image: "s11-n-458",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-459",
@@ -1426,6 +1916,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"\"To gain one thing, another must be left behind.\"",
     image: "s11-n-459",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-n-460",
@@ -1447,6 +1944,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"How'd you like to see the inside of an air-tight cocoon?\"",
     image: "s11-n-460",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1465,6 +1969,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Here comes our special technique...!\"",
     image: "s11-j-342",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-343",
@@ -1481,6 +1992,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"He changed his form...!\"",
     image: "s11-j-343",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-344",
@@ -1497,6 +2015,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Ninja Art: Kujaku Slice!\"",
     image: "s11-j-344",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-345",
@@ -1513,6 +2038,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Sacrifice yourself to my beast!\"",
     image: "s11-j-345",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-346",
@@ -1529,6 +2061,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Ohhhhhhhhhhhhh!\"",
     image: "s11-j-346",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-347",
@@ -1545,6 +2084,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"\"Leaf Lightning Fist!\"",
     image: "s11-j-347",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-348",
@@ -1561,6 +2107,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Ohhhhhhhhhhhhh!\"",
     image: "s11-j-348",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-349",
@@ -1577,6 +2130,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Alligator, Snapping Turtle, Piranha, Toad...\"",
     image: "s11-j-349",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-350",
@@ -1593,6 +2153,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Here it comes, Ninja Art: 'Currency Jutsu'!",
     image: "s11-j-350",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-351",
@@ -1609,6 +2176,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Good bye...my old body.\"",
     image: "s11-j-351",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-352",
@@ -1624,6 +2198,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Wow! Can she fly?\"",
     image: "s11-j-352",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-353",
@@ -1640,6 +2221,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"It just ate its own kind!\"",
     image: "s11-j-353",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-354",
@@ -1656,6 +2244,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You cannot break these ropes. They were knitted of our chakra.\"",
     image: "s11-j-354",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-355",
@@ -1671,6 +2266,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"...That's not a Ninja Art!\"",
     image: "s11-j-355",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-356",
@@ -1687,6 +2289,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You gotta watch your step!\"",
     image: "s11-j-356",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-357",
@@ -1701,6 +2310,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Don't worry. They haven't noticed us.\"",
     image: "s11-j-357",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-358",
@@ -1717,6 +2333,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Sorry, but it's not Genjutsu.\"",
     image: "s11-j-358",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-359",
@@ -1733,6 +2356,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"That ought to do it. Don't you think, punk?\"",
     image: "s11-j-359",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.4, y: 1.5, zoom: 1.0058, print: true } },
+    },
   },
   {
     id: "s11-j-360",
@@ -1749,6 +2379,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Hohohohoho.....\"",
     image: "s11-j-360",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-361",
@@ -1764,6 +2401,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Exactly. Effective, isn't it? An odorless poison that slows the reflexes.\"",
     image: "s11-j-361",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-362",
@@ -1779,6 +2423,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"He he...\"",
     image: "s11-j-362",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-363",
@@ -1794,6 +2445,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Shoot!\"",
     image: "s11-j-363",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-364",
@@ -1808,6 +2466,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Please...Chief Toad!!\"",
     image: "s11-j-364",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-365",
@@ -1824,6 +2489,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"It seems like I cannot hold back this time.\"",
     image: "s11-j-365",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-366",
@@ -1839,6 +2511,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Step away, Naruto!\"",
     image: "s11-j-366",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-367",
@@ -1854,6 +2533,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Tiger!!\"",
     image: "s11-j-367",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-368",
@@ -1870,6 +2556,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"He's building up a huge amount of Chakra!\"",
     image: "s11-j-368",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-369",
@@ -1886,6 +2579,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Can't move — my body-!\"",
     image: "s11-j-369",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-370",
@@ -1902,6 +2602,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Look into every mirror.. as hard as you like.. you will never learn the secret.\"",
     image: "s11-j-370",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-371",
@@ -1918,6 +2625,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Let's see how much you've improved.\"",
     image: "s11-j-371",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-372",
@@ -1932,6 +2646,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Send my charged chakra to where it's needed...\"",
     image: "s11-j-372",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-373",
@@ -1948,6 +2669,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"He's underground\"",
     image: "s11-j-373",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-374",
@@ -1963,6 +2691,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"No! Substitution Jutsu again.\"",
     image: "s11-j-374",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-375",
@@ -1979,6 +2714,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I caught you in my Shadow Possession Jutsu!\"",
     image: "s11-j-375",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-376",
@@ -1994,6 +2736,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Does he have eyes on his back?\"",
     image: "s11-j-376",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-377",
@@ -2010,6 +2759,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Here I come!!!!!\"",
     image: "s11-j-377",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-378",
@@ -2025,6 +2781,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Harem Jutsu!!\"",
     image: "s11-j-378",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.3, y: 1.8, zoom: 1.0072, print: true } },
+    },
   },
   {
     id: "s11-j-379",
@@ -2040,6 +2803,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Come 'n try it...\"",
     image: "s11-j-379",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-380",
@@ -2056,6 +2826,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s11-j-380",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-381",
@@ -2072,6 +2849,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Listen, both of you. Whatever happens, don't look. If you meet his gaze, you're finished.\"",
     image: "s11-j-381",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-382",
@@ -2088,6 +2872,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s11-j-382",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.1, y: -0.5, zoom: 1.0053, print: true } },
+    },
   },
   {
     id: "s11-j-383",
@@ -2104,6 +2895,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Haaaaaaaaa!!!\"",
     image: "s11-j-383",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.4, y: -0.7, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s11-j-384",
@@ -2120,6 +2918,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Water Style: Water Dragon Jutsu!!\"",
     image: "s11-j-384",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-385",
@@ -2136,6 +2941,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"No, my friend, it's the other place we're going to. You and me both, Gato!\"",
     image: "s11-j-385",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-j-386",
@@ -2152,6 +2964,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Fire Style: Phoenix Flower Jutsu!!\"",
     image: "s11-j-386",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2168,6 +2987,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Now for your punishment...",
     image: "s11-m-322",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-323",
@@ -2183,6 +3009,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"From this day on... Friends forever, no matter what.\"",
     image: "s11-m-323",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-324",
@@ -2198,6 +3031,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I am busy finishing the last volume of 'Make Out Violence'...\"",
     image: "s11-m-324",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-325",
@@ -2214,6 +3054,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"This village has the star that all five Kages have been envious of.\"",
     image: "s11-m-325",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-326",
@@ -2230,6 +3077,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Hold on...I know....\"",
     image: "s11-m-326",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-327",
@@ -2246,6 +3100,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You can cash that as soon as we get to the island, all right?\"",
     image: "s11-m-327",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-328",
@@ -2262,6 +3123,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"if you want this money, you need to help me now.\"",
     image: "s11-m-328",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-329",
@@ -2279,6 +3147,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Your strength of spirit was one of the main reasons I chose you, and it would be foolish of me to let it go to waste.\"",
     image: "s11-m-329",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.6, y: -0.6, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s11-m-330",
@@ -2296,6 +3171,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Now, Sumaru's life is in my hands...\"",
     image: "s11-m-330",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.5, y: -0.2, zoom: 1.0036, print: true } },
+    },
   },
   {
     id: "s11-m-331",
@@ -2312,6 +3194,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"\"Yes. He's the one. My future lies in him!\"",
     image: "s11-m-331",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-332",
@@ -2328,6 +3217,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Sensei...!\"",
     image: "s11-m-332",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-333",
@@ -2344,6 +3240,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"This area is filled with the poisonous gas...\"",
     image: "s11-m-333",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-334",
@@ -2359,6 +3262,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"\"Of course, that's no guarantee that I'll ever be very good at it. But I'll give it all I've got.\"",
     image: "s11-m-334",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-335",
@@ -2375,6 +3285,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"This must be the dangerous area you were talking about...\"",
     image: "s11-m-335",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: -0.7, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s11-m-336",
@@ -2391,6 +3308,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Hehehe...Sorry...\"",
     image: "s11-m-336",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: -0.7, zoom: 1.0031, print: true } },
+    },
   },
   {
     id: "s11-m-337",
@@ -2407,6 +3331,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Now, then... Hand over the prince and his son.\"",
     image: "s11-m-337",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-338",
@@ -2423,6 +3354,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"This is what I am talking about!!\"",
     image: "s11-m-338",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: -0.6, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s11-m-339",
@@ -2439,6 +3377,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"As long as it's your treat...\"",
     image: "s11-m-339",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-340",
@@ -2455,6 +3400,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Now, I'm back!! It hasn't changed a bit!!\"",
     image: "s11-m-340",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.5, y: -0.3, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s11-m-341",
@@ -2470,6 +3422,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"My time here is done, Haku... Tonight I cast aside the Land of Water...\"",
     image: "s11-m-341",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-342",
@@ -2485,6 +3444,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"This is the first step for lord Orochimaru's ambition...\"",
     image: "s11-m-342",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-343",
@@ -2501,6 +3467,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I wasted my sweet emotion for nothing!!\"",
     image: "s11-m-343",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-344",
@@ -2518,6 +3491,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Here I come!!!!!\"",
     image: "s11-m-344",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-345",
@@ -2534,6 +3514,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"The next time, the mission, will go perfectly!\"",
     image: "s11-m-345",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.5, y: -0.5, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s11-m-346",
@@ -2549,6 +3536,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Don't forget, my Way of the Shinobi means... I always stand behind what I say!\"",
     image: "s11-m-346",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-347",
@@ -2565,6 +3559,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Surviving in such an unsightly manner as this... By all means, flee... Cling to your wretched life...\"",
     image: "s11-m-347",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-348",
@@ -2580,6 +3581,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"OK guys, fan out and start searching for Naruto and Sasuke's scent.\"",
     image: "s11-m-348",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-349",
@@ -2595,6 +3603,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Whatever! You moron!\" \"What the heck is your problem, you loser?\"",
     image: "s11-m-349",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-350",
@@ -2611,6 +3626,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"By using it...you're taking a risk, aren't you\"",
     image: "s11-m-350",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-351",
@@ -2626,6 +3648,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Naruto, and Sasuke... as long as they live, the cycle will continue\"",
     image: "s11-m-351",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-352",
@@ -2641,6 +3670,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Huh?? Pervy Sage?!\" \"Hey, there.\"",
     image: "s11-m-352",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-353",
@@ -2657,6 +3693,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"If being smarter means what you say it does, I'll remain a fool my entire life..\"",
     image: "s11-m-353",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-354",
@@ -2672,6 +3715,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Remember what we seek: everything... including the Nine-Tailed Fox!\"",
     image: "s11-m-354",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-355",
@@ -2688,6 +3738,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You gonna run off again?\" \"So it's you...hopeless little knucklehead.\"",
     image: "s11-m-355",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-356",
@@ -2704,6 +3761,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Since a long time ago... The Uchiha have always ensured the peace here. The crest is a testament of our clan's pride in a way of life centuries old.\"",
     image: "s11-m-356",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-357",
@@ -2719,6 +3783,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"...\" \"It's been a long time, old friend.\" \"Long time indeed.\" \"Naruto.\" \"Huh?\"",
     image: "s11-m-357",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: -0.3, y: -1.2, zoom: 1.0012, print: true } },
+    },
   },
   {
     id: "s11-m-358",
@@ -2735,6 +3806,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"You'll grow up to be a fine man. And a great Hokage, too.\"",
     image: "s11-m-358",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-359",
@@ -2751,6 +3829,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"From this day on I shall protect the Hidden Leaf Village...As the Fifth Hokage\"",
     image: "s11-m-359",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-360",
@@ -2767,6 +3852,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"That is something we ninja have to deal with, every day of our lives...like Zabuza... and the kid.\"",
     image: "s11-m-360",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-361",
@@ -2782,6 +3874,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Okay... So then how many of the Inner Gates is he able to open now?\" \"Five gates.\"",
     image: "s11-m-361",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-362",
@@ -2798,6 +3897,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s11-m-362",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-m-363",
@@ -2814,6 +3920,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"What is this power..?\"",
     image: "s11-m-363",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.5, y: -0.4, zoom: 1.0035, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -2831,6 +3944,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I don't care. I want him.\"",
     image: "s11-c-043",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-c-044",
@@ -2847,6 +3967,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"I won't forget ...about my friends!\"",
     image: "s11-c-044",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 4.1, y: -8.6, zoom: 1.0231, print: true } },
+    },
   },
   {
     id: "s11-c-045",
@@ -2863,6 +3990,13 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"Noooooooooooo! I want something more tasty!\"",
     image: "s11-c-045",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s11-c-046",
@@ -2879,5 +4013,12 @@ export const S11_APPROACHING_WIND: Card[] = [
     ],
     flavor: "\"From now on...I am the King!\"",
     image: "s11-c-046",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

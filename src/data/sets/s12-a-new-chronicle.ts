@@ -27,6 +27,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I knew it...\"",
     image: "s12-n-461",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-462",
@@ -48,6 +55,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"No kidding. Why would I?\"",
     image: "s12-n-462",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-463",
@@ -68,6 +82,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Have you heard of an organization called \"Akatsuki\" before??\"",
     image: "s12-n-463",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-464",
@@ -88,6 +109,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Get ready for the combat right way.\"",
     image: "s12-n-464",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-465",
@@ -108,6 +136,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s12-n-465",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-466",
@@ -128,6 +163,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This time, I will save him no matter what!\"",
     image: "s12-n-466",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-467",
@@ -148,6 +190,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"let me take care of him.\"",
     image: "s12-n-467",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-468",
@@ -168,6 +217,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"He is no longer a weak ninja whom I need to worry about.\"",
     image: "s12-n-468",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-469",
@@ -188,6 +244,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You must have caught a cold when you were peeping.\"",
     image: "s12-n-469",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-470",
@@ -208,6 +271,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"\"Are you OK, Ebisu sensei?\"",
     image: "s12-n-470",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.2, y: -8.8, zoom: 1.0234, print: true } },
+    },
   },
   {
     id: "s12-n-471",
@@ -228,6 +298,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s12-n-471",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-472",
@@ -248,6 +325,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Maybe I spent too much time in the hot spring.",
     image: "s12-n-472",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-473",
@@ -268,6 +352,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I'm not that bad.\"",
     image: "s12-n-473",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-474",
@@ -288,6 +379,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Haaaaaaaaa!!!\"",
     image: "s12-n-474",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.6, y: -8.8, zoom: 1.0247, print: true } },
+    },
   },
   {
     id: "s12-n-475",
@@ -308,6 +406,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Tenten, maybe you need to train more.\"",
     image: "s12-n-475",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-476",
@@ -328,6 +433,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"He is coming from behind!\"",
     image: "s12-n-476",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-477",
@@ -348,6 +460,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Why don't we take a break!\"",
     image: "s12-n-477",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-478",
@@ -368,6 +487,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"It's time for you to fall asleep with my jutsu...\"",
     image: "s12-n-478",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-479",
@@ -388,6 +514,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You will remember me soon...\"",
     image: "s12-n-479",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-480",
@@ -409,6 +542,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You will understand it once you get this...\"",
     image: "s12-n-480",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-481",
@@ -430,6 +570,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Why do you care? You are going to die anyway.\"",
     image: "s12-n-481",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-482",
@@ -450,6 +597,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"THE ENEMY IS APPROACHING HERE...\"",
     image: "s12-n-482",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.6, y: -8.9, zoom: 1.0245, print: true } },
+    },
   },
   {
     id: "s12-n-483",
@@ -470,6 +624,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"As a Kazekage of the Hidden Sand Village.\"",
     image: "s12-n-483",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-484",
@@ -491,6 +652,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Gigiii...\"",
     image: "s12-n-484",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-485",
@@ -512,6 +680,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Gigiii...\"",
     image: "s12-n-485",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-486",
@@ -533,6 +708,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Gigiii...\"",
     image: "s12-n-486",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-487",
@@ -553,6 +735,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"That's not funny at all...\"",
     image: "s12-n-487",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-488",
@@ -573,6 +762,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Come on! I was just joking! Ha ha ha!\"",
     image: "s12-n-488",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-489",
@@ -593,6 +789,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Got it. I will decode it right away!\"",
     image: "s12-n-489",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-490",
@@ -610,6 +813,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [],
     flavor: "\"Let me handle it.\"",
     image: "s12-n-490",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-491",
@@ -627,6 +837,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [],
     flavor: "\"I will save them this time!!\"",
     image: "s12-n-491",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.2, y: -8.7, zoom: 1.0238, print: true } },
+    },
   },
   {
     id: "s12-n-492",
@@ -647,6 +864,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"No, sensei! Let's get there by noon!.\"",
     image: "s12-n-492",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-493",
@@ -664,6 +888,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [],
     flavor: "\"Naruto...\"",
     image: "s12-n-493",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-494",
@@ -684,6 +915,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I want to become one who everyone relies on... as a Kazekage of the Hidden Sand Village.\" \"I will become Hokage one day. So I will put him under a debt.\"",
     image: "s12-n-494",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-495",
@@ -704,6 +942,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Let's go, Kankuro!\" \"I know.\"",
     image: "s12-n-495",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-496",
@@ -724,6 +969,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I'll admit it. You're definitely strong.\"",
     image: "s12-n-496",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-497",
@@ -744,6 +996,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You gonna tell me your comrades risked their lives for nothing?!\"",
     image: "s12-n-497",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-498",
@@ -764,6 +1023,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Wait'll they see our new technique!--These clowns won't know what hit 'em, right, boy?\"",
     image: "s12-n-498",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-499",
@@ -784,6 +1050,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"All right. Scatter!!\"",
     image: "s12-n-499",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-500",
@@ -804,6 +1077,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Your kick is still weak.\" \"Yes.\"",
     image: "s12-n-500",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-501",
@@ -825,6 +1105,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I'll finish this quickly.\" \"You are pretty good at rubbing me the wrong way.\"",
     image: "s12-n-501",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-502",
@@ -846,6 +1133,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You just went into my effective range.\" \"One finger is enough to activate my Genjutsu\"",
     image: "s12-n-502",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-503",
@@ -867,6 +1161,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Inuzuka Style! Man-Beast Transformation Combo!\"",
     image: "s12-n-503",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-504",
@@ -887,6 +1188,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I gotcha!\" \"Yahooo!!\"",
     image: "s12-n-504",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.6, y: -9, zoom: 1.0253, print: true } },
+    },
   },
   {
     id: "s12-n-505",
@@ -907,6 +1215,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"It looks like the exams are going to be fun this year...\"",
     image: "s12-n-505",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-506",
@@ -927,6 +1242,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Watch yourself, something doesn't seem quite right here!\"",
     image: "s12-n-506",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-507",
@@ -947,6 +1269,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Even a caged bird will smarten up, .. and will become able to figure out how to open the door to its cage with its beak...\"",
     image: "s12-n-507",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-508",
@@ -967,6 +1296,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I must tell Lord Hokage\"",
     image: "s12-n-508",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-509",
@@ -987,6 +1323,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Yes, father\"",
     image: "s12-n-509",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-510",
@@ -1007,6 +1350,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You .. fool. .. You're the one who's going to die here.\"",
     image: "s12-n-510",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-511",
@@ -1027,6 +1377,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"If you fight me, you won't be able to recover. Forfeit and withdraw.\"",
     image: "s12-n-511",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.3, y: -8.8, zoom: 1.0236, print: true } },
+    },
   },
   {
     id: "s12-n-512",
@@ -1044,6 +1401,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [],
     flavor: "\"Arf! Arf!!\"",
     image: "s12-n-512",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-513",
@@ -1065,6 +1429,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"\"I struck all sixty-four of your Chakra Points. You're lucky to still be breathing.\"",
     image: "s12-n-513",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-514",
@@ -1085,6 +1456,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Take this!!\"",
     image: "s12-n-514",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-515",
@@ -1106,6 +1484,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Then you're gonna love this next one...\"",
     image: "s12-n-515",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-516",
@@ -1127,6 +1512,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Expansion Jutsu!\"",
     image: "s12-n-516",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-517",
@@ -1147,6 +1539,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Try not to move, Shino.\"",
     image: "s12-n-517",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-518",
@@ -1167,6 +1566,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"The Hyuga clan has no use for such an heir\"",
     image: "s12-n-518",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-519",
@@ -1187,6 +1593,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Awwwright!.\"",
     image: "s12-n-519",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-520",
@@ -1204,6 +1617,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [],
     flavor: "\"All my jutsu are 'art'..!\"",
     image: "s12-n-520",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-n-521",
@@ -1221,6 +1641,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     text: [],
     flavor: "\"That's not my business.\"",
     image: "s12-n-521",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1238,6 +1665,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This is amazing isn't it?\"",
     image: "s12-j-387",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-388",
@@ -1254,6 +1688,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Behold! My newly developed Pervy Ninjutsu!!\"",
     image: "s12-j-388",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.5, y: 2.1, zoom: 1.0052, print: true } },
+    },
   },
   {
     id: "s12-j-389",
@@ -1272,6 +1713,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"The ending of 'Make Out Tactics' is.....\"",
     image: "s12-j-389",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-390",
@@ -1288,6 +1736,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"After 3 years, they finally released this new book in the 'Make-Out' series!\"",
     image: "s12-j-390",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-391",
@@ -1304,6 +1759,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Now, I remembered something...\"",
     image: "s12-j-391",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-392",
@@ -1319,6 +1781,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Sasuke was here at that time...\"",
     image: "s12-j-392",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-393",
@@ -1335,6 +1804,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Wha..what an extraordinary power she has!\"",
     image: "s12-j-393",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-394",
@@ -1351,6 +1827,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"There's no use hiding from me!\"",
     image: "s12-j-394",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-395",
@@ -1367,6 +1850,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Don't be so hasty...\"",
     image: "s12-j-395",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-396",
@@ -1383,6 +1873,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Wha..what?\"",
     image: "s12-j-396",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.8, y: -1.2, zoom: 1.0012, print: true } },
+    },
   },
   {
     id: "s12-j-397",
@@ -1399,6 +1896,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s12-j-397",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-398",
@@ -1415,6 +1919,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Eight Inner Gates! The 6th Gate: Gate of Joy, open!!!\"",
     image: "s12-j-398",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-399",
@@ -1431,6 +1942,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"That fighting stance...!!\"",
     image: "s12-j-399",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-400",
@@ -1446,6 +1964,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I know that!\"",
     image: "s12-j-400",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-401",
@@ -1461,6 +1986,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"These eyes are not the only ways to activate my genjutsu...\"",
     image: "s12-j-401",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-402",
@@ -1475,6 +2007,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"\"The guard of VIP from land of the Field...which is a B-rank mission...\"",
     image: "s12-j-402",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-403",
@@ -1491,6 +2030,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"What do you think of this?\"",
     image: "s12-j-403",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.6, y: 0.1, zoom: 1.0042, print: true } },
+    },
   },
   {
     id: "s12-j-404",
@@ -1507,6 +2053,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This one is pretty fast, you know.\"",
     image: "s12-j-404",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-405",
@@ -1523,6 +2076,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Don't call it a 'thing'!!\"",
     image: "s12-j-405",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-406",
@@ -1539,6 +2099,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I changed my mind. Let's destroy this village...\"",
     image: "s12-j-406",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-407",
@@ -1555,6 +2122,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This one looks like a good one to have...\"",
     image: "s12-j-407",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-408",
@@ -1570,6 +2144,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Water Style: Water Shock Wave!!\"",
     image: "s12-j-408",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-409",
@@ -1586,6 +2167,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"My breath...\"",
     image: "s12-j-409",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-410",
@@ -1603,6 +2191,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I am the only one who can use this 'Shark Skin', no one else.\"",
     image: "s12-j-410",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-411",
@@ -1618,6 +2213,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Let's use that jutsu...\"",
     image: "s12-j-411",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-412",
@@ -1634,6 +2236,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Shoot, I couldn't get him.\"",
     image: "s12-j-412",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-413",
@@ -1649,6 +2258,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I won't let you go!\"",
     image: "s12-j-413",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-414",
@@ -1665,6 +2281,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"It looks like an egg shell to protect things inside.\"",
     image: "s12-j-414",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-415",
@@ -1681,6 +2304,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This is not good.\"",
     image: "s12-j-415",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-416",
@@ -1697,6 +2327,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Sand Coffin!!\"",
     image: "s12-j-416",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-417",
@@ -1712,6 +2349,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I have detoxicated directly from his body.\"",
     image: "s12-j-417",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-418",
@@ -1728,6 +2372,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Is that poisonous too?\"",
     image: "s12-j-418",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-419",
@@ -1744,6 +2395,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s12-j-419",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-420",
@@ -1759,6 +2417,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I can make three antidotes out of this.\"",
     image: "s12-j-420",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-421",
@@ -1775,6 +2440,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"8 Trigrams Air Palm!!\"",
     image: "s12-j-421",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-422",
@@ -1791,6 +2463,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Arhat Fist!!!\"",
     image: "s12-j-422",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-423",
@@ -1807,6 +2486,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Spider Bow: Fierce Rip!!\"",
     image: "s12-j-423",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-424",
@@ -1823,6 +2509,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"... but now the real battle begins.\"",
     image: "s12-j-424",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.9, y: -1, zoom: 1.0021, print: true } },
+    },
   },
   {
     id: "s12-j-425",
@@ -1839,6 +2532,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Demon Flute: Chains of Fantasia!!\"",
     image: "s12-j-425",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-426",
@@ -1854,6 +2554,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Oh, and standing as close as you are to my friend the Black Ant...\"",
     image: "s12-j-426",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-427",
@@ -1870,6 +2577,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Those bugs again...\"",
     image: "s12-j-427",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-428",
@@ -1886,6 +2600,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Poison on the blade...\"",
     image: "s12-j-428",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-429",
@@ -1902,6 +2623,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"The Leaf Village's spirit is strong... You'd do well to remember.\"",
     image: "s12-j-429",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-430",
@@ -1921,6 +2649,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"The Leaf Village's Shadow Strangle Jutsu.\"",
     image: "s12-j-430",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-431",
@@ -1937,6 +2672,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You!\" \"Needles... Dipped in poison\"",
     image: "s12-j-431",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-432",
@@ -1952,6 +2694,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s12-j-432",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-433",
@@ -1967,6 +2716,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Ha!!\"",
     image: "s12-j-433",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-434",
@@ -1983,6 +2739,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Shhhhhhhhhhhhh......!!\"",
     image: "s12-j-434",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-435",
@@ -1998,6 +2761,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Sealing jutsu: Reaper Death Seal!\"",
     image: "s12-j-435",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-436",
@@ -2013,6 +2783,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Shadow Clone Jutsu!!\"",
     image: "s12-j-436",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-437",
@@ -2028,6 +2805,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Not you again! What is this?!\"",
     image: "s12-j-437",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-438",
@@ -2043,6 +2827,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I'm finally freeee!! ~ Here I come, baby!\"",
     image: "s12-j-438",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-439",
@@ -2059,6 +2850,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Water Style: Liquid Bullets!!\"",
     image: "s12-j-439",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-440",
@@ -2075,6 +2873,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Wind Style: Air Bullets!!\"",
     image: "s12-j-440",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-441",
@@ -2090,6 +2895,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Sealing Jutsu: Fire Seal!!\"",
     image: "s12-j-441",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-442",
@@ -2105,6 +2917,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Careful kid, you shouldn't walk around with that mask on.\"",
     image: "s12-j-442",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.6, y: 0, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s12-j-443",
@@ -2121,6 +2940,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s12-j-443",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-444",
@@ -2137,6 +2963,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Byakugan!!\"",
     image: "s12-j-444",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-445",
@@ -2153,6 +2986,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Wolf Fang Over Fang!!\"",
     image: "s12-j-445",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-446",
@@ -2168,6 +3008,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Larch Dance!!\"",
     image: "s12-j-446",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-447",
@@ -2183,6 +3030,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This one's a puppet, tool?\"",
     image: "s12-j-447",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-448",
@@ -2199,6 +3053,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"My Black Ant puppet isn't designed to be used on offense. Its usual function, is trapping people.\"",
     image: "s12-j-448",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-j-449",
@@ -2213,6 +3074,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Fire Style: Fire Ball Jutsu!!\"",
     image: "s12-j-449",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2230,6 +3098,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Black cloak with red clouds pattern...\"",
     image: "s12-m-364",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-365",
@@ -2246,6 +3121,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Lord Kazekage...the conference is about to start.\"",
     image: "s12-m-365",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-366",
@@ -2262,6 +3144,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"In the past few years, our village has become steady and gained diplomatic relations with other allied villages\"",
     image: "s12-m-366",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-367",
@@ -2278,6 +3167,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I am just sending this envoy from the Sand off.\"",
     image: "s12-m-367",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: 0.7, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s12-m-368",
@@ -2294,6 +3190,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Hehe...A ninja must see through deception, right?\"",
     image: "s12-m-368",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-369",
@@ -2309,6 +3212,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"They called people like Gaara a 'Jinchuriki'...\"",
     image: "s12-m-369",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-370",
@@ -2325,6 +3235,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"All-right, everyone! We need to get to the 'Sand' by the end of the day!\"",
     image: "s12-m-370",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-371",
@@ -2341,6 +3258,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"HA!\"",
     image: "s12-m-371",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-372",
@@ -2356,6 +3280,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"OK...come over here.\"",
     image: "s12-m-372",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-373",
@@ -2372,6 +3303,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\".....You are...\"",
     image: "s12-m-373",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-374",
@@ -2388,6 +3326,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I still remember what you did to my son, 'White Fang of the Leaf'!!\"",
     image: "s12-m-374",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-375",
@@ -2403,6 +3348,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You mean, you are the 'Sasori of the Red Sand' who is known as the master craftsman of the Puppet Unit?\"",
     image: "s12-m-375",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-376",
@@ -2420,6 +3372,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I was playing dead. Gya ha ha ha...\"",
     image: "s12-m-376",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-377",
@@ -2436,6 +3395,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I will crush you all!!\"",
     image: "s12-m-377",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-378",
@@ -2452,6 +3418,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Let the fight begin!!\"",
     image: "s12-m-378",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-379",
@@ -2468,6 +3441,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"And I'm Sakon of the West Gate.\" \"I'm Tayuya of the North Gate.\"",
     image: "s12-m-379",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-380",
@@ -2484,6 +3464,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I am Jirobo of the South Gate.\" \"I'm Kidomaru of the East Gate.\"",
     image: "s12-m-380",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-381",
@@ -2500,6 +3487,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"GRRRAAAAAAHHHHHH!!!!!\"",
     image: "s12-m-381",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.8, y: 0.3, zoom: 1.0035, print: true } },
+    },
   },
   {
     id: "s12-m-382",
@@ -2515,6 +3509,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"A steady flow of people have gone missing from the village. Genin, Chunin, even Anbu Black Ops. Many of them were last seen with you... And you've been acting rather strange lately...\"",
     image: "s12-m-382",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-383",
@@ -2531,6 +3532,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"..........\"",
     image: "s12-m-383",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 1, y: -0.3, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s12-m-384",
@@ -2547,6 +3555,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"..........\"",
     image: "s12-m-384",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-385",
@@ -2563,6 +3578,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"She gives off a very faint scent. Nothing you could detect. But the male of the species can. He has a very strong sense of smell...\"",
     image: "s12-m-385",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-386",
@@ -2581,6 +3603,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"No, Gaara! You can't do this!\" \"Yashamaru...\"",
     image: "s12-m-386",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-387",
@@ -2596,6 +3625,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Hayate... I will avenge your death... I promise.\"",
     image: "s12-m-387",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: 1.3, zoom: 1.0043, print: true } },
+    },
   },
   {
     id: "s12-m-388",
@@ -2612,6 +3648,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I don't need much... Just give me... Gimme some Chakra!\"",
     image: "s12-m-388",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-389",
@@ -2628,6 +3671,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"..........\"",
     image: "s12-m-389",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.9, y: -0.2, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s12-m-390",
@@ -2644,6 +3694,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Well Jiraiya, it looks like I win our little wager. Enjoy your time on the stump.\"",
     image: "s12-m-390",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-391",
@@ -2659,6 +3716,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Take a good look, Shizune. The losing streak is over! Our luck is about to change!\"",
     image: "s12-m-391",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-392",
@@ -2675,6 +3739,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"You are all far from the path to becoming excellent shinobi!\"",
     image: "s12-m-392",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 1, y: -0.8, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s12-m-393",
@@ -2690,6 +3761,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"...I've finally found you.\"",
     image: "s12-m-393",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-394",
@@ -2706,6 +3784,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Dan...\"",
     image: "s12-m-394",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-395",
@@ -2722,6 +3807,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Hmmm... Lets see... I'm exactly fifty years old, so... Gimme Chou!\"",
     image: "s12-m-395",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-396",
@@ -2738,6 +3830,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Dan...Take this... I want you to have it.\"",
     image: "s12-m-396",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-397",
@@ -2754,6 +3853,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Ten orders of Short Ribs!\" \"Man, you could put me off food for good. Just watching you makes me sick.\"",
     image: "s12-m-397",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-398",
@@ -2770,6 +3876,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I can use the time getting ready for what I've got in store for you.\"",
     image: "s12-m-398",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-399",
@@ -2786,6 +3899,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"The Original Ino-Shika-Cho Trio is back.\"",
     image: "s12-m-399",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-400",
@@ -2802,6 +3922,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Listen, Kiba...Play time's over. The time's come for you and Akamaru to get stronger, together.\"",
     image: "s12-m-400",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-401",
@@ -2817,6 +3944,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"This is what I am talking about!!\"",
     image: "s12-m-401",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-402",
@@ -2833,6 +3967,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Wait!!!\"",
     image: "s12-m-402",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-403",
@@ -2849,6 +3990,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Not long ago it was at the height of its glory... Look at it now.\" \"Hm. You sound almost sad... Don't tell me you still have feelings for your old home.\"",
     image: "s12-m-403",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.3, y: 1.2, zoom: 1.0046, print: true } },
+    },
   },
   {
     id: "s12-m-404",
@@ -2865,6 +4013,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Itachi is stronger than I am...That is why... I pulled myself out of that organization...\"",
     image: "s12-m-404",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.1, y: 0.6, zoom: 1.0039, print: true } },
+    },
   },
   {
     id: "s12-m-405",
@@ -2882,6 +4037,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"She slipped me a Mickey!\"",
     image: "s12-m-405",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-406",
@@ -2899,6 +4061,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"We've tied each other, at 48 wins. Today's face-off'll put one of us in the lead.\"",
     image: "s12-m-406",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-407",
@@ -2914,6 +4083,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Alright, I still have a little more left. Upsy-daisy...\" \"I am coming too!\"",
     image: "s12-m-407",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-408",
@@ -2930,6 +4106,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"All right then, shall we?\"",
     image: "s12-m-408",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-409",
@@ -2946,6 +4129,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Stay with me Akamaru. Let's move out!\"",
     image: "s12-m-409",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-410",
@@ -2962,6 +4152,13 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"I'm not the one who killed Shisui... But I apologize for the words I have spoken... I'm truly sorry.\"",
     image: "s12-m-410",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s12-m-411",
@@ -2977,5 +4174,12 @@ export const S12_A_NEW_CHRONICLE: Card[] = [
     ],
     flavor: "\"Well, you know... I asked you to take care of those two earlier...But I guess I got a little worried.\"",
     image: "s12-m-411",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

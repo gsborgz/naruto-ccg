@@ -14,7 +14,8 @@ import {
 import { getLayout } from './layouts/index.ts';
 
 /**
- * Carta criada no criador de cartas (`/criar`). É só visual: não entra nos decks nem nas regras.
+ * Carta criada no criador de cartas (`/criar`). No montador de decks ela vira uma carta do catálogo
+ * (`customCardToCard` em `deckCard.ts`), mas fica só neste navegador: não vai para salas nem compartilhamentos.
  * Os valores ficam como texto (ex.: custo "X", força "7/2") porque a carta é montada como impressa.
  */
 

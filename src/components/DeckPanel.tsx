@@ -1,12 +1,15 @@
 'use client';
 
-import { useState } from 'react';
-import { CARDS_BY_ID } from '@/data/cards';
-import { DECK_RULES, deckPartOf, type DeckSummary } from '@/lib/deckRules';
+import { useEffect, useState } from 'react';
+import { isCustomCardId } from '@/lib/cardMaker/customIds';
+import { useCustomCards } from '@/lib/cardMaker/store';
+import { DECK_RULES, deckPartOf, type CardLookup, type DeckSummary } from '@/lib/deckRules';
 import { sortCost } from '@/lib/cardFilters';
 import type { Deck } from '@/lib/deckStore';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card, type CardType } from '@/models/card';
-import { useCardName } from '@/lib/cardLanguage';
+import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
+import type { PrintDesign } from '@/lib/print/printDeck';
+import { CardFace } from './CardFace';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 
@@ -14,8 +17,6 @@ const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 type Tab = CardType | 'reinforcement';
 const TABS: Tab[] = [...TYPES, 'reinforcement'];
 const TAB_LABEL: Record<Tab, string> = { ...CARD_TYPE_LABEL, reinforcement: 'Reforço' };
-
-const lookup = (id: string) => CARDS_BY_ID.get(id);
 
 type Entry = { card: Card; qty: number };
 
@@ -67,15 +68,19 @@ function DeckCard({
         aria-label={`Ver detalhes de ${name}`}
         title={name}
       >
-        <img
-          src={cardImageUrl(card, 'thumb')}
-          alt={card.name}
-          width={300}
-          height={420}
-          loading="lazy"
-          decoding="async"
-          className="aspect-[5/7] w-full object-cover"
-        />
+        {isCustomCardId(card.id) ? (
+          <CardFace card={card} size="thumb" />
+        ) : (
+          <img
+            src={cardImageUrl(card, 'thumb')}
+            alt={card.name}
+            width={300}
+            height={420}
+            loading="lazy"
+            decoding="async"
+            className="aspect-[5/7] w-full object-cover"
+          />
+        )}
       </button>
       <div className="absolute inset-x-0 -bottom-3 flex items-center justify-center gap-1">
         <span className={revealOnHover}>
@@ -111,29 +116,85 @@ function DeckCard({
   );
 }
 
-/** Baixa um PDF A4 com as cartas do deck (como está na tela, mesmo sem salvar) para imprimir e recortar. */
-function PrintButton({ deck }: { deck: Deck }) {
-  const [busy, setBusy] = useState(false);
+/** Design escolhido para imprimir (lembrado neste navegador). */
+const PRINT_DESIGN_KEY = 'naruto-ccg:print-design';
+
+function readPrintDesign(): PrintDesign {
+  try {
+    return localStorage.getItem(PRINT_DESIGN_KEY) === 'rendered' ? 'rendered' : 'original';
+  } catch {
+    return 'original';
+  }
+}
+
+/**
+ * Baixa um PDF A4 com as cartas do deck (como está na tela, mesmo sem salvar) para imprimir e recortar.
+ * O design vale para o deck inteiro: a imagem impressa ou a carta remontada (nas cartas já escaneadas).
+ */
+function PrintButton({ deck, lookup }: { deck: Deck; lookup: CardLookup }) {
+  const [design, setDesign] = useState<PrintDesign>('original');
+  const [progress, setProgress] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const { language, translations } = useCardLanguage();
+  const customCards = useCustomCards();
+  useEffect(() => setDesign(readPrintDesign()), []);
+
+  const choose = (value: PrintDesign) => {
+    setDesign(value);
+    try {
+      localStorage.setItem(PRINT_DESIGN_KEY, value);
+    } catch {
+      // Sem storage: vale só nesta tela.
+    }
+  };
 
   async function print() {
-    setBusy(true);
+    setProgress('');
     setError(null);
+    let renderer: { render: (card: Card) => Promise<Blob | null>; dispose: () => void } | null = null;
     try {
-      // Carregado sob demanda: só quem imprime paga pelo código do PDF.
-      const { downloadDeckPdf } = await import('@/lib/print/printDeck');
-      await downloadDeckPdf(deck.name, deck.cards);
+      // Carregados sob demanda: só quem imprime paga pelo código do PDF (e do desenho das cartas montadas).
+      const [{ downloadDeckPdf, printsRendered }, { createCardImageRenderer }] = await Promise.all([
+        import('@/lib/print/printDeck'),
+        import('./cardMaker/cardImageRenderer'),
+      ]);
+      const needsRender = Object.keys(deck.cards).some((id) => {
+        const card = lookup(id);
+        return card && printsRendered(card, design);
+      });
+      if (needsRender) renderer = createCardImageRenderer({ language, translations, customCards: customCards ?? [] });
+      await downloadDeckPdf(deck.name, deck.cards, {
+        design,
+        lookup,
+        renderCard: renderer ? (card) => renderer!.render(card) : undefined,
+        onProgress: (done, total) => setProgress(`${done}/${total}`),
+      });
     } catch (e) {
       console.error(e);
-      setError('Não foi possível gerar o PDF.');
+      setError(e instanceof Error && e.message.startsWith('Não foi possível montar') ? e.message : 'Não foi possível gerar o PDF.');
     } finally {
-      setBusy(false);
+      renderer?.dispose();
+      setProgress(null);
     }
   }
 
+  const busy = progress !== null;
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center justify-end gap-2">
       {error && <span className="text-xs text-danger">{error}</span>}
+      <label className="flex items-center gap-1.5 text-xs text-muted">
+        Design
+        <select
+          value={design}
+          onChange={(e) => choose(e.target.value as PrintDesign)}
+          disabled={busy}
+          title="Vale para todas as cartas do PDF. Remontado: as cartas ainda não escaneadas saem com a imagem original; as cartas criadas saem sempre montadas."
+          className="rounded-md border border-border bg-surface px-1.5 py-1 text-xs text-text"
+        >
+          <option value="original">Original</option>
+          <option value="rendered">Remontado</option>
+        </select>
+      </label>
       <button
         type="button"
         onClick={print}
@@ -141,7 +202,7 @@ function PrintButton({ deck }: { deck: Deck }) {
         title="Gera um PDF em folhas A4 com as cartas em tamanho real (63 × 88 mm), 9 por folha, com marcas de corte"
         className="rounded-md px-2 py-1 text-sm font-semibold text-accent transition-colors hover:bg-surface-2 disabled:cursor-wait disabled:opacity-60"
       >
-        {busy ? 'Gerando PDF…' : '🖨 Imprimir deck'}
+        {busy ? `Gerando PDF…${progress ? ` ${progress}` : ''}` : '🖨 Imprimir deck'}
       </button>
     </div>
   );
@@ -149,6 +210,7 @@ function PrintButton({ deck }: { deck: Deck }) {
 
 export function DeckPanel({
   deck,
+  lookup,
   summary,
   dirty,
   blockedOf,
@@ -159,6 +221,8 @@ export function DeckPanel({
   onSave,
 }: {
   deck: Deck;
+  /** Procura as cartas do deck (catálogo + cartas criadas). */
+  lookup: CardLookup;
   summary: DeckSummary;
   /** Há alterações ainda não salvas. */
   dirty: boolean;
@@ -279,7 +343,7 @@ export function DeckPanel({
           >
             Limpar deck
           </button>
-          <PrintButton deck={deck} />
+          <PrintButton deck={deck} lookup={lookup} />
         </div>
       )}
     </div>

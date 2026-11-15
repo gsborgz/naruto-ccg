@@ -65,9 +65,12 @@ export default function CardMakerPage() {
     return () => query.removeEventListener('change', update);
   }, []);
 
-  // Abre a carta mais recente ao carregar.
+  // Abre a carta mais recente ao carregar, ou a de `/criar?carta=<id>` (link "Editar no criador" do montador).
   useEffect(() => {
-    if (cards && !draft && cards.length) setDraft(cards[0]);
+    if (!cards || draft || !cards.length) return;
+    const wanted = new URLSearchParams(window.location.search).get('carta');
+    setDraft(cards.find((c) => c.id === wanted) ?? cards[0]);
+    if (wanted) window.history.replaceState(null, '', '/criar');
   }, [cards, draft]);
 
   // Grava o rascunho logo depois de cada alteração (com folga para não regravar a cada pixel arrastado).

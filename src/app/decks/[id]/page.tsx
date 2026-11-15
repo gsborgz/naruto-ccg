@@ -8,13 +8,11 @@ import { CardDetailModal } from '@/components/CardDetailModal';
 import { DeckPanel } from '@/components/DeckPanel';
 import { QtyControls } from '@/components/QtyControls';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
-import { CARDS_BY_ID } from '@/data/cards';
 import { cannotAddReasonIn, DECK_RULES, indexDeck, summarizeDeck, type DeckCards } from '@/lib/deckRules';
 import { deckActions, useDeck, type Deck } from '@/lib/deckStore';
+import { useCardCatalog } from '@/lib/useCardCatalog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import type { Card } from '@/models/card';
-
-const lookup = (id: string) => CARDS_BY_ID.get(id);
 
 type Draft = Pick<Deck, 'id' | 'name' | 'cards'>;
 
@@ -27,6 +25,8 @@ export default function DeckBuilderPage() {
   const { id } = useParams<{ id: string }>();
   const stored = useDeck(id);
   const [selected, setSelected] = useState<Card | null>(null);
+  // Catálogo + cartas do criador (`/criar`) deste navegador.
+  const { cards: available, lookup } = useCardCatalog();
 
   // Rascunho em memória: as edições só vão para o localStorage ao salvar.
   const [draft, setDraft] = useState<Draft | null>(null);
@@ -38,8 +38,8 @@ export default function DeckBuilderPage() {
 
   // Tudo derivado do conteúdo do deck é calculado uma vez por mudança, não uma vez por carta da grade.
   const deckCards = draft?.cards;
-  const index = useMemo(() => indexDeck(deckCards ?? {}, lookup), [deckCards]);
-  const summary = useMemo(() => summarizeDeck(deckCards ?? {}, lookup), [deckCards]);
+  const index = useMemo(() => indexDeck(deckCards ?? {}, lookup), [deckCards, lookup]);
+  const summary = useMemo(() => summarizeDeck(deckCards ?? {}, lookup), [deckCards, lookup]);
   const countOf = useCallback((c: Card) => deckCards?.[c.id] ?? 0, [deckCards]);
   const blockedOf = useCallback((c: Card) => cannotAddReasonIn(index, c), [index]);
   const onSetQty = useCallback((c: Card, qty: number) => {
@@ -82,6 +82,7 @@ export default function DeckBuilderPage() {
     <div className="grid gap-6 lg:h-[calc(100dvh-var(--app-chrome))] lg:grid-cols-[minmax(0,1fr)_26rem] xl:grid-cols-[minmax(0,1fr)_minmax(30rem,38%)]">
       <section className="flex min-w-0 flex-col gap-4 lg:-mr-2 lg:overflow-y-auto lg:pr-2" aria-label="Cartas disponíveis">
         <CardBrowser
+          cards={available}
           onSelect={setSelected}
           countOf={countOf}
           blockedOf={blockedOf}
@@ -94,6 +95,7 @@ export default function DeckBuilderPage() {
       <aside id="deck" className="min-h-0 lg:h-full">
         <DeckPanel
           deck={deck}
+          lookup={lookup}
           summary={summary}
           dirty={dirty}
           blockedOf={blockedOf}

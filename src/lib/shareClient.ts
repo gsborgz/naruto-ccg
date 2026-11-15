@@ -1,6 +1,7 @@
 'use client';
 
 import { CARDS_BY_ID } from '@/data/cards';
+import { hasCustomCards } from '@/lib/cardMaker/customIds';
 import { isValidShareId, parseSharePayload, type SharedDeck, type SharePayload } from './deckShare';
 
 const isKnownCard = (id: string) => CARDS_BY_ID.has(id);
@@ -9,6 +10,15 @@ const toShared = (d: SharedDeck): SharedDeck => ({ name: d.name, cards: d.cards 
 
 /** Envia uma cópia do deck/coleção para o servidor e devolve o UUID gerado. */
 export async function createShare(payload: SharePayload): Promise<string> {
+  const decks = payload.kind === 'deck' ? [payload.deck] : payload.decks;
+  const withCustom = decks.filter((d) => hasCustomCards(d.cards));
+  if (withCustom.length > 0) {
+    // As cartas do criador ficam só no localStorage deste navegador: o servidor não as conhece.
+    const names = withCustom.map((d) => `"${d.name}"`).join(', ');
+    throw new Error(
+      `Decks com cartas criadas ainda não podem ser compartilhados, pois essas cartas ficam só neste navegador (${names}).`,
+    );
+  }
   const body: SharePayload =
     payload.kind === 'deck'
       ? { kind: 'deck', deck: toShared(payload.deck) }

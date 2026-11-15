@@ -26,6 +26,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You and I...will disappear together..!\"",
     image: "s15-n-645",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-646",
@@ -47,6 +54,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Don't screw up.\"",
     image: "s15-n-646",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-647",
@@ -67,6 +81,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You'll have a tough time getting away from me!\"",
     image: "s15-n-647",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-648",
@@ -87,6 +108,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Quite impressive... But how long do you think your Chakra will last?!\"",
     image: "s15-n-648",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-649",
@@ -107,6 +135,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Pfeh. I could handle both of 'em myself.\"",
     image: "s15-n-649",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-650",
@@ -128,6 +163,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You need my power don't you?\"",
     image: "s15-n-650",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-651",
@@ -148,6 +190,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I'm gonna save out Sasuke!\"",
     image: "s15-n-651",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-652",
@@ -168,6 +217,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This time, we will...\"",
     image: "s15-n-652",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-653",
@@ -189,6 +245,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"That's why I severed it.\"",
     image: "s15-n-653",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-654",
@@ -209,6 +272,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I don't have such things as feeling.\"",
     image: "s15-n-654",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-655",
@@ -230,6 +300,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"\"I am fine with putting you guys under my control with fear...\"",
     image: "s15-n-655",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-656",
@@ -251,6 +328,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I can't tell that because I'm always with him.\"",
     image: "s15-n-656",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-657",
@@ -271,6 +355,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s15-n-657",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-658",
@@ -291,6 +382,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"He said to me, 'Just follow me'...\"",
     image: "s15-n-658",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-659",
@@ -311,6 +409,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"The Leaf Village's spirit is strong... You'd do well to remember.\"",
     image: "s15-n-659",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-660",
@@ -331,6 +436,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Arf!\"",
     image: "s15-n-660",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-661",
@@ -351,6 +463,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is....\"",
     image: "s15-n-661",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-662",
@@ -371,6 +490,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You can't say that to me.\"",
     image: "s15-n-662",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-663",
@@ -391,6 +517,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Now, I'm back.\"",
     image: "s15-n-663",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-664",
@@ -412,6 +545,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Granny Chiyo? Can we stop for a snack on the way back?\"",
     image: "s15-n-664",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-665",
@@ -433,6 +573,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"One more strike, and you are out...\"",
     image: "s15-n-665",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-666",
@@ -454,6 +601,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Is that all you got?\"",
     image: "s15-n-666",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-667",
@@ -474,6 +628,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"\"I can't leave until every thing is in order.\"",
     image: "s15-n-667",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-668",
@@ -494,6 +655,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You are done...\"",
     image: "s15-n-668",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-669",
@@ -515,6 +683,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"If I can't save one comrade, how can I be the Hokage?\"",
     image: "s15-n-669",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-670",
@@ -535,6 +710,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You shouldn't have done that.\"",
     image: "s15-n-670",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-671",
@@ -555,6 +737,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"They gave me credit for my ability and assigned this mission to me.\"",
     image: "s15-n-671",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-672",
@@ -575,6 +764,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"It's not done yet!!\"",
     image: "s15-n-672",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-673",
@@ -595,6 +791,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"\"I admit. That was quite impressive.\"",
     image: "s15-n-673",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-674",
@@ -615,6 +818,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is going to be a pain.\"",
     image: "s15-n-674",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-675",
@@ -636,6 +846,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I'll take care of him.\"",
     image: "s15-n-675",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-676",
@@ -656,6 +873,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Good analysis...\"",
     image: "s15-n-676",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-677",
@@ -677,6 +901,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I won't let you hurt them.\"",
     image: "s15-n-677",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.3, y: -8.7, zoom: 1.0237, print: true } },
+    },
   },
   {
     id: "s15-n-678",
@@ -697,6 +928,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"We can have some skilled shinobi ready on our side too.\"",
     image: "s15-n-678",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-679",
@@ -717,6 +955,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"We came back at out top speed, all right?.\"",
     image: "s15-n-679",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-680",
@@ -738,6 +983,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Now, unless you want to make this frog really mad, you'll never bother us again!\"",
     image: "s15-n-680",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-681",
@@ -758,6 +1010,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Summoning Jutsu!\"",
     image: "s15-n-681",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.2, y: -8.7, zoom: 1.0235, print: true } },
+    },
   },
   {
     id: "s15-n-682",
@@ -780,6 +1039,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Enough with the family reunion. .. It's time that we got started.\"",
     image: "s15-n-682",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-683",
@@ -800,6 +1066,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"How about this one?\"",
     image: "s15-n-683",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-684",
@@ -820,6 +1093,14 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"It's been about two and half years...\" \"That's right...\"",
     image: "s15-n-684",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-685",
@@ -840,6 +1121,14 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Sakura...\" \"Yes!\"",
     image: "s15-n-685",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-686",
@@ -862,6 +1151,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"We'll follow them right away!\" \"Got it!\"",
     image: "s15-n-686",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-687",
@@ -883,6 +1179,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"What?\" \"Don't you know what the word 'comrade' is?\"",
     image: "s15-n-687",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-688",
@@ -904,6 +1207,14 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You're going to die. Very soon.\" \"Haahh? What was that?? I'm sorry, I couldn't quite hear you there!!\"",
     image: "s15-n-688",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-689",
@@ -924,6 +1235,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You can't change my prediction.\"",
     image: "s15-n-689",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-690",
@@ -944,6 +1262,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Reunited at last... with my body, of flesh...\"",
     image: "s15-n-690",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-691",
@@ -964,6 +1289,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Sasoosa of the Hidden Village in the Sand. He is also the father of Kankuro, Temari and Gaara.",
     image: "s15-n-691",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-692",
@@ -984,6 +1316,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Giant Ninja Toad with whom Jiraiya signed a contract for summoning with his blood.",
     image: "s15-n-692",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-693",
@@ -1005,6 +1344,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Fierce wild snake with whom Orochimaru signed a contract for summoning with his blood.",
     image: "s15-n-693",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-694",
@@ -1025,6 +1371,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "In spite of the cute look, it has the courage just like its master Tsunade.",
     image: "s15-n-694",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-695",
@@ -1045,6 +1398,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Are you prepared to take the punishment for your actions?\"",
     image: "s15-n-695",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-696",
@@ -1065,6 +1425,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Giant fierce tiger that lives in the death forest.",
     image: "s15-n-696",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-697",
@@ -1084,6 +1451,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: When this Ninja becomes the user of Jutsu cards with \"Requirements: \"Kakashi Hatake\", you must pay 1 additional Chakra (any symbol).",
     ],
     image: "s15-n-697",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-698",
@@ -1103,6 +1477,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: When this Ninja becomes the user of Jutsu cards with \"Requirements: \"The Third Hokage\", you must pay 1 additional Chakra (any symbol).",
     ],
     image: "s15-n-698",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-699",
@@ -1122,6 +1503,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "While this Ninja is Battling against a Team with 1 or less Team Mental Power, this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
     ],
     image: "s15-n-699",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-700",
@@ -1141,6 +1529,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "While this Ninja is Battling against a Team with 1 or less Team Mental Power, this Ninja's Team and the Team Battling against it perform a Mental Power Battle.",
     ],
     image: "s15-n-700",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-701",
@@ -1160,6 +1555,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: When this Ninja becomes the user of Jutsu cards with \"Requirements: \"The Fourth Hokage\", you must pay 1 additional Chakra (any symbol).",
     ],
     image: "s15-n-701",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-702",
@@ -1181,6 +1583,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "The hero who saved the Hidden Village in the Leaves from the Nine-Tailed Fox Spirit. There are so many people who still miss him.",
     image: "s15-n-702",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-703",
@@ -1201,6 +1610,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I understand, Father.\"",
     image: "s15-n-703",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-704",
@@ -1221,6 +1637,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"We have our connections inside of Anbu Black Ops. You try and sweep this investigation under the rug and we're gonna know about it.\"",
     image: "s15-n-704",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-705",
@@ -1241,6 +1664,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I can't take this anymore! Please sir! Just give me the order!\"",
     image: "s15-n-705",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-706",
@@ -1261,6 +1691,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Listen Itachi, if I find you've betrayed this clan I want you to know, You'll pay for your wrongs!\"",
     image: "s15-n-706",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-707",
@@ -1281,6 +1718,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Just hold on, Hiashi! .. Please don't be so hasty!\"",
     image: "s15-n-707",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-n-708",
@@ -1300,6 +1744,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
       "Valid: While this Ninja is the only Ninja you have in play, this Ninja gets +1/+0 and cannot be affected by the effects of your opponent's Ninjas.",
     ],
     image: "s15-n-708",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1317,6 +1768,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Are we equal in strength?\"",
     image: "s15-j-541",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.4, y: 2, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s15-j-542",
@@ -1333,6 +1791,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Dynamic Action!!\"",
     image: "s15-j-542",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-543",
@@ -1349,6 +1814,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"AHhhhhhh.....\"",
     image: "s15-j-543",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-544",
@@ -1365,6 +1837,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"What an impact!....he just swung his arm.\"",
     image: "s15-j-544",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-545",
@@ -1381,6 +1860,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Can we trust him?\"",
     image: "s15-j-545",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-546",
@@ -1396,6 +1882,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s15-j-546",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.6, y: -0.3, zoom: 1.0035, print: true } },
+    },
   },
   {
     id: "s15-j-547",
@@ -1412,6 +1905,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Here comes another one!\"",
     image: "s15-j-547",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-548",
@@ -1428,6 +1928,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Lightning Blade!!\"",
     image: "s15-j-548",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-549",
@@ -1443,6 +1950,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Sir! I have a report! Giant boas have appeared near the eastern gate of the Leaf Village!\"",
     image: "s15-j-549",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-550",
@@ -1459,6 +1973,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Is that all you can do using the power of 'Jinchuriki'?\"",
     image: "s15-j-550",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-551",
@@ -1475,6 +1996,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is troublesome, hmmm?\"",
     image: "s15-j-551",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-552",
@@ -1491,6 +2019,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"What a huge shield!\"",
     image: "s15-j-552",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-553",
@@ -1508,6 +2043,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I'm not holding back!\"",
     image: "s15-j-553",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-554",
@@ -1523,6 +2065,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Haaaa!!\"",
     image: "s15-j-554",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-555",
@@ -1538,6 +2087,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Leeeeaf Hurricane!!\"",
     image: "s15-j-555",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-556",
@@ -1552,6 +2108,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Here... Hold on to this at all times.\"",
     image: "s15-j-556",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-557",
@@ -1568,6 +2131,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Chocolate... ...bomb!!\"",
     image: "s15-j-557",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-558",
@@ -1584,6 +2154,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Hidden Lotus!\"",
     image: "s15-j-558",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-559",
@@ -1600,6 +2177,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Everything you're feeling..?! Just let it out!!!\"",
     image: "s15-j-559",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-560",
@@ -1614,6 +2198,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"So... This is the end.\"",
     image: "s15-j-560",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-561",
@@ -1629,6 +2220,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Now that is what I'm talkin' about!! Heheheh!!\"",
     image: "s15-j-561",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-562",
@@ -1645,6 +2243,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Water Style... Surface Slicer!!!\"",
     image: "s15-j-562",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-563",
@@ -1661,6 +2266,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Bust out an earth, fire, and wind combo..!\"",
     image: "s15-j-563",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-564",
@@ -1677,6 +2289,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Anesthetic Jutsu!\"",
     image: "s15-j-564",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-565",
@@ -1693,6 +2312,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"He's controlling those shuriken with Wind Chakra..!\"",
     image: "s15-j-565",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-566",
@@ -1709,6 +2335,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is boring...\"",
     image: "s15-j-566",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-567",
@@ -1725,6 +2358,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Even stronger than I was yesterday!\"",
     image: "s15-j-567",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-568",
@@ -1741,6 +2381,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"What is that chakra?\"",
     image: "s15-j-568",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-569",
@@ -1757,6 +2404,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I'm not withering up yet!!\"",
     image: "s15-j-569",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-570",
@@ -1773,6 +2427,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"GAAaaaaaaa!!\"",
     image: "s15-j-570",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-571",
@@ -1789,6 +2450,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is the start of the secret mission.\"",
     image: "s15-j-571",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-572",
@@ -1805,6 +2473,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"W..why did you tie me up also!!\"",
     image: "s15-j-572",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-573",
@@ -1822,6 +2497,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This attack is impossible to guard.\"",
     image: "s15-j-573",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-574",
@@ -1839,6 +2521,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Striking Multi Shadow Snakes!",
     image: "s15-j-574",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-575",
@@ -1855,6 +2544,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"He generated the Chidori from all over his body!\"",
     image: "s15-j-575",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-576",
@@ -1871,6 +2567,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Ha!!\"",
     image: "s15-j-576",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.7, y: -0.7, zoom: 1.0035, print: true } },
+    },
   },
   {
     id: "s15-j-577",
@@ -1887,6 +2590,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I'm falling behind them!!\"",
     image: "s15-j-577",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-578",
@@ -1902,6 +2612,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I used an antidote.\"",
     image: "s15-j-578",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-579",
@@ -1918,6 +2635,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I never thought that the Jonin was the goal of my Ninja way!\"",
     image: "s15-j-579",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-580",
@@ -1933,6 +2657,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"ARE YOU KIDDING ME?!?!\"",
     image: "s15-j-580",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-581",
@@ -1949,6 +2680,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Right? Above? Left? Behind? ...Only one place left...\"",
     image: "s15-j-581",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-582",
@@ -1965,6 +2703,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Take this!\"",
     image: "s15-j-582",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-583",
@@ -1981,6 +2726,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Gentle Fist!\"",
     image: "s15-j-583",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-584",
@@ -1996,6 +2748,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"When is Gaara return?\"",
     image: "s15-j-584",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-585",
@@ -2012,6 +2771,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s15-j-585",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-586",
@@ -2027,6 +2793,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Then, how about this?\"",
     image: "s15-j-586",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-587",
@@ -2042,6 +2815,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Let's camp here.\" \"This is not a camp, is it?\"",
     image: "s15-j-587",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-588",
@@ -2058,6 +2838,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Not this again.\"",
     image: "s15-j-588",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.2, y: -1.5, zoom: 1.0003, print: true } },
+    },
   },
   {
     id: "s15-j-589",
@@ -2074,6 +2861,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"My arm is being sucked into oblivion!\"",
     image: "s15-j-589",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-590",
@@ -2090,6 +2884,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"8 Trigrams! Air Palm!\"",
     image: "s15-j-590",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-591",
@@ -2104,6 +2905,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"That sounds interesting. Can I join the conversation?\"",
     image: "s15-j-591",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-592",
@@ -2119,6 +2927,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Now do it..! Break the seal completely! If you do, I'll grant you all of my power.\"",
     image: "s15-j-592",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-593",
@@ -2134,6 +2949,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Interesting... I never would've guessed you had this inside of you.\"",
     image: "s15-j-593",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-594",
@@ -2150,6 +2972,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Ahhhhhhhhhh!!!!\"",
     image: "s15-j-594",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-595",
@@ -2166,6 +2995,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You should show me proper respect by talking to me face to face since I'm your elder.\"",
     image: "s15-j-595",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-596",
@@ -2181,6 +3017,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Whatever....\"",
     image: "s15-j-596",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-597",
@@ -2198,6 +3041,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I want everything in my scroll to be filled and sorted by age...\"",
     image: "s15-j-597",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-598",
@@ -2214,6 +3064,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is going to be fun.\"",
     image: "s15-j-598",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-599",
@@ -2230,6 +3087,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s15-j-599",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-600",
@@ -2245,6 +3109,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"It can't be! Those people are...!\"",
     image: "s15-j-600",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-j-601",
@@ -2261,6 +3132,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Lady Tsunade interrogated him herself.\"",
     image: "s15-j-601",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2282,6 +3160,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "It's Leaf Academy that is known for its high scholastic ability and excellence in sports.",
     image: "s15-m-500",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-501",
@@ -2298,6 +3183,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"...Sasuke...\"",
     image: "s15-m-501",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-502",
@@ -2316,6 +3208,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I need to talk to you.\"",
     image: "s15-m-502",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-503",
@@ -2332,6 +3231,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I would sacrifice anything to gain that power...\"",
     image: "s15-m-503",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-504",
@@ -2348,6 +3254,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Revenge is everything to me.\"",
     image: "s15-m-504",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-505",
@@ -2365,6 +3278,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Sai didn't say 'monstrous strength' O.K.?\"",
     image: "s15-m-505",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-506",
@@ -2380,6 +3300,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I've never seen such a luxurious meal before!\"",
     image: "s15-m-506",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-507",
@@ -2396,6 +3323,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"So Neji will serve as Squad 7's captain.\"",
     image: "s15-m-507",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-508",
@@ -2411,6 +3345,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Finally, I know my destiny.\"",
     image: "s15-m-508",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-509",
@@ -2427,6 +3368,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You must... ...live!!\"",
     image: "s15-m-509",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-510",
@@ -2442,6 +3390,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You bet! You know me, I'm always up for anything!\"",
     image: "s15-m-510",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.3, y: 1.1, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s15-m-511",
@@ -2458,6 +3413,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I wo---------n!\"",
     image: "s15-m-511",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-512",
@@ -2474,6 +3436,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I didn't know you were there, Hinata!\"",
     image: "s15-m-512",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-513",
@@ -2490,6 +3459,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"He doesn't look familiar...\"",
     image: "s15-m-513",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: -0.2, y: 0, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s15-m-514",
@@ -2507,6 +3483,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"You are powerless...\"",
     image: "s15-m-514",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-515",
@@ -2523,6 +3506,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Here is the punishment for you!\"",
     image: "s15-m-515",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-516",
@@ -2539,6 +3529,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Oh...not again...\"",
     image: "s15-m-516",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-517",
@@ -2555,6 +3552,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"It's even uglier in action...\"",
     image: "s15-m-517",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-518",
@@ -2571,6 +3575,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Haaaaaa----------!!\"",
     image: "s15-m-518",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-519",
@@ -2587,6 +3598,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"What kind of book is this?\"",
     image: "s15-m-519",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-520",
@@ -2602,6 +3620,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"The book said 'Most people are likely to be tricked with fake smile.'...\"",
     image: "s15-m-520",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-521",
@@ -2618,6 +3643,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Now, I know that you are a petty...\"",
     image: "s15-m-521",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-522",
@@ -2633,6 +3665,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This mission was given by Lord Danzo for the future of our village.\"",
     image: "s15-m-522",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-523",
@@ -2649,6 +3688,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Mutual support is our principle.\"",
     image: "s15-m-523",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-524",
@@ -2664,6 +3710,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Thanks!\"",
     image: "s15-m-524",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.1, y: -0.1, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s15-m-525",
@@ -2680,6 +3733,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I will follow him right away.\"",
     image: "s15-m-525",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-526",
@@ -2698,6 +3758,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"That necklace can control the power of 'Jinchuriki'...\"",
     image: "s15-m-526",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.8, y: -0.6, zoom: 1.0032, print: true } },
+    },
   },
   {
     id: "s15-m-527",
@@ -2714,6 +3781,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"It seems like she has the same equipment as I do.\"",
     image: "s15-m-527",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-528",
@@ -2730,6 +3804,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s15-m-528",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-529",
@@ -2746,6 +3827,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Orochimaru is indeed a tough one to deal with...\"",
     image: "s15-m-529",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-530",
@@ -2761,6 +3849,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"This is....\"",
     image: "s15-m-530",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.2, y: -0.1, zoom: 1.0018, print: true } },
+    },
   },
   {
     id: "s15-m-531",
@@ -2777,6 +3872,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Gaara...Gaara...\"",
     image: "s15-m-531",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.2, y: -0.1, zoom: 1.002, print: true } },
+    },
   },
   {
     id: "s15-m-532",
@@ -2793,6 +3895,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Gasp!\"",
     image: "s15-m-532",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.8, y: 0.1, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s15-m-533",
@@ -2809,6 +3918,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"How come you recognized Kiba that soon...\" \"No, he must be jealous.\"",
     image: "s15-m-533",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-534",
@@ -2826,6 +3942,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Hey, Hinata! What are you hiding from?\"",
     image: "s15-m-534",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-535",
@@ -2841,6 +3964,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Don't ever forget the will of the foundation which supports the big tree from under ground as roots...\"",
     image: "s15-m-535",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-536",
@@ -2857,6 +3987,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"The second time was when I saw the fourth tail of his Nine-Tailed Fox Spirit chakra while we were training together.\"",
     image: "s15-m-536",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.6, y: 0.9, zoom: 1.0038, print: true } },
+    },
   },
   {
     id: "s15-m-537",
@@ -2873,6 +4010,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s15-m-537",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.7, y: -0.2, zoom: 1.0013, print: true } },
+    },
   },
   {
     id: "s15-m-538",
@@ -2889,6 +4033,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Sasuke---------------!!!\"",
     image: "s15-m-538",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: 0.3, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s15-m-539",
@@ -2905,6 +4056,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Now is the time!\"",
     image: "s15-m-539",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-540",
@@ -2921,6 +4079,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Not another step!. You are done here!\"",
     image: "s15-m-540",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-541",
@@ -2940,6 +4105,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"On the other hand, with most people in this village are supporting the current system, there's no reason to change it.\"",
     image: "s15-m-541",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-542",
@@ -2956,6 +4128,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"In addition, the fifth hokage's current system was built based on the will of the third hokage.",
     image: "s15-m-542",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-543",
@@ -2973,6 +4152,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Kabuto, do those things when we get back.\"",
     image: "s15-m-543",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-544",
@@ -2988,6 +4174,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Wow!\"",
     image: "s15-m-544",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-545",
@@ -3004,6 +4197,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "Big hospital which regular doctors and medical ninjas manage working together. This place is also known as a laboratory for medical science and ninjutsu.",
     image: "s15-m-545",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-546",
@@ -3020,6 +4220,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"She looks nice, Father. Don't you think?\"",
     image: "s15-m-546",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-547",
@@ -3036,6 +4243,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I'll change the role of the Hyuga clan......after I become (the) Hokage!\"",
     image: "s15-m-547",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-548",
@@ -3052,6 +4266,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Sasuke...you...\"",
     image: "s15-m-548",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-m-549",
@@ -3067,6 +4288,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Itachi! Are you here? Come out! We got something to ask you!\"",
     image: "s15-m-549",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -3084,6 +4312,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"If I could repay that kindness by safeguarding her life... then I would gladly give up my own.\"",
     image: "s15-c-049",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-c-050",
@@ -3100,6 +4335,13 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"Take care of... Lady... Shion...\"",
     image: "s15-c-050",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s15-c-051",
@@ -3116,5 +4358,12 @@ export const S15_FORETOLD_PROPHECY: Card[] = [
     ],
     flavor: "\"I am the priestess. Do not take my power lightly.\"",
     image: "s15-c-051",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

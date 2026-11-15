@@ -2,6 +2,7 @@ import type { Card } from '../models/card.ts';
 import type { CardLanguage, CardTranslations, LocalizedCardText } from '../models/cardTranslation.ts';
 import { CARDS_BY_ID } from '../data/cards.ts';
 import { SET_NAMES } from '../data/sets.ts';
+import { CUSTOM_SET, CUSTOM_SET_NAME } from './cardMaker/customIds.ts';
 import { SET_NAMES_PTBR, translateAttribute, translateCharacteristic } from '../data/ptbr/glossary.ts';
 
 /** Nome em inglês → nome PT-BR, montado a partir das traduções (um mapa por conjunto de traduções). */
@@ -26,6 +27,7 @@ export function localizeCardName(card: Card, language: CardLanguage, translation
 
 /** Nome da coleção no idioma escolhido. */
 export function localizeSetName(set: string, language: CardLanguage): string | undefined {
+  if (set === CUSTOM_SET) return CUSTOM_SET_NAME;
   return (language === 'pt-BR' && SET_NAMES_PTBR[set]) || SET_NAMES[set];
 }
 

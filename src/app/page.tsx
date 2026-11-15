@@ -6,14 +6,14 @@ import { useState } from 'react';
 import { ImportDialog } from '@/components/ImportDialog';
 import { ReturnToRoom } from '@/components/ReturnToRoom';
 import { ShareDialog, type ShareRequest } from '@/components/ShareDialog';
-import { CARDS_BY_ID } from '@/data/cards';
+import { hasCustomCards } from '@/lib/cardMaker/customIds';
 import { DECK_RULES, summarizeDeck } from '@/lib/deckRules';
 import { deckActions, useDecks } from '@/lib/deckStore';
-
-const lookup = (id: string) => CARDS_BY_ID.get(id);
+import { useCardCatalog } from '@/lib/useCardCatalog';
 
 export default function HomePage() {
   const decks = useDecks();
+  const { lookup } = useCardCatalog();
   const router = useRouter();
   const [share, setShare] = useState<ShareRequest | null>(null);
   const [importing, setImporting] = useState(false);
@@ -99,6 +99,14 @@ export default function HomePage() {
                   {s.byType.mission} Missão
                   {s.reinforcement > 0 && ` · +${s.reinforcement} no Reforço`}
                 </p>
+                {hasCustomCards(deck.cards) && (
+                  <p
+                    className="-mt-2 text-xs text-accent"
+                    title="Cartas do criador ficam só neste navegador: o deck não pode ir para salas nem ser compartilhado."
+                  >
+                    Com cartas criadas
+                  </p>
+                )}
                 <div className="mt-auto flex gap-2 text-sm">
                   <Link
                     href={`/decks/${deck.id}`}

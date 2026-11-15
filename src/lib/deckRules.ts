@@ -80,7 +80,7 @@ export interface DeckSummary {
   isValid: boolean;
 }
 
-type CardLookup = (id: string) => Card | undefined;
+export type CardLookup = (id: string) => Card | undefined;
 
 /** Quantas cartas da mesma parte do deck têm o mesmo nome desta carta (ver `deckName`). */
 export function countSameName(cards: DeckCards, card: Card, lookup: CardLookup): number {

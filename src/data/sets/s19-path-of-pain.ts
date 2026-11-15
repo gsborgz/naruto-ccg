@@ -26,6 +26,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "At the start of your turn, you can select 1 of your opponent's Ninja. In that case, if your Turn Marker is even, that Ninja must be sent out to Battle during this turn, Otherwise, that Ninja cannot be sent out to Battle during this turn.",
     ],
     image: "s19-n-1000",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-1001",
@@ -47,6 +54,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Hssssssss!!!!!\"",
     image: "s19-n-1001",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-1002",
@@ -68,6 +82,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Grrr...\"",
     image: "s19-n-1002",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-1003",
@@ -89,6 +110,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Sensei, you are still just a man...\"",
     image: "s19-n-1003",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-1004",
@@ -109,6 +137,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "During the Exchange of Jutsu, if your Turn Marker is odd, you can negate 1 Ninja effect or 1 Jutsu being played.",
     ],
     image: "s19-n-1004",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-1005",
@@ -128,6 +163,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: When your opponent's Ninjas receive Damage or are injured, move them to their owner's Chakra area instead.",
     ],
     image: "s19-n-1005",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-1006",
@@ -147,6 +189,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: When your opponent deploys a Ninja by Ambush, you can place a Growth coin on this Ninja.",
     ],
     image: "s19-n-1006",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-949",
@@ -167,6 +216,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'll play with you a bit more!\"",
     image: "s19-n-949",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-950",
@@ -187,6 +243,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Go for it!\"",
     image: "s19-n-950",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-951",
@@ -207,6 +270,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"If this is going to be one-on-one, then I will never lose to a Rogue Ninja!\"",
     image: "s19-n-951",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-952",
@@ -228,6 +298,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Allow me to avenge Kikunojou.\"",
     image: "s19-n-952",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-953",
@@ -249,6 +326,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"By my calculations...it's all over for you two now.\"",
     image: "s19-n-953",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-954",
@@ -269,6 +353,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"No luck, he got away.\"",
     image: "s19-n-954",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-955",
@@ -289,6 +380,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I don't know what business brings you here... but turn around and go home!\"",
     image: "s19-n-955",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-956",
@@ -309,6 +407,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"...I see I can't hold back any longer...I'm sorry...\"",
     image: "s19-n-956",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-957",
@@ -328,6 +433,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "When this Ninja becomes the user of a Jutsu, you can place 1 Growth coin on this Ninja. During your Mission Phase, you can remove a Growth coin from this Ninja. In that case, give 1 Damage to 1 Ninja.",
     ],
     image: "s19-n-957",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-958",
@@ -349,6 +461,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Tobi, you know what to do, right?!!\" \"Yessiree, partner!\"",
     image: "s19-n-958",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-959",
@@ -370,6 +489,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Impossible.\"",
     image: "s19-n-959",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-960",
@@ -390,6 +516,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Let's work together...\"",
     image: "s19-n-960",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-961",
@@ -411,6 +544,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Hello, Sakura.\"",
     image: "s19-n-961",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-962",
@@ -431,6 +571,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'm partnering with Shino.\"",
     image: "s19-n-962",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-963",
@@ -451,6 +598,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"If you're not going to come to me, I'll go to you!\"",
     image: "s19-n-963",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-964",
@@ -471,6 +625,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Sorry, but the Chunin Exam is over.\"",
     image: "s19-n-964",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-965",
@@ -492,6 +653,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Orochimaru... so it has come to this, after all...\"",
     image: "s19-n-965",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-966",
@@ -512,6 +680,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Yamato told me everything.  All about Sasuke too.\"",
     image: "s19-n-966",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-967",
@@ -532,6 +707,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"There's no rush... rest right now. Otherwise, it's likely to be a while.\"",
     image: "s19-n-967",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-968",
@@ -551,6 +733,14 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "During the Exchange of Jutsu, you can remove the top 7 cards of your Deck from the game. In that case, give 1 Damage to 1 Ninja Battling against this Ninja. You can activate this effect as many times as you like.",
     ],
     image: "s19-n-968",
+    layout: {
+      layout: "layout-03",
+      panelVariant: "red",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-969",
@@ -571,6 +761,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"The 8 Inner Gates!  The Sixth Gate! Keimon, RELEASE!\"",
     image: "s19-n-969",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.8, y: -8.3, zoom: 1.0254, print: true } },
+    },
   },
   {
     id: "s19-n-970",
@@ -591,6 +788,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Lee!! Now.. Explode!!!\" \"Yes, Sir!!\"",
     image: "s19-n-970",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-971",
@@ -611,6 +815,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Heh Heh...Shinobi read the hidden meanings within the hidden meanings.\"",
     image: "s19-n-971",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-972",
@@ -631,6 +842,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"What is this guy, Immortal?\"",
     image: "s19-n-972",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.2, y: -8, zoom: 1.0234, print: true } },
+    },
   },
   {
     id: "s19-n-973",
@@ -651,6 +869,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Today in class we'll be reviewing the art of transformation.\"",
     image: "s19-n-973",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-974",
@@ -672,6 +897,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"That's enough, Lee!\"",
     image: "s19-n-974",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-975",
@@ -692,6 +924,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"...Give...Sasuke...Back...!\"",
     image: "s19-n-975",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-976",
@@ -713,6 +952,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"GRRRAAAR!!!\"",
     image: "s19-n-976",
+    layout: {
+      layout: "layout-04",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-977",
@@ -733,6 +979,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I've come here to make a formal announcement.\"",
     image: "s19-n-977",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-978",
@@ -752,6 +1005,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: During the Exchange of Jutsu, you can remove this Ninja from the game. In that case, move this Ninja card back into play at the end of the turn.",
     ],
     image: "s19-n-978",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-979",
@@ -772,6 +1032,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "When your opponent's Tracked Ninja is sent out to Attack, you can discard 1 of your opponent's Chakra.",
     ],
     image: "s19-n-979",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-980",
@@ -792,6 +1059,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"If you really want me to Sasuke... I will follow you.\"",
     image: "s19-n-980",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-981",
@@ -812,6 +1086,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Bring it, punks.\"",
     image: "s19-n-981",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-982",
@@ -832,6 +1113,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'm free... at last...\"",
     image: "s19-n-982",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-983",
@@ -852,6 +1140,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'm getting out of here. And whoever stands in my way... is dead!\"",
     image: "s19-n-983",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-984",
@@ -872,6 +1167,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"This is the group that Kakashi's been training, right?\"",
     image: "s19-n-984",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-985",
@@ -892,6 +1194,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Just a little longer... a little more patience, and he's mine!\"",
     image: "s19-n-985",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-986",
@@ -913,6 +1222,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I have a goal.  And a small team will let me reach that goal faster.\"",
     image: "s19-n-986",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.8, y: -8, zoom: 1.0253, print: true } },
+    },
   },
   {
     id: "s19-n-987",
@@ -935,6 +1251,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'm going to use what I've absorbed of Orochimaru...\"",
     image: "s19-n-987",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-988",
@@ -956,6 +1279,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Never thought I'd use second state here.\"",
     image: "s19-n-988",
+    layout: {
+      layout: "layout-04",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-989",
@@ -976,6 +1306,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: When this Ninja's Team wins any Victory, your opponent moves all cards they would draw to their Chakra area instead during the next turn.",
     ],
     image: "s19-n-989",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-990",
@@ -995,6 +1332,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Valid: When a Ninja in this Ninja's Team becomes the user of a Jutsu card, this Ninja gets +1/+1 during this turn.",
     ],
     image: "s19-n-990",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-991",
@@ -1015,6 +1359,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Right now, this is all I can do. I can't allow myself to fail!\"",
     image: "s19-n-991",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-992",
@@ -1035,6 +1386,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Kakashi... Obito...\"",
     image: "s19-n-992",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-993",
@@ -1055,6 +1413,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Make sure not to cry in front of me this time.\"",
     image: "s19-n-993",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-994",
@@ -1075,6 +1440,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"The things I did in the past were nothing but mistakes...But...in my last hour, it seems I shall finally be able to do the right thing.\"",
     image: "s19-n-994",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-995",
@@ -1095,6 +1467,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Get out of my way!\"",
     image: "s19-n-995",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-996",
@@ -1115,6 +1494,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"You think you caught me with that? You're the one who's caught.\"",
     image: "s19-n-996",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.8, y: -8.5, zoom: 1.0265, print: true } },
+    },
   },
   {
     id: "s19-n-997",
@@ -1136,6 +1522,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"To protect... My hometown...the Leaf Village...!\"",
     image: "s19-n-997",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-998",
@@ -1155,6 +1548,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "When this Ninja's Team wins any Victory, your opponent moves 2 cards from their hand to the top of their Deck in any order.",
     ],
     image: "s19-n-998",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-n-999",
@@ -1175,6 +1575,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I have received orders from our god.\"",
     image: "s19-n-999",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1191,6 +1598,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Heh Heh...Victory here is mine.\"",
     image: "s19-j-743",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-744",
@@ -1207,6 +1621,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Pop is dead! My art is superflat, hmm?!\"",
     image: "s19-j-744",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-745",
@@ -1221,6 +1642,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"...Which means C2 is my best bet.\"",
     image: "s19-j-745",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-746",
@@ -1236,6 +1664,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Among all my dolls, Ohako is my prize masterpiece, containing C3 Chakra.\"",
     image: "s19-j-746",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1, y: -0.5, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s19-j-747",
@@ -1252,6 +1687,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Sayonara, Sasuke!\"",
     image: "s19-j-747",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.2, y: 2.2, zoom: 1.007, print: true } },
+    },
   },
   {
     id: "s19-j-748",
@@ -1267,6 +1709,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"This time it's over for real!!\"",
     image: "s19-j-748",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.5, y: 1.2, zoom: 1.0068, print: true } },
+    },
   },
   {
     id: "s19-j-749",
@@ -1283,6 +1732,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"That Jutsu required not just changing my chakra nature to Lightning...\"",
     image: "s19-j-749",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.8, y: -0.7, zoom: 1.0026, print: true } },
+    },
   },
   {
     id: "s19-j-750",
@@ -1299,6 +1755,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I teleported him...and the explosion to another space.\"",
     image: "s19-j-750",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-751",
@@ -1314,6 +1777,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Whether it's a genjutsu illusion or a ninjutsu fighting technique...There's some kind of magic at work here!\"",
     image: "s19-j-751",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1, y: 1.3, zoom: 1.0068, print: true } },
+    },
   },
   {
     id: "s19-j-752",
@@ -1329,6 +1799,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"ugh...again with the bed rest...?",
     image: "s19-j-752",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: -1.7, y: 1.3, zoom: 1.0065, print: true } },
+    },
   },
   {
     id: "s19-j-753",
@@ -1343,6 +1820,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"All right, let me explain the team rosters for our patrols.\"",
     image: "s19-j-753",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-754",
@@ -1358,6 +1842,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Enma!!  Indestructible Nyoi Staff!!!\"",
     image: "s19-j-754",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-755",
@@ -1374,6 +1865,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "Leaf Hurricane!!!",
     image: "s19-j-755",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-756",
@@ -1389,6 +1887,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"This is the finale!!!\"",
     image: "s19-j-756",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-757",
@@ -1404,6 +1909,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Gotcha!!!\"",
     image: "s19-j-757",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-758",
@@ -1420,6 +1932,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"NOW!!\"",
     image: "s19-j-758",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-759",
@@ -1436,6 +1955,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"You're inside the stomach of a toad.\"",
     image: "s19-j-759",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-760",
@@ -1452,6 +1978,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Okay people, now we're moving!!!\"",
     image: "s19-j-760",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-761",
@@ -1468,6 +2001,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Fire Style! Searing Migraine!!\"",
     image: "s19-j-761",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-762",
@@ -1484,6 +2024,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Heh... I imagine you're paralyzed now.\"",
     image: "s19-j-762",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-763",
@@ -1500,6 +2047,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Intriguing...\"",
     image: "s19-j-763",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-764",
@@ -1515,6 +2069,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Seems you've used up all your chakra... Your reaction time is slow.\"",
     image: "s19-j-764",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.7, y: 1.8, zoom: 1.0066, print: true } },
+    },
   },
   {
     id: "s19-j-765",
@@ -1530,6 +2091,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Here I go!\"",
     image: "s19-j-765",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-766",
@@ -1545,6 +2113,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'll count up to five.Go away before I am done. Or else, I'll make you disappear myself\"",
     image: "s19-j-766",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-767",
@@ -1561,6 +2136,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Naruto!\"",
     image: "s19-j-767",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.7, y: -0.7, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s19-j-768",
@@ -1579,6 +2161,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Now she needs bed rest\"",
     image: "s19-j-768",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-769",
@@ -1594,6 +2183,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"What are you thinking?\" \"I'll explain later, for crying out loud. You do it or not?\"",
     image: "s19-j-769",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-j-770",
@@ -1610,6 +2206,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Are the doggies bound to a self-replicating summoning jutsu?\"",
     image: "s19-j-770",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.7, y: -2.3, zoom: 0.9994, print: true } },
+    },
   },
   {
     id: "s19-j-771",
@@ -1626,6 +2229,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Yes, but that's not all. At the same time... Summoning Jutsu!\"",
     image: "s19-j-771",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: -1.5, y: -1.7, zoom: 1.0003, print: true } },
+    },
   },
   {
     id: "s19-j-772",
@@ -1643,6 +2253,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"That's the Rinnegan?  What nasty eyes...\"",
     image: "s19-j-772",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -1660,6 +2277,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'm not as logic-minded as you think.\"",
     image: "s19-m-699",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-700",
@@ -1676,6 +2300,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "While this card is in your Chakra area, your Earth Ninjas get +1 Mental Power.",
     ],
     image: "s19-m-700",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-701",
@@ -1692,6 +2323,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Shikamaru what's our next move?\"",
     image: "s19-m-701",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.2, y: -0.4, zoom: 1.0034, print: true } },
+    },
   },
   {
     id: "s19-m-702",
@@ -1708,6 +2346,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Let's start our search from Fire Temple.\"",
     image: "s19-m-702",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-703",
@@ -1722,6 +2367,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: Both players draw 2 cards. Your opponent discards 2 cards at the end of the turn.",
     ],
     image: "s19-m-703",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-704",
@@ -1739,6 +2391,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Seal!!\"",
     image: "s19-m-704",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-705",
@@ -1755,6 +2414,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I had to.\"",
     image: "s19-m-705",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-706",
@@ -1771,6 +2437,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"We should start the exercise.\"",
     image: "s19-m-706",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: -0.1, y: 0.2, zoom: 1.0051, print: true } },
+    },
   },
   {
     id: "s19-m-707",
@@ -1786,6 +2459,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"They're Ninja cats.  Be careful, or they'll claw you up.\"",
     image: "s19-m-707",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-708",
@@ -1802,6 +2482,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Fast! Just like...him...\"",
     image: "s19-m-708",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-709",
@@ -1817,6 +2504,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I've got a bad feeling about this...\"",
     image: "s19-m-709",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-710",
@@ -1833,6 +2527,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Look! Over there...\"",
     image: "s19-m-710",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-711",
@@ -1849,6 +2550,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"You'll see...\"",
     image: "s19-m-711",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-712",
@@ -1865,6 +2573,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"The rules are the same as when we first met.\"",
     image: "s19-m-712",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-713",
@@ -1881,6 +2596,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Nothing. Let's go.\"",
     image: "s19-m-713",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: -0.1, y: 0.5, zoom: 1.0059, print: true } },
+    },
   },
   {
     id: "s19-m-714",
@@ -1896,6 +2618,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"This yogurt is the best.\"",
     image: "s19-m-714",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-715",
@@ -1912,6 +2641,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"But you're quit the guy to be able to do a Partial Transformation.\"",
     image: "s19-m-715",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-716",
@@ -1926,6 +2662,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
       "Effect: If you paid the Hand cost of this card with a Water Ninja card, move 3 cards from your Discard Pile to your Chakra area. Then, discard 1 of your opponent's Chakra for each copy of this card in your Chakra area.",
     ],
     image: "s19-m-716",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-717",
@@ -1943,6 +2686,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Sealing team! Standby for the Three-Tails!\"",
     image: "s19-m-717",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-718",
@@ -1960,6 +2710,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"I'll cause the flow of chakra into his body...It will cause the toxin to surface from the cells. It will then be absorbed by this liquid...and extracted!\"",
     image: "s19-m-718",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-719",
@@ -1976,6 +2733,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"It'll soon be three hours... Please take over.\"",
     image: "s19-m-719",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s19-m-720",
@@ -1992,6 +2756,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"It's just that, whenever I come here. I want to punish myself for being such a fool in the past.\"",
     image: "s19-m-720",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.5, y: -0.3, zoom: 1.0047, print: true } },
+    },
   },
   {
     id: "s19-m-721",
@@ -2007,6 +2778,13 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Pain... That name is an alias that denotes all six of us.\"",
     image: "s19-m-721",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.2, y: -0.4, zoom: 1.0033, print: true } },
+    },
   },
   {
     id: "s19-m-722",
@@ -2024,5 +2802,12 @@ export const S19_PATH_OF_PAIN: Card[] = [
     ],
     flavor: "\"Konan... When I stop the rain, seek out the intruder with your jutsu.\"",
     image: "s19-m-722",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

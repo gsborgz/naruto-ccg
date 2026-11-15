@@ -1,12 +1,17 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { isCustomCardId } from '@/lib/cardMaker/customIds';
 import { cardImageUrl, type Card } from '@/models/card';
 
-// Carregada sob demanda: traz as fontes e a configuração dos layouts do criador de cartas.
+// Carregadas sob demanda: trazem as fontes e a configuração dos layouts do criador de cartas.
 const CatalogCardRender = dynamic(() => import('./cardMaker/CatalogCardRender').then((m) => m.CatalogCardRender), {
   ssr: false,
 });
+const CustomCardFaceRender = dynamic(
+  () => import('./cardMaker/CustomCardFaceRender').then((m) => m.CustomCardFaceRender),
+  { ssr: false },
+);
 
 interface Props {
   card: Card;
@@ -24,6 +29,14 @@ interface Props {
  * a imagem impressa. A miniatura fica por baixo enquanto a montada ou a imagem grande carregam.
  */
 export function CardFace({ card, size, rendered = true, eager = false, className = '' }: Props) {
+  // Carta do criador (montador de decks): não tem imagem impressa, é sempre montada.
+  if (isCustomCardId(card.id)) {
+    return (
+      <div className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 ${className}`}>
+        <CustomCardFaceRender cardId={card.id} />
+      </div>
+    );
+  }
   const showRendered = rendered && card.layout !== undefined;
   return (
     <div

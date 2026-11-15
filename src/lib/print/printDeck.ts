@@ -1,15 +1,37 @@
-import { CARDS_BY_ID } from '@/data/cards';
-import { sortCost } from '@/lib/cardFilters';
-import { deckPartOf, type DeckCards } from '@/lib/deckRules';
-import { cardImageUrl, type Card, type CardType } from '@/models/card';
-import { buildCardSheetPdf, type JpegImage } from './cardSheetPdf';
+import { sortCost } from '../cardFilters.ts';
+import { isCustomCardId } from '../cardMaker/customIds.ts';
+import { deckPartOf, type CardLookup, type DeckCards } from '../deckRules.ts';
+import { cardImageUrl, type Card, type CardType } from '../../models/card.ts';
+import { buildCardSheetPdf, type JpegImage } from './cardSheetPdf.ts';
 
 const TYPE_ORDER: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 
+/**
+ * Design das cartas no PDF, um só para o deck inteiro: `original` = a imagem impressa; `rendered` = a carta
+ * montada (layout + ícones + textos), nas cartas já escaneadas (as outras saem com a impressa).
+ * As cartas do criador não têm impressa: saem sempre montadas.
+ */
+export type PrintDesign = 'original' | 'rendered';
+
+export interface PrintOptions {
+  design: PrintDesign;
+  /** Procura as cartas do deck (catálogo + cartas criadas). */
+  lookup: CardLookup;
+  /** Desenha a carta montada em PNG (null: não dá para montar). Necessário para `rendered` e cartas criadas. */
+  renderCard?: (card: Card) => Promise<Blob | null>;
+  /** Avisado a cada carta pronta. */
+  onProgress?: (done: number, total: number) => void;
+}
+
+/** A carta sai montada no PDF (e não com a imagem impressa). */
+export function printsRendered(card: Card, design: PrintDesign): boolean {
+  return isCustomCardId(card.id) || (design === 'rendered' && card.layout !== undefined);
+}
+
 /** Cartas do deck na ordem de impressão: Deck por tipo e custo, depois o Baralho de Reforço. */
-export function printOrder(cards: DeckCards): { card: Card; qty: number }[] {
+export function printOrder(cards: DeckCards, lookup: CardLookup): { card: Card; qty: number }[] {
   return Object.entries(cards)
-    .map(([id, qty]) => ({ card: CARDS_BY_ID.get(id), qty }))
+    .map(([id, qty]) => ({ card: lookup(id), qty }))
     .filter((e): e is { card: Card; qty: number } => !!e.card && e.qty > 0)
     .sort((a, b) => {
       const part = Number(deckPartOf(a.card) === 'reinforcement') - Number(deckPartOf(b.card) === 'reinforcement');
@@ -22,7 +44,7 @@ export function printOrder(cards: DeckCards): { card: Card; qty: number }[] {
     });
 }
 
-/** Carrega a imagem da carta (WebP) e a converte para JPEG, formato que o PDF embute direto. */
+/** Carrega a imagem da carta (WebP ou PNG) e a converte para JPEG, formato que o PDF embute direto. */
 async function loadAsJpeg(url: string): Promise<JpegImage> {
   const img = new Image();
   img.src = url;
@@ -46,11 +68,36 @@ function fileName(deckName: string): string {
 }
 
 /** Gera o PDF de impressão do deck (folhas A4, 3 × 3 cartas em tamanho real) e baixa o arquivo. */
-export async function downloadDeckPdf(deckName: string, cards: DeckCards): Promise<void> {
-  const entries = printOrder(cards);
+export async function downloadDeckPdf(deckName: string, cards: DeckCards, options: PrintOptions): Promise<void> {
+  const { design, lookup, renderCard, onProgress } = options;
+  const entries = printOrder(cards, lookup);
   if (entries.length === 0) throw new Error('O deck está vazio');
 
-  const images = await Promise.all(entries.map((e) => loadAsJpeg(cardImageUrl(e.card, 'full'))));
+  let done = 0;
+  const tick = () => onProgress?.(++done, entries.length);
+  // Impressas em paralelo; montadas uma de cada vez (cada uma é desenhada na página, fora da tela).
+  const printed = entries.map((e) =>
+    printsRendered(e.card, design) ? null : loadAsJpeg(cardImageUrl(e.card, 'full')).finally(tick),
+  );
+  // Se uma montada falhar antes, as impressas que ficaram sem `await` não viram rejeição sem tratamento.
+  for (const p of printed) p?.catch(() => {});
+  const images: JpegImage[] = [];
+  for (const [i, e] of entries.entries()) {
+    const pending = printed[i];
+    if (pending) {
+      images.push(await pending);
+      continue;
+    }
+    const png = await renderCard?.(e.card);
+    if (!png) throw new Error(`Não foi possível montar a carta "${e.card.name}".`);
+    const url = URL.createObjectURL(png);
+    try {
+      images.push(await loadAsJpeg(url));
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+    tick();
+  }
   const slots = entries.flatMap((e, i) => Array<number>(e.qty).fill(i));
   const pdf = buildCardSheetPdf(images, slots, deckName.trim() || 'Deck');
 

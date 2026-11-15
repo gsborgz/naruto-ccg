@@ -28,6 +28,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Bobobobobobo....\"",
     image: "s13-n-522",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.6, y: -8.1, zoom: 1.0248, print: true } },
+    },
   },
   {
     id: "s13-n-523",
@@ -48,6 +55,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Please use me!\"",
     image: "s13-n-523",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-527",
@@ -69,6 +83,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It takes some time.....but...\"",
     image: "s13-n-527",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-528",
@@ -89,6 +110,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"By the way, you've grown!\"",
     image: "s13-n-528",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-529",
@@ -109,6 +137,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It's me...\"",
     image: "s13-n-529",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-530",
@@ -129,6 +164,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Well...well....\"",
     image: "s13-n-530",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-531",
@@ -149,6 +191,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"A stranger?\"",
     image: "s13-n-531",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-532",
@@ -169,6 +218,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Maybe I can be your help.\"",
     image: "s13-n-532",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-533",
@@ -189,6 +245,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Hey, that is...\"",
     image: "s13-n-533",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-534",
@@ -209,6 +272,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"yeah...no doubt.\"",
     image: "s13-n-534",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-535",
@@ -229,6 +299,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"If that's it for you, just die!\"",
     image: "s13-n-535",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-536",
@@ -249,6 +326,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You are my meal.\"",
     image: "s13-n-536",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.5, y: -8.8, zoom: 1.0243, print: true } },
+    },
   },
   {
     id: "s13-n-537",
@@ -269,6 +353,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'll finish this right away!\"",
     image: "s13-n-537",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-538",
@@ -289,6 +380,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Hurry up, you idiot.\"",
     image: "s13-n-538",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-539",
@@ -310,6 +408,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"When a woman is speaking, a guy should shut his mouth and listen.\"",
     image: "s13-n-539",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-540",
@@ -330,6 +435,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Creak\"",
     image: "s13-n-540",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-541",
@@ -350,6 +462,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Let me handle that Jinchuriki, hmmm?\"",
     image: "s13-n-541",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.4, y: -8.7, zoom: 1.0237, print: true } },
+    },
   },
   {
     id: "s13-n-542",
@@ -370,6 +489,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I will show you my secret technique.\"",
     image: "s13-n-542",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-543",
@@ -391,6 +517,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\".........\"",
     image: "s13-n-543",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4, y: -8.5, zoom: 1.0231, print: true } },
+    },
   },
   {
     id: "s13-n-544",
@@ -412,6 +545,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It's been a while since I used my own body last time.\"",
     image: "s13-n-544",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-545",
@@ -432,6 +572,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Pant, pant...\"",
     image: "s13-n-545",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-546",
@@ -452,6 +599,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Found you.\"",
     image: "s13-n-546",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-547",
@@ -469,6 +623,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [],
     flavor: "\"Here we go!\"",
     image: "s13-n-547",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-548",
@@ -489,6 +650,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I don't know...such guy.\"",
     image: "s13-n-548",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-549",
@@ -509,6 +677,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Byakugan!\" \"Byakugan!\"",
     image: "s13-n-549",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-550",
@@ -529,6 +705,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You shouldn't make a fool with Sasuke.\" \"Help my training right now.\"",
     image: "s13-n-550",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-551",
@@ -549,6 +733,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Long time no see, Naruto.\" \"Hey, it's you, Naruto!\"",
     image: "s13-n-551",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-552",
@@ -569,6 +761,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Ikuku...let's begin, shall we?\" \"Artists always seek stranger stimulation to keep their senses sharp.\"",
     image: "s13-n-552",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-553",
@@ -589,6 +789,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I pick this one.\"",
     image: "s13-n-553",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-554",
@@ -609,6 +816,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'll go after him!\"",
     image: "s13-n-554",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.4, y: -8.6, zoom: 1.0239, print: true } },
+    },
   },
   {
     id: "s13-n-555",
@@ -629,6 +843,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I can't work with someone who has no respect for a true artist. Besides, I don't like kids\"",
     image: "s13-n-555",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.6, y: -9, zoom: 1.0245, print: true } },
+    },
   },
   {
     id: "s13-n-556",
@@ -649,6 +870,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Let's go there and check.\"",
     image: "s13-n-556",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-557",
@@ -666,6 +894,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     text: [],
     flavor: "\"This is it!!\"",
     image: "s13-n-557",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-558",
@@ -686,6 +921,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It's too late!!\"",
     image: "s13-n-558",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-559",
@@ -706,6 +948,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'm not what I was last time.\"",
     image: "s13-n-559",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-560",
@@ -726,6 +975,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I know.\"",
     image: "s13-n-560",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.2, y: -8.5, zoom: 1.0232, print: true } },
+    },
   },
   {
     id: "s13-n-561",
@@ -746,6 +1002,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"That's wrong, Neji. Because I can see it.\"",
     image: "s13-n-561",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-562",
@@ -766,6 +1029,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Are you ready for this?\"",
     image: "s13-n-562",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-563",
@@ -786,6 +1056,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s13-n-563",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-564",
@@ -806,6 +1083,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Chidori!\"",
     image: "s13-n-564",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.5, y: -9, zoom: 1.0252, print: true } },
+    },
   },
   {
     id: "s13-n-565",
@@ -826,6 +1110,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This should be it!\"",
     image: "s13-n-565",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-566",
@@ -845,6 +1136,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Valid: While this Ninja is Battling as a Back Ninja, if the Head Ninja of this Ninja's Team has a \"Taijutsu\" Combat Attribute, this Ninja gets +0/+X. X = the value of this Ninja's Combat.",
     ],
     image: "s13-n-566",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-567",
@@ -864,6 +1162,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "When this Ninja is put in play, put in play an \"Anbu\" Ninja card from your Chakra area or Discard Pile.",
     ],
     image: "s13-n-567",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-568",
@@ -885,6 +1190,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Did you think you won?\"",
     image: "s13-n-568",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-569",
@@ -905,6 +1217,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Don't underestimate my power...\"",
     image: "s13-n-569",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.1, y: -8.6, zoom: 1.0232, print: true } },
+    },
   },
   {
     id: "s13-n-570",
@@ -925,6 +1244,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This one finger is enough to beat you.\"",
     image: "s13-n-570",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-571",
@@ -945,6 +1271,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Here I coooooome!!\"",
     image: "s13-n-571",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-572",
@@ -965,6 +1298,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"There are so many of them.\" \"Not only that. The situation is even worse.\"",
     image: "s13-n-572",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-573",
@@ -985,6 +1326,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'm counting on you, Pakkun!\" \"I got it, Kakashi.\"",
     image: "s13-n-573",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-574",
@@ -1005,6 +1354,14 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Come on, Akamaru!!\" \"Arf, arf!!\"",
     image: "s13-n-574",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-575",
@@ -1025,6 +1382,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Aren't you reading that book this time?\"",
     image: "s13-n-575",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-576",
@@ -1045,6 +1409,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Everybody, scatter!!\"",
     image: "s13-n-576",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-577",
@@ -1065,6 +1436,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"How about this?\"",
     image: "s13-n-577",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-578",
@@ -1086,6 +1464,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It's such a nuisance but I am supposed to supervise the chunin exam.\"",
     image: "s13-n-578",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-579",
@@ -1106,6 +1491,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This should be good for the time being...\"",
     image: "s13-n-579",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-580",
@@ -1126,6 +1518,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"it's my turn now.\"",
     image: "s13-n-580",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-581",
@@ -1146,6 +1545,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"To measure my caliber.\"",
     image: "s13-n-581",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-582",
@@ -1166,6 +1572,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Haaa!!\"",
     image: "s13-n-582",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-583",
@@ -1186,6 +1599,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Hooooooow!!!\"",
     image: "s13-n-583",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-584",
@@ -1207,6 +1627,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s13-n-584",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-585",
@@ -1227,6 +1654,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Teaching a born genius is not fun at all.\"",
     image: "s13-n-585",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-586",
@@ -1247,6 +1681,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Right now, I'll attack you with all my power. The training is dodging all my attacks. Again, I'm not going to hold back.\"",
     image: "s13-n-586",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-587",
@@ -1267,6 +1708,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"That kid will never beat Sasuke who has Sharingan, which is the talent of the ninja.\"",
     image: "s13-n-587",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-588",
@@ -1288,6 +1736,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"if you bother me, I'm not going to hold back!!\"",
     image: "s13-n-588",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-n-589",
@@ -1309,6 +1764,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"\"I got another connection...\"",
     image: "s13-n-589",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1325,6 +1787,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I found the target...\"",
     image: "s13-j-450",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-451",
@@ -1343,6 +1812,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Secret Taijutsu technique...!!\"",
     image: "s13-j-451",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-452",
@@ -1358,6 +1834,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Now!!\"",
     image: "s13-j-452",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-453",
@@ -1374,6 +1857,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"No more playing...\"",
     image: "s13-j-453",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-454",
@@ -1390,6 +1880,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Shadow Clone Jutsu!!\"",
     image: "s13-j-454",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-455",
@@ -1405,6 +1902,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This is bushy -brow's...\"",
     image: "s13-j-455",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-456",
@@ -1421,6 +1925,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"The same look and power.\"",
     image: "s13-j-456",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-457",
@@ -1437,6 +1948,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"We break in with Button Hook Entry.\"",
     image: "s13-j-457",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-458",
@@ -1452,6 +1970,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"HA!!\"",
     image: "s13-j-458",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-459",
@@ -1468,6 +1993,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This jutsu is awesome!\"",
     image: "s13-j-459",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-460",
@@ -1484,6 +2016,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This is just the beginning of my revenge...\"",
     image: "s13-j-460",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-461",
@@ -1500,6 +2039,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Barrier....\"",
     image: "s13-j-461",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-462",
@@ -1515,6 +2061,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It will take two to three days to complete.\"",
     image: "s13-j-462",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-463",
@@ -1530,6 +2083,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Fire on my command.\"",
     image: "s13-j-463",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-464",
@@ -1546,6 +2106,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You stay back.\"",
     image: "s13-j-464",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-465",
@@ -1562,6 +2129,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"My left hand is all right now.\"",
     image: "s13-j-465",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-466",
@@ -1578,6 +2152,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You are slow...\"",
     image: "s13-j-466",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-467",
@@ -1594,6 +2175,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"His attack range so wide!!\"",
     image: "s13-j-467",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0.1, y: 1.7, zoom: 1.0061, print: true } },
+    },
   },
   {
     id: "s13-j-468",
@@ -1610,6 +2198,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You were manipulating the girl with your chakra thread...\"",
     image: "s13-j-468",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-469",
@@ -1626,6 +2221,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Die.\"",
     image: "s13-j-469",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-470",
@@ -1641,6 +2243,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You blocked my attack with chakra shield...\"",
     image: "s13-j-470",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-471",
@@ -1657,6 +2266,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Sakura! Hold your breath!!\"",
     image: "s13-j-471",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-472",
@@ -1672,6 +2288,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I see...\"",
     image: "s13-j-472",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-473",
@@ -1688,6 +2311,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"He blocked all my attacks with his chakra!?\"",
     image: "s13-j-473",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-474",
@@ -1702,6 +2332,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"1, 2, 3...there are 3 guys watching the aerial attacks.\"",
     image: "s13-j-474",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-475",
@@ -1718,6 +2355,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Fire Style: Fire Ball Jutsu!!\"",
     image: "s13-j-475",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.7, y: -0.1, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s13-j-476",
@@ -1734,6 +2378,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Noooooo!!\"",
     image: "s13-j-476",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-477",
@@ -1749,6 +2400,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'll show you my treasure puppet. It was a little hard to get...\"",
     image: "s13-j-477",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-478",
@@ -1765,6 +2423,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Kakakakaka.....\"",
     image: "s13-j-478",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-479",
@@ -1781,6 +2446,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s13-j-479",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-480",
@@ -1796,6 +2468,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Salamander\"",
     image: "s13-j-480",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-481",
@@ -1811,6 +2490,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s13-j-481",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-482",
@@ -1826,6 +2512,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Water Style: Exploding Water Shock Wave!!\"",
     image: "s13-j-482",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-483",
@@ -1842,6 +2535,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Now! Go, Sakura!!\" \"Got it!!\"",
     image: "s13-j-483",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-484",
@@ -1858,6 +2558,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Clay...! It's a clone...\"",
     image: "s13-j-484",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-485",
@@ -1873,6 +2580,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Shadow Clone Jutsu!!\"",
     image: "s13-j-485",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-486",
@@ -1888,6 +2602,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Genjutsu: Sylvan Fetters!!\"",
     image: "s13-j-486",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-487",
@@ -1904,6 +2625,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Crescent Moon Dance!!\"",
     image: "s13-j-487",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.6, y: 1.3, zoom: 1.0062, print: true } },
+    },
   },
   {
     id: "s13-j-488",
@@ -1920,6 +2648,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Human Boulder!!\"",
     image: "s13-j-488",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.3, y: 1, zoom: 1.0051, print: true } },
+    },
   },
   {
     id: "s13-j-489",
@@ -1935,6 +2670,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"HAAAAAAA!!\"",
     image: "s13-j-489",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-490",
@@ -1950,6 +2692,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"We're the best trio in the hidden village in the Leafs, Ino-Shika-Cho Trio!!\"",
     image: "s13-j-490",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-491",
@@ -1966,6 +2715,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Shoot, this is a trap!!\"",
     image: "s13-j-491",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-492",
@@ -1981,6 +2737,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Ninja strategy No.1, Taijutsu!!\"",
     image: "s13-j-492",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-493",
@@ -1997,6 +2760,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Naruto, Sakura....help me\"",
     image: "s13-j-493",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-494",
@@ -2013,6 +2783,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This is my masterpiece art 'Detonating Clay \"Signature Technique' which contains the highest level chakra 'C3'.\"",
     image: "s13-j-494",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-j-495",
@@ -2029,6 +2806,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s13-j-495",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.8, y: -1.2, zoom: 1.0011, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2045,6 +2829,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Gotcha!!\"",
     image: "s13-m-412",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-413",
@@ -2060,6 +2851,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This can't be...the 1st prize?\"",
     image: "s13-m-413",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-414",
@@ -2075,6 +2873,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I've fulfilled my quota, hmmm?\"",
     image: "s13-m-414",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: 0, zoom: 1.0019, print: true } },
+    },
   },
   {
     id: "s13-m-415",
@@ -2091,6 +2896,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This bought enough time already...\"",
     image: "s13-m-415",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-416",
@@ -2107,6 +2919,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Are you going to take those?\"",
     image: "s13-m-416",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.9, y: -0.4, zoom: 1.0034, print: true } },
+    },
   },
   {
     id: "s13-m-417",
@@ -2123,6 +2942,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Listen...an alliance is just a pipe dream.\"",
     image: "s13-m-417",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-418",
@@ -2138,6 +2964,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Have we met before?\"",
     image: "s13-m-418",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-419",
@@ -2154,6 +2987,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Those poison needles won't work for me...\"",
     image: "s13-m-419",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-420",
@@ -2170,6 +3010,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This way, you can control his chakra right away...\"",
     image: "s13-m-420",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-421",
@@ -2185,6 +3032,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"...HERE COMES ANOTHER ONE. LEAF NINJA.\"",
     image: "s13-m-421",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-422",
@@ -2201,6 +3055,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"you need my power, don't you?\"",
     image: "s13-m-422",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-423",
@@ -2217,6 +3078,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This time...I am taking your life on a whim.\"",
     image: "s13-m-423",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-424",
@@ -2232,6 +3100,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'm taking Gaara back!\"",
     image: "s13-m-424",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-425",
@@ -2248,6 +3123,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"All I have to do is to capture one of the 'Jinchuriki' right?\"",
     image: "s13-m-425",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-426",
@@ -2263,6 +3145,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Taking Naruto with us is our highest priority mission given by our organization 'Akatsuki'\"",
     image: "s13-m-426",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-427",
@@ -2279,6 +3168,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This is the sand village's fastest hawk \"Takamaru\"!!\"",
     image: "s13-m-427",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-428",
@@ -2294,6 +3190,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Kakashi told to track the scent of 'Akatsuki'\".",
     image: "s13-m-428",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-429",
@@ -2310,6 +3213,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Aaaaaaaaaaaahhhhhhhhhhh....\"",
     image: "s13-m-429",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-430",
@@ -2325,6 +3235,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Tailed beasts have enormous amount of chakra. So, every village tried to get their power and use it for the military affairs.\"",
     image: "s13-m-430",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-431",
@@ -2342,6 +3259,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Stop it, Kankuro! This is a sacred place!!\"",
     image: "s13-m-431",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-432",
@@ -2358,6 +3282,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"They're right behind us!!\"",
     image: "s13-m-432",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-433",
@@ -2374,6 +3305,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s13-m-433",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-434",
@@ -2389,6 +3327,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I normally don't trust these things...\"",
     image: "s13-m-434",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-435",
@@ -2405,6 +3350,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Kuku...\"",
     image: "s13-m-435",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-436",
@@ -2425,6 +3377,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This village is artistically designed...\"",
     image: "s13-m-436",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: 0.3, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s13-m-437",
@@ -2440,6 +3399,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"You should have trained more rather than spending your time finding me.\"",
     image: "s13-m-437",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-438",
@@ -2456,6 +3422,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Got it. I'll try!\"",
     image: "s13-m-438",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-439",
@@ -2472,6 +3445,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Hehehe! They finally made Tsunade's face rock!\"",
     image: "s13-m-439",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-440",
@@ -2489,6 +3469,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Look at him carefully. He looks so alike, but he is not 'White Fang'...\"",
     image: "s13-m-440",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-441",
@@ -2506,6 +3493,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"It will take at least 3 days.\"",
     image: "s13-m-441",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-442",
@@ -2521,6 +3515,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Sorry, we are late.\" \"Temari!\"",
     image: "s13-m-442",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-443",
@@ -2537,6 +3538,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I'm coming with you!\"",
     image: "s13-m-443",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-444",
@@ -2553,6 +3561,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"If it's 2 on 1, even if one of them gets caught in genjutsu, once the other one hits him, the genjutsu is canceled.\"",
     image: "s13-m-444",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-445",
@@ -2569,6 +3584,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"I bet you will remember me after this...\"",
     image: "s13-m-445",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-446",
@@ -2584,6 +3606,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Now, go!\"",
     image: "s13-m-446",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.3, y: 1.2, zoom: 1.0041, print: true } },
+    },
   },
   {
     id: "s13-m-447",
@@ -2599,6 +3628,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"All right, everyone. Let's go 4 times faster!\" \"......\"",
     image: "s13-m-447",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-448",
@@ -2615,6 +3651,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s13-m-448",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-449",
@@ -2629,6 +3672,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Effect: Both players move the top 4 cards from their Deck to their Chakra area. At the end of this turn, discard all Chakras.",
     ],
     image: "s13-m-449",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: -5.5,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-450",
@@ -2643,6 +3693,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Effect: Put in play a \"Squad\" Ninja card from your Squad Deck only if you don't have any of the Ninjas listed on that \"Squad\" Ninja card in play.",
     ],
     image: "s13-m-450",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-451",
@@ -2657,6 +3714,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Effect: Put in play a \"Squad\" Ninja card from your Squad Deck only if you don't have any of the Ninjas listed on that \"Squad\" Ninja card in play.",
     ],
     image: "s13-m-451",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-452",
@@ -2672,6 +3736,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
       "Effect: Each time you put in play an \"Akatsuki\" Ninja, your opponent must select 1 of their in-play Ninjas and discard it.",
     ],
     image: "s13-m-452",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-453",
@@ -2691,6 +3762,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s13-m-453",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-m-454",
@@ -2707,6 +3785,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s13-m-454",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: -0.2, zoom: 1.0023, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -2724,6 +3809,13 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"Go ahead and order whatever you want.\"",
     image: "s13-c-047",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s13-c-048",
@@ -2740,5 +3832,12 @@ export const S13_FATEFUL_REUNION: Card[] = [
     ],
     flavor: "\"This...this is the fastest hawk in the sand village \"Takamaru\"!!\"",
     image: "s13-c-048",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

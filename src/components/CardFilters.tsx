@@ -25,10 +25,13 @@ export function CardFilters({
   value,
   onChange,
   resultCount,
+  extraSets = [],
 }: {
   value: CardFilterState;
   onChange: (v: CardFilterState) => void;
   resultCount: number;
+  /** Coleções além das oficiais, no topo da lista (ex.: as cartas criadas, no montador). */
+  extraSets?: string[];
 }) {
   const setName = useSetName();
   return (
@@ -48,7 +51,7 @@ export function CardFilters({
           className={`${select} max-w-full ${value.set ? 'border-accent' : ''}`}
         >
           <option value="">Todas as coleções</option>
-          {SETS.map((code) => (
+          {[...extraSets, ...SETS].map((code) => (
             <option key={code} value={code}>
               {setName(code)}
             </option>

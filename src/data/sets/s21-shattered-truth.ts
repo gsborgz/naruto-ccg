@@ -26,6 +26,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Don't they say there's nothing scarier than a grudge over food?\"",
     image: "s21-n-1102",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.8, y: -8.5, zoom: 1.0261, print: true } },
+    },
   },
   {
     id: "s21-n-1103",
@@ -47,6 +54,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Don't you mock me... or my art!\"",
     image: "s21-n-1103",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1104",
@@ -68,6 +82,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"It was nothing..hack hack... I'm fine... hack...\"",
     image: "s21-n-1104",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1105",
@@ -90,6 +111,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Cry your heart out!!!\"",
     image: "s21-n-1105",
+    layout: {
+      layout: "layout-04",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1106",
@@ -111,6 +139,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"You brought gifts, mew?\"",
     image: "s21-n-1106",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1107",
@@ -132,6 +167,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"What brings you here, mew?\"",
     image: "s21-n-1107",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1108",
@@ -153,6 +195,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Should we not provide support?\"",
     image: "s21-n-1108",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1109",
@@ -174,6 +223,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Perhaps what you lack is purpose...\"",
     image: "s21-n-1109",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1110",
@@ -195,6 +251,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Not so ordinary then, hunh?\"",
     image: "s21-n-1110",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1111",
@@ -214,6 +277,14 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: This Ninja cannot be blocked by Ninjas with -1/-1 coins",
     ],
     image: "s21-n-1111",
+    layout: {
+      layout: "layout-03",
+      panelVariant: "red",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1112",
@@ -233,6 +304,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Attacker | EOJ] Deploy this Ninja card from your hand: If you have 2 or more \"Anbu\" Ninjas, move this Ninja into any of your Teams in any position (This counts as your deployment for the turn).",
     ],
     image: "s21-n-1112",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1113",
@@ -254,6 +332,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"I shall show you my final trump card...\"",
     image: "s21-n-1113",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1114",
@@ -273,6 +358,14 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: Your opponent cannot win the game due to Battle Rewards and you cannot lose the game due to Battle Rewards. This effect cannot be negated.",
     ],
     image: "s21-n-1114",
+    layout: {
+      layout: "layout-03",
+      panelVariant: "red",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1115",
@@ -292,6 +385,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "When this Ninja is put in play, you can draw 1 card for each \"Ink\" Ninja and Ink Summon Ninja you have.",
     ],
     image: "s21-n-1115",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1116",
@@ -313,6 +413,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Naruto...It's a wonderful name.\"",
     image: "s21-n-1116",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1117",
@@ -333,6 +440,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"What's the matter, Master Guy?\"",
     image: "s21-n-1117",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1118",
@@ -354,6 +468,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This stops now!!\"",
     image: "s21-n-1118",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1119",
@@ -374,6 +495,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Naruto, you are the child of prophecy.\"",
     image: "s21-n-1119",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1120",
@@ -395,6 +523,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"What's wrong?\"",
     image: "s21-n-1120",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1121",
@@ -414,6 +549,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: While a Ninja card in your Discard Pile has Mastery, this Ninja is considered to have Mastery.",
     ],
     image: "s21-n-1121",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1122",
@@ -433,6 +575,14 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Valid | EOJ] (1): Give 1 Damage to target Ninja Battling against this Ninja. Then, this Ninja becomes a Stand-by Ninja.",
     ],
     image: "s21-n-1122",
+    layout: {
+      layout: "layout-03",
+      panelVariant: "red",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1123",
@@ -454,6 +604,14 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"I believe in you.\" \"I'm the Fourth Hokage's kid...I'll deal.\"",
     image: "s21-n-1123",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1124",
@@ -475,6 +633,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Are you stupid!?\"",
     image: "s21-n-1124",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1125",
@@ -495,6 +660,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"You shouldn't underestimate us.\"",
     image: "s21-n-1125",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1126",
@@ -515,6 +687,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Stop it.\"",
     image: "s21-n-1126",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1127",
@@ -535,6 +714,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Feel the power?\"",
     image: "s21-n-1127",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1128",
@@ -555,6 +741,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Two on two. Works for me.\"",
     image: "s21-n-1128",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1129",
@@ -574,6 +767,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "[Attacker | Mission] (0): You can discard X Chakra to discard X of your opponent's Chakra.",
     ],
     image: "s21-n-1129",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1130",
@@ -596,6 +796,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Thooom!\"",
     image: "s21-n-1130",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1131",
@@ -617,6 +824,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Alpha!\" \"Omega!\"",
     image: "s21-n-1131",
+    layout: {
+      layout: "layout-04",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1132",
@@ -637,6 +851,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"A ninja never runs away from a battle that must be fought.\"",
     image: "s21-n-1132",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1133",
@@ -658,6 +879,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Are you toying with me?\"",
     image: "s21-n-1133",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1134",
@@ -678,6 +906,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"I want to become strong.\"",
     image: "s21-n-1134",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1135",
@@ -698,6 +933,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This chakra feels...\"",
     image: "s21-n-1135",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1136",
@@ -718,6 +960,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"He was dying...\"",
     image: "s21-n-1136",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1137",
@@ -740,6 +989,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "\"When any of your Ninjas would be injured or receive Damage, you can give 1 Damage to this Ninja instead.\"",
     ],
     image: "s21-n-1137",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1138",
@@ -761,6 +1017,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"We'll go!\"",
     image: "s21-n-1138",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 3.8, y: -8.5, zoom: 1.0251, print: true } },
+    },
   },
   {
     id: "s21-n-1139",
@@ -781,6 +1044,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"It's Sasori's favorite puppet.\"",
     image: "s21-n-1139",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1140",
@@ -802,6 +1072,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Shall we begin?\"",
     image: "s21-n-1140",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1141",
@@ -822,6 +1099,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Fwosh!\"",
     image: "s21-n-1141",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1142",
@@ -844,6 +1128,14 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"If you're going to play like that, I suppose you leave me no choice.\"",
     image: "s21-n-1142",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1143",
@@ -864,6 +1156,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: At the start of your turn, draw 2 cards.",
     ],
     image: "s21-n-1143",
+    layout: {
+      layout: "layout-03",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1144",
@@ -884,6 +1183,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Valid: When this Ninja Blocks, this Ninja gets +1/+1 during this turn.",
     ],
     image: "s21-n-1144",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1145",
@@ -904,6 +1210,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"The only thing you have faith in is yourself.\"",
     image: "s21-n-1145",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 6.2, y: -6.9, zoom: 1.027, print: true } },
+    },
   },
   {
     id: "s21-n-1146",
@@ -924,6 +1237,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Hey! You're alive!\"",
     image: "s21-n-1146",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 6.2, y: -7.5, zoom: 1.0271, print: true } },
+    },
   },
   {
     id: "s21-n-1147",
@@ -944,6 +1264,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"I will believe in you as well.\"",
     image: "s21-n-1147",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 6, y: -7.5, zoom: 1.0271, print: true } },
+    },
   },
   {
     id: "s21-n-1148",
@@ -964,6 +1291,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"It's been awhile indeed...since last I used myself.\"",
     image: "s21-n-1148",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.5, y: -7.6, zoom: 1.0271, print: true } },
+    },
   },
   {
     id: "s21-n-1149",
@@ -984,6 +1318,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"You're about to become my greatest masterpiece!\"",
     image: "s21-n-1149",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.1, y: -7.4, zoom: 1.0231, print: true } },
+    },
   },
   {
     id: "s21-n-1150",
@@ -1004,6 +1345,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Knowing that it is you calling the shots makes my job easier.\"",
     image: "s21-n-1150",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 7.2, y: -7.5, zoom: 1.0277, print: true } },
+    },
   },
   {
     id: "s21-n-1151",
@@ -1024,6 +1372,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"...this is it.\"",
     image: "s21-n-1151",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.9, y: -7.2, zoom: 1.0264, print: true } },
+    },
   },
   {
     id: "s21-n-1152",
@@ -1046,6 +1401,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"And one comprehends pain.\"",
     image: "s21-n-1152",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.7, y: -6.9, zoom: 1.0261, print: true } },
+    },
   },
   {
     id: "s21-n-1153",
@@ -1069,6 +1431,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Just be careful, or you'll die.\"",
     image: "s21-n-1153",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1154",
@@ -1089,6 +1458,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"But it's not possible...eh?!\"",
     image: "s21-n-1154",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 6.9, y: -7.3, zoom: 1.0269, print: true } },
+    },
   },
   {
     id: "s21-n-1155",
@@ -1105,6 +1481,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Taijutsu"],
     text: [],
     image: "s21-n-1155",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1156",
@@ -1121,6 +1504,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Taijutsu"],
     text: [],
     image: "s21-n-1156",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1157",
@@ -1137,6 +1527,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Mind", "Medicine"],
     text: [],
     image: "s21-n-1157",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1158",
@@ -1153,6 +1550,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Weapon"],
     text: [],
     image: "s21-n-1158",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1159",
@@ -1169,6 +1573,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Shadow"],
     text: [],
     image: "s21-n-1159",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1160",
@@ -1185,6 +1596,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Tree"],
     text: [],
     image: "s21-n-1160",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03", "03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1161",
@@ -1201,6 +1619,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Weapon"],
     text: [],
     image: "s21-n-1161",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03", "03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1162",
@@ -1217,6 +1642,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Tree"],
     text: [],
     image: "s21-n-1162",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03", "03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1163",
@@ -1233,6 +1665,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Fang"],
     text: [],
     image: "s21-n-1163",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1164",
@@ -1249,6 +1688,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Fang"],
     text: [],
     image: "s21-n-1164",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1165",
@@ -1265,6 +1711,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Fang"],
     text: [],
     image: "s21-n-1165",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1166",
@@ -1281,6 +1734,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Fang"],
     text: [],
     image: "s21-n-1166",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1167",
@@ -1297,6 +1757,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Taijutsu"],
     text: [],
     image: "s21-n-1167",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1168",
@@ -1313,6 +1780,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Oil"],
     text: [],
     image: "s21-n-1168",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-n-1169",
@@ -1329,6 +1803,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     attributes: ["Taijutsu"],
     text: [],
     image: "s21-n-1169",
+    layout: {
+      layout: "layout-05",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1346,6 +1827,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Ninja Art: Tile Shuriken!\"",
     image: "s21-j-802",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -0.9, y: 0.7, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s21-j-803",
@@ -1362,6 +1850,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Earth Style! Earth Dragon Bomb!\"",
     image: "s21-j-803",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-804",
@@ -1377,6 +1872,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Combination [Ninja without effect text]: The user gets +X Mental Power, where X = the number of your Ninjas without effect text.",
     ],
     image: "s21-j-804",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-805",
@@ -1392,6 +1894,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This time, it's over for real!\"",
     image: "s21-j-805",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-806",
@@ -1407,6 +1916,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This time, it's over for real!\"",
     image: "s21-j-806",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-807",
@@ -1423,6 +1939,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Fire Style! Fireball Jutsu!\"",
     image: "s21-j-807",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.1, y: 0.1, zoom: 1.0028, print: true } },
+    },
   },
   {
     id: "s21-j-808",
@@ -1437,6 +1960,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Put in play 1 \"Anbu\" Ninja card from your Discard Pile into the user's Team in any position.",
     ],
     image: "s21-j-808",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.2, y: 0, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s21-j-809",
@@ -1452,6 +1982,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Place 2 -1/-1 coins on the target. Then, if the target's Combat is 0 or lower, draw 2 cards.",
     ],
     image: "s21-j-809",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-810",
@@ -1468,6 +2005,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Fire Style! Art of Dragon Flame!\"",
     image: "s21-j-810",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-811",
@@ -1482,6 +2026,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: You win 1 Battle Reward.",
     ],
     image: "s21-j-811",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-812",
@@ -1498,6 +2049,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"But I beg you, help me\"",
     image: "s21-j-812",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-813",
@@ -1512,6 +2070,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: The target's Power becomes equal to the user during this turn.",
     ],
     image: "s21-j-813",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-814",
@@ -1529,6 +2094,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Begone with the thunderclap...\"",
     image: "s21-j-814",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-815",
@@ -1545,6 +2117,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Haah!!\"",
     image: "s21-j-815",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-816",
@@ -1560,6 +2139,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"The block you chose was incorrect\"",
     image: "s21-j-816",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-817",
@@ -1575,6 +2161,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Water Style: Raging Waves!\"",
     image: "s21-j-817",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-818",
@@ -1589,6 +2182,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Tsuchigumo Style: Forbidden Jutsu Release!\"",
     image: "s21-j-818",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-819",
@@ -1604,6 +2204,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"The Hidden Mist?\"",
     image: "s21-j-819",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-820",
@@ -1619,6 +2226,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"You fell for it.\"",
     image: "s21-j-820",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-821",
@@ -1633,6 +2247,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Negate and discard the target unless your opponent lets you draw 2 cards.",
     ],
     image: "s21-j-821",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-822",
@@ -1650,6 +2271,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Pakka kakka.\"",
     image: "s21-j-822",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-823",
@@ -1666,6 +2294,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"What is this stuff anyway?\"",
     image: "s21-j-823",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"] },
+      art: { back: { x: -0.8, y: 2.2, zoom: 1.0072, print: true } },
+    },
   },
   {
     id: "s21-j-824",
@@ -1683,6 +2318,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Tsukuyomi, the nightmare realm!\"",
     image: "s21-j-824",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01", "02"] },
+      art: { back: { x: -0.9, y: -1, zoom: 1.0025, print: true } },
+    },
   },
   {
     id: "s21-j-825",
@@ -1697,6 +2339,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Search your Deck for 1 \"Akatsuki\" Ninja card with an Entrance cost less than your Turn Marker and move it to the user's Team in any position. Then, move the user to the bottom of its owner's Deck.",
     ],
     image: "s21-j-825",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-j-826",
@@ -1714,6 +2363,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "(9+) You win 2 Battle Rewards.",
     ],
     image: "s21-j-826",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -1730,6 +2386,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"What did you think of Chiriku's technique?\"",
     image: "s21-m-749",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-750",
@@ -1744,6 +2407,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Search your Deck for 1 Earth Ninja card with an Entrance cost greater than the number of cards in your opponent's hand, reveal it, and move it to your hand.",
     ],
     image: "s21-m-750",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-751",
@@ -1760,6 +2430,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Your Ninjas without effect text get +1/+0 and +1 Mental Power.",
     ],
     image: "s21-m-751",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-752",
@@ -1776,6 +2453,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: The effect text of all non-Reinforcement and non-Squad Ninjas is negated.",
     ],
     image: "s21-m-752",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-753",
@@ -1795,6 +2479,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "This Mission is cannot be affected by your opponent's Mission cards.",
     ],
     image: "s21-m-753",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.7, y: -0.6, zoom: 1.005, print: true } },
+    },
   },
   {
     id: "s21-m-754",
@@ -1811,6 +2502,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "While this Mission has 2 or more \"Anbu\" coins on it, you can deploy Ninjas during the Exchange of Jutsu.",
     ],
     image: "s21-m-754",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-755",
@@ -1830,6 +2528,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "This Mission cannot be affected by your opponent's Mission cards.",
     ],
     image: "s21-m-755",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.3, y: 1.1, zoom: 1.0073, print: true } },
+    },
   },
   {
     id: "s21-m-756",
@@ -1845,6 +2550,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"You think I've just been sleeping and doing nothing this whole time?\"",
     image: "s21-m-756",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-757",
@@ -1860,6 +2572,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"How much can you actually see?\"",
     image: "s21-m-757",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-758",
@@ -1877,6 +2596,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This is it.\"",
     image: "s21-m-758",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-759",
@@ -1896,6 +2622,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "This Mission cannot be affected by your opponent's Mission cards.",
     ],
     image: "s21-m-759",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-760",
@@ -1911,6 +2644,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: At the start of your turn, reveal the top card of your Deck. In that case, if the revealed card is a Ninja card with a printed Entrance cost of 6 or more, put that Ninja card into play. Move that Ninja to your hand at the end of this turn. Otherwise, move the revealed card to the bottom of your Deck.",
     ],
     image: "s21-m-760",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: -0.8, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s21-m-761",
@@ -1927,6 +2667,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: [Attacker | Mission] (1): Move up to 3 cards from a Discard Pile to the bottom of its owners Deck in any order.",
     ],
     image: "s21-m-761",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-762",
@@ -1941,6 +2688,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: At the start of the Showdown, you win 1 Battle Reward for each of your Teams that has a Ninja with an Entrance cost of 7 or more in it.",
     ],
     image: "s21-m-762",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-763",
@@ -1955,6 +2709,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Discard your hand, then draw that many cards, plus 1.",
     ],
     image: "s21-m-763",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-764",
@@ -1972,6 +2733,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"Whomp!\"",
     image: "s21-m-764",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-765",
@@ -1988,6 +2756,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: When the target would receive any Damage, give it to 1 of your other Ninjas instead.",
     ],
     image: "s21-m-765",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-766",
@@ -2003,6 +2778,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This is Orochimaru's Eight-Headed Serpent Jutsu.\"",
     image: "s21-m-766",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-767",
@@ -2022,6 +2804,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This is what I've been waiting for!\"",
     image: "s21-m-767",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-768",
@@ -2041,6 +2830,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "This Mission cannot be affected by your opponent's Mission cards.",
     ],
     image: "s21-m-768",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-769",
@@ -2060,6 +2856,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "This Mission cannot be affected by your opponent's Mission cards.",
     ],
     image: "s21-m-769",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-770",
@@ -2077,6 +2880,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"What the...!?\"",
     image: "s21-m-770",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-771",
@@ -2093,6 +2903,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: Your maximum hand size is increased by 2.",
     ],
     image: "s21-m-771",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.1, y: 0, zoom: 1.0039, print: true } },
+    },
   },
   {
     id: "s21-m-772",
@@ -2109,6 +2926,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "Effect: When you flip a coin, you can ignore the result and flip it again. This effect can be used twice per turn.",
     ],
     image: "s21-m-772",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-773",
@@ -2128,6 +2952,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
       "This Mission cannot be affected by your opponent's Mission cards.",
     ],
     image: "s21-m-773",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 1.1, y: -1.1, zoom: 1.004, print: true } },
+    },
   },
   {
     id: "s21-m-774",
@@ -2143,6 +2974,13 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"I'm sorry.\"",
     image: "s21-m-774",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s21-m-775",
@@ -2160,5 +2998,12 @@ export const S21_SHATTERED_TRUTH: Card[] = [
     ],
     flavor: "\"This will seal the chakra immediately...\"",
     image: "s21-m-775",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];

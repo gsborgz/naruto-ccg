@@ -2,6 +2,7 @@
 
 import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { CARDS } from '@/data/cards';
+import { CUSTOM_SET, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { filterCards, INITIAL_FILTERS, type CardFilterState } from '@/lib/cardFilters';
 import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
@@ -16,6 +17,7 @@ const EAGER_THUMBS = 12;
 /** Imagens grandes já pré-carregadas nesta sessão (ao passar o mouse ou focar uma carta). */
 const preloaded = new Set<string>();
 function preloadFull(card: Card) {
+  if (isCustomCardId(card.id)) return; // carta criada: montada, sem imagem
   const url = cardImageUrl(card);
   if (preloaded.has(url)) return;
   preloaded.add(url);
@@ -25,6 +27,8 @@ function preloadFull(card: Card) {
 }
 
 interface Props {
+  /** Cartas da grade (padrão: o catálogo). O montador passa também as cartas criadas. */
+  cards?: Card[];
   onSelect: (card: Card) => void;
   /** Quantidade no deck, exibida como selo no canto (e nos controles +/-). */
   countOf?: (card: Card) => number;
@@ -96,6 +100,7 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
 });
 
 export function CardBrowser({
+  cards: source = CARDS,
   onSelect,
   countOf,
   blockedOf,
@@ -112,14 +117,15 @@ export function CardBrowser({
   const { language, translations } = useCardLanguage();
   const searchTranslations = language === 'pt-BR' ? translations : null;
   const cards = useMemo(
-    () => filterCards(CARDS, deferredFilters, searchTranslations),
-    [deferredFilters, searchTranslations],
+    () => filterCards(source, deferredFilters, searchTranslations),
+    [source, deferredFilters, searchTranslations],
   );
+  const extraSets = useMemo(() => (source.some((c) => c.set === CUSTOM_SET) ? [CUSTOM_SET] : []), [source]);
 
   return (
     <div className="flex flex-col gap-4">
       <div className={filtersClassName}>
-        <CardFilters value={filters} onChange={setFilters} resultCount={cards.length} />
+        <CardFilters value={filters} onChange={setFilters} resultCount={cards.length} extraSets={extraSets} />
       </div>
       {cards.length === 0 ? (
         <p className="rounded-lg border border-dashed border-border p-8 text-center text-muted">

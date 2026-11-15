@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import { customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
@@ -44,6 +46,7 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
   const { language } = useCardLanguage();
   const localized = useLocalizedCard(card);
   const setName = useSetName()(card.set);
+  const custom = isCustomCardId(card.id);
   // A carta montada vem primeiro (cartas escaneadas); a original fica a um clique.
   const [view, setView] = useState<CardView>('rendered');
   // Desenvolvimento: ajuste do tamanho do nome, aplicado na carta montada antes de gravar no arquivo da coleção.
@@ -91,7 +94,7 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-accent">
-              {CARD_TYPE_LABEL[card.type]} · #{card.number} · {card.set}
+              {custom ? CARD_TYPE_LABEL[card.type] : `${CARD_TYPE_LABEL[card.type]} · #${card.number} · ${card.set}`}
             </p>
             {setName && <p className="text-xs text-muted">{setName}</p>}
             <h2 className="text-2xl font-bold">{localized.name}</h2>
@@ -163,7 +166,15 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
             {localized.flavor && <p className="italic text-muted">{localized.flavor}</p>}
           </div>
         )}
-        {language === 'pt-BR' && !localized.translated && (
+        {custom && (
+          <p className="text-xs text-muted">
+            Carta criada neste navegador.{' '}
+            <Link href={`/criar?carta=${customSourceId(card.id)}`} className="text-accent hover:underline">
+              Editar no criador
+            </Link>
+          </p>
+        )}
+        {language === 'pt-BR' && !localized.translated && !custom && (
           <p className="text-xs text-muted">Esta carta ainda não tem tradução: os textos estão em inglês, como impressos.</p>
         )}
 

@@ -27,6 +27,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You're already under my curse. Now! Let's savor the utmost of suffering together!\"",
     image: "s17-n-784",
+    layout: {
+      layout: "layout-04",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-785",
@@ -49,6 +56,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"If they could kill me, I'd want them to.\"",
     image: "s17-n-785",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-786",
@@ -69,6 +83,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"But no one should be able to use such high-level Jutsu unless they are compatible with that person's own Chakra nature. And he uses earth, wind and lightning...\"",
     image: "s17-n-786",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-787",
@@ -89,6 +110,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You're mine!\"",
     image: "s17-n-787",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-788",
@@ -109,6 +137,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What on earth...are we fighting\"",
     image: "s17-n-788",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-789",
@@ -129,6 +164,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\" I read it in a book. \"",
     image: "s17-n-789",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-790",
@@ -149,6 +191,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s17-n-790",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-791",
@@ -169,6 +218,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Now...I will hand down judgement...\"",
     image: "s17-n-791",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-792",
@@ -189,6 +245,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll take care of Asuma sensei's injury with my Medical Ninjutsu!\"",
     image: "s17-n-792",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-793",
@@ -209,6 +272,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'm stuffed!!\"",
     image: "s17-n-793",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-794",
@@ -229,6 +299,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Because you and I were too different, I felt so jealous, I decided all on my own that you were my rival.\"",
     image: "s17-n-794",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-795",
@@ -249,6 +326,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Big brother...why do you always treat me like just a pest?\"",
     image: "s17-n-795",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-796",
@@ -269,6 +353,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Say...Ino, why did you give me this ribbon?\"",
     image: "s17-n-796",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-797",
@@ -289,6 +380,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"It's such a nice day...\"",
     image: "s17-n-797",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-798",
@@ -310,6 +408,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This is my true power?\"",
     image: "s17-n-798",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-799",
@@ -330,6 +435,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll accompany you no matter where you go...\"",
     image: "s17-n-799",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-800",
@@ -351,6 +463,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I promise you...I will never leave your side. I will always think of you.\"",
     image: "s17-n-800",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-801",
@@ -371,6 +490,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Multi Smoke Clone.\"",
     image: "s17-n-801",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-802",
@@ -391,6 +517,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Dark Smoke Sphere!\"",
     image: "s17-n-802",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-803",
@@ -411,6 +544,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Water Shield Shot!\"",
     image: "s17-n-803",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-804",
@@ -431,6 +571,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'd be happy to be the one reporting to Lord Orochimaru...\"",
     image: "s17-n-804",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-805",
@@ -452,6 +599,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Is this where I'm supposed to go?\"",
     image: "s17-n-805",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-806",
@@ -474,6 +628,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"A shinobi must abandon emotion if he's ever to obtain ultimate power, and power, power is the only truth in this world, as you're about to find out.\"",
     image: "s17-n-806",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 5.1, y: -9.1, zoom: 1.0252, print: true } },
+    },
   },
   {
     id: "s17-n-807",
@@ -494,6 +655,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You can't fully guard against my fist just by dodging.\"",
     image: "s17-n-807",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-808",
@@ -514,6 +682,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"There's no way you can escape from my masterpiece with a puny jutsu like that.\"",
     image: "s17-n-808",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-809",
@@ -534,6 +709,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Oh, how long I've waited for the dawn of the Land of Fire. This isn't the time for you guys to be dying.\"",
     image: "s17-n-809",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-810",
@@ -554,6 +736,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Nobody likes men who talk too much. Just get started.\"",
     image: "s17-n-810",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-811",
@@ -574,6 +763,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Asuma!\"",
     image: "s17-n-811",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-812",
@@ -594,6 +790,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Danzo, Tatsuji wasn't just your spy. He was sending us information as well...\"",
     image: "s17-n-812",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-813",
@@ -615,6 +818,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Jinchuriki for the Four-Tailed Monkey Spirit, Roshi combines Fire and Earth-based Chakra for his scorching Lava Style Ninjutsu.\"",
     image: "s17-n-813",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-814",
@@ -636,6 +846,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Wrecking havoc with torrential tidal waves and illusionary mist; you cannot out swim nor hope to hide from the fearsome Three-Tails.\"",
     image: "s17-n-814",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-815",
@@ -656,6 +873,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I want to take this risk alone. If I can't beat this, I'll never be able to grow up. So please...please... don't take this path away from me.\"",
     image: "s17-n-815",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-816",
@@ -676,6 +900,14 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This is an A-Rank technique; it's a highly advanced Ninjutsu kid.\" \"Rasengan!!\"",
     image: "s17-n-816",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-817",
@@ -696,6 +928,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"We must follow our Ninja way, and follow it all the way to the end! Fourth Gate of Pain, OPEN!!\"",
     image: "s17-n-817",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-818",
@@ -716,6 +955,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'm Gaara of the Desert, wherever there's rock wherever there's earth I can make more sand.\"",
     image: "s17-n-818",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-819",
@@ -736,6 +982,14 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Just as I thought, everyone's always thought that way about Choji. But me? I've always known the real truth. More than me or Neji, or any of us here - Choji's got strength.\"",
     image: "s17-n-819",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-820",
@@ -756,6 +1010,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"If you really want to help me get better at this, come at me full force!\"",
     image: "s17-n-820",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-821",
@@ -776,6 +1037,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Water Clone Jutsu!\"",
     image: "s17-n-821",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-822",
@@ -797,6 +1065,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Beginning tomorrow, you are Hokage.\"",
     image: "s17-n-822",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-823",
@@ -817,6 +1092,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You'll see it when the time comes...\"",
     image: "s17-n-823",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-824",
@@ -837,6 +1119,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Never turn your back on the enemy, the most basic rule of combat. You've cost yourself the battle.\"",
     image: "s17-n-824",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-825",
@@ -858,6 +1147,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"All these Villages are a part of me just as I'am a part of them.\"",
     image: "s17-n-825",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-826",
@@ -878,6 +1174,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I can overcome anything with hot-blooded effort. With eyes on tomorrow, I STRIKE!!!\"",
     image: "s17-n-826",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-827",
@@ -898,6 +1201,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"When it comes to dealing with strange other worldly freaks and monsters, no ones better than the strange hermit Ninja.\"",
     image: "s17-n-827",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-828",
@@ -918,6 +1228,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You've thrown it all away! Dreams don't come true when you're dead!\"",
     image: "s17-n-828",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-829",
@@ -938,6 +1255,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'm not finished with you yet!!\"",
     image: "s17-n-829",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 3.9, y: -8.2, zoom: 1.0214, print: true } },
+    },
   },
   {
     id: "s17-n-830",
@@ -958,6 +1282,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This is a Jutsu activated by simultaneously creating both the Change in Chakra Nature and Change in Chakra Form.\"",
     image: "s17-n-830",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 3.8, y: -9.4, zoom: 1.0246, print: true } },
+    },
   },
   {
     id: "s17-n-831",
@@ -978,6 +1309,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Whether you're a boy or girl means nothing on the battlefield.\"",
     image: "s17-n-831",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-832",
@@ -998,6 +1336,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Yahoo! Akamaru, let's do this!\"",
     image: "s17-n-832",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-833",
@@ -1018,6 +1363,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll see you next time you need to be rescued. Just let me know and I'll come, you big crybaby.\"",
     image: "s17-n-833",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-834",
@@ -1037,6 +1389,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'm a member of the elite tracking unit of the Village Hidden in the Mist. It was to stop Zabuza.\"",
     image: "s17-n-834",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-835",
@@ -1057,6 +1416,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I saw how important your job was to the mission, the way everyone depended on you. I finally realized I want to be a Medical Ninja!\"",
     image: "s17-n-835",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-836",
@@ -1077,6 +1443,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Cause after all you're the one that taught me everything, right sensei?!",
     image: "s17-n-836",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-837",
@@ -1098,6 +1471,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I will work hard, and connect to the people of this Village. Watching Naruto Uzumaki has brought me clarity.\"",
     image: "s17-n-837",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-838",
@@ -1118,6 +1498,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I carry this title in trust, for those Hokages who came before and those who will come after, I am the 3rd Hokage!\"",
     image: "s17-n-838",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-839",
@@ -1138,6 +1525,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Stronger than you were yesterday!\"",
     image: "s17-n-839",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-840",
@@ -1159,6 +1553,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Didn't you know? Women have to be strong in order to survive!\"",
     image: "s17-n-840",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-841",
@@ -1181,6 +1582,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Fire Style: Searing Migraine!\", \"Lightning Style: False Darkness!\", \"Wind Style: Pressure Damage!\" \"Earth Style: Earth Spear!\"",
     image: "s17-n-841",
+    layout: {
+      layout: "layout-04",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-842",
@@ -1201,6 +1609,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Then, I will have to get you to talk by force.\"",
     image: "s17-n-842",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-843",
@@ -1222,6 +1637,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This is the Big One... where I bet it all... where I put my life on the line.\"",
     image: "s17-n-843",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-844",
@@ -1242,6 +1664,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Stop messing around!\"",
     image: "s17-n-844",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 3.5, y: -10, zoom: 1.0215, print: true } },
+    },
   },
   {
     id: "s17-n-845",
@@ -1262,6 +1691,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Raijin ever since I've known you, you've been a moron.\"",
     image: "s17-n-845",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-846",
@@ -1282,6 +1718,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Big brother, big brother, I'm a lizard.\"",
     image: "s17-n-846",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-847",
@@ -1302,6 +1745,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Well...I'd heard that Iruka's been feeling pretty down lately. I was worried so I thought I'd check on him.\"",
     image: "s17-n-847",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-848",
@@ -1322,6 +1772,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Suzumebachi's most powerful Bee ensnares its victims in honey and finishes of its foes with its deadly stinger.\"",
     image: "s17-n-848",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-849",
@@ -1343,6 +1800,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"It was you wasn't it? You killed him...\"",
     image: "s17-n-849",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 4.1, y: -8.7, zoom: 1.0219, print: true } },
+    },
   },
   {
     id: "s17-n-850",
@@ -1364,6 +1828,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"It draws its life from the vast waters of the ocean. You guys don't stand a ghost of a chance!\"",
     image: "s17-n-850",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-851",
@@ -1384,6 +1855,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You caught on too late ♪♫♪♫\"",
     image: "s17-n-851",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-852",
@@ -1404,6 +1882,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I would like...to fight with you again.\"",
     image: "s17-n-852",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-853",
@@ -1424,6 +1909,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Oh yes, he'll pay, Wooden Dummy Posses transfer Repossess Jutsu!\"",
     image: "s17-n-853",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-854",
@@ -1444,6 +1936,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"All right, it's revenge that we want. Be sure you make the dog pay!\"",
     image: "s17-n-854",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-855",
@@ -1464,6 +1963,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I want you to show me every secret technique that you've ever learned from Might Guy.\"",
     image: "s17-n-855",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-856",
@@ -1484,6 +1990,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"We've been waiting for the chance to even the score, to make you pay for what you did to him.\"",
     image: "s17-n-856",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-857",
@@ -1504,6 +2017,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Ninja Art: Link and Slay!\"",
     image: "s17-n-857",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-858",
@@ -1524,6 +2044,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"My Jutsu isn't a Ninjutsu it's a deadly Jutsu. Ninja Art: Blood Rain!\"",
     image: "s17-n-858",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-859",
@@ -1541,6 +2068,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     text: [],
     flavor: "\"My men and I will guard Gantetsu. I swear by the power of my sword!\"",
     image: "s17-n-859",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-860",
@@ -1562,6 +2096,14 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Then...do you know who the King is?!\" \"Huh? The Hokage right?!\" \"That's what I thought until recently...But it's not like that.\"",
     image: "s17-n-860",
+    layout: {
+      layout: "layout-04",
+      panelVariant: "purple",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-861",
@@ -1583,6 +2125,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Even if I'm torn to shreds...I'll take Sasuke back!\"",
     image: "s17-n-861",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-862",
@@ -1605,6 +2154,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This time, I'm going to save them both!\"",
     image: "s17-n-862",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-n-863",
@@ -1626,6 +2182,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The next generation will always surpass the previous one. It's one of the never-ending cycles in life.\"",
     image: "s17-n-863",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── JUTSU ──
   {
@@ -1643,6 +2206,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This is the end!\"",
     image: "s17-j-645",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-646",
@@ -1658,6 +2228,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Raigo!!\"",
     image: "s17-j-646",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-647",
@@ -1674,6 +2251,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"If combo and pin point attacks won't hit...\"",
     image: "s17-j-647",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-648",
@@ -1688,6 +2272,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"So this is the Two-Tails monster cat known as the wraith...\"",
     image: "s17-j-648",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-649",
@@ -1703,6 +2294,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Too slow.\"",
     image: "s17-j-649",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-650",
@@ -1718,6 +2316,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Hidan! Don't underestimate them.\"",
     image: "s17-j-650",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-651",
@@ -1734,6 +2339,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Just shut up and watch, Kakuzu.\"",
     image: "s17-j-651",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-652",
@@ -1749,6 +2361,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"He is such a pushover.\"",
     image: "s17-j-652",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-653",
@@ -1763,6 +2382,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Their agony radiates through my body, and living through it is pure ecstasy!\"",
     image: "s17-j-653",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-654",
@@ -1777,6 +2403,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The real battle won't begin until I grab him.\"",
     image: "s17-j-654",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.3, y: 0.7, zoom: 1.0048, print: true } },
+    },
   },
   {
     id: "s17-j-655",
@@ -1792,6 +2425,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Reach!\"",
     image: "s17-j-655",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-656",
@@ -1806,6 +2446,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Your words cut deep, deeper than any blade.\"",
     image: "s17-j-656",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-657",
@@ -1821,6 +2468,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Oh man...\"",
     image: "s17-j-657",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-658",
@@ -1837,6 +2491,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What the hell?!",
     image: "s17-j-658",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -2.1, y: 2.1, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s17-j-659",
@@ -1852,6 +2513,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"A black sword!\"",
     image: "s17-j-659",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: -0.7, y: 1.9, zoom: 1.0063, print: true } },
+    },
   },
   {
     id: "s17-j-660",
@@ -1868,6 +2536,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"It hurts, doesn't it?\"",
     image: "s17-j-660",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-661",
@@ -1883,6 +2558,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'm finished if I get hit by that.\"",
     image: "s17-j-661",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-662",
@@ -1897,6 +2579,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s17-j-662",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.2, y: 0.9, zoom: 1.0056, print: true } },
+    },
   },
   {
     id: "s17-j-663",
@@ -1913,6 +2602,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s17-j-663",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-664",
@@ -1927,6 +2623,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Reaper kiss.\" \"What? My chakra...\"",
     image: "s17-j-664",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-665",
@@ -1942,6 +2645,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Water Style: Mouth of the Serpent!\" \"Lightning Style: Earth Slide!\"",
     image: "s17-j-665",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-666",
@@ -1957,6 +2667,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Rrrrrrrrrrrr!!!\"",
     image: "s17-j-666",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-667",
@@ -1971,6 +2688,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Those definitely seem to be the stolen bodies.\"",
     image: "s17-j-667",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-668",
@@ -1987,6 +2711,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Beast Wave: Palm Hurricane!!\"",
     image: "s17-j-668",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: -2.4, y: 1.9, zoom: 1.0058, print: true } },
+    },
   },
   {
     id: "s17-j-669",
@@ -2003,6 +2734,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Sai!!\"",
     image: "s17-j-669",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-670",
@@ -2019,6 +2757,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I summoned the terrain I designed and created from a different spatial environment...You can't escape now.\"",
     image: "s17-j-670",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-671",
@@ -2035,6 +2780,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I will take you down!\"",
     image: "s17-j-671",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-672",
@@ -2049,6 +2801,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What is this place?\"",
     image: "s17-j-672",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-673",
@@ -2064,6 +2823,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Super Expansion Jutsu!!\"",
     image: "s17-j-673",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-674",
@@ -2078,6 +2844,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I cannot lose...there is a reason I cannot lose!!\"",
     image: "s17-j-674",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-675",
@@ -2093,6 +2866,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll completely release the sealing jutsu...Release!\"",
     image: "s17-j-675",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: -2.3, y: 0.2, zoom: 1.0029, print: true } },
+    },
   },
   {
     id: "s17-j-676",
@@ -2109,6 +2889,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Rrrrrrrrrrrrr!!\"",
     image: "s17-j-676",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-677",
@@ -2123,6 +2910,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What is it now?\"",
     image: "s17-j-677",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-678",
@@ -2138,6 +2932,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Did that do the trick?\"",
     image: "s17-j-678",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-679",
@@ -2154,6 +2955,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll break you over and over again.\"",
     image: "s17-j-679",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-680",
@@ -2169,6 +2977,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Now I've got you!\"",
     image: "s17-j-680",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-681",
@@ -2184,6 +2999,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s17-j-681",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-682",
@@ -2199,6 +3021,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Watch closely Hanabi, there is no one in the Hyuga Clan who has inherited such a strong Kekkei Genkai. His is stronger than your older sisters. Perhaps even stronger than yours...\"",
     image: "s17-j-682",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -1.2, y: 1.3, zoom: 1.0062, print: true } },
+    },
   },
   {
     id: "s17-j-683",
@@ -2214,6 +3043,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What? No! It can't be!!\"",
     image: "s17-j-683",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-684",
@@ -2229,6 +3065,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s17-j-684",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-685",
@@ -2247,6 +3090,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"There's a reason Itachi let me live, a reason he chose me to be the one to track him down and kill him. I am an avenger!\"",
     image: "s17-j-685",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-686",
@@ -2262,6 +3112,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"He broke out the same Jutsu that I did!\"",
     image: "s17-j-686",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-687",
@@ -2277,6 +3134,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The speed of his jutsu is incredible; I didn't even see a hand sign. The shuriken in his hand were just a ruse to distract me from his Water Style attack.\"",
     image: "s17-j-687",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-688",
@@ -2291,6 +3155,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I've thought up another way of finding the treasure so I've no use for any of you now!\"",
     image: "s17-j-688",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: -2, y: 2, zoom: 1.0054, print: true } },
+    },
   },
   {
     id: "s17-j-689",
@@ -2307,6 +3178,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"♥-♥-♥-♥ OK! Now I'm curious!\"",
     image: "s17-j-689",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-690",
@@ -2321,6 +3199,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s17-j-690",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-691",
@@ -2336,6 +3221,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Needles that deliver a deadly poison, no matter how strong you may be, you already have one foot in the grave.\"",
     image: "s17-j-691",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-692",
@@ -2351,6 +3243,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Does he have eyes in the back of his head?!\"",
     image: "s17-j-692",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-693",
@@ -2366,6 +3265,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Earth Style: Stone Plate Coffin!!\"",
     image: "s17-j-693",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-694",
@@ -2380,6 +3286,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"This is the ultimate Earth style jutsu, Soil Bodies!\"",
     image: "s17-j-694",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-695",
@@ -2395,6 +3308,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Lightning Style: Earth Slide!\"",
     image: "s17-j-695",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-j-696",
@@ -2411,6 +3331,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s17-j-696",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"] },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── MISSION ──
   {
@@ -2427,6 +3354,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Hidan, anyone with a brain would know that the world revolves around money!\"",
     image: "s17-m-624",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-625",
@@ -2444,6 +3378,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The reason can be dealt with afterwards, but war will always happen...\"",
     image: "s17-m-625",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-626",
@@ -2461,6 +3402,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Hold it. Before doing that....\"",
     image: "s17-m-626",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-627",
@@ -2477,6 +3425,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Asuma!\"",
     image: "s17-m-627",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-628",
@@ -2492,6 +3447,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Do you know why I'm telling you this, Naruto? It's because I believe you're the only Shinobi who can surpass the Fourth Hokage.\"",
     image: "s17-m-628",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-629",
@@ -2508,6 +3470,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"No matter what darkness lies ahead, I will pursue this path. Whatever happens, I will obtain power.\"",
     image: "s17-m-629",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: -1.3, y: -0.1, zoom: 1.003, print: true } },
+    },
   },
   {
     id: "s17-m-630",
@@ -2523,6 +3492,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"He still has a heart beat!\"",
     image: "s17-m-630",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-631",
@@ -2538,6 +3514,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"It's time to seal the Two-Tails...Come right away! This is the top priority.\"",
     image: "s17-m-631",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-632",
@@ -2555,6 +3538,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The smoke...gets in my eyes...\"",
     image: "s17-m-632",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-633",
@@ -2570,6 +3560,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What made me think \"How can you say that with a straight face?\" when you asked \"When will we meet again?\"\"",
     image: "s17-m-633",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-634",
@@ -2586,6 +3583,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"YIKES! Don't say gross stuff out of the blue like that!\"",
     image: "s17-m-634",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-635",
@@ -2602,6 +3606,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I entrust my dream to a shooting star.\"",
     image: "s17-m-635",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-636",
@@ -2618,6 +3629,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Contact the twenty newly formed platoons immediately!\"",
     image: "s17-m-636",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-637",
@@ -2633,6 +3651,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Well done. Now we can start development of your new original Jutsu.\"",
     image: "s17-m-637",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.4, y: -1.1, zoom: 1.002, print: true } },
+    },
   },
   {
     id: "s17-m-638",
@@ -2649,6 +3674,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You can only trust in money.\"",
     image: "s17-m-638",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-639",
@@ -2666,6 +3698,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"If Shizune has asked for your advice...then you should know what my answer will be. No way!\"",
     image: "s17-m-639",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-640",
@@ -2681,6 +3720,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Explain yourself, Danzo!\"",
     image: "s17-m-640",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-641",
@@ -2697,6 +3743,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You'll never let me join in.\" \"Hah...That wouldn't suit you, right?\"",
     image: "s17-m-641",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.9, y: -1, zoom: 1.001, print: true } },
+    },
   },
   {
     id: "s17-m-642",
@@ -2713,6 +3766,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Do it.\"",
     image: "s17-m-642",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-643",
@@ -2729,6 +3789,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Why wasn't I invited to the 'meeting of fists under the sunset sky to develop the friendship of men'?!\"",
     image: "s17-m-643",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-644",
@@ -2744,6 +3811,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Now things have turned out this way, we need to once again solicit instruction from the Hokage.\"",
     image: "s17-m-644",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-645",
@@ -2759,6 +3833,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"We have received a message from the Fire Temple. It seems all four of the hidden tombs have been violated.\"",
     image: "s17-m-645",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-646",
@@ -2774,6 +3855,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Eat this!!\" \"Beast Wave: Palm Hurricane!!\"",
     image: "s17-m-646",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-647",
@@ -2791,6 +3879,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"What?!\"",
     image: "s17-m-647",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-648",
@@ -2806,6 +3901,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"These earrings are my congratulatory gifts to each of you. Don't ever forget that you were members of Team Ten!\"",
     image: "s17-m-648",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-649",
@@ -2822,6 +3924,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"You are being unusually careless today.\"",
     image: "s17-m-649",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-650",
@@ -2837,6 +3946,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Where's Shikamaru?\"",
     image: "s17-m-650",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-651",
@@ -2853,6 +3969,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Asuma...\"",
     image: "s17-m-651",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-652",
@@ -2871,6 +3994,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The third step of our goal...We will......take over the world.\"",
     image: "s17-m-652",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-653",
@@ -2886,6 +4016,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll pound you if you say anything else.\"",
     image: "s17-m-653",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-654",
@@ -2901,6 +4038,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"By looking to the left...while looking to the right... This is what you mean, right?\"",
     image: "s17-m-654",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.9, y: -0.9, zoom: 1.0031, print: true } },
+    },
   },
   {
     id: "s17-m-655",
@@ -2916,6 +4060,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Captain Yamato, don't scare me like that!\"",
     image: "s17-m-655",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0.7, y: -0.9, zoom: 1.0024, print: true } },
+    },
   },
   {
     id: "s17-m-656",
@@ -2931,6 +4082,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"At the same time, they were making preparations to attack other lands.\"",
     image: "s17-m-656",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-657",
@@ -2947,6 +4105,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Hooray!\" \"We did it. All their jutsu have ended!\"",
     image: "s17-m-657",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-658",
@@ -2963,6 +4128,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Shadow Possession Jutsu is a success!\"",
     image: "s17-m-658",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-659",
@@ -2980,6 +4152,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Monster! Monster!\"",
     image: "s17-m-659",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-660",
@@ -2995,6 +4174,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I don't have time to just sit around!\"",
     image: "s17-m-660",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-661",
@@ -3012,6 +4198,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"The smallest things can put you on their bad side, and always playing their little minds games with you trying to get you to do what they want.\"",
     image: "s17-m-661",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 1.2, y: -0.6, zoom: 1.0027, print: true } },
+    },
   },
   {
     id: "s17-m-662",
@@ -3028,6 +4221,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"I'll serve as captain for Team Ten.\"",
     image: "s17-m-662",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-663",
@@ -3044,6 +4244,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Whaaaaaaaaaaaa!\"",
     image: "s17-m-663",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-m-664",
@@ -3059,6 +4266,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Barrier Defense Seal Jutsu: Eight-Gate Lock Up!\"",
     image: "s17-m-664",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   // ── CLIENT ──
   {
@@ -3076,6 +4290,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"We heard guest would be arriving from far away, so Lord Orochimaru instructed me to provide you with some entertainment.\"",
     image: "s17-c-056",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 3.3, y: -9.6, zoom: 1.0275, print: true } },
+    },
   },
   {
     id: "s17-c-057",
@@ -3092,6 +4313,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Lord Owashi is the trustful father of Lord Sagi and Lady Toki from the Land of Birds.\"",
     image: "s17-c-057",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: -1.4, y: -21.1, zoom: 1.0724, print: true } },
+    },
   },
   {
     id: "s17-c-058",
@@ -3108,6 +4336,13 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "Head of the Kurama Clan and father of Yakumo, he was unaware of the monstrous \"Ido\" personality within her.",
     image: "s17-c-058",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
   {
     id: "s17-c-059",
@@ -3125,5 +4360,12 @@ export const S17_WILL_OF_FIRE: Card[] = [
     ],
     flavor: "\"Summoned by \"The Trap Master\" Genno, this faithful Eagle dropped numerous blueprints all over the Leaf Village.\"",
     image: "s17-c-059",
+    layout: {
+      layout: "layout-02",
+      nameSize: 0,
+      nameSizePtBr: 0,
+      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
+      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
+    },
   },
 ];
