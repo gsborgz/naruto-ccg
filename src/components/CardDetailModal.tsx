@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
+import { useCardDesign } from '@/lib/cardDesign';
 import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
@@ -47,8 +48,8 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
   const localized = useLocalizedCard(card);
   const setName = useSetName()(card.set);
   const custom = isCustomCardId(card.id);
-  // A carta montada vem primeiro (cartas escaneadas); a original fica a um clique.
-  const [view, setView] = useState<CardView>('rendered');
+  // Abre no design escolhido na listagem (padrão: a original); o outro fica a um clique.
+  const [view, setView] = useState<CardView>(useCardDesign());
   // Desenvolvimento: ajuste do tamanho do nome, aplicado na carta montada antes de gravar no arquivo da coleção.
   // Nome traduzido na tela → `nameSizePtBr`; senão `nameSize` (como em `withLocalizedText`).
   const [sizeEdits, setSizeEdits] = useState<Partial<Record<LayoutSizeField, number>>>({});
@@ -73,8 +74,8 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
           <div role="group" aria-label="Imagem da carta" className="flex justify-center gap-1 text-sm">
             {(
               [
-                ['rendered', 'Montada'],
                 ['original', 'Original'],
+                ['rendered', 'Montada'],
               ] as const
             ).map(([value, label]) => (
               <button

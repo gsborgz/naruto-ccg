@@ -4,6 +4,7 @@ import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { CARDS } from '@/data/cards';
 import { CUSTOM_SET, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { filterCards, INITIAL_FILTERS, type CardFilterState } from '@/lib/cardFilters';
+import { useCardDesign } from '@/lib/cardDesign';
 import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
@@ -48,6 +49,8 @@ interface Props {
 interface TileProps {
   card: Card;
   eager: boolean;
+  /** Carta montada (cartas escaneadas) em vez da imagem impressa. */
+  rendered: boolean;
   count: number;
   blocked: string | null;
   onSelect: (card: Card) => void;
@@ -58,7 +61,7 @@ interface TileProps {
  * Uma carta da grade. Memoizada: ao clicar em "+", só as cartas cuja quantidade ou bloqueio
  * mudou são re-renderizadas (a grade pode ter milhares de cartas).
  */
-const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect, onSetQty }: TileProps) {
+const CardTile = memo(function CardTile({ card, eager, rendered, count, blocked, onSelect, onSetQty }: TileProps) {
   const name = useCardName()(card);
   return (
     <li className="group flex flex-col gap-1.5 [contain-intrinsic-size:auto_320px] [content-visibility:auto]">
@@ -70,7 +73,7 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
         className="relative overflow-hidden rounded-lg ring-1 ring-border transition hover:-translate-y-0.5 hover:ring-accent"
         aria-label={`Ver detalhes de ${name}`}
       >
-        <CardFace card={card} size="thumb" eager={eager} />
+        <CardFace card={card} size="thumb" rendered={rendered} eager={eager} />
         {count > 0 && (
           <span className="absolute right-1.5 top-1.5 grid size-7 place-items-center rounded-full bg-accent text-sm font-bold text-bg shadow">
             {count}
@@ -115,6 +118,7 @@ export function CardBrowser({
   // Os filtros (e a contagem) atualizam na hora; a grade pesada segue logo depois, sem travar a digitação.
   const deferredFilters = useDeferredValue(filters);
   const { language, translations } = useCardLanguage();
+  const rendered = useCardDesign() === 'rendered';
   const searchTranslations = language === 'pt-BR' ? translations : null;
   const cards = useMemo(
     () => filterCards(source, deferredFilters, searchTranslations),
@@ -138,6 +142,7 @@ export function CardBrowser({
               key={card.id}
               card={card}
               eager={index < EAGER_THUMBS}
+              rendered={rendered}
               count={countOf?.(card) ?? 0}
               blocked={blockedOf?.(card) ?? null}
               onSelect={onSelect}

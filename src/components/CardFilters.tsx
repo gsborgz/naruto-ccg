@@ -4,6 +4,7 @@ import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } fro
 import type { CardFilterState, SortKey } from '@/lib/cardFilters';
 import { SET_NAMES } from '@/data/sets';
 import { useSetName } from '@/lib/cardLanguage';
+import { CardDesignToggle } from './CardDesignToggle';
 import { ElementBadge } from './ElementBadge';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
@@ -95,7 +96,10 @@ export function CardFilters({
             {ELEMENT_LABEL[e]}
           </button>
         ))}
-        <span className="ml-auto text-sm text-muted">{resultCount} cartas</span>
+        <span className="ml-auto flex items-center gap-3 text-sm text-muted">
+          <CardDesignToggle />
+          {resultCount} cartas
+        </span>
       </div>
     </div>
   );

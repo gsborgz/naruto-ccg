@@ -17,7 +17,7 @@ interface Props {
   card: Card;
   /** `thumb`: miniatura (grades); `full`: imagem em tamanho cheio (detalhe). */
   size: 'thumb' | 'full';
-  /** Mostra a carta montada quando ela tem `layout` (cartas escaneadas). Padrão: sim. */
+  /** Mostra a carta montada quando ela tem `layout` (cartas escaneadas). Padrão: não (a imagem impressa). */
   rendered?: boolean;
   /** Imagem original: prioridade de carregamento (primeiras linhas da grade). */
   eager?: boolean;
@@ -25,10 +25,10 @@ interface Props {
 }
 
 /**
- * Face da carta em proporção 5:7: a carta montada (layout + artes extraídas) quando ela foi escaneada, senão
- * a imagem impressa. A miniatura fica por baixo enquanto a montada ou a imagem grande carregam.
+ * Face da carta em proporção 5:7: a imagem impressa ou, com `rendered` e a carta já escaneada, a carta montada
+ * (layout + artes extraídas). As cartas do criador saem sempre montadas. A miniatura fica por baixo enquanto a montada ou a imagem grande carregam.
  */
-export function CardFace({ card, size, rendered = true, eager = false, className = '' }: Props) {
+export function CardFace({ card, size, rendered = false, eager = false, className = '' }: Props) {
   // Carta do criador (montador de decks): não tem imagem impressa, é sempre montada.
   if (isCustomCardId(card.id)) {
     return (
