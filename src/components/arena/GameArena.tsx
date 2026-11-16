@@ -5,6 +5,7 @@ import { CardDetailModal } from '@/components/CardDetailModal';
 import { Dialog } from '@/components/Dialog';
 import {
   BATTLEFIELD_MAX_TEAMS,
+  LANES,
   COIN_NAME_MAX,
   COIN_SUGGESTIONS,
   coinKind,
@@ -23,7 +24,7 @@ import {
 import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
 import { coinPower, formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
 import { isReinforcementCard, type Card } from '@/models/card';
-import { ArenaCardImage, useArenaLookup } from './arenaCards';
+import { ArenaCardImage, ownerOfUid, useArenaLookup } from './arenaCards';
 import { useCardName } from '@/lib/cardLanguage';
 import { CardZoom, type HoveredCard } from './CardZoom';
 import styles from './GameArena.module.css';
@@ -37,7 +38,7 @@ import styles from './GameArena.module.css';
  * - No meio: o Campo de Batalha octogonal, com os Times dos dois e a fase atual no centro.
  * - Embaixo: a sua linha, espelhada (Prêmios, Vila, Chakra, Descartes, Deck) e a sua mão em leque.
  * - À esquerda: a placa de cada jogador (Prêmios, Marcador de Turnos, mão, Reforço, Removidos), o turno
- *   e as fases, com o botão "Próxima fase" (ou "Passar turno" na Fase Final) para o Atacante.
+ *   e as fases, com o botão "Próxima fase" (ou "Passar turno" na última, Batalha) para o Atacante.
  *
  * Você arrasta as SUAS cartas entre as SUAS zonas; o servidor confere e devolve o novo estado.
  * Cartas que você não pode ver (mão do oponente, Deck, Prêmios) chegam só como contagem.
@@ -60,8 +61,11 @@ export interface ArenaSide {
 
 /** Ações do jogador sobre as próprias cartas. Sem isto, a arena é só para ver. */
 export interface ArenaControls {
-  /** Move a carta `uid` para a zona `to`; com `before`, antes do Time dessa carta (reordenar Times). */
-  onMove: (uid: string, to: ZoneName, before?: string) => void;
+  /**
+   * Move a carta `uid` para a zona `to`; com `before`, antes do Time dessa carta (reordenar Times); com `lane`,
+   * na coluna do Campo de Batalha (0 a 2, da esquerda para a direita).
+   */
+  onMove: (uid: string, to: ZoneName, before?: string, lane?: number) => void;
   /** Põe a carta `uid` no fundo do seu Deck. */
   onMoveToDeckBottom: (uid: string) => void;
   onDraw: () => void;
@@ -75,7 +79,7 @@ export interface ArenaControls {
   /** Junta o Ninja `uid` ao Time do Ninja `target` (soltar uma carta sobre a outra). */
   onJoinTeam: (uid: string, target: string) => void;
   /** Move o Time inteiro do Ninja `uid` (arrastar pela alça do Time); com `before`, antes do Time dessa carta. */
-  onMoveTeam: (uid: string, to: ZoneName, before?: string) => void;
+  onMoveTeam: (uid: string, to: ZoneName, before?: string, lane?: number) => void;
   /** Torna o Ninja `uid` o Líder do Time dele. */
   onSetLeader: (uid: string) => void;
   /** Vira o Ninja `uid` para Ferido (horizontal) ou de volta para Saudável. */
@@ -161,7 +165,7 @@ function dragSource(mime: string, value: string, stop = false) {
 const REWARDS_TO_WIN = 10;
 
 /** Kanji de cada fase (na ordem de `PHASES`). */
-const PHASE_KANJI = ['始', '任', '編', '戦', '終'] as const;
+const PHASE_KANJI = ['任', '編', '戦'] as const;
 
 const ZONE_LABEL: Record<ZoneName, string> = {
   deck: 'Topo do Deck',
@@ -271,21 +275,36 @@ function insertionAt(el: HTMLElement, clientX: number): Insertion | null {
   };
 }
 
+/** Atributo da área das colunas do Campo de Batalha, lida para saber em que coluna o mouse está. */
+const LANES_ATTR = 'data-lanes';
+
+/** Coluna do Campo (0 a `LANES` − 1) sob o mouse em `clientX`, ou `null` se a zona não tem colunas. */
+function laneAt(el: HTMLElement, clientX: number): number | null {
+  const area = el.querySelector<HTMLElement>(`[${LANES_ATTR}]`);
+  if (!area) return null;
+  const box = area.getBoundingClientRect();
+  if (box.width <= 0) return null;
+  return Math.max(0, Math.min(LANES - 1, Math.floor(((clientX - box.left) / box.width) * LANES)));
+}
+
 /**
- * Liga uma área como destino de arrastar (só nas suas zonas). Com `ordered` (Vila e Campo de Batalha),
- * soltar entre os Times escolhe a posição: a barra `insert` mostra onde vai entrar.
+ * Liga uma área como destino de arrastar (só nas suas zonas). Com `ordered` (Vila), soltar entre os Times
+ * escolhe a posição: a barra `insert` mostra onde vai entrar. Com `lanes` (Campo de Batalha), soltar escolhe a
+ * coluna do Ninja ou do Time: `lane` é a coluna sob o mouse.
  */
 function useDrop(
   to: ZoneName,
   controls: ArenaControls | undefined,
-  ordered = false,
-): DropTarget & { insert: Insertion | null } {
+  mode: 'plain' | 'ordered' | 'lanes' = 'plain',
+): DropTarget & { insert: Insertion | null; lane: number | null } {
   const [over, setOver] = useState(false);
   const [insert, setInsert] = useState<Insertion | null>(null);
-  if (!controls) return { over: false, insert: null, handlers: {} };
+  const [lane, setLane] = useState<number | null>(null);
+  if (!controls) return { over: false, insert: null, lane: null, handlers: {} };
   return {
     over,
     insert,
+    lane,
     handlers: {
       onDragOver: (e) => {
         const types = dragTypes(e.dataTransfer);
@@ -293,29 +312,34 @@ function useDrop(
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
         setOver(true);
-        if (ordered) {
-          const joining = (e.nativeEvent as unknown as Record<symbol, boolean>)[JOIN_TARGET];
+        const joining = (e.nativeEvent as unknown as Record<symbol, boolean>)[JOIN_TARGET];
+        if (mode === 'ordered') {
           const next = joining ? null : insertionAt(e.currentTarget, e.clientX);
           setInsert((prev) =>
             prev?.before === next?.before && prev?.left === next?.left && prev?.top === next?.top ? prev : next,
           );
+        } else if (mode === 'lanes') {
+          setLane(joining ? null : laneAt(e.currentTarget, e.clientX));
         }
       },
       onDragLeave: (e) => {
         if (e.currentTarget.contains(e.relatedTarget as Node | null)) return;
         setOver(false);
         setInsert(null);
+        setLane(null);
       },
       onDrop: (e) => {
         setOver(false);
         setInsert(null);
+        setLane(null);
         const team = dragData(e.dataTransfer, TEAM_MIME);
         const uid = dragData(e.dataTransfer, CARD_MIME);
         if (!team && !uid) return;
         e.preventDefault();
-        const before = ordered ? insertionAt(e.currentTarget, e.clientX)?.before : undefined;
-        if (team) controls.onMoveTeam(team, to, before);
-        else controls.onMove(uid, to, before);
+        const before = mode === 'ordered' ? insertionAt(e.currentTarget, e.clientX)?.before : undefined;
+        const at = mode === 'lanes' ? (laneAt(e.currentTarget, e.clientX) ?? undefined) : undefined;
+        if (team) controls.onMoveTeam(team, to, before, at);
+        else controls.onMove(uid, to, before, at);
       },
     },
   };
@@ -390,7 +414,7 @@ function TableCard({
   style?: React.CSSProperties;
 }) {
   const lookup = useArenaLookup();
-  const card = lookup(inst.cardId);
+  const card = lookup(inst.cardId, ownerOfUid(inst.uid));
   const nameOf = useCardName();
   const setHovered = useContext(HoverContext);
   const controls = useContext(ControlsContext);
@@ -462,7 +486,7 @@ function ZoneListDialog({
       ) : (
         <ul className="flex max-h-[60vh] flex-col gap-2 overflow-y-auto">
           {[...cards].reverse().map((c) => {
-            const card = lookup(c.cardId);
+            const card = lookup(c.cardId, ownerOfUid(c.uid));
             return (
               <li key={c.uid} className="flex items-center gap-3">
                 <button
@@ -618,7 +642,7 @@ function PeekRewardDialog({
   const [asked, setAsked] = useState(false);
   const shown = asked && peek && peek.area === area ? peek : null;
   const lookup = useArenaLookup();
-  const shownCard = shown ? lookup(shown.card.cardId) : undefined;
+  const shownCard = shown ? lookup(shown.card.cardId, ownerOfUid(shown.card.uid)) : undefined;
   const giverHand = area === 'mine' ? `a mão de ${opponentName}` : 'a sua mão';
   const title = area === 'mine' ? 'Olhar um dos seus Prêmios' : `Olhar um Prêmio de ${opponentName}`;
   const ordinal = (i: number) => (i === count - 1 && count > 1 ? `${i + 1}º (o último)` : `${i + 1}º`);
@@ -1394,7 +1418,7 @@ function ChakraZone({ side, mine, controls, onInspect, onOpenList }: RowProps) {
 }
 
 function VillageZone({ side, mine, controls, onInspect }: RowProps) {
-  const drop = useDrop('village', controls, true);
+  const drop = useDrop('village', controls, 'ordered');
   const cards = side.zones.village.cards ?? [];
   const groups = teamGroups(cards);
   // Muitas cartas: os Times passam a se sobrepor para caber na linha.
@@ -1513,41 +1537,38 @@ function Field({
   controls?: ArenaControls;
   onInspect: Inspect;
 }) {
-  const drop = useDrop('battlefield', controls, true);
+  const drop = useDrop('battlefield', controls, 'lanes');
   const cards = side.zones.battlefield.cards ?? [];
   const lookup = useArenaLookup();
   const typeOf = (c: CardInstance) => lookup(c.cardId)?.type;
   const missions = cards.filter((c) => typeOf(c) === 'mission');
   const jutsus = cards.filter((c) => typeOf(c) === 'jutsu');
   const teams = teamGroups(cards.filter((c) => typeOf(c) !== 'mission' && typeOf(c) !== 'jutsu'));
-  // Missões à esquerda da tela e Jutsus à direita, para os dois jogadores (sem espelhar o oponente).
-  const [left, right] = [missions, jutsus];
+  // Cada Time na coluna dele (o servidor dá uma coluna diferente a cada Time); sem coluna, na primeira livre.
+  const columns: (CardInstance[] | undefined)[] = Array.from({ length: LANES }, () => undefined);
+  for (const g of teams) {
+    const lane = g[0].lane;
+    const free = lane !== undefined && lane >= 0 && lane < LANES && !columns[lane] ? lane : columns.findIndex((c) => !c);
+    if (free >= 0) columns[free] = g;
+  }
+  // Missões à esquerda da tela e Jutsus à direita, para os dois jogadores (sem espelhar o oponente), sempre nas
+  // faixas laterais, com ou sem Ninjas no Campo.
   return (
     <div
       {...drop.handlers}
       className={cx(styles.field, mine ? styles.fieldMine : styles.fieldOpp, drop.over && styles.over)}
       aria-label={mine ? 'Seu Campo de Batalha' : `Campo de Batalha de ${side.nickname}`}
     >
-      <InsertBar at={drop.insert} />
-      {teams.length === 0 ? (
-        // Sem Ninjas no Campo: Missões e Jutsus ficam no centro, na mesma ordem (Missões à esquerda do jogador).
-        <div className={cx(styles.teams, styles.fieldTeams, styles.fieldLoose)}>
-          {[...left, ...right].map((c) => (
-            <TableCard key={c.uid} inst={c} {...FIELD_CARD} mine={mine} onInspect={onInspect} className={styles.fieldSideCard} />
-          ))}
-        </div>
-      ) : (
-        <>
-          <FieldSide cards={left} edge="left" mine={mine} onInspect={onInspect} />
-          {/* Centro: só os Times (a barra de reordenar só conta estes). */}
-          <div className={cx(styles.teams, styles.fieldTeams)}>
-            {teams.map((g) => (
-              <TeamStack key={g[0].uid} group={g} size={FIELD_CARD} mine={mine} controls={controls} onInspect={onInspect} />
-            ))}
+      <FieldSide cards={missions} edge="left" mine={mine} onInspect={onInspect} />
+      {/* Centro: 3 colunas invisíveis, uma por Time (o Time bloqueia o do oponente na mesma coluna). */}
+      <div className={styles.fieldLanes} {...{ [LANES_ATTR]: '' }}>
+        {columns.map((g, i) => (
+          <div key={i} className={cx(styles.fieldLane, drop.lane === i && styles.fieldLaneOver)}>
+            {g && <TeamStack group={g} size={FIELD_CARD} mine={mine} controls={controls} onInspect={onInspect} />}
           </div>
-          <FieldSide cards={right} edge="right" mine={mine} onInspect={onInspect} />
-        </>
-      )}
+        ))}
+      </div>
+      <FieldSide cards={jutsus} edge="right" mine={mine} onInspect={onInspect} />
     </div>
   );
 }
@@ -2104,7 +2125,8 @@ function LogLine({
   const lookup = useArenaLookup();
   const setHovered = useContext(HoverContext);
   const card = (cardId: string | undefined) => {
-    const c = cardId ? lookup(cardId) : undefined;
+    // As cartas do registro são de quem jogou (o Prêmio dado ao outro também saiu do deck dele).
+    const c = cardId ? lookup(cardId, e.who) : undefined;
     if (!c) return <b>{cardId ?? 'carta'}</b>;
     // Mouse sobre o nome: a carta ampliada ao lado, sem precisar do Alt.
     return (
@@ -2299,7 +2321,7 @@ function LogLine({
     case 'flip':
       text = (
         <>
-          jogou a Moeda Ninja: <b>{e.result === 'heads' ? 'Cara [Heads]' : 'Coroa [Tails]'}</b>
+          jogou a Moeda Ninja: <b>{e.result === 'heads' ? 'Cara' : 'Coroa'}</b>
         </>
       );
       break;
@@ -2725,7 +2747,6 @@ export function GameArena({
           <span>
             {flip.who === yourSide ? 'Você' : opponent.nickname} jogou a moeda:{' '}
             <b>{flip.result === 'heads' ? 'Cara' : 'Coroa'}</b>
-            <small>{flip.result === 'heads' ? ' [Heads]' : ' [Tails]'}</small>
           </span>
         </div>
       )}

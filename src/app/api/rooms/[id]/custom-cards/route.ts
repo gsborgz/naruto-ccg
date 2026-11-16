@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isValidShareId } from '@/lib/deckShare';
-import { roomCustom, RoomError, seatOf } from '@/lib/rooms/model';
+import { roomArts, roomCustom, RoomError, seatOf } from '@/lib/rooms/model';
 import { hashToken, readRoom, roomErrorResponse } from '@/lib/rooms/store';
 
 /**
- * Cartas criadas dos dois decks da partida, para desenhá-las (as artes enviadas pelo jogador vêm como
- * `art:<hash>`; ver `/api/rooms/<id>/art`). Só para quem joga, e só durante a partida. Exige `X-Player-Token`.
+ * Cartas criadas dos dois decks da partida, para desenhá-las (as artes vêm do Vercel Blob pelo endereço), e as artes
+ * alternativas que cada jogador levou (`arts`: lado → carta → arte). Só para quem joga, e só durante a partida.
+ * Exige `X-Player-Token`.
  */
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -16,7 +17,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     if (!room) throw new RoomError(404, 'Sala não encontrada. Ela pode ter expirado.');
     if (!seatOf(room, token ? hashToken(token) : null)) throw new RoomError(401, 'Você não está nesta sala.');
     if (room.status !== 'starting' || !room.game) throw new RoomError(409, 'A partida ainda não começou.');
-    return NextResponse.json({ cards: roomCustom(room) }, { headers: { 'Cache-Control': 'no-store' } });
+    return NextResponse.json({ cards: roomCustom(room), arts: roomArts(room) }, { headers: { 'Cache-Control': 'no-store' } });
   } catch (e) {
     return roomErrorResponse(e);
   }

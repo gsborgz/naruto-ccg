@@ -1,27 +1,27 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { CustomCard } from '@/lib/cardMaker/model';
-import { roomApi } from './client';
+import { roomApi, type RoomCards } from './client';
 import type { RoomView } from './model';
 
 /**
- * Cartas criadas dos dois decks da partida (docs/SALAS.md, "Cartas criadas"): buscadas uma vez (e de novo só se a
- * lista de ids mudar, ex.: outra partida na mesma sala). As artes vêm direto do Vercel Blob pelo endereço que a carta
- * traz. `undefined` enquanto carregam ou sem cartas criadas.
+ * Cartas criadas dos dois decks da partida (docs/SALAS.md, "Cartas criadas") e as artes alternativas que cada jogador
+ * levou: buscadas uma vez (e de novo só se a lista mudar, ex.: outra partida na mesma sala). As artes vêm direto do
+ * Vercel Blob pelo endereço. `undefined` enquanto carregam ou sem cartas criadas nem artes.
  */
-export function useRoomCustomCards(view: RoomView | null): Record<string, CustomCard> | undefined {
+export function useRoomCustomCards(view: RoomView | null): RoomCards | undefined {
   const roomId = view?.id;
-  const key = view?.customCardIds?.join() ?? '';
-  const [loaded, setLoaded] = useState<{ key: string; cards: Record<string, CustomCard> } | null>(null);
+  const key = [view?.customCardIds?.join() ?? '', view?.artKeys?.join() ?? ''].join('|');
+  const empty = key === '|';
+  const [loaded, setLoaded] = useState<{ key: string; data: RoomCards } | null>(null);
   useEffect(() => {
-    if (!roomId || !key) return;
+    if (!roomId || empty) return;
     let cancelled = false;
     let timer: ReturnType<typeof setTimeout> | undefined;
     const load = () =>
       roomApi
         .customCards(roomId)
-        .then(({ cards }) => !cancelled && setLoaded({ key, cards }))
+        .then((data) => !cancelled && setLoaded({ key, data }))
         .catch(() => {
           if (!cancelled) timer = setTimeout(load, 3000); // tenta de novo
         });
@@ -30,6 +30,6 @@ export function useRoomCustomCards(view: RoomView | null): Record<string, Custom
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [roomId, key]);
-  return key && loaded?.key === key ? loaded.cards : undefined;
+  }, [roomId, key, empty]);
+  return !empty && loaded?.key === key ? loaded.data : undefined;
 }

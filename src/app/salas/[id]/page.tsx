@@ -22,6 +22,7 @@ import type { PlayerView, RoomView, SeatName } from '@/lib/rooms/model';
 import { useRoom } from '@/lib/rooms/useRoom';
 import { useRoomCustomCards } from '@/lib/rooms/useRoomCustomCards';
 import { withCustomCards } from '@/lib/cardMaker/customDeck';
+import { chosenArtsFor } from '@/lib/altArtClient';
 import { useCustomCards } from '@/lib/cardMaker/store';
 
 const card = 'flex flex-col gap-4 rounded-xl border border-border bg-surface p-5';
@@ -145,14 +146,15 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   const loadDeck = useCallback(async () => (await roomApi.deck(view.id)).cards, [view.id]);
   // Tema escolhido por você (só neste navegador); sem escolha, o sorteado na partida.
   const myTheme = useArenaTheme();
-  // Cartas criadas dos dois decks (docs/SALAS.md, "Cartas criadas").
-  const customCards = useRoomCustomCards(view);
+  // Cartas criadas dos dois decks (docs/SALAS.md, "Cartas criadas") e as artes alternativas de cada jogador.
+  const roomCards = useRoomCustomCards(view);
 
   if (!game || !you) return <p className="text-muted">Carregando a partida…</p>;
   const theme = myTheme ?? game.theme;
 
   const controls: ArenaControls = {
-    onMove: (uid, to, before) => play({ type: 'move', uid, to, ...(before ? { before } : {}) }),
+    onMove: (uid, to, before, lane) =>
+      play({ type: 'move', uid, to, ...(before ? { before } : {}), ...(lane !== undefined ? { lane } : {}) }),
     onMoveToDeckBottom: (uid) => play({ type: 'move', uid, to: 'deck', bottom: true }),
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
@@ -160,7 +162,8 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     onReturnHandToBottom: () => play({ type: 'returnHand', bottom: true }),
     onSearch: () => setSearching(true),
     onJoinTeam: (uid, target) => play({ type: 'joinTeam', uid, target }),
-    onMoveTeam: (uid, to, before) => play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}) }),
+    onMoveTeam: (uid, to, before, lane) =>
+      play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}), ...(lane !== undefined ? { lane } : {}) }),
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
@@ -218,7 +221,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   );
 
   return (
-    <ArenaCardsProvider customCards={customCards}>
+    <ArenaCardsProvider roomCards={roomCards}>
       <div className={ARENA_SCREEN}>
         <HeaderSlot name="center">{players}</HeaderSlot>
         <HeaderSlot name="actions">
@@ -240,6 +243,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
         />
         <SearchDeckDialog
           open={searching}
+          owner={you}
           load={loadDeck}
           onPick={(cardId) => {
             setSearching(false);
@@ -261,13 +265,16 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
   const customCards = useCustomCards();
   const [deckError, setDeckError] = useState<string | null>(null);
-  // As cartas criadas do deck vão junto (as artes são enviadas antes para o Vercel Blob).
+  // As cartas criadas do deck vão junto (as artes já estão no Vercel Blob), e as artes alternativas escolhidas
+  // neste navegador para as cartas do deck (README, "Artes alternativas").
   const changeDeck = async (deckId: string) => {
     const deck = decks?.find((d) => d.id === deckId);
     if (!deck) return;
     setDeckError(null);
     try {
-      await room.act({ type: 'changeDeck', deck: await withCustomCards(deck, customCards ?? []) });
+      const shared = await withCustomCards(deck, customCards ?? []);
+      const arts = chosenArtsFor(deck.cards);
+      await room.act({ type: 'changeDeck', deck: arts ? { ...shared, arts } : shared });
     } catch (e) {
       setDeckError((e as Error).message);
     }

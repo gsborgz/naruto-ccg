@@ -1,7 +1,14 @@
 'use client';
 
 import type { CustomCard } from '@/lib/cardMaker/model';
-import type { RoomAction, RoomView } from './model';
+import type { AltArtPlacement } from '@/lib/altArts';
+import type { RoomAction, RoomView, SeatName } from './model';
+
+/** Cartas criadas dos dois decks da partida e as artes alternativas que cada jogador levou. */
+export interface RoomCards {
+  cards: Record<string, CustomCard>;
+  arts: Record<SeatName, Record<string, AltArtPlacement>>;
+}
 
 /**
  * Identidade anônima do jogador (docs/SALAS.md): gerada uma vez e guardada no localStorage.
@@ -114,5 +121,5 @@ export const roomApi = {
   /** Conteúdo do seu deck (quantidade por carta, sem a ordem) para buscar uma carta. */
   deck: (id: string) => request<{ cards: Record<string, number> }>(`/api/rooms/${id}/deck`),
   /** Cartas criadas dos dois decks da partida (id no deck → carta). */
-  customCards: (id: string) => request<{ cards: Record<string, CustomCard> }>(`/api/rooms/${id}/custom-cards`),
+  customCards: (id: string) => request<RoomCards>(`/api/rooms/${id}/custom-cards`),
 };

@@ -9,6 +9,9 @@ import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog'
 import { useCardDesign } from '@/lib/cardDesign';
 import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
+import { acceptsAltArt, hasFixedArt } from '@/lib/altArts';
+import { useChosenArt } from '@/lib/altArtClient';
+import { AltArtDraftFace, AltArtPicker, type AltArtDraft } from './AltArtPicker';
 import { CardCost } from './CardCost';
 import type { LayoutSizeField } from '@/lib/devCardLayoutEdit';
 import { CardFace } from './CardFace';
@@ -63,11 +66,21 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
   const [sizeEdits, setSizeEdits] = useState<Partial<Record<LayoutSizeField, number>>>({});
   const sizeField: LayoutSizeField = language === 'pt-BR' && localized.name !== card.name ? 'nameSizePtBr' : 'nameSize';
   const shown = card.layout && Object.keys(sizeEdits).length > 0 ? { ...card, layout: { ...card.layout, ...sizeEdits } } : card;
+  // Artes alternativas: só nas cartas do catálogo e fora da partida (lá vale a arte que cada jogador levou).
+  const canPickArt = !custom && acceptsAltArt(card.id) && !hasFixedArt(card) && !inMatch;
+  const [draft, setDraft] = useState<AltArtDraft | null>(null);
+  const chosen = useChosenArt(card.id);
+  // Com uma arte alternativa (escolhida ou fixada), a carta sai sempre montada: não há Original | Montada.
+  const withAltArt = hasFixedArt(card) ? !!card.altArt : !!chosen;
   return (
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:max-w-none">
-        <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
-        {process.env.NODE_ENV === 'development' && card.layout && view === 'rendered' && (
+        {draft ? (
+          <AltArtDraftFace card={card} draft={draft} onChange={setDraft} className="rounded-lg shadow-xl" />
+        ) : (
+          <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
+        )}
+        {process.env.NODE_ENV === 'development' && card.layout && view === 'rendered' && !withAltArt && !draft && (
           <DevNameSizeTuner
             key={sizeField}
             cardId={card.id}
@@ -78,7 +91,7 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
           />
         )}
         {/* Cartas escaneadas (`card.layout`) também podem ser vistas montadas a partir do layout e das artes. */}
-        {card.layout && (
+        {card.layout && !withAltArt && !draft && (
           <div role="group" aria-label="Imagem da carta" className="flex justify-center gap-1 text-sm">
             {(
               [
@@ -182,6 +195,7 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
             {localized.flavor && <p className="italic text-muted">{localized.flavor}</p>}
           </div>
         )}
+        {canPickArt && <AltArtPicker card={card} draft={draft} onDraftChange={setDraft} />}
         {custom && (
           <p className="text-xs text-muted">
             {localCustom ? (

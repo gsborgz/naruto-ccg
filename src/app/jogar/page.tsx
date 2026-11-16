@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { NicknameForm } from '@/components/PlayerSetup';
@@ -82,6 +83,21 @@ export default function PlayPage() {
               Ir para a sala
             </button>
           </form>
+        </section>
+
+        <section className="flex flex-col gap-4 rounded-xl border border-border bg-surface p-5 md:col-span-2">
+          <div>
+            <h2 className="text-lg font-semibold">Jogar sozinho</h2>
+            <p className="text-sm text-muted">
+              Escolha um deck para cada lado e comande os dois, neste navegador (para treinar ou testar decks).
+            </p>
+          </div>
+          <Link
+            href="/jogar/sozinho"
+            className="self-start rounded-lg bg-surface-2 px-4 py-2 font-semibold hover:bg-border"
+          >
+            Jogar sozinho
+          </Link>
         </section>
       </div>
     </div>

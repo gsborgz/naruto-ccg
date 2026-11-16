@@ -1,6 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useChosenArt } from '@/lib/altArtClient';
+import { hasFixedArt } from '@/lib/altArts';
 import { isCustomCardId } from '@/lib/cardMaker/customIds';
 import { cardImageUrl, type Card } from '@/models/card';
 
@@ -27,6 +29,9 @@ interface Props {
 /**
  * Face da carta em proporção 5:7: a imagem impressa ou, com `rendered` e a carta já escaneada, a carta montada
  * (layout + artes extraídas). As cartas do criador saem sempre montadas. A miniatura fica por baixo enquanto a montada ou a imagem grande carregam.
+ *
+ * Arte alternativa (README, "Artes alternativas"): com uma arte escolhida neste navegador (ou fixada na carta,
+ * `ArtCard.altArt`, como na partida), a carta sai sempre montada com ela, mesmo com `rendered` desligado.
  */
 export function CardFace({ card, size, rendered = false, eager = false, className = '' }: Props) {
   // Carta do criador (montador de decks): não tem imagem impressa, é sempre montada.
@@ -37,14 +42,20 @@ export function CardFace({ card, size, rendered = false, eager = false, classNam
       </div>
     );
   }
-  const showRendered = rendered && card.layout !== undefined;
+  return <CatalogCardFace card={card} size={size} rendered={rendered} eager={eager} className={className} />;
+}
+
+function CatalogCardFace({ card, size, rendered = false, eager = false, className = '' }: Props) {
+  const chosen = useChosenArt(card.id);
+  const art = hasFixedArt(card) ? card.altArt : chosen;
+  const showRendered = !!art || (rendered && card.layout !== undefined);
   return (
     <div
       className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 bg-cover ${className}`}
       style={{ backgroundImage: `url(${cardImageUrl(card, 'thumb')})` }}
     >
       {showRendered ? (
-        <CatalogCardRender card={card} />
+        <CatalogCardRender card={card} art={art} />
       ) : (
         <img
           key={card.id}

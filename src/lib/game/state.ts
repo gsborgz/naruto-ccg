@@ -56,6 +56,12 @@ export interface CardInstance {
    * Campo de Batalha, e continuam com a carta entre as duas.
    */
   coins?: Record<string, number>;
+  /**
+   * Coluna do Time no Campo de Batalha (0 = esquerda da tela, 1 = centro, 2 = direita), igual para os dois
+   * jogadores (a mesa não é espelhada): um Time bloqueia o Time do oponente na mesma coluna. Só nos Ninjas
+   * do Campo; todos os membros de um Time têm a mesma, e cada Time fica numa coluna (`normalizeTeams`).
+   */
+  lane?: number;
 }
 
 export type PlayerZones = Record<ZoneName, CardInstance[]>;
@@ -127,7 +133,7 @@ export interface LogEntry {
 }
 
 /** Fases do turno (docs/REGRAS.md 3.2 a 3.6). */
-export const PHASES = ['Inicial', 'Missão', 'Organização', 'Batalha', 'Final'] as const;
+export const PHASES = ['Missão', 'Organização', 'Batalha'] as const;
 
 /** Gerador de números em [0, 1). No servidor é criptográfico; nos testes, previsível. */
 export type Rng = () => number;
@@ -137,9 +143,10 @@ export type GameAction =
    * Mover uma carta sua para outra zona. Com `before` (uid de uma carta na zona de destino), entra logo antes
    * do Time dessa carta: é o que reordena os Times na Vila e no Campo de Batalha. Sem `before`, entra por último
    * (na Vila e no Campo, também dentro da mesma zona: vai para o fim). No Deck, entra no topo, ou no fundo
-   * com `bottom`.
+   * com `bottom`. No Campo de Batalha, `lane` escolhe a coluna do Ninja (ver `CardInstance.lane`); o Time que
+   * estava nela troca de coluna com ele.
    */
-  | { type: 'move'; uid: string; to: ZoneName; before?: string; bottom?: boolean }
+  | { type: 'move'; uid: string; to: ZoneName; before?: string; bottom?: boolean; lane?: number }
   | { type: 'draw' }
   | { type: 'shuffle' }
   | { type: 'search'; cardId: string }
@@ -152,12 +159,12 @@ export type GameAction =
   /** Juntar o Ninja `uid` ao Time do Ninja `target` (arrastar uma carta para cima da outra). */
   | { type: 'joinTeam'; uid: string; target: string }
   /** Mover o Time inteiro do Ninja `uid` para outra zona (ex.: enviar para o Campo de Batalha). */
-  | { type: 'moveTeam'; uid: string; to: ZoneName; before?: string }
+  | { type: 'moveTeam'; uid: string; to: ZoneName; before?: string; lane?: number }
   /** Tornar o Ninja `uid` o Ninja Líder do Time dele. */
   | { type: 'setLeader'; uid: string }
   /** Virar o Ninja `uid` para Ferido (horizontal) ou de volta para Saudável. */
   | { type: 'setInjured'; uid: string; injured: boolean }
-  /** Avançar para a próxima fase do turno (só o Atacante; a Fase Final termina com "passar turno"). */
+  /** Avançar para a próxima fase do turno (só o Atacante; a última, Batalha, termina com "passar turno"). */
   | { type: 'nextPhase' }
   /**
    * Prêmio de Batalha para o OPONENTE (docs/REGRAS.md 3.5.4): uma carta sua vai para a Área de Prêmios
@@ -282,7 +289,7 @@ export function teamGroups(cards: readonly CardInstance[]): CardInstance[][] {
   return [...groups.values()];
 }
 
-/** Uma carta só com os campos dados (sem `team`/`injured`/`power`/`coins` indefinidos no JSON). */
+/** Uma carta só com os campos dados (sem `team`/`injured`/`power`/`coins`/`lane` indefinidos no JSON). */
 function card(
   uid: string,
   cardId: string,
@@ -290,6 +297,7 @@ function card(
   injured?: boolean,
   power?: number,
   coins?: Record<string, number>,
+  lane?: number,
 ): CardInstance {
   return {
     uid,
@@ -298,11 +306,15 @@ function card(
     ...(injured ? { injured: true as const } : {}),
     ...(power ? { power } : {}),
     ...(coins && Object.keys(coins).length > 0 ? { coins } : {}),
+    ...(lane !== undefined ? { lane } : {}),
   };
 }
 
-/** A mesma carta com outro Time/estado, mantendo o resto (Ferido, ajuste de Poder e moedas). */
-function keep(c: CardInstance, patch: { team?: string | null; injured?: boolean; power?: number }): CardInstance {
+/** A mesma carta com outro Time/estado, mantendo o resto (Ferido, ajuste de Poder, moedas e coluna). */
+function keep(
+  c: CardInstance,
+  patch: { team?: string | null; injured?: boolean; power?: number; lane?: number | null },
+): CardInstance {
   return card(
     c.uid,
     c.cardId,
@@ -310,14 +322,56 @@ function keep(c: CardInstance, patch: { team?: string | null; injured?: boolean;
     patch.injured ?? c.injured,
     patch.power ?? c.power,
     c.coins,
+    patch.lane === null ? undefined : (patch.lane ?? c.lane),
   );
+}
+
+/** Colunas do Campo de Batalha (uma por Time). */
+export const LANES = 3;
+/** Coluna que um Time sem coluna escolhida ocupa: o centro primeiro, depois a esquerda e a direita. */
+const LANE_PREFERENCE = [1, 0, 2];
+
+function isLane(x: unknown): x is number {
+  return Number.isInteger(x) && (x as number) >= 0 && (x as number) < LANES;
+}
+
+/**
+ * Cada Time do Campo de Batalha numa coluna diferente: o Time fica com a coluna do primeiro membro que tem
+ * uma (se ainda estiver livre, na ordem da zona); os outros vão para as livres, o centro primeiro. Fora do
+ * Campo (e em cartas que não são Ninja) não há coluna.
+ */
+function assignLanes(zones: PlayerZones, isNinja: (cardId: string) => boolean) {
+  const groups = teamGroups(zones.battlefield.filter((c) => isNinja(c.cardId)));
+  const taken = new Set<number>();
+  const laneOf = new Map<CardInstance[], number | undefined>();
+  const pending: CardInstance[][] = [];
+  for (const g of groups) {
+    const lane = g.find((c) => c.lane !== undefined)?.lane;
+    if (isLane(lane) && !taken.has(lane)) {
+      taken.add(lane);
+      laneOf.set(g, lane);
+    } else pending.push(g);
+  }
+  for (const g of pending) {
+    const lane = LANE_PREFERENCE.find((l) => !taken.has(l));
+    if (lane !== undefined) taken.add(lane);
+    laneOf.set(g, lane);
+  }
+  const byUid = new Map<string, number | undefined>();
+  for (const [g, lane] of laneOf) for (const c of g) byUid.set(c.uid, lane);
+  for (const zone of ZONES) {
+    zones[zone] = zones[zone].map((c) => {
+      const lane = zone === 'battlefield' ? byUid.get(c.uid) : undefined;
+      return lane === c.lane ? c : keep(c, { lane: lane ?? null });
+    });
+  }
 }
 
 /**
  * Limpa Times desfeitos e estados fora de lugar: fora da Vila/Campo não há Time nem Ninja Ferido,
- * e um Time de 1 é só um Ninja.
+ * um Time de 1 é só um Ninja, e cada Time do Campo fica numa coluna.
  */
-function normalizeTeams(zones: PlayerZones) {
+function normalizeTeams(zones: PlayerZones, rules: CardRules = ANY_CARD) {
   for (const zone of ZONES) {
     const counts = new Map<string, number>();
     for (const c of zones[zone]) if (c.team) counts.set(c.team, (counts.get(c.team) ?? 0) + 1);
@@ -329,9 +383,23 @@ function normalizeTeams(zones: PlayerZones) {
       const coins = here ? c.coins : undefined;
       return team === c.team && injured === !!c.injured && power === (c.power ?? 0) && coins === c.coins
         ? c
-        : card(c.uid, c.cardId, team, injured, power, coins);
+        : card(c.uid, c.cardId, team, injured, power, coins, c.lane);
     });
   }
+  assignLanes(zones, rules.isNinja);
+}
+
+/**
+ * Antes de pôr `movers` na coluna `lane` do Campo: o Time que está nela vai para a coluna de onde os
+ * `movers` saíram (troca), se eles eram o Time inteiro; senão, para uma coluna livre (`assignLanes`).
+ */
+function clearLane(zones: PlayerZones, lane: number, movers: CardInstance[], wholeTeamLeft: boolean) {
+  const moverUids = new Set(movers.map((c) => c.uid));
+  const from = movers.find((c) => c.lane !== undefined)?.lane;
+  const swap = wholeTeamLeft && from !== undefined && from !== lane ? from : null;
+  zones.battlefield = zones.battlefield.map((c) =>
+    !moverUids.has(c.uid) && c.lane === lane ? keep(c, { lane: swap }) : c,
+  );
 }
 
 function checkBattlefield(zones: PlayerZones, rules: CardRules) {
@@ -611,7 +679,7 @@ function applyAction(
 ): GameState {
   const zones: PlayerZones = Object.fromEntries(ZONES.map((z) => [z, [...game.players[who][z]]])) as PlayerZones;
   const done = (): GameState => {
-    normalizeTeams(zones);
+    normalizeTeams(zones, rules);
     checkBattlefield(zones, rules);
     return { ...game, players: { ...game.players, [who]: zones } };
   };
@@ -630,6 +698,10 @@ function applyAction(
       // Na mesma zona, só a Vila e o Campo reordenam (sem `before` = para o fim); nas outras, nada muda.
       if (at.zone === action.to && !moved.team && !TEAM_ZONES.has(at.zone)) return game;
       if (action.before === moved.uid) return game;
+      // Ninja sozinho solto na coluna em que já está: nada muda.
+      if (at.zone === 'battlefield' && action.to === 'battlefield' && !moved.team && action.lane !== undefined && moved.lane === action.lane) {
+        return game;
+      }
       zones[at.zone].splice(at.index, 1);
       // Mover uma carta sozinha a tira do Time (o ajuste de Poder e as moedas vão junto).
       let solo = keep(moved, { team: null });
@@ -637,6 +709,11 @@ function applyAction(
       const x = rules.permanentCoins?.(moved.cardId) ?? 0;
       if (action.to === 'village' && !TEAM_ZONES.has(at.zone) && x > 0) {
         solo = card(solo.uid, solo.cardId, undefined, false, 0, { [NINJA_COIN]: Math.min(COINS_MAX, x) });
+      }
+      // Coluna escolhida no Campo: quem estava nela troca com o Ninja (se ele era um Time de 1 no Campo).
+      if (action.to === 'battlefield' && isLane(action.lane) && rules.isNinja(moved.cardId)) {
+        clearLane(zones, action.lane, [moved], at.zone === 'battlefield' && !moved.team);
+        solo = keep(solo, { lane: action.lane });
       }
       // Carta devolvida ao Deck vai para o topo (ou o fundo, com `bottom`); nas outras zonas, antes do Time de
       // `before` ou por último.
@@ -708,9 +785,19 @@ function applyAction(
       if (at.zone === 'rewards') throw new GameError(REWARDS_LOCKED);
       if (at.zone === action.to && !TEAM_ZONES.has(at.zone)) return game;
       const key = groupKey(zones[at.zone][at.index]);
-      const members = zones[at.zone].filter((c) => groupKey(c) === key);
+      let members = zones[at.zone].filter((c) => groupKey(c) === key);
       if (action.before && members.some((c) => c.uid === action.before)) return game; // antes de si mesmo
-      zones[at.zone] = zones[at.zone].filter((c) => groupKey(c) !== key);
+      // Solto na coluna em que já está: nada muda.
+      if (at.zone === 'battlefield' && action.to === 'battlefield' && action.lane !== undefined && members[0].lane === action.lane) {
+        return game;
+      }
+      zones[at.zone] =zones[at.zone].filter((c) => groupKey(c) !== key);
+      // Coluna escolhida no Campo: o Time que estava nela troca de coluna com este.
+      if (action.to === 'battlefield' && isLane(action.lane)) {
+        const lane = action.lane;
+        clearLane(zones, lane, members, at.zone === 'battlefield');
+        members = members.map((c) => keep(c, { lane }));
+      }
       if (action.to === 'deck') zones.deck.unshift(...members);
       else insertBefore(zones[action.to], members, action.before);
       return done();
@@ -727,7 +814,7 @@ function applyAction(
       }
       const opponent = otherSide(who);
       const theirs = { ...game.players[opponent], rewards: [...game.players[opponent].rewards, card(given.uid, given.cardId)] };
-      normalizeTeams(zones);
+      normalizeTeams(zones, rules);
       checkBattlefield(zones, rules);
       return { ...game, players: { ...game.players, [who]: zones, [opponent]: theirs } as Record<Side, PlayerZones> };
     }
@@ -784,7 +871,7 @@ function applyAction(
       if (count === now) return game;
       if (count === 0) delete coins[kind];
       else coins[kind] = count;
-      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, target.injured, target.power, coins);
+      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, target.injured, target.power, coins, target.lane);
       return done();
     }
     case 'adjustTurn': {
@@ -809,7 +896,7 @@ function applyAction(
     case 'nextPhase': {
       if (activeSide(game) !== who) throw new GameError('Só o Atacante (o jogador do turno) avança as fases.');
       const phase = game.phase ?? 0;
-      if (phase >= PHASES.length - 1) throw new GameError('Esta é a Fase Final: passe o turno.');
+      if (phase >= PHASES.length - 1) throw new GameError('Esta é a última fase (Batalha): passe o turno.');
       return { ...game, phase: phase + 1 };
     }
     case 'setInjured': {
@@ -900,7 +987,8 @@ export function gameView(game: GameState, viewer: Side | null): GameView {
     turn: game.turn,
     active: activeSide(game),
     turnNumber: game.turnNumber ?? 1,
-    phase: game.phase ?? 0,
+    // Partidas de quando havia 5 fases (Inicial…Final) podem estar além da última.
+    phase: Math.min(game.phase ?? 0, PHASES.length - 1),
     theme: game.theme ?? DEFAULT_BOARD_THEME,
     // Entradas de tema gravadas quando o tema era da partida (antes de virar preferência de cada um) não aparecem.
     log: (game.log ?? []).filter((e) => (e.type as string) !== 'setTheme').map((e) => logView(e, viewer)),
@@ -928,7 +1016,10 @@ export function deckContents(game: GameState, who: Side): Record<string, number>
 
 export function parseGameAction(x: unknown): GameAction | null {
   const a = (typeof x === 'object' && x !== null ? x : {}) as Record<string, unknown>;
-  const before = (o: Record<string, unknown>) => (typeof o.before === 'string' ? { before: o.before } : {});
+  const before = (o: Record<string, unknown>) => ({
+    ...(typeof o.before === 'string' ? { before: o.before } : {}),
+    ...(isLane(o.lane) ? { lane: o.lane } : {}),
+  });
   if (a.type === 'move' && typeof a.uid === 'string' && (ZONES as readonly unknown[]).includes(a.to)) {
     return { type: 'move', uid: a.uid, to: a.to as ZoneName, ...before(a), ...(a.bottom === true ? { bottom: true } : {}) };
   }

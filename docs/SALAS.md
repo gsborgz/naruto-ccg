@@ -169,6 +169,20 @@ Decks com cartas do **Criar carta** (`custom-<uuid>`) podem ir para a sala:
 - Os compartilhamentos por código levam as cartas criadas do mesmo jeito; quem importa recebe as cartas no próprio
   criador.
 
+### Artes alternativas
+
+As artes escolhidas no detalhe da carta (README, "Artes alternativas") também vão para a partida:
+
+- No `changeDeck`, o navegador manda `deck.arts` (carta do catálogo → imagem no Blob + enquadramento) com as artes
+  escolhidas para as cartas do deck (`chosenArtsFor` em `src/lib/altArtClient.ts`). O servidor valida
+  (`parseDeckArts` em `src/lib/altArts.ts`: só imagens do Blob e só cartas que o deck usa). A escolha vale no
+  momento em que o deck vai para a sala: trocar a arte depois só conta ao escolher o deck de novo.
+- Na partida, a `RoomView` traz só `artKeys` (`<lado>:<carta>`); as artes vêm junto das cartas criadas, em
+  `GET .../custom-cards` (`arts`: lado → carta → arte).
+- Cada carta aparece com a arte de quem a levou, para os dois jogadores: o dono sai do `uid` da carta (`h…` = anfitrião,
+  `g…` = convidado; `ownerOfUid`), e `useArenaLookup()(id, dono)` devolve a carta com a arte fixada
+  (`withFixedArt`), montada pelo `CardFace`.
+
 ### Escritas simultâneas
 
 Os dois jogadores podem agir ao mesmo tempo (ex.: os dois clicam em Pronto). Toda escrita é um
@@ -247,13 +261,14 @@ recalculado com ResizeObserver), sem rolagem em nenhum tamanho de janela.
   direita: Deck, Descartes, Chakra, Vila e Prêmios de Batalha.
 - **No meio:** o Campo de Batalha octogonal, com os Times do oponente em cima, os seus embaixo e a fase atual
   no centro. Missões jogadas no Campo ficam à esquerda da tela e Jutsus à direita, para os dois jogadores (o
-  oponente não é espelhado aqui), deixando o centro para os Times. Sem Ninjas no Campo, Missões e Jutsus ficam
-  no centro. Os Ninjas de Apoio ficam atrás do Líder (deslocados), e o Ninja Ferido aparece girado 90°.
+  oponente não é espelhado aqui), sempre nessas faixas, mesmo sem Ninjas no Campo. O centro tem 3 colunas
+  invisíveis, uma por Time (ver **Colunas do Campo** abaixo). Os Ninjas de Apoio ficam atrás do Líder
+  (deslocados), e o Ninja Ferido aparece girado 90°.
 - **Embaixo:** a sua linha, espelhada (Prêmios, Vila, Chakra, Descartes, Deck) e a sua mão em leque, saindo
   da borda (a carta sobe e cresce ao passar o mouse).
 - **À esquerda:** a placa de cada jogador (apelido, Prêmios n/10, Marcador de Turnos n/10, Mão, Reforço e
-  Removidos), o número do turno, as 5 fases e o botão do Atacante (**Próxima fase**, e **Passar turno** na
-  Fase Final).
+  Removidos), o número do turno, as 3 fases e o botão do Atacante (**Próxima fase**, e **Passar turno** na
+  Batalha).
 - Os tokens ficam escopados à arena (`GameArena.module.css`): o resto do app continua com o tema laranja,
   e os diálogos abertos pela arena herdam o tema da arena.
 - Prévia com dados de exemplo em **`/arena`** (fora do menu), para ajustar o layout sem dois jogadores.
@@ -301,9 +316,9 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   cartas na mão (o limite de 6 da etapa M não é cobrado: os jogadores se policiam). Ao passar, o **Marcador de Turnos dele avança
   1 casa** (até 10, `TURN_MAX`) e o oponente vira o Atacante. A compra do início do turno continua manual
   (botão `+1`), porque os efeitos "No Início do Turno" vêm antes dela e o primeiro jogador não compra no
-  primeiro turno. **Fases** (`GameState.phase`, índice em `PHASES`: Inicial, Missão, Organização, Batalha,
-  Final): o Atacante avança com **Próxima fase** (`nextPhase`); na Fase Final o botão vira **Passar turno**, e o
-  turno seguinte começa na Inicial. As fases são só a referência dos dois jogadores: o que cada uma permite
+  primeiro turno. **Fases** (`GameState.phase`, índice em `PHASES`: Missão, Organização e Batalha;
+  Inicial e Final ficaram de fora): o Atacante avança com **Próxima fase** (`nextPhase`); na Batalha o botão vira
+  **Passar turno**, e o turno seguinte começa na Missão. As fases são só a referência dos dois jogadores: o que cada uma permite
   ainda não é controlado. Na tela, a placa do Atacante diz "sua vez" / "Atacante" e o oponente vê o botão
   desligado "Turno de X". Na prévia `/arena`, o oponente devolve o turno na hora. Os outros botões
   continuam valendo para os dois jogadores em qualquer turno (o Bloqueador também mexe nas cartas dele).
@@ -334,11 +349,18 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   - Arrastar um membro sozinho para fora (ou para um espaço vazio da mesma zona) o tira do Time; Time que
     fica com 1 Ninja se desfaz. Fora da Vila/Campo não existem Times.
   - O Time fica guardado na própria carta (`CardInstance.team`), e os membros ficam juntos na zona.
-  - **Reordenar:** arrastar um Time (pelo chip) ou uma carta para os lados, entre os outros Times da Vila ou
-    do Campo de Batalha, muda a posição; uma barra brilhante mostra onde vai entrar. Vindo de outra zona,
-    entra na posição marcada. As ações `move` e `moveTeam` aceitam `before` (uid de uma carta da zona de
-    destino: entra antes do Time dela; sem `before`, entra no fim). Soltar em cima de um Ninja continua
-    formando Time.
+  - **Reordenar (Vila):** arrastar um Time (pelo chip) ou uma carta para os lados, entre os outros Times da
+    Vila, muda a posição; uma barra brilhante mostra onde vai entrar. Vindo de outra zona, entra na posição
+    marcada. As ações `move` e `moveTeam` aceitam `before` (uid de uma carta da zona de destino: entra antes
+    do Time dela; sem `before`, entra no fim). Soltar em cima de um Ninja continua formando Time.
+  - **Colunas do Campo:** o centro do Campo de Batalha tem 3 colunas invisíveis (esquerda, centro, direita, as
+    mesmas para os dois jogadores, já que a mesa não é espelhada): o Time bloqueia o Time do oponente na mesma
+    coluna. Arrastar um Ninja ou Time para o Campo o põe na coluna sob o mouse (ela acende); se já houver um
+    Time nela, os dois trocam de coluna (ou o outro vai para uma livre, se quem chegou veio de fora). A coluna
+    fica em `CardInstance.lane` (0 a 2) em todos os membros, e `move`/`moveTeam` aceitam `lane`. Sem coluna
+    escolhida (ex.: botão "para o Campo de Batalha"), o Time vai para a livre, o centro primeiro
+    (`assignLanes` em `src/lib/game/state.ts`). Missões, Jutsus e outras cartas que não são Ninja não têm
+    coluna.
   - Cada Time (inclusive Ninja sozinho, nos dois lados) tem o chip **PODER n**: o **Poder do Time**
     (docs/REGRAS.md 3.5.4) = Combate do Líder + Suporte de cada Apoio, no estado atual de cada um (Saudável ou
     Ferido), recalculado ao ferir/curar ou trocar o Líder (`src/lib/game/teamPower.ts`). Valores "X" aparecem
@@ -406,6 +428,21 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   reordenar, escolhas aleatórias (ex.: descarte aleatório da mão do oponente), cartas presas a outras
   ("Attach this card to the target"), turno extra, Poder Mental no chip do Time, quem bloqueia quem na Batalha,
   condições de vitória e mulligan automático.
+
+## Jogar sozinho
+
+`/jogar/sozinho` (link em **Jogar**) roda uma partida só no navegador, sem sala nem servidor, para treinar ou
+testar decks:
+
+- O jogador escolhe um deck válido para cada lado (**Jogador 1** e **Jogador 2**; pode ser o mesmo deck). As cartas
+  criadas e as artes alternativas escolhidas neste navegador valem nos dois lados.
+- Ele comanda os dois: a arena mostra embaixo o lado que ele está jogando e em cima o outro (com a mão virada para
+  baixo, como numa sala). **⇅ Trocar de lado** inverte. Com **Trocar ao passar o turno** (ligado por padrão),
+  passar o turno já troca para o novo Atacante.
+- As jogadas usam as mesmas regras da sala (`applyGameAction`, aplicado no navegador como o lado de baixo).
+- A partida fica no localStorage (`naruto-ccg:solo-game`), e volta ao recarregar a página. **Nova partida**
+  recomeça com os mesmos decks; **Trocar decks** encerra e volta para a escolha.
+- Código: `src/app/jogar/sozinho/page.tsx`.
 
 ## Ligação com a partida (MVP 4)
 

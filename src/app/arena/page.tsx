@@ -144,7 +144,8 @@ export default function ArenaPreviewPage() {
 
   const view = gameView(game, 'host');
   const controls: ArenaControls = {
-    onMove: (uid, to, before) => play({ type: 'move', uid, to, ...(before ? { before } : {}) }),
+    onMove: (uid, to, before, lane) =>
+      play({ type: 'move', uid, to, ...(before ? { before } : {}), ...(lane !== undefined ? { lane } : {}) }),
     onMoveToDeckBottom: (uid) => play({ type: 'move', uid, to: 'deck', bottom: true }),
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
@@ -152,7 +153,8 @@ export default function ArenaPreviewPage() {
     onReturnHandToBottom: () => play({ type: 'returnHand', bottom: true }),
     onSearch: () => setSearching(true),
     onJoinTeam: (uid, target) => play({ type: 'joinTeam', uid, target }),
-    onMoveTeam: (uid, to, before) => play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}) }),
+    onMoveTeam: (uid, to, before, lane) =>
+      play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}), ...(lane !== undefined ? { lane } : {}) }),
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),

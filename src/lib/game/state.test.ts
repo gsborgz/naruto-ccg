@@ -403,7 +403,7 @@ test('partida: passTurn é uma ação válida', () => {
   assert.deepEqual(parseGameAction({ type: 'passTurn' }), { type: 'passTurn' });
 });
 
-test('fases: só o Atacante avança; a Fase Final termina passando o turno, que volta para a Inicial', () => {
+test('fases: só o Atacante avança; a última (Batalha) termina passando o turno, que volta para a primeira (Missão)', () => {
   const rng = seeded(5);
   let g: GameState = { ...newGame(), active: 'host' };
   assert.equal(gameView(g, 'guest').phase, 0);
@@ -492,6 +492,60 @@ test('Times: reordenar no Campo de Batalha (Time inteiro ou carta sozinha) com "
 
   assert.deepEqual(parseGameAction({ type: 'move', uid: 'x', to: 'village', before: 'y' }), { type: 'move', uid: 'x', to: 'village', before: 'y' });
   assert.deepEqual(parseGameAction({ type: 'moveTeam', uid: 'x', to: 'village' }), { type: 'moveTeam', uid: 'x', to: 'village' });
+});
+
+test('Campo de Batalha: cada Time numa das 3 colunas ("lane"), trocando com quem estava na coluna', () => {
+  const rng = seeded(9);
+  let g = newGame();
+  const [a, b, c, d] = g.players.host.hand.filter((x) => x.cardId !== 'e');
+  assert.ok(a && b && c && d);
+  const lanes = () =>
+    Object.fromEntries(g.players.host.battlefield.map((x) => [x.uid, x.lane])) as Record<string, number | undefined>;
+
+  // Sem coluna escolhida: o centro primeiro, depois a esquerda e a direita.
+  g = applyGameAction(g, 'host', { type: 'move', uid: a.uid, to: 'battlefield' }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 1 });
+  g = applyGameAction(g, 'host', { type: 'move', uid: b.uid, to: 'battlefield', lane: 2 }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 1, [b.uid]: 2 });
+
+  // Mover para uma coluna ocupada troca as duas.
+  g = applyGameAction(g, 'host', { type: 'move', uid: b.uid, to: 'battlefield', lane: 1 }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 2, [b.uid]: 1 });
+  // Na coluna em que já está: nada muda.
+  assert.equal(applyGameAction(g, 'host', { type: 'move', uid: b.uid, to: 'battlefield', lane: 1 }, rng, ninjas), g);
+
+  // Vindo de fora para uma coluna ocupada: quem estava vai para a livre.
+  g = applyGameAction(g, 'host', { type: 'move', uid: c.uid, to: 'battlefield', lane: 1 }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 2, [b.uid]: 0, [c.uid]: 1 });
+
+  // Juntar ao Time: fica na coluna do Líder; o Time inteiro muda de coluna junto.
+  g = applyGameAction(g, 'host', { type: 'joinTeam', uid: b.uid, target: a.uid }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 2, [b.uid]: 2, [c.uid]: 1 });
+  g = applyGameAction(g, 'host', { type: 'moveTeam', uid: b.uid, to: 'battlefield', lane: 0 }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 0, [b.uid]: 0, [c.uid]: 1 });
+  g = applyGameAction(g, 'host', { type: 'moveTeam', uid: a.uid, to: 'battlefield', lane: 1 }, rng, ninjas);
+  assert.deepEqual(lanes(), { [a.uid]: 1, [b.uid]: 1, [c.uid]: 0 });
+
+  // Cartas que não são Ninja não têm coluna nem tiram um Time da dele.
+  g = applyGameAction(g, 'host', { type: 'move', uid: d.uid, to: 'village' }, rng, ninjas);
+  const notNinja = g.players.host.hand.find((x) => x.cardId === 'e');
+  if (notNinja) {
+    g = applyGameAction(g, 'host', { type: 'move', uid: notNinja.uid, to: 'battlefield', lane: 1 }, rng, ninjas);
+    assert.equal(lanes()[notNinja.uid], undefined);
+    assert.equal(lanes()[a.uid], 1);
+  }
+
+  // Saindo do Campo, perde a coluna.
+  g = applyGameAction(g, 'host', { type: 'moveTeam', uid: a.uid, to: 'village' }, rng, ninjas);
+  assert.ok(g.players.host.village.every((x) => x.lane === undefined));
+
+  assert.deepEqual(parseGameAction({ type: 'moveTeam', uid: 'x', to: 'battlefield', lane: 2 }), {
+    type: 'moveTeam',
+    uid: 'x',
+    to: 'battlefield',
+    lane: 2,
+  });
+  assert.deepEqual(parseGameAction({ type: 'move', uid: 'x', to: 'battlefield', lane: 5 }), { type: 'move', uid: 'x', to: 'battlefield' });
 });
 
 test('tema: sorteado na partida (padrão de quem não escolheu); não há jogada para mudar o tema do outro', () => {

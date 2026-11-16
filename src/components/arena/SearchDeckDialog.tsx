@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Dialog } from '@/components/Dialog';
 import { CARD_TYPE_LABEL } from '@/models/card';
+import type { Side } from '@/lib/game/state';
 import { ArenaCardImage, useArenaLookup } from './arenaCards';
 import { useCardName } from '@/lib/cardLanguage';
 import { CardZoom, type HoveredCard } from './CardZoom';
@@ -16,8 +17,11 @@ export function SearchDeckDialog({
   load,
   onPick,
   onClose,
+  owner,
 }: {
   open: boolean;
+  /** De quem é o deck (para mostrar as cartas com a arte alternativa que ele levou). */
+  owner?: Side;
   /** Quantidade por carta no deck (ex.: `roomApi.deck`). */
   load: () => Promise<Record<string, number>>;
   onPick: (cardId: string) => void;
@@ -50,11 +54,11 @@ export function SearchDeckDialog({
     if (!counts) return [];
     const q = query.trim().toLowerCase();
     return Object.entries(counts)
-      .map(([id, qty]) => ({ id, qty, card: lookup(id) }))
+      .map(([id, qty]) => ({ id, qty, card: lookup(id, owner) }))
       .map((e) => ({ ...e, name: e.card ? nameOf(e.card) : e.id }))
       .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.card?.name ?? '').toLowerCase().includes(q))
       .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-  }, [counts, query, nameOf, lookup]);
+  }, [counts, query, nameOf, lookup, owner]);
 
   return (
     <Dialog open={open} onClose={onClose} title="Buscar no deck">
