@@ -20,9 +20,26 @@ export class ArtError extends Error {
 
 const ownerKey = (hash: string) => `naruto-ccg:art-owner:${hash}`;
 
-/** O Blob está ligado ao projeto (variável criada pela Vercel ao conectar o store)? */
+/**
+ * O Blob está ligado ao projeto? Stores novos criam só `BLOB_STORE_ID` e autenticam por OIDC (`VERCEL_OIDC_TOKEN`,
+ * que a Vercel injeta no site publicado; localmente vem do `vercel env pull`). Stores antigos usam
+ * `BLOB_READ_WRITE_TOKEN`. O `@vercel/blob` aceita os dois.
+ */
 export function isBlobConfigured(): boolean {
-  return !!process.env.BLOB_READ_WRITE_TOKEN;
+  return !!(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
+}
+
+/** Erro de credencial do Blob (ex.: local sem `VERCEL_OIDC_TOKEN`) vira 503 com a explicação. */
+async function withBlobAuth<T>(run: () => Promise<T>): Promise<T> {
+  try {
+    return await run();
+  } catch (e) {
+    if (e instanceof Error && /credentials|oidc|token/i.test(e.message) && e.message.startsWith('Vercel Blob:')) {
+      console.error(e);
+      throw new ArtError(503, 'O servidor não conseguiu se autenticar no armazenamento de imagens.');
+    }
+    throw e;
+  }
 }
 
 function requireBlob() {
@@ -50,20 +67,22 @@ export async function saveArt(data: unknown, tokenHash: string): Promise<{ url: 
   const pathname = artPathname(hash, ext);
   // Quem envia primeiro fica como dono (pode apagar). Reenvio da mesma imagem não muda o dono.
   await getRedis().set(ownerKey(hash), `t:${tokenHash}`, { nx: true });
-  try {
-    const existing = await head(pathname);
-    return { url: existing.url, hash };
-  } catch (e) {
-    if (!(e instanceof BlobNotFoundError)) throw e;
-  }
-  const blob = await put(pathname, bytes, {
-    access: 'public',
-    contentType: type,
-    addRandomSuffix: false,
-    allowOverwrite: true, // dois envios ao mesmo tempo da mesma imagem: o conteúdo é o mesmo
-    cacheControlMaxAge: 60 * 60 * 24 * 365, // o nome é o hash: o conteúdo nunca muda
+  return withBlobAuth(async () => {
+    try {
+      const existing = await head(pathname);
+      return { url: existing.url, hash };
+    } catch (e) {
+      if (!(e instanceof BlobNotFoundError)) throw e;
+    }
+    const blob = await put(pathname, bytes, {
+      access: 'public',
+      contentType: type,
+      addRandomSuffix: false,
+      allowOverwrite: true, // dois envios ao mesmo tempo da mesma imagem: o conteúdo é o mesmo
+      cacheControlMaxAge: 60 * 60 * 24 * 365, // o nome é o hash: o conteúdo nunca muda
+    });
+    return { url: blob.url, hash };
   });
-  return { url: blob.url, hash };
 }
 
 /** Apaga a arte do Blob. Só quem a enviou primeiro (mesmo token de jogador). */
@@ -75,6 +94,6 @@ export async function deleteArt(url: string, tokenHash: string): Promise<void> {
   const owner = await getRedis().get<string>(ownerKey(hash));
   if (owner === null) throw new ArtError(404, 'Imagem não encontrada.');
   if (owner !== `t:${tokenHash}`) throw new ArtError(403, 'Só quem enviou a imagem pode apagá-la.');
-  await del(artPathname(hash, m[2]));
+  await withBlobAuth(() => del(artPathname(hash, m[2])));
   await getRedis().del(ownerKey(hash));
 }

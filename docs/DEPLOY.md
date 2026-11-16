@@ -95,10 +95,16 @@ As artes que os jogadores enviam no **Criar carta** ficam no **Vercel Blob**, pa
 salas e para os códigos de compartilhamento. Para ligar:
 
 1. No projeto na Vercel: **Storage → Create Database → Blob → Continue**, dê um nome (ex.: `naruto-ccg-art`) e
-   conecte ao projeto (Production, Preview e Development). A Vercel cria a variável **`BLOB_READ_WRITE_TOKEN`**.
-2. **Redeploy** para a variável valer.
-3. Para testar localmente: copie o valor de `BLOB_READ_WRITE_TOKEN` (aba **.env.local** do store) para o seu
-   `.env.local`. O Blob é um só: o que você enviar localmente aparece no site publicado.
+   conecte ao projeto (Production, Preview e Development). Stores novos criam **`BLOB_STORE_ID`** (e
+   `BLOB_WEBHOOK_PUBLIC_KEY`, que o app não usa) e se autenticam por OIDC: no site publicado, a Vercel injeta o
+   `VERCEL_OIDC_TOKEN` sozinha. Stores antigos criam `BLOB_READ_WRITE_TOKEN`; o app aceita os dois.
+2. **Redeploy** para as variáveis valerem.
+3. Para testar localmente, o servidor precisa de `BLOB_STORE_ID` e de um `VERCEL_OIDC_TOKEN` no `.env.local`.
+   Com a Vercel CLI (`npm i -g vercel`): `vercel link` (uma vez) e
+   `vercel env pull .env.vercel.local`; copie as linhas `BLOB_STORE_ID` e `VERCEL_OIDC_TOKEN` para o
+   `.env.local` e reinicie o `npm run dev`. **Não** puxe direto para o `.env.local`: o comando substitui o arquivo, e o
+   Redis local passaria a ser o de produção (compartilhado com o pokedex). O token expira em ~12 h; aí é puxar de
+   novo. O Blob é um só: o que você enviar localmente aparece no site publicado.
 
 Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardMaker/artUpload.ts`):
 
