@@ -158,6 +158,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
     onReturnReward: (area) => play({ type: 'returnReward', owner: area === 'mine' ? you : opponentSeat }),
     onAdjustPower: (uid, delta) => play({ type: 'adjustPower', uid, delta }),
+    onReveal: (from, count) => play({ type: 'reveal', from, count }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     onPassTurn: () => play({ type: 'passTurn' }),
     busy: room.busy,

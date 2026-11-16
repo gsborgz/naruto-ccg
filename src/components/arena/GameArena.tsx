@@ -81,6 +81,8 @@ export interface ArenaControls {
   onReturnReward: (area: 'mine' | 'theirs') => void;
   /** Aumenta (`delta` > 0) ou diminui o Poder do Time do Ninja `uid`. */
   onAdjustPower: (uid: string, delta: number) => void;
+  /** Revela `count` cartas do topo ou do fundo do seu Deck: vão para a sua Vila, à vista dos dois. */
+  onReveal: (from: 'top' | 'bottom', count: number) => void;
   /** Avança para a próxima fase do turno (só quando você é o Atacante). */
   onNextPhase: () => void;
   /** Passa o turno para o oponente (só quando você é o Atacante). */
@@ -529,6 +531,79 @@ function CardMoveActions({
   );
 }
 
+/** Escolha de quantas cartas revelar do Deck, e de onde (topo ou fundo). */
+function RevealDialog({
+  deckCount,
+  controls,
+  onClose,
+}: {
+  deckCount: number;
+  controls: ArenaControls;
+  onClose: () => void;
+}) {
+  const [count, setCount] = useState(1);
+  const [from, setFrom] = useState<'top' | 'bottom'>('top');
+  const n = Math.max(1, Math.min(deckCount, Math.floor(count) || 1));
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    controls.onReveal(from, n);
+    onClose();
+  };
+  return (
+    <Dialog open onClose={onClose} title="Revelar cartas do Deck">
+      <form onSubmit={submit} className="flex flex-col gap-4">
+        <p className="text-sm text-muted">
+          As cartas vão para a sua Vila, face para cima, na ordem do Deck. Os dois jogadores veem. Depois, mova cada
+          uma para onde ela deve ir.
+        </p>
+        <div role="group" aria-label="De onde" className="flex gap-1 text-sm">
+          {(
+            [
+              ['top', 'Do topo'],
+              ['bottom', 'Do fundo'],
+            ] as const
+          ).map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              aria-pressed={from === value}
+              onClick={() => setFrom(value)}
+              className={`rounded-md px-3 py-1 ${from === value ? 'bg-accent font-semibold text-bg' : 'bg-surface-2 text-muted hover:text-text'}`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <label className="flex items-center gap-3 text-sm">
+          Quantidade
+          <input
+            type="number"
+            min={1}
+            max={deckCount}
+            value={count}
+            autoFocus
+            onChange={(e) => setCount(Number(e.target.value))}
+            className="w-20 rounded-md bg-bg px-2 py-1 text-text ring-1 ring-border focus-visible:ring-2 focus-visible:ring-accent"
+          />
+          <span className="text-muted">de {deckCount} no Deck</span>
+        </label>
+        <div className="flex justify-end gap-2">
+          <button type="button" onClick={onClose} className="rounded-md px-3 py-1.5 text-sm text-muted hover:bg-surface-2">
+            Cancelar
+          </button>
+          <button
+            type="submit"
+            disabled={controls.busy || deckCount === 0}
+            className="rounded-md bg-accent px-3 py-1.5 text-sm font-semibold text-bg hover:opacity-90 disabled:opacity-40"
+          >
+            Revelar {n === 1 ? '1 carta' : `${n} cartas`}
+          </button>
+        </div>
+      </form>
+    </Dialog>
+  );
+}
+
 /* ── Times ──────────────────────────────────────────────────────────────── */
 
 /** Quanto um Ninja de Apoio cobre o anterior (fração da largura), em pé e Ferido (design: 46 e 20 de 96). */
@@ -776,9 +851,11 @@ interface RowProps {
   onOpenList: (zone: ZoneName) => void;
   /** Só na linha do oponente: você solta aqui uma carta sua (ou o topo do seu Deck) como Prêmio dele. */
   rewardDrop?: CustomDrop;
+  /** Só na sua linha: abre a escolha de quantas cartas revelar do Deck. */
+  onOpenReveal?: () => void;
 }
 
-function DeckZone({ side, mine, controls }: RowProps) {
+function DeckZone({ side, mine, controls, onOpenReveal }: RowProps) {
   const drop = useDrop('deck', controls);
   const count = side.zones.deck.count;
   const ty = mine ? -1 : 1; // as camadas sobem no seu lado e descem no do oponente
@@ -837,6 +914,18 @@ function DeckZone({ side, mine, controls }: RowProps) {
           >
             ⌕
           </button>
+          {onOpenReveal && (
+            <button
+              type="button"
+              className={styles.tool}
+              onClick={onOpenReveal}
+              disabled={controls.busy || count === 0}
+              title="Revelar cartas do topo ou do fundo do deck (vão para a Vila, os dois veem)"
+              aria-label="Revelar cartas do deck"
+            >
+              👁
+            </button>
+          )}
         </div>
       )}
       {/* Logo abaixo do seu Deck (fora do arco da mão): devolver a mão ao Deck, com confirmação. */}
@@ -1624,6 +1713,25 @@ function LogLine({
     case 'search':
       text = <>buscou {main} no Deck e embaralhou</>;
       break;
+    case 'reveal':
+      text = (
+        <>
+          revelou {e.count === 1 ? '1 carta' : `${e.count} cartas`} {e.position === 'bottom' ? 'do fundo' : 'do topo'} do
+          Deck (foram para a Vila)
+          {(e.cards?.length ?? 0) > 0 && (
+            <>
+              :{' '}
+              {e.cards!.map((id, i) => (
+                <span key={i}>
+                  {i > 0 && ', '}
+                  {card(id)}
+                </span>
+              ))}
+            </>
+          )}
+        </>
+      );
+      break;
     case 'shuffle':
       text = <>embaralhou o Deck</>;
       break;
@@ -1864,6 +1972,7 @@ export function GameArena({
   const rootRef = useRef<HTMLDivElement>(null);
   const scale = useStageScale(rootRef);
   const [inspect, setInspect] = useState<{ card: Card; inst?: CardInstance } | null>(null);
+  const [revealing, setRevealing] = useState(false);
   const inspectCard: Inspect = (card, inst) => setInspect({ card, inst });
   // Carta sua na mesa (ou na mão): o detalhe ganha os botões de mover.
   const inspectZone = inspect?.inst && controls ? zoneOf(you.zones, inspect.inst.uid) : null;
@@ -1900,7 +2009,14 @@ export function GameArena({
             }
           />
           <Arena you={you} opponent={opponent} phase={currentPhase} controls={controls} onInspect={inspectCard} />
-          <ZoneRow side={you} mine controls={controls} onInspect={inspectCard} onOpenList={openMine} />
+          <ZoneRow
+            side={you}
+            mine
+            controls={controls}
+            onInspect={inspectCard}
+            onOpenList={openMine}
+            onOpenReveal={controls && (() => setRevealing(true))}
+          />
           <Hand side={you} controls={controls} onInspect={inspectCard} />
           <div className={styles.rail}>
             <Plate side={opponent} mine={false} onOpenList={openTheirs} />
@@ -1942,6 +2058,9 @@ export function GameArena({
           onInspect={inspectCard}
           onClose={() => setList(null)}
         />
+      )}
+      {revealing && controls && (
+        <RevealDialog deckCount={you.zones.deck.count} controls={controls} onClose={() => setRevealing(false)} />
       )}
       <CardDetailModal
         card={inspect?.card ?? null}

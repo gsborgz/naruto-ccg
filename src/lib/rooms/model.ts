@@ -129,7 +129,7 @@ export function parseRoomDeck(x: unknown, lookup: CardLookup): SharedDeck {
   if (!summarizeDeck(deck.cards, lookup).isValid) {
     throw new RoomError(
       400,
-      `O deck "${deck.name}" não segue as regras de montagem (50 cartas, até 3 por nome; Baralho de Reforço com até 15).`,
+      `O deck "${deck.name}" não segue as regras de montagem (50 cartas; Baralho de Reforço com até 15).`,
     );
   }
   return deck;

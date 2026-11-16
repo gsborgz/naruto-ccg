@@ -35,7 +35,7 @@ const rules = { isNinja: (id: string) => CARDS.find((c) => c.id === id)?.type ==
 
 /**
  * Deck de exemplo: 50 cartas a partir de uma posição do catálogo, com algumas em 3 cópias (como num deck de
- * verdade, até 3 por nome), para a mão mostrar as pilhas de cartas repetidas.
+ * verdade), para a mão mostrar as pilhas de cartas repetidas.
  */
 function sampleDeck(offset: number): Record<string, number> {
   const seen = new Set<string>();
@@ -149,6 +149,7 @@ export default function ArenaPreviewPage() {
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
     onReturnReward: (area) => play({ type: 'returnReward', owner: area === 'mine' ? 'host' : 'guest' }),
     onAdjustPower: (uid, delta) => play({ type: 'adjustPower', uid, delta }),
+    onReveal: (from, count) => play({ type: 'reveal', from, count }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     // Sem oponente de verdade: ele devolve o turno na hora.
     onPassTurn: () => {

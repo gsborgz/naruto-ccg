@@ -243,6 +243,34 @@ test('Prêmios: devolver manda a última carta da Área de volta ao topo do Deck
   assert.equal(parseGameAction({ type: 'returnReward', owner: 'x' }), null);
 });
 
+test('revelar: cartas do topo ou do fundo do Deck vão para a Vila, à vista dos dois', () => {
+  let g = newGame();
+  const rng = seeded(8);
+  const deck = g.players.host.deck;
+  const top = deck.slice(0, 3).map((c) => c.uid);
+  const bottom = deck.slice(-2).map((c) => c.uid);
+
+  g = applyGameAction(g, 'host', { type: 'reveal', from: 'top', count: 3 }, rng);
+  g = applyGameAction(g, 'host', { type: 'reveal', from: 'bottom', count: 2 }, rng);
+  assert.deepEqual(g.players.host.village.map((c) => c.uid), [...top, ...bottom]);
+  assert.equal(g.players.host.deck.length, deck.length - 5);
+  // O oponente vê as cartas na Vila e no registro.
+  assert.equal(gameView(g, 'guest').players.host.village.cards?.length, 5);
+  const entry = gameView(g, 'guest').log.at(-1)!;
+  assert.equal(entry.type, 'reveal');
+  assert.equal(entry.position, 'bottom');
+  assert.equal(entry.cards?.length, 2);
+
+  // Pedir mais do que há no Deck revela o que sobrou.
+  g = applyGameAction(g, 'host', { type: 'reveal', from: 'top', count: 99 }, rng);
+  assert.equal(g.players.host.deck.length, 0);
+  assert.throws(() => applyGameAction(g, 'host', { type: 'reveal', from: 'top', count: 1 }, rng), /vazio/);
+
+  assert.deepEqual(parseGameAction({ type: 'reveal', from: 'bottom', count: 4 }), { type: 'reveal', from: 'bottom', count: 4 });
+  assert.equal(parseGameAction({ type: 'reveal', from: 'middle', count: 4 }), null);
+  assert.equal(parseGameAction({ type: 'reveal', from: 'top', count: 0 }), null);
+});
+
 test('Poder: +/− no Time fica no Líder, soma no Time e some fora da Vila/Campo', () => {
   let { g, uids } = villageOfSix();
   const [a, b] = uids.filter((uid) => g.players.host.village.find((x) => x.uid === uid)?.cardId !== 'e');

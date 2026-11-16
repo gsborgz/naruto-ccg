@@ -104,6 +104,8 @@ export interface LogEntry {
   delta?: number;
   /** returnReward: de quem era a Área de Prêmios de onde a carta saiu. */
   owner?: Side;
+  /** reveal: de onde do Deck saíram as cartas. */
+  position?: 'top' | 'bottom';
 }
 
 /** Fases do turno (docs/REGRAS.md 3.2 a 3.6). */
@@ -148,6 +150,11 @@ export type GameAction =
    * dois pode devolver, de qualquer uma das Áreas.
    */
   | { type: 'returnReward'; owner: Side }
+  /**
+   * Revelar `count` cartas do topo ou do fundo do seu Deck: elas vão para a sua Vila, face para cima, na ordem
+   * do Deck (a primeira é a de cima), para os dois jogadores verem. Depois, cada uma é movida à mão.
+   */
+  | { type: 'reveal'; from: 'top' | 'bottom'; count: number }
   /** Aumentar (`delta` > 0) ou diminuir o Poder do Time do Ninja `uid` (o ajuste fica no Líder). */
   | { type: 'adjustPower'; uid: string; delta: number }
   /**
@@ -239,6 +246,9 @@ function checkBattlefield(zones: PlayerZones, rules: CardRules) {
     throw new GameError(`No máximo ${BATTLEFIELD_MAX_TEAMS} Times no Campo de Batalha.`);
   }
 }
+
+/** Mais cartas que dá para revelar de uma vez (um Deck tem 50). */
+export const REVEAL_MAX = 60;
 
 /** Maior ajuste manual de Poder num Ninja (para cima ou para baixo). */
 export const POWER_MOD_MAX = 99;
@@ -385,6 +395,18 @@ function describe(
       return { type: 'draw', cards: zones.deck[0] ? [zones.deck[0].cardId] : [], from: 'deck', to: 'hand' };
     case 'search':
       return { type: 'search', cards: [action.cardId], from: 'deck', to: 'hand' };
+    case 'reveal': {
+      const n = Math.min(action.count, zones.deck.length);
+      const cards = action.from === 'top' ? zones.deck.slice(0, n) : zones.deck.slice(zones.deck.length - n);
+      return {
+        type: 'reveal',
+        cards: cards.map((c) => c.cardId),
+        count: n,
+        from: 'deck',
+        to: 'village',
+        position: action.from,
+      };
+    }
     case 'returnHand':
       return { type: 'returnHand', cards: zones.hand.map((c) => c.cardId), count: zones.hand.length, from: 'hand', to: 'deck' };
     case 'joinTeam': {
@@ -470,6 +492,14 @@ function applyAction(
       if (zones.hand.length === 0) throw new GameError('Sua mão está vazia.');
       zones.deck = shuffle([...zones.deck, ...zones.hand.map((c) => card(c.uid, c.cardId))], rng);
       zones.hand = [];
+      return done();
+    }
+    case 'reveal': {
+      if (!Number.isInteger(action.count) || action.count < 1) throw new GameError('Escolha quantas cartas revelar.');
+      if (zones.deck.length === 0) throw new GameError('Seu deck está vazio.');
+      const n = Math.min(action.count, zones.deck.length);
+      const cards = action.from === 'top' ? zones.deck.splice(0, n) : zones.deck.splice(zones.deck.length - n, n);
+      zones.village.push(...cards.map((c) => card(c.uid, c.cardId)));
       return done();
     }
     case 'search': {
@@ -686,6 +716,15 @@ export function parseGameAction(x: unknown): GameAction | null {
     return { type: 'moveTeam', uid: a.uid, to: a.to as ZoneName, ...before(a) };
   }
   if (a.type === 'setLeader' && typeof a.uid === 'string') return { type: 'setLeader', uid: a.uid };
+  if (
+    a.type === 'reveal' &&
+    (a.from === 'top' || a.from === 'bottom') &&
+    Number.isInteger(a.count) &&
+    (a.count as number) >= 1 &&
+    (a.count as number) <= REVEAL_MAX
+  ) {
+    return { type: 'reveal', from: a.from, count: a.count as number };
+  }
   if (a.type === 'returnReward' && (a.owner === 'host' || a.owner === 'guest')) {
     return { type: 'returnReward', owner: a.owner };
   }

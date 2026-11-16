@@ -257,7 +257,11 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   - `{ type: 'setInjured', uid, injured }`: virar um Ninja seu para Ferido ou Saudável (ver "Ninja Ferido");
   - `{ type: 'passTurn' }`: passar o turno (ver "Turnos");
   - `{ type: 'returnReward', owner }`: devolver um Prêmio de Batalha (ver "Prêmios de Batalha");
-  - `{ type: 'adjustPower', uid, delta }`: aumentar ou diminuir o Poder de um Time seu (ver "Times").
+  - `{ type: 'adjustPower', uid, delta }`: aumentar ou diminuir o Poder de um Time seu (ver "Times");
+  - `{ type: 'reveal', from, count }`: revelar `count` cartas do **topo** (`from: 'top'`) ou do **fundo**
+    (`'bottom'`) do seu Deck. Elas vão para a sua **Vila**, face para cima, na ordem do Deck, e os dois veem
+    (também no registro, com os nomes). Depois, cada carta é movida à mão (arrastando ou pelo detalhe). Na tela é
+    o botão 👁 no seu Deck, que pergunta de onde e quantas (pedir mais do que há revela o que sobrou).
 - **Mover pelo detalhe da carta:** clicar numa carta sua (mão, Vila, Campo, Chakra, Descartes, Reforço,
   Removidos) abre o detalhe com **Descartar**, **→ zona** (mão, Vila, Campo, Chakra, topo do Deck, Removidos e,
   para Esquadrões/Reforço, Reforço) e **→ Prêmio do oponente**. São as mesmas ações `move` e `giveReward` do
