@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useChosenArt } from '@/lib/altArtClient';
 import { hasFixedArt } from '@/lib/altArts';
 import { isCustomCardId } from '@/lib/cardMaker/customIds';
+import { cardCornerCss } from '@/lib/cardMaker/layouts/corners';
 import { cardImageUrl, type Card } from '@/models/card';
 
 // Carregadas sob demanda: trazem as fontes e a configuração dos layouts do criador de cartas.
@@ -52,7 +53,18 @@ function CatalogCardFace({ card, size, rendered = false, eager = false, classNam
   return (
     <div
       className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 bg-cover ${className}`}
-      style={{ backgroundImage: `url(${cardImageUrl(card, 'thumb')})` }}
+      style={{
+        backgroundImage: `url(${cardImageUrl(card, 'thumb')})`,
+        // Os cantos com o raio da moldura da carta, na montada e na impressa: as imagens impressas (e a miniatura por
+        // trás da montada) têm o canto reto, preenchido com a cor da borda, que apareceria fora do canto da carta.
+        // Coleções ainda não mapeadas: o raio padrão
+        // (montada sem layout mapeado = layout 1, como em `fromCatalogCard`).
+        borderRadius: cardCornerCss(
+          card.layout?.layout ?? (showRendered ? 'layout-01' : undefined),
+          card.type,
+          card.layout?.panelVariant,
+        ),
+      }}
     >
       {showRendered ? (
         <CatalogCardRender card={card} art={art} />

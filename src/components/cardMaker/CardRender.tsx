@@ -25,6 +25,7 @@ import {
   type PlacedIcon,
   type PlacedNumber,
 } from '@/lib/cardMaker/layouts';
+import { cardCorner } from '@/lib/cardMaker/layouts/corners';
 import { ATTRIBUTE_SHADOW } from '@/lib/cardMaker/icons';
 import {
   cardVillages,
@@ -653,13 +654,15 @@ export function CardRender({ card, width, referenceOpacity = 0, onArtMove, class
   const type = card.type;
   const frame = frameFor(spec, type, card.panelVariant);
   const panel = panelFor(spec, type, card.panelVariant);
+  // Cantos com o raio da moldura (senão a arte aparece fora do canto arredondado dela).
+  const corner = cardCorner(card.layout, type, card.panelVariant) * scale;
   const parts = { card, spec };
 
   return (
     <div
       className={className}
       // textAlign: a carta não herda o alinhamento de quem a contém (ex.: o <button> da grade centraliza o texto).
-      style={{ position: 'relative', width, height: width * (CARD_H / CARD_W), overflow: 'hidden', borderRadius: width * 0.035, textAlign: 'left' }}
+      style={{ position: 'relative', width, height: width * (CARD_H / CARD_W), overflow: 'hidden', borderRadius: corner, textAlign: 'left' }}
     >
       <div
         className={CARD_FONT_VARIABLES}

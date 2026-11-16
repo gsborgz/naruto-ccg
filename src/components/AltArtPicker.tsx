@@ -5,6 +5,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { altArtApi, chooseArt, useChosenArt } from '@/lib/altArtClient';
 import { withFixedArt, type AltArtFrame, type AltArtView } from '@/lib/altArts';
 import type { ArtLayer } from '@/models/cardLayout';
+import { cardCornerCss } from '@/lib/cardMaker/layouts/corners';
 import type { ArtPreview } from './cardMaker/CatalogCardRender';
 import { uploadArt } from '@/lib/cardMaker/artUpload';
 import { compressImage, ImageTooLargeError } from '@/lib/images/compressImage';
@@ -62,7 +63,10 @@ export function AltArtDraftFace({
   });
   const preview = useMemo(() => ({ back: draft.back, front: draft.front }), [draft.back, draft.front]);
   return (
-    <div className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 ${className}`}>
+    <div
+      className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 ${className}`}
+      style={{ borderRadius: cardCornerCss(card.layout?.layout, card.type, card.layout?.panelVariant) }}
+    >
       <CatalogCardRender
         card={card}
         preview={preview}
