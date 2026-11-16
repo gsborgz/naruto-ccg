@@ -391,8 +391,8 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 - **Moeda Ninja** (docs/REGRAS.md 4.16, "Jogar a Moeda Ninja"): o botão **🪙 Moeda** no canto inferior direito
   (qualquer um dos dois, a qualquer momento) pede ao servidor um sorteio de Cara [Heads] ou Coroa [Tails]. A
   mesa não muda: o resultado vai para o registro (`LogEntry.result`) e aparece no meio da arena, para os dois,
-  por 4,5 s: a moeda sobe girando, cai na face sorteada (表 Cara / 裏 Coroa), quica e mostra o resultado
-  (`CoinToss`, classes `toss*` no CSS; gira mesmo com "reduzir movimento" no sistema).
+  por 4,5 s: a moeda sobe girando, cai na face sorteada (表 Cara / 裏 Coroa) e quica; a face é o resultado, sem
+  legenda (`CoinToss`, classes `toss*` no CSS; gira mesmo com "reduzir movimento" no sistema).
 - **Encerrar partida** (`{ type: 'endGame' }`, qualquer um dos dois): volta para a escolha de decks (decks
   mantidos, ninguém pronto). Sair da sala no meio da partida também a encerra.
 - **Registro de jogo** (`GameState.log`, as últimas `LOG_MAX` = 80 jogadas): toda jogada que muda algo é

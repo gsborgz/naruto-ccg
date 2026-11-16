@@ -1534,7 +1534,8 @@ button.counter:active:not(:disabled) {
 .coins {
   position: absolute;
   right: -6px;
-  bottom: 6px;
+  /* Acima da etiqueta de Poder do Time (que sobe 11px por dentro da carta, ver `.teamHandle`). */
+  bottom: 16px;
   z-index: 25;
   display: flex;
   max-width: calc(100% + 6px);
@@ -1604,7 +1605,7 @@ button.counter:active:not(:disabled) {
 /* Cartas pequenas (Vila): selos menores, mas ainda legíveis. */
 .coinsSmall {
   right: -5px;
-  bottom: 4px;
+  bottom: 15px;
   gap: 2px;
 }
 .coinsSmall .coin {
@@ -1665,10 +1666,10 @@ button.counter:active:not(:disabled) {
 }
 /*
  * Moeda Ninja jogada: a moeda sobe girando no eixo X (5 voltas, mais meia na Coroa), cai, quica e para na face
- * sorteada; a sombra encolhe enquanto ela está no alto. O resultado aparece quando ela assenta.
+ * sorteada; a sombra encolhe enquanto ela está no alto.
  */
 .coinToss {
-  --coin-size: 132px;
+  --coin-size: 172px;
   --toss-ms: 1.5s;
   position: absolute;
   left: 50%;
@@ -1724,13 +1725,13 @@ button.counter:active:not(:disabled) {
   text-shadow: 0 1px 0 rgba(255, 236, 170, 0.7);
 }
 .tossFace span {
-  font-size: 54px;
+  font-size: 72px;
   font-weight: 700;
   line-height: 1;
 }
 .tossFace small {
   font-family: var(--board-font, inherit);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1745,24 +1746,6 @@ button.counter:active:not(:disabled) {
   border-radius: 50%;
   background: radial-gradient(closest-side, rgba(0, 0, 0, 0.55), transparent);
   animation: tossShadow var(--toss-ms) cubic-bezier(0.33, 0, 0.3, 1) both;
-}
-.tossResult {
-  margin-top: 14px;
-  padding: 10px 18px;
-  border-radius: 14px;
-  background: var(--color-surface);
-  box-shadow:
-    0 0 0 1px var(--color-accent-400),
-    var(--shadow-md);
-  color: var(--color-text);
-  font-family: var(--board-font, inherit);
-  font-size: 18px;
-  white-space: nowrap;
-  animation: tossResultIn 0.3s ease-out var(--toss-ms) both;
-}
-.tossResult b {
-  color: var(--color-accent-300);
-  font-size: 22px;
 }
 @keyframes tossArc {
   0% {
@@ -1824,11 +1807,5 @@ button.counter:active:not(:disabled) {
   88% {
     opacity: 0.7;
     transform: scale(0.85);
-  }
-}
-@keyframes tossResultIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
   }
 }

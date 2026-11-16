@@ -2375,8 +2375,8 @@ function useLastFlip(log: LogEntryView[] | undefined): LogEntryView | null {
 }
 
 /**
- * A Moeda Ninja jogada no meio da arena: sobe girando, cai na face sorteada (表 Cara / 裏 Coroa), quica e só então
- * mostra o resultado. Os dois jogadores veem a mesma animação (o sorteio já veio do servidor). Gira mesmo com
+ * A Moeda Ninja jogada no meio da arena: sobe girando, cai na face sorteada (表 Cara / 裏 Coroa) e quica; a própria
+ * face mostra o resultado (o texto fica só no `aria-label`, para leitores de tela). Os dois jogadores veem a mesma animação (o sorteio já veio do servidor). Gira mesmo com
  * "reduzir movimento" no sistema: é curta e é o que mostra que a moeda foi jogada.
  */
 function CoinToss({ heads, who }: { heads: boolean; who: string }) {
@@ -2396,9 +2396,6 @@ function CoinToss({ heads, who }: { heads: boolean; who: string }) {
         </div>
       </div>
       <div className={styles.tossShadow} aria-hidden />
-      <div className={styles.tossResult} aria-hidden>
-        {who} jogou a moeda: <b>{result}</b>
-      </div>
     </div>
   );
 }
