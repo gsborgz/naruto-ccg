@@ -18,7 +18,7 @@ import {
  *
  * As artes enviadas pelo jogador ficam no Vercel Blob (`src/lib/artStore.ts`) e a carta leva só o endereço. As
  * artes do próprio site (caminhos `/card-layouts/...` e `/cards/...`) ficam como estão. Data URLs não são aceitos:
- * a arte tem que ser enviada antes (`ensureCardArtUploaded`).
+ * a arte tem que ser enviada antes, pelo **Salvar** do criador (`uploadCardArt`).
  */
 
 export const SHARED_CARD_LIMITS = {

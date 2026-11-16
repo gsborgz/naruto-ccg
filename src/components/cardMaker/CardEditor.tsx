@@ -1,6 +1,5 @@
 'use client';
 
-import { uploadArt } from '@/lib/cardMaker/artUpload';
 import { compressImage, ImageTooLargeError } from '@/lib/images/compressImage';
 import { useEffect, useState } from 'react';
 import {
@@ -90,17 +89,11 @@ const HAND_ICONS: { value: HandIcon; label: string }[] = [
 ];
 
 /**
- * Trata a imagem escolhida (reduz e comprime, ver `compressImage`) e envia para o Vercel Blob. Devolve o endereço
- * no Blob ou, se o envio falhar (sem conexão, Blob não configurado), o data URL tratado, que fica no localStorage
- * e é enviado depois (`migrateStoredArt`). WebP guarda a transparência da arte da frente.
+ * Trata a imagem escolhida (reduz e comprime, ver `compressImage`). Ela fica no rascunho e só vai para o servidor
+ * no **Salvar** do criador. WebP guarda a transparência da arte da frente.
  */
-async function loadArt(file: File, transparent: boolean): Promise<{ src: string; uploaded: boolean }> {
-  const data = await compressImage(file, { transparent });
-  try {
-    return { src: await uploadArt(data), uploaded: true };
-  } catch {
-    return { src: data, uploaded: false };
-  }
+function loadArt(file: File, transparent: boolean): Promise<string> {
+  return compressImage(file, { transparent });
 }
 
 const field =
@@ -318,9 +311,7 @@ function ArtLayerControls({
             if (!file) return;
             try {
               onError(null);
-              const { src, uploaded } = await loadArt(file, layer === 'front');
-              onChange(setArtImage(card, layer, src));
-              if (!uploaded) onError('A arte ficou só neste navegador por enquanto: ela é enviada quando o servidor responder.');
+              onChange(setArtImage(card, layer, await loadArt(file, layer === 'front')));
             } catch (err) {
               onError(err instanceof ImageTooLargeError ? err.message : 'Não foi possível abrir essa imagem.');
             }

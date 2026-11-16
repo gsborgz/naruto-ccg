@@ -10,9 +10,8 @@ import { customCardActions, readCustomCards } from './store.ts';
 
 /**
  * Artes das cartas criadas no Vercel Blob, do lado do navegador (docs/DEPLOY.md, "Artes das cartas criadas").
- * A arte é tratada (`compressImage`) e enviada assim que entra no criador; sem conexão ou sem o Blob configurado,
- * ela fica como data URL no localStorage e é enviada depois (ao abrir o site, ao levar o deck para uma sala ou ao
- * compartilhar).
+ * A arte é tratada (`compressImage`) ao entrar no criador e só vai para o servidor quando o jogador clica em
+ * **Salvar** (`uploadCardArt`). Nada é enviado sozinho.
  */
 
 async function request<T>(url: string, init: RequestInit): Promise<T> {
@@ -48,55 +47,23 @@ async function uploadLayer(art: CustomCardArt, transparent: boolean): Promise<Cu
   return { ...art, src: await uploadArt(data) };
 }
 
-/**
- * Garante que as artes da carta estão no Blob (as que ainda são data URL são tratadas e enviadas) e grava a carta
- * atualizada no criador. Lança erro se o envio falhar.
- */
-export async function ensureCardArtUploaded(card: CustomCard): Promise<CustomCard> {
-  const art = await uploadLayer(card.art, false);
-  const artFront = card.artFront && (await uploadLayer(card.artFront, true));
-  if (art === card.art && artFront === card.artFront) return card;
-  const next: CustomCard = { ...card, art, ...(artFront && { artFront }) };
-  // Grava só os endereços novos, sem desfazer o que mudou na carta enquanto a imagem subia.
-  const current = readCustomCards().find((c) => c.id === card.id);
-  if (current) {
-    customCardActions.save({
-      ...current,
-      ...(current.art.src === card.art.src && { art: { ...current.art, src: art.src } }),
-      ...(artFront && current.artFront?.src === card.artFront?.src && { artFront: { ...current.artFront!, src: artFront.src } }),
-    });
-  }
-  return next;
+/** A carta tem arte que ainda não foi enviada ao servidor (só está neste navegador)? */
+export function hasPendingArt(card: CustomCard): boolean {
+  return !!card.art.src?.startsWith('data:') || !!card.artFront?.src?.startsWith('data:');
 }
 
 /**
- * Trata as artes antigas do criador (até 1500 px, JPEG) e as envia para o Blob. Roda uma vez por carregamento do
- * site, em segundo plano. Sem conexão ou sem Blob, ao menos a arte é recomprimida no localStorage.
+ * Envia para o Blob as artes da carta que ainda são data URL (tratando as antigas, de antes do `compressImage`) e
+ * devolve a carta com os endereços. Não grava nada: quem chama (o **Salvar** do criador) grava. Lança erro se o
+ * envio falhar.
  */
-export async function migrateStoredArt(): Promise<void> {
-  for (const card of readCustomCards()) {
-    if (!card.art.src?.startsWith('data:') && !card.artFront?.src?.startsWith('data:')) continue;
-    try {
-      await ensureCardArtUploaded(card);
-    } catch {
-      // Sem envio: ao menos reduz o peso no localStorage.
-      try {
-        const compress = async (a: CustomCardArt | undefined, transparent: boolean) =>
-          a?.src?.startsWith('data:') && !isCompressed(a.src) ? { ...a, src: await compressImage(a.src, { transparent }) } : a;
-        const art = await compress(card.art, false);
-        const artFront = await compress(card.artFront, true);
-        if (art !== card.art || artFront !== card.artFront) {
-          const current = readCustomCards().find((c) => c.id === card.id);
-          if (current && current.art.src === card.art.src && current.artFront?.src === card.artFront?.src) {
-            customCardActions.save({ ...current, art: art!, ...(artFront && { artFront }) });
-          }
-        }
-      } catch {
-        // Imagem que não abre: fica como está.
-      }
-    }
-  }
+export async function uploadCardArt(card: CustomCard): Promise<CustomCard> {
+  const art = await uploadLayer(card.art, false);
+  const artFront = card.artFront && (await uploadLayer(card.artFront, true));
+  if (art === card.art && artFront === card.artFront) return card;
+  return { ...card, art, ...(artFront && { artFront }) };
 }
+
 
 /**
  * Exclui a carta criada de vez: tira de todos os decks deste navegador (eles ficam inválidos até completar de novo),

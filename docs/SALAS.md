@@ -158,9 +158,9 @@ Decks com cartas do **Criar carta** (`custom-<uuid>`) podem ir para a sala:
   usa. A mesma carta criada (mesmo id) nos dois decks só vale se for igual (um importou do outro); versões diferentes são recusadas (409). Na partida, as regras da tela (Ninja,
   Reforço, Token, Missão Permanente) leem as cartas criadas da sala (`withRoomCards` em `model.ts`).
 - **As artes ficam no Vercel Blob** (docs/DEPLOY.md, "Artes das cartas criadas"): a carta leva o endereço público
-  da arte. Antes de levar o deck para a sala, o navegador envia as artes que ainda estão só nele
-  (`withCustomCards` em `src/lib/cardMaker/customDeck.ts`); a sala recusa arte que não seja do Blob ou do próprio
-  site (`/card-layouts/...`, `/cards/...`).
+  da arte, enviada pelo **Salvar** do criador. Carta com arte ainda só no navegador não vai para a sala (o aviso
+  pede para salvar no criador; `withCustomCards` em `src/lib/cardMaker/customDeck.ts`), e a sala recusa arte que não
+  seja do Blob ou do próprio site (`/card-layouts/...`, `/cards/...`).
 - **Na partida**, cada navegador busca as cartas criadas uma vez (`GET .../custom-cards`; a `RoomView` traz só
   `customCardIds`, porque a sala é consultada a cada segundo) e a arena as desenha (`ArenaCardsProvider` em
   `src/components/arena/arenaCards.tsx`). As imagens vêm direto do Blob.

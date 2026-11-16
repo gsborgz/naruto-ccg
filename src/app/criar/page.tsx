@@ -16,7 +16,9 @@ import {
   type CustomCard,
   type LayoutId,
 } from '@/lib/cardMaker/model';
-import { deleteCustomCard } from '@/lib/cardMaker/artUpload';
+import { deleteCustomCard, hasPendingArt, uploadCardArt } from '@/lib/cardMaker/artUpload';
+import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
+import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import { customCardActions, useCustomCards } from '@/lib/cardMaker/store';
 import { CARD_TYPE_LABEL } from '@/models/card';
 import { elementToPng, pngFileName, saveBlob } from '@/lib/cardMaker/exportPng';
@@ -42,11 +44,31 @@ const PREVIEW_CONTROLS = 110;
 
 const button = 'rounded-lg px-4 py-2 font-semibold text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text';
 
+/** Conteúdo da carta para saber se o rascunho mudou (as datas não contam). */
+function contentKey(card: CustomCard | undefined): string {
+  if (!card) return '';
+  const { createdAt: _c, updatedAt: _u, ...rest } = card;
+  return JSON.stringify(rest);
+}
+
+/** Troca só os endereços das artes enviadas, sem desfazer o que mudou na carta enquanto a imagem subia. */
+function withUploadedArt(current: CustomCard, sent: CustomCard, uploaded: CustomCard): CustomCard {
+  if (current.id !== sent.id) return current;
+  const next = { ...current };
+  if (current.art.src === sent.art.src) next.art = { ...current.art, src: uploaded.art.src };
+  if (current.artFront && uploaded.artFront && current.artFront.src === sent.artFront?.src) {
+    next.artFront = { ...current.artFront, src: uploaded.artFront.src };
+  }
+  return next;
+}
+
 export default function CardMakerPage() {
   const cards = useCustomCards();
   const [draft, setDraft] = useState<CustomCard | null>(null);
   const [importing, setImporting] = useState(false);
   const [saveFailed, setSaveFailed] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [reference, setReference] = useState(0);
   // Camada que o arrastar move quando as duas camadas de arte não estão ligadas.
   const [artLayer, setArtLayer] = useState<ArtLayer>('back');
@@ -74,12 +96,38 @@ export default function CardMakerPage() {
     if (wanted) window.history.replaceState(null, '', '/criar');
   }, [cards, draft]);
 
-  // Grava o rascunho logo depois de cada alteração (com folga para não regravar a cada pixel arrastado).
-  useEffect(() => {
-    if (!draft) return;
-    const timer = setTimeout(() => setSaveFailed(!customCardActions.save(draft)), 300);
-    return () => clearTimeout(timer);
-  }, [draft]);
+  // Rascunho: as edições só são gravadas no botão Salvar (que também envia a arte ao servidor).
+  const stored = draft ? cards?.find((c) => c.id === draft.id) : undefined;
+  const isNew = !!draft && !!cards && !stored;
+  const dirty = !!draft && (isNew || contentKey(draft) !== contentKey(stored));
+  // Carta salva com a arte ainda só neste navegador (o envio falhou): o Salvar tenta enviar de novo.
+  const pendingArt = !!draft && hasPendingArt(draft);
+  const guard = useLeaveGuard(dirty);
+
+  /**
+   * Salva a carta: envia ao servidor (Vercel Blob) as artes ainda não enviadas e grava no navegador. Se o envio
+   * falhar, a carta é gravada mesmo assim (com a arte só aqui) e o aviso pede para salvar de novo.
+   */
+  const save = async () => {
+    if (!draft || saving) return;
+    const sent = draft;
+    setSaving(true);
+    setSaveError(null);
+    let toSave = sent;
+    try {
+      toSave = await uploadCardArt(sent);
+    } catch (e) {
+      setSaveError(
+        `A carta foi salva neste navegador, mas a arte não foi enviada ao servidor (${(e as Error).message}). Clique em Salvar de novo.`,
+      );
+    }
+    setSaveFailed(!customCardActions.save(toSave));
+    setDraft((d) => d && withUploadedArt(d, sent, toSave));
+    setSaving(false);
+  };
+
+  /** Troca de carta: com alterações não salvas, pergunta antes de descartar. */
+  const confirmDiscard = () => !dirty || confirm('Descartar as alterações não salvas desta carta?');
 
   // `/criar?importar=<id da carta>[&layout=layout-02]`: começa uma carta nova a partir de uma carta do catálogo
   // (sem `layout`: o da carta, se ela já foi escaneada, ou o layout 1).
@@ -101,20 +149,24 @@ export default function CardMakerPage() {
   }, [translationsReady]);
 
   const open = (card: CustomCard) => {
-    if (draft) customCardActions.save(draft);
+    if (card.id === draft?.id || !confirmDiscard()) return;
     setDraft(card);
     setReference(0);
+    setSaveError(null);
   };
 
-  const create = (card: CustomCard) => {
-    customCardActions.save(card);
-    open(card);
-  };
+  /** Carta nova (do zero, do catálogo ou duplicada): fica só no rascunho até o Salvar. */
+  const create = (card: CustomCard) => open(card);
 
   // Exclui de vez: some também dos decks e a arte é apagada do Vercel Blob (como no detalhe da carta).
   const remove = () => {
+    if (!draft) return;
+    // Carta nova ainda não salva: só descarta o rascunho.
+    if (isNew) {
+      if (confirm('Descartar esta carta nova?')) setDraft(cards?.[0] ?? null);
+      return;
+    }
     if (
-      !draft ||
       !confirm(
         `Excluir "${draft.name || 'carta sem nome'}" de vez?
 
@@ -161,7 +213,10 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
       <div className="flex shrink-0 flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold">Criar carta</h1>
-          <p className="text-sm text-muted">Monte cartas nos layouts das coleções (escolha no formulário). Ficam salvas neste navegador.</p>
+          <p className="text-sm text-muted">
+            Monte cartas nos layouts das coleções (escolha no formulário). Clique em <strong>Salvar</strong> para guardar a
+            carta; a arte vai para o servidor.
+          </p>
         </div>
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={() => setImporting(true)} className={button}>
@@ -172,12 +227,34 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
             onClick={() =>
               create(withLayoutIcons(withLayout(newCustomCard(draft?.type ?? 'ninja'), draft?.layout ?? 'layout-01')))
             }
-            className="rounded-lg bg-accent px-4 py-2 font-semibold text-bg hover:bg-accent-strong"
+            className={button}
           >
             Nova carta
           </button>
+          {draft && (
+            <button
+              type="button"
+              onClick={save}
+              disabled={saving || (!dirty && !pendingArt)}
+              title={!dirty && !pendingArt ? 'Nenhuma alteração para salvar' : undefined}
+              className="rounded-lg bg-accent px-4 py-2 font-semibold text-bg hover:bg-accent-strong disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {saving ? 'Salvando…' : 'Salvar'}
+              {dirty && !saving && (
+                <span className="ml-1.5 inline-block size-1.5 rounded-full bg-bg align-middle" aria-label="(alterações não salvas)" />
+              )}
+            </button>
+          )}
         </div>
       </div>
+
+      {saveError && <p className="rounded-lg bg-danger/10 px-3 py-2 text-sm text-danger">{saveError}</p>}
+      {!saveError && pendingArt && !dirty && (
+        <p className="rounded-lg bg-danger/10 px-3 py-2 text-sm text-danger">
+          A arte desta carta ainda não foi enviada ao servidor: ela não vai para salas nem compartilhamentos. Clique em
+          Salvar para enviar.
+        </p>
+      )}
 
       {cards && !draft && (
         <p className="rounded-xl border border-dashed border-border p-8 text-center text-muted">
@@ -189,11 +266,11 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
         <div ref={areaRef} className="grid min-h-0 flex-1 items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:grid-rows-[minmax(0,1fr)]">
           <div className="flex min-h-0 flex-col gap-6 lg:h-full lg:overflow-y-auto lg:pr-2">
             {draft && <CardEditor card={draft} onChange={setDraft} artLayer={artLayer} onArtLayerChange={setArtLayer} />}
-            {cards && cards.length > 0 && (
+            {cards && (cards.length > 0 || isNew) && (
               <section className="flex flex-col gap-3">
                 <h2 className="text-lg font-bold">Minhas cartas ({cards.length})</h2>
                 <div className="grid grid-cols-[repeat(auto-fill,minmax(9rem,1fr))] gap-3">
-                  {cards.map((c) => {
+                  {(isNew && draft ? [draft, ...cards] : cards).map((c) => {
                     const shown = c.id === draft?.id ? draft : c;
                     return (
                       <button
@@ -206,7 +283,10 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
                       >
                         <CardRender card={shown} width={128} />
                         <span className="w-full truncate text-center text-xs font-semibold">{shown.name || 'Sem nome'}</span>
-                        <span className="text-[11px] text-muted">{CARD_TYPE_LABEL[shown.type]}</span>
+                        <span className="text-[11px] text-muted">
+                          {CARD_TYPE_LABEL[shown.type]}
+                          {c.id === draft?.id && dirty && <span className="text-accent"> · não salva</span>}
+                        </span>
                       </button>
                     );
                   })}
@@ -274,6 +354,16 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
           <CardRender card={draft} width={CARD_W} />
         </div>
       )}
+
+      <UnsavedChangesDialog
+        open={guard.pending}
+        onSave={async () => {
+          await save();
+          guard.proceed();
+        }}
+        onDiscard={guard.proceed}
+        onCancel={guard.cancel}
+      />
 
       <CatalogImportDialog
         open={importing}

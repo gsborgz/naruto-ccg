@@ -4,8 +4,8 @@ import { useSyncExternalStore } from 'react';
 import { migrateCustomCard, type CustomCard } from './model.ts';
 
 /**
- * Cartas do criador, no localStorage. A arte é o endereço dela no Vercel Blob; enquanto não foi enviada (sem conexão),
- * fica como data URL tratada (`compressImage`) e é enviada depois (`migrateStoredArt`).
+ * Cartas do criador, no localStorage (gravadas pelo botão **Salvar** do criador). A arte é o endereço dela no Vercel
+ * Blob; se o envio falhou ao salvar, fica como data URL tratada (`compressImage`) até o próximo **Salvar**.
  */
 interface StoredData {
   version: 1;
@@ -48,19 +48,8 @@ export function readCustomCards(): CustomCard[] {
   return read();
 }
 
-let artMigrationScheduled = false;
-
-/** Uma vez por carregamento: trata e envia as artes que ainda estão só no localStorage (em segundo plano). */
-function scheduleArtMigration() {
-  if (artMigrationScheduled) return;
-  artMigrationScheduled = true;
-  setTimeout(() => {
-    import('./artUpload.ts').then((m) => m.migrateStoredArt()).catch(() => {});
-  }, 2000);
-}
 
 function subscribe(listener: () => void) {
-  scheduleArtMigration();
   listeners.add(listener);
   const onStorage = (e: StorageEvent) => {
     if (e.key === STORAGE_KEY) {

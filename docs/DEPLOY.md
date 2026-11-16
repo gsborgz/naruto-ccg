@@ -110,9 +110,10 @@ Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardM
   adivinhar).
 - **Dono:** `naruto-ccg:art-owner:<sha256>` no Redis guarda quem enviou primeiro (hash do token anônimo do jogador).
   Só ele pode apagar (`DELETE /api/art`), o que acontece ao **excluir a carta permanentemente**.
-- **Sem Blob ou sem conexão**, a arte fica tratada no localStorage de quem criou e é enviada depois (ao abrir o site,
-  ao levar o deck para uma sala ou ao compartilhar). Artes antigas (até 1500 px, JPEG) são tratadas e enviadas do
-  mesmo jeito, uma vez, em segundo plano.
+- **Só no Salvar:** a arte vai para o servidor apenas quando o jogador clica em **Salvar** no criador; nada é enviado
+  sozinho. Se o envio falhar (sem Blob ou sem conexão), a carta é salva no localStorage com a arte tratada e o
+  criador avisa para salvar de novo; enquanto isso, a carta não vai para salas nem compartilhamentos. Artes antigas
+  (até 1500 px, JPEG) são tratadas no próximo **Salvar** da carta.
 
 ## 4. Conferir
 

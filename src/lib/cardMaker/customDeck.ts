@@ -1,14 +1,14 @@
 'use client';
 
 import type { SharedDeck } from '../deckShare.ts';
-import { ensureCardArtUploaded } from './artUpload.ts';
+import { hasPendingArt } from './artUpload.ts';
 import { customDeckCardId, isCustomCardId } from './customIds.ts';
 import { cardVillages, withVillages, type CustomCard } from './model.ts';
 
 /**
  * Deck para levar para fora deste navegador (sala de jogo ou compartilhamento por código): leva junto as cartas
- * criadas que ele usa (docs/SALAS.md, "Cartas criadas"). As artes que ainda estão só aqui são enviadas antes para o
- * Vercel Blob; se o envio falhar, lança erro com a mensagem para mostrar na tela.
+ * criadas que ele usa (docs/SALAS.md, "Cartas criadas"). As artes têm que estar no Vercel Blob (enviadas pelo
+ * **Salvar** do criador): se alguma ainda está só neste navegador, lança erro com a mensagem para mostrar na tela.
  */
 export async function withCustomCards(
   deck: { name: string; cards: Record<string, number> },
@@ -19,13 +19,12 @@ export async function withCustomCards(
     if (!isCustomCardId(id)) continue;
     const source = customCards.find((c) => customDeckCardId(c.id) === id);
     if (!source) throw new Error(`O deck "${deck.name}" tem uma carta criada que não está mais neste navegador.`);
-    let uploaded: CustomCard;
-    try {
-      uploaded = await ensureCardArtUploaded(source);
-    } catch (e) {
-      throw new Error(`Não foi possível enviar a arte da carta "${source.name || 'sem nome'}": ${(e as Error).message}`);
+    if (hasPendingArt(source)) {
+      throw new Error(
+        `A arte da carta "${source.name || 'sem nome'}" ainda não foi enviada ao servidor: abra a carta no criador e clique em Salvar.`,
+      );
     }
-    custom[id] = toSharedCard(uploaded);
+    custom[id] = toSharedCard(source);
   }
   return { name: deck.name, cards: deck.cards, ...(Object.keys(custom).length > 0 && { custom }) };
 }
