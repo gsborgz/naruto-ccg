@@ -280,6 +280,44 @@
     0 0 0 1px var(--color-accent-300),
     0 0 18px var(--color-accent-600);
 }
+/* Embaralhando: a carta do topo some enquanto as costas da animação (.shuffleCard) giram por cima. */
+.deckTopHidden {
+  visibility: hidden;
+}
+.shuffleFx {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+/*
+ * Cada costa sai para um lado, dá uma volta e volta à pilha. Os valores de cada uma vêm prontos do
+ * componente (--x-out, --x-back, --r-out, --r-mid, --r-end). Sem a regra de "reduzir movimento": no
+ * Windows com os efeitos de animação desligados ela apagava a animação inteira.
+ */
+.shuffleCard {
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 0 1px #55555e, 0 6px 14px rgba(0, 0, 0, 0.5);
+  animation-name: deckShuffle;
+  animation-duration: 860ms;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.25, 1);
+  animation-fill-mode: both;
+}
+@keyframes deckShuffle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  35% {
+    transform: translate(var(--x-out), -6px) rotate(var(--r-out));
+  }
+  70% {
+    transform: translate(var(--x-back), 0) rotate(var(--r-mid));
+  }
+  100% {
+    transform: translate(0, 0) rotate(var(--r-end));
+  }
+}
 .deckTools {
   position: absolute;
   right: 6px;
@@ -1049,9 +1087,10 @@ button.counter:active:not(:disabled) {
   aspect-ratio: 5 / 7;
   transform: translateY(-50%);
   border-radius: 3.5% / 2.5%;
+  /* Fora da arena (ex.: na busca no deck) os tons do tema não existem: cai no acento do site. */
   box-shadow:
-    0 0 0 2px var(--color-accent-400),
-    0 0 40px var(--color-accent-700),
+    0 0 0 2px var(--color-accent-400, var(--color-accent)),
+    0 0 40px var(--color-accent-700, var(--color-accent)),
     0 24px 60px rgba(0, 0, 0, 0.75);
   pointer-events: none;
   animation: zoomIn 0.12s ease-out;
@@ -1222,11 +1261,16 @@ button.counter:active:not(:disabled) {
 
 /* ── Registro de jogo ───────────────────────────────────────────────────── */
 
-.logToggle {
+/* Canto inferior direito: os botões de Atalhos e de Registro, lado a lado. */
+.cornerTools {
   position: absolute;
   right: 10px;
   bottom: 10px;
   z-index: 66;
+  display: flex;
+  gap: 8px;
+}
+.logToggle {
   display: flex;
   height: 32px;
   align-items: center;
@@ -1362,35 +1406,59 @@ button.counter:active:not(:disabled) {
   font-size: 11px;
 }
 
-/* Logo abaixo do seu Deck: devolver a mão ao Deck (o mulligan). Discreto, com confirmação. */
-.returnHand {
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  right: 0;
-  height: 24px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-  color: var(--color-neutral-300);
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+/* Painel de atalhos (mesmo lugar e moldura do registro). */
+.keysBody {
+  flex: 1;
+  padding: 6px 10px 12px;
+  overflow-y: auto;
 }
-.returnHand:hover:not(:disabled) {
-  box-shadow:
-    0 0 0 1px var(--color-accent-400),
-    0 0 12px var(--color-accent-700);
+.keysList {
+  margin: 0 0 6px;
+  padding: 0;
+  list-style: none;
+}
+.keysItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.keysItem:hover {
+  background: var(--color-neutral-900);
+}
+.keysWhen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-neutral-300);
+}
+.keysWhen b {
+  font-weight: 600;
   color: var(--color-text);
 }
-.returnHand:active:not(:disabled) {
-  background: var(--color-accent-900);
+.keysDoes {
+  color: var(--color-neutral-400);
 }
-.returnHand:disabled {
-  opacity: 0.4;
+.kbd {
+  display: inline-flex;
+  min-width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  border-radius: 5px;
+  background: var(--color-neutral-900);
+  box-shadow:
+    0 0 0 1px var(--color-neutral-700),
+    0 2px 0 var(--color-neutral-700);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 /* ── Ajuste manual do Poder (−/+ na alça do Time) ───────────────────────── */
@@ -1430,10 +1498,197 @@ button.counter:active:not(:disabled) {
 }
 
 /* Botão "topo do Deck → Prêmios do oponente", na lateral esquerda da carta do Deck. */
-.deckReward {
+
+/* ── Moedas sobre as cartas (um selo por tipo) ──────────────────────────── */
+
+/*
+ * No canto direito de baixo: é a parte da carta que fica à mostra também nos Ninjas de Apoio (o Líder cobre
+ * o lado esquerdo deles). Um selo por linha, alinhados à direita, passando um pouco da borda da carta.
+ */
+.coins {
   position: absolute;
-  left: 5px;
+  right: -6px;
+  bottom: 6px;
+  z-index: 25;
+  display: flex;
+  max-width: calc(100% + 6px);
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 3px;
+}
+.coin {
+  display: flex;
+  height: 22px;
+  max-width: 100%;
+  align-items: center;
+  gap: 4px;
+  padding: 0 7px 0 2px;
+  border-radius: 11px;
+  background: #f0c24f;
+  box-shadow:
+    0 0 0 1.5px #5c3d07,
+    0 3px 6px rgba(0, 0, 0, 0.75);
+  color: #241500;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+/* A quantidade, num círculo escuro (lê-se de longe). */
+.coin > b {
+  display: flex;
+  min-width: 18px;
+  height: 18px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  border-radius: 9px;
+  background: #241500;
+  color: #ffe08a;
+  font-size: 12px;
+  font-weight: 800;
+}
+.coin > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coin.coinUp {
+  background: #8fe39a;
+  box-shadow:
+    0 0 0 1.5px #13461b,
+    0 3px 6px rgba(0, 0, 0, 0.75);
+  color: #082010;
+}
+.coin.coinUp > b {
+  background: #0b2e12;
+  color: #b8ffc2;
+}
+.coin.coinDown {
+  background: #ff9e93;
+  box-shadow:
+    0 0 0 1.5px #5e140c,
+    0 3px 6px rgba(0, 0, 0, 0.75);
+  color: #2e0603;
+}
+.coin.coinDown > b {
+  background: #3a0905;
+  color: #ffc9c2;
+}
+/* Cartas pequenas (Vila): selos menores, mas ainda legíveis. */
+.coinsSmall {
+  right: -5px;
+  bottom: 4px;
+  gap: 2px;
+}
+.coinsSmall .coin {
+  height: 17px;
+  gap: 3px;
+  padding: 0 5px 0 1.5px;
+  border-radius: 9px;
+  font-size: 10px;
+}
+.coinsSmall .coin > b {
+  min-width: 14px;
+  height: 14px;
+  padding: 0 2px;
+  border-radius: 7px;
+  font-size: 10px;
+}
+
+/* ── −/+ do seu Marcador de Turnos (na placa) ───────────────────────────── */
+
+.barValue {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.barBtn {
+  display: none;
+  width: 14px;
+  height: 14px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-bg);
+  box-shadow: 0 0 0 1px var(--color-accent-600);
+  color: var(--color-accent-200);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+.bar:hover .barBtn,
+.bar:focus-within .barBtn {
+  display: flex;
+}
+.barBtn:hover:not(:disabled) {
+  background: var(--color-accent-700);
+  color: var(--color-accent-50, #fff);
+}
+.barBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── Moeda Ninja: botão no canto e o resultado no meio da arena ─────────── */
+
+.logToggle:disabled {
+  opacity: 0.5;
+}
+.flipToast {
+  position: absolute;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 14px;
+  background: var(--color-surface);
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    var(--shadow-md);
+  color: var(--color-text);
+  font-family: var(--board-font, inherit);
+  font-size: 18px;
+  pointer-events: none;
+  animation: flipToastIn 0.25s ease-out;
+}
+.flipToast b {
+  color: var(--color-accent-300);
+  font-size: 22px;
+}
+.flipToast small {
+  color: var(--color-muted, inherit);
+  font-size: 12px;
+  opacity: 0.75;
+}
+.flipCoin {
+  display: inline-block;
+  font-size: 30px;
+  animation: flipSpin 0.6s ease-out;
+}
+@keyframes flipToastIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+}
+@keyframes flipSpin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(1080deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flipToast,
+  .flipCoin {
+    animation: none;
+  }
 }

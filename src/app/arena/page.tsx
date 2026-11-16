@@ -18,11 +18,12 @@ import {
   deckContents,
   GameError,
   gameView,
+  type CardRules,
   type GameAction,
   type GameState,
   type ZoneName,
 } from '@/lib/game/state';
-import { deckNameKey, isReinforcementCard } from '@/models/card';
+import { deckNameKey, isReinforcementCard, permanentCoins } from '@/models/card';
 
 /**
  * Prévia da arena: uma partida local (só neste navegador) com dois decks de exemplo, para testar
@@ -30,8 +31,14 @@ import { deckNameKey, isReinforcementCard } from '@/models/card';
  * A arena de verdade abre em /salas/<id> quando os dois marcam Pronto.
  */
 
-/** Só Ninjas formam Times. */
-const rules = { isNinja: (id: string) => CARDS.find((c) => c.id === id)?.type === 'ninja' };
+/** Só Ninjas formam Times; Missões Permanentes (X) entram na Vila com X Moedas Ninja. */
+const rules: CardRules = {
+  isNinja: (id: string) => CARDS.find((c) => c.id === id)?.type === 'ninja',
+  permanentCoins: (id: string) => {
+    const card = CARDS.find((c) => c.id === id);
+    return card ? permanentCoins(card) : 0;
+  },
+};
 
 /**
  * Deck de exemplo: 50 cartas a partir de uma posição do catálogo, com algumas em 3 cópias (como num deck de
@@ -142,14 +149,25 @@ export default function ArenaPreviewPage() {
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
     onReturnHand: () => play({ type: 'returnHand' }),
+    onReturnHandToBottom: () => play({ type: 'returnHand', bottom: true }),
     onSearch: () => setSearching(true),
     onJoinTeam: (uid, target) => play({ type: 'joinTeam', uid, target }),
     onMoveTeam: (uid, to, before) => play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}) }),
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
-    onReturnReward: (area) => play({ type: 'returnReward', owner: area === 'mine' ? 'host' : 'guest' }),
+    onReturnReward: (area, uid, to) =>
+      play({
+        type: 'returnReward',
+        owner: area === 'mine' ? 'host' : 'guest',
+        ...(uid ? { uid } : {}),
+        ...(to === 'hand' ? { to } : {}),
+      }),
+    onPeekReward: (area, index) => play({ type: 'peekReward', owner: area === 'mine' ? 'host' : 'guest', index }),
     onAdjustPower: (uid, delta) => play({ type: 'adjustPower', uid, delta }),
+    onSetCoins: (uid, kind, delta) => play({ type: 'setCoins', uid, kind, delta }),
+    onFlip: () => play({ type: 'flip' }),
+    onAdjustTurn: (delta) => play({ type: 'adjustTurn', delta }),
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     // Sem oponente de verdade: ele devolve o turno na hora.
@@ -214,6 +232,7 @@ export default function ArenaPreviewPage() {
         notice={error}
         log={view.log}
         yourSide="host"
+        peek={view.peek}
       />
       <SearchDeckDialog
         open={searching}

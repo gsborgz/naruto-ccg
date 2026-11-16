@@ -5,6 +5,7 @@ import { Dialog } from '@/components/Dialog';
 import { CARDS_BY_ID } from '@/data/cards';
 import { cardImageUrl, CARD_TYPE_LABEL } from '@/models/card';
 import { useCardName } from '@/lib/cardLanguage';
+import { CardZoom, type HoveredCard } from './CardZoom';
 
 /**
  * Buscar uma carta no deck: mostra o que há no deck (por nome, sem revelar a ordem) e leva a carta
@@ -25,6 +26,8 @@ export function SearchDeckDialog({
   const [counts, setCounts] = useState<Record<string, number> | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState('');
+  // Alt + mouse sobre uma carta: a carta ampliada (como na arena).
+  const [hovered, setHovered] = useState<HoveredCard | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -32,6 +35,7 @@ export function SearchDeckDialog({
     setCounts(null);
     setError(null);
     setQuery('');
+    setHovered(null);
     load()
       .then((c) => !cancelled && setCounts(c))
       .catch((e: Error) => !cancelled && setError(e.message));
@@ -72,6 +76,8 @@ export function SearchDeckDialog({
               <button
                 type="button"
                 onClick={() => onPick(id)}
+                onMouseEnter={(e) => card && setHovered({ card, clientX: e.clientX })}
+                onMouseLeave={() => setHovered(null)}
                 title={name}
                 className="group relative flex w-full flex-col gap-1 rounded-lg p-1 text-left hover:bg-surface-2"
               >
@@ -96,6 +102,8 @@ export function SearchDeckDialog({
           {entries.length === 0 && <li className="col-span-full text-sm text-muted">Nenhuma carta com esse nome.</li>}
         </ul>
       )}
+      {/* Dentro do <dialog>: fora dele, a carta ampliada ficaria atrás do modal. */}
+      {open && <CardZoom hovered={hovered} />}
     </Dialog>
   );
 }

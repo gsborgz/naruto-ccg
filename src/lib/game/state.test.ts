@@ -8,6 +8,7 @@ import {
   gameView,
   GameError,
   LOG_MAX,
+  NINJA_COIN,
   OPENING_HAND,
   PHASES,
   parseGameAction,
@@ -248,6 +249,60 @@ test('Prêmios: devolver manda a última carta da Área de volta ao topo do Deck
   assert.equal(gameView(g, 'host').log.at(-1)!.owner, 'guest');
   assert.deepEqual(parseGameAction({ type: 'returnReward', owner: 'guest' }), { type: 'returnReward', owner: 'guest' });
   assert.equal(parseGameAction({ type: 'returnReward', owner: 'x' }), null);
+});
+
+test('Prêmios: olhar um Prêmio mostra a carta só para quem olhou; dá para devolver essa carta', () => {
+  let g = newGame();
+  const rng = seeded(8);
+  const first = g.players.host.deck[0];
+  g = applyGameAction(g, 'host', { type: 'giveReward' }, rng);
+  const second = g.players.host.deck[0];
+  g = applyGameAction(g, 'host', { type: 'giveReward' }, rng);
+  const before = JSON.stringify(g.players);
+
+  // O guest olha o primeiro Prêmio da própria Área: a mesa não muda; só ele vê a carta.
+  g = applyGameAction(g, 'guest', { type: 'peekReward', owner: 'guest', index: 0 }, rng);
+  assert.equal(JSON.stringify(g.players), before, 'olhar não move nada');
+  assert.deepEqual(gameView(g, 'guest').peek, { owner: 'guest', index: 0, card: first });
+  assert.equal(gameView(g, 'host').peek, undefined, 'o oponente não recebe a carta olhada');
+  const seen = gameView(g, 'guest').log.at(-1)!;
+  assert.equal(seen.type, 'peekReward');
+  assert.deepEqual(seen.cards, [first.cardId]);
+  assert.equal(seen.slot, 1);
+  const theirs = gameView(g, 'host').log.at(-1)!;
+  assert.equal(theirs.cards, undefined, 'o oponente sabe que ele olhou, não o quê');
+  assert.equal(theirs.hidden, true);
+  assert.throws(() => applyGameAction(g, 'guest', { type: 'peekReward', owner: 'guest', index: 5 }, rng), /não existe/);
+
+  // Devolve a carta olhada (não a última): volta ao topo do Deck de quem a deu.
+  g = applyGameAction(g, 'guest', { type: 'returnReward', owner: 'guest', uid: first.uid }, rng);
+  assert.deepEqual(g.players.guest.rewards.map((c) => c.uid), [second.uid]);
+  assert.equal(g.players.host.deck[0].uid, first.uid);
+  assert.equal(gameView(g, 'guest').peek, undefined, 'a carta saiu da Área: some da visão');
+  assert.deepEqual(gameView(g, 'guest').log.at(-1)!.cards, [first.cardId], 'quem devolveu vê qual foi');
+  assert.equal(gameView(g, 'host').log.at(-1)!.cards, undefined, 'o oponente não');
+  assert.throws(() => applyGameAction(g, 'guest', { type: 'returnReward', owner: 'guest', uid: first.uid }, rng), /não está mais/);
+
+  assert.deepEqual(parseGameAction({ type: 'peekReward', owner: 'host', index: 2 }), { type: 'peekReward', owner: 'host', index: 2 });
+  assert.equal(parseGameAction({ type: 'peekReward', owner: 'host', index: -1 }), null);
+  assert.deepEqual(parseGameAction({ type: 'returnReward', owner: 'host', uid: 'u1' }), { type: 'returnReward', owner: 'host', uid: 'u1' });
+  assert.equal(parseGameAction({ type: 'returnReward', owner: 'host', uid: 3 }), null);
+
+  // Recuperar para a mão: a carta olhada vai para a mão de quem a deu.
+  const handBefore = g.players.host.hand.length;
+  g = applyGameAction(g, 'host', { type: 'peekReward', owner: 'guest', index: 0 }, rng);
+  g = applyGameAction(g, 'host', { type: 'returnReward', owner: 'guest', uid: second.uid, to: 'hand' }, rng);
+  assert.equal(g.players.guest.rewards.length, 0);
+  assert.equal(g.players.host.hand.length, handBefore + 1);
+  assert.equal(g.players.host.hand.at(-1)!.uid, second.uid);
+  assert.equal(gameView(g, 'host').log.at(-1)!.to, 'hand');
+  assert.deepEqual(parseGameAction({ type: 'returnReward', owner: 'host', uid: 'u1', to: 'hand' }), {
+    type: 'returnReward',
+    owner: 'host',
+    uid: 'u1',
+    to: 'hand',
+  });
+  assert.equal(parseGameAction({ type: 'returnReward', owner: 'host', to: 'discard' }), null);
 });
 
 test('revelar: cartas do topo ou do fundo do Deck vão para a Vila, à vista dos dois', () => {
@@ -505,4 +560,116 @@ test('devolver a mão ao Deck: todas as cartas voltam e o Deck é embaralhado; o
   assert.equal(theirs.cards, undefined, 'o oponente não vê quais');
   assert.equal(theirs.count, hand.length, 'mas vê quantas');
   assert.deepEqual(parseGameAction({ type: 'returnHand' }), { type: 'returnHand' });
+});
+
+test('Moedas: pôr e tirar por tipo, seguem a carta na Vila/Campo e somem fora', () => {
+  let { g, uids } = villageOfSix();
+  const [a, b] = uids.filter((uid) => g.players.host.village.find((x) => x.uid === uid)?.cardId !== 'e');
+  const act = (action: Parameters<typeof applyGameAction>[2]) => (g = applyGameAction(g, 'host', action, seeded(), ninjas));
+  const find = (uid: string) => [...g.players.host.village, ...g.players.host.battlefield].find((x) => x.uid === uid);
+
+  const logBefore = g.log!.length;
+  act({ type: 'setCoins', uid: a, kind: 'Growth', delta: 1 });
+  act({ type: 'setCoins', uid: a, kind: 'Growth', delta: 1 });
+  act({ type: 'setCoins', uid: a, kind: ' "Bomb" ', delta: 1 }); // nome arrumado
+  assert.deepEqual(find(a)?.coins, { Growth: 2, Bomb: 1 });
+  // Cliques seguidos no mesmo tipo viram uma jogada só.
+  assert.equal(g.log!.length, logBefore + 2);
+  assert.equal(g.log!.at(-2)!.delta, 2);
+  assert.equal(g.log!.at(-2)!.coin, 'Growth');
+
+  // Juntar ao Time, ferir, ir para o Campo e trocar o Líder mantêm as moedas.
+  act({ type: 'joinTeam', uid: a, target: b });
+  act({ type: 'setInjured', uid: a, injured: true });
+  act({ type: 'moveTeam', uid: b, to: 'battlefield' });
+  act({ type: 'setLeader', uid: a });
+  act({ type: 'adjustPower', uid: a, delta: 1 });
+  assert.deepEqual(find(a)?.coins, { Growth: 2, Bomb: 1 });
+
+  // Tirar até zerar apaga o tipo; tirar de um tipo que não há não faz nada.
+  act({ type: 'setCoins', uid: a, kind: 'Bomb', delta: -5 });
+  assert.deepEqual(find(a)?.coins, { Growth: 2 });
+  const same = g;
+  act({ type: 'setCoins', uid: a, kind: 'Poison', delta: -1 });
+  assert.equal(g, same);
+
+  // Fora da Vila/Campo, as moedas somem.
+  act({ type: 'move', uid: a, to: 'hand' });
+  assert.equal(g.players.host.hand.find((x) => x.uid === a)?.coins, undefined);
+  assert.throws(() => act({ type: 'setCoins', uid: a, kind: 'Growth', delta: 1 }), /Vila ou no Campo/);
+
+  assert.deepEqual(parseGameAction({ type: 'setCoins', uid: 'h1', kind: '−1/−1', delta: 2 }), {
+    type: 'setCoins',
+    uid: 'h1',
+    kind: '-1/-1',
+    delta: 2,
+  });
+  assert.equal(parseGameAction({ type: 'setCoins', uid: 'h1', kind: '   ', delta: 1 }), null);
+  assert.equal(parseGameAction({ type: 'setCoins', uid: 'h1', kind: 'Growth', delta: 0 }), null);
+});
+
+test('Moedas: Missão Permanente (X) entra na Vila com X Moedas Ninja', () => {
+  let g = newGame();
+  const rules: CardRules = { isNinja: () => false, permanentCoins: (id) => (id === 'a' ? 3 : 0) };
+  const mission = g.players.host.hand.find((c) => c.cardId === 'a') ?? g.players.host.deck.find((c) => c.cardId === 'a')!;
+  g = applyGameAction(g, 'host', { type: 'move', uid: mission.uid, to: 'chakra' }, seeded(), rules);
+  g = applyGameAction(g, 'host', { type: 'move', uid: mission.uid, to: 'village' }, seeded(), rules);
+  assert.deepEqual(g.players.host.village.find((c) => c.uid === mission.uid)?.coins, { [NINJA_COIN]: 3 });
+  // Reposicionar na Vila não põe as moedas de novo.
+  g = applyGameAction(g, 'host', { type: 'setCoins', uid: mission.uid, kind: NINJA_COIN, delta: -1 }, seeded(), rules);
+  g = applyGameAction(g, 'host', { type: 'move', uid: mission.uid, to: 'village' }, seeded(), rules);
+  assert.deepEqual(g.players.host.village.find((c) => c.uid === mission.uid)?.coins, { [NINJA_COIN]: 2 });
+});
+
+test('Moeda Ninja: o servidor sorteia Cara ou Coroa e anota no registro para os dois', () => {
+  let g = newGame();
+  const before = g.players;
+  g = applyGameAction(g, 'guest', { type: 'flip' }, () => 0.1);
+  g = applyGameAction(g, 'guest', { type: 'flip' }, () => 0.9);
+  assert.equal(g.players, before, 'a mesa não muda');
+  assert.deepEqual(
+    g.log!.slice(-2).map((e) => [e.who, e.type, e.result]),
+    [
+      ['guest', 'flip', 'heads'],
+      ['guest', 'flip', 'tails'],
+    ],
+  );
+  assert.equal(gameView(g, 'host').log.at(-1)!.result, 'tails');
+  assert.deepEqual(parseGameAction({ type: 'flip' }), { type: 'flip' });
+});
+
+test('Marcador de Turnos: −/+ só no seu, entre 0 e 10', () => {
+  let g = newGame();
+  g = applyGameAction(g, 'guest', { type: 'adjustTurn', delta: 1 }, seeded());
+  g = applyGameAction(g, 'guest', { type: 'adjustTurn', delta: 1 }, seeded());
+  assert.deepEqual(g.turn, { host: 0, guest: 2 });
+  assert.equal(g.log!.length, 1, 'cliques seguidos viram uma jogada só');
+  assert.equal(g.log!.at(-1)!.delta, 2);
+  const same = applyGameAction(g, 'host', { type: 'adjustTurn', delta: -1 }, seeded());
+  assert.equal(same, g, 'abaixo de 0 não faz nada');
+  g = applyGameAction(g, 'guest', { type: 'adjustTurn', delta: 99 }, seeded());
+  assert.equal(g.turn.guest, TURN_MAX);
+  assert.deepEqual(parseGameAction({ type: 'adjustTurn', delta: -1 }), { type: 'adjustTurn', delta: -1 });
+  assert.equal(parseGameAction({ type: 'adjustTurn', delta: 0 }), null);
+});
+
+test('mão para o fundo do Deck: na ordem da mão, sem embaralhar; carta sozinha para o topo ou fundo', () => {
+  let g = newGame();
+  const deck = g.players.host.deck.map((c) => c.uid);
+  const hand = g.players.host.hand.map((c) => c.uid);
+  g = applyGameAction(g, 'host', { type: 'returnHand', bottom: true }, seeded(9));
+  assert.deepEqual(g.players.host.deck.map((c) => c.uid), [...deck, ...hand], 'o Deck não foi embaralhado');
+  assert.equal(g.players.host.hand.length, 0);
+  assert.equal(g.log!.at(-1)!.position, 'bottom');
+  assert.equal(gameView(g, 'guest').log.at(-1)!.cards, undefined, 'o oponente não vê quais');
+
+  // Uma carta sozinha: topo ou fundo, sem embaralhar o resto.
+  g = applyGameAction(g, 'host', { type: 'draw' }, seeded());
+  const one = g.players.host.hand[0].uid;
+  const rest = g.players.host.deck.map((c) => c.uid);
+  g = applyGameAction(g, 'host', { type: 'move', uid: one, to: 'deck', bottom: true }, seeded());
+  assert.deepEqual(g.players.host.deck.map((c) => c.uid), [...rest, one]);
+
+  assert.deepEqual(parseGameAction({ type: 'returnHand', bottom: true }), { type: 'returnHand', bottom: true });
+  assert.deepEqual(parseGameAction({ type: 'returnHand', bottom: 'x' }), { type: 'returnHand' });
 });

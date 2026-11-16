@@ -49,6 +49,13 @@ export interface CardInstance {
    * Time mexem no Líder; se o Ninja sai do Time, o ajuste vai com ele. Só na Vila e no Campo de Batalha.
    */
   power?: number;
+  /**
+   * Moedas sobre a carta (docs/REGRAS.md 6.4 e 6.5): tipo → quantidade (sempre ≥ 1). O tipo é o nome
+   * impresso ("Growth", "+1/+1", "Poison", "Bomb"…) ou "Ninja" (a Moeda Ninja das Missões Permanentes (X)).
+   * Moedas de Poder ("Growth", "+N/+N", "-N/-N") somam no Poder do Time (`teamPower.ts`). Só na Vila e no
+   * Campo de Batalha, e continuam com a carta entre as duas.
+   */
+  coins?: Record<string, number>;
 }
 
 export type PlayerZones = Record<ZoneName, CardInstance[]>;
@@ -72,6 +79,11 @@ export interface GameState {
   theme?: string;
   /** Registro de jogo: as últimas jogadas (até `LOG_MAX`), da mais antiga para a mais nova. */
   log?: LogEntry[];
+  /**
+   * Prêmio de Batalha que cada jogador olhou por último (`peekReward`): só ele vê essa carta (`GameView.peek`),
+   * enquanto ela continuar naquela Área de Prêmios.
+   */
+  peek?: Partial<Record<Side, { owner: Side; uid: string }>>;
 }
 
 /** Quantas entradas do registro de jogo ficam guardadas na partida. */
@@ -102,10 +114,16 @@ export interface LogEntry {
   count?: number;
   /** adjustPower: quanto o Poder mudou (somado nas jogadas seguidas no mesmo Time). */
   delta?: number;
-  /** returnReward: de quem era a Área de Prêmios de onde a carta saiu. */
+  /** returnReward e peekReward: de quem é a Área de Prêmios. */
   owner?: Side;
+  /** peekReward: posição do Prêmio olhado na Área (1 = o primeiro que entrou). */
+  slot?: number;
   /** reveal: de onde do Deck saíram as cartas. */
   position?: 'top' | 'bottom';
+  /** setCoins: o tipo de moeda (`delta` diz quantas entraram ou saíram). */
+  coin?: string;
+  /** flip: o lado sorteado da Moeda Ninja. */
+  result?: 'heads' | 'tails';
 }
 
 /** Fases do turno (docs/REGRAS.md 3.2 a 3.6). */
@@ -127,9 +145,10 @@ export type GameAction =
   | { type: 'search'; cardId: string }
   /**
    * Devolver a mão inteira ao Deck e embaralhar (docs/REGRAS.md 2, passo 4-A: o mulligan). A compra das
-   * novas cartas continua manual.
+   * novas cartas continua manual. Com `bottom`, a mão vai para o fundo do Deck, na ordem da mão, **sem
+   * embaralhar** (efeitos como "put your hand on the bottom of your Deck").
    */
-  | { type: 'returnHand' }
+  | { type: 'returnHand'; bottom?: boolean }
   /** Juntar o Ninja `uid` ao Time do Ninja `target` (arrastar uma carta para cima da outra). */
   | { type: 'joinTeam'; uid: string; target: string }
   /** Mover o Time inteiro do Ninja `uid` para outra zona (ex.: enviar para o Campo de Batalha). */
@@ -147,10 +166,16 @@ export type GameAction =
   | { type: 'giveReward'; uid?: string }
   /**
    * Devolver um Prêmio de Batalha (ex.: dado por engano): a última carta que entrou na Área de Prêmios de
-   * `owner` volta, face para baixo, ao topo do Deck do dono da carta (o oponente de `owner`). Qualquer um dos
-   * dois pode devolver, de qualquer uma das Áreas.
+   * `owner` (ou, com `uid`, essa carta, depois de olhá-la com `peekReward`) volta, face para baixo, ao topo do
+   * Deck do dono da carta (o oponente de `owner`); com `to: 'hand'`, vai para a mão dele (o "Recuperar" do
+   * Prêmio olhado). Qualquer um dos dois pode devolver, de qualquer uma das Áreas.
    */
-  | { type: 'returnReward'; owner: Side }
+  | { type: 'returnReward'; owner: Side; uid?: string; to?: 'deck' | 'hand' }
+  /**
+   * Olhar o Prêmio de Batalha na posição `index` (0 = o primeiro que entrou) da Área de `owner`: só quem
+   * olhou vê a carta (`GameView.peek`) e o registro anota que ele olhou (o nome, só para ele).
+   */
+  | { type: 'peekReward'; owner: Side; index: number }
   /**
    * Revelar `count` cartas do topo ou do fundo do seu Deck: elas vão para a sua Vila, face para cima, na ordem
    * do Deck (a primeira é a de cima), para os dois jogadores verem. Depois, cada uma é movida à mão.
@@ -158,6 +183,18 @@ export type GameAction =
   | { type: 'reveal'; from: 'top' | 'bottom'; count: number }
   /** Aumentar (`delta` > 0) ou diminuir o Poder do Time do Ninja `uid` (o ajuste fica no Líder). */
   | { type: 'adjustPower'; uid: string; delta: number }
+  /**
+   * Pôr (`delta` > 0) ou tirar moedas do tipo `kind` da carta `uid` (na Vila ou no Campo de Batalha).
+   * Com 0 moedas, o tipo some da carta.
+   */
+  | { type: 'setCoins'; uid: string; kind: string; delta: number }
+  /**
+   * Jogar a Moeda Ninja [Flip] (docs/REGRAS.md 4.16): o servidor sorteia Cara [Heads] ou Coroa [Tails] e
+   * anota no registro, para os dois verem. Qualquer jogador, a qualquer momento.
+   */
+  | { type: 'flip' }
+  /** Subir (`delta` > 0) ou descer o SEU Marcador de Turnos (efeitos de cartas), entre 0 e `TURN_MAX`. */
+  | { type: 'adjustTurn'; delta: number }
   /**
    * Passar o turno (docs/REGRAS.md 3.6 N): só o Atacante. Avança o próprio Marcador de Turnos 1 casa e o
    * oponente vira o Atacante. O limite de 6 cartas na mão (3.6 M) não é cobrado: os jogadores se policiam.
@@ -185,9 +222,43 @@ const TEAM_ZONES: ReadonlySet<ZoneName> = new Set(['village', 'battlefield']);
 /** O que as ações precisam saber do catálogo. */
 export interface CardRules {
   isNinja: (cardId: string) => boolean;
+  /**
+   * Moedas Ninja com que a carta entra na Vila: o X de uma Missão "Permanent (X)" (docs/REGRAS.md 6.4).
+   * 0 (ou sem a função) = nenhuma.
+   */
+  permanentCoins?: (cardId: string) => number;
 }
 
 const ANY_CARD: CardRules = { isNinja: () => true };
+
+/** Tipo da Moeda Ninja das Missões Permanentes (X). */
+export const NINJA_COIN = 'Ninja';
+/**
+ * Atalhos de moeda na tela, por tipo de carta (qualquer outra é digitada como impressa, ex.: "+1/+1",
+ * "Bomb"): nos Ninjas, Growth e Poison; nas outras cartas (Missões Permanentes, Clientes), a Moeda Ninja.
+ */
+export const COIN_SUGGESTIONS = { ninja: ['Growth', 'Poison'], other: [NINJA_COIN] } as const;
+/** Mais moedas de um tipo numa carta. */
+export const COINS_MAX = 99;
+/** Mais tipos de moeda diferentes numa carta. */
+export const COIN_KINDS_MAX = 12;
+/** Maior nome de tipo de moeda. */
+export const COIN_NAME_MAX = 24;
+
+/**
+ * Nome do tipo de moeda arrumado: sem espaços sobrando, sem aspas em volta e com o sinal de menos comum
+ * ("−1/−1" vira "-1/-1"). Vazio, longo demais ou com caracteres de controle: `null`.
+ */
+export function coinKind(raw: string): string | null {
+  const kind = raw
+    .replace(/[−–]/g, '-')
+    .trim()
+    .replace(/^["'“”]+|["'“”]+$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!kind || kind.length > COIN_NAME_MAX || /[\u0000-\u001f\u007f]/.test(kind)) return null;
+  return kind;
+}
 
 /** Chave do grupo de uma carta: o Time dela, ou ela mesma (Time de 1). */
 function groupKey(c: CardInstance): string {
@@ -211,15 +282,35 @@ export function teamGroups(cards: readonly CardInstance[]): CardInstance[][] {
   return [...groups.values()];
 }
 
-/** Uma carta só com os campos dados (sem `team`/`injured`/`power` indefinidos no JSON). */
-function card(uid: string, cardId: string, team?: string, injured?: boolean, power?: number): CardInstance {
+/** Uma carta só com os campos dados (sem `team`/`injured`/`power`/`coins` indefinidos no JSON). */
+function card(
+  uid: string,
+  cardId: string,
+  team?: string,
+  injured?: boolean,
+  power?: number,
+  coins?: Record<string, number>,
+): CardInstance {
   return {
     uid,
     cardId,
     ...(team ? { team } : {}),
     ...(injured ? { injured: true as const } : {}),
     ...(power ? { power } : {}),
+    ...(coins && Object.keys(coins).length > 0 ? { coins } : {}),
   };
+}
+
+/** A mesma carta com outro Time/estado, mantendo o resto (Ferido, ajuste de Poder e moedas). */
+function keep(c: CardInstance, patch: { team?: string | null; injured?: boolean; power?: number }): CardInstance {
+  return card(
+    c.uid,
+    c.cardId,
+    patch.team === null ? undefined : (patch.team ?? c.team),
+    patch.injured ?? c.injured,
+    patch.power ?? c.power,
+    c.coins,
+  );
 }
 
 /**
@@ -235,9 +326,10 @@ function normalizeTeams(zones: PlayerZones) {
       const team = here && c.team && (counts.get(c.team) ?? 0) >= 2 ? c.team : undefined;
       const injured = here && !!c.injured;
       const power = here ? (c.power ?? 0) : 0;
-      return team === c.team && injured === !!c.injured && power === (c.power ?? 0)
+      const coins = here ? c.coins : undefined;
+      return team === c.team && injured === !!c.injured && power === (c.power ?? 0) && coins === c.coins
         ? c
-        : card(c.uid, c.cardId, team, injured, power);
+        : card(c.uid, c.cardId, team, injured, power, coins);
     });
   }
 }
@@ -340,6 +432,36 @@ export function applyGameAction(
   rng: Rng,
   rules: CardRules = ANY_CARD,
 ): GameState {
+  // Jogar a moeda não muda a mesa: só o registro, com o resultado.
+  if (action.type === 'flip') {
+    const log = game.log ?? [];
+    const result = rng() < 0.5 ? ('heads' as const) : ('tails' as const);
+    const n = (log.at(-1)?.n ?? 0) + 1;
+    return { ...game, log: [...log, { n, who, turn: game.turnNumber ?? 1, type: 'flip' as const, result }].slice(-LOG_MAX) };
+  }
+  // Olhar um Prêmio também não muda a mesa: guarda o que o jogador viu e anota no registro.
+  if (action.type === 'peekReward') {
+    const rewards = game.players[action.owner].rewards;
+    const seen = rewards[action.index];
+    if (!seen) throw new GameError('Esse Prêmio não existe (a Área de Prêmios mudou).');
+    const log = game.log ?? [];
+    const n = (log.at(-1)?.n ?? 0) + 1;
+    const entry: LogEntry = {
+      n,
+      who,
+      turn: game.turnNumber ?? 1,
+      type: 'peekReward',
+      cards: [seen.cardId],
+      from: 'rewards',
+      owner: action.owner,
+      slot: action.index + 1,
+    };
+    return {
+      ...game,
+      peek: { ...game.peek, [who]: { owner: action.owner, uid: seen.uid } },
+      log: [...log, entry].slice(-LOG_MAX),
+    };
+  }
   const next = applyAction(game, who, action, rng, rules);
   if (next === game) return game;
   // Reordenar na mesma zona sem mudar a ordem (ex.: soltar a última carta no fim): nada a fazer nem anotar.
@@ -351,14 +473,16 @@ export function applyGameAction(
   }
   const entry = describe(game, next, who, action);
   const log = game.log ?? [];
-  // Cliques seguidos no +/− do mesmo Time viram uma jogada só no registro.
+  // Cliques seguidos no mesmo +/− (Poder do mesmo Time, moedas do mesmo tipo na mesma carta, Marcador de
+  // Turnos) viram uma jogada só no registro.
   const last = log.at(-1);
   if (
-    entry.type === 'adjustPower' &&
-    last?.type === 'adjustPower' &&
+    (entry.type === 'adjustPower' || entry.type === 'setCoins' || entry.type === 'adjustTurn') &&
+    last?.type === entry.type &&
     last.who === who &&
     last.turn === (game.turnNumber ?? 1) &&
-    last.cards?.[0] === entry.cards?.[0]
+    last.cards?.[0] === entry.cards?.[0] &&
+    last.coin === entry.coin
   ) {
     const delta = (last.delta ?? 0) + (entry.delta ?? 0);
     const rest = log.slice(0, -1);
@@ -415,7 +539,14 @@ function describe(
       };
     }
     case 'returnHand':
-      return { type: 'returnHand', cards: zones.hand.map((c) => c.cardId), count: zones.hand.length, from: 'hand', to: 'deck' };
+      return {
+        type: 'returnHand',
+        cards: zones.hand.map((c) => c.cardId),
+        count: zones.hand.length,
+        from: 'hand',
+        to: 'deck',
+        ...(action.bottom ? { position: 'bottom' as const } : {}),
+      };
     case 'joinTeam': {
       const c = at(action.uid);
       const t = at(action.target);
@@ -437,13 +568,31 @@ function describe(
     }
     case 'nextPhase':
       return { type: 'nextPhase', phase: after.phase ?? 0 };
-    case 'returnReward':
-      return { type: 'returnReward', from: 'rewards', to: 'deck', owner: action.owner };
+    case 'returnReward': {
+      // Com `uid` (o Prêmio olhado), quem devolveu sabe qual foi: o registro guarda a carta (só ele vê).
+      const c = action.uid ? before.players[action.owner].rewards.find((x) => x.uid === action.uid) : undefined;
+      return {
+        type: 'returnReward',
+        from: 'rewards',
+        to: action.to ?? 'deck',
+        owner: action.owner,
+        ...(c ? { cards: [c.cardId] } : {}),
+      };
+    }
+    case 'peekReward':
+      return { type: 'peekReward', from: 'rewards', owner: action.owner, slot: action.index + 1 };
     case 'adjustPower': {
       const c = at(action.uid);
       const leader = c && zones[c.zone].find((x) => groupKey(x) === groupKey(c.card));
       return { type: 'adjustPower', cards: leader ? [leader.cardId] : [], from: c?.zone, delta: action.delta };
     }
+    case 'setCoins': {
+      const c = at(action.uid);
+      return { type: 'setCoins', cards: c ? [c.card.cardId] : [], from: c?.zone, coin: action.kind, delta: action.delta };
+    }
+    case 'adjustTurn':
+      return { type: 'adjustTurn', delta: after.turn[who] - before.turn[who] };
+    case 'flip':
     case 'shuffle':
     case 'passTurn':
       return { type: action.type };
@@ -479,8 +628,13 @@ function applyAction(
       if (at.zone === action.to && !moved.team && !TEAM_ZONES.has(at.zone)) return game;
       if (action.before === moved.uid) return game;
       zones[at.zone].splice(at.index, 1);
-      // Mover uma carta sozinha a tira do Time (o ajuste de Poder vai junto).
-      const solo = card(moved.uid, moved.cardId, undefined, moved.injured, moved.power);
+      // Mover uma carta sozinha a tira do Time (o ajuste de Poder e as moedas vão junto).
+      let solo = keep(moved, { team: null });
+      // Missão Permanente (X) entrando na Vila: já com as X Moedas Ninja (docs/REGRAS.md 6.4).
+      const x = rules.permanentCoins?.(moved.cardId) ?? 0;
+      if (action.to === 'village' && !TEAM_ZONES.has(at.zone) && x > 0) {
+        solo = card(solo.uid, solo.cardId, undefined, false, 0, { [NINJA_COIN]: Math.min(COINS_MAX, x) });
+      }
       // Carta devolvida ao Deck vai para o topo (ou o fundo, com `bottom`); nas outras zonas, antes do Time de
       // `before` ou por último.
       if (action.to === 'deck') {
@@ -501,7 +655,9 @@ function applyAction(
       return done();
     case 'returnHand': {
       if (zones.hand.length === 0) throw new GameError('Sua mão está vazia.');
-      zones.deck = shuffle([...zones.deck, ...zones.hand.map((c) => card(c.uid, c.cardId))], rng);
+      const back = zones.hand.map((c) => card(c.uid, c.cardId));
+      // Para o fundo: na ordem da mão, sem embaralhar. Senão, junto com o Deck e embaralha (o mulligan).
+      zones.deck = action.bottom ? [...zones.deck, ...back] : shuffle([...zones.deck, ...back], rng);
       zones.hand = [];
       return done();
     }
@@ -540,7 +696,7 @@ function applyAction(
       for (let i = 0; i < list.length; i++) if (list[i].uid === target.uid) list[i] = { ...list[i], team: teamId };
       // Entra logo depois do último membro: o Líder continua sendo o primeiro.
       const last = list.reduce((acc, c, i) => (c.team === teamId ? i : acc), -1);
-      list.splice(last + 1, 0, card(joining.uid, joining.cardId, teamId, joining.injured, joining.power));
+      list.splice(last + 1, 0, keep(joining, { team: teamId }));
       return done();
     }
     case 'moveTeam': {
@@ -576,11 +732,22 @@ function applyAction(
       const owner = action.owner;
       const deckOwner = otherSide(owner);
       const rewards = [...game.players[owner].rewards];
-      const back = rewards.pop();
+      let back: CardInstance | undefined;
+      if (action.uid) {
+        const i = rewards.findIndex((c) => c.uid === action.uid);
+        if (i < 0) throw new GameError('Esse Prêmio não está mais nessa Área de Prêmios.');
+        back = rewards.splice(i, 1)[0];
+      } else {
+        back = rewards.pop();
+      }
       if (!back) throw new GameError('Essa Área de Prêmios está vazia.');
       const players = { ...game.players };
       players[owner] = { ...players[owner], rewards };
-      players[deckOwner] = { ...players[deckOwner], deck: [card(back.uid, back.cardId), ...players[deckOwner].deck] };
+      const back2 = card(back.uid, back.cardId);
+      players[deckOwner] =
+        action.to === 'hand'
+          ? { ...players[deckOwner], hand: [...players[deckOwner].hand, back2] }
+          : { ...players[deckOwner], deck: [back2, ...players[deckOwner].deck] };
       return { ...game, players };
     }
     case 'adjustPower': {
@@ -594,9 +761,38 @@ function applyAction(
       if (!rules.isNinja(leader.cardId)) throw new GameError('Só Ninjas têm Poder.');
       const power = Math.max(-POWER_MOD_MAX, Math.min(POWER_MOD_MAX, (leader.power ?? 0) + action.delta));
       if (power === (leader.power ?? 0)) return game;
-      list[li] = card(leader.uid, leader.cardId, leader.team, leader.injured, power);
+      list[li] = keep(leader, { power });
       return done();
     }
+    case 'setCoins': {
+      if (!Number.isInteger(action.delta) || action.delta === 0) return game;
+      const kind = coinKind(action.kind);
+      if (!kind) throw new GameError(`Dê um nome à moeda (até ${COIN_NAME_MAX} letras).`);
+      const at = mustFind(action.uid);
+      if (!TEAM_ZONES.has(at.zone)) throw new GameError('Moedas só ficam em cartas na Vila ou no Campo de Batalha.');
+      const target = zones[at.zone][at.index];
+      const coins = { ...target.coins };
+      const now = coins[kind] ?? 0;
+      if (now === 0 && action.delta < 0) return game;
+      if (now === 0 && Object.keys(coins).length >= COIN_KINDS_MAX) {
+        throw new GameError(`No máximo ${COIN_KINDS_MAX} tipos de moeda numa carta.`);
+      }
+      const count = Math.max(0, Math.min(COINS_MAX, now + action.delta));
+      if (count === now) return game;
+      if (count === 0) delete coins[kind];
+      else coins[kind] = count;
+      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, target.injured, target.power, coins);
+      return done();
+    }
+    case 'adjustTurn': {
+      if (!Number.isInteger(action.delta) || action.delta === 0) return game;
+      const turn = Math.max(0, Math.min(TURN_MAX, game.turn[who] + action.delta));
+      if (turn === game.turn[who]) return game;
+      return { ...game, turn: { ...game.turn, [who]: turn } as Record<Side, number> };
+    }
+    case 'flip':
+    case 'peekReward':
+      return game; // tratados em applyGameAction (a mesa não muda)
     case 'passTurn': {
       if (activeSide(game) !== who) throw new GameError('Só o Atacante (o jogador do turno) pode passar o turno.');
       return {
@@ -619,7 +815,7 @@ function applyAction(
       if (!TEAM_ZONES.has(at.zone)) throw new GameError('Só Ninjas na Vila ou no Campo de Batalha ficam Feridos.');
       if (!rules.isNinja(target.cardId)) throw new GameError('Só Ninjas ficam Feridos.');
       if (!!target.injured === action.injured) return game;
-      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, action.injured, target.power);
+      zones[at.zone][at.index] = keep(target, { injured: action.injured });
       return done();
     }
     case 'setLeader': {
@@ -656,6 +852,11 @@ export interface GameView {
   theme: string;
   /** Registro de jogo, com o nome das cartas só quando o jogador pode vê-las. */
   log: LogEntryView[];
+  /**
+   * O Prêmio de Batalha que ESTE jogador olhou por último, se ainda estiver na mesma Área: de quem é a Área,
+   * a posição (0 = o primeiro que entrou) e a carta. O oponente não recebe isto.
+   */
+  peek?: { owner: Side; index: number; card: CardInstance };
 }
 
 /** Entrada do registro como um jogador a vê: sem `cards` (e com `hidden`) se ele não pode ver as cartas. */
@@ -667,6 +868,12 @@ export type LogEntryView = LogEntry & { hidden?: boolean };
  */
 function logView(entry: LogEntry, viewer: Side | null): LogEntryView {
   if (!entry.cards?.length) return entry;
+  // Prêmio olhado (e devolvido depois de olhado): só quem olhou sabe qual é.
+  if (entry.type === 'peekReward' || entry.type === 'returnReward') {
+    if (entry.who === viewer) return entry;
+    const { cards: _hidden, ...rest } = entry;
+    return { ...rest, hidden: true };
+  }
   const sees = (zone: ZoneName | undefined) => !!zone && zone !== 'rewards' && canSee(zone, entry.who, viewer);
   if (sees(entry.from) || sees(entry.to)) return entry;
   const { cards: _hidden, ...rest } = entry;
@@ -694,7 +901,16 @@ export function gameView(game: GameState, viewer: Side | null): GameView {
     theme: game.theme ?? DEFAULT_BOARD_THEME,
     // Entradas de tema gravadas quando o tema era da partida (antes de virar preferência de cada um) não aparecem.
     log: (game.log ?? []).filter((e) => (e.type as string) !== 'setTheme').map((e) => logView(e, viewer)),
+    ...peekView(game, viewer),
   };
+}
+
+/** `GameView.peek` do jogador: o Prêmio que ele olhou, se a carta ainda estiver naquela Área. */
+function peekView(game: GameState, viewer: Side | null): Pick<GameView, 'peek'> {
+  const p = viewer ? game.peek?.[viewer] : undefined;
+  if (!p) return {};
+  const index = game.players[p.owner].rewards.findIndex((c) => c.uid === p.uid);
+  return index < 0 ? {} : { peek: { owner: p.owner, index, card: game.players[p.owner].rewards[index] } };
 }
 
 /**
@@ -713,9 +929,16 @@ export function parseGameAction(x: unknown): GameAction | null {
   if (a.type === 'move' && typeof a.uid === 'string' && (ZONES as readonly unknown[]).includes(a.to)) {
     return { type: 'move', uid: a.uid, to: a.to as ZoneName, ...before(a), ...(a.bottom === true ? { bottom: true } : {}) };
   }
-  if (a.type === 'draw' || a.type === 'shuffle' || a.type === 'passTurn' || a.type === 'nextPhase' || a.type === 'returnHand') {
+  if (
+    a.type === 'draw' ||
+    a.type === 'shuffle' ||
+    a.type === 'passTurn' ||
+    a.type === 'nextPhase' ||
+    a.type === 'flip'
+  ) {
     return { type: a.type };
   }
+  if (a.type === 'returnHand') return a.bottom === true ? { type: 'returnHand', bottom: true } : { type: 'returnHand' };
   if (a.type === 'setInjured' && typeof a.uid === 'string' && typeof a.injured === 'boolean') {
     return { type: 'setInjured', uid: a.uid, injured: a.injured };
   }
@@ -737,10 +960,39 @@ export function parseGameAction(x: unknown): GameAction | null {
     return { type: 'reveal', from: a.from, count: a.count as number };
   }
   if (a.type === 'returnReward' && (a.owner === 'host' || a.owner === 'guest')) {
-    return { type: 'returnReward', owner: a.owner };
+    if (a.uid !== undefined && typeof a.uid !== 'string') return null;
+    if (a.to !== undefined && a.to !== 'deck' && a.to !== 'hand') return null;
+    return {
+      type: 'returnReward',
+      owner: a.owner,
+      ...(typeof a.uid === 'string' ? { uid: a.uid } : {}),
+      ...(a.to === 'hand' ? { to: 'hand' as const } : {}),
+    };
+  }
+  if (
+    a.type === 'peekReward' &&
+    (a.owner === 'host' || a.owner === 'guest') &&
+    Number.isInteger(a.index) &&
+    (a.index as number) >= 0
+  ) {
+    return { type: 'peekReward', owner: a.owner, index: a.index as number };
   }
   if (a.type === 'adjustPower' && typeof a.uid === 'string' && Number.isInteger(a.delta) && a.delta !== 0) {
     return { type: 'adjustPower', uid: a.uid, delta: a.delta as number };
+  }
+  if (
+    a.type === 'setCoins' &&
+    typeof a.uid === 'string' &&
+    typeof a.kind === 'string' &&
+    coinKind(a.kind) !== null &&
+    Number.isInteger(a.delta) &&
+    a.delta !== 0 &&
+    Math.abs(a.delta as number) <= COINS_MAX
+  ) {
+    return { type: 'setCoins', uid: a.uid, kind: coinKind(a.kind)!, delta: a.delta as number };
+  }
+  if (a.type === 'adjustTurn' && Number.isInteger(a.delta) && a.delta !== 0 && Math.abs(a.delta as number) <= TURN_MAX) {
+    return { type: 'adjustTurn', delta: a.delta as number };
   }
   if (a.type === 'giveReward' && (a.uid === undefined || typeof a.uid === 'string')) {
     return a.uid === undefined ? { type: 'giveReward' } : { type: 'giveReward', uid: a.uid };

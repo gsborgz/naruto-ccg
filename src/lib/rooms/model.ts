@@ -89,6 +89,8 @@ export interface RoomEnv {
   isReinforcement: (cardId: string) => boolean;
   /** Só Ninjas formam Times. */
   isNinja: (cardId: string) => boolean;
+  /** Moedas Ninja com que uma Missão "Permanent (X)" entra na Vila. */
+  permanentCoins?: (cardId: string) => number;
 }
 
 const DEFAULT_ENV: RoomEnv = { rng: Math.random, isReinforcement: () => false, isNinja: () => true };

@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { formatTeamPower, teamPower, type PowerLookup } from './teamPower.ts';
+import type { CardInstance } from './state.ts';
+import { coinPower, formatTeamPower, teamPower, type PowerLookup } from './teamPower.ts';
 
 const POWERS: Record<string, { healthy: { combat: number | 'X'; support: number | 'X' }; injured: { combat: number | 'X'; support: number | 'X' } }> = {
   lider: { healthy: { combat: 3, support: 1 }, injured: { combat: 1, support: 0 } },
@@ -16,7 +17,7 @@ test('Poder do Time: Combate do Líder + Suporte dos Apoios (não Combate + Comb
     { uid: '2', cardId: 'apoio1' },
     { uid: '3', cardId: 'apoio2' },
   ];
-  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1, 1], mod: 0 });
+  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1, 1], mod: 0, coins: 0 });
 });
 
 test('Poder do Time: Ninja sozinho = o Combate dele; Ferido usa os valores de Ferido', () => {
@@ -42,7 +43,18 @@ test('Poder do Time: o ajuste manual dos Ninjas soma no Poder', () => {
     { uid: '1', cardId: 'lider', power: 2 },
     { uid: '2', cardId: 'apoio1', power: -1 },
   ];
-  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1], mod: 1 });
+  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1], mod: 1, coins: 0 });
   assert.equal(formatTeamPower(teamPower([{ uid: '1', cardId: 'lider', power: -9 }], lookup)!), '0');
   assert.equal(formatTeamPower(teamPower([{ uid: '1', cardId: 'xis', power: -2 }], lookup)!), 'X-2');
+});
+
+test('Poder do Time: moedas de Poder somam no Combate do Líder e no Suporte dos Apoios', () => {
+  const group: CardInstance[] = [
+    { uid: '1', cardId: 'lider', coins: { Growth: 2, Bomb: 1 } },
+    { uid: '2', cardId: 'apoio1', coins: { '+0/+2': 1, '-1/-1': 1 } },
+  ];
+  // 3 + 2 (Growth) | 1 + 2 − 1; "Bomb" não mexe no Poder.
+  assert.deepEqual(teamPower(group, lookup), { value: 7, hasX: false, parts: [3, 1], mod: 0, coins: 3 });
+  assert.deepEqual(coinPower('+3/+3'), { combat: 3, support: 3 });
+  assert.equal(coinPower('Poison'), null);
 });

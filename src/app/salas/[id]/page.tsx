@@ -151,14 +151,25 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
     onReturnHand: () => play({ type: 'returnHand' }),
+    onReturnHandToBottom: () => play({ type: 'returnHand', bottom: true }),
     onSearch: () => setSearching(true),
     onJoinTeam: (uid, target) => play({ type: 'joinTeam', uid, target }),
     onMoveTeam: (uid, to, before) => play({ type: 'moveTeam', uid, to, ...(before ? { before } : {}) }),
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
-    onReturnReward: (area) => play({ type: 'returnReward', owner: area === 'mine' ? you : opponentSeat }),
+    onReturnReward: (area, uid, to) =>
+      play({
+        type: 'returnReward',
+        owner: area === 'mine' ? you : opponentSeat,
+        ...(uid ? { uid } : {}),
+        ...(to === 'hand' ? { to } : {}),
+      }),
+    onPeekReward: (area, index) => play({ type: 'peekReward', owner: area === 'mine' ? you : opponentSeat, index }),
     onAdjustPower: (uid, delta) => play({ type: 'adjustPower', uid, delta }),
+    onSetCoins: (uid, kind, delta) => play({ type: 'setCoins', uid, kind, delta }),
+    onFlip: () => play({ type: 'flip' }),
+    onAdjustTurn: (delta) => play({ type: 'adjustTurn', delta }),
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     onPassTurn: () => play({ type: 'passTurn' }),
@@ -218,6 +229,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
         notice={room.actionError}
         log={game.log}
         yourSide={you}
+        peek={game.peek}
       />
       <SearchDeckDialog
         open={searching}

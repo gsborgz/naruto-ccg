@@ -6,6 +6,9 @@ import { Dialog } from '@/components/Dialog';
 import { CARDS_BY_ID } from '@/data/cards';
 import {
   BATTLEFIELD_MAX_TEAMS,
+  COIN_NAME_MAX,
+  COIN_SUGGESTIONS,
+  coinKind,
   countTeams,
   PHASES,
   TEAM_MAX,
@@ -19,9 +22,10 @@ import {
   type ZoneName,
 } from '@/lib/game/state';
 import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
-import { formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
+import { coinPower, formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
 import { cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { useCardName } from '@/lib/cardLanguage';
+import { CardZoom, type HoveredCard } from './CardZoom';
 import styles from './GameArena.module.css';
 
 /**
@@ -64,6 +68,8 @@ export interface ArenaControls {
   onShuffle: () => void;
   /** Devolve a mão inteira ao Deck e embaralha (o mulligan; o botão pede confirmação antes). */
   onReturnHand: () => void;
+  /** Devolve a mão inteira ao fundo do Deck, na ordem da mão, sem embaralhar. */
+  onReturnHandToBottom: () => void;
   /** Abre a busca de uma carta no deck (quem usa a arena mostra o diálogo). */
   onSearch: () => void;
   /** Junta o Ninja `uid` ao Time do Ninja `target` (soltar uma carta sobre a outra). */
@@ -77,12 +83,20 @@ export interface ArenaControls {
   /** Manda uma carta sua para os Prêmios do OPONENTE (sem `uid`: o topo do seu Deck). */
   onGiveReward: (uid?: string) => void;
   /**
-   * Devolve a última carta da Área de Prêmios (`mine` = a sua, `theirs` = a do oponente) ao topo do Deck de
-   * quem deu a carta.
+   * Devolve a última carta da Área de Prêmios (`mine` = a sua, `theirs` = a do oponente), ou a carta `uid`
+   * (um Prêmio olhado), ao topo do Deck de quem deu a carta; com `to: 'hand'`, para a mão dele.
    */
-  onReturnReward: (area: 'mine' | 'theirs') => void;
+  onReturnReward: (area: 'mine' | 'theirs', uid?: string, to?: 'deck' | 'hand') => void;
+  /** Olha o Prêmio na posição `index` (0 = o primeiro que entrou) da Área: só você vê (`GameArena.peek`). */
+  onPeekReward: (area: 'mine' | 'theirs', index: number) => void;
   /** Aumenta (`delta` > 0) ou diminui o Poder do Time do Ninja `uid`. */
   onAdjustPower: (uid: string, delta: number) => void;
+  /** Põe (`delta` > 0) ou tira moedas do tipo `kind` da carta `uid` (na Vila ou no Campo de Batalha). */
+  onSetCoins: (uid: string, kind: string, delta: number) => void;
+  /** Joga a Moeda Ninja: o servidor sorteia Cara ou Coroa e os dois veem o resultado. */
+  onFlip: () => void;
+  /** Sobe (`delta` > 0) ou desce o seu Marcador de Turnos. */
+  onAdjustTurn: (delta: number) => void;
   /** Revela `count` cartas do topo ou do fundo do seu Deck: vão para a sua Vila, à vista dos dois. */
   onReveal: (from: 'top' | 'bottom', count: number) => void;
   /** Avança para a próxima fase do turno (só quando você é o Atacante). */
@@ -176,37 +190,9 @@ function cx(...names: (string | false | null | undefined)[]): string {
   return names.filter(Boolean).join(' ');
 }
 
-/** Carta sob o mouse (e onde o mouse está), para a ampliação com Alt. */
-interface HoveredCard {
-  card: Card;
-  clientX: number;
-}
 const HoverContext = createContext<(hovered: HoveredCard | null) => void>(() => {});
-
-/** Alt pressionado agora? (Soltar fora da janela também conta: perder o foco zera.) */
-function useAltKey(): boolean {
-  const [alt, setAlt] = useState(false);
-  useEffect(() => {
-    const key = (e: KeyboardEvent) => {
-      if (e.key !== 'Alt') return;
-      e.preventDefault(); // no Windows, soltar o Alt sozinho ativaria o menu do navegador
-      setAlt(e.type === 'keydown');
-    };
-    const move = (e: MouseEvent) => setAlt(e.altKey);
-    const reset = () => setAlt(false);
-    window.addEventListener('keydown', key);
-    window.addEventListener('keyup', key);
-    window.addEventListener('mousemove', move);
-    window.addEventListener('blur', reset);
-    return () => {
-      window.removeEventListener('keydown', key);
-      window.removeEventListener('keyup', key);
-      window.removeEventListener('mousemove', move);
-      window.removeEventListener('blur', reset);
-    };
-  }, []);
-  return alt;
-}
+/** Os seus controles, para os atalhos de cada carta (T e F mandam a carta para o topo ou o fundo do Deck). */
+const ControlsContext = createContext<ArenaControls | undefined>(undefined);
 
 /** Escala do palco para caber inteiro no elemento (recalcula ao redimensionar). */
 function useStageScale(ref: React.RefObject<HTMLElement | null>): number {
@@ -407,14 +393,28 @@ function TableCard({
   const card = CARDS_BY_ID.get(inst.cardId);
   const nameOf = useCardName();
   const setHovered = useContext(HoverContext);
+  const controls = useContext(ControlsContext);
   const open = () => (onClick ? onClick() : card && onInspect(card, inst));
+  // T / F com o mouse sobre uma carta sua: ela vai para o topo / o fundo do seu Deck, sem embaralhar.
+  // Esquadrões não vão para o Deck (ficam no Reforço).
+  const toDeck = mine && controls && !controls.busy && !(card && isReinforcementCard(card));
+  const hoverKeys = useHoverKeys({
+    t: toDeck ? () => controls.onMove(inst.uid, 'deck') : undefined,
+    f: toDeck ? () => controls.onMoveToDeckBottom(inst.uid) : undefined,
+  });
   return (
     <div
       role="button"
       tabIndex={0}
       draggable={mine}
-      onMouseEnter={(e) => card && setHovered({ card, clientX: e.clientX })}
-      onMouseLeave={() => setHovered(null)}
+      onMouseEnter={(e) => {
+        hoverKeys.onMouseEnter();
+        if (card) setHovered({ card, clientX: e.clientX });
+      }}
+      onMouseLeave={() => {
+        hoverKeys.onMouseLeave();
+        setHovered(null);
+      }}
       {...(mine ? dragSource(CARD_MIME, inst.uid, true) : {})}
       onClick={open}
       onKeyDown={(e) => e.key === 'Enter' && open()}
@@ -584,6 +584,116 @@ function CardMoveActions({
   );
 }
 
+/** Prêmio de Batalha olhado por este jogador (como a arena o recebe: a Área pela sua perspectiva). */
+export interface ArenaPeek {
+  area: 'mine' | 'theirs';
+  /** Posição na Área (0 = o primeiro que entrou). */
+  index: number;
+  card: CardInstance;
+}
+
+/**
+ * Olhar um Prêmio de Batalha: escolhe a posição (as cartas ficam face para baixo), o servidor mostra a carta
+ * só para você e anota no registro; depois dá para recuperá-la (volta ao topo do Deck de quem a deu).
+ */
+function PeekRewardDialog({
+  area,
+  count,
+  peek,
+  controls,
+  opponentName,
+  onClose,
+}: {
+  area: 'mine' | 'theirs';
+  /** Quantos Prêmios há na Área. */
+  count: number;
+  peek?: ArenaPeek;
+  controls: ArenaControls;
+  opponentName: string;
+  onClose: () => void;
+}) {
+  const nameOf = useCardName();
+  // Só mostra a carta olhada NESTE diálogo (um Prêmio olhado antes não aparece ao abrir de novo).
+  const [asked, setAsked] = useState(false);
+  const shown = asked && peek && peek.area === area ? peek : null;
+  const shownCard = shown ? CARDS_BY_ID.get(shown.card.cardId) : undefined;
+  const giverHand = area === 'mine' ? `a mão de ${opponentName}` : 'a sua mão';
+  const title = area === 'mine' ? 'Olhar um dos seus Prêmios' : `Olhar um Prêmio de ${opponentName}`;
+  const ordinal = (i: number) => (i === count - 1 && count > 1 ? `${i + 1}º (o último)` : `${i + 1}º`);
+
+  return (
+    <Dialog open onClose={onClose} title={title}>
+      {shown && shownCard ? (
+        <div className="flex flex-col items-center gap-3">
+          <p className="self-start text-sm text-muted">
+            {ordinal(shown.index)} Prêmio. Só você vê esta carta; o registro anota que você olhou.
+          </p>
+          <img
+            src={cardImageUrl(shownCard, 'full')}
+            alt={nameOf(shownCard)}
+            className="aspect-[5/7] w-56 rounded-lg ring-1 ring-border"
+          />
+          <strong>{nameOf(shownCard)}</strong>
+          <div className="flex w-full justify-end gap-2">
+            <button
+              type="button"
+              onClick={() => setAsked(false)}
+              className="rounded-md px-3 py-1.5 text-sm text-muted hover:bg-surface-2"
+            >
+              Olhar outro
+            </button>
+            <button
+              type="button"
+              disabled={controls.busy}
+              onClick={() => {
+                controls.onReturnReward(area, shown.card.uid, 'hand');
+                onClose();
+              }}
+              className="rounded-md bg-accent px-3 py-1.5 text-sm font-semibold text-bg hover:opacity-90 disabled:opacity-40"
+              title={`A carta sai dos Prêmios e vai para ${giverHand}`}
+            >
+              Recuperar
+            </button>
+          </div>
+        </div>
+      ) : count === 0 ? (
+        <p className="text-sm text-muted">Essa Área de Prêmios está vazia.</p>
+      ) : (
+        <>
+          <p className="text-sm text-muted">
+            Escolha qual Prêmio olhar (na ordem em que entraram). Só você vê a carta, e o registro anota que você
+            olhou.
+          </p>
+          <ul className="grid max-h-[55vh] grid-cols-4 gap-2 overflow-y-auto sm:grid-cols-5">
+            {Array.from({ length: count }, (_, i) => (
+              <li key={i}>
+                <button
+                  type="button"
+                  disabled={controls.busy}
+                  onClick={() => {
+                    setAsked(true);
+                    controls.onPeekReward(area, i);
+                  }}
+                  className="group flex w-full flex-col items-center gap-1 rounded-lg p-1 hover:bg-surface-2 disabled:opacity-40"
+                  title={`Olhar o ${ordinal(i)} Prêmio`}
+                >
+                  <img
+                    src="/cards/card-back.webp"
+                    alt=""
+                    className="aspect-[5/7] w-full rounded object-cover ring-1 ring-border group-hover:ring-accent"
+                  />
+                  <span className="text-xs text-muted">{ordinal(i)}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+          {asked && <p className="text-sm text-muted">Virando a carta…</p>}
+        </>
+      )}
+    </Dialog>
+  );
+}
+
 /** Escolha de quantas cartas revelar do Deck, e de onde (topo ou fundo). */
 function RevealDialog({
   deckCount,
@@ -657,6 +767,142 @@ function RevealDialog({
   );
 }
 
+/* ── Moedas ─────────────────────────────────────────────────────────────── */
+
+/** "Growth ×2, Bomb ×1". */
+function coinList(coins: Record<string, number>): string {
+  return Object.entries(coins)
+    .map(([kind, n]) => `${kind} ×${n}`)
+    .join(', ');
+}
+
+/** Cor do selo: verde/vermelho para as moedas de Poder, dourado para as outras. */
+function coinTone(kind: string): string | undefined {
+  const p = coinPower(kind);
+  return p ? (p.combat + p.support >= 0 ? styles.coinUp : styles.coinDown) : undefined;
+}
+
+/**
+ * Selos das moedas sobre uma carta da mesa: um por tipo, com a quantidade num círculo e o nome ao lado.
+ * Ficam no canto direito de baixo, a parte que fica à mostra também nos Ninjas de Apoio (atrás do Líder).
+ * Nas cartas pequenas (Vila), os selos são menores.
+ */
+function CoinBadges({ coins, small }: { coins: Record<string, number>; small?: boolean }) {
+  const entries = Object.entries(coins);
+  if (entries.length === 0) return null;
+  return (
+    <div
+      className={cx(styles.coins, small && styles.coinsSmall)}
+      title={`Moedas: ${coinList(coins)}`}
+      aria-label={`Moedas: ${coinList(coins)}`}
+    >
+      {entries.map(([kind, n]) => (
+        <span key={kind} className={cx(styles.coin, coinTone(kind))}>
+          <b>{n}</b>
+          <span>{kind}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+/** No detalhe de uma carta do oponente (ou sem controles): as moedas dela, só para ver. */
+function CoinView({ coins }: { coins: Record<string, number> }) {
+  const entries = Object.entries(coins);
+  return (
+    <div className="flex flex-col gap-2 border-t border-border pt-3">
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted">Marcadores (moedas)</p>
+      <ul className="flex flex-col gap-1">
+        {entries.map(([k, n]) => (
+          <li key={k} className="flex items-center gap-2 text-sm">
+            <b className="w-6 text-center tabular-nums">{n}</b>
+            <span>{k}</span>
+            {coinPower(k) && <span className="text-xs text-muted">(soma no Poder)</span>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/** No detalhe de uma carta sua na Vila ou no Campo: as moedas dela, com −/+, e o campo para pôr outro tipo. */
+function CoinEditor({ inst, controls }: { inst: CardInstance; controls: ArenaControls }) {
+  const [name, setName] = useState('');
+  const coins = Object.entries(inst.coins ?? {});
+  const kind = coinKind(name);
+  const btn =
+    'flex h-6 w-6 items-center justify-center rounded-full bg-surface-2 text-sm font-bold hover:bg-accent hover:text-bg disabled:opacity-40';
+  const chip =
+    'rounded-md bg-surface-2 px-2 py-1 text-xs font-semibold hover:bg-accent hover:text-bg disabled:opacity-40';
+  const add = (k: string) => controls.onSetCoins(inst.uid, k, 1);
+  const ninja = isNinja(inst.cardId);
+  const pool: readonly string[] = ninja ? COIN_SUGGESTIONS.ninja : COIN_SUGGESTIONS.other;
+  const suggestions = pool.filter((k) => !inst.coins?.[k]);
+  return (
+    <div className="flex flex-col gap-2 border-t border-border pt-3">
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted">Marcadores (moedas)</p>
+      <p className="text-xs text-muted">
+        {ninja
+          ? 'Moedas que ficam na carta (Growth, Poison, "Bomb"…), para os dois verem. As de Poder (Growth, +1/+1, -1/-1) já somam no Time; para efeitos que duram só o turno, use o − e + do Poder.'
+          : 'Moedas que ficam na carta, para os dois verem: as Moedas Ninja de uma Missão Permanent (X) (tire uma no início de cada turno seu) ou outra que a carta pedir.'}
+      </p>
+      {coins.length === 0 ? (
+        <p className="text-xs text-muted">Nenhuma moeda nesta carta.</p>
+      ) : (
+        <ul className="flex flex-col gap-1">
+          {coins.map(([k, n]) => (
+            <li key={k} className="flex items-center gap-2 text-sm">
+              <button
+                type="button"
+                className={btn}
+                disabled={controls.busy}
+                onClick={() => controls.onSetCoins(inst.uid, k, -1)}
+                aria-label={`Tirar 1 moeda ${k}`}
+              >
+                −
+              </button>
+              <b className="w-6 text-center tabular-nums">{n}</b>
+              <button type="button" className={btn} disabled={controls.busy} onClick={() => add(k)} aria-label={`Pôr 1 moeda ${k}`}>
+                +
+              </button>
+              <span>{k}</span>
+              {coinPower(k) && <span className="text-xs text-muted">(soma no Poder)</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+      <div className="flex flex-wrap items-center gap-1.5">
+        {suggestions.map((k) => (
+          <button key={k} type="button" disabled={controls.busy} onClick={() => add(k)} className={chip}>
+            + {k}
+          </button>
+        ))}
+      </div>
+      <form
+        className="flex items-center gap-1.5"
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (!kind) return;
+          add(kind);
+          setName('');
+        }}
+      >
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          maxLength={COIN_NAME_MAX + 4}
+          placeholder={ninja ? 'Outra, como impressa (ex.: +1/+1, Bomb)' : 'Outra, como impressa (ex.: Bomb)'}
+          aria-label="Nome da moeda"
+          className="min-w-0 flex-1 rounded-md bg-bg px-2 py-1 text-sm text-text ring-1 ring-border focus-visible:ring-2 focus-visible:ring-accent"
+        />
+        <button type="submit" disabled={controls.busy || !kind} className={chip}>
+          Pôr moeda
+        </button>
+      </form>
+    </div>
+  );
+}
+
 /* ── Times ──────────────────────────────────────────────────────────────── */
 
 /** Quanto um Ninja de Apoio cobre o anterior (fração da largura), em pé e Ferido (design: 46 e 20 de 96). */
@@ -674,9 +920,10 @@ const ninjaPower: PowerLookup = (cardId) => {
 /** Dica do chip: a conta do Poder do Time (docs/REGRAS.md 3.5.4). */
 function powerTitle(power: TeamPower, members: number): string {
   const [leader, ...supports] = power.parts;
-  const mod = power.mod ? ` ${power.mod > 0 ? '+' : '−'} ${Math.abs(power.mod)} (ajuste)` : '';
+  const signed = (n: number, what: string) => (n ? ` ${n > 0 ? '+' : '−'} ${Math.abs(n)} (${what})` : '');
+  const mod = signed(power.coins, 'moedas') + signed(power.mod, 'ajuste');
   if (supports.length === 0) {
-    return power.mod ? `Poder: ${leader} (Combate do Ninja)${mod} = ${formatTeamPower(power)}` : `Poder: ${leader} (Combate do Ninja)`;
+    return mod ? `Poder: ${leader} (Combate do Ninja)${mod} = ${formatTeamPower(power)}` : `Poder: ${leader} (Combate do Ninja)`;
   }
   return (
     `Poder do Time (${members}/${TEAM_MAX} Ninjas): ${leader} (Combate do Líder) + ` +
@@ -726,8 +973,13 @@ function TeamMember({
   const accepts = !!controls && ninja;
   const leader = index === 0;
   const roleClass = leader ? (mine ? styles.leaderMine : styles.leaderOpp) : styles.support;
+  // R com o mouse sobre um Ninja seu (Vila ou Campo de Batalha): fere ou cura (carta na horizontal).
+  const hoverKeys = useHoverKeys({
+    r: mine && controls && ninja && !controls.busy ? () => controls.onSetInjured(inst.uid, !inst.injured) : undefined,
+  });
   return (
     <div
+      {...hoverKeys}
       className={cx(styles.member, roleClass, over && styles.memberOver)}
       style={{ width: size.w, height: size.h, marginLeft, marginRight, transform: `translateY(${dy}px)`, zIndex: z }}
       onDragOver={(e) => {
@@ -759,29 +1011,18 @@ function TeamMember({
         onInspect={onInspect}
         style={{ transform: inst.injured ? 'rotate(90deg)' : undefined }}
       />
-      {mine && controls && ninja && (
+      {inst.coins && <CoinBadges coins={inst.coins} small={size.w < FIELD_CARD.w} />}
+      {mine && controls && ninja && inTeam && !leader && (
         <div className={styles.memberTools}>
-          {inTeam && !leader && (
-            <button
-              type="button"
-              className={styles.tool}
-              onClick={() => controls.onSetLeader(inst.uid)}
-              disabled={controls.busy}
-              title="Tornar Ninja Líder [Head Ninja]"
-              aria-label="Tornar Ninja Líder"
-            >
-              ★
-            </button>
-          )}
           <button
             type="button"
             className={styles.tool}
-            onClick={() => controls.onSetInjured(inst.uid, !inst.injured)}
+            onClick={() => controls.onSetLeader(inst.uid)}
             disabled={controls.busy}
-            title={inst.injured ? 'Curar: voltar ao Estado Saudável' : 'Ferir: Estado Ferido (carta na horizontal)'}
-            aria-label={inst.injured ? 'Curar Ninja' : 'Ferir Ninja'}
+            title="Tornar Ninja Líder [Head Ninja]"
+            aria-label="Tornar Ninja Líder"
           >
-            {inst.injured ? '↺' : '↻'}
+            ★
           </button>
         </div>
       )}
@@ -868,7 +1109,11 @@ function TeamStack({
             </button>
           )}
           <span
-            className={cx(styles.teamCount, power.mod > 0 && styles.powerUp, power.mod < 0 && styles.powerDown)}
+            className={cx(
+              styles.teamCount,
+              power.mod + power.coins > 0 && styles.powerUp,
+              power.mod + power.coins < 0 && styles.powerDown,
+            )}
           >
             {formatTeamPower(power)}
           </span>
@@ -903,15 +1148,91 @@ interface RowProps {
   rewardDrop?: CustomDrop;
   /** Só na sua linha: abre a escolha de quantas cartas revelar do Deck. */
   onOpenReveal?: () => void;
+  /** Número (`n` no registro) da última jogada que embaralhou o Deck deste jogador; quando muda, o Deck gira. */
+  shuffleKey?: number;
+  /** Abre a escolha de um Prêmio desta linha para olhar (e talvez recuperar). */
+  onOpenPeek?: () => void;
 }
 
-function DeckZone({ side, mine, controls, onOpenReveal }: RowProps) {
+/** Jogadas que terminam embaralhando o Deck (e disparam a animação). */
+const SHUFFLING_ACTIONS: ReadonlySet<string> = new Set(['shuffle', 'search', 'returnHand']);
+
+/** Número da última jogada de `who` que embaralhou o Deck (0 se nenhuma). */
+function lastShuffle(log: LogEntryView[] | undefined, who: Side): number {
+  if (!log) return 0;
+  for (let i = log.length - 1; i >= 0; i--) {
+    const e = log[i];
+    // A mão devolvida ao fundo do Deck não embaralha.
+    if (e.who === who && SHUFFLING_ACTIONS.has(e.type) && !(e.type === 'returnHand' && e.position === 'bottom')) return e.n;
+  }
+  return 0;
+}
+
+/** Quanto dura a animação do embaralhar (igual ao CSS de .shuffleCard). */
+const SHUFFLE_MS = 900;
+/** Quantas costas giram na animação. */
+const SHUFFLE_CARDS = 5;
+
+/**
+ * Animação do Deck embaralhando: dispara quando `key` muda depois de montar (abrir a sala com o registro
+ * já cheio não anima). Devolve a chave da animação em curso (para reiniciar o CSS) ou null.
+ */
+function useShuffleAnim(key: number | undefined): number | null {
+  const first = useRef(key);
+  const [playing, setPlaying] = useState<number | null>(null);
+  useEffect(() => {
+    if (key === undefined || key === first.current) return;
+    first.current = key;
+    setPlaying(key);
+    const t = setTimeout(() => setPlaying(null), SHUFFLE_MS);
+    return () => clearTimeout(t);
+  }, [key]);
+  return playing;
+}
+
+/**
+ * Teclas de atalho que só valem com o mouse sobre um elemento: `actions` liga a tecla (minúscula, ou
+ * "shift+tecla") à ação; sem ação (undefined), a tecla fica livre. Ignora teclas com Ctrl/Alt/Cmd, a tecla segurada e o que se
+ * digita em campos de texto. Devolve os handlers de mouse para espalhar no elemento. Ao criar um atalho,
+ * liste-o em SHORTCUTS.
+ */
+function useHoverKeys(actions: Record<string, (() => void) | undefined>) {
+  const [hover, setHover] = useState(false);
+  const latest = useRef(actions);
+  latest.current = actions;
+  useEffect(() => {
+    if (!hover) return;
+    const key = (e: KeyboardEvent) => {
+      if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
+      // Com Shift, a tecla é procurada como "shift+f" (F e Shift+F são atalhos diferentes).
+      const run = latest.current[(e.shiftKey ? 'shift+' : '') + e.key.toLowerCase()];
+      if (!run) return;
+      const t = e.target as HTMLElement | null;
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+      e.preventDefault(); // sem isso, a tecla seria digitada num diálogo que a ação abrir (ex.: o filtro da busca)
+      run();
+    };
+    window.addEventListener('keydown', key);
+    return () => window.removeEventListener('keydown', key);
+  }, [hover]);
+  return { onMouseEnter: () => setHover(true), onMouseLeave: () => setHover(false) };
+}
+
+function DeckZone({ side, mine, controls, onOpenReveal, shuffleKey }: RowProps) {
   const drop = useDrop('deck', controls);
   const count = side.zones.deck.count;
   const ty = mine ? -1 : 1; // as camadas sobem no seu lado e descem no do oponente
+  const shuffling = useShuffleAnim(shuffleKey);
+  // Atalhos com o mouse sobre o seu Deck (listados em SHORTCUTS): R embaralha, F abre a busca.
+  const ready = !!controls && !controls.busy;
+  const hoverKeys = useHoverKeys({
+    r: ready && count >= 2 ? controls.onShuffle : undefined,
+    f: ready && count > 0 ? controls.onSearch : undefined,
+  });
   return (
     <div
       {...drop.handlers}
+      {...hoverKeys}
       className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.deck, drop.over && styles.over)}
       aria-label={mine ? 'Seu Deck' : `Deck de ${side.nickname}`}
     >
@@ -929,37 +1250,53 @@ function DeckZone({ side, mine, controls, onOpenReveal }: RowProps) {
             {...(controls ? dragSource(DECK_TOP_MIME, '1') : {})}
             onClick={() => controls && !controls.busy && controls.onDraw()}
             onKeyDown={(e) => e.key === 'Enter' && controls && !controls.busy && controls.onDraw()}
-            className={cx(styles.back, styles.deckTop, controls && styles.drawable)}
+            className={cx(styles.back, styles.deckTop, controls && styles.drawable, shuffling !== null && styles.deckTopHidden)}
             title={
               controls
                 ? 'Clique para comprar 1 carta · arraste o topo para os Prêmios do oponente'
                 : 'Face para baixo: dá para contar, não para ver'
             }
           />
+          {/* Embaralhando: algumas costas giram e se abrem em leque, cada uma para um lado, e voltam à pilha. */}
+          {shuffling !== null && (
+            <div key={shuffling} aria-hidden className={styles.shuffleFx}>
+              {Array.from({ length: Math.min(SHUFFLE_CARDS, count) }, (_, i) => {
+                const dir = i % 2 === 0 ? 1 : -1;
+                const spread = (Math.floor(i / 2) + 1) * 14;
+                return (
+                  <div
+                    key={i}
+                    className={cx(styles.back, styles.shuffleCard)}
+                    style={
+                      {
+                        '--x-out': `${spread * dir}px`,
+                        '--x-back': `${-0.3 * spread * dir}px`,
+                        '--r-out': `${160 * dir}deg`,
+                        '--r-mid': `${330 * dir}deg`,
+                        '--r-end': `${360 * dir}deg`,
+                        animationDelay: `${i * 40}ms`,
+                      } as React.CSSProperties
+                    }
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
       <div className={styles.pill}>{count}</div>
       {controls && (
         <div className={styles.deckTools}>
+          {/* A carta do topo vai como Prêmio de Batalha do oponente (o mesmo que arrastar o topo). */}
           <button
             type="button"
             className={styles.tool}
-            onClick={controls.onShuffle}
-            disabled={controls.busy || count < 2}
-            title="Embaralhar o deck"
-            aria-label="Embaralhar o deck"
-          >
-            ⇄
-          </button>
-          <button
-            type="button"
-            className={styles.tool}
-            onClick={controls.onSearch}
+            onClick={() => controls.onGiveReward()}
             disabled={controls.busy || count === 0}
-            title="Buscar uma carta no deck (embaralha depois)"
-            aria-label="Buscar uma carta no deck"
+            title="Enviar a carta do topo do Deck para os Prêmios do oponente (face para baixo)"
+            aria-label="Enviar a carta do topo do Deck para os Prêmios do oponente"
           >
-            ⌕
+            🏆
           </button>
           {onOpenReveal && (
             <button
@@ -974,37 +1311,6 @@ function DeckZone({ side, mine, controls, onOpenReveal }: RowProps) {
             </button>
           )}
         </div>
-      )}
-      {/* Ao lado da carta: a do topo vai como Prêmio de Batalha do oponente (o mesmo que arrastar o topo). */}
-      {controls && (
-        <button
-          type="button"
-          className={cx(styles.tool, styles.deckReward)}
-          onClick={() => controls.onGiveReward()}
-          disabled={controls.busy || count === 0}
-          title="Enviar a carta do topo do Deck para os Prêmios do oponente (face para baixo)"
-          aria-label="Enviar a carta do topo do Deck para os Prêmios do oponente"
-        >
-          🏆
-        </button>
-      )}
-      {/* Logo abaixo do seu Deck (fora do arco da mão): devolver a mão ao Deck, com confirmação. */}
-      {controls && (
-        <button
-          type="button"
-          className={styles.returnHand}
-          onClick={() => {
-            const n = side.zones.hand.count;
-            const cards = n === 1 ? '1 carta' : `${n} cartas`;
-            if (confirm(`Devolver a mão inteira (${cards}) ao Deck e embaralhar? Depois você compra as novas cartas.`)) {
-              controls.onReturnHand();
-            }
-          }}
-          disabled={controls.busy || side.zones.hand.count === 0}
-          title="Mulligan: devolve todas as cartas da mão ao Deck e embaralha (pede confirmação)"
-        >
-          ↩ Mão → Deck
-        </button>
       )}
     </div>
   );
@@ -1114,7 +1420,7 @@ function VillageZone({ side, mine, controls, onInspect }: RowProps) {
   );
 }
 
-function RewardZone({ side, mine, controls, rewardDrop }: RowProps) {
+function RewardZone({ side, mine, controls, rewardDrop, onOpenPeek }: RowProps) {
   const drop = useCustomDrop(rewardDrop);
   const count = side.zones.rewards.count;
   const returnTitle = mine
@@ -1145,13 +1451,26 @@ function RewardZone({ side, mine, controls, rewardDrop }: RowProps) {
         )}
       </div>
       <div className={styles.rewardNum}>{count}</div>
-      {controls && count > 0 && (
+      {/* Sempre à mostra (desligado com a área vazia), para ficar claro que dá para recuperar o Prêmio. */}
+      {controls && (
         <div className={styles.deckTools}>
+          {onOpenPeek && (
+            <button
+              type="button"
+              className={styles.tool}
+              onClick={onOpenPeek}
+              disabled={controls.busy || count === 0}
+              title="Olhar um destes Prêmios (só você vê; fica no registro) e, se quiser, recuperá-lo"
+              aria-label="Olhar um Prêmio"
+            >
+              🔍
+            </button>
+          )}
           <button
             type="button"
             className={styles.tool}
             onClick={() => controls.onReturnReward(mine ? 'mine' : 'theirs')}
-            disabled={controls.busy}
+            disabled={controls.busy || count === 0}
             title={returnTitle}
             aria-label={returnTitle}
           >
@@ -1391,10 +1710,20 @@ function Hand({ side, controls, onInspect }: { side: ArenaSide; controls?: Arena
   // Chips logo depois das cartas inteiras do arco.
   const chipOffset = (radius + 0.5) * step + HAND_CARD.w / 2;
 
+  // R com o mouse sobre a mão: a mão inteira volta ao Deck, que é embaralhado (o mesmo que "Mão → Deck",
+  // sem a confirmação). O registro anota quais cartas foram (o oponente vê só quantas).
+  // Shift+F: a mão vai para o fundo do Deck, na ordem da mão, sem embaralhar (F sobre uma carta = só ela).
+  const canReturn = !!controls && !controls.busy && side.zones.hand.count > 0;
+  const hoverKeys = useHoverKeys({
+    r: canReturn ? controls.onReturnHand : undefined,
+    'shift+f': canReturn ? controls.onReturnHandToBottom : undefined,
+  });
+
   return (
     <div
       ref={ref}
       {...drop.handlers}
+      {...hoverKeys}
       className={cx(styles.hand, drop.over && styles.over)}
       aria-label="Sua mão"
       title={scrollable ? 'Role o mouse sobre a mão para ver as outras cartas' : undefined}
@@ -1480,14 +1809,56 @@ function stackByCard(cards: readonly CardInstance[]): { top: CardInstance; count
 
 /* ── Coluna de informações (à esquerda) ─────────────────────────────────── */
 
-function Pips({ label, value, max }: { label: string; value: number; max: number }) {
+function Pips({
+  label,
+  value,
+  max,
+  onAdjust,
+  busy,
+  what,
+}: {
+  label: string;
+  value: number;
+  max: number;
+  /** Com isto, a barra ganha −/+ (ex.: o seu Marcador de Turnos). */
+  onAdjust?: (delta: number) => void;
+  busy?: boolean;
+  /** Nome do que a barra conta, para a dica dos botões. */
+  what?: string;
+}) {
   return (
     <div className={styles.bar}>
       <div className={styles.barHead}>
         <span>{label}</span>
-        <b>
-          {value}/{max}
-        </b>
+        <span className={styles.barValue}>
+          {onAdjust && (
+            <button
+              type="button"
+              className={styles.barBtn}
+              disabled={busy || value <= 0}
+              onClick={() => onAdjust(-1)}
+              title={`Descer o ${what ?? label} 1 casa (efeitos de cartas)`}
+              aria-label={`Descer o ${what ?? label}`}
+            >
+              −
+            </button>
+          )}
+          <b>
+            {value}/{max}
+          </b>
+          {onAdjust && (
+            <button
+              type="button"
+              className={styles.barBtn}
+              disabled={busy || value >= max}
+              onClick={() => onAdjust(1)}
+              title={`Subir o ${what ?? label} 1 casa (efeitos de cartas)`}
+              aria-label={`Subir o ${what ?? label}`}
+            >
+              +
+            </button>
+          )}
+        </span>
       </div>
       <div className={styles.pips}>
         {Array.from({ length: max }, (_, i) => (
@@ -1562,7 +1933,14 @@ function Plate({
   const bars = (
     <>
       <Pips label="Prêmios" value={Math.min(z.rewards.count, REWARDS_TO_WIN)} max={REWARDS_TO_WIN} />
-      <Pips label="Marcador" value={side.turn} max={TURN_MAX} />
+      <Pips
+        label="Marcador"
+        value={side.turn}
+        max={TURN_MAX}
+        onAdjust={mine && controls ? controls.onAdjustTurn : undefined}
+        busy={controls?.busy}
+        what="Marcador de Turnos"
+      />
     </>
   );
   const counters = (
@@ -1712,11 +2090,22 @@ function LogLine({
   onInspect: Inspect;
 }) {
   const nameOf = useCardName();
+  const setHovered = useContext(HoverContext);
   const card = (cardId: string | undefined) => {
     const c = cardId ? CARDS_BY_ID.get(cardId) : undefined;
     if (!c) return <b>{cardId ?? 'carta'}</b>;
+    // Mouse sobre o nome: a carta ampliada ao lado, sem precisar do Alt.
     return (
-      <button type="button" className={styles.logCard} onClick={() => onInspect(c)} title="Ver a carta">
+      <button
+        type="button"
+        className={styles.logCard}
+        onClick={() => {
+          setHovered(null);
+          onInspect(c);
+        }}
+        onMouseEnter={(ev) => setHovered({ card: c, clientX: ev.clientX, always: true })}
+        onMouseLeave={() => setHovered(null)}
+      >
         {nameOf(c)}
       </button>
     );
@@ -1795,14 +2184,15 @@ function LogLine({
     case 'shuffle':
       text = <>embaralhou o Deck</>;
       break;
-    case 'returnHand':
+    case 'returnHand': {
+      const where = e.position === 'bottom' ? 'ao fundo do Deck (sem embaralhar)' : 'ao Deck e embaralhou';
       text = e.hidden ? (
         <>
-          devolveu {e.count === 1 ? '1 carta' : `${e.count ?? 'as'} cartas`} da mão ao Deck e embaralhou
+          devolveu {e.count === 1 ? '1 carta' : `${e.count ?? 'as'} cartas`} da mão {where}
         </>
       ) : (
         <>
-          devolveu a mão ao Deck e embaralhou:{' '}
+          devolveu a mão {where}:{' '}
           {(e.cards ?? []).map((id, i) => (
             <span key={i}>
               {i > 0 && ', '}
@@ -1812,6 +2202,7 @@ function LogLine({
         </>
       );
       break;
+    }
     case 'joinTeam':
       text = (
         <>
@@ -1837,20 +2228,74 @@ function LogLine({
     case 'nextPhase':
       text = <>avançou para a Fase {PHASES[e.phase ?? 0]}</>;
       break;
-    case 'returnReward':
+    case 'returnReward': {
+      // Com a carta (um Prêmio olhado), só quem devolveu vê o nome.
+      const what = e.cards?.length ? <>o Prêmio de Batalha {card(e.cards[0])}</> : 'um Prêmio de Batalha';
+      const toHand = e.to === 'hand';
       text =
         e.owner === e.who ? (
-          <>devolveu um Prêmio de Batalha ao topo do Deck de {other}</>
+          <>
+            devolveu {what} {toHand ? `para a mão de ${other}` : `ao topo do Deck de ${other}`}
+          </>
         ) : (
-          <>pegou de volta um Prêmio de Batalha dado a {other} (foi para o topo do Deck)</>
+          <>
+            recuperou {what} dado a {other} ({toHand ? 'foi para a mão' : 'foi para o topo do Deck'})
+          </>
         );
       break;
+    }
+    case 'peekReward': {
+      const slot = e.slot ? `o ${e.slot}º` : 'um';
+      const where =
+        e.owner === e.who
+          ? 'dos próprios Prêmios de Batalha'
+          : other === 'você'
+            ? 'dos seus Prêmios de Batalha'
+            : `dos Prêmios de Batalha de ${other}`;
+      text = e.hidden ? (
+        <>
+          olhou {slot} {where}
+        </>
+      ) : (
+        <>
+          olhou {slot} {where}: {card(e.cards?.[0])}
+        </>
+      );
+      break;
+    }
     case 'adjustPower': {
       const d = e.delta ?? 0;
       text = (
         <>
           {d >= 0 ? 'aumentou' : 'diminuiu'} em {Math.abs(d)} o Poder do Time de {main}
           {e.from && ` ${ZONE_IN[e.from]}`}
+        </>
+      );
+      break;
+    }
+    case 'setCoins': {
+      const d = e.delta ?? 0;
+      const n = Math.abs(d);
+      text = (
+        <>
+          {d >= 0 ? 'pôs' : 'tirou'} {n === 1 ? '1 moeda' : `${n} moedas`} {e.coin} {d >= 0 ? 'em' : 'de'} {main}
+          {e.from && ` ${ZONE_IN[e.from]}`}
+        </>
+      );
+      break;
+    }
+    case 'flip':
+      text = (
+        <>
+          jogou a Moeda Ninja: <b>{e.result === 'heads' ? 'Cara [Heads]' : 'Coroa [Tails]'}</b>
+        </>
+      );
+      break;
+    case 'adjustTurn': {
+      const d = e.delta ?? 0;
+      text = (
+        <>
+          {d >= 0 ? 'subiu' : 'desceu'} o Marcador de Turnos em {Math.abs(d)} {Math.abs(d) === 1 ? 'casa' : 'casas'}
         </>
       );
       break;
@@ -1868,77 +2313,166 @@ function LogLine({
   );
 }
 
+/** Quanto tempo o resultado da Moeda Ninja fica na tela. */
+const FLIP_MS = 4000;
+
 /**
- * Registro de jogo: botão no canto inferior direito da arena (com o número de jogadas novas) que abre um
- * painel lateral com as jogadas, da mais antiga para a mais nova.
+ * Última Moeda Ninja jogada, enquanto o resultado está na tela. Só as jogadas depois de abrir a arena
+ * aparecem (abrir a sala com o registro já cheio não mostra a moeda antiga).
  */
-function GameLog({
+function useLastFlip(log: LogEntryView[] | undefined): LogEntryView | null {
+  const latest = log ? [...log].reverse().find((e) => e.type === 'flip') : undefined;
+  const latestRef = useRef(latest);
+  latestRef.current = latest;
+  const n = latest?.n ?? 0;
+  const first = useRef(n);
+  const [shown, setShown] = useState<LogEntryView | null>(null);
+  // Depende só do número da jogada: outras atualizações da sala não reiniciam (nem cancelam) o tempo.
+  useEffect(() => {
+    if (n <= first.current || !latestRef.current) return;
+    first.current = n;
+    setShown(latestRef.current);
+    const t = setTimeout(() => setShown(null), FLIP_MS);
+    return () => clearTimeout(t);
+  }, [n]);
+  return shown;
+}
+
+/** Painel aberto no canto inferior direito da arena (os dois ocupam o mesmo lugar). */
+type CornerPanel = 'log' | 'keys';
+
+/** Quantas jogadas do registro chegaram desde a última vez que ele ficou aberto. */
+function useUnread(log: LogEntryView[] | undefined, open: boolean): number {
+  const latest = log?.at(-1)?.n ?? 0;
+  // Jogadas já vistas: as que existiam ao abrir a tela não contam como novas.
+  const [seen, setSeen] = useState(latest);
+  useEffect(() => {
+    if (open) setSeen(latest);
+  }, [open, latest]);
+  return open || !log ? 0 : log.filter((e) => e.n > seen).length;
+}
+
+/** Cabeçalho dos painéis do canto (registro e atalhos). */
+function PanelHead({ title, onClose }: { title: string; onClose: () => void }) {
+  return (
+    <div className={styles.logHead}>
+      <span>{title}</span>
+      <button type="button" onClick={onClose} aria-label={`Fechar: ${title}`} className={styles.logClose}>
+        ✕
+      </button>
+    </div>
+  );
+}
+
+/** Registro de jogo: painel lateral com as jogadas, da mais antiga para a mais nova. */
+function GameLogPanel({
   log,
   yourSide,
   you,
   opponent,
   onInspect,
+  onClose,
 }: {
   log: LogEntryView[];
   yourSide: Side;
   you: ArenaSide;
   opponent: ArenaSide;
   onInspect: Inspect;
+  onClose: () => void;
 }) {
-  const [open, setOpen] = useState(false);
-  const latest = log.at(-1)?.n ?? 0;
-  // Jogadas já vistas: as que existiam ao abrir a tela não contam como novas.
-  const [seen, setSeen] = useState(latest);
-  const unread = open ? 0 : log.filter((e) => e.n > seen).length;
   const listRef = useRef<HTMLOListElement>(null);
-
+  const latest = log.at(-1)?.n ?? 0;
   useEffect(() => {
-    if (!open) return;
-    setSeen(latest);
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight });
-  }, [open, latest]);
+  }, [latest]);
 
   const nameOf = (side: Side) => (side === yourSide ? 'Você' : opponent.nickname);
   const otherOf = (side: Side) => (side === yourSide ? opponent.nickname : 'você');
 
   return (
-    <>
-      <button
-        type="button"
-        className={cx(styles.logToggle, open && styles.logToggleOpen)}
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        title="Registro de jogo"
-      >
-        📜 Registro
-        {unread > 0 && <span className={styles.logUnread}>{unread > 99 ? '99+' : unread}</span>}
-      </button>
-      {open && (
-        <aside className={styles.logPanel} aria-label="Registro de jogo">
-          <div className={styles.logHead}>
-            <span>Registro de jogo</span>
-            <button type="button" onClick={() => setOpen(false)} aria-label="Fechar o registro" className={styles.logClose}>
-              ✕
-            </button>
-          </div>
-          {log.length === 0 ? (
-            <p className={styles.logEmpty}>Nenhuma jogada ainda.</p>
-          ) : (
-            <ol ref={listRef} className={styles.logList}>
-              {log.map((e, i) => (
-                <li key={e.n} className={cx(styles.logItem, e.who === yourSide ? styles.logMine : styles.logTheirs)}>
-                  {(i === 0 || log[i - 1].turn !== e.turn) && <div className={styles.logTurn}>Turno {e.turn}</div>}
-                  <LogLine e={e} who={nameOf(e.who)} other={otherOf(e.who)} onInspect={onInspect} />
+    <aside className={styles.logPanel} aria-label="Registro de jogo">
+      <PanelHead title="Registro de jogo" onClose={onClose} />
+      {log.length === 0 ? (
+        <p className={styles.logEmpty}>Nenhuma jogada ainda.</p>
+      ) : (
+        <ol ref={listRef} className={styles.logList}>
+          {log.map((e, i) => (
+            <li key={e.n} className={cx(styles.logItem, e.who === yourSide ? styles.logMine : styles.logTheirs)}>
+              {(i === 0 || log[i - 1].turn !== e.turn) && <div className={styles.logTurn}>Turno {e.turn}</div>}
+              <LogLine e={e} who={nameOf(e.who)} other={otherOf(e.who)} onInspect={onInspect} />
+            </li>
+          ))}
+        </ol>
+      )}
+      <p className={styles.logFoot}>
+        {you.nickname} × {opponent.nickname} · últimas jogadas da partida
+      </p>
+    </aside>
+  );
+}
+
+/**
+ * Atalhos e gestos da arena, mostrados no painel ⌨ Atalhos. Ao criar um atalho novo, liste-o aqui.
+ * `keys`: as teclas (cada uma vira um <kbd>); `where`: onde fica o mouse ou o que fazer com ele.
+ */
+const SHORTCUTS: { group: string; items: { keys?: string[]; where: string; does: string }[] }[] = [
+  {
+    group: 'Teclado',
+    items: [
+      { keys: ['R'], where: 'com o mouse sobre o seu Deck', does: 'embaralha o Deck' },
+      { keys: ['F'], where: 'com o mouse sobre o seu Deck', does: 'busca uma carta no Deck (embaralha depois)' },
+      { keys: ['R'], where: 'com o mouse sobre a sua mão', does: 'devolve a mão inteira ao Deck e embaralha (sem confirmação)' },
+      {
+        keys: ['Shift', 'F'],
+        where: 'com o mouse sobre a sua mão',
+        does: 'devolve a mão inteira ao fundo do Deck, na ordem da mão, sem embaralhar',
+      },
+      { keys: ['T'], where: 'com o mouse sobre uma carta sua (mão, Vila, Campo, Chakra…)', does: 'põe a carta no topo do Deck, sem embaralhar' },
+      { keys: ['F'], where: 'com o mouse sobre uma carta sua (mão, Vila, Campo, Chakra…)', does: 'põe a carta no fundo do Deck, sem embaralhar' },
+      { keys: ['R'], where: 'com o mouse sobre um Ninja seu na Vila ou no Campo de Batalha', does: 'fere ou cura o Ninja (vira a carta)' },
+      { keys: ['Alt'], where: 'segurando, com o mouse sobre uma carta (também na busca no deck)', does: 'mostra a carta ampliada' },    ],
+  },
+  {
+    group: 'Mouse',
+    items: [
+      { where: 'Clicar no topo do seu Deck', does: 'compra 1 carta' },
+      { where: 'Clicar numa carta', does: 'abre o detalhe (nas suas, com Descartar e os botões de mover)' },
+      { where: 'Passar o mouse no nome de uma carta no Registro', does: 'mostra a carta ampliada ao lado' },
+      { where: 'Arrastar uma carta sua', does: 'move entre as zonas' },
+      { where: 'Soltar um Ninja sobre outro', does: 'forma um Time' },
+      { where: 'Arrastar o topo do Deck para os Prêmios do oponente', does: 'envia a carta como Prêmio de Batalha' },
+    ],
+  },
+];
+
+/** Painel com as teclas de atalho e os gestos da arena (SHORTCUTS). */
+function ShortcutsPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <aside className={styles.logPanel} aria-label="Atalhos">
+      <PanelHead title="Atalhos" onClose={onClose} />
+      <div className={styles.keysBody}>
+        {SHORTCUTS.map((g) => (
+          <section key={g.group}>
+            <h3 className={styles.logTurn}>{g.group}</h3>
+            <ul className={styles.keysList}>
+              {g.items.map((s, i) => (
+                <li key={i} className={styles.keysItem}>
+                  <span className={styles.keysWhen}>
+                    {s.keys?.map((k) => (
+                      <kbd key={k} className={styles.kbd}>
+                        {k}
+                      </kbd>
+                    ))}
+                    <span>{s.keys ? s.where : <b>{s.where}</b>}</span>
+                  </span>
+                  <span className={styles.keysDoes}>{s.does}</span>
                 </li>
               ))}
-            </ol>
-          )}
-          <p className={styles.logFoot}>
-            {you.nickname} × {opponent.nickname} · últimas jogadas da partida
-          </p>
-        </aside>
-      )}
-    </>
+            </ul>
+          </section>
+        ))}
+      </div>
+    </aside>
   );
 }
 
@@ -1997,6 +2531,7 @@ export function GameArena({
   notice,
   log,
   yourSide = 'host',
+  peek,
 }: {
   you: ArenaSide;
   opponent: ArenaSide;
@@ -2018,6 +2553,8 @@ export function GameArena({
   log?: LogEntryView[];
   /** Seu lado na partida (para o registro dizer "Você" nas suas jogadas). */
   yourSide?: Side;
+  /** O Prêmio que você olhou por último (`GameView.peek`), se ainda estiver na Área. */
+  peek?: { owner: Side; index: number; card: CardInstance };
 }) {
   const look = boardTheme(theme);
   const themeStyle = {
@@ -2033,18 +2570,36 @@ export function GameArena({
   const scale = useStageScale(rootRef);
   const [inspect, setInspect] = useState<{ card: Card; inst?: CardInstance } | null>(null);
   const [revealing, setRevealing] = useState(false);
+  // Diálogo de olhar um Prêmio: de qual Área (pela sua perspectiva).
+  const [peeking, setPeeking] = useState<'mine' | 'theirs' | null>(null);
+  const arenaPeek: ArenaPeek | undefined = peek && {
+    area: peek.owner === yourSide ? 'mine' : 'theirs',
+    index: peek.index,
+    card: peek.card,
+  };
   const inspectCard: Inspect = (card, inst) => setInspect({ card, inst });
   // Carta sua na mesa (ou na mão): o detalhe ganha os botões de mover.
   const inspectZone = inspect?.inst && controls ? zoneOf(you.zones, inspect.inst.uid) : null;
+  // A carta como está agora (as moedas mudam com o detalhe aberto).
+  const inspectLive =
+    inspect?.inst && inspectZone ? (you.zones[inspectZone].cards?.find((c) => c.uid === inspect.inst!.uid) ?? inspect.inst) : null;
+  // Carta do oponente na mesa (ou sua, só vendo a partida): as moedas aparecem no detalhe, sem os botões.
+  const inspectOther =
+    inspect?.inst && !inspectLive
+      ? ([you, opponent]
+          .flatMap((s) => [...(s.zones.village.cards ?? []), ...(s.zones.battlefield.cards ?? [])])
+          .find((c) => c.uid === inspect.inst!.uid) ?? null)
+      : null;
+  const flip = useLastFlip(log);
   const [list, setList] = useState<{ side: 'you' | 'opponent'; zone: ZoneName } | null>(null);
   const listSide = list ? (list.side === 'you' ? you : opponent) : null;
   const openMine = (zone: ZoneName) => setList({ side: 'you', zone });
   const openTheirs = (zone: ZoneName) => setList({ side: 'opponent', zone });
   const currentPhase = Math.max(0, Math.min(PHASES.length - 1, phase));
   const [hovered, setHovered] = useState<HoveredCard | null>(null);
-  const alt = useAltKey();
-  const nameOf = useCardName();
-  const zoomed = alt && hovered ? hovered : null;
+  const [panel, setPanel] = useState<CornerPanel | null>(null);
+  const togglePanel = (p: CornerPanel) => setPanel((cur) => (cur === p ? null : p));
+  const unread = useUnread(log, panel === 'log');
 
   // Fim do arraste (soltou ou cancelou) ou clique sem arraste: esquece o que estava sendo arrastado.
   useEffect(() => {
@@ -2058,6 +2613,7 @@ export function GameArena({
 
   return (
     <HoverContext.Provider value={setHovered}>
+    <ControlsContext.Provider value={controls}>
     {/* Fonte do tema: o React move o <link> para o <head> (uma vez por endereço) e só carrega com a arena aberta. */}
     <link rel="stylesheet" href={look.fontHref} precedence="default" />
     <div ref={rootRef} className={styles.root} style={themeStyle} data-theme={look.id}>
@@ -2069,6 +2625,8 @@ export function GameArena({
             mine={false}
             onInspect={inspectCard}
             onOpenList={openTheirs}
+            shuffleKey={lastShuffle(log, yourSide === 'host' ? 'guest' : 'host')}
+            onOpenPeek={controls && (() => setPeeking('theirs'))}
             rewardControls={controls}
             rewardDrop={
               controls && {
@@ -2086,6 +2644,8 @@ export function GameArena({
             onInspect={inspectCard}
             onOpenList={openMine}
             onOpenReveal={controls && (() => setRevealing(true))}
+            shuffleKey={lastShuffle(log, yourSide)}
+            onOpenPeek={controls && (() => setPeeking('mine'))}
           />
           <Hand side={you} controls={controls} onInspect={inspectCard} />
           <div className={styles.rail}>
@@ -2097,7 +2657,66 @@ export function GameArena({
       </div>
 
       {/* Registro de jogo (fora do palco: o texto não encolhe com a escala). */}
-      {log && <GameLog log={log} yourSide={yourSide} you={you} opponent={opponent} onInspect={inspectCard} />}
+      {/* Canto inferior direito: Atalhos e Registro; os painéis abrem no mesmo lugar, um de cada vez. */}
+      <div className={styles.cornerTools}>
+        {controls && (
+          <button
+            type="button"
+            className={styles.logToggle}
+            onClick={controls.onFlip}
+            disabled={controls.busy}
+            title="Jogar a Moeda Ninja [Flip]: o servidor sorteia Cara [Heads] ou Coroa [Tails], e os dois veem"
+          >
+            🪙 Moeda
+          </button>
+        )}
+        <button
+          type="button"
+          className={cx(styles.logToggle, panel === 'keys' && styles.logToggleOpen)}
+          onClick={() => togglePanel('keys')}
+          aria-expanded={panel === 'keys'}
+          title="Teclas de atalho e gestos da arena"
+        >
+          ⌨ Atalhos
+        </button>
+        {log && (
+          <button
+            type="button"
+            className={cx(styles.logToggle, panel === 'log' && styles.logToggleOpen)}
+            onClick={() => togglePanel('log')}
+            aria-expanded={panel === 'log'}
+            title="Registro de jogo"
+          >
+            📜 Registro
+            {unread > 0 && <span className={styles.logUnread}>{unread > 99 ? '99+' : unread}</span>}
+          </button>
+        )}
+      </div>
+      {panel === 'log' && log && (
+        <GameLogPanel
+          log={log}
+          yourSide={yourSide}
+          you={you}
+          opponent={opponent}
+          onInspect={inspectCard}
+          onClose={() => setPanel(null)}
+        />
+      )}
+      {panel === 'keys' && <ShortcutsPanel onClose={() => setPanel(null)} />}
+
+      {/* Resultado da Moeda Ninja, para os dois jogadores (some sozinho). */}
+      {flip && (
+        <div key={flip.n} className={styles.flipToast} role="status">
+          <span className={styles.flipCoin} aria-hidden>
+            🪙
+          </span>
+          <span>
+            {flip.who === yourSide ? 'Você' : opponent.nickname} jogou a moeda:{' '}
+            <b>{flip.result === 'heads' ? 'Cara' : 'Coroa'}</b>
+            <small>{flip.result === 'heads' ? ' [Heads]' : ' [Tails]'}</small>
+          </span>
+        </div>
+      )}
 
       {/* Tela cheia: os controles da partida num menu ⋯ (fora do palco, sem a escala). */}
       {(fullscreenMenu || notice) && (
@@ -2132,32 +2751,43 @@ export function GameArena({
       {revealing && controls && (
         <RevealDialog deckCount={you.zones.deck.count} controls={controls} onClose={() => setRevealing(false)} />
       )}
+      {peeking && controls && (
+        <PeekRewardDialog
+          area={peeking}
+          count={(peeking === 'mine' ? you : opponent).zones.rewards.count}
+          peek={arenaPeek}
+          controls={controls}
+          opponentName={opponent.nickname}
+          onClose={() => setPeeking(null)}
+        />
+      )}
       <CardDetailModal
         card={inspect?.card ?? null}
         onClose={() => setInspect(null)}
         actions={
-          inspect?.inst && inspectZone && controls ? (
-            <CardMoveActions
-              card={inspect.card}
-              inst={inspect.inst}
-              zone={inspectZone}
-              controls={controls}
-              onDone={() => setInspect(null)}
-            />
+          inspectLive && inspectZone && controls ? (
+            <>
+              {(inspectZone === 'village' || inspectZone === 'battlefield') && (
+                <CoinEditor inst={inspectLive} controls={controls} />
+              )}
+              <CardMoveActions
+                card={inspect!.card}
+                inst={inspectLive}
+                zone={inspectZone}
+                controls={controls}
+                onDone={() => setInspect(null)}
+              />
+            </>
+          ) : inspectOther?.coins ? (
+            <CoinView coins={inspectOther.coins} />
           ) : undefined
         }
       />
 
       {/* Alt + mouse sobre uma carta: a carta ampliada, do lado oposto ao mouse (fora do palco, sem a escala). */}
-      {zoomed && (
-        <img
-          src={cardImageUrl(zoomed.card, 'full')}
-          alt={nameOf(zoomed.card)}
-          className={cx(styles.zoom, zoomed.clientX < window.innerWidth / 2 ? styles.zoomRight : styles.zoomLeft)}
-          draggable={false}
-        />
-      )}
+      <CardZoom hovered={hovered} />
     </div>
+    </ControlsContext.Provider>
     </HoverContext.Provider>
   );
 }

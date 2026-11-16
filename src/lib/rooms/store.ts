@@ -1,7 +1,7 @@
 import { createHash, randomInt } from 'node:crypto';
 import { NextResponse } from 'next/server';
 import { CARDS_BY_ID } from '../../data/cards.ts';
-import { isReinforcementCard } from '../../models/card.ts';
+import { isReinforcementCard, permanentCoins } from '../../models/card.ts';
 import { getRedis } from '../redis.ts';
 import { ROOM_TTL_SECONDS, RoomError, type Room, type RoomEnv, type SeenMap } from './model.ts';
 
@@ -26,6 +26,10 @@ export const roomEnv: RoomEnv = {
     return !!card && isReinforcementCard(card);
   },
   isNinja: (cardId) => CARDS_BY_ID.get(cardId)?.type === 'ninja',
+  permanentCoins: (cardId) => {
+    const card = CARDS_BY_ID.get(cardId);
+    return card ? permanentCoins(card) : 0;
+  },
 };
 
 export function hashToken(token: string): string {

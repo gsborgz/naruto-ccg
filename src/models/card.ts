@@ -145,6 +145,20 @@ export function isReinforcementCard(card: Card): boolean {
   );
 }
 
+/**
+ * Moedas Ninja com que uma Missão "Permanent (X)" entra na Vila (docs/REGRAS.md 6.4): o X impresso, ou 0
+ * se a carta não for Permanente com um número (as "Permanent (X)" com X no texto ficam por conta do jogador).
+ */
+export function permanentCoins(card: Card): number {
+  if (card.type !== 'mission') return 0;
+  for (const line of card.text ?? []) {
+    // "Permanent (2)" numa linha própria ou junto de "Counter" ("Counter Permanent (2)").
+    const m = /^(?:Counter )?Permanent \((\d+)\)/.exec(line);
+    if (m) return Number(m[1]);
+  }
+  return 0;
+}
+
 export const CARD_TYPE_LABEL: Record<CardType, string> = {
   ninja: 'Ninja',
   jutsu: 'Jutsu',

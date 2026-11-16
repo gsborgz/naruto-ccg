@@ -243,16 +243,16 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 
 - **Início:** quando os dois marcam Pronto, cada deck vira cartas na Área do Deck, **embaralhadas no
   servidor** (sorteio criptográfico), as cartas de Esquadrão vão para o Baralho de Reforço e cada jogador
-  compra **6 cartas** (docs/REGRAS.md 2.3). O mulligan é manual: **Mão → Deck** (devolve a mão e embaralha) e depois comprar.
+  compra **6 cartas** (docs/REGRAS.md 2.3). O mulligan é manual: **R** com o mouse sobre a mão (devolve a mão e embaralha) e depois comprar.
 - **Jogadas** (`POST /api/rooms/<id>/actions` com `{ type: 'game', action }`):
   - `{ type: 'move', uid, to }`: arrastar uma carta SUA para outra zona SUA (devolvida ao Deck, vai para o topo);
   - `{ type: 'draw' }`: comprar o topo do deck;
   - `{ type: 'shuffle' }`: embaralhar o deck;
   - `{ type: 'search', cardId }`: buscar uma carta específica do deck para a mão **e embaralhar em seguida**;
   - `{ type: 'returnHand' }`: devolver a mão inteira ao Deck e embaralhar (o mulligan, docs/REGRAS.md 2, passo
-    4-A; a compra das novas cartas continua manual). Na tela é o botão **↩ Mão → Deck** logo abaixo do seu Deck
-    (fora do arco da mão), com confirmação. No registro, o dono vê quais cartas
-    voltaram; o oponente vê só quantas;
+    4-A; a compra das novas cartas continua manual). Na tela é a tecla **R** com o mouse sobre a sua mão, sem
+    confirmação. Com `bottom: true` (tecla **Shift+F** sobre a mão, par do F que manda uma carta só), a mão vai para o **fundo** do Deck, na ordem
+    da mão, **sem embaralhar**. No registro, o dono vê quais cartas voltaram; o oponente vê só quantas;
   - `{ type: 'nextPhase' }`: avançar a fase do turno (ver "Turnos");
   - `{ type: 'setInjured', uid, injured }`: virar um Ninja seu para Ferido ou Saudável (ver "Ninja Ferido");
   - `{ type: 'passTurn' }`: passar o turno (ver "Turnos");
@@ -261,7 +261,14 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   - `{ type: 'reveal', from, count }`: revelar `count` cartas do **topo** (`from: 'top'`) ou do **fundo**
     (`'bottom'`) do seu Deck. Elas vão para a sua **Vila**, face para cima, na ordem do Deck, e os dois veem
     (também no registro, com os nomes). Depois, cada carta é movida à mão (arrastando ou pelo detalhe). Na tela é
-    o botão 👁 no seu Deck, que pergunta de onde e quantas (pedir mais do que há revela o que sobrou).
+    o botão 👁 no seu Deck, que pergunta de onde e quantas (pedir mais do que há revela o que sobrou);
+  - `{ type: 'setCoins', uid, kind, delta }`: pôr ou tirar moedas de um tipo numa carta sua (ver "Moedas");
+  - `{ type: 'flip' }`: jogar a Moeda Ninja (ver "Moeda Ninja");
+  - `{ type: 'adjustTurn', delta }`: subir ou descer o SEU Marcador de Turnos (efeitos de cartas, como S02 M-043),
+    entre 0 e 10. Na tela são o − e o + que aparecem ao passar o mouse na barra **Marcador** da sua placa.
+- **Topo ou fundo do Deck pelo teclado:** com o mouse sobre uma carta sua (mão, Vila, Campo, Chakra, Descartes…),
+  **T** a põe no topo e **F** no fundo do Deck, sem embaralhar (a mesma ação `move` do detalhe; Esquadrões não
+  vão para o Deck).
 - **Mover pelo detalhe da carta:** clicar numa carta sua (mão, Vila, Campo, Chakra, Descartes, Reforço,
   Removidos) abre o detalhe com **Descartar**, **→ zona** (mão, Vila, Campo, Chakra, topo ou fundo do Deck, Removidos
   e, para Esquadrões/Reforço, Reforço) e **→ Prêmio do oponente**. São as mesmas ações `move` e `giveReward` do
@@ -278,18 +285,24 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   ainda não é controlado. Na tela, a placa do Atacante diz "sua vez" / "Atacante" e o oponente vê o botão
   desligado "Turno de X". Na prévia `/arena`, o oponente devolve o turno na hora. Os outros botões
   continuam valendo para os dois jogadores em qualquer turno (o Bloqueador também mexe nas cartas dele).
-- **Ninja Ferido** (docs/REGRAS.md 3.5.4, "Dano e Ninjas Feridos"): o botão ↻ (ao passar o mouse num Ninja seu
-  na Vila ou no Campo de Batalha) vira a carta para a horizontal; ↺ cura. Fica guardado na carta
+- **Ninja Ferido** (docs/REGRAS.md 3.5.4, "Dano e Ninjas Feridos"): a tecla **R** com o mouse sobre um Ninja seu
+  na Vila ou no Campo de Batalha vira a carta para a horizontal; R de novo cura. Fica guardado na carta
   (`CardInstance.injured`), continua ao entrar num Time e ao voltar do Campo para a Vila, e some quando a carta
   sai da Vila/Campo.
 - **Prêmios de Batalha** (docs/REGRAS.md 3.5.4): ninguém coloca cartas nos **próprios** Prêmios. Você manda
   uma carta SUA para a Área de Prêmios do **oponente** (ação `giveReward`): arrastando o seu Deck ou clicando no
-  botão 🏆 ao lado dele (vai a carta do topo, sem revelar qual é), ou arrastando uma carta específica para os
+  botão 🏆 no canto dele, ao lado do 👁 (vai a carta do topo, sem revelar qual é), ou arrastando uma carta específica para os
   Prêmios dele (ou pelo detalhe da carta, **→ Prêmio do oponente**). Cartas nos Prêmios ficam lá (face para
   baixo, ninguém vê) e não podem ser movidas, mas podem ser **devolvidas** (ex.: Prêmio dado por engano): o
-  botão ↩ na Área de Prêmios (a sua ou a do oponente; qualquer um dos dois) manda a última carta que entrou ali
+  botão ↩ na Área de Prêmios (a sua ou a do oponente; qualquer um dos dois; sempre à mostra, desligado com a
+  Área vazia) manda a última carta que entrou ali
   de volta, face para baixo, ao **topo do Deck de quem a deu** (ação `returnReward`, com `owner` = dono da
-  Área). No registro, ninguém vê qual carta voltou.
+  Área). No registro, ninguém vê qual carta voltou. Ao lado do ↩, o 🔍 **olha um Prêmio** (ação `peekReward`,
+  com `owner` e `index`, 0 = o primeiro que entrou): o diálogo mostra os Prêmios face para baixo, você escolhe
+  a posição e o servidor manda a carta **só para você** (`GameState.peek` → `GameView.peek`, enquanto a carta
+  continuar na Área). Dali dá para **recuperar** essa carta (`returnReward` com `uid` e `to: 'hand'`: ela vai para a
+  mão de quem a deu). No registro, os dois veem que você olhou (e qual posição) ou recuperou um Prêmio; o
+  nome da carta, só você.
 - **Times** (docs/REGRAS.md 3.4 F e 3.5.1): soltar um Ninja sobre outro Ninja seu na Vila ou no Campo de
   Batalha forma um Time (ou aumenta o Time dele). Ações `joinTeam` (`uid` sobre `target`), `moveTeam` (o Time
   inteiro para outra zona, arrastando pela alça "Time n/3") e `setLeader` (botão ★).
@@ -314,24 +327,46 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
     para o Campo; se o Ninja sai do Time, o ajuste vai com ele; some quando a carta sai da Vila/Campo. Não zera
     sozinho no fim do turno: volte com −/+ quando o efeito acabar. Cliques seguidos viram uma jogada só no
     registro.
+- **Moedas** (docs/REGRAS.md 6.4 e 6.5): cartas na Vila ou no Campo de Batalha guardam moedas por tipo
+  (`CardInstance.coins`, tipo → quantidade, até 99 de cada e 12 tipos por carta). O tipo é o nome impresso na
+  carta ("Growth", "+1/+1", "Poison", "Bomb", "State 2"…), digitado no detalhe da carta ou escolhido entre as
+  atalhos (Growth e Poison nos Ninjas; Ninja nas outras cartas; as demais, como +1/+1, são digitadas); o nome é arrumado no servidor (`coinKind`: sem espaços ou
+  aspas sobrando, "−" vira "-"). Na mesa, cada tipo vira um selo no canto da carta (verde/vermelho para as de
+  Poder), visível para os dois; o detalhe de uma carta sua mostra a seção **Marcadores (moedas)**, com − e + e uma linha explicando o uso. O −/+ do Poder do Time continua sendo o caminho para efeitos que duram só o turno; as moedas são o que fica marcado na carta.
+  - **Moedas de Poder** somam sozinhas no Poder do Time (`coinPower` em `teamPower.ts`): Growth dá +1/+1, e
+    as com o valor no nome ("+1/+1", "-2/-2", "+0/+2") dão esse valor (o primeiro número no Líder, o segundo
+    nos Apoios). As outras são só marcadores.
+  - **Missão Permanente (X)** entrando na Vila (vinda de fora da Vila/Campo) já chega com X moedas "Ninja"
+    (`permanentCoins` em `src/models/card.ts`, lido do texto "Permanent (X)" ou "Counter Permanent (X)"; com X
+    não numérico, fica por conta do jogador). Tirar a moeda no início do turno e mandar a Missão para o Chakra
+    na última continuam manuais.
+  - As moedas seguem a carta entre a Vila e o Campo, ao entrar ou sair de um Time, ao ferir/curar e ao trocar
+    o Líder; somem quando a carta sai da Vila/Campo. No Crescimento [Growth], quem passa as moedas do Ninja
+    antigo para o novo é o jogador.
+  - Cliques seguidos no mesmo tipo da mesma carta viram uma jogada só no registro.
+- **Moeda Ninja** (docs/REGRAS.md 4.16, "Jogar a Moeda Ninja"): o botão **🪙 Moeda** no canto inferior direito
+  (qualquer um dos dois, a qualquer momento) pede ao servidor um sorteio de Cara [Heads] ou Coroa [Tails]. A
+  mesa não muda: o resultado vai para o registro (`LogEntry.result`) e aparece no meio da arena, para os dois,
+  por 4 s.
 - **Encerrar partida** (`{ type: 'endGame' }`, qualquer um dos dois): volta para a escolha de decks (decks
   mantidos, ninguém pronto). Sair da sala no meio da partida também a encerra.
 - **Registro de jogo** (`GameState.log`, as últimas `LOG_MAX` = 80 jogadas): toda jogada que muda algo é
   anotada no servidor com quem fez, o turno, as cartas (pelo `cardId`) e de onde para onde foram (mover,
   mover Time, reposicionar, comprar, buscar, embaralhar, juntar ao Time, Líder, ferir/curar, Prêmio, fase,
-  passar turno). Só o que é do jogo: jogadas sem efeito e a troca de tema não entram. Na visão de cada jogador, o nome da carta só aparece
+  passar turno, moedas, Moeda Ninja, Marcador de Turnos). Só o que é do jogo: jogadas sem efeito e a troca de tema não entram. Na visão de cada jogador, o nome da carta só aparece
   se ele pode vê-la na zona de origem ou na de destino (ex.: o oponente vê "comprou uma carta"; Prêmios
   dados do topo do Deck ficam ocultos para os dois). Na tela, o botão **📜 Registro** no canto inferior
   direito da arena (com o número de jogadas novas) abre o painel, agrupado por turno, com os nomes das cartas
-  clicáveis para ver o detalhe.
+  clicáveis para ver o detalhe. Ao lado dele, **⌨ Atalhos** abre, no mesmo lugar, a lista de teclas de
+  atalho e gestos da arena (`SHORTCUTS` em `src/components/arena/GameArena.tsx`; atalho novo entra nessa lista).
 - **Visibilidade** (docs/REGRAS.md, "Zonas"): Vila, Campo de Batalha, Chakra, Descartes e Removidos são
   públicos; Mão e Reforço só o dono vê; Deck e Prêmios ninguém vê. O que não pode ser visto chega ao
   navegador só como contagem (`ZoneView.count`, sem `cards`).
 - **Busca:** `GET /api/rooms/<id>/deck` (só o dono, só durante a partida) devolve a quantidade por carta no
   deck, **sem a ordem**. A tela mostra em ordem alfabética.
 - **Na tela:** arrastar (HTML5 drag and drop) entre as suas zonas, inclusive mão e os contadores Reforço e
-  Removidos da sua placa; clique no seu Deck compra 1 carta, e os botões `⇄` (embaralhar) e `⌕` (buscar) ficam
-  no canto do Deck; clique nos Descartes, no Chakra ou em Reforço/Removidos abre a lista com botões para mover;
+  Removidos da sua placa; clique no seu Deck compra 1 carta, **R** com o mouse sobre ele embaralha (com uma animação
+  das cartas girando, que o oponente também vê, disparada pelo registro) e **F** abre a busca no Deck; clique nos Descartes, no Chakra ou em Reforço/Removidos abre a lista com botões para mover;
   na sua mão, cópias iguais (mesmo `cardId`) aparecem como uma pilha só, com a badge **×N** (arrastar a pilha
   leva uma cópia), e a mão fica sempre organizada por tipo: Ninjas → Clientes → Missões → Jutsus (dentro do
   tipo, na ordem em que chegaram). A mão é um **arco rolável**: as cartas se aproximam a cada pilha a mais
@@ -344,7 +379,11 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   `src/lib/rooms/model.ts` (ações `game`/`endGame`, campo `game` na sala e na `RoomView`); arena em
   `src/components/arena/` (`GameArena.tsx`, `GameArena.module.css`, `SearchDeckDialog.tsx`). A prévia
   `/arena` roda uma partida local com dois decks de exemplo.
-- **Ainda não:** o que cada fase permite, mexer em outras cartas do oponente, mulligan automático.
+- **Ainda não:** o que cada fase permite, mexer em outras cartas do oponente (ferir, descartar, Chakra, topo do
+  Deck, Prêmios, mudar o controle), ver ou mostrar cartas da mão, olhar o topo do Deck sem revelar e
+  reordenar, escolhas aleatórias (ex.: descarte aleatório da mão do oponente), cartas presas a outras
+  ("Attach this card to the target"), turno extra, Poder Mental no chip do Time, quem bloqueia quem na Batalha,
+  condições de vitória e mulligan automático.
 
 ## Ligação com a partida (MVP 4)
 
