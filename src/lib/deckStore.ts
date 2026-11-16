@@ -112,4 +112,17 @@ export const deckActions = {
   remove(id: string) {
     write(read().filter((d) => d.id !== id));
   },
+
+  /** Tira a carta de todos os decks (carta criada excluída): os decks que a usavam ficam com menos cartas. */
+  removeCardEverywhere(cardId: string) {
+    const decks = read();
+    if (!decks.some((d) => cardId in d.cards)) return;
+    write(
+      decks.map((d) => {
+        if (!(cardId in d.cards)) return d;
+        const { [cardId]: _removed, ...cards } = d.cards;
+        return { ...d, cards, updatedAt: now() };
+      }),
+    );
+  },
 };

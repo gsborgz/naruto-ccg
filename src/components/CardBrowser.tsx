@@ -6,7 +6,7 @@ import { CUSTOM_SET, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { filterCards, INITIAL_FILTERS, type CardFilterState } from '@/lib/cardFilters';
 import { useCardDesign } from '@/lib/cardDesign';
 import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
-import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
+import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFace } from './CardFace';
 import { CardFilters } from './CardFilters';
@@ -93,6 +93,12 @@ const CardTile = memo(function CardTile({ card, eager, rendered, count, blocked,
                 · Reforço
               </span>
             )}
+            {isTokenCard(card) && (
+              <span className="text-accent" title="Vai para a parte Tokens do deck (1 cópia de cada)">
+                {' '}
+                · Token
+              </span>
+            )}
           </p>
         </div>
         <CardCost card={card} />
@@ -127,8 +133,11 @@ export function CardBrowser({
   const extraSets = useMemo(() => (source.some((c) => c.set === CUSTOM_SET) ? [CUSTOM_SET] : []), [source]);
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className={filtersClassName}>
+    <div className="flex flex-col gap-3 md:gap-4">
+      {/* No celular, a busca e os filtros ficam presos logo abaixo do cabeçalho enquanto a grade rola. */}
+      <div
+        className={`max-md:sticky max-md:top-[var(--app-header-h)] max-md:z-20 max-md:-mx-4 max-md:border-b max-md:border-border max-md:bg-bg/95 max-md:px-4 max-md:py-2 max-md:backdrop-blur ${filtersClassName ?? ''}`}
+      >
         <CardFilters value={filters} onChange={setFilters} resultCount={cards.length} extraSets={extraSets} />
       </div>
       {cards.length === 0 ? (
@@ -136,7 +145,7 @@ export function CardBrowser({
           Nenhuma carta encontrada com esses filtros.
         </p>
       ) : (
-        <ul className={gridClassName ?? 'grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'}>
+        <ul className={gridClassName ?? 'grid grid-cols-2 gap-x-2.5 gap-y-4 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-6'}>
           {cards.map((card, index) => (
             <CardTile
               key={card.id}

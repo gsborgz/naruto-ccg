@@ -1,11 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
-import { customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { customDeckCardId, customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
+import { deleteCustomCard } from '@/lib/cardMaker/artUpload';
+import { readCustomCards } from '@/lib/cardMaker/store';
+import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog';
 import { useCardDesign } from '@/lib/cardDesign';
 import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
-import { CARD_TYPE_LABEL, isReinforcementCard, type Card } from '@/models/card';
+import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import type { LayoutSizeField } from '@/lib/devCardLayoutEdit';
 import { CardFace } from './CardFace';
@@ -19,9 +22,11 @@ interface Props {
   onClose: () => void;
   /** Ações extras (ex.: +/- no montador de deck). */
   actions?: React.ReactNode;
+  /** Carta criada excluída de vez pelo botão do detalhe (ex.: o montador tira do rascunho do deck). */
+  onDeleted?: (card: Card) => void;
 }
 
-export function CardDetailModal({ card, onClose, actions }: Props) {
+export function CardDetailModal({ card, onClose, actions, onDeleted }: Props) {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -38,16 +43,19 @@ export function CardDetailModal({ card, onClose, actions }: Props) {
       onClick={(e) => e.target === e.currentTarget && onClose()}
       className="m-auto w-[min(56rem,calc(100vw-2rem))] rounded-xl border border-border bg-surface p-0 text-text backdrop:bg-black/70"
     >
-      {card && <CardDetails key={card.id} card={card} onClose={onClose} actions={actions} />}
+      {card && <CardDetails key={card.id} card={card} onClose={onClose} actions={actions} onDeleted={onDeleted} />}
     </dialog>
   );
 }
 
-function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
+function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card }) {
   const { language } = useCardLanguage();
   const localized = useLocalizedCard(card);
   const setName = useSetName()(card.set);
   const custom = isCustomCardId(card.id);
+  const localCustom = useIsLocalCustomCard(card.id);
+  // Na partida (cartas vindas da sala) não se exclui nada: a carta é a cópia que foi para a sala.
+  const inMatch = useContext(CustomSourceContext) !== null;
   // Abre no design escolhido na listagem (padrão: a original); o outro fica a um clique.
   const [view, setView] = useState<CardView>(useCardDesign());
   // Desenvolvimento: ajuste do tamanho do nome, aplicado na carta montada antes de gravar no arquivo da coleção.
@@ -159,6 +167,13 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
           </p>
         )}
 
+        {isTokenCard(card) && (
+          <p className="rounded-lg bg-accent/10 px-3 py-2 text-sm">
+            <span className="font-semibold text-accent">Token.</span> Esta carta fica na parte Tokens do deck (fora
+            das 50 e do Baralho de Reforço), com no máximo 1 cópia.
+          </p>
+        )}
+
         {(localized.text.length > 0 || localized.flavor) && (
           <div className="space-y-2 rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
             {localized.text.map((line, i) => (
@@ -169,11 +184,26 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
         )}
         {custom && (
           <p className="text-xs text-muted">
-            Carta criada neste navegador.{' '}
-            <Link href={`/criar?carta=${customSourceId(card.id)}`} className="text-accent hover:underline">
-              Editar no criador
-            </Link>
+            {localCustom ? (
+              <>
+                Carta criada neste navegador.{' '}
+                <Link href={`/criar?carta=${customSourceId(card.id)}`} className="text-accent hover:underline">
+                  Editar no criador
+                </Link>
+              </>
+            ) : (
+              'Carta criada por outro jogador.'
+            )}
           </p>
+        )}
+        {custom && localCustom && !inMatch && (
+          <DeleteCustomCardButton
+            cardId={card.id}
+            onDeleted={() => {
+              onDeleted?.(card);
+              onClose();
+            }}
+          />
         )}
         {language === 'pt-BR' && !localized.translated && !custom && (
           <p className="text-xs text-muted">Esta carta ainda não tem tradução: os textos estão em inglês, como impressos.</p>
@@ -182,5 +212,44 @@ function CardDetails({ card, onClose, actions }: Props & { card: Card }) {
         {actions && <div className="mt-auto">{actions}</div>}
       </div>
     </div>
+  );
+}
+
+/**
+ * Exclui de vez a carta criada: some do criador e de todos os decks deste navegador (que ficam inválidos até
+ * completar de novo), e a arte dela é apagada do Vercel Blob.
+ */
+function DeleteCustomCardButton({ cardId, onDeleted }: { cardId: string; onDeleted: () => void }) {
+  const [busy, setBusy] = useState(false);
+  const remove = async () => {
+    const source = readCustomCards().find((c) => customDeckCardId(c.id) === cardId);
+    if (!source) return;
+    const name = source.name.trim() || 'carta sem nome';
+    if (
+      !confirm(
+        `Excluir "${name}" de vez?
+
+Ela sai do criador e de todos os seus decks (que ficam inválidos até completar de novo), e a arte é apagada do servidor: quem importou esta carta fica sem a arte. Não dá para desfazer.`,
+      )
+    ) {
+      return;
+    }
+    setBusy(true);
+    try {
+      await deleteCustomCard(source);
+    } finally {
+      setBusy(false);
+    }
+    onDeleted();
+  };
+  return (
+    <button
+      type="button"
+      onClick={remove}
+      disabled={busy}
+      className="self-start rounded-lg px-3 py-1.5 text-sm font-semibold text-danger ring-1 ring-danger/40 hover:bg-danger/10 disabled:cursor-wait disabled:opacity-60"
+    >
+      {busy ? 'Excluindo…' : 'Excluir carta permanentemente'}
+    </button>
   );
 }

@@ -64,13 +64,13 @@ test('"Name: X" vale só em jogo (regra da Vila)', () => {
   assert.deepEqual(getInPlayNames(sageNaruto), ['Naruto Uzumaki (Sage Mode)', 'Naruto Uzumaki']);
 });
 
-test('sem limite de cópias por nome (os jogadores combinam entre si)', () => {
-  assert.equal(cannotAddReason({ 's01-n-001': 10 }, lookup('s01-n-001')!, lookup), null);
-  assert.equal(cannotAddReason({ 's01-n-001': 2, 's01-n-019': 1 }, lookup('s01-n-025')!, lookup), null);
+test('limite de 3 cópias conta a carta (id), não o nome', () => {
+  // s01-n-001, s01-n-019 e s01-n-025 são todas "Naruto Uzumaki", mas cartas diferentes.
+  assert.equal(cannotAddReason({ 's01-n-001': 3, 's01-n-019': 3 }, lookup('s01-n-025')!, lookup), null);
   assert.equal(cannotAddReason({ 's15-n-684': 3, 's17-n-816': 3 }, lookup('s24-n-1394')!, lookup), null);
   const s = summarizeDeck({ 's01-n-001': 30, 's01-j-007': 20 }, lookup);
   assert.equal(s.total, 50);
-  assert.equal(s.isValid, true, JSON.stringify(s.issues));
+  assert.deepEqual(s.issues.map((i) => i.code), ['copies', 'copies']);
 });
 
 test('deck vazio é inválido por tamanho', () => {
@@ -190,4 +190,40 @@ test('Baralho de Reforço: até 15 cartas', () => {
   const sixteen = summarizeDeck({ ...fifteen, 's13-n-573': 1 }, lookup);
   assert.equal(sixteen.reinforcement, 16);
   assert.ok(sixteen.issues.some((i) => i.code === 'reinforcement-size'));
+});
+
+test('limite de 3 cópias de cada carta', () => {
+  const three: DeckCards = { 's01-n-001': 3 };
+  assert.match(cannotAddReason(three, lookup('s01-n-001')!, lookup) ?? '', /3 cópias/);
+  assert.equal(cannotAddReason({ 's01-n-001': 2 }, lookup('s01-n-001')!, lookup), null);
+  const four = summarizeDeck({ 's01-n-001': 4 }, lookup);
+  assert.ok(four.issues.some((i) => i.code === 'copies'));
+});
+
+test('Tokens: fora das 50, quantos quiser, 1 cópia de cada', async () => {
+  const { deckPartOf } = await import('./deckRules.ts');
+  const token = (id: string): NinjaCard => ({ ...ninja(id, `Token ${id}`, []), token: true });
+  const tokens = new Map(['t-1', 't-2', 't-3', 't-4'].map((id) => [id, token(id)]));
+  const look = (id: string) => tokens.get(id) ?? lookup(id);
+  assert.equal(deckPartOf(tokens.get('t-1')!), 'token');
+
+  const cards: DeckCards = { 't-1': 1, 't-2': 1, 't-3': 1, 't-4': 1 };
+  const s = summarizeDeck(cards, look);
+  assert.equal(s.tokens, 4);
+  assert.equal(s.total, 0);
+  assert.equal(s.reinforcement, 0);
+  assert.ok(!s.issues.some((i) => i.code === 'token-copies'));
+  // Segunda cópia do mesmo Token: bloqueada e inválida.
+  assert.match(cannotAddReason(cards, tokens.get('t-1')!, look) ?? '', /Token/);
+  assert.ok(summarizeDeck({ 't-1': 2 }, look).issues.some((i) => i.code === 'token-copies'));
+  // Com o Deck cheio, ainda dá para adicionar Tokens.
+  const full: DeckCards = {};
+  let n = 0;
+  for (const c of CARDS) {
+    if (n >= DECK_RULES.size) break;
+    if (c.type !== 'jutsu') continue;
+    full[c.id] = 1;
+    n++;
+  }
+  assert.equal(cannotAddReason(full, tokens.get('t-1')!, look), null);
 });

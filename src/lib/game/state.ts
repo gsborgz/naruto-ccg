@@ -373,11 +373,13 @@ function emptyZones(): PlayerZones {
 /**
  * Prepara a partida: cada deck vira cartas na Área do Deck (embaralhadas) e as cartas do Baralho de
  * Reforço vão para a zona de Reforço. Cada jogador compra a mão inicial.
+ * Os Tokens (`isToken`) ficam fora da partida por enquanto: ainda não há zona para eles.
  */
 export function createGame(
   decks: Record<Side, Record<string, number>>,
   isReinforcement: (cardId: string) => boolean,
   rng: Rng,
+  isToken: (cardId: string) => boolean = () => false,
 ): GameState {
   const players = {} as Record<Side, PlayerZones>;
   for (const side of ['host', 'guest'] as const) {
@@ -385,6 +387,7 @@ export function createGame(
     let n = 0;
     const main: CardInstance[] = [];
     for (const [cardId, qty] of Object.entries(decks[side])) {
+      if (isToken(cardId)) continue;
       for (let i = 0; i < qty; i++) {
         const card = { uid: `${side[0]}${++n}`, cardId };
         (isReinforcement(cardId) ? zones.reinforcement : main).push(card);

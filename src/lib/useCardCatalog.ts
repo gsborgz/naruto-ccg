@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { createContext, useContext, useMemo } from 'react';
 import { CARDS, CARDS_BY_ID } from '@/data/cards';
 import { customDeckCardId } from '@/lib/cardMaker/customIds';
 import { customCardToCard } from '@/lib/cardMaker/deckCard';
@@ -34,8 +34,24 @@ export function useCardCatalog(): CardCatalog {
   }, [custom]);
 }
 
-/** A carta do criador por trás de uma carta `custom-<uuid>` do montador (para desenhá-la). */
+/**
+ * Cartas criadas vindas de fora deste navegador (a partida numa sala: as do oponente e a cópia enviada das suas,
+ * com as artes já baixadas). Tem prioridade sobre as cartas do criador deste navegador.
+ */
+export const CustomSourceContext = createContext<((cardId: string) => CustomCard | undefined) | null>(null);
+
+/** A carta do criador por trás de uma carta `custom-<uuid>` do montador ou da partida (para desenhá-la). */
 export function useCustomSource(cardId: string): CustomCard | undefined {
+  const external = useContext(CustomSourceContext);
   const custom = useCustomCards();
-  return useMemo(() => custom?.find((c) => customDeckCardId(c.id) === cardId), [custom, cardId]);
+  return useMemo(
+    () => external?.(cardId) ?? custom?.find((c) => customDeckCardId(c.id) === cardId),
+    [external, custom, cardId],
+  );
+}
+
+/** A carta criada está no criador deste navegador (dá para abrir no `/criar`)? */
+export function useIsLocalCustomCard(cardId: string): boolean {
+  const custom = useCustomCards();
+  return useMemo(() => !!custom?.some((c) => customDeckCardId(c.id) === cardId), [custom, cardId]);
 }

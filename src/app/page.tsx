@@ -30,7 +30,7 @@ export default function HomePage() {
         <div>
           <h1 className="text-2xl font-bold">Meus decks</h1>
           <p className="text-sm text-muted">
-            {DECK_RULES.size} cartas, sem limite de cópias. Salvos neste navegador.
+            {DECK_RULES.size} cartas, até {DECK_RULES.copiesPerCard} cópias de cada carta. Salvos neste navegador.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -76,7 +76,7 @@ export default function HomePage() {
           </p>
         </div>
       ) : (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {decks.map((deck) => {
             const s = summarizeDeck(deck.cards, lookup);
             return (
@@ -97,16 +97,17 @@ export default function HomePage() {
                   {s.total}/{DECK_RULES.size} cartas · {s.byType.ninja} Ninja · {s.byType.jutsu} Jutsu ·{' '}
                   {s.byType.mission} Missão
                   {s.reinforcement > 0 && ` · +${s.reinforcement} no Reforço`}
+                  {s.tokens > 0 && ` · +${s.tokens} Tokens`}
                 </p>
                 {hasCustomCards(deck.cards) && (
                   <p
                     className="-mt-2 text-xs text-accent"
-                    title="Cartas do criador ficam só neste navegador: o deck não pode ir para salas nem ser compartilhado."
+                    title="O deck tem cartas do criador: elas vão junto para as salas e para os códigos de compartilhamento."
                   >
                     Com cartas criadas
                   </p>
                 )}
-                <div className="mt-auto flex gap-2 text-sm">
+                <div className="mt-auto flex flex-wrap gap-2 text-sm">
                   <Link
                     href={`/decks/${deck.id}`}
                     className="rounded-md bg-surface-2 px-3 py-1.5 hover:bg-border"

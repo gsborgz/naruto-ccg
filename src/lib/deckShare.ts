@@ -1,3 +1,5 @@
+import type { CustomCard } from './cardMaker/model.ts';
+import { parseSharedCustomCards } from './cardMaker/sharedCard.ts';
 import type { DeckCards } from './deckRules.ts';
 
 /**
@@ -12,6 +14,11 @@ import type { DeckCards } from './deckRules.ts';
 export interface SharedDeck {
   name: string;
   cards: DeckCards;
+  /**
+   * As cartas criadas que o deck usa (id no deck `custom-<uuid>` → carta), com as artes no Vercel Blob (ver
+   * `src/lib/cardMaker/sharedCard.ts`). Ausente quando o deck só tem cartas do catálogo.
+   */
+  custom?: Record<string, CustomCard>;
 }
 
 export type SharePayload = { kind: 'deck'; deck: SharedDeck } | { kind: 'collection'; decks: SharedDeck[] };
@@ -40,19 +47,25 @@ function isRecord(x: unknown): x is Record<string, unknown> {
   return typeof x === 'object' && x !== null && !Array.isArray(x);
 }
 
-/** Valida e normaliza um deck vindo de fora; `null` se for inválido. */
+/**
+ * Valida e normaliza um deck vindo de fora; `null` se for inválido. As cartas criadas (`custom`) são validadas
+ * campo a campo e contam como conhecidas; só ficam as que o deck usa.
+ */
 export function parseSharedDeck(x: unknown, isKnownCard: (id: string) => boolean): SharedDeck | null {
   if (!isRecord(x) || typeof x.name !== 'string' || !isRecord(x.cards)) return null;
+  const custom = parseSharedCustomCards(x.custom);
+  if (!custom) return null;
   const name = x.name.trim().slice(0, SHARE_LIMITS.nameLength) || 'Deck sem nome';
   const entries = Object.entries(x.cards);
   if (entries.length > SHARE_LIMITS.entriesPerDeck) return null;
   const cards: DeckCards = {};
   for (const [id, qty] of entries) {
-    if (!isKnownCard(id)) return null;
+    if (!isKnownCard(id) && !Object.hasOwn(custom, id)) return null;
     if (!Number.isInteger(qty) || (qty as number) < 1 || (qty as number) > SHARE_LIMITS.copiesPerCard) return null;
     cards[id] = qty as number;
   }
-  return { name, cards };
+  const used = Object.fromEntries(Object.entries(custom).filter(([id]) => Object.hasOwn(cards, id)));
+  return Object.keys(used).length > 0 ? { name, cards, custom: used } : { name, cards };
 }
 
 /** Valida o corpo de um compartilhamento; `null` se for inválido. */

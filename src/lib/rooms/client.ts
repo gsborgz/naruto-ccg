@@ -1,5 +1,6 @@
 'use client';
 
+import type { CustomCard } from '@/lib/cardMaker/model';
 import type { RoomAction, RoomView } from './model';
 
 /**
@@ -112,4 +113,6 @@ export const roomApi = {
     request<RoomView | null>(`/api/rooms/${id}/actions`, { method: 'POST', body: JSON.stringify(action) }),
   /** Conteúdo do seu deck (quantidade por carta, sem a ordem) para buscar uma carta. */
   deck: (id: string) => request<{ cards: Record<string, number> }>(`/api/rooms/${id}/deck`),
+  /** Cartas criadas dos dois decks da partida (id no deck → carta). */
+  customCards: (id: string) => request<{ cards: Record<string, CustomCard> }>(`/api/rooms/${id}/custom-cards`),
 };

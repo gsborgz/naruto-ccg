@@ -1,28 +1,22 @@
 'use client';
 
 import { CARDS_BY_ID } from '@/data/cards';
-import { hasCustomCards } from '@/lib/cardMaker/customIds';
-import { isValidShareId, parseSharePayload, type SharedDeck, type SharePayload } from './deckShare';
+import { withCustomCards } from '@/lib/cardMaker/customDeck';
+import { readCustomCards } from '@/lib/cardMaker/store';
+import { isValidShareId, parseSharePayload, type SharePayload } from './deckShare';
 
 const isKnownCard = (id: string) => CARDS_BY_ID.has(id);
 
-const toShared = (d: SharedDeck): SharedDeck => ({ name: d.name, cards: d.cards });
-
-/** Envia uma cópia do deck/coleção para o servidor e devolve o UUID gerado. */
+/**
+ * Envia uma cópia do deck/coleção para o servidor e devolve o UUID gerado. As cartas criadas vão junto (as artes
+ * são enviadas antes para o Vercel Blob; ver `withCustomCards`).
+ */
 export async function createShare(payload: SharePayload): Promise<string> {
-  const decks = payload.kind === 'deck' ? [payload.deck] : payload.decks;
-  const withCustom = decks.filter((d) => hasCustomCards(d.cards));
-  if (withCustom.length > 0) {
-    // As cartas do criador ficam só no localStorage deste navegador: o servidor não as conhece.
-    const names = withCustom.map((d) => `"${d.name}"`).join(', ');
-    throw new Error(
-      `Decks com cartas criadas ainda não podem ser compartilhados, pois essas cartas ficam só neste navegador (${names}).`,
-    );
-  }
+  const custom = readCustomCards();
   const body: SharePayload =
     payload.kind === 'deck'
-      ? { kind: 'deck', deck: toShared(payload.deck) }
-      : { kind: 'collection', decks: payload.decks.map(toShared) };
+      ? { kind: 'deck', deck: await withCustomCards(payload.deck, custom) }
+      : { kind: 'collection', decks: await Promise.all(payload.decks.map((d) => withCustomCards(d, custom))) };
   const res = await fetch('/api/shares', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

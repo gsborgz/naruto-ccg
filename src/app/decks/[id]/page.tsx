@@ -6,6 +6,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { CardBrowser } from '@/components/CardBrowser';
 import { CardDetailModal } from '@/components/CardDetailModal';
 import { DeckPanel } from '@/components/DeckPanel';
+import { DeckSheet } from '@/components/DeckSheet';
 import { QtyControls } from '@/components/QtyControls';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { cannotAddReasonIn, DECK_RULES, indexDeck, summarizeDeck, type DeckCards } from '@/lib/deckRules';
@@ -61,6 +62,8 @@ export default function DeckBuilderPage() {
     setDraft((d) => d && { ...d, name: d.name.trim() || 'Deck sem nome' });
   }, [draft]);
 
+  const [sheetOpen, setSheetOpen] = useState(false);
+
   if (deck === undefined) return <p className="text-muted">Carregando…</p>;
   if (deck === null) {
     return (
@@ -76,10 +79,23 @@ export default function DeckBuilderPage() {
     );
   }
 
+  const panelProps = {
+    deck,
+    lookup,
+    summary,
+    dirty,
+    blockedOf,
+    onSelect: setSelected,
+    onSetQty,
+    onRename,
+    onClear,
+    onSave: save,
+  };
+
   return (
     // No desktop a tela ocupa a altura toda (descontando cabeçalho e padding: --app-chrome em globals.css; em tela cheia o cabeçalho some):
     // cada coluna rola sozinha, como no TCG Live — cartas disponíveis à esquerda, deck à direita.
-    <div className="grid gap-6 lg:h-[calc(100dvh-var(--app-chrome))] lg:grid-cols-[minmax(0,1fr)_26rem] xl:grid-cols-[minmax(0,1fr)_minmax(30rem,38%)]">
+    <div className="grid gap-6 pb-20 lg:h-[calc(100dvh-var(--app-chrome))] lg:grid-cols-[minmax(0,1fr)_26rem] xl:grid-cols-[minmax(0,1fr)_minmax(30rem,38%)]">
       <section className="flex min-w-0 flex-col gap-4 lg:-mx-2 lg:overflow-y-auto lg:px-2 lg:pt-1 lg:pb-4" aria-label="Cartas disponíveis">
         <CardBrowser
           cards={available}
@@ -92,40 +108,41 @@ export default function DeckBuilderPage() {
         />
       </section>
 
-      <aside id="deck" className="min-h-0 lg:h-full">
-        <DeckPanel
-          deck={deck}
-          lookup={lookup}
-          summary={summary}
-          dirty={dirty}
-          blockedOf={blockedOf}
-          onSelect={setSelected}
-          onSetQty={onSetQty}
-          onRename={onRename}
-          onClear={onClear}
-          onSave={save}
-        />
+      {/* Desktop: coluna fixa à direita. No celular o deck abre num painel por cima da lista (DeckSheet). */}
+      <aside className="hidden min-h-0 lg:block lg:h-full">
+        <DeckPanel {...panelProps} />
       </aside>
 
-      {/* Barra fixa no celular para chegar ao painel do deck. */}
-      <a
-        href="#deck"
-        className={`fixed inset-x-4 bottom-4 z-20 flex items-center justify-between rounded-xl px-4 py-3 font-semibold shadow-lg lg:hidden ${
+      <DeckSheet open={sheetOpen} onClose={() => setSheetOpen(false)}>
+        <DeckPanel {...panelProps} onClose={() => setSheetOpen(false)} />
+      </DeckSheet>
+
+      {/* Barra fixa no celular: abre o deck sem sair do ponto da lista. */}
+      <button
+        type="button"
+        onClick={() => setSheetOpen(true)}
+        aria-haspopup="dialog"
+        className={`fixed inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-20 flex items-center justify-between gap-3 rounded-xl px-4 py-3 font-semibold shadow-lg lg:hidden ${
           summary.isValid ? 'bg-ok text-bg' : 'bg-surface-2 text-text ring-1 ring-border'
         }`}
       >
-        <span>
-          {summary.total}/{DECK_RULES.size} cartas
-          {summary.reinforcement > 0 && (
-            <span className="font-normal"> + {summary.reinforcement} Reforço</span>
-          )}
+        <span className="flex min-w-0 items-center gap-2">
+          <span aria-hidden>{summary.isValid ? '✓' : '🂠'}</span>
+          <span className="truncate">
+            {summary.total}/{DECK_RULES.size} cartas
+            {summary.reinforcement > 0 && <span className="font-normal"> + {summary.reinforcement} Reforço</span>}
+            {summary.tokens > 0 && <span className="font-normal"> + {summary.tokens} Tokens</span>}
+          </span>
+          {dirty && <span className="size-2 shrink-0 rounded-full bg-accent" aria-label="(alterações não salvas)" />}
         </span>
-        <span className="text-sm">Ver deck ↓</span>
-      </a>
+        <span className="shrink-0 text-sm">Ver deck ↑</span>
+      </button>
 
       <CardDetailModal
         card={selected}
         onClose={() => setSelected(null)}
+        // Carta criada excluída de vez: sai também do rascunho (o deck salvo já foi atualizado).
+        onDeleted={(c) => onSetQty(c, 0)}
         actions={
           selected && (
             <QtyControls card={selected} qty={countOf(selected)} blocked={blockedOf(selected)} onSetQty={onSetQty} />

@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { Dialog } from '@/components/Dialog';
-import { CARDS_BY_ID } from '@/data/cards';
-import { cardImageUrl, CARD_TYPE_LABEL } from '@/models/card';
+import { CARD_TYPE_LABEL } from '@/models/card';
+import { ArenaCardImage, useArenaLookup } from './arenaCards';
 import { useCardName } from '@/lib/cardLanguage';
 import { CardZoom, type HoveredCard } from './CardZoom';
 
@@ -45,15 +45,16 @@ export function SearchDeckDialog({
   }, [open, load]);
 
   const nameOf = useCardName();
+  const lookup = useArenaLookup();
   const entries = useMemo(() => {
     if (!counts) return [];
     const q = query.trim().toLowerCase();
     return Object.entries(counts)
-      .map(([id, qty]) => ({ id, qty, card: CARDS_BY_ID.get(id) }))
+      .map(([id, qty]) => ({ id, qty, card: lookup(id) }))
       .map((e) => ({ ...e, name: e.card ? nameOf(e.card) : e.id }))
       .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.card?.name ?? '').toLowerCase().includes(q))
       .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-  }, [counts, query, nameOf]);
+  }, [counts, query, nameOf, lookup]);
 
   return (
     <Dialog open={open} onClose={onClose} title="Buscar no deck">
@@ -82,11 +83,11 @@ export function SearchDeckDialog({
                 className="group relative flex w-full flex-col gap-1 rounded-lg p-1 text-left hover:bg-surface-2"
               >
                 {card && (
-                  <img
-                    src={cardImageUrl(card, 'thumb')}
+                  <ArenaCardImage
+                    card={card}
+                    size="thumb"
                     alt={name}
-                    loading="lazy"
-                    className="aspect-[5/7] w-full rounded object-cover ring-1 ring-border group-hover:ring-accent"
+                    className="aspect-[5/7] w-full overflow-hidden rounded object-cover ring-1 ring-border group-hover:ring-accent"
                   />
                 )}
                 {qty > 1 && (

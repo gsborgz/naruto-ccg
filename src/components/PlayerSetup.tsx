@@ -2,23 +2,25 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { CARDS_BY_ID } from '@/data/cards';
 import { summarizeDeck } from '@/lib/deckRules';
 import { useDecks } from '@/lib/deckStore';
 import { NICKNAME_MAX } from '@/lib/rooms/model';
 import { getIdentity, rememberNickname } from '@/lib/rooms/client';
-
-const lookup = (id: string) => CARDS_BY_ID.get(id);
+import { useCardCatalog } from '@/lib/useCardCatalog';
 
 const field =
   'w-full rounded-lg border border-border bg-bg px-3 py-2 text-sm placeholder:text-muted disabled:opacity-60';
 
-/** Decks salvos que seguem as regras de montagem (só esses podem ir para uma sala). */
+/**
+ * Decks salvos que seguem as regras de montagem (só esses podem ir para uma sala). As cartas criadas deste
+ * navegador contam: elas vão junto com o deck para a sala.
+ */
 export function useValidDecks() {
   const decks = useDecks();
+  const { lookup } = useCardCatalog();
   return useMemo(
     () => (decks === null ? null : decks.filter((d) => summarizeDeck(d.cards, lookup).isValid)),
-    [decks],
+    [decks, lookup],
   );
 }
 
@@ -39,7 +41,7 @@ export function DeckSelect({
   if (decks.length === 0) {
     return (
       <p className="rounded-lg bg-danger/10 px-3 py-2 text-sm text-danger">
-        Você não tem nenhum deck válido (50 cartas; Reforço com até 15).{' '}
+        Você não tem nenhum deck válido (50 cartas, até 3 cópias de cada; Reforço com até 15).{' '}
         <Link href="/" className="font-semibold underline">
           Monte um em Meus decks
         </Link>

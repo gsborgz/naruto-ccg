@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { cardImageUrl, type Card } from '@/models/card';
+import type { Card } from '@/models/card';
 import { useCardName } from '@/lib/cardLanguage';
+import { ArenaCardImage } from './arenaCards';
 import styles from './GameArena.module.css';
 
 /** Carta sob o mouse (e onde o mouse está), para a ampliação com Alt. */
@@ -47,11 +48,12 @@ export function CardZoom({ hovered }: { hovered: HoveredCard | null }) {
   const nameOf = useCardName();
   if (!hovered || !(alt || hovered.always)) return null;
   return (
-    <img
-      src={cardImageUrl(hovered.card, 'full')}
+    <ArenaCardImage
+      card={hovered.card}
+      size="full"
+      lazy={false}
       alt={nameOf(hovered.card)}
       className={`${styles.zoom} ${hovered.clientX < window.innerWidth / 2 ? styles.zoomRight : styles.zoomLeft}`}
-      draggable={false}
     />
   );
 }

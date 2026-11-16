@@ -1,5 +1,7 @@
 'use client';
 
+import { uploadArt } from '@/lib/cardMaker/artUpload';
+import { compressImage, ImageTooLargeError } from '@/lib/images/compressImage';
 import { useEffect, useState } from 'react';
 import {
   ATTRIBUTE_NAMES,
@@ -87,23 +89,18 @@ const HAND_ICONS: { value: HandIcon; label: string }[] = [
   { value: 'hand-03', label: 'Mão 03' },
 ];
 
-/** Lado máximo da arte guardada: suficiente para a carta em 2× sem pesar no localStorage. */
-const ART_MAX = 1500;
-
 /**
- * Reduz a imagem e devolve um data URL: JPEG para o fundo (fica atrás da moldura) e WebP com
- * transparência para a arte da frente.
+ * Trata a imagem escolhida (reduz e comprime, ver `compressImage`) e envia para o Vercel Blob. Devolve o endereço
+ * no Blob ou, se o envio falhar (sem conexão, Blob não configurado), o data URL tratado, que fica no localStorage
+ * e é enviado depois (`migrateStoredArt`). WebP guarda a transparência da arte da frente.
  */
-async function loadArt(file: File, transparent = false): Promise<string> {
-  const bitmap = await createImageBitmap(file);
-  const k = Math.min(1, ART_MAX / Math.max(bitmap.width, bitmap.height));
-  const canvas = document.createElement('canvas');
-  canvas.width = Math.round(bitmap.width * k);
-  canvas.height = Math.round(bitmap.height * k);
-  canvas.getContext('2d')!.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-  bitmap.close();
-  // A arte da frente precisa da transparência: WebP (o navegador cai para PNG se não suportar).
-  return transparent ? canvas.toDataURL('image/webp', 0.9) : canvas.toDataURL('image/jpeg', 0.86);
+async function loadArt(file: File, transparent: boolean): Promise<{ src: string; uploaded: boolean }> {
+  const data = await compressImage(file, { transparent });
+  try {
+    return { src: await uploadArt(data), uploaded: true };
+  } catch {
+    return { src: data, uploaded: false };
+  }
 }
 
 const field =
@@ -321,9 +318,11 @@ function ArtLayerControls({
             if (!file) return;
             try {
               onError(null);
-              onChange(setArtImage(card, layer, await loadArt(file, layer === 'front')));
-            } catch {
-              onError('Não foi possível abrir essa imagem.');
+              const { src, uploaded } = await loadArt(file, layer === 'front');
+              onChange(setArtImage(card, layer, src));
+              if (!uploaded) onError('A arte ficou só neste navegador por enquanto: ela é enviada quando o servidor responder.');
+            } catch (err) {
+              onError(err instanceof ImageTooLargeError ? err.message : 'Não foi possível abrir essa imagem.');
             }
           }}
         />

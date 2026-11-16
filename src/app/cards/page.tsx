@@ -27,10 +27,10 @@ export default function CardsPage() {
   const [selected, setSelected] = useState<Card | null>(null);
 
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-6">
+    <div className="mx-auto flex max-w-7xl flex-col gap-3 md:gap-6">
       <div>
-        <h1 className="text-2xl font-bold">Cartas disponíveis</h1>
-        <p className="text-sm text-muted">Clique em uma carta para ver os detalhes.</p>
+        <h1 className="text-xl font-bold md:text-2xl">Cartas disponíveis</h1>
+        <p className="text-sm text-muted max-md:hidden">Clique em uma carta para ver os detalhes.</p>
       </div>
       <Suspense>
         <CardsBrowser onSelect={setSelected} />

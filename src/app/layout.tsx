@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CardLanguageToggle } from '@/components/CardLanguageToggle';
 import { FullscreenWatcher } from '@/components/FullscreenWatcher';
+import { NavLinks } from '@/components/NavLinks';
 import { CardLanguageProvider } from '@/lib/cardLanguage';
 import './globals.css';
 
@@ -17,25 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CardLanguageProvider>
           <FullscreenWatcher />
           <header className="app-header sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
-            <nav className="relative flex h-14 items-center gap-6 px-4 lg:px-6">
-              <Link href="/" className="flex items-center gap-2 font-bold tracking-tight">
+            <nav className="relative flex h-14 items-center gap-3 px-4 sm:gap-6 lg:px-6">
+              <Link href="/" className="flex shrink-0 items-center gap-2 font-bold tracking-tight" aria-label="Naruto CCG">
                 <span className="grid size-8 place-items-center rounded-full bg-accent text-lg text-bg">忍</span>
-                <span>Naruto CCG</span>
+                <span className="max-sm:hidden">Naruto CCG</span>
               </Link>
-              <div className="flex gap-4 text-sm text-muted">
-                <Link href="/" className="hover:text-text">
-                  Meus decks
-                </Link>
-                <Link href="/cards" className="hover:text-text">
-                  Cartas
-                </Link>
-                <Link href="/criar" className="hover:text-text">
-                  Criar carta
-                </Link>
-                <Link href="/jogar" className="hover:text-text">
-                  Jogar
-                </Link>
-              </div>
+              <NavLinks />
               {/* Espaços que as páginas preenchem com <HeaderSlot> (ex.: jogadores e botões da partida). */}
               <div id="app-header-center" className="absolute left-1/2 hidden -translate-x-1/2 lg:block" />
               <div id="app-header-actions" className="ml-auto flex items-center gap-2" />

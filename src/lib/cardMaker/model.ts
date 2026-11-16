@@ -15,7 +15,8 @@ import { getLayout } from './layouts/index.ts';
 
 /**
  * Carta criada no criador de cartas (`/criar`). No montador de decks ela vira uma carta do catálogo
- * (`customCardToCard` em `deckCard.ts`), mas fica só neste navegador: não vai para salas nem compartilhamentos.
+ * (`customCardToCard` em `deckCard.ts`). Fica no localStorage e vai junto com o deck para as salas e os
+ * compartilhamentos (`sharedCard.ts`); a arte fica no Vercel Blob (`artUpload.ts`).
  * Os valores ficam como texto (ex.: custo "X", força "7/2") porque a carta é montada como impressa.
  */
 
@@ -62,8 +63,8 @@ export const ATTRIBUTE_FRAMES: AttributeFrame[] = ['01', '02', '03-01', '03-02',
 /** Deslocamento em unidades da carta (750×1050) e zoom sobre o enquadramento "cobrir" (`CardArtPlacement`). */
 export interface CustomCardArt extends CardArtPlacement {
   /**
-   * Imagem como data URL (reduzida no upload), URL da arte extraída de uma carta do catálogo
-   * (`cardArtUrl`), ou null sem arte.
+   * Endereço da arte no Vercel Blob (enviada pelo jogador), data URL tratado enquanto ainda não foi enviada
+   * (`artUpload.ts`), URL da arte extraída de uma carta do catálogo (`cardArtUrl`), ou null sem arte.
    */
   src: string | null;
 }

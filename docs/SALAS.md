@@ -39,8 +39,8 @@ Também ficam de fora: chat, espectadores, busca de oponentes, contas/login e re
 
 - **Dois jogadores**: o anfitrião (`host`) e o convidado (`guest`). Um terceiro que tentar entrar recebe "Sala cheia".
 - **O deck é escolhido dentro da sala** e é obrigatório para marcar Pronto.
-- **Decks** precisam ser válidos pelas regras do montador (`summarizeDeck(...).isValid`: 50 cartas, sem
-  limite de cópias por nome, Baralho de Reforço com até 15). O servidor valida de novo; não confia no navegador. Os dois jogadores veem
+- **Decks** precisam ser válidos pelas regras do montador (`summarizeDeck(...).isValid`: 50 cartas,
+  até 3 cópias de cada carta, Baralho de Reforço com até 15, Tokens com 1 cópia de cada). O servidor valida de novo; não confia no navegador. Os dois jogadores veem
   quantas cartas o outro tem no Baralho de Reforço (`reinforcementSize`), mas não quais são.
 - **O deck é copiado ao ser escolhido.** Editar o deck no montador depois não muda a sala. Para usar a
   versão nova, o jogador escolhe o deck de novo na sala.
@@ -95,7 +95,7 @@ interface Seat {
   playerId: string;
   tokenHash: string;          // SHA-256 do token; nunca sai do servidor
   nickname: string;           // 1–24 caracteres
-  deck: { name: string; cards: Record<string, number> } | null; // cópia validada; null até escolher
+  deck: { name: string; cards: Record<string, number>; custom?: Record<string, CustomCard> } | null; // cópia validada; null até escolher
   ready: boolean;
   joinedAt: string;
 }
@@ -120,6 +120,7 @@ Todas as respostas de erro são `{ message }` em português, para mostrar direto
 | `GET /api/rooms/<id>?ping=1` | — | `RoomView` (com `ping=1`, também marca o jogador como online) | 400, 404 sala não existe/expirou |
 | `POST /api/rooms/<id>/join` | `{ nickname, playerId, token }` | `RoomView` | 404 sala não existe, 409 sala cheia |
 | `POST /api/rooms/<id>/actions` | ação (abaixo) | `RoomView`, ou `null` se a ação apagou a sala | 401 token não é de um jogador da sala, 409 ação inválida no estado atual |
+| `GET /api/rooms/<id>/custom-cards` | — | `{ cards }`: as cartas criadas dos dois decks | 401, 409 fora da partida |
 
 - `POST /api/rooms` e `join` registram o `token` do jogador (o servidor guarda o hash).
 - `join` com um token que **já ocupa** uma vaga devolve a sala normalmente (reconexão). O anfitrião abrindo o
@@ -146,6 +147,27 @@ interface RoomView {
   yourDeck?: { name: string; cards: Record<string, number> } | null; // só o seu
 }
 ```
+
+### Cartas criadas
+
+Decks com cartas do **Criar carta** (`custom-<uuid>`) podem ir para a sala:
+
+- **A carta vai com o deck.** `changeDeck` leva `deck.custom` (id no deck → carta do criador). O servidor valida
+  cada carta campo a campo (`parseSharedCustomCard` em `src/lib/cardMaker/sharedCard.ts`: só campos conhecidos,
+  tamanhos limitados, layouts e ícones da lista), aplica as regras de montagem com elas e guarda só as que o deck
+  usa. A mesma carta criada (mesmo id) nos dois decks só vale se for igual (um importou do outro); versões diferentes são recusadas (409). Na partida, as regras da tela (Ninja,
+  Reforço, Token, Missão Permanente) leem as cartas criadas da sala (`withRoomCards` em `model.ts`).
+- **As artes ficam no Vercel Blob** (docs/DEPLOY.md, "Artes das cartas criadas"): a carta leva o endereço público
+  da arte. Antes de levar o deck para a sala, o navegador envia as artes que ainda estão só nele
+  (`withCustomCards` em `src/lib/cardMaker/customDeck.ts`); a sala recusa arte que não seja do Blob ou do próprio
+  site (`/card-layouts/...`, `/cards/...`).
+- **Na partida**, cada navegador busca as cartas criadas uma vez (`GET .../custom-cards`; a `RoomView` traz só
+  `customCardIds`, porque a sala é consultada a cada segundo) e a arena as desenha (`ArenaCardsProvider` em
+  `src/components/arena/arenaCards.tsx`). As imagens vêm direto do Blob.
+- O oponente vê as cartas criadas do seu deck (os textos, não a ordem) a partir do início da partida: elas são
+  necessárias para desenhar as cartas que ele vê.
+- Os compartilhamentos por código levam as cartas criadas do mesmo jeito; quem importa recebe as cartas no próprio
+  criador.
 
 ### Escritas simultâneas
 

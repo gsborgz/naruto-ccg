@@ -80,6 +80,40 @@ Ficam de fora pelo `.gitignore` e só existem na sua máquina, então guarde um 
    `KV_REST_API_URL`/`KV_REST_API_TOKEN`.
 5. Aba **Deployments →** no deploy mais recente, **⋯ → Redeploy**, para ele pegar as variáveis novas.
 
+## Senha de acesso
+
+O site pede uma senha antes de abrir qualquer página ou API (`src/middleware.ts`), quando a variável
+**`SITE_PASSWORD`** existe. Para ligar: **Settings → Environment Variables →** `SITE_PASSWORD` (Production,
+e Preview se quiser) **→** Redeploy. Cada navegador digita a senha uma vez em `/entrar` e fica com um
+cookie de 1 ano; trocar a senha obriga todos a digitar a nova. Sem a variável (como no `.env.local`
+padrão), o site fica aberto. As imagens estáticas (`/cards`, `/card-layouts`, `/textures`) não passam
+pela senha.
+
+## Artes das cartas criadas (Vercel Blob)
+
+As artes que os jogadores enviam no **Criar carta** ficam no **Vercel Blob**, para irem junto com as cartas para as
+salas e para os códigos de compartilhamento. Para ligar:
+
+1. No projeto na Vercel: **Storage → Create Database → Blob → Continue**, dê um nome (ex.: `naruto-ccg-art`) e
+   conecte ao projeto (Production, Preview e Development). A Vercel cria a variável **`BLOB_READ_WRITE_TOKEN`**.
+2. **Redeploy** para a variável valer.
+3. Para testar localmente: copie o valor de `BLOB_READ_WRITE_TOKEN` (aba **.env.local** do store) para o seu
+   `.env.local`. O Blob é um só: o que você enviar localmente aparece no site publicado.
+
+Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardMaker/artUpload.ts`):
+
+- **Toda imagem é tratada antes** (`src/lib/images/compressImage.ts`): lado maior até 1050 px, WebP, até 300 KB
+  (a qualidade e o tamanho baixam até caber; se não couber, o criador avisa). O servidor recusa acima de 400 KB e
+  aceita só JPEG, PNG e WebP.
+- **Uma vez só:** o arquivo é `naruto-ccg/art/<sha256>.<ext>`; a mesma imagem não é guardada duas vezes.
+- **Públicas:** quem tiver o endereço exato vê a imagem, sem a senha do site (o endereço tem o hash, impossível de
+  adivinhar).
+- **Dono:** `naruto-ccg:art-owner:<sha256>` no Redis guarda quem enviou primeiro (hash do token anônimo do jogador).
+  Só ele pode apagar (`DELETE /api/art`), o que acontece ao **excluir a carta permanentemente**.
+- **Sem Blob ou sem conexão**, a arte fica tratada no localStorage de quem criou e é enviada depois (ao abrir o site,
+  ao levar o deck para uma sala ou ao compartilhar). Artes antigas (até 1500 px, JPEG) são tratadas e enviadas do
+  mesmo jeito, uma vez, em segundo plano.
+
 ## 4. Conferir
 
 No site publicado:
@@ -105,6 +139,9 @@ Se o passo 2 der "Não foi possível gerar o código", veja **Deployments → (d
 
 - **Vercel Hobby:** gratuito e para uso não comercial (jogar entre amigos está ok). Uso e limites em
   **Settings → Usage**.
+- **Vercel Blob:** o plano gratuito tem limites de armazenamento, transferência e operações (veja os atuais em
+  <https://vercel.com/docs/vercel-blob/usage-and-pricing>). Com as artes em até 300 KB, cabem milhares. O uso
+  aparece em **Storage → (store)**.
 - **Upstash:** tem um limite mensal de comandos, e hoje ele é **dividido com o pokedex** (mesmo banco).
   Compartilhar decks gasta pouquíssimo; as partidas vão gastar mais (a sala consulta o banco a cada ~1 s).
   O uso aparece no painel do banco (aba Storage). Se apertar, conecte um banco próprio (passo 3) ou use o

@@ -40,6 +40,11 @@ interface BaseCard {
    * Só nas cartas já escaneadas.
    */
   layout?: CardLayoutInfo;
+  /**
+   * Carta de Token: fica na parte "Tokens" do deck (fora das 50 e do Baralho de Reforço), com no máximo
+   * 1 cópia de cada (ver `src/lib/deckRules.ts`). Ausente = `false`; nenhuma carta impressa é Token por enquanto.
+   */
+  token?: boolean;
 }
 
 export interface NinjaCard extends BaseCard {
@@ -126,6 +131,11 @@ export function getInPlayNames(card: Card): string[] {
           .filter(Boolean)
       : [];
   return [card.name, ...extra];
+}
+
+/** A carta é um Token (vai para a parte "Tokens" do deck, ver `src/lib/deckRules.ts`). */
+export function isTokenCard(card: Card): boolean {
+  return card.token === true;
 }
 
 /** Características que mandam a carta para o Baralho de Reforço em vez do Deck. */

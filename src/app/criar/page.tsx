@@ -16,6 +16,7 @@ import {
   type CustomCard,
   type LayoutId,
 } from '@/lib/cardMaker/model';
+import { deleteCustomCard } from '@/lib/cardMaker/artUpload';
 import { customCardActions, useCustomCards } from '@/lib/cardMaker/store';
 import { CARD_TYPE_LABEL } from '@/models/card';
 import { elementToPng, pngFileName, saveBlob } from '@/lib/cardMaker/exportPng';
@@ -110,10 +111,21 @@ export default function CardMakerPage() {
     open(card);
   };
 
+  // Exclui de vez: some também dos decks e a arte é apagada do Vercel Blob (como no detalhe da carta).
   const remove = () => {
-    if (!draft || !confirm(`Excluir "${draft.name || 'carta sem nome'}"?`)) return;
-    customCardActions.remove(draft.id);
-    setDraft(cards?.find((c) => c.id !== draft.id) ?? null);
+    if (
+      !draft ||
+      !confirm(
+        `Excluir "${draft.name || 'carta sem nome'}" de vez?
+
+Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e a arte é apagada do servidor: quem importou esta carta fica sem a arte.`,
+      )
+    ) {
+      return;
+    }
+    const next = cards?.find((c) => c.id !== draft.id) ?? null;
+    setDraft(next);
+    void deleteCustomCard(draft);
   };
 
   const duplicate = () => {

@@ -3,7 +3,10 @@
 import { useSyncExternalStore } from 'react';
 import { migrateCustomCard, type CustomCard } from './model.ts';
 
-/** Cartas do criador, no localStorage (a arte vai junto, como data URL reduzida). */
+/**
+ * Cartas do criador, no localStorage. A arte é o endereço dela no Vercel Blob; enquanto não foi enviada (sem conexão),
+ * fica como data URL tratada (`compressImage`) e é enviada depois (`migrateStoredArt`).
+ */
 interface StoredData {
   version: 1;
   cards: CustomCard[];
@@ -40,7 +43,24 @@ function write(cards: CustomCard[]): boolean {
   return ok;
 }
 
+/** Cartas criadas agora (fora do React). */
+export function readCustomCards(): CustomCard[] {
+  return read();
+}
+
+let artMigrationScheduled = false;
+
+/** Uma vez por carregamento: trata e envia as artes que ainda estão só no localStorage (em segundo plano). */
+function scheduleArtMigration() {
+  if (artMigrationScheduled) return;
+  artMigrationScheduled = true;
+  setTimeout(() => {
+    import('./artUpload.ts').then((m) => m.migrateStoredArt()).catch(() => {});
+  }, 2000);
+}
+
 function subscribe(listener: () => void) {
+  scheduleArtMigration();
   listeners.add(listener);
   const onStorage = (e: StorageEvent) => {
     if (e.key === STORAGE_KEY) {
@@ -67,6 +87,16 @@ export const customCardActions = {
     const updated = { ...card, updatedAt: new Date().toISOString() };
     const exists = cards.some((c) => c.id === card.id);
     return write(exists ? cards.map((c) => (c.id === card.id ? updated : c)) : [updated, ...cards]);
+  },
+  /**
+   * Cartas criadas que vieram de um deck importado (código compartilhado): entram no criador as que ainda não
+   * existem aqui. Uma carta com o mesmo id já existente fica como está (pode ter sido editada neste navegador).
+   */
+  addMissing(incoming: CustomCard[]): boolean {
+    const cards = read();
+    const known = new Set(cards.map((c) => c.id));
+    const added = incoming.filter((c) => !known.has(c.id));
+    return added.length === 0 || write([...added, ...cards]);
   },
   remove(id: string) {
     write(read().filter((c) => c.id !== id));

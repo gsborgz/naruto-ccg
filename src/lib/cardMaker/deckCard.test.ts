@@ -82,7 +82,13 @@ test('cartas criadas seguem as regras de montagem', () => {
   assert.equal(summary.reinforcement, 1);
   assert.equal(summary.total, 0);
 
-  // Deck cheio (50): não entra mais nenhuma carta do Deck; sem limite de cópias por nome.
-  assert.equal(cannotAddReasonIn(indexDeck({ 's01-n-001': 3, [ninja.id]: 5 }, lookup), ninja), null);
-  assert.notEqual(cannotAddReasonIn(indexDeck({ [ninja.id]: 50 }, lookup), ninja), null);
+  // O limite de 3 conta a carta (id): a carta criada "Naruto Uzumaki" não soma com as impressas.
+  assert.equal(cannotAddReasonIn(indexDeck({ 's01-n-001': 3, [ninja.id]: 2 }, lookup), ninja), null);
+  assert.notEqual(cannotAddReasonIn(indexDeck({ [ninja.id]: 3 }, lookup), ninja), null);
+  // Duas cartas criadas com o mesmo nome também contam separado.
+  const ninja2 = customCardToCard(card({ id: 'n2', name: 'Naruto Uzumaki' }));
+  const lookup2 = (id: string) => (id === ninja2.id ? ninja2 : lookup(id));
+  assert.equal(cannotAddReasonIn(indexDeck({ [ninja.id]: 3 }, lookup2), ninja2), null);
+  // Mais de 3 cópias da carta criada: deck inválido.
+  assert.ok(summarizeDeck({ [ninja.id]: 4 }, lookup).issues.some((i) => i.code === 'copies'));
 });

@@ -10,6 +10,7 @@ import {
   type ArenaControls,
   type ArenaSide,
 } from '@/components/arena/GameArena';
+import { ArenaCardsProvider } from '@/components/arena/arenaCards';
 import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
 import { setArenaTheme, useArenaTheme } from '@/lib/arenaTheme';
 import { HeaderSlot } from '@/components/HeaderSlot';
@@ -19,6 +20,9 @@ import type { GameAction } from '@/lib/game/state';
 import { roomApi } from '@/lib/rooms/client';
 import type { PlayerView, RoomView, SeatName } from '@/lib/rooms/model';
 import { useRoom } from '@/lib/rooms/useRoom';
+import { useRoomCustomCards } from '@/lib/rooms/useRoomCustomCards';
+import { withCustomCards } from '@/lib/cardMaker/customDeck';
+import { useCustomCards } from '@/lib/cardMaker/store';
 
 const card = 'flex flex-col gap-4 rounded-xl border border-border bg-surface p-5';
 
@@ -141,6 +145,8 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   const loadDeck = useCallback(async () => (await roomApi.deck(view.id)).cards, [view.id]);
   // Tema escolhido por você (só neste navegador); sem escolha, o sorteado na partida.
   const myTheme = useArenaTheme();
+  // Cartas criadas dos dois decks (docs/SALAS.md, "Cartas criadas").
+  const customCards = useRoomCustomCards(view);
 
   if (!game || !you) return <p className="text-muted">Carregando a partida…</p>;
   const theme = myTheme ?? game.theme;
@@ -212,35 +218,37 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   );
 
   return (
-    <div className={ARENA_SCREEN}>
-      <HeaderSlot name="center">{players}</HeaderSlot>
-      <HeaderSlot name="actions">
-        {room.actionError && <span className="text-sm text-danger">{room.actionError}</span>}
-        {controlsBar}
-      </HeaderSlot>
-      <GameArena
-        you={side(you, me?.nickname)}
-        opponent={side(opponentSeat, opponent?.nickname)}
-        controls={controls}
-        turnNumber={game.turnNumber}
-        phase={game.phase}
-        theme={theme}
-        fullscreenMenu={controlsBar}
-        notice={room.actionError}
-        log={game.log}
-        yourSide={you}
-        peek={game.peek}
-      />
-      <SearchDeckDialog
-        open={searching}
-        load={loadDeck}
-        onPick={(cardId) => {
-          setSearching(false);
-          play({ type: 'search', cardId });
-        }}
-        onClose={() => setSearching(false)}
-      />
-    </div>
+    <ArenaCardsProvider customCards={customCards}>
+      <div className={ARENA_SCREEN}>
+        <HeaderSlot name="center">{players}</HeaderSlot>
+        <HeaderSlot name="actions">
+          {room.actionError && <span className="text-sm text-danger">{room.actionError}</span>}
+          {controlsBar}
+        </HeaderSlot>
+        <GameArena
+          you={side(you, me?.nickname)}
+          opponent={side(opponentSeat, opponent?.nickname)}
+          controls={controls}
+          turnNumber={game.turnNumber}
+          phase={game.phase}
+          theme={theme}
+          fullscreenMenu={controlsBar}
+          notice={room.actionError}
+          log={game.log}
+          yourSide={you}
+          peek={game.peek}
+        />
+        <SearchDeckDialog
+          open={searching}
+          load={loadDeck}
+          onPick={(cardId) => {
+            setSearching(false);
+            play({ type: 'search', cardId });
+          }}
+          onClose={() => setSearching(false)}
+        />
+      </div>
+    </ArenaCardsProvider>
   );
 }
 
@@ -251,9 +259,18 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   const me = view.you === 'host' ? host : guest;
   const starting = view.status === 'starting';
 
-  const changeDeck = (deckId: string) => {
+  const customCards = useCustomCards();
+  const [deckError, setDeckError] = useState<string | null>(null);
+  // As cartas criadas do deck vão junto (as artes são enviadas antes para o Vercel Blob).
+  const changeDeck = async (deckId: string) => {
     const deck = decks?.find((d) => d.id === deckId);
-    if (deck) room.act({ type: 'changeDeck', deck: { name: deck.name, cards: deck.cards } });
+    if (!deck) return;
+    setDeckError(null);
+    try {
+      await room.act({ type: 'changeDeck', deck: await withCustomCards(deck, customCards ?? []) });
+    } catch (e) {
+      setDeckError((e as Error).message);
+    }
   };
 
   return (
@@ -291,7 +308,7 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
               placeholder={me.deckName ? `Atual: ${me.deckName}` : 'Escolha um deck…'}
             />
           </div>
-          {room.actionError && <p className="text-sm text-danger">{room.actionError}</p>}
+          {(deckError ?? room.actionError) && <p className="text-sm text-danger">{deckError ?? room.actionError}</p>}
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"

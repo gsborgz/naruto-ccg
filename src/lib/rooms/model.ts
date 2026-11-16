@@ -1,4 +1,6 @@
-import type { Card } from '../../models/card.ts';
+import { isReinforcementCard, isTokenCard, permanentCoins, type Card } from '../../models/card.ts';
+import { customCardToCard } from '../cardMaker/deckCard.ts';
+import type { CustomCard } from '../cardMaker/model.ts';
 import { summarizeDeck } from '../deckRules.ts';
 import { parseSharedDeck, type SharedDeck } from '../deckShare.ts';
 import {
@@ -49,6 +51,7 @@ export interface Room {
   game?: GameState | null;
 }
 
+
 export interface PlayerView {
   seat: SeatName;
   nickname: string;
@@ -72,7 +75,13 @@ export interface RoomView {
   yourDeck?: SharedDeck | null;
   /** A partida como este jogador a vê (cartas escondidas viram só contagem). */
   game?: GameView;
+  /**
+   * Durante a partida: ids das cartas criadas dos dois decks. As cartas em si vêm de `GET .../custom-cards` uma vez
+   * (a sala é consultada a cada segundo e elas não mudam durante a partida).
+   */
+  customCardIds?: string[];
 }
+
 
 export type RoomAction =
   | { type: 'setReady'; ready: boolean }
@@ -87,6 +96,8 @@ export type RoomAction =
 export interface RoomEnv {
   rng: Rng;
   isReinforcement: (cardId: string) => boolean;
+  /** Tokens ficam fora da partida (ainda não há zona para eles). */
+  isToken?: (cardId: string) => boolean;
   /** Só Ninjas formam Times. */
   isNinja: (cardId: string) => boolean;
   /** Moedas Ninja com que uma Missão "Permanent (X)" entra na Vila. */
@@ -124,14 +135,81 @@ export function parseNickname(x: unknown): string | null {
   return name.length >= 1 && name.length <= NICKNAME_MAX ? name : null;
 }
 
-/** Deck vindo do navegador: formato válido e dentro das regras de montagem. */
+/** Cache da conversão das cartas criadas (a mesma definição é consultada muitas vezes por ação). */
+const convertedCustom = new WeakMap<CustomCard, Card>();
+function customAsCard(card: CustomCard): Card {
+  let c = convertedCustom.get(card);
+  if (!c) {
+    c = customCardToCard(card);
+    convertedCustom.set(card, c);
+  }
+  return c;
+}
+
+/** Procura no catálogo e nas cartas criadas do deck. */
+export function deckLookup(deck: Pick<SharedDeck, 'custom'>, lookup: CardLookup): CardLookup {
+  const custom = deck.custom;
+  if (!custom) return lookup;
+  return (id) => lookup(id) ?? (Object.hasOwn(custom, id) ? customAsCard(custom[id]) : undefined);
+}
+
+/** Conteúdo da carta criada para comparar versões (as datas não contam). */
+function cardContent(card: CustomCard): string {
+  const { createdAt: _c, updatedAt: _u, ...rest } = card;
+  return JSON.stringify(rest);
+}
+
+/** Cartas criadas dos dois decks da sala. */
+export function roomCustom(room: Room): Record<string, CustomCard> {
+  return { ...room.host.deck?.custom, ...room.guest?.deck?.custom };
+}
+
+/** Procura no catálogo e nas cartas criadas dos dois decks da sala. */
+export function roomLookup(room: Room, lookup: CardLookup): CardLookup {
+  return deckLookup({ custom: roomCustom(room) }, lookup);
+}
+
+
+/**
+ * As regras das cartas (Reforço, Token, Ninja, Missão Permanente) também para as cartas criadas da sala:
+ * o `env` só conhece o catálogo.
+ */
+function withRoomCards(env: RoomEnv, room: Room): RoomEnv {
+  const custom = roomCustom(room);
+  if (Object.keys(custom).length === 0) return env;
+  const find = (id: string) => (Object.hasOwn(custom, id) ? customAsCard(custom[id]) : undefined);
+  return {
+    ...env,
+    isReinforcement: (id) => {
+      const c = find(id);
+      return c ? isReinforcementCard(c) : env.isReinforcement(id);
+    },
+    isToken: (id) => {
+      const c = find(id);
+      return c ? isTokenCard(c) : (env.isToken?.(id) ?? false);
+    },
+    isNinja: (id) => {
+      const c = find(id);
+      return c ? c.type === 'ninja' : env.isNinja(id);
+    },
+    permanentCoins: (id) => {
+      const c = find(id);
+      return c ? permanentCoins(c) : (env.permanentCoins?.(id) ?? 0);
+    },
+  };
+}
+
+/**
+ * Deck vindo do navegador: formato válido e dentro das regras de montagem. As cartas criadas vêm junto
+ * (`custom`), validadas campo a campo em `parseSharedDeck`.
+ */
 export function parseRoomDeck(x: unknown, lookup: CardLookup): SharedDeck {
   const deck = parseSharedDeck(x, (id) => lookup(id) !== undefined);
   if (!deck) throw new RoomError(400, 'Deck inválido.');
-  if (!summarizeDeck(deck.cards, lookup).isValid) {
+  if (!summarizeDeck(deck.cards, deckLookup(deck, lookup)).isValid) {
     throw new RoomError(
       400,
-      `O deck "${deck.name}" não segue as regras de montagem (50 cartas; Baralho de Reforço com até 15).`,
+      `O deck "${deck.name}" não segue as regras de montagem (50 cartas, até 3 cópias de cada; Baralho de Reforço com até 15).`,
     );
   }
   return deck;
@@ -187,10 +265,11 @@ export function applyAction(
   who: SeatName,
   action: RoomAction,
   now: string,
-  env: RoomEnv = DEFAULT_ENV,
+  baseEnv: RoomEnv = DEFAULT_ENV,
 ): Room | null {
   const me = who === 'host' ? room.host : room.guest;
   if (!me) throw new RoomError(401, 'Você não está nesta sala.');
+  const env = withRoomCards(baseEnv, room);
 
   if (action.type === 'leave') {
     // Quem fica (se alguém) vira o anfitrião e volta a esperar um oponente; sem ninguém, a sala some.
@@ -199,6 +278,7 @@ export function applyAction(
     // Sair no meio da partida a encerra.
     return bump(room, { host: { ...other, ready: false }, guest: null, status: 'waiting', game: null }, now);
   }
+
 
   if (action.type === 'game') {
     if (room.status !== 'starting' || !room.game) throw new RoomError(409, 'A partida ainda não começou.');
@@ -230,6 +310,19 @@ export function applyAction(
   const update = (s: Seat): Partial<Room> => (who === 'host' ? { host: s } : { guest: s });
 
   if (action.type === 'changeDeck') {
+    // A mesma carta criada nos dois decks (um importou do outro) só vale se for igual: com versões diferentes, uma
+    // trocaria o desenho da carta do outro jogador.
+    const other = who === 'host' ? room.guest : room.host;
+    const theirs = other?.deck?.custom ?? {};
+    const clash = Object.entries(action.deck.custom ?? {}).find(
+      ([id, card]) => Object.hasOwn(theirs, id) && cardContent(theirs[id]) !== cardContent(card),
+    );
+    if (clash) {
+      throw new RoomError(
+        409,
+        `Vocês têm versões diferentes da carta criada "${clash[1].name || 'sem nome'}". Usem a mesma versão ou tirem do deck.`,
+      );
+    }
     return bump(room, update({ ...me, deck: action.deck, ready: false }), now);
   }
 
@@ -240,9 +333,10 @@ export function applyAction(
   const bothReady = next.host.ready && next.guest?.ready === true;
   if (!bothReady || !next.host.deck || !next.guest?.deck) return next;
   // Os dois prontos: a partida começa com os decks embaralhados e a mão inicial comprada.
-  const game = createGame({ host: next.host.deck.cards, guest: next.guest.deck.cards }, env.isReinforcement, env.rng);
+  const game = createGame({ host: next.host.deck.cards, guest: next.guest.deck.cards }, env.isReinforcement, env.rng, env.isToken);
   return { ...next, status: 'starting', game };
 }
+
 
 /** Horário (ms) da última consulta de cada jogador, por hash do token. */
 export type SeenMap = Record<string, number>;
@@ -255,7 +349,7 @@ export function toView(
   lookup: CardLookup,
 ): RoomView {
   const player = (name: SeatName, s: Seat): PlayerView => {
-    const summary = s.deck ? summarizeDeck(s.deck.cards, lookup) : null;
+    const summary = s.deck ? summarizeDeck(s.deck.cards, deckLookup(s.deck, lookup)) : null;
     return {
       seat: name,
       nickname: s.nickname,
@@ -277,5 +371,12 @@ export function toView(
     players,
     ...(mine ? { yourDeck: mine.deck } : {}),
     ...(room.status === 'starting' && room.game ? { game: gameView(room.game, you) } : {}),
+    ...(room.status === 'starting' && room.game ? gameCustomView(room) : {}),
   };
+}
+
+/** Cartas criadas na partida (só os ids; as cartas vêm de `GET .../custom-cards`). */
+function gameCustomView(room: Room): Pick<RoomView, 'customCardIds'> {
+  const customCardIds = Object.keys(roomCustom(room)).sort();
+  return customCardIds.length > 0 ? { customCardIds } : {};
 }

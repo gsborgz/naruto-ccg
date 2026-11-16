@@ -3,7 +3,6 @@
 import { createContext, Fragment, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { CardDetailModal } from '@/components/CardDetailModal';
 import { Dialog } from '@/components/Dialog';
-import { CARDS_BY_ID } from '@/data/cards';
 import {
   BATTLEFIELD_MAX_TEAMS,
   COIN_NAME_MAX,
@@ -23,7 +22,8 @@ import {
 } from '@/lib/game/state';
 import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
 import { coinPower, formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
-import { cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
+import { isReinforcementCard, type Card } from '@/models/card';
+import { ArenaCardImage, useArenaLookup } from './arenaCards';
 import { useCardName } from '@/lib/cardLanguage';
 import { CardZoom, type HoveredCard } from './CardZoom';
 import styles from './GameArena.module.css';
@@ -156,7 +156,6 @@ function dragSource(mime: string, value: string, stop = false) {
   };
 }
 
-const isNinja = (cardId: string) => CARDS_BY_ID.get(cardId)?.type === 'ninja';
 
 /** Prêmios de Batalha para vencer (docs/REGRAS.md, Condições de Vitória). */
 const REWARDS_TO_WIN = 10;
@@ -390,7 +389,8 @@ function TableCard({
   className?: string;
   style?: React.CSSProperties;
 }) {
-  const card = CARDS_BY_ID.get(inst.cardId);
+  const lookup = useArenaLookup();
+  const card = lookup(inst.cardId);
   const nameOf = useCardName();
   const setHovered = useContext(HoverContext);
   const controls = useContext(ControlsContext);
@@ -422,7 +422,7 @@ function TableCard({
       className={cx(styles.card, mine && styles.mine, className)}
       style={{ width: w, height: h, ...style }}
     >
-      {card && <img src={cardImageUrl(card, 'thumb')} alt={nameOf(card)} draggable={false} loading="lazy" />}
+      {card && <ArenaCardImage card={card} size="thumb" alt={nameOf(card)} />}
     </div>
   );
 }
@@ -454,6 +454,7 @@ function ZoneListDialog({
 }) {
   const targets = (['hand', 'village', 'battlefield', 'chakra', 'discard', 'deck', 'removed'] as const).filter((t) => t !== zone);
   const nameOf = useCardName();
+  const lookup = useArenaLookup();
   return (
     <Dialog open onClose={onClose} title={title}>
       {cards.length === 0 ? (
@@ -461,7 +462,7 @@ function ZoneListDialog({
       ) : (
         <ul className="flex max-h-[60vh] flex-col gap-2 overflow-y-auto">
           {[...cards].reverse().map((c) => {
-            const card = CARDS_BY_ID.get(c.cardId);
+            const card = lookup(c.cardId);
             return (
               <li key={c.uid} className="flex items-center gap-3">
                 <button
@@ -471,7 +472,7 @@ function ZoneListDialog({
                   title={card ? nameOf(card) : c.cardId}
                 >
                   {card ? (
-                    <img src={cardImageUrl(card, 'thumb')} alt={nameOf(card)} className="aspect-[5/7] w-full object-cover" />
+                    <ArenaCardImage card={card} size="thumb" alt={nameOf(card)} className="aspect-[5/7] w-full object-cover" />
                   ) : (
                     <div className="aspect-[5/7] w-full bg-surface-2" />
                   )}
@@ -616,7 +617,8 @@ function PeekRewardDialog({
   // Só mostra a carta olhada NESTE diálogo (um Prêmio olhado antes não aparece ao abrir de novo).
   const [asked, setAsked] = useState(false);
   const shown = asked && peek && peek.area === area ? peek : null;
-  const shownCard = shown ? CARDS_BY_ID.get(shown.card.cardId) : undefined;
+  const lookup = useArenaLookup();
+  const shownCard = shown ? lookup(shown.card.cardId) : undefined;
   const giverHand = area === 'mine' ? `a mão de ${opponentName}` : 'a sua mão';
   const title = area === 'mine' ? 'Olhar um dos seus Prêmios' : `Olhar um Prêmio de ${opponentName}`;
   const ordinal = (i: number) => (i === count - 1 && count > 1 ? `${i + 1}º (o último)` : `${i + 1}º`);
@@ -628,10 +630,12 @@ function PeekRewardDialog({
           <p className="self-start text-sm text-muted">
             {ordinal(shown.index)} Prêmio. Só você vê esta carta; o registro anota que você olhou.
           </p>
-          <img
-            src={cardImageUrl(shownCard, 'full')}
+          <ArenaCardImage
+            card={shownCard}
+            size="full"
+            lazy={false}
             alt={nameOf(shownCard)}
-            className="aspect-[5/7] w-56 rounded-lg ring-1 ring-border"
+            className="aspect-[5/7] w-56 overflow-hidden rounded-lg ring-1 ring-border"
           />
           <strong>{nameOf(shownCard)}</strong>
           <div className="flex w-full justify-end gap-2">
@@ -835,7 +839,7 @@ function CoinEditor({ inst, controls }: { inst: CardInstance; controls: ArenaCon
   const chip =
     'rounded-md bg-surface-2 px-2 py-1 text-xs font-semibold hover:bg-accent hover:text-bg disabled:opacity-40';
   const add = (k: string) => controls.onSetCoins(inst.uid, k, 1);
-  const ninja = isNinja(inst.cardId);
+  const ninja = useArenaLookup()(inst.cardId)?.type === 'ninja';
   const pool: readonly string[] = ninja ? COIN_SUGGESTIONS.ninja : COIN_SUGGESTIONS.other;
   const suggestions = pool.filter((k) => !inst.coins?.[k]);
   return (
@@ -911,11 +915,6 @@ const INJURED_OVERLAP = 20 / 96;
 /** Deslocamento vertical do Apoio (design: 14 de 134), para baixo no seu lado e para cima no do oponente. */
 const SUPPORT_DROP = 14 / 134;
 
-/** Poder impresso de um Ninja do catálogo (Saudável e Ferido). */
-const ninjaPower: PowerLookup = (cardId) => {
-  const card = CARDS_BY_ID.get(cardId);
-  return card?.type === 'ninja' ? card : undefined;
-};
 
 /** Dica do chip: a conta do Poder do Time (docs/REGRAS.md 3.5.4). */
 function powerTitle(power: TeamPower, members: number): string {
@@ -969,7 +968,7 @@ function TeamMember({
   z: number;
 }) {
   const [over, setOver] = useState(false);
-  const ninja = isNinja(inst.cardId);
+  const ninja = useArenaLookup()(inst.cardId)?.type === 'ninja';
   const accepts = !!controls && ninja;
   const leader = index === 0;
   const roleClass = leader ? (mine ? styles.leaderMine : styles.leaderOpp) : styles.support;
@@ -1048,6 +1047,12 @@ function TeamStack({
 }) {
   const inTeam = group.length > 1;
   // Recalculado a cada estado: ferir/curar um membro ou trocar o Líder muda o Poder na hora.
+  const lookup = useArenaLookup();
+  // Poder impresso do Ninja (Saudável e Ferido), do catálogo ou da carta criada.
+  const ninjaPower: PowerLookup = (cardId) => {
+    const card = lookup(cardId);
+    return card?.type === 'ninja' ? card : undefined;
+  };
   const power = teamPower(group, ninjaPower);
   const drop = Math.round(size.h * SUPPORT_DROP) * (mine ? 1 : -1);
   const bulge = (size.h - size.w) / 2; // quanto a carta girada passa da largura dela, de cada lado
@@ -1510,7 +1515,8 @@ function Field({
 }) {
   const drop = useDrop('battlefield', controls, true);
   const cards = side.zones.battlefield.cards ?? [];
-  const typeOf = (c: CardInstance) => CARDS_BY_ID.get(c.cardId)?.type;
+  const lookup = useArenaLookup();
+  const typeOf = (c: CardInstance) => lookup(c.cardId)?.type;
   const missions = cards.filter((c) => typeOf(c) === 'mission');
   const jutsus = cards.filter((c) => typeOf(c) === 'jutsu');
   const teams = teamGroups(cards.filter((c) => typeOf(c) !== 'mission' && typeOf(c) !== 'jutsu'));
@@ -1594,7 +1600,8 @@ function Arena({
   controls?: ArenaControls;
   onInspect: Inspect;
 }) {
-  const teams = (side: ArenaSide) => countTeams(side.zones.battlefield.cards ?? [], isNinja);
+  const lookup = useArenaLookup();
+  const teams = (side: ArenaSide) => countTeams(side.zones.battlefield.cards ?? [], (id) => lookup(id)?.type === 'ninja');
   return (
     <div className={styles.arena}>
       <div className={styles.arenaInner}>
@@ -1666,7 +1673,8 @@ const WHEEL_STEP = 60;
  */
 function Hand({ side, controls, onInspect }: { side: ArenaSide; controls?: ArenaControls; onInspect: Inspect }) {
   const drop = useDrop('hand', controls);
-  const stacks = stackByCard(side.zones.hand.cards ?? []);
+  const lookup = useArenaLookup();
+  const stacks = stackByCard(side.zones.hand.cards ?? [], lookup);
   const n = stacks.length;
   const center = (n - 1) / 2;
   const { step, radius } = handSpacing(n);
@@ -1795,14 +1803,17 @@ const HAND_TYPE_ORDER: Record<string, number> = { ninja: 0, client: 1, mission: 
  * Cartas iguais (mesmo `cardId`) juntas numa pilha, organizadas por tipo (`HAND_TYPE_ORDER`). Dentro do
  * mesmo tipo, na ordem em que a primeira cópia entrou na mão.
  */
-function stackByCard(cards: readonly CardInstance[]): { top: CardInstance; count: number }[] {
+function stackByCard(
+  cards: readonly CardInstance[],
+  lookup: (id: string) => Card | undefined,
+): { top: CardInstance; count: number }[] {
   const stacks = new Map<string, { top: CardInstance; count: number }>();
   for (const c of cards) {
     const s = stacks.get(c.cardId);
     if (s) s.count++;
     else stacks.set(c.cardId, { top: c, count: 1 });
   }
-  const rank = (cardId: string) => HAND_TYPE_ORDER[CARDS_BY_ID.get(cardId)?.type ?? ''] ?? 4;
+  const rank = (cardId: string) => HAND_TYPE_ORDER[lookup(cardId)?.type ?? ''] ?? 4;
   // sort é estável: dentro do mesmo tipo, mantém a ordem de chegada.
   return [...stacks.values()].sort((a, b) => rank(a.top.cardId) - rank(b.top.cardId));
 }
@@ -2090,9 +2101,10 @@ function LogLine({
   onInspect: Inspect;
 }) {
   const nameOf = useCardName();
+  const lookup = useArenaLookup();
   const setHovered = useContext(HoverContext);
   const card = (cardId: string | undefined) => {
-    const c = cardId ? CARDS_BY_ID.get(cardId) : undefined;
+    const c = cardId ? lookup(cardId) : undefined;
     if (!c) return <b>{cardId ?? 'carta'}</b>;
     // Mouse sobre o nome: a carta ampliada ao lado, sem precisar do Alt.
     return (

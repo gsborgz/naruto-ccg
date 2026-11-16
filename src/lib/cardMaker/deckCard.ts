@@ -4,7 +4,8 @@ import { hasCharacteristics, parseCardText, type CustomCard, type JutsuCostPart 
 
 /**
  * Cartas do criador (`/criar`) no montador de decks: viram cartas do catálogo (`Card`) com o id `custom-<uuid>`
- * e a coleção `CUSTOM`. Ficam só neste navegador (localStorage), então não vão para salas nem compartilhamentos.
+ * e a coleção `CUSTOM`. Ficam no localStorage e vão junto com o deck para as salas e os compartilhamentos
+ * (ver `sharedCard.ts` e `customDeck.ts`).
  */
 
 /** Nome usado quando a carta foi salva sem nome (conta como um nome só na regra de cópias). */

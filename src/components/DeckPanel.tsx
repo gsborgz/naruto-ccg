@@ -13,10 +13,10 @@ import { CardFace } from './CardFace';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 
-/** Abas do painel: uma por tipo de carta do Deck e uma para o Baralho de Reforço. */
-type Tab = CardType | 'reinforcement';
-const TABS: Tab[] = [...TYPES, 'reinforcement'];
-const TAB_LABEL: Record<Tab, string> = { ...CARD_TYPE_LABEL, reinforcement: 'Reforço' };
+/** Abas do painel: uma por tipo de carta do Deck, uma para o Baralho de Reforço e uma para os Tokens. */
+type Tab = CardType | 'reinforcement' | 'token';
+const TABS: Tab[] = [...TYPES, 'reinforcement', 'token'];
+const TAB_LABEL: Record<Tab, string> = { ...CARD_TYPE_LABEL, reinforcement: 'Reforço', token: 'Tokens' };
 
 type Entry = { card: Card; qty: number };
 
@@ -219,6 +219,7 @@ export function DeckPanel({
   onRename,
   onClear,
   onSave,
+  onClose,
 }: {
   deck: Deck;
   /** Procura as cartas do deck (catálogo + cartas criadas). */
@@ -232,6 +233,8 @@ export function DeckPanel({
   onRename: (name: string) => void;
   onClear: () => void;
   onSave: () => void;
+  /** Painel aberto por cima da lista (celular): mostra o botão de fechar. */
+  onClose?: () => void;
 }) {
   const [tab, setTab] = useState<Tab>('ninja');
   const nameOf = useCardName();
@@ -242,7 +245,9 @@ export function DeckPanel({
 
   const group = entries
     .filter((e) =>
-      tab === 'reinforcement' ? deckPartOf(e.card) === 'reinforcement' : deckPartOf(e.card) === 'main' && e.card.type === tab,
+      tab === 'reinforcement' || tab === 'token'
+        ? deckPartOf(e.card) === tab
+        : deckPartOf(e.card) === 'main' && e.card.type === tab,
     )
     .sort((a, b) => sortCost(a.card) - sortCost(b.card) || nameOf(a.card).localeCompare(nameOf(b.card), 'pt-BR'));
 
@@ -265,6 +270,16 @@ export function DeckPanel({
             Salvar
             {dirty && <span className="ml-1.5 inline-block size-1.5 rounded-full bg-bg align-middle" aria-label="(alterações não salvas)" />}
           </button>
+          {onClose && (
+            <button
+              type="button"
+              onClick={onClose}
+              className="shrink-0 rounded-md px-2 py-1.5 text-muted hover:bg-surface-2 hover:text-text"
+              aria-label="Fechar deck"
+            >
+              ✕
+            </button>
+          )}
         </div>
         <Meter value={summary.total} max={DECK_RULES.size} />
         <p className="-mt-1.5 text-xs text-muted">
@@ -302,7 +317,7 @@ export function DeckPanel({
             >
               <span className="text-xs font-semibold uppercase tracking-wider">{TAB_LABEL[t]}</span>
               <span className="font-mono text-lg font-bold leading-tight">
-                {t === 'reinforcement' ? summary.reinforcement : summary.byType[t]}
+                {t === 'reinforcement' ? summary.reinforcement : t === 'token' ? summary.tokens : summary.byType[t]}
               </span>
               {selected && <span className="absolute inset-x-6 bottom-0 h-0.5 rounded-full bg-accent" />}
             </button>
@@ -310,12 +325,14 @@ export function DeckPanel({
         })}
       </div>
 
-      <div role="tabpanel" className="min-h-48 flex-1 overflow-y-auto p-4">
+      <div role="tabpanel" className="min-h-48 flex-1 overflow-y-auto overscroll-contain p-4">
         {group.length === 0 ? (
           <p className="py-10 text-center text-sm text-muted">
             {tab === 'reinforcement'
               ? `Esquadrões [Squad] e Ninjas "Reinforcement" ficam aqui, fora do Deck: até ${DECK_RULES.reinforcementMax} cartas. Eles entram em jogo por efeitos de cartas ou, os Esquadrões, ao serem formados na Fase de Missão.`
-              : entries.length === 0
+              : tab === 'token'
+                ? `Cartas de Token ficam aqui, fora do Deck: quantas quiser, mas ${DECK_RULES.copiesPerToken} cópia de cada.`
+                : entries.length === 0
                 ? 'Use o botão + nas cartas para montar seu deck.'
                 : `Nenhuma carta do tipo ${CARD_TYPE_LABEL[tab]} no deck.`}
           </p>

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { CARDS_BY_ID } from '@/data/cards';
+import { customCardActions } from '@/lib/cardMaker/store';
+import { deckLookup } from '@/lib/rooms/model';
 import { DECK_RULES, summarizeDeck } from '@/lib/deckRules';
 import { sharedDecks, type SharedDeck } from '@/lib/deckShare';
 import { deckActions } from '@/lib/deckStore';
@@ -41,6 +43,11 @@ export function ImportDialog({ open, onClose }: { open: boolean; onClose: () => 
 
   const confirmImport = () => {
     if (!found) return;
+    // As cartas criadas dos decks entram no criador deste navegador (com as artes no Vercel Blob).
+    if (!customCardActions.addMissing(found.flatMap((d) => Object.values(d.custom ?? {})))) {
+      setError('Não coube no armazenamento do navegador: apague algumas cartas criadas e tente de novo.');
+      return;
+    }
     deckActions.importDecks(found);
     close();
   };
@@ -80,13 +87,16 @@ export function ImportDialog({ open, onClose }: { open: boolean; onClose: () => 
         <div className="flex flex-col gap-3">
           <ul className="max-h-64 divide-y divide-border overflow-y-auto rounded-lg border border-border">
             {found.map((d, i) => {
-              const s = summarizeDeck(d.cards, lookup);
+              const s = summarizeDeck(d.cards, deckLookup(d, lookup));
+              const created = Object.keys(d.custom ?? {}).length;
               return (
                 <li key={i} className="flex items-center justify-between gap-3 px-3 py-2 text-sm">
                   <span className="truncate font-medium">{d.name}</span>
                   <span className="shrink-0 text-muted">
                     {s.total}/{DECK_RULES.size} cartas
                     {s.reinforcement > 0 && ` + ${s.reinforcement} Reforço`}
+                    {s.tokens > 0 && ` + ${s.tokens} Tokens`}
+                    {created > 0 && ` · ${created} criada${created > 1 ? 's' : ''}`}
                   </span>
                 </li>
               );

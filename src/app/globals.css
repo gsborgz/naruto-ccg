@@ -58,12 +58,15 @@ body {
  */
 :root {
   --app-chrome: calc(6.5rem + 1px);
+  /* Altura do cabeçalho fixo: barras presas logo abaixo dele (ex.: filtros das cartas no celular). */
+  --app-header-h: calc(3.5rem + 1px);
 }
 
 /* Tela cheia (F11): esconde o cabeçalho e encolhe o espaçamento para o jogo aproveitar a tela toda. */
 @media (display-mode: fullscreen) {
   :root {
     --app-chrome: 1.5rem;
+    --app-header-h: 0px;
   }
   .app-header {
     display: none;
@@ -74,6 +77,7 @@ body {
 }
 :root[data-fullscreen] {
   --app-chrome: 1.5rem;
+  --app-header-h: 0px;
 }
 :root[data-fullscreen] .app-header {
   display: none;
