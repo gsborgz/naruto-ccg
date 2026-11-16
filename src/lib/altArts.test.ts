@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { CARDS, CARDS_BY_ID } from '../data/cards.ts';
 import { isReinforcementCard } from '../models/card.ts';
-import { hasFixedArt, parseAltArtPlacement, parseDeckArts, withFixedArt } from './altArts.ts';
+import { altArtSources, canEditAltArt, hasFixedArt, parseAltArtPlacement, parseDeckArts, placementOf, withFixedArt } from './altArts.ts';
 import { parseSharedDeck, type SharedDeck } from './deckShare.ts';
 import { applyAction, createRoom, joinRoom, parseRoomDeck, roomArts, toView, type Room } from './rooms/model.ts';
 
@@ -26,6 +26,27 @@ test('artes alternativas: só imagens do Vercel Blob e enquadramento válido', (
   assert.equal(parseAltArtPlacement({ src: 'data:image/webp;base64,AAAA', x: 0, y: 0, zoom: 1 }), null);
   assert.equal(parseAltArtPlacement({ src: ART, x: 0, y: 0, zoom: 0 }), null);
   assert.equal(parseAltArtPlacement({ src: ART, x: Number.NaN, y: 0, zoom: 1 }), null);
+});
+
+test('artes alternativas: camada da frente opcional, também só do Vercel Blob', () => {
+  const FRONT = ART.replace('c'.repeat(64), 'd'.repeat(64));
+  const front = { src: FRONT, x: 3, y: 4, zoom: 1.2 };
+  const art = { src: ART, x: 0, y: 0, zoom: 1, front };
+  assert.deepEqual(parseAltArtPlacement({ ...art, front: { ...front, extra: 1 } }), art);
+  assert.deepEqual(parseAltArtPlacement({ src: ART, x: 0, y: 0, zoom: 1, front: null }), { src: ART, x: 0, y: 0, zoom: 1 });
+  assert.equal(parseAltArtPlacement({ ...art, front: { ...front, src: 'https://evil.example/a.webp' } }), null);
+  assert.equal(parseAltArtPlacement({ ...art, front: { ...front, zoom: 0 } }), null);
+  assert.deepEqual(altArtSources(art), [ART, FRONT]);
+  assert.deepEqual(placementOf({ ...art, id: 'x', cardId: 'y', createdAt: '' } as typeof art), art);
+  assert.deepEqual(parseDeckArts({ 's01-n-001': art }, { 's01-n-001': 1 }), { 's01-n-001': art });
+});
+
+test('artes alternativas: editar só nas cartas já mapeadas (com layout)', () => {
+  const mapped = CARDS.find((c) => c.layout);
+  const unmapped = CARDS.find((c) => !c.layout);
+  assert.ok(mapped && unmapped);
+  assert.equal(canEditAltArt(mapped), true);
+  assert.equal(canEditAltArt(unmapped), false);
 });
 
 test('artes alternativas do deck: só as cartas do catálogo que o deck usa', () => {

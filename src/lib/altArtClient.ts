@@ -1,7 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
-import { acceptsAltArt, parseAltArtPlacement, type AltArtPlacement, type AltArtView } from './altArts.ts';
+import { acceptsAltArt, parseAltArtPlacement, placementOf, type AltArtPlacement, type AltArtView } from './altArts.ts';
 import type { DeckCards } from './deckRules.ts';
 import { getIdentity } from './rooms/client.ts';
 
@@ -91,7 +91,7 @@ export function useChosenArt(cardId: string): ArtChoice | undefined {
 export function chooseArt(cardId: string, art: ArtChoice | null) {
   if (!acceptsAltArt(cardId)) return;
   const next = { ...read() };
-  if (art) next[cardId] = { id: art.id, src: art.src, x: art.x, y: art.y, zoom: art.zoom };
+  if (art) next[cardId] = { id: art.id, ...placementOf(art) };
   else delete next[cardId];
   cache = next;
   try {
@@ -108,7 +108,7 @@ export function chosenArtsFor(cards: DeckCards): Record<string, AltArtPlacement>
   const arts: Record<string, AltArtPlacement> = {};
   for (const cardId of Object.keys(cards)) {
     const c = choices[cardId];
-    if (c) arts[cardId] = { src: c.src, x: c.x, y: c.y, zoom: c.zoom };
+    if (c) arts[cardId] = placementOf(c);
   }
   return Object.keys(arts).length > 0 ? arts : undefined;
 }

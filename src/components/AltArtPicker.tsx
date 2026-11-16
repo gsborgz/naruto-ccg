@@ -1,9 +1,11 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { altArtApi, chooseArt, useChosenArt } from '@/lib/altArtClient';
-import { withFixedArt, type AltArtPlacement, type AltArtView } from '@/lib/altArts';
+import { withFixedArt, type AltArtFrame, type AltArtView } from '@/lib/altArts';
+import type { ArtLayer } from '@/models/cardLayout';
+import type { ArtPreview } from './cardMaker/CatalogCardRender';
 import { uploadArt } from '@/lib/cardMaker/artUpload';
 import { compressImage, ImageTooLargeError } from '@/lib/images/compressImage';
 import { cardImageUrl, type Card } from '@/models/card';
@@ -14,13 +16,33 @@ const CatalogCardRender = dynamic(() => import('./cardMaker/CatalogCardRender').
   ssr: false,
 });
 
-/** Arte nova sendo enquadrada: a imagem ainda só neste navegador (data URL já tratado). */
-export type AltArtDraft = AltArtPlacement;
-
 const small = 'rounded-lg px-3 py-1.5 text-sm ring-1 ring-border hover:bg-surface-2 disabled:opacity-50';
+const label = 'flex flex-col gap-1 text-xs font-semibold text-muted';
+
+/** Uma camada da arte nova: a imagem ainda só neste navegador (data URL já tratado) e o enquadramento. */
+export type DraftLayer = AltArtFrame;
 
 /**
- * Carta com a arte nova sendo enquadrada (arraste para mover), no lugar da face no detalhe da carta.
+ * Arte nova sendo montada no detalhe da carta: as duas camadas do criador (fundo atrás da moldura; frente na frente
+ * da moldura e atrás do painel), se arrastar move as duas juntas (`linked`) e, separadas, qual delas (`layer`).
+ */
+export interface AltArtDraft extends ArtPreview {
+  back: DraftLayer | null;
+  front: DraftLayer | null;
+  linked: boolean;
+  layer: ArtLayer;
+}
+
+export const EMPTY_DRAFT: AltArtDraft = { back: null, front: null, linked: true, layer: 'back' };
+
+/** Camadas que o arrastar na carta move: as duas quando ligadas, senão a escolhida (como no criador). */
+function movedLayers(draft: AltArtDraft): ArtLayer[] {
+  return draft.linked ? ['back', 'front'] : [draft.layer];
+}
+
+/**
+ * Carta com a arte nova sendo enquadrada (arraste para mover), no lugar da face no detalhe da carta. Montada no
+ * layout identificado para a carta (`card.layout`).
  */
 export function AltArtDraftFace({
   card,
@@ -38,13 +60,18 @@ export function AltArtDraftFace({
   useLayoutEffect(() => {
     latest.current = draft;
   });
+  const preview = useMemo(() => ({ back: draft.back, front: draft.front }), [draft.back, draft.front]);
   return (
     <div className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 ${className}`}>
       <CatalogCardRender
         card={card}
-        art={draft}
+        preview={preview}
         onArtMove={(dx, dy) => {
-          const next = { ...latest.current, x: latest.current.x + dx, y: latest.current.y + dy };
+          const next = { ...latest.current };
+          for (const l of movedLayers(next)) {
+            const art = next[l];
+            if (art) next[l] = { ...art, x: art.x + dx, y: art.y + dy };
+          }
           latest.current = next;
           onChange(next);
         }}
@@ -53,9 +80,112 @@ export function AltArtDraftFace({
   );
 }
 
+const LAYER_TITLE: Record<ArtLayer, string> = {
+  back: 'Fundo (atrás da moldura)',
+  front: 'Frente (na frente da moldura, atrás do painel)',
+};
+
+/** Imagem, zoom e posição de uma camada da arte nova (os mesmos controles do criador). */
+function DraftLayerControls({
+  draft,
+  layer,
+  onChange,
+  onError,
+  disabled,
+}: {
+  draft: AltArtDraft;
+  layer: ArtLayer;
+  onChange: (draft: AltArtDraft) => void;
+  onError: (message: string | null) => void;
+  disabled: boolean;
+}) {
+  const art = draft[layer];
+  const fileRef = useRef<HTMLInputElement>(null);
+  const setLayer = (value: DraftLayer | null) => onChange({ ...draft, [layer]: value });
+  const pickFile = async (file: File) => {
+    onError(null);
+    try {
+      // A frente guarda a transparência (o personagem recortado).
+      const src = await compressImage(file, { transparent: layer === 'front' });
+      // Com as camadas ligadas, a imagem nova herda o enquadramento da outra (para ficarem alinhadas).
+      const other = draft[layer === 'back' ? 'front' : 'back'];
+      const frame = draft.linked && other ? { x: other.x, y: other.y, zoom: other.zoom } : { x: 0, y: 0, zoom: 1 };
+      setLayer({ src, ...frame });
+    } catch (e) {
+      onError(e instanceof ImageTooLargeError ? e.message : 'Não foi possível abrir essa imagem.');
+    }
+  };
+  return (
+    <div className="flex flex-col gap-2 rounded-lg border border-border p-3">
+      <div className="flex items-center justify-between gap-2">
+        <span className={label}>{LAYER_TITLE[layer]}</span>
+        <button type="button" onClick={() => fileRef.current?.click()} disabled={disabled} className={small}>
+          {art ? 'Trocar imagem' : 'Escolher imagem'}
+        </button>
+        <input
+          ref={fileRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            e.target.value = '';
+            if (file) void pickFile(file);
+          }}
+        />
+      </div>
+      {layer === 'front' && !art && (
+        <p className="text-xs text-muted">Opcional. Use uma imagem com transparência (PNG), como o personagem recortado.</p>
+      )}
+      {art && (
+        <>
+          <label className={label}>
+            Zoom ({art.zoom.toFixed(2)}×)
+            <input
+              type="range"
+              min={0.5}
+              max={3}
+              step={0.01}
+              value={art.zoom}
+              onChange={(e) => setLayer({ ...art, zoom: Number(e.target.value) })}
+            />
+          </label>
+          {(['x', 'y'] as const).map((axis) => {
+            // Unidades da carta (750×1050); a faixa cresce se o arrastar levou a arte mais longe.
+            const span = axis === 'x' ? 750 : 1050;
+            const value = Math.round(art[axis]);
+            return (
+              <label key={axis} className={label}>
+                {axis === 'x' ? 'Horizontal' : 'Vertical'} ({value})
+                <input
+                  type="range"
+                  min={Math.min(-span, value)}
+                  max={Math.max(span, value)}
+                  step={1}
+                  value={value}
+                  onChange={(e) => setLayer({ ...art, [axis]: Number(e.target.value) })}
+                />
+              </label>
+            );
+          })}
+          <div className="flex flex-wrap gap-2">
+            <button type="button" onClick={() => setLayer({ ...art, x: 0, y: 0, zoom: 1 })} disabled={disabled} className={small}>
+              Centralizar
+            </button>
+            <button type="button" onClick={() => setLayer(null)} disabled={disabled} className={`${small} hover:text-danger`}>
+              Remover
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 /**
  * Escolha da arte da carta no detalhe (README, "Artes alternativas"): a original ou uma das artes enviadas por
- * qualquer jogador; e o envio de uma arte nova, enquadrada na própria carta (`draft`, mostrado por `AltArtDraftFace`).
+ * qualquer jogador; e o envio de uma arte nova (fundo e, opcional, frente), enquadrada na própria carta (`draft`,
+ * mostrado por `AltArtDraftFace`). Só nas cartas já mapeadas (`canEditAltArt`).
  */
 export function AltArtPicker({
   card,
@@ -70,7 +200,6 @@ export function AltArtPicker({
   const [arts, setArts] = useState<AltArtView[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -91,22 +220,15 @@ export function AltArtPicker({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card.id]);
 
-  const pickFile = async (file: File) => {
-    setError(null);
-    try {
-      onDraftChange({ src: await compressImage(file), x: 0, y: 0, zoom: 1 });
-    } catch (e) {
-      setError(e instanceof ImageTooLargeError ? e.message : 'Não foi possível abrir essa imagem.');
-    }
-  };
-
   const save = async () => {
-    if (!draft) return;
+    if (!draft?.back) return;
     setBusy(true);
     setError(null);
     try {
-      const src = await uploadArt(draft.src);
-      const art = await altArtApi.add(card.id, { ...draft, src });
+      // As imagens vão para o Blob; depois a arte (as duas camadas) é registrada para a carta.
+      const back = { ...draft.back, src: await uploadArt(draft.back.src) };
+      const front = draft.front && { ...draft.front, src: await uploadArt(draft.front.src) };
+      const art = await altArtApi.add(card.id, { ...back, ...(front && { front }) });
       setArts((list) => (list?.some((a) => a.id === art.id) ? list : [...(list ?? []), art]));
       chooseArt(card.id, art);
       onDraftChange(null);
@@ -138,60 +260,69 @@ export function AltArtPicker({
   return (
     <section className="flex flex-col gap-2 rounded-lg border border-border p-3">
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-sm font-semibold">Arte</h3>
+        <h3 className="text-sm font-semibold">{draft ? 'Nova arte' : 'Arte'}</h3>
         {!draft && (
-          <button type="button" onClick={() => fileRef.current?.click()} disabled={busy} className={small}>
+          <button type="button" onClick={() => onDraftChange(EMPTY_DRAFT)} disabled={busy} className={small}>
             + Nova arte
           </button>
         )}
-        <input
-          ref={fileRef}
-          type="file"
-          accept="image/*"
-          className="hidden"
-          onChange={(e) => {
-            const file = e.target.files?.[0];
-            e.target.value = '';
-            if (file) void pickFile(file);
-          }}
-        />
       </div>
 
       {draft ? (
-        <div className="flex flex-col gap-2 text-sm">
+        <div className="flex flex-col gap-3 text-sm">
           <p className="text-xs text-muted">
-            Arraste a arte na carta para enquadrar. Ao salvar, ela fica disponível para todo mundo nesta carta.
+            Monte a arte no layout desta carta: o fundo fica atrás da moldura e a frente (opcional) na frente da
+            moldura, atrás do painel. Arraste a arte na carta para enquadrar, ou use os controles de cada camada. Ao
+            salvar, ela fica disponível para todo mundo nesta carta.
           </p>
-          <label className="flex flex-col gap-1 text-xs font-semibold text-muted">
-            Zoom ({draft.zoom.toFixed(2)}×)
-            <input
-              type="range"
-              min={0.5}
-              max={3}
-              step={0.01}
-              value={draft.zoom}
-              onChange={(e) => onDraftChange({ ...draft, zoom: Number(e.target.value) })}
+          {(['back', 'front'] as const).map((layer) => (
+            <DraftLayerControls
+              key={layer}
+              draft={draft}
+              layer={layer}
+              onChange={onDraftChange}
+              onError={setError}
+              disabled={busy}
             />
-          </label>
+          ))}
+          {draft.back && draft.front && (
+            <div className="flex flex-col gap-2">
+              <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+                <input
+                  type="checkbox"
+                  checked={draft.linked}
+                  onChange={(e) => onDraftChange({ ...draft, linked: e.target.checked })}
+                />
+                Arrastar na carta move as duas camadas juntas
+              </label>
+              {!draft.linked && (
+                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-muted" role="radiogroup">
+                  Arrastar na carta:
+                  {(['back', 'front'] as const).map((l) => (
+                    <label key={l} className="flex items-center gap-1">
+                      <input type="radio" checked={draft.layer === l} onChange={() => onDraftChange({ ...draft, layer: l })} />
+                      {l === 'back' ? 'fundo' : 'frente'}
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
           <div className="flex flex-wrap gap-2">
             <button
               type="button"
               onClick={save}
-              disabled={busy}
+              disabled={busy || !draft.back}
+              title={draft.back ? undefined : 'Escolha a imagem de fundo'}
               className="rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-bg hover:bg-accent-strong disabled:opacity-50"
             >
               {busy ? 'Salvando…' : 'Salvar arte'}
-            </button>
-            <button type="button" onClick={() => onDraftChange({ ...draft, x: 0, y: 0, zoom: 1 })} disabled={busy} className={small}>
-              Centralizar
-            </button>
-            <button type="button" onClick={() => fileRef.current?.click()} disabled={busy} className={small}>
-              Trocar imagem
             </button>
             <button type="button" onClick={() => onDraftChange(null)} disabled={busy} className={`${small} text-muted`}>
               Cancelar
             </button>
           </div>
+          {!draft.back && <p className="text-xs text-muted">O fundo é obrigatório para salvar.</p>}
         </div>
       ) : (
         <div className="flex gap-2 overflow-x-auto pb-1">

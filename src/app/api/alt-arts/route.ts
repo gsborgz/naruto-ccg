@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { CARDS_BY_ID } from '@/data/cards';
 import { addAltArt, listAltArts, removeAltArt } from '@/lib/altArtStore';
-import { isAltArtId } from '@/lib/altArts';
+import { canEditAltArt, isAltArtId } from '@/lib/altArts';
 import { ArtError } from '@/lib/artStore';
 import { hashToken } from '@/lib/rooms/store';
 
@@ -51,12 +51,19 @@ export async function GET(request: NextRequest) {
   }
 }
 
-/** `{ cardId, src, x, y, zoom }` (a imagem já enviada por `/api/art`). Devolve `{ art }`. */
+/**
+ * `{ cardId, src, x, y, zoom, front? }` (as imagens já enviadas por `/api/art`; `front` = a camada da frente, com
+ * `src, x, y, zoom`). Só cartas já mapeadas (`canEditAltArt`). Devolve `{ art }`.
+ */
 export async function POST(request: NextRequest) {
   try {
     const tokenHash = tokenHashOf(request);
     const data = await body(request);
-    const art = await addAltArt(cardIdOf(data.cardId), data, tokenHash);
+    const cardId = cardIdOf(data.cardId);
+    if (!canEditAltArt(CARDS_BY_ID.get(cardId)!)) {
+      throw new ArtError(400, 'A arte desta carta ainda não pode ser trocada: a coleção dela ainda não foi mapeada.');
+    }
+    const art = await addAltArt(cardId, data, tokenHash);
     return NextResponse.json({ art });
   } catch (e) {
     return errorResponse(e);

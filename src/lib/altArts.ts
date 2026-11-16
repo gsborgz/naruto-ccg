@@ -12,12 +12,21 @@ import { isCustomCardId } from './cardMaker/customIds.ts';
  * Este arquivo só tem tipos e validação, usados pela API, pelas salas e pelo navegador.
  */
 
-/** A imagem (no Vercel Blob) e o enquadramento dela, o mesmo do criador (`CustomCardArt`). */
-export interface AltArtPlacement {
+/** Uma imagem (no Vercel Blob) e o enquadramento dela, o mesmo do criador (`CustomCardArt`). */
+export interface AltArtFrame {
   src: string;
   x: number;
   y: number;
   zoom: number;
+}
+
+/**
+ * Arte alternativa: a camada de fundo (atrás da moldura) nos campos de `AltArtFrame` e, opcional, a da frente
+ * (`front`: na frente da moldura e atrás do painel, normalmente o personagem recortado, com transparência), como as
+ * duas camadas do criador.
+ */
+export interface AltArtPlacement extends AltArtFrame {
+  front?: AltArtFrame;
 }
 
 /** Uma arte alternativa enviada para uma carta. */
@@ -62,14 +71,45 @@ export function acceptsAltArt(cardId: string): boolean {
   return !isCustomCardId(cardId);
 }
 
+/**
+ * Dá para enviar uma arte nova para a carta? Só nas cartas já mapeadas (`card.layout`, coleções escaneadas): a arte
+ * é enquadrada no layout identificado para a carta. Nas outras, a edição fica desligada até a coleção ser mapeada.
+ */
+export function canEditAltArt(card: Card): boolean {
+  return acceptsAltArt(card.id) && card.layout !== undefined;
+}
+
+/** Só os campos da arte (sem id, carta, datas…), com a camada da frente quando houver. */
+export function placementOf(art: AltArtPlacement): AltArtPlacement {
+  const { src, x, y, zoom, front } = art;
+  return { src, x, y, zoom, ...(front && { front: { src: front.src, x: front.x, y: front.y, zoom: front.zoom } }) };
+}
+
+/** As imagens da arte (fundo e, se houver, frente). */
+export function altArtSources(art: AltArtPlacement): string[] {
+  return art.front ? [art.src, art.front.src] : [art.src];
+}
+
 const isRec = (x: unknown): x is Record<string, unknown> => typeof x === 'object' && x !== null && !Array.isArray(x);
 const num = (v: unknown, min: number, max: number) => typeof v === 'number' && Number.isFinite(v) && v >= min && v <= max;
 
-/** Valida a imagem e o enquadramento; `null` se forem inválidos. Só artes do Vercel Blob. */
-export function parseAltArtPlacement(x: unknown): AltArtPlacement | null {
+function parseFrame(x: unknown): AltArtFrame | null {
   if (!isRec(x) || typeof x.src !== 'string' || !isBlobArt(x.src)) return null;
   if (!num(x.x, -20000, 20000) || !num(x.y, -20000, 20000) || !num(x.zoom, 0.01, 100)) return null;
   return { src: x.src, x: x.x as number, y: x.y as number, zoom: x.zoom as number };
+}
+
+/**
+ * Valida as imagens e o enquadramento (o fundo e, se vier, a frente); `null` se forem inválidos. Só artes do
+ * Vercel Blob.
+ */
+export function parseAltArtPlacement(x: unknown): AltArtPlacement | null {
+  const back = parseFrame(x);
+  if (!back) return null;
+  const rawFront = (x as Record<string, unknown>).front;
+  if (rawFront === undefined || rawFront === null) return back;
+  const front = parseFrame(rawFront);
+  return front ? { ...back, front } : null;
 }
 
 /**

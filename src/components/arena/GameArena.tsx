@@ -1080,6 +1080,7 @@ function TeamStack({
   const power = teamPower(group, ninjaPower);
   const drop = Math.round(size.h * SUPPORT_DROP) * (mine ? 1 : -1);
   const bulge = (size.h - size.w) / 2; // quanto a carta girada passa da largura dela, de cada lado
+  const compact = size.w < FIELD_CARD.w;
   return (
     <div className={styles.team} style={style} {...{ [TEAM_ATTR]: group[0].uid }}>
       {group.map((c, i) => {
@@ -1111,7 +1112,7 @@ function TeamStack({
         <div
           draggable={mine}
           {...(mine ? dragSource(TEAM_MIME, group[0].uid) : {})}
-          className={cx(styles.teamHandle, mine && styles.draggable)}
+          className={cx(styles.teamHandle, compact && styles.teamHandleCompact, mine && styles.draggable)}
           title={
             powerTitle(power, group.length) +
             (mine ? '\nArraste por aqui para mover o Time inteiro. − e + ajustam o Poder (efeitos de cartas).' : '')
@@ -1123,7 +1124,8 @@ function TeamStack({
               ⠿
             </span>
           )}
-          Poder
+          {/* Cartas pequenas (Vila): só o número, para a etiqueta não passar da largura da carta. */}
+          {!compact && 'Poder'}
           {mine && controls && (
             <button
               type="button"
@@ -2347,8 +2349,8 @@ function LogLine({
   );
 }
 
-/** Quanto tempo o resultado da Moeda Ninja fica na tela. */
-const FLIP_MS = 4000;
+/** Quanto tempo a Moeda Ninja fica na tela (1,5 s de animação + o resultado). */
+const FLIP_MS = 4500;
 
 /**
  * Última Moeda Ninja jogada, enquanto o resultado está na tela. Só as jogadas depois de abrir a arena
@@ -2370,6 +2372,35 @@ function useLastFlip(log: LogEntryView[] | undefined): LogEntryView | null {
     return () => clearTimeout(t);
   }, [n]);
   return shown;
+}
+
+/**
+ * A Moeda Ninja jogada no meio da arena: sobe girando, cai na face sorteada (表 Cara / 裏 Coroa), quica e só então
+ * mostra o resultado. Os dois jogadores veem a mesma animação (o sorteio já veio do servidor). Gira mesmo com
+ * "reduzir movimento" no sistema: é curta e é o que mostra que a moeda foi jogada.
+ */
+function CoinToss({ heads, who }: { heads: boolean; who: string }) {
+  const result = heads ? 'Cara' : 'Coroa';
+  return (
+    <div className={styles.coinToss} role="status" aria-label={`${who} jogou a moeda: ${result}`}>
+      <div className={styles.tossArc}>
+        <div className={cx(styles.tossCoin, heads ? styles.tossHeads : styles.tossTails)} aria-hidden>
+          <div className={cx(styles.tossFace, styles.tossFront)}>
+            <span>表</span>
+            <small>Cara</small>
+          </div>
+          <div className={cx(styles.tossFace, styles.tossBack)}>
+            <span>裏</span>
+            <small>Coroa</small>
+          </div>
+        </div>
+      </div>
+      <div className={styles.tossShadow} aria-hidden />
+      <div className={styles.tossResult} aria-hidden>
+        {who} jogou a moeda: <b>{result}</b>
+      </div>
+    </div>
+  );
 }
 
 /** Painel aberto no canto inferior direito da arena (os dois ocupam o mesmo lugar). */
@@ -2739,17 +2770,7 @@ export function GameArena({
       {panel === 'keys' && <ShortcutsPanel onClose={() => setPanel(null)} />}
 
       {/* Resultado da Moeda Ninja, para os dois jogadores (some sozinho). */}
-      {flip && (
-        <div key={flip.n} className={styles.flipToast} role="status">
-          <span className={styles.flipCoin} aria-hidden>
-            🪙
-          </span>
-          <span>
-            {flip.who === yourSide ? 'Você' : opponent.nickname} jogou a moeda:{' '}
-            <b>{flip.result === 'heads' ? 'Cara' : 'Coroa'}</b>
-          </span>
-        </div>
-      )}
+      {flip && <CoinToss key={flip.n} heads={flip.result === 'heads'} who={flip.who === yourSide ? 'Você' : opponent.nickname} />}
 
       {/* Tela cheia: os controles da partida num menu ⋯ (fora do palco, sem a escala). */}
       {(fullscreenMenu || notice) && (

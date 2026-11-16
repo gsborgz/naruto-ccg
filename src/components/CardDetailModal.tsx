@@ -9,8 +9,8 @@ import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog'
 import { useCardDesign } from '@/lib/cardDesign';
 import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
-import { acceptsAltArt, hasFixedArt } from '@/lib/altArts';
-import { useChosenArt } from '@/lib/altArtClient';
+import { acceptsAltArt, canEditAltArt, hasFixedArt } from '@/lib/altArts';
+import { chooseArt, useChosenArt } from '@/lib/altArtClient';
 import { AltArtDraftFace, AltArtPicker, type AltArtDraft } from './AltArtPicker';
 import { CardCost } from './CardCost';
 import type { LayoutSizeField } from '@/lib/devCardLayoutEdit';
@@ -19,6 +19,8 @@ import { DevNameSizeTuner } from './DevNameSizeTuner';
 import { ElementBadge } from './ElementBadge';
 
 type CardView = 'original' | 'rendered';
+/** Abas da coluna da direita: os dados da carta ou a arte (artes alternativas). */
+type DetailTab = 'details' | 'art';
 
 interface Props {
   card: Card | null;
@@ -66,8 +68,11 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
   const [sizeEdits, setSizeEdits] = useState<Partial<Record<LayoutSizeField, number>>>({});
   const sizeField: LayoutSizeField = language === 'pt-BR' && localized.name !== card.name ? 'nameSizePtBr' : 'nameSize';
   const shown = card.layout && Object.keys(sizeEdits).length > 0 ? { ...card, layout: { ...card.layout, ...sizeEdits } } : card;
-  // Artes alternativas: só nas cartas do catálogo e fora da partida (lá vale a arte que cada jogador levou).
+  // Artes alternativas: só nas cartas do catálogo e fora da partida (lá vale a arte que cada jogador levou). A aba
+  // Arte aparece em todas elas, mas editar só nas cartas já mapeadas (`card.layout`): a arte é montada no layout dela.
   const canPickArt = !custom && acceptsAltArt(card.id) && !hasFixedArt(card) && !inMatch;
+  const canEditArt = canPickArt && canEditAltArt(card);
+  const [tab, setTab] = useState<DetailTab>('details');
   const [draft, setDraft] = useState<AltArtDraft | null>(null);
   const chosen = useChosenArt(card.id);
   // Com uma arte alternativa (escolhida ou fixada), a carta sai sempre montada: não há Original | Montada.
@@ -133,69 +138,110 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
           </button>
         </div>
 
-        <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
-          <dt className="text-muted">Símbolos</dt>
-          <dd className="flex gap-1">
-            {card.elements.map((e) => (
-              <ElementBadge key={e} element={e} size="md" />
+        {canPickArt && (
+          <div role="tablist" aria-label="Seções da carta" className="flex gap-1 border-b border-border text-sm">
+            {(
+              [
+                ['details', 'Detalhes'],
+                ['art', 'Arte'],
+              ] as const
+            ).map(([value, text]) => (
+              <button
+                key={value}
+                type="button"
+                role="tab"
+                aria-selected={tab === value}
+                onClick={() => setTab(value)}
+                className={`-mb-px border-b-2 px-3 py-1.5 ${tab === value ? 'border-accent font-semibold text-text' : 'border-transparent text-muted hover:text-text'}`}
+              >
+                {text}
+              </button>
             ))}
-          </dd>
-          <dt className="text-muted">{card.type === 'jutsu' ? 'Custo de Jutsu' : 'Entrada / Mão'}</dt>
-          <dd>
-            <CardCost card={card} />
-          </dd>
-          {card.type === 'ninja' && (
-            <>
-              <dt className="text-muted">Poder (saudável)</dt>
-              <dd className="font-mono">
-                {card.healthy.combat}/{card.healthy.support}
-              </dd>
-              <dt className="text-muted">Poder (ferido)</dt>
-              <dd className="font-mono">
-                {card.injured.combat}/{card.injured.support}
-              </dd>
-              <dt className="text-muted">Atributo</dt>
-              <dd>{localized.attributes.join(' / ')}</dd>
-            </>
-          )}
-          {localized.characteristics.length > 0 && (
-            <>
-              <dt className="text-muted">Características</dt>
-              <dd className="flex flex-wrap gap-1">
-                {localized.characteristics.map((c) => (
-                  <span key={c} className="rounded bg-surface-2 px-1.5 py-0.5 text-xs">
-                    {c}
-                  </span>
-                ))}
-              </dd>
-            </>
-          )}
-        </dl>
-
-        {isReinforcementCard(card) && (
-          <p className="rounded-lg bg-accent/10 px-3 py-2 text-sm">
-            <span className="font-semibold text-accent">Baralho de Reforço.</span> Esta carta fica fora do Deck
-            (não conta nas 50) e nunca vai para a mão. Entra em jogo por efeitos de cartas ou, se for um
-            Esquadrão [Squad], também ao ser formado na sua Fase de Missão.
-          </p>
-        )}
-
-        {isTokenCard(card) && (
-          <p className="rounded-lg bg-accent/10 px-3 py-2 text-sm">
-            <span className="font-semibold text-accent">Token.</span> Esta carta fica na parte Tokens do deck (fora
-            das 50 e do Baralho de Reforço), com no máximo 1 cópia.
-          </p>
-        )}
-
-        {(localized.text.length > 0 || localized.flavor) && (
-          <div className="space-y-2 rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
-            {localized.text.map((line, i) => (
-              <p key={i}>{line}</p>
-            ))}
-            {localized.flavor && <p className="italic text-muted">{localized.flavor}</p>}
           </div>
         )}
-        {canPickArt && <AltArtPicker card={card} draft={draft} onDraftChange={setDraft} />}
+
+        {canPickArt && tab === 'art' ? (
+          canEditArt ? (
+            <AltArtPicker card={card} draft={draft} onDraftChange={setDraft} />
+          ) : (
+            <div className="flex flex-col gap-2 rounded-lg border border-dashed border-border p-3 text-sm text-muted">
+              <p>
+                A coleção desta carta ainda não foi mapeada (layout e ícones das cartas montadas), então a arte dela
+                ainda não pode ser trocada.
+              </p>
+              {chosen && (
+                <button type="button" onClick={() => chooseArt(card.id, null)} className="self-start text-accent hover:underline">
+                  Voltar para a arte original
+                </button>
+              )}
+            </div>
+          )
+        ) : (
+          <>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
+            <dt className="text-muted">Símbolos</dt>
+            <dd className="flex gap-1">
+              {card.elements.map((e) => (
+                <ElementBadge key={e} element={e} size="md" />
+              ))}
+            </dd>
+            <dt className="text-muted">{card.type === 'jutsu' ? 'Custo de Jutsu' : 'Entrada / Mão'}</dt>
+            <dd>
+              <CardCost card={card} />
+            </dd>
+            {card.type === 'ninja' && (
+              <>
+                <dt className="text-muted">Poder (saudável)</dt>
+                <dd className="font-mono">
+                  {card.healthy.combat}/{card.healthy.support}
+                </dd>
+                <dt className="text-muted">Poder (ferido)</dt>
+                <dd className="font-mono">
+                  {card.injured.combat}/{card.injured.support}
+                </dd>
+                <dt className="text-muted">Atributo</dt>
+                <dd>{localized.attributes.join(' / ')}</dd>
+              </>
+            )}
+            {localized.characteristics.length > 0 && (
+              <>
+                <dt className="text-muted">Características</dt>
+                <dd className="flex flex-wrap gap-1">
+                  {localized.characteristics.map((c) => (
+                    <span key={c} className="rounded bg-surface-2 px-1.5 py-0.5 text-xs">
+                      {c}
+                    </span>
+                  ))}
+                </dd>
+              </>
+            )}
+          </dl>
+
+          {isReinforcementCard(card) && (
+            <p className="rounded-lg bg-accent/10 px-3 py-2 text-sm">
+              <span className="font-semibold text-accent">Baralho de Reforço.</span> Esta carta fica fora do Deck
+              (não conta nas 50) e nunca vai para a mão. Entra em jogo por efeitos de cartas ou, se for um
+              Esquadrão [Squad], também ao ser formado na sua Fase de Missão.
+            </p>
+          )}
+
+          {isTokenCard(card) && (
+            <p className="rounded-lg bg-accent/10 px-3 py-2 text-sm">
+              <span className="font-semibold text-accent">Token.</span> Esta carta fica na parte Tokens do deck (fora
+              das 50 e do Baralho de Reforço), com no máximo 1 cópia.
+            </p>
+          )}
+
+          {(localized.text.length > 0 || localized.flavor) && (
+            <div className="space-y-2 rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
+              {localized.text.map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
+              {localized.flavor && <p className="italic text-muted">{localized.flavor}</p>}
+            </div>
+          )}
+          </>
+        )}
         {custom && (
           <p className="text-xs text-muted">
             {localCustom ? (
