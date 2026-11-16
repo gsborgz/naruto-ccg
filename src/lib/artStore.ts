@@ -34,6 +34,10 @@ async function withBlobAuth<T>(run: () => Promise<T>): Promise<T> {
   try {
     return await run();
   } catch (e) {
+    if (e instanceof Error && e.message.startsWith('Vercel Blob:') && /private store|private access/i.test(e.message)) {
+      console.error(e);
+      throw new ArtError(503, 'O store do Vercel Blob foi criado como privado: o app precisa de um store público.');
+    }
     if (e instanceof Error && /credentials|oidc|token/i.test(e.message) && e.message.startsWith('Vercel Blob:')) {
       console.error(e);
       throw new ArtError(503, 'O servidor não conseguiu se autenticar no armazenamento de imagens.');
