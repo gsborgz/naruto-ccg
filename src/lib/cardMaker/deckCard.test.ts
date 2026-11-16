@@ -82,9 +82,7 @@ test('cartas criadas seguem as regras de montagem', () => {
   assert.equal(summary.reinforcement, 1);
   assert.equal(summary.total, 0);
 
-  // Mesmo nome que a S01 N-001 (Naruto Uzumaki): conta junto no limite de 3 cópias.
-  const printed = CARDS_BY_ID.get('s01-n-001');
-  assert.equal(printed?.name, 'Naruto Uzumaki');
-  const index = indexDeck({ 's01-n-001': 2, [ninja.id]: 1 }, lookup);
-  assert.notEqual(cannotAddReasonIn(index, ninja), null);
+  // Deck cheio (50): não entra mais nenhuma carta do Deck; sem limite de cópias por nome.
+  assert.equal(cannotAddReasonIn(indexDeck({ 's01-n-001': 3, [ninja.id]: 5 }, lookup), ninja), null);
+  assert.notEqual(cannotAddReasonIn(indexDeck({ [ninja.id]: 50 }, lookup), ninja), null);
 });

@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { CARDS, CARDS_BY_ID } from '../data/cards.ts';
-import { deckNameKey, getInPlayNames, type Card, type NinjaCard } from '../models/card.ts';
+import { deckNameKey, getInPlayNames, type NinjaCard } from '../models/card.ts';
 import { cannotAddReason, DECK_RULES, summarizeDeck, type DeckCards } from './deckRules.ts';
 
 const lookup = (id: string) => CARDS_BY_ID.get(id);
@@ -50,9 +50,6 @@ const ninja = (id: string, name: string, characteristics: string[]): NinjaCard =
 });
 const sageNaruto = ninja('t-sage', 'Naruto Uzumaki (Sage Mode)', ['Leaf', 'Name: Naruto Uzumaki']);
 const yukie = ninja('t-yukie', 'Yukie Fujikaze', ['Name: Koyuki Kazahana']);
-const koyuki = ninja('t-koyuki', 'Koyuki Kazahana', []);
-const fixtures = new Map<string, Card>([sageNaruto, yukie, koyuki].map((c) => [c.id, c]));
-const lookupWithFixtures = (id: string) => fixtures.get(id) ?? lookup(id);
 
 test('nome na montagem: nome impresso completo, com parênteses', () => {
   // Rulebook PT-BR p. 43: "Shukaku (Gaara of the Desert)", "Gaara of the Desert" e
@@ -62,32 +59,18 @@ test('nome na montagem: nome impresso completo, com parênteses', () => {
   assert.equal(deckNameKey(ninja('a', 'Sharingan  eye', [])), deckNameKey(lookup('s01-j-007')!));
 });
 
-test('"Name: X" não conta na montagem do deck', () => {
-  // Rulebook PT-BR p. 44, (B)-2: 3× Yukie Fujikaze (Name: Koyuki Kazahana) + 3× Koyuki Kazahana é válido.
-  assert.equal(cannotAddReason({ 't-yukie': 3 }, koyuki, lookupWithFixtures), null);
-  assert.equal(cannotAddReason({ 's01-n-001': 3 }, sageNaruto, lookupWithFixtures), null);
-  const s = summarizeDeck({ 't-yukie': 3, 't-koyuki': 3 }, lookupWithFixtures);
-  assert.ok(!s.issues.some((i) => i.code === 'copies'));
-  // Em jogo, porém, a carta tem os dois nomes (regra da Vila).
+test('"Name: X" vale só em jogo (regra da Vila)', () => {
   assert.deepEqual(getInPlayNames(yukie), ['Yukie Fujikaze', 'Koyuki Kazahana']);
+  assert.deepEqual(getInPlayNames(sageNaruto), ['Naruto Uzumaki (Sage Mode)', 'Naruto Uzumaki']);
 });
 
-test('cartas diferentes com o mesmo nome impresso contam juntas no limite de 3', () => {
-  const s = summarizeDeck({ 's01-n-001': 2, 's01-n-025': 2 }, lookup);
-  assert.ok(s.issues.some((i) => i.code === 'copies' && i.message.includes('"Naruto Uzumaki"')));
-  assert.notEqual(cannotAddReason({ 's01-n-001': 2, 's01-n-019': 1 }, lookup('s01-n-025')!, lookup), null);
-  assert.equal(cannotAddReason({ 's01-n-001': 2 }, lookup('s01-n-025')!, lookup), null);
-  // Entre coleções também: "Sharingan Eye" do S01 e do S02.
-  assert.notEqual(cannotAddReason({ 's01-j-007': 2, 's02-j-048': 1 }, lookup('s02-j-063')!, lookup), null);
-});
-
-test('carta que imprime "as many copies ... as you want" não tem limite de cópias', () => {
-  // S26 N-1551 Samurai Warrior.
-  const samurai = lookup('s26-n-1551')!;
-  assert.equal(cannotAddReason({ 's26-n-1551': 10 }, samurai, lookup), null);
-  assert.ok(!summarizeDeck({ 's26-n-1551': 10 }, lookup).issues.some((i) => i.code === 'copies'));
-  // As outras cartas continuam limitadas a 3.
-  assert.notEqual(cannotAddReason({ 's26-n-1552': 3 }, lookup('s26-n-1552')!, lookup), null);
+test('sem limite de cópias por nome (os jogadores combinam entre si)', () => {
+  assert.equal(cannotAddReason({ 's01-n-001': 10 }, lookup('s01-n-001')!, lookup), null);
+  assert.equal(cannotAddReason({ 's01-n-001': 2, 's01-n-019': 1 }, lookup('s01-n-025')!, lookup), null);
+  assert.equal(cannotAddReason({ 's15-n-684': 3, 's17-n-816': 3 }, lookup('s24-n-1394')!, lookup), null);
+  const s = summarizeDeck({ 's01-n-001': 30, 's01-j-007': 20 }, lookup);
+  assert.equal(s.total, 50);
+  assert.equal(s.isValid, true, JSON.stringify(s.issues));
 });
 
 test('deck vazio é inválido por tamanho', () => {
@@ -200,15 +183,7 @@ test('Baralho de Reforço: Esquadrões e Ninjas "Reinforcement" ficam fora do De
   assert.equal(cannotAddReason(base, lookup('s13-n-549')!, lookup), null);
 });
 
-test('Baralho de Reforço: até 15 cartas e até 3 por nome', () => {
-  // "Naruto Uzumaki & Jiraiya" existe no S15, S17 e S24: o limite de 3 é pelo nome.
-  assert.notEqual(cannotAddReason({ 's15-n-684': 2, 's17-n-816': 1 }, lookup('s24-n-1394')!, lookup), null);
-  const over = summarizeDeck({ 's15-n-684': 2, 's17-n-816': 2 }, lookup);
-  assert.ok(over.issues.some((i) => i.code === 'copies' && i.message.includes('Baralho de Reforço')));
-
-  // O limite de nome é separado do Deck: "Naruto Uzumaki" (promo Reinforcement) não soma com o do Deck.
-  assert.equal(cannotAddReason({ 's01-n-001': 3 }, lookup('promo-n-pr-100')!, lookup), null);
-
+test('Baralho de Reforço: até 15 cartas', () => {
   // 15 cartas no Reforço (5 nomes × 3): cheio. Com mais uma, fica inválido.
   const fifteen: DeckCards = { 's13-n-549': 3, 's13-n-550': 3, 's13-n-551': 3, 's13-n-552': 3, 's13-n-572': 3 };
   assert.match(cannotAddReason(fifteen, lookup('s13-n-573')!, lookup) ?? '', /Baralho de Reforço já tem 15/);

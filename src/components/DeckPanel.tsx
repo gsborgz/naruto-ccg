@@ -314,7 +314,7 @@ export function DeckPanel({
         {group.length === 0 ? (
           <p className="py-10 text-center text-sm text-muted">
             {tab === 'reinforcement'
-              ? `Esquadrões [Squad] e Ninjas "Reinforcement" ficam aqui, fora do Deck: até ${DECK_RULES.reinforcementMax} cartas, até ${DECK_RULES.maxCopiesPerName} por nome. Eles entram em jogo por efeitos de cartas ou, os Esquadrões, ao serem formados na Fase de Missão.`
+              ? `Esquadrões [Squad] e Ninjas "Reinforcement" ficam aqui, fora do Deck: até ${DECK_RULES.reinforcementMax} cartas. Eles entram em jogo por efeitos de cartas ou, os Esquadrões, ao serem formados na Fase de Missão.`
               : entries.length === 0
                 ? 'Use o botão + nas cartas para montar seu deck.'
                 : `Nenhuma carta do tipo ${CARD_TYPE_LABEL[tab]} no deck.`}

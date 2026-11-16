@@ -216,6 +216,64 @@ test('Prêmios: não vão para a sua própria área; você manda uma carta sua p
   assert.deepEqual(parseGameAction({ type: 'giveReward' }), { type: 'giveReward' });
 });
 
+test('Prêmios: devolver manda a última carta da Área de volta ao topo do Deck do dono', () => {
+  let g = newGame();
+  const rng = seeded(6);
+  const first = g.players.host.deck[0];
+  g = applyGameAction(g, 'host', { type: 'giveReward' }, rng);
+  const mine = g.players.host.hand[0];
+  g = applyGameAction(g, 'host', { type: 'giveReward', uid: mine.uid }, rng);
+  const deckBefore = g.players.host.deck.length;
+
+  // Quem recebeu devolve: a última (a da mão) volta ao topo do Deck do host.
+  g = applyGameAction(g, 'guest', { type: 'returnReward', owner: 'guest' }, rng);
+  assert.deepEqual(g.players.guest.rewards.map((c) => c.uid), [first.uid]);
+  assert.equal(g.players.host.deck.length, deckBefore + 1);
+  assert.equal(g.players.host.deck[0].uid, mine.uid);
+  // Quem deu também pode pegar de volta.
+  g = applyGameAction(g, 'host', { type: 'returnReward', owner: 'guest' }, rng);
+  assert.equal(g.players.guest.rewards.length, 0);
+  assert.equal(g.players.host.deck[0].uid, first.uid);
+  assert.throws(() => applyGameAction(g, 'host', { type: 'returnReward', owner: 'guest' }, rng), /vazia/);
+
+  // No registro, ninguém vê qual carta voltou.
+  assert.equal(gameView(g, 'host').log.at(-1)!.hidden, undefined, 'sem cartas no registro');
+  assert.equal(gameView(g, 'host').log.at(-1)!.owner, 'guest');
+  assert.deepEqual(parseGameAction({ type: 'returnReward', owner: 'guest' }), { type: 'returnReward', owner: 'guest' });
+  assert.equal(parseGameAction({ type: 'returnReward', owner: 'x' }), null);
+});
+
+test('Poder: +/− no Time fica no Líder, soma no Time e some fora da Vila/Campo', () => {
+  let { g, uids } = villageOfSix();
+  const [a, b] = uids.filter((uid) => g.players.host.village.find((x) => x.uid === uid)?.cardId !== 'e');
+  const act = (action: Parameters<typeof applyGameAction>[2]) => (g = applyGameAction(g, 'host', action, seeded(), ninjas));
+  const find = (uid: string) => g.players.host.village.find((x) => x.uid === uid);
+
+  act({ type: 'joinTeam', uid: b, target: a });
+  const logBefore = g.log!.length;
+  act({ type: 'adjustPower', uid: b, delta: 1 }); // clicar num Apoio mexe no Líder
+  act({ type: 'adjustPower', uid: a, delta: 1 });
+  assert.equal(find(a)?.power, 2);
+  assert.equal(find(b)?.power, undefined);
+  // Cliques seguidos viram uma jogada só no registro.
+  assert.equal(g.log!.length, logBefore + 1);
+  assert.equal(g.log!.at(-1)!.delta, 2);
+
+  act({ type: 'adjustPower', uid: a, delta: -3 });
+  assert.equal(find(a)?.power, -1);
+  // Ferir mantém o ajuste; ir para o Campo também.
+  act({ type: 'setInjured', uid: a, injured: true });
+  act({ type: 'moveTeam', uid: a, to: 'battlefield' });
+  assert.equal(g.players.host.battlefield.find((x) => x.uid === a)?.power, -1);
+  // Fora da Vila/Campo, o ajuste some.
+  act({ type: 'move', uid: a, to: 'hand' });
+  assert.equal(g.players.host.hand.find((x) => x.uid === a)?.power, undefined);
+  assert.throws(() => act({ type: 'adjustPower', uid: a, delta: 1 }), /Vila ou no Campo/);
+
+  assert.deepEqual(parseGameAction({ type: 'adjustPower', uid: 'h1', delta: -1 }), { type: 'adjustPower', uid: 'h1', delta: -1 });
+  assert.equal(parseGameAction({ type: 'adjustPower', uid: 'h1', delta: 0.5 }), null);
+});
+
 test('partida: passar turno troca o Atacante e avança o Marcador de quem passou', () => {
   const rng = seeded(3);
   let g = newGame();
@@ -237,13 +295,12 @@ test('partida: passar turno troca o Atacante e avança o Marcador de quem passou
   assert.equal(gameView(g, 'guest').turnNumber, 3);
 });
 
-test('partida: com 7 ou mais cartas na mão o Atacante descarta antes de passar', () => {
+test('partida: o Atacante passa o turno com qualquer número de cartas na mão (sem o limite de 6)', () => {
   const rng = seeded(4);
   let g: GameState = { ...newGame(), active: 'host' };
   g = applyGameAction(g, 'host', { type: 'draw' }, rng);
-  assert.equal(g.players.host.hand.length, OPENING_HAND + 1);
-  assert.throws(() => applyGameAction(g, 'host', { type: 'passTurn' }, rng), /Descarte/);
-  g = applyGameAction(g, 'host', { type: 'move', uid: g.players.host.hand[0].uid, to: 'discard' }, rng);
+  g = applyGameAction(g, 'host', { type: 'draw' }, rng);
+  assert.equal(g.players.host.hand.length, OPENING_HAND + 2);
   assert.equal(applyGameAction(g, 'host', { type: 'passTurn' }, rng).active, 'guest');
 });
 

@@ -44,6 +44,11 @@ export interface CardInstance {
    * Só na Vila e no Campo de Batalha; continua ferido ao voltar do Campo para a Vila.
    */
   injured?: true;
+  /**
+   * Ajuste manual do Poder (efeitos de cartas, ex.: +2/+2): soma no Poder do Time do Ninja. Os botões +/− do
+   * Time mexem no Líder; se o Ninja sai do Time, o ajuste vai com ele. Só na Vila e no Campo de Batalha.
+   */
+  power?: number;
 }
 
 export type PlayerZones = Record<ZoneName, CardInstance[]>;
@@ -95,6 +100,10 @@ export interface LogEntry {
   phase?: number;
   /** returnHand: quantas cartas voltaram (o oponente vê só isso, sem os nomes). */
   count?: number;
+  /** adjustPower: quanto o Poder mudou (somado nas jogadas seguidas no mesmo Time). */
+  delta?: number;
+  /** returnReward: de quem era a Área de Prêmios de onde a carta saiu. */
+  owner?: Side;
 }
 
 /** Fases do turno (docs/REGRAS.md 3.2 a 3.6). */
@@ -134,8 +143,16 @@ export type GameAction =
    */
   | { type: 'giveReward'; uid?: string }
   /**
-   * Passar o turno (docs/REGRAS.md 3.6 M e N): só o Atacante. Ele precisa estar com no máximo 6 cartas na
-   * mão, avança o próprio Marcador de Turnos 1 casa e o oponente vira o Atacante.
+   * Devolver um Prêmio de Batalha (ex.: dado por engano): a última carta que entrou na Área de Prêmios de
+   * `owner` volta, face para baixo, ao topo do Deck do dono da carta (o oponente de `owner`). Qualquer um dos
+   * dois pode devolver, de qualquer uma das Áreas.
+   */
+  | { type: 'returnReward'; owner: Side }
+  /** Aumentar (`delta` > 0) ou diminuir o Poder do Time do Ninja `uid` (o ajuste fica no Líder). */
+  | { type: 'adjustPower'; uid: string; delta: number }
+  /**
+   * Passar o turno (docs/REGRAS.md 3.6 N): só o Atacante. Avança o próprio Marcador de Turnos 1 casa e o
+   * oponente vira o Atacante. O limite de 6 cartas na mão (3.6 M) não é cobrado: os jogadores se policiam.
    */
   | { type: 'passTurn' };
 
@@ -186,9 +203,15 @@ export function teamGroups(cards: readonly CardInstance[]): CardInstance[][] {
   return [...groups.values()];
 }
 
-/** Uma carta só com os campos dados (sem `team`/`injured` indefinidos no JSON). */
-function card(uid: string, cardId: string, team?: string, injured?: boolean): CardInstance {
-  return { uid, cardId, ...(team ? { team } : {}), ...(injured ? { injured: true as const } : {}) };
+/** Uma carta só com os campos dados (sem `team`/`injured`/`power` indefinidos no JSON). */
+function card(uid: string, cardId: string, team?: string, injured?: boolean, power?: number): CardInstance {
+  return {
+    uid,
+    cardId,
+    ...(team ? { team } : {}),
+    ...(injured ? { injured: true as const } : {}),
+    ...(power ? { power } : {}),
+  };
 }
 
 /**
@@ -203,7 +226,10 @@ function normalizeTeams(zones: PlayerZones) {
     zones[zone] = zones[zone].map((c) => {
       const team = here && c.team && (counts.get(c.team) ?? 0) >= 2 ? c.team : undefined;
       const injured = here && !!c.injured;
-      return team === c.team && injured === !!c.injured ? c : card(c.uid, c.cardId, team, injured);
+      const power = here ? (c.power ?? 0) : 0;
+      return team === c.team && injured === !!c.injured && power === (c.power ?? 0)
+        ? c
+        : card(c.uid, c.cardId, team, injured, power);
     });
   }
 }
@@ -214,10 +240,11 @@ function checkBattlefield(zones: PlayerZones, rules: CardRules) {
   }
 }
 
+/** Maior ajuste manual de Poder num Ninja (para cima ou para baixo). */
+export const POWER_MOD_MAX = 99;
+
 /** Cartas compradas na preparação (docs/REGRAS.md 2.3). */
 export const OPENING_HAND = 6;
-/** Mão máxima do Atacante ao fim do turno (docs/REGRAS.md 3.6 M). */
-export const HAND_LIMIT = 6;
 /** Última casa do Indicador de Turnos (o marcador começa em 0). */
 export const TURN_MAX = 10;
 
@@ -313,6 +340,19 @@ export function applyGameAction(
   }
   const entry = describe(game, next, who, action);
   const log = game.log ?? [];
+  // Cliques seguidos no +/− do mesmo Time viram uma jogada só no registro.
+  const last = log.at(-1);
+  if (
+    entry.type === 'adjustPower' &&
+    last?.type === 'adjustPower' &&
+    last.who === who &&
+    last.turn === (game.turnNumber ?? 1) &&
+    last.cards?.[0] === entry.cards?.[0]
+  ) {
+    const delta = (last.delta ?? 0) + (entry.delta ?? 0);
+    const rest = log.slice(0, -1);
+    return { ...next, log: delta === 0 ? rest : [...rest, { ...last, delta }] };
+  }
   const n = (log.at(-1)?.n ?? 0) + 1;
   return { ...next, log: [...log, { n, who, turn: game.turnNumber ?? 1, ...entry }].slice(-LOG_MAX) };
 }
@@ -368,6 +408,13 @@ function describe(
     }
     case 'nextPhase':
       return { type: 'nextPhase', phase: after.phase ?? 0 };
+    case 'returnReward':
+      return { type: 'returnReward', from: 'rewards', to: 'deck', owner: action.owner };
+    case 'adjustPower': {
+      const c = at(action.uid);
+      const leader = c && zones[c.zone].find((x) => groupKey(x) === groupKey(c.card));
+      return { type: 'adjustPower', cards: leader ? [leader.cardId] : [], from: c?.zone, delta: action.delta };
+    }
     case 'shuffle':
     case 'passTurn':
       return { type: action.type };
@@ -403,7 +450,8 @@ function applyAction(
       if (at.zone === action.to && !moved.team && !TEAM_ZONES.has(at.zone)) return game;
       if (action.before === moved.uid) return game;
       zones[at.zone].splice(at.index, 1);
-      const solo = card(moved.uid, moved.cardId, undefined, moved.injured); // mover uma carta sozinha a tira do Time
+      // Mover uma carta sozinha a tira do Time (o ajuste de Poder vai junto).
+      const solo = card(moved.uid, moved.cardId, undefined, moved.injured, moved.power);
       // Carta devolvida ao Deck vai para o topo; nas outras zonas, antes do Time de `before` ou por último.
       if (action.to === 'deck') zones.deck.unshift(solo);
       else insertBefore(zones[action.to], [solo], action.before);
@@ -451,7 +499,7 @@ function applyAction(
       for (let i = 0; i < list.length; i++) if (list[i].uid === target.uid) list[i] = { ...list[i], team: teamId };
       // Entra logo depois do último membro: o Líder continua sendo o primeiro.
       const last = list.reduce((acc, c, i) => (c.team === teamId ? i : acc), -1);
-      list.splice(last + 1, 0, card(joining.uid, joining.cardId, teamId, joining.injured));
+      list.splice(last + 1, 0, card(joining.uid, joining.cardId, teamId, joining.injured, joining.power));
       return done();
     }
     case 'moveTeam': {
@@ -483,11 +531,33 @@ function applyAction(
       checkBattlefield(zones, rules);
       return { ...game, players: { ...game.players, [who]: zones, [opponent]: theirs } as Record<Side, PlayerZones> };
     }
+    case 'returnReward': {
+      const owner = action.owner;
+      const deckOwner = otherSide(owner);
+      const rewards = [...game.players[owner].rewards];
+      const back = rewards.pop();
+      if (!back) throw new GameError('Essa Área de Prêmios está vazia.');
+      const players = { ...game.players };
+      players[owner] = { ...players[owner], rewards };
+      players[deckOwner] = { ...players[deckOwner], deck: [card(back.uid, back.cardId), ...players[deckOwner].deck] };
+      return { ...game, players };
+    }
+    case 'adjustPower': {
+      if (!Number.isInteger(action.delta) || action.delta === 0) return game;
+      const at = mustFind(action.uid);
+      if (!TEAM_ZONES.has(at.zone)) throw new GameError('Só Times na Vila ou no Campo de Batalha têm Poder.');
+      const list = zones[at.zone];
+      const key = groupKey(list[at.index]);
+      const li = list.findIndex((c) => groupKey(c) === key);
+      const leader = list[li];
+      if (!rules.isNinja(leader.cardId)) throw new GameError('Só Ninjas têm Poder.');
+      const power = Math.max(-POWER_MOD_MAX, Math.min(POWER_MOD_MAX, (leader.power ?? 0) + action.delta));
+      if (power === (leader.power ?? 0)) return game;
+      list[li] = card(leader.uid, leader.cardId, leader.team, leader.injured, power);
+      return done();
+    }
     case 'passTurn': {
       if (activeSide(game) !== who) throw new GameError('Só o Atacante (o jogador do turno) pode passar o turno.');
-      if (zones.hand.length > HAND_LIMIT) {
-        throw new GameError(`Descarte até ficar com ${HAND_LIMIT} cartas na mão antes de passar o turno.`);
-      }
       return {
         ...game,
         turn: { ...game.turn, [who]: Math.min(TURN_MAX, game.turn[who] + 1) } as Record<Side, number>,
@@ -508,7 +578,7 @@ function applyAction(
       if (!TEAM_ZONES.has(at.zone)) throw new GameError('Só Ninjas na Vila ou no Campo de Batalha ficam Feridos.');
       if (!rules.isNinja(target.cardId)) throw new GameError('Só Ninjas ficam Feridos.');
       if (!!target.injured === action.injured) return game;
-      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, action.injured);
+      zones[at.zone][at.index] = card(target.uid, target.cardId, target.team, action.injured, target.power);
       return done();
     }
     case 'setLeader': {
@@ -616,6 +686,12 @@ export function parseGameAction(x: unknown): GameAction | null {
     return { type: 'moveTeam', uid: a.uid, to: a.to as ZoneName, ...before(a) };
   }
   if (a.type === 'setLeader' && typeof a.uid === 'string') return { type: 'setLeader', uid: a.uid };
+  if (a.type === 'returnReward' && (a.owner === 'host' || a.owner === 'guest')) {
+    return { type: 'returnReward', owner: a.owner };
+  }
+  if (a.type === 'adjustPower' && typeof a.uid === 'string' && Number.isInteger(a.delta) && a.delta !== 0) {
+    return { type: 'adjustPower', uid: a.uid, delta: a.delta as number };
+  }
   if (a.type === 'giveReward' && (a.uid === undefined || typeof a.uid === 'string')) {
     return a.uid === undefined ? { type: 'giveReward' } : { type: 'giveReward', uid: a.uid };
   }

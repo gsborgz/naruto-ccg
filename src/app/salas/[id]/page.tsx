@@ -156,6 +156,8 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
+    onReturnReward: (area) => play({ type: 'returnReward', owner: area === 'mine' ? you : opponentSeat }),
+    onAdjustPower: (uid, delta) => play({ type: 'adjustPower', uid, delta }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     onPassTurn: () => play({ type: 'passTurn' }),
     busy: room.busy,

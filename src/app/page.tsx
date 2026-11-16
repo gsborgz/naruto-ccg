@@ -30,8 +30,7 @@ export default function HomePage() {
         <div>
           <h1 className="text-2xl font-bold">Meus decks</h1>
           <p className="text-sm text-muted">
-            {DECK_RULES.size} cartas · até {DECK_RULES.maxCopiesPerName} cópias
-            por nome. Salvos neste navegador.
+            {DECK_RULES.size} cartas, sem limite de cópias. Salvos neste navegador.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

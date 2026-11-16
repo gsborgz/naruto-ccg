@@ -95,8 +95,8 @@ export interface ClientCard extends BaseCard {
 export type Card = NinjaCard | JutsuCard | MissionCard | ClientCard;
 
 /**
- * Nome da carta para a regra "até 3 cartas com o mesmo nome" na montagem do deck
- * (rulebook PT-BR, "Nome de um Card", p. 43–44):
+ * Nome da carta na montagem do deck (rulebook PT-BR, "Nome de um Card", p. 43–44; o app não aplica o limite
+ * de 3 cartas com o mesmo nome, ver `src/lib/deckRules.ts`):
  * - é o nome impresso completo, incluindo o que estiver entre parênteses
  *   ("Naruto Uzumaki (Sage Mode)" ≠ "Naruto Uzumaki");
  * - a característica "Name: X" NÃO conta na montagem (ela vale só em jogo, ver `getInPlayNames`).

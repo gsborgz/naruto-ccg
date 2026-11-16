@@ -147,6 +147,8 @@ export default function ArenaPreviewPage() {
     onSetLeader: (uid) => play({ type: 'setLeader', uid }),
     onGiveReward: (uid) => play(uid ? { type: 'giveReward', uid } : { type: 'giveReward' }),
     onSetInjured: (uid, injured) => play({ type: 'setInjured', uid, injured }),
+    onReturnReward: (area) => play({ type: 'returnReward', owner: area === 'mine' ? 'host' : 'guest' }),
+    onAdjustPower: (uid, delta) => play({ type: 'adjustPower', uid, delta }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     // Sem oponente de verdade: ele devolve o turno na hora.
     onPassTurn: () => {

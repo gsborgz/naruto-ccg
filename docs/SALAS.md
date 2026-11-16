@@ -39,8 +39,8 @@ Também ficam de fora: chat, espectadores, busca de oponentes, contas/login e re
 
 - **Dois jogadores**: o anfitrião (`host`) e o convidado (`guest`). Um terceiro que tentar entrar recebe "Sala cheia".
 - **O deck é escolhido dentro da sala** e é obrigatório para marcar Pronto.
-- **Decks** precisam ser válidos pelas regras do montador (`summarizeDeck(...).isValid`: 50 cartas, até 3 por
-  nome, Baralho de Reforço com até 15). O servidor valida de novo; não confia no navegador. Os dois jogadores veem
+- **Decks** precisam ser válidos pelas regras do montador (`summarizeDeck(...).isValid`: 50 cartas, sem
+  limite de cópias por nome, Baralho de Reforço com até 15). O servidor valida de novo; não confia no navegador. Os dois jogadores veem
   quantas cartas o outro tem no Baralho de Reforço (`reinforcementSize`), mas não quais são.
 - **O deck é copiado ao ser escolhido.** Editar o deck no montador depois não muda a sala. Para usar a
   versão nova, o jogador escolhe o deck de novo na sala.
@@ -255,10 +255,16 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
     voltaram; o oponente vê só quantas;
   - `{ type: 'nextPhase' }`: avançar a fase do turno (ver "Turnos");
   - `{ type: 'setInjured', uid, injured }`: virar um Ninja seu para Ferido ou Saudável (ver "Ninja Ferido");
-  - `{ type: 'passTurn' }`: passar o turno (ver "Turnos").
+  - `{ type: 'passTurn' }`: passar o turno (ver "Turnos");
+  - `{ type: 'returnReward', owner }`: devolver um Prêmio de Batalha (ver "Prêmios de Batalha");
+  - `{ type: 'adjustPower', uid, delta }`: aumentar ou diminuir o Poder de um Time seu (ver "Times").
+- **Mover pelo detalhe da carta:** clicar numa carta sua (mão, Vila, Campo, Chakra, Descartes, Reforço,
+  Removidos) abre o detalhe com **Descartar**, **→ zona** (mão, Vila, Campo, Chakra, topo do Deck, Removidos e,
+  para Esquadrões/Reforço, Reforço) e **→ Prêmio do oponente**. São as mesmas ações `move` e `giveReward` do
+  arrastar; numa carta de um Time, move só ela.
 - **Turnos** (docs/REGRAS.md 3.1 e 3.6): quem começa é **sorteado** no início da partida (`GameState.active`,
-  o Atacante; `turnNumber` conta os turnos a partir de 1). Só o Atacante passa o turno, e só com **até 6 cartas
-  na mão** (etapa M: senão o servidor pede para descartar antes). Ao passar, o **Marcador de Turnos dele avança
+  o Atacante; `turnNumber` conta os turnos a partir de 1). Só o Atacante passa o turno, com qualquer número de
+  cartas na mão (o limite de 6 da etapa M não é cobrado: os jogadores se policiam). Ao passar, o **Marcador de Turnos dele avança
   1 casa** (até 10, `TURN_MAX`) e o oponente vira o Atacante. A compra do início do turno continua manual
   (botão `+1`), porque os efeitos "No Início do Turno" vêm antes dela e o primeiro jogador não compra no
   primeiro turno. **Fases** (`GameState.phase`, índice em `PHASES`: Inicial, Missão, Organização, Batalha,
@@ -274,7 +280,10 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 - **Prêmios de Batalha** (docs/REGRAS.md 3.5.4): ninguém coloca cartas nos **próprios** Prêmios. Você manda
   uma carta SUA para a Área de Prêmios do **oponente** (ação `giveReward`): arrastando o seu Deck (vai a carta do
   topo, sem revelar qual é) ou uma carta específica para os Prêmios dele. Cartas nos Prêmios ficam lá (face para
-  baixo, ninguém vê) e não podem ser movidas.
+  baixo, ninguém vê) e não podem ser movidas, mas podem ser **devolvidas** (ex.: Prêmio dado por engano): o
+  botão ↩ na Área de Prêmios (a sua ou a do oponente; qualquer um dos dois) manda a última carta que entrou ali
+  de volta, face para baixo, ao **topo do Deck de quem a deu** (ação `returnReward`, com `owner` = dono da
+  Área). No registro, ninguém vê qual carta voltou.
 - **Times** (docs/REGRAS.md 3.4 F e 3.5.1): soltar um Ninja sobre outro Ninja seu na Vila ou no Campo de
   Batalha forma um Time (ou aumenta o Time dele). Ações `joinTeam` (`uid` sobre `target`), `moveTeam` (o Time
   inteiro para outra zona, arrastando pela alça "Time n/3") e `setLeader` (botão ★).
@@ -293,6 +302,12 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
     (docs/REGRAS.md 3.5.4) = Combate do Líder + Suporte de cada Apoio, no estado atual de cada um (Saudável ou
     Ferido), recalculado ao ferir/curar ou trocar o Líder (`src/lib/game/teamPower.ts`). Valores "X" aparecem
     como "5+X". A dica do chip mostra a conta. No seu lado, o chip é a alça para arrastar o Time inteiro.
+  - **Ajuste manual do Poder** (efeitos de cartas): ao passar o mouse num Time seu, o chip mostra **−** e **+**
+    (ação `adjustPower`). O ajuste fica no Ninja Líder (`CardInstance.power`) e soma no Poder (verde quando
+    aumentado, vermelho quando diminuído; sem X, o Poder não fica abaixo de 0). Continua ao ferir/curar e ao ir
+    para o Campo; se o Ninja sai do Time, o ajuste vai com ele; some quando a carta sai da Vila/Campo. Não zera
+    sozinho no fim do turno: volte com −/+ quando o efeito acabar. Cliques seguidos viram uma jogada só no
+    registro.
 - **Encerrar partida** (`{ type: 'endGame' }`, qualquer um dos dois): volta para a escolha de decks (decks
   mantidos, ninguém pronto). Sair da sala no meio da partida também a encerra.
 - **Registro de jogo** (`GameState.log`, as últimas `LOG_MAX` = 80 jogadas): toda jogada que muda algo é

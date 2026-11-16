@@ -16,7 +16,7 @@ test('Poder do Time: Combate do Líder + Suporte dos Apoios (não Combate + Comb
     { uid: '2', cardId: 'apoio1' },
     { uid: '3', cardId: 'apoio2' },
   ];
-  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1, 1] });
+  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1, 1], mod: 0 });
 });
 
 test('Poder do Time: Ninja sozinho = o Combate dele; Ferido usa os valores de Ferido', () => {
@@ -35,4 +35,14 @@ test('Poder do Time: X e cartas que não são Ninja', () => {
   assert.equal(formatTeamPower(x), '1+X');
   assert.equal(formatTeamPower(teamPower([{ uid: '1', cardId: 'xis' }], lookup)!), 'X');
   assert.equal(teamPower([{ uid: '1', cardId: 'cliente' }], lookup), null);
+});
+
+test('Poder do Time: o ajuste manual dos Ninjas soma no Poder', () => {
+  const group = [
+    { uid: '1', cardId: 'lider', power: 2 },
+    { uid: '2', cardId: 'apoio1', power: -1 },
+  ];
+  assert.deepEqual(teamPower(group, lookup), { value: 5, hasX: false, parts: [3, 1], mod: 1 });
+  assert.equal(formatTeamPower(teamPower([{ uid: '1', cardId: 'lider', power: -9 }], lookup)!), '0');
+  assert.equal(formatTeamPower(teamPower([{ uid: '1', cardId: 'xis', power: -2 }], lookup)!), 'X-2');
 });

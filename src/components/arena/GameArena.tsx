@@ -11,6 +11,7 @@ import {
   TEAM_MAX,
   teamGroups,
   TURN_MAX,
+  ZONES,
   type CardInstance,
   type LogEntryView,
   type Side,
@@ -19,7 +20,7 @@ import {
 } from '@/lib/game/state';
 import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
 import { formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
-import { cardImageUrl, type Card } from '@/models/card';
+import { cardImageUrl, isReinforcementCard, type Card } from '@/models/card';
 import { useCardName } from '@/lib/cardLanguage';
 import styles from './GameArena.module.css';
 
@@ -73,6 +74,13 @@ export interface ArenaControls {
   onSetInjured: (uid: string, injured: boolean) => void;
   /** Manda uma carta sua para os Prêmios do OPONENTE (sem `uid`: o topo do seu Deck). */
   onGiveReward: (uid?: string) => void;
+  /**
+   * Devolve a última carta da Área de Prêmios (`mine` = a sua, `theirs` = a do oponente) ao topo do Deck de
+   * quem deu a carta.
+   */
+  onReturnReward: (area: 'mine' | 'theirs') => void;
+  /** Aumenta (`delta` > 0) ou diminui o Poder do Time do Ninja `uid`. */
+  onAdjustPower: (uid: string, delta: number) => void;
   /** Avança para a próxima fase do turno (só quando você é o Atacante). */
   onNextPhase: () => void;
   /** Passa o turno para o oponente (só quando você é o Atacante). */
@@ -116,6 +124,9 @@ const MINI_CARD = { w: 62, h: 87 };
 const HAND_CARD = { w: 112, h: 157 };
 /** Largura útil da Vila: a linha menos as outras zonas, os espaços e o padding da Vila. */
 const VILLAGE_INNER = 1332 - 132 - 150 - 100 - 118 - 4 * 10 - 24;
+
+/** Abre o detalhe da carta; com `inst` (carta da mesa), o detalhe mostra as ações de mover. */
+type Inspect = (card: Card, inst?: CardInstance) => void;
 
 function cx(...names: (string | false | null | undefined)[]): string {
   return names.filter(Boolean).join(' ');
@@ -342,7 +353,7 @@ function TableCard({
   w: number;
   h: number;
   mine: boolean;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
   onClick?: () => void;
   className?: string;
   style?: React.CSSProperties;
@@ -350,7 +361,7 @@ function TableCard({
   const card = CARDS_BY_ID.get(inst.cardId);
   const nameOf = useCardName();
   const setHovered = useContext(HoverContext);
-  const open = () => (onClick ? onClick() : card && onInspect(card));
+  const open = () => (onClick ? onClick() : card && onInspect(card, inst));
   return (
     <div
       role="button"
@@ -396,10 +407,10 @@ function ZoneListDialog({
   zone: ZoneName;
   cards: CardInstance[];
   controls?: ArenaControls;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
   onClose: () => void;
 }) {
-  const targets = (['hand', 'village', 'battlefield', 'chakra', 'discard', 'deck'] as const).filter((t) => t !== zone);
+  const targets = (['hand', 'village', 'battlefield', 'chakra', 'discard', 'deck', 'removed'] as const).filter((t) => t !== zone);
   const nameOf = useCardName();
   return (
     <Dialog open onClose={onClose} title={title}>
@@ -413,7 +424,7 @@ function ZoneListDialog({
               <li key={c.uid} className="flex items-center gap-3">
                 <button
                   type="button"
-                  onClick={() => card && onInspect(card)}
+                  onClick={() => card && onInspect(card, c)}
                   className="w-12 shrink-0 overflow-hidden rounded ring-1 ring-border hover:ring-accent"
                   title={card ? nameOf(card) : c.cardId}
                 >
@@ -450,6 +461,74 @@ function ZoneListDialog({
   );
 }
 
+/** Zona em que está a carta `uid` (só nas zonas em que você vê as cartas). */
+function zoneOf(zones: SideView, uid: string): ZoneName | null {
+  for (const zone of ZONES) if (zones[zone].cards?.some((c) => c.uid === uid)) return zone;
+  return null;
+}
+
+/** Ações no detalhe de uma carta sua: descartar, mover para outra zona ou dar como Prêmio ao oponente. */
+function CardMoveActions({
+  card,
+  inst,
+  zone,
+  controls,
+  onDone,
+}: {
+  card: Card;
+  inst: CardInstance;
+  zone: ZoneName;
+  controls: ArenaControls;
+  onDone: () => void;
+}) {
+  const targets = (['hand', 'village', 'battlefield', 'chakra', 'deck', 'removed', 'reinforcement'] as const).filter(
+    (t) => t !== zone && (t !== 'reinforcement' || isReinforcementCard(card)),
+  );
+  const run = (fn: () => void) => {
+    fn();
+    onDone();
+  };
+  const chip =
+    'rounded-md bg-surface-2 px-2 py-1 text-xs font-semibold hover:bg-accent hover:text-bg disabled:opacity-40';
+  return (
+    <div className="flex flex-col gap-2 border-t border-border pt-3">
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted">Está em: {ZONE_LABEL[zone]}</p>
+      <div className="flex flex-wrap gap-1.5">
+        {zone !== 'discard' && (
+          <button
+            type="button"
+            disabled={controls.busy}
+            onClick={() => run(() => controls.onMove(inst.uid, 'discard'))}
+            className="rounded-md bg-accent px-3 py-1 text-sm font-semibold text-bg hover:opacity-90 disabled:opacity-40"
+          >
+            Descartar
+          </button>
+        )}
+        {targets.map((t) => (
+          <button
+            key={t}
+            type="button"
+            disabled={controls.busy}
+            onClick={() => run(() => controls.onMove(inst.uid, t))}
+            className={chip}
+          >
+            → {ZONE_LABEL[t]}
+          </button>
+        ))}
+        <button
+          type="button"
+          disabled={controls.busy}
+          onClick={() => run(() => controls.onGiveReward(inst.uid))}
+          className={chip}
+          title="Dar esta carta como Prêmio de Batalha ao oponente (face para baixo)"
+        >
+          → Prêmio do oponente
+        </button>
+      </div>
+    </div>
+  );
+}
+
 /* ── Times ──────────────────────────────────────────────────────────────── */
 
 /** Quanto um Ninja de Apoio cobre o anterior (fração da largura), em pé e Ferido (design: 46 e 20 de 96). */
@@ -467,10 +546,13 @@ const ninjaPower: PowerLookup = (cardId) => {
 /** Dica do chip: a conta do Poder do Time (docs/REGRAS.md 3.5.4). */
 function powerTitle(power: TeamPower, members: number): string {
   const [leader, ...supports] = power.parts;
-  if (supports.length === 0) return `Poder: ${leader} (Combate do Ninja)`;
+  const mod = power.mod ? ` ${power.mod > 0 ? '+' : '−'} ${Math.abs(power.mod)} (ajuste)` : '';
+  if (supports.length === 0) {
+    return power.mod ? `Poder: ${leader} (Combate do Ninja)${mod} = ${formatTeamPower(power)}` : `Poder: ${leader} (Combate do Ninja)`;
+  }
   return (
     `Poder do Time (${members}/${TEAM_MAX} Ninjas): ${leader} (Combate do Líder) + ` +
-    `${supports.join(' + ')} (Suporte dos Apoios) = ${formatTeamPower(power)}`
+    `${supports.join(' + ')} (Suporte dos Apoios)${mod} = ${formatTeamPower(power)}`
   );
 }
 
@@ -505,7 +587,7 @@ function TeamMember({
   inTeam: boolean;
   controls?: ArenaControls;
   mine: boolean;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
   marginLeft: number;
   marginRight: number;
   dy: number;
@@ -592,7 +674,7 @@ function TeamStack({
   size: { w: number; h: number };
   mine: boolean;
   controls?: ArenaControls;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
   style?: React.CSSProperties;
 }) {
   const inTeam = group.length > 1;
@@ -635,7 +717,10 @@ function TeamStack({
             e.dataTransfer.effectAllowed = 'move';
           }}
           className={cx(styles.teamHandle, mine && styles.draggable)}
-          title={powerTitle(power, group.length) + (mine ? '\nArraste por aqui para mover o Time inteiro.' : '')}
+          title={
+            powerTitle(power, group.length) +
+            (mine ? '\nArraste por aqui para mover o Time inteiro. − e + ajustam o Poder (efeitos de cartas).' : '')
+          }
           aria-label={`Poder do Time: ${formatTeamPower(power)}`}
         >
           {mine && (
@@ -644,7 +729,37 @@ function TeamStack({
             </span>
           )}
           Poder
-          <span className={styles.teamCount}>{formatTeamPower(power)}</span>
+          {mine && controls && (
+            <button
+              type="button"
+              draggable={false}
+              className={styles.powerBtn}
+              onClick={() => controls.onAdjustPower(group[0].uid, -1)}
+              disabled={controls.busy}
+              title="Diminuir o Poder do Time em 1"
+              aria-label="Diminuir o Poder do Time"
+            >
+              −
+            </button>
+          )}
+          <span
+            className={cx(styles.teamCount, power.mod > 0 && styles.powerUp, power.mod < 0 && styles.powerDown)}
+          >
+            {formatTeamPower(power)}
+          </span>
+          {mine && controls && (
+            <button
+              type="button"
+              draggable={false}
+              className={styles.powerBtn}
+              onClick={() => controls.onAdjustPower(group[0].uid, 1)}
+              disabled={controls.busy}
+              title="Aumentar o Poder do Time em 1"
+              aria-label="Aumentar o Poder do Time"
+            >
+              +
+            </button>
+          )}
         </div>
       )}
     </div>
@@ -657,7 +772,7 @@ interface RowProps {
   side: ArenaSide;
   mine: boolean;
   controls?: ArenaControls;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
   onOpenList: (zone: ZoneName) => void;
   /** Só na linha do oponente: você solta aqui uma carta sua (ou o topo do seu Deck) como Prêmio dele. */
   rewardDrop?: CustomDrop;
@@ -850,9 +965,12 @@ function VillageZone({ side, mine, controls, onInspect }: RowProps) {
   );
 }
 
-function RewardZone({ side, mine, rewardDrop }: RowProps) {
+function RewardZone({ side, mine, controls, rewardDrop }: RowProps) {
   const drop = useCustomDrop(rewardDrop);
   const count = side.zones.rewards.count;
+  const returnTitle = mine
+    ? 'Devolver o último Prêmio recebido ao topo do Deck do oponente'
+    : `Pegar de volta o último Prêmio dado a ${side.nickname} (volta ao topo do seu Deck)`;
   return (
     <div
       {...drop.handlers}
@@ -878,19 +996,33 @@ function RewardZone({ side, mine, rewardDrop }: RowProps) {
         )}
       </div>
       <div className={styles.rewardNum}>{count}</div>
+      {controls && count > 0 && (
+        <div className={styles.deckTools}>
+          <button
+            type="button"
+            className={styles.tool}
+            onClick={() => controls.onReturnReward(mine ? 'mine' : 'theirs')}
+            disabled={controls.busy}
+            title={returnTitle}
+            aria-label={returnTitle}
+          >
+            ↩
+          </button>
+        </div>
+      )}
     </div>
   );
 }
 
 /** Linha de zonas de um jogador. A do oponente vai da esquerda para a direita; a sua, espelhada. */
-function ZoneRow(props: RowProps) {
+function ZoneRow({ rewardControls, ...props }: RowProps & { rewardControls?: ArenaControls }) {
   return (
     <div className={cx(styles.row, props.mine ? styles.rowMine : styles.rowOpp)}>
       <DeckZone {...props} />
       <DiscardZone {...props} />
       <ChakraZone {...props} />
       <VillageZone {...props} />
-      <RewardZone {...props} />
+      <RewardZone {...props} controls={rewardControls ?? props.controls} />
     </div>
   );
 }
@@ -906,7 +1038,7 @@ function Field({
   side: ArenaSide;
   mine: boolean;
   controls?: ArenaControls;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
 }) {
   const drop = useDrop('battlefield', controls, true);
   const cards = side.zones.battlefield.cards ?? [];
@@ -959,7 +1091,7 @@ function FieldSide({
   cards: CardInstance[];
   edge: 'left' | 'right';
   mine: boolean;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
 }) {
   if (cards.length === 0) return null;
   const n = cards.length;
@@ -992,7 +1124,7 @@ function Arena({
   opponent: ArenaSide;
   phase: number;
   controls?: ArenaControls;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
 }) {
   const teams = (side: ArenaSide) => countTeams(side.zones.battlefield.cards ?? [], isNinja);
   return (
@@ -1064,7 +1196,7 @@ const WHEEL_STEP = 60;
  * `HAND_RADIUS` cartas inteiras de cada lado. Com mais cartas, a roda do mouse (ou o deslize do touchpad)
  * gira o arco, e os chips nas pontas mostram quantas estão escondidas de cada lado.
  */
-function Hand({ side, controls, onInspect }: { side: ArenaSide; controls?: ArenaControls; onInspect: (card: Card) => void }) {
+function Hand({ side, controls, onInspect }: { side: ArenaSide; controls?: ArenaControls; onInspect: Inspect }) {
   const drop = useDrop('hand', controls);
   const stacks = stackByCard(side.zones.hand.cards ?? []);
   const n = stacks.length;
@@ -1428,7 +1560,7 @@ function LogLine({
   who: string;
   /** Nome do outro jogador (para os Prêmios dados a ele). */
   other: string;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
 }) {
   const nameOf = useCardName();
   const card = (cardId: string | undefined) => {
@@ -1537,6 +1669,24 @@ function LogLine({
     case 'nextPhase':
       text = <>avançou para a Fase {PHASES[e.phase ?? 0]}</>;
       break;
+    case 'returnReward':
+      text =
+        e.owner === e.who ? (
+          <>devolveu um Prêmio de Batalha ao topo do Deck de {other}</>
+        ) : (
+          <>pegou de volta um Prêmio de Batalha dado a {other} (foi para o topo do Deck)</>
+        );
+      break;
+    case 'adjustPower': {
+      const d = e.delta ?? 0;
+      text = (
+        <>
+          {d >= 0 ? 'aumentou' : 'diminuiu'} em {Math.abs(d)} o Poder do Time de {main}
+          {e.from && ` ${ZONE_IN[e.from]}`}
+        </>
+      );
+      break;
+    }
     case 'passTurn':
       text = <>passou o turno</>;
       break;
@@ -1565,7 +1715,7 @@ function GameLog({
   yourSide: Side;
   you: ArenaSide;
   opponent: ArenaSide;
-  onInspect: (card: Card) => void;
+  onInspect: Inspect;
 }) {
   const [open, setOpen] = useState(false);
   const latest = log.at(-1)?.n ?? 0;
@@ -1713,7 +1863,10 @@ export function GameArena({
   } as React.CSSProperties;
   const rootRef = useRef<HTMLDivElement>(null);
   const scale = useStageScale(rootRef);
-  const [inspect, setInspect] = useState<Card | null>(null);
+  const [inspect, setInspect] = useState<{ card: Card; inst?: CardInstance } | null>(null);
+  const inspectCard: Inspect = (card, inst) => setInspect({ card, inst });
+  // Carta sua na mesa (ou na mão): o detalhe ganha os botões de mover.
+  const inspectZone = inspect?.inst && controls ? zoneOf(you.zones, inspect.inst.uid) : null;
   const [list, setList] = useState<{ side: 'you' | 'opponent'; zone: ZoneName } | null>(null);
   const listSide = list ? (list.side === 'you' ? you : opponent) : null;
   const openMine = (zone: ZoneName) => setList({ side: 'you', zone });
@@ -1735,8 +1888,9 @@ export function GameArena({
           <ZoneRow
             side={opponent}
             mine={false}
-            onInspect={setInspect}
+            onInspect={inspectCard}
             onOpenList={openTheirs}
+            rewardControls={controls}
             rewardDrop={
               controls && {
                 accept: [CARD_MIME, DECK_TOP_MIME],
@@ -1745,9 +1899,9 @@ export function GameArena({
               }
             }
           />
-          <Arena you={you} opponent={opponent} phase={currentPhase} controls={controls} onInspect={setInspect} />
-          <ZoneRow side={you} mine controls={controls} onInspect={setInspect} onOpenList={openMine} />
-          <Hand side={you} controls={controls} onInspect={setInspect} />
+          <Arena you={you} opponent={opponent} phase={currentPhase} controls={controls} onInspect={inspectCard} />
+          <ZoneRow side={you} mine controls={controls} onInspect={inspectCard} onOpenList={openMine} />
+          <Hand side={you} controls={controls} onInspect={inspectCard} />
           <div className={styles.rail}>
             <Plate side={opponent} mine={false} onOpenList={openTheirs} />
             <TurnPanel turnNumber={turnNumber} phase={currentPhase} you={you} opponent={opponent} controls={controls} />
@@ -1757,7 +1911,7 @@ export function GameArena({
       </div>
 
       {/* Registro de jogo (fora do palco: o texto não encolhe com a escala). */}
-      {log && <GameLog log={log} yourSide={yourSide} you={you} opponent={opponent} onInspect={setInspect} />}
+      {log && <GameLog log={log} yourSide={yourSide} you={you} opponent={opponent} onInspect={inspectCard} />}
 
       {/* Tela cheia: os controles da partida num menu ⋯ (fora do palco, sem a escala). */}
       {(fullscreenMenu || notice) && (
@@ -1785,11 +1939,25 @@ export function GameArena({
           zone={list.zone}
           cards={listSide.zones[list.zone].cards ?? []}
           controls={list.side === 'you' ? controls : undefined}
-          onInspect={setInspect}
+          onInspect={inspectCard}
           onClose={() => setList(null)}
         />
       )}
-      <CardDetailModal card={inspect} onClose={() => setInspect(null)} />
+      <CardDetailModal
+        card={inspect?.card ?? null}
+        onClose={() => setInspect(null)}
+        actions={
+          inspect?.inst && inspectZone && controls ? (
+            <CardMoveActions
+              card={inspect.card}
+              inst={inspect.inst}
+              zone={inspectZone}
+              controls={controls}
+              onDone={() => setInspect(null)}
+            />
+          ) : undefined
+        }
+      />
 
       {/* Alt + mouse sobre uma carta: a carta ampliada, do lado oposto ao mouse (fora do palco, sem a escala). */}
       {zoomed && (
