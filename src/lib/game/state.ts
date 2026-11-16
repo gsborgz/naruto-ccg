@@ -118,9 +118,10 @@ export type GameAction =
   /**
    * Mover uma carta sua para outra zona. Com `before` (uid de uma carta na zona de destino), entra logo antes
    * do Time dessa carta: é o que reordena os Times na Vila e no Campo de Batalha. Sem `before`, entra por último
-   * (na Vila e no Campo, também dentro da mesma zona: vai para o fim).
+   * (na Vila e no Campo, também dentro da mesma zona: vai para o fim). No Deck, entra no topo, ou no fundo
+   * com `bottom`.
    */
-  | { type: 'move'; uid: string; to: ZoneName; before?: string }
+  | { type: 'move'; uid: string; to: ZoneName; before?: string; bottom?: boolean }
   | { type: 'draw' }
   | { type: 'shuffle' }
   | { type: 'search'; cardId: string }
@@ -382,7 +383,13 @@ function describe(
   switch (action.type) {
     case 'move': {
       const c = at(action.uid);
-      return { type: 'move', cards: c ? [c.card.cardId] : [], from: c?.zone, to: action.to };
+      return {
+        type: 'move',
+        cards: c ? [c.card.cardId] : [],
+        from: c?.zone,
+        to: action.to,
+        ...(action.to === 'deck' && action.bottom ? { position: 'bottom' as const } : {}),
+      };
     }
     case 'moveTeam': {
       const c = at(action.uid);
@@ -474,8 +481,12 @@ function applyAction(
       zones[at.zone].splice(at.index, 1);
       // Mover uma carta sozinha a tira do Time (o ajuste de Poder vai junto).
       const solo = card(moved.uid, moved.cardId, undefined, moved.injured, moved.power);
-      // Carta devolvida ao Deck vai para o topo; nas outras zonas, antes do Time de `before` ou por último.
-      if (action.to === 'deck') zones.deck.unshift(solo);
+      // Carta devolvida ao Deck vai para o topo (ou o fundo, com `bottom`); nas outras zonas, antes do Time de
+      // `before` ou por último.
+      if (action.to === 'deck') {
+        if (action.bottom) zones.deck.push(solo);
+        else zones.deck.unshift(solo);
+      }
       else insertBefore(zones[action.to], [solo], action.before);
       return done();
     }
@@ -700,7 +711,7 @@ export function parseGameAction(x: unknown): GameAction | null {
   const a = (typeof x === 'object' && x !== null ? x : {}) as Record<string, unknown>;
   const before = (o: Record<string, unknown>) => (typeof o.before === 'string' ? { before: o.before } : {});
   if (a.type === 'move' && typeof a.uid === 'string' && (ZONES as readonly unknown[]).includes(a.to)) {
-    return { type: 'move', uid: a.uid, to: a.to as ZoneName, ...before(a) };
+    return { type: 'move', uid: a.uid, to: a.to as ZoneName, ...before(a), ...(a.bottom === true ? { bottom: true } : {}) };
   }
   if (a.type === 'draw' || a.type === 'shuffle' || a.type === 'passTurn' || a.type === 'nextPhase' || a.type === 'returnHand') {
     return { type: a.type };

@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { createContext, Fragment, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { CardDetailModal } from '@/components/CardDetailModal';
 import { Dialog } from '@/components/Dialog';
 import { CARDS_BY_ID } from '@/data/cards';
@@ -58,6 +58,8 @@ export interface ArenaSide {
 export interface ArenaControls {
   /** Move a carta `uid` para a zona `to`; com `before`, antes do Time dessa carta (reordenar Times). */
   onMove: (uid: string, to: ZoneName, before?: string) => void;
+  /** Põe a carta `uid` no fundo do seu Deck. */
+  onMoveToDeckBottom: (uid: string) => void;
   onDraw: () => void;
   onShuffle: () => void;
   /** Devolve a mão inteira ao Deck e embaralha (o mulligan; o botão pede confirmação antes). */
@@ -99,6 +101,46 @@ const CARD_MIME = 'application/x-naruto-ccg-card';
 const TEAM_MIME = 'application/x-naruto-ccg-team';
 /** Arrastar o topo do seu Deck (sem revelar qual carta é). */
 const DECK_TOP_MIME = 'application/x-naruto-ccg-deck-top';
+
+/**
+ * O que está sendo arrastado, guardado também aqui: alguns navegadores (ou extensões que interceptam o
+ * arraste) entregam o `dataTransfer` vazio às zonas, que recusariam a carta (cursor de bloqueado).
+ * Armado no pointerdown, antes do arraste começar, e repetido no dragstart; a arena limpa no fim do arraste
+ * (dragend) ou num clique sem arraste (pointerup).
+ */
+let dragPayload: { mime: string; value: string } | null = null;
+
+function clearDragPayload() {
+  dragPayload = null;
+}
+
+/** Tipos do arraste: os do navegador ou, se ele não entregou nenhum, o guardado em `dragPayload`. */
+function dragTypes(dt: DataTransfer): readonly string[] {
+  if (dt.types.length > 0) return dt.types;
+  return dragPayload ? [dragPayload.mime] : [];
+}
+
+/** Dado do arraste: o do navegador ou o guardado em `dragPayload`. */
+function dragData(dt: DataTransfer, mime: string): string {
+  return dt.getData(mime) || (dragPayload?.mime === mime ? dragPayload.value : '');
+}
+
+/** Props de uma origem de arraste (`mime` com `value`). Com `stop`, o evento não chega aos pais. */
+function dragSource(mime: string, value: string, stop = false) {
+  return {
+    onPointerDown: (e: React.PointerEvent) => {
+      if (e.button !== 0) return;
+      if (stop) e.stopPropagation();
+      dragPayload = { mime, value };
+    },
+    onDragStart: (e: React.DragEvent) => {
+      if (stop) e.stopPropagation();
+      dragPayload = { mime, value };
+      e.dataTransfer.setData(mime, value);
+      e.dataTransfer.effectAllowed = 'move';
+    },
+  };
+}
 
 const isNinja = (cardId: string) => CARDS_BY_ID.get(cardId)?.type === 'ninja';
 
@@ -261,7 +303,7 @@ function useDrop(
     insert,
     handlers: {
       onDragOver: (e) => {
-        const types = e.dataTransfer.types;
+        const types = dragTypes(e.dataTransfer);
         if (!types.includes(CARD_MIME) && !types.includes(TEAM_MIME)) return;
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
@@ -282,8 +324,8 @@ function useDrop(
       onDrop: (e) => {
         setOver(false);
         setInsert(null);
-        const team = e.dataTransfer.getData(TEAM_MIME);
-        const uid = e.dataTransfer.getData(CARD_MIME);
+        const team = dragData(e.dataTransfer, TEAM_MIME);
+        const uid = dragData(e.dataTransfer, CARD_MIME);
         if (!team && !uid) return;
         e.preventDefault();
         const before = ordered ? insertionAt(e.currentTarget, e.clientX)?.before : undefined;
@@ -309,7 +351,8 @@ function InsertBar({ at }: { at: Insertion | null }) {
 interface CustomDrop {
   /** Tipos de arraste aceitos (CARD_MIME, DECK_TOP_MIME…). */
   accept: string[];
-  onDrop: (data: DataTransfer) => void;
+  /** `get(mime)` lê o dado do arraste (ver `dragData`). */
+  onDrop: (get: (mime: string) => string) => void;
   /** Dica mostrada ao passar por cima. */
   hint?: string;
 }
@@ -322,7 +365,7 @@ function useCustomDrop(drop: CustomDrop | undefined): DropTarget {
     over,
     handlers: {
       onDragOver: (e) => {
-        if (!drop.accept.some((t) => e.dataTransfer.types.includes(t))) return;
+        if (!drop.accept.some((t) => dragTypes(e.dataTransfer).includes(t))) return;
         e.preventDefault();
         e.dataTransfer.dropEffect = 'move';
         setOver(true);
@@ -332,9 +375,10 @@ function useCustomDrop(drop: CustomDrop | undefined): DropTarget {
       },
       onDrop: (e) => {
         setOver(false);
-        if (!drop.accept.some((t) => e.dataTransfer.types.includes(t))) return;
+        if (!drop.accept.some((t) => dragTypes(e.dataTransfer).includes(t))) return;
         e.preventDefault();
-        drop.onDrop(e.dataTransfer);
+        const dt = e.dataTransfer;
+        drop.onDrop((mime) => dragData(dt, mime));
       },
     },
   };
@@ -371,11 +415,7 @@ function TableCard({
       draggable={mine}
       onMouseEnter={(e) => card && setHovered({ card, clientX: e.clientX })}
       onMouseLeave={() => setHovered(null)}
-      onDragStart={(e) => {
-        e.stopPropagation();
-        e.dataTransfer.setData(CARD_MIME, inst.uid);
-        e.dataTransfer.effectAllowed = 'move';
-      }}
+      {...(mine ? dragSource(CARD_MIME, inst.uid, true) : {})}
       onClick={open}
       onKeyDown={(e) => e.key === 'Enter' && open()}
       title={card ? nameOf(card) : inst.cardId}
@@ -507,15 +547,28 @@ function CardMoveActions({
           </button>
         )}
         {targets.map((t) => (
-          <button
-            key={t}
-            type="button"
-            disabled={controls.busy}
-            onClick={() => run(() => controls.onMove(inst.uid, t))}
-            className={chip}
-          >
-            → {ZONE_LABEL[t]}
-          </button>
+          <Fragment key={t}>
+            <button
+              type="button"
+              disabled={controls.busy}
+              onClick={() => run(() => controls.onMove(inst.uid, t))}
+              className={chip}
+              title={t === 'deck' ? 'Pôr esta carta no topo do seu Deck' : undefined}
+            >
+              → {t === 'deck' ? 'Topo do Deck' : ZONE_LABEL[t]}
+            </button>
+            {t === 'deck' && (
+              <button
+                type="button"
+                disabled={controls.busy}
+                onClick={() => run(() => controls.onMoveToDeckBottom(inst.uid))}
+                className={chip}
+                title="Pôr esta carta no fundo do seu Deck"
+              >
+                → Fundo do Deck
+              </button>
+            )}
+          </Fragment>
         ))}
         <button
           type="button"
@@ -544,7 +597,7 @@ function RevealDialog({
   const [count, setCount] = useState(1);
   const [from, setFrom] = useState<'top' | 'bottom'>('top');
   const n = Math.max(1, Math.min(deckCount, Math.floor(count) || 1));
-  const submit = (e: React.FormEvent) => {
+  const submit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     controls.onReveal(from, n);
     onClose();
@@ -678,7 +731,7 @@ function TeamMember({
       className={cx(styles.member, roleClass, over && styles.memberOver)}
       style={{ width: size.w, height: size.h, marginLeft, marginRight, transform: `translateY(${dy}px)`, zIndex: z }}
       onDragOver={(e) => {
-        if (!accepts || !e.dataTransfer.types.includes(CARD_MIME)) return;
+        if (!accepts || !dragTypes(e.dataTransfer).includes(CARD_MIME)) return;
         e.preventDefault();
         // Sem stopPropagation: a zona precisa saber para esconder a barra de inserção.
         (e.nativeEvent as unknown as Record<symbol, boolean>)[JOIN_TARGET] = true;
@@ -691,7 +744,7 @@ function TeamMember({
       onDrop={(e) => {
         setOver(false);
         if (!accepts) return;
-        const uid = e.dataTransfer.getData(CARD_MIME);
+        const uid = dragData(e.dataTransfer, CARD_MIME);
         if (!uid) return;
         e.preventDefault();
         e.stopPropagation(); // não deixa a zona tratar como "mover para a zona"
@@ -787,10 +840,7 @@ function TeamStack({
       {power && (
         <div
           draggable={mine}
-          onDragStart={(e) => {
-            e.dataTransfer.setData(TEAM_MIME, group[0].uid);
-            e.dataTransfer.effectAllowed = 'move';
-          }}
+          {...(mine ? dragSource(TEAM_MIME, group[0].uid) : {})}
           className={cx(styles.teamHandle, mine && styles.draggable)}
           title={
             powerTitle(power, group.length) +
@@ -876,10 +926,7 @@ function DeckZone({ side, mine, controls, onOpenReveal }: RowProps) {
             role={controls ? 'button' : undefined}
             tabIndex={controls ? 0 : undefined}
             draggable={!!controls}
-            onDragStart={(e) => {
-              e.dataTransfer.setData(DECK_TOP_MIME, '1');
-              e.dataTransfer.effectAllowed = 'move';
-            }}
+            {...(controls ? dragSource(DECK_TOP_MIME, '1') : {})}
             onClick={() => controls && !controls.busy && controls.onDraw()}
             onKeyDown={(e) => e.key === 'Enter' && controls && !controls.busy && controls.onDraw()}
             className={cx(styles.back, styles.deckTop, controls && styles.drawable)}
@@ -927,6 +974,19 @@ function DeckZone({ side, mine, controls, onOpenReveal }: RowProps) {
             </button>
           )}
         </div>
+      )}
+      {/* Ao lado da carta: a do topo vai como Prêmio de Batalha do oponente (o mesmo que arrastar o topo). */}
+      {controls && (
+        <button
+          type="button"
+          className={cx(styles.tool, styles.deckReward)}
+          onClick={() => controls.onGiveReward()}
+          disabled={controls.busy || count === 0}
+          title="Enviar a carta do topo do Deck para os Prêmios do oponente (face para baixo)"
+          aria-label="Enviar a carta do topo do Deck para os Prêmios do oponente"
+        >
+          🏆
+        </button>
       )}
       {/* Logo abaixo do seu Deck (fora do arco da mão): devolver a mão ao Deck, com confirmação. */}
       {controls && (
@@ -1672,7 +1732,7 @@ function LogLine({
         ) : (
           <>
             moveu {main}
-            {from} {e.to && ZONE_TO[e.to]}
+            {from} {e.to === 'deck' && e.position === 'bottom' ? 'para o fundo do Deck' : e.to && ZONE_TO[e.to]}
           </>
         );
       break;
@@ -1986,6 +2046,16 @@ export function GameArena({
   const nameOf = useCardName();
   const zoomed = alt && hovered ? hovered : null;
 
+  // Fim do arraste (soltou ou cancelou) ou clique sem arraste: esquece o que estava sendo arrastado.
+  useEffect(() => {
+    window.addEventListener('dragend', clearDragPayload, true);
+    window.addEventListener('pointerup', clearDragPayload, true);
+    return () => {
+      window.removeEventListener('dragend', clearDragPayload, true);
+      window.removeEventListener('pointerup', clearDragPayload, true);
+    };
+  }, []);
+
   return (
     <HoverContext.Provider value={setHovered}>
     {/* Fonte do tema: o React move o <link> para o <head> (uma vez por endereço) e só carrega com a arena aberta. */}
@@ -2003,7 +2073,7 @@ export function GameArena({
             rewardDrop={
               controls && {
                 accept: [CARD_MIME, DECK_TOP_MIME],
-                onDrop: (data) => controls.onGiveReward(data.getData(CARD_MIME) || undefined),
+                onDrop: (get) => controls.onGiveReward(get(CARD_MIME) || undefined),
                 hint: 'Solte uma carta sua (ou o topo do seu Deck) como Prêmio de Batalha do oponente',
               }
             }

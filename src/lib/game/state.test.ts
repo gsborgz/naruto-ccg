@@ -75,6 +75,13 @@ test('partida: mover, comprar, embaralhar', () => {
   assert.deepEqual([...g.players.host.deck.map((c) => c.uid)].sort(), [...before].sort());
   assert.notDeepEqual(g.players.host.deck.map((c) => c.uid), before);
 
+  // Com `bottom`, vai para o fundo do Deck (e o registro diz isso).
+  const low = g.players.host.hand[0];
+  g = applyGameAction(g, 'host', { type: 'move', uid: low.uid, to: 'deck', bottom: true }, rng);
+  assert.equal(g.players.host.deck.at(-1)?.uid, low.uid);
+  assert.equal(g.log!.at(-1)!.position, 'bottom');
+  assert.deepEqual(parseGameAction({ type: 'move', uid: 'x', to: 'deck', bottom: true }), { type: 'move', uid: 'x', to: 'deck', bottom: true });
+
   // Não dá para mexer nas cartas do oponente.
   const theirs = g.players.guest.hand[0].uid;
   assert.throws(() => applyGameAction(g, 'host', { type: 'move', uid: theirs, to: 'discard' }, rng), GameError);

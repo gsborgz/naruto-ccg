@@ -263,9 +263,10 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
     (também no registro, com os nomes). Depois, cada carta é movida à mão (arrastando ou pelo detalhe). Na tela é
     o botão 👁 no seu Deck, que pergunta de onde e quantas (pedir mais do que há revela o que sobrou).
 - **Mover pelo detalhe da carta:** clicar numa carta sua (mão, Vila, Campo, Chakra, Descartes, Reforço,
-  Removidos) abre o detalhe com **Descartar**, **→ zona** (mão, Vila, Campo, Chakra, topo do Deck, Removidos e,
-  para Esquadrões/Reforço, Reforço) e **→ Prêmio do oponente**. São as mesmas ações `move` e `giveReward` do
-  arrastar; numa carta de um Time, move só ela.
+  Removidos) abre o detalhe com **Descartar**, **→ zona** (mão, Vila, Campo, Chakra, topo ou fundo do Deck, Removidos
+  e, para Esquadrões/Reforço, Reforço) e **→ Prêmio do oponente**. São as mesmas ações `move` e `giveReward` do
+  arrastar (o fundo do Deck é `move` com `bottom: true`, que só existe no detalhe); numa carta de um Time, move
+  só ela.
 - **Turnos** (docs/REGRAS.md 3.1 e 3.6): quem começa é **sorteado** no início da partida (`GameState.active`,
   o Atacante; `turnNumber` conta os turnos a partir de 1). Só o Atacante passa o turno, com qualquer número de
   cartas na mão (o limite de 6 da etapa M não é cobrado: os jogadores se policiam). Ao passar, o **Marcador de Turnos dele avança
@@ -282,8 +283,9 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   (`CardInstance.injured`), continua ao entrar num Time e ao voltar do Campo para a Vila, e some quando a carta
   sai da Vila/Campo.
 - **Prêmios de Batalha** (docs/REGRAS.md 3.5.4): ninguém coloca cartas nos **próprios** Prêmios. Você manda
-  uma carta SUA para a Área de Prêmios do **oponente** (ação `giveReward`): arrastando o seu Deck (vai a carta do
-  topo, sem revelar qual é) ou uma carta específica para os Prêmios dele. Cartas nos Prêmios ficam lá (face para
+  uma carta SUA para a Área de Prêmios do **oponente** (ação `giveReward`): arrastando o seu Deck ou clicando no
+  botão 🏆 ao lado dele (vai a carta do topo, sem revelar qual é), ou arrastando uma carta específica para os
+  Prêmios dele (ou pelo detalhe da carta, **→ Prêmio do oponente**). Cartas nos Prêmios ficam lá (face para
   baixo, ninguém vê) e não podem ser movidas, mas podem ser **devolvidas** (ex.: Prêmio dado por engano): o
   botão ↩ na Área de Prêmios (a sua ou a do oponente; qualquer um dos dois) manda a última carta que entrou ali
   de volta, face para baixo, ao **topo do Deck de quem a deu** (ação `returnReward`, com `owner` = dono da

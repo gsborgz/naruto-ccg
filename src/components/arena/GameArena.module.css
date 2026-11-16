@@ -1428,3 +1428,12 @@ button.counter:active:not(:disabled) {
 .teamCount.powerDown {
   color: #ff8a80;
 }
+
+/* Botão "topo do Deck → Prêmios do oponente", na lateral esquerda da carta do Deck. */
+.deckReward {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}

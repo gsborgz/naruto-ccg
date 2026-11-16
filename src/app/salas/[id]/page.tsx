@@ -147,6 +147,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
   const controls: ArenaControls = {
     onMove: (uid, to, before) => play({ type: 'move', uid, to, ...(before ? { before } : {}) }),
+    onMoveToDeckBottom: (uid) => play({ type: 'move', uid, to: 'deck', bottom: true }),
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
     onReturnHand: () => play({ type: 'returnHand' }),

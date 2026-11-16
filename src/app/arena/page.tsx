@@ -138,6 +138,7 @@ export default function ArenaPreviewPage() {
   const view = gameView(game, 'host');
   const controls: ArenaControls = {
     onMove: (uid, to, before) => play({ type: 'move', uid, to, ...(before ? { before } : {}) }),
+    onMoveToDeckBottom: (uid) => play({ type: 'move', uid, to: 'deck', bottom: true }),
     onDraw: () => play({ type: 'draw' }),
     onShuffle: () => play({ type: 'shuffle' }),
     onReturnHand: () => play({ type: 'returnHand' }),
