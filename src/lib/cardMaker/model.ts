@@ -10,6 +10,7 @@ import {
   type EntranceIcon,
   type HandIcon,
   type LayoutId,
+  type NameWrap,
 } from '../../models/cardLayout.ts';
 import { getLayout } from './layouts/index.ts';
 
@@ -20,7 +21,7 @@ import { getLayout } from './layouts/index.ts';
  * Os valores ficam como texto (ex.: custo "X", força "7/2") porque a carta é montada como impressa.
  */
 
-export type { ArtLayer, AttributeFrame, ElementVariant, EntranceIcon, HandIcon, LayoutId };
+export type { ArtLayer, AttributeFrame, ElementVariant, EntranceIcon, HandIcon, LayoutId, NameWrap };
 
 /** Símbolos de vila (arquivos `village-<vila>` e `village-<vila>-rogue` em card-layouts/icons/village). */
 export const VILLAGES = [
@@ -122,6 +123,8 @@ export interface CustomCard {
    * negativo diminui, positivo aumenta. 0 (ou sem valor, nas cartas antigas): o tamanho do layout.
    */
   nameSize?: number;
+  /** Quebra de linha do nome (`NameWrap`): automática, uma linha só ou duas linhas. Sem valor: automática. */
+  nameWrap?: NameWrap;
   /** Versão alternativa do painel de dados (`LayoutSpec.panelVariants`). Sem valor: o painel padrão. */
   panelVariant?: string;
   /** Ícone alternativo do tipo (`TYPE_ICON_VARIANTS` em icons/index.ts). Sem valor: o ícone padrão. */
@@ -233,6 +236,30 @@ export function newCustomCard(type: CardType = 'ninja', now = new Date().toISOSt
 /** Menor fonte do nome, em pixels da carta, por mais negativo que seja o ajuste (`nameSize`). */
 const MIN_NAME_FONT_SIZE = 4;
 
+/** Nome de cada opção de quebra de linha do nome (seletores do criador e da aba Layout). */
+export const NAME_WRAP_LABEL: Record<NameWrap, string> = {
+  auto: 'Automática',
+  single: 'Uma linha só',
+  break: 'Duas linhas',
+};
+
+/**
+ * Nome com a quebra de linha escolhida (`NameWrap`): em `break`, sem quebra digitada, quebra antes do parêntese
+ * final ("Hinata Hyuga (Quimono)") ou no espaço mais perto do meio; em `single`, tira as quebras digitadas.
+ */
+export function wrapName(name: string, wrap: NameWrap | undefined): string {
+  if (wrap === 'single') return name.replace(/[ \t]*[\r\n]+[ \t]*/g, ' ');
+  if (wrap !== 'break' || name.includes('\n')) return name;
+  const paren = /^(.*\S)\s+(\([^()]+\))$/.exec(name);
+  if (paren) return `${paren[1]}\n${paren[2]}`;
+  const middle = name.length / 2;
+  let best = -1;
+  for (let i = 1; i < name.length; i++) {
+    if (name[i] === ' ' && name[i - 1] !== ' ' && (best < 0 || Math.abs(i - middle) < Math.abs(best - middle))) best = i;
+  }
+  return best < 0 ? name : `${name.slice(0, best)}\n${name.slice(best + 1)}`;
+}
+
 /** Fonte do nome: a do layout (`base`) mais o ajuste da carta (`nameSize`, padrão 0). */
 export function nameFontSize(base: number, nameSize: number | undefined): number {
   return Math.max(MIN_NAME_FONT_SIZE, base + (Number.isFinite(nameSize) ? (nameSize as number) : 0));
@@ -339,7 +366,7 @@ export function withLocalizedText(
   const translatedName = info && card.layout === info.layout && localized.name !== source.name;
   return {
     ...card,
-    ...(translatedName && { nameSize: info.nameSizePtBr ?? 0 }),
+    ...(translatedName && { nameSize: info.nameSizePtBr ?? 0, nameWrap: info.nameWrapPtBr }),
     name: localized.name,
     text: localized.text.map(catalogTextToMarkup).join('\n'),
     flavor: localized.flavor ?? '',
@@ -361,6 +388,7 @@ function withCardIcons(card: CustomCard, info: CardLayoutInfo): CustomCard {
   if (info.panelVariant) next.panelVariant = info.panelVariant;
   if (info.nameBanner !== undefined) next.nameBanner = info.nameBanner;
   next.nameSize = info.nameSize ?? 0;
+  if (info.nameWrap) next.nameWrap = info.nameWrap;
   return next;
 }
 

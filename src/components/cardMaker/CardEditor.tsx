@@ -23,6 +23,7 @@ import {
   hasCharacteristics,
   hasEntranceCost,
   nameFontSize,
+  NAME_WRAP_LABEL,
   resetArt,
   setArtImage,
   setArtFrame,
@@ -33,8 +34,10 @@ import {
   type HandIcon,
   type JutsuCostPart,
   type LayoutId,
+  type NameWrap,
   type Village,
 } from '@/lib/cardMaker/model';
+import { NAME_WRAPS } from '@/models/cardLayout';
 import {
   CARD_TYPE_LABEL,
   ELEMENT_KANJI,
@@ -532,6 +535,21 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
           </span>
           <span className="font-normal">Negativo diminui, positivo aumenta; 0 usa o tamanho do layout.</span>
         </div>
+        <label className={label}>
+          Quebra de linha do nome
+          <select
+            className={input}
+            value={card.nameWrap ?? 'auto'}
+            onChange={(e) => set('nameWrap', e.target.value === 'auto' ? undefined : (e.target.value as NameWrap))}
+          >
+            {NAME_WRAPS.map((w) => (
+              <option key={w} value={w}>
+                {NAME_WRAP_LABEL[w]}
+              </option>
+            ))}
+          </select>
+          <span className="font-normal">Duas linhas: quebra antes do parêntese ou no meio do nome (uma quebra digitada vale sempre).</span>
+        </label>
         {spec.nameBanner && (
           <label className="flex items-center gap-2 text-xs font-semibold text-muted">
             <input

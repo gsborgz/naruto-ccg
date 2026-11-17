@@ -4,8 +4,10 @@ import { useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'reac
 import { useLocalizedCard } from '@/lib/cardLanguage';
 import { LAYOUTS, LAYOUT_LIST, TYPE_ICON_VARIANTS, elementVariants } from '@/lib/cardMaker/layouts';
 import { ATTRIBUTE_FRAMES, fromCatalogCard, withLocalizedText, type CustomCard } from '@/lib/cardMaker/model';
-import type { AttributeFrame, CardIcons, CardLayoutInfo, ElementVariant, EntranceIcon, HandIcon, LayoutId } from '@/models/cardLayout';
+import { NAME_WRAPS, type AttributeFrame, type CardIcons, type CardLayoutInfo, type ElementVariant, type EntranceIcon, type HandIcon, type LayoutId, type NameWrap } from '@/models/cardLayout';
+import { NAME_WRAP_LABEL } from '@/lib/cardMaker/model';
 import { ELEMENT_LABEL, type Card } from '@/models/card';
+import { NAME_SIZE_RANGE } from '@/lib/devCardLayoutEdit';
 import { ENTRANCE_ICONS, EditorCanvas, EditorFields, HAND_ICONS, IconEditButton, Pick, elementKey, smallSelect, useConfigEditor, type ConfigEditor } from './layoutEditing';
 
 /**
@@ -23,6 +25,12 @@ const NOW = '2026-01-01T00:00:00.000Z';
 /** Mudanças no `layout` da carta; `null` = tirar o campo (volta ao padrão do layout). */
 interface CardEdits {
   layout?: LayoutId;
+  /** Ajuste da fonte do nome (px da carta, sobre o tamanho do layout) e o do nome traduzido. */
+  nameSize?: number;
+  nameSizePtBr?: number;
+  /** Quebra de linha do nome e a do nome traduzido; `auto` tira o campo. */
+  nameWrap?: NameWrap;
+  nameWrapPtBr?: NameWrap;
   panelVariant?: string | null;
   nameBanner?: boolean | null;
   icons?: Partial<CardIcons>;
@@ -31,6 +39,10 @@ interface CardEdits {
 function applyEdits(info: CardLayoutInfo, edits: CardEdits): CardLayoutInfo {
   const next: CardLayoutInfo = { ...info, icons: { ...info.icons, ...edits.icons } };
   if (edits.layout) next.layout = edits.layout;
+  if (edits.nameSize !== undefined) next.nameSize = edits.nameSize;
+  if (edits.nameSizePtBr !== undefined) next.nameSizePtBr = edits.nameSizePtBr;
+  if (edits.nameWrap) next.nameWrap = edits.nameWrap === 'auto' ? undefined : edits.nameWrap;
+  if (edits.nameWrapPtBr) next.nameWrapPtBr = edits.nameWrapPtBr === 'auto' ? undefined : edits.nameWrapPtBr;
   if (edits.panelVariant !== undefined) next.panelVariant = edits.panelVariant ?? undefined;
   if (edits.nameBanner !== undefined) next.nameBanner = edits.nameBanner ?? undefined;
   return next;
@@ -38,8 +50,12 @@ function applyEdits(info: CardLayoutInfo, edits: CardEdits): CardLayoutInfo {
 
 /** As mudanças no formato da rota (caminho no bloco `layout` da carta). */
 function editsToChanges(edits: CardEdits) {
-  const out: { path: string[]; value: string | boolean | string[] | null }[] = [];
+  const out: { path: string[]; value: string | number | boolean | string[] | null }[] = [];
   if (edits.layout) out.push({ path: ['layout'], value: edits.layout });
+  if (edits.nameSize !== undefined) out.push({ path: ['nameSize'], value: edits.nameSize });
+  if (edits.nameSizePtBr !== undefined) out.push({ path: ['nameSizePtBr'], value: edits.nameSizePtBr });
+  if (edits.nameWrap) out.push({ path: ['nameWrap'], value: edits.nameWrap === 'auto' ? null : edits.nameWrap });
+  if (edits.nameWrapPtBr) out.push({ path: ['nameWrapPtBr'], value: edits.nameWrapPtBr === 'auto' ? null : edits.nameWrapPtBr });
   if (edits.panelVariant !== undefined) out.push({ path: ['panelVariant'], value: edits.panelVariant || null });
   if (edits.nameBanner !== undefined) out.push({ path: ['nameBanner'], value: edits.nameBanner });
   for (const [k, v] of Object.entries(edits.icons ?? {})) if (v !== undefined) out.push({ path: ['icons', k], value: v as string | string[] });
@@ -64,7 +80,9 @@ export function useDevCardLayout(card: Card) {
 
   const set = (e: CardEdits) => setEdits((prev) => ({ ...prev, ...e, icons: { ...prev.icons, ...e.icons } }));
   const cardDirty = JSON.stringify(edits) !== JSON.stringify(saved);
-  return { card, info, custom, edits, set, editor, cardDirty, saved, setSaved, reset: () => setEdits(saved) };
+  // Nome traduzido na tela: o ajuste que vale é o `nameSizePtBr` (como em `withLocalizedText`).
+  const translatedName = localized.name !== card.name;
+  return { card, info, custom, edits, set, editor, cardDirty, saved, setSaved, reset: () => setEdits(saved), translatedName };
 }
 
 export type DevCardLayout = ReturnType<typeof useDevCardLayout>;
@@ -215,6 +233,14 @@ function CardSettings({ state, info, editor }: { state: DevCardLayout; info: Car
         Layout e ícones desta carta <span className="font-normal text-muted">({card.id}, arquivo da coleção)</span>
       </summary>
       <div className="mt-2 flex flex-col gap-1.5">
+        <NameSizeField state={state} field="nameSize" label="Tamanho do nome" value={info.nameSize ?? 0} active={!state.translatedName} />
+        {(state.translatedName || info.nameSizePtBr !== undefined) && (
+          <NameSizeField state={state} field="nameSizePtBr" label="Tamanho do nome (PT-BR)" value={info.nameSizePtBr ?? 0} active={state.translatedName} />
+        )}
+        <NameWrapField state={state} field="nameWrap" label="Quebra de linha do nome" value={info.nameWrap} active={!state.translatedName} />
+        {(state.translatedName || info.nameWrapPtBr !== undefined) && (
+          <NameWrapField state={state} field="nameWrapPtBr" label="Quebra de linha do nome (PT-BR)" value={info.nameWrapPtBr} active={state.translatedName} />
+        )}
         <Pick label="Layout base">
           <select value={info.layout} onChange={(e) => set({ layout: e.target.value as LayoutId })} className={ring(changed('layout'))}>
             {LAYOUT_LIST.filter((l) => l.types.includes(card.type)).map((l) => (
@@ -344,5 +370,82 @@ function CardSettings({ state, info, editor }: { state: DevCardLayout; info: Car
         )}
       </div>
     </details>
+  );
+}
+
+/**
+ * Ajuste da fonte do nome desta carta, em px da carta sobre o tamanho do layout (negativo diminui). `active`: é o
+ * que vale na carta da tela (com o nome traduzido, o `nameSizePtBr`; senão o `nameSize`).
+ */
+function NameSizeField({
+  state,
+  field,
+  label,
+  value,
+  active,
+}: {
+  state: DevCardLayout;
+  field: 'nameSize' | 'nameSizePtBr';
+  label: string;
+  value: number;
+  active: boolean;
+}) {
+  const changed = state.edits[field] !== undefined && state.edits[field] !== (state.saved[field] ?? state.card.layout?.[field] ?? 0);
+  const setValue = (v: number) => {
+    if (Number.isFinite(v)) state.set({ [field]: Math.round(Math.max(-NAME_SIZE_RANGE, Math.min(NAME_SIZE_RANGE, v)) * 10) / 10 });
+  };
+  return (
+    <Pick label={`${label}${active ? '' : ' (não está na tela)'}`}>
+      <input
+        type="range"
+        min={-NAME_SIZE_RANGE}
+        max={NAME_SIZE_RANGE}
+        step={0.5}
+        value={value}
+        onChange={(e) => setValue(Number(e.target.value))}
+        className="w-28 accent-[var(--color-accent)]"
+        aria-label={label}
+      />
+      <input
+        type="number"
+        step={0.5}
+        value={value}
+        onChange={(e) => setValue(e.target.valueAsNumber)}
+        className={`w-16 rounded bg-surface-2 px-1.5 py-0.5 text-right text-xs tabular-nums ring-1 ${changed ? 'ring-accent' : 'ring-border'}`}
+      />
+      <span className="text-xs text-muted">px</span>
+    </Pick>
+  );
+}
+
+/** Quebra de linha do nome desta carta (`NameWrap`); `active` como em `NameSizeField`. */
+function NameWrapField({
+  state,
+  field,
+  label,
+  value,
+  active,
+}: {
+  state: DevCardLayout;
+  field: 'nameWrap' | 'nameWrapPtBr';
+  label: string;
+  value: NameWrap | undefined;
+  active: boolean;
+}) {
+  const changed = state.edits[field] !== undefined && (state.edits[field] ?? 'auto') !== (state.saved[field] ?? state.card.layout?.[field] ?? 'auto');
+  return (
+    <Pick label={`${label}${active ? '' : ' (não está na tela)'}`}>
+      <select
+        value={value ?? 'auto'}
+        onChange={(e) => state.set({ [field]: e.target.value as NameWrap })}
+        className={`${smallSelect} ${changed ? '!ring-accent' : ''}`}
+      >
+        {NAME_WRAPS.map((w) => (
+          <option key={w} value={w}>
+            {NAME_WRAP_LABEL[w]}
+          </option>
+        ))}
+      </select>
+    </Pick>
   );
 }

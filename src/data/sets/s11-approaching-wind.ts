@@ -83,7 +83,7 @@ export const S11_APPROACHING_WIND: Card[] = [
     layout: {
       layout: "layout-02",
       nameSize: 0,
-      nameSizePtBr: 0,
+      nameSizePtBr: -9,
       icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
       art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
     },

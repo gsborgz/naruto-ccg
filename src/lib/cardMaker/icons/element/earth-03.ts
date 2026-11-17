@@ -9,7 +9,7 @@ import type { NamedIconConfig } from '../types.ts';
 export const ELEMENT_EARTH_03: NamedIconConfig = {
   url: iconUrl('element', 'element-earth-03'),
   aspect: 1172 / 1306,
-  art: { x: 0, y: 0.0104, w: 0.909, h: 0.909 },
+  art: { x: 0.0324, y: -0.0058, w: 0.9417, h: 0.9335 },
   label: {
     ...SIDE_LABEL_STYLE,
     text: 'EARTH',

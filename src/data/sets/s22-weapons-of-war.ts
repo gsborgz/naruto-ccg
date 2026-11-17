@@ -221,7 +221,7 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     image: "s22-n-1213",
     layout: {
       layout: "layout-02",
-      nameSize: 0,
+      nameSize: -3.5,
       nameSizePtBr: 0,
       icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
       art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },

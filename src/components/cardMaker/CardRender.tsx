@@ -33,6 +33,7 @@ import {
   hasEntranceCost,
   nameFontSize,
   parseCardText,
+  wrapName,
   type CustomCard,
   type JutsuCostPart,
 } from '@/lib/cardMaker/model';
@@ -174,6 +175,18 @@ function splitParentheses(name: string): [string, string | null] {
   return match ? [match[1], match[2]] : [name, null];
 }
 
+/** Fonte dos parênteses no fim do nome, em fração da fonte do nome (padrão de todos os layouts). */
+const NAME_PARENTHESES_SCALE = 0.75;
+
+/**
+ * "Hinata Hyuga (Kimono)" → ["Hinata Hyuga ", "(Kimono)"]; o separador (espaço ou quebra de linha) fica na 1ª
+ * parte. Sem parênteses no fim (ou o nome todo entre parênteses): [nome, null].
+ */
+function splitTrailingParentheses(name: string): [string, string | null] {
+  const match = /^([\s\S]*\S[ \t\r\n]+)(\([^()]+\))$/.exec(name);
+  return match ? [match[1], match[2]] : [name, null];
+}
+
 /** Altura de linha do nome quando ele ocupa mais de uma linha (em `em`). */
 const NAME_LINE_HEIGHT = 0.95;
 
@@ -185,7 +198,14 @@ const NAME_MULTILINE_SCALE = 0.78;
  * quebra manual), deixa quebrar linha, começa um pouco menor (`NAME_MULTILINE_SCALE`) e reduz até o
  * bloco caber em `maxWidth` × `maxHeight`. Os espaços digitados são mantidos (`pre`/`pre-wrap`).
  */
-function useFitName(ref: React.RefObject<HTMLElement | null>, size: number, maxWidth: number, maxHeight: number, deps: unknown[]) {
+function useFitName(
+  ref: React.RefObject<HTMLElement | null>,
+  size: number,
+  maxWidth: number,
+  maxHeight: number,
+  deps: unknown[],
+  singleLine = false,
+) {
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -204,7 +224,8 @@ function useFitName(ref: React.RefObject<HTMLElement | null>, size: number, maxW
       if (!manualBreak) {
         el.style.whiteSpace = 'pre';
         el.style.lineHeight = '1';
-        if (shrink(size, size * 0.8)) return;
+        // Uma linha só (`nameWrap: 'single'`): encolhe o quanto precisar, sem quebrar.
+        if (shrink(size, size * (singleLine ? 0.4 : 0.8)) || singleLine) return;
       }
       el.style.whiteSpace = 'pre-wrap';
       el.style.lineHeight = String(NAME_LINE_HEIGHT);
@@ -217,7 +238,7 @@ function useFitName(ref: React.RefObject<HTMLElement | null>, size: number, maxW
       alive = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [size, maxWidth, maxHeight, ...deps]);
+  }, [size, maxWidth, maxHeight, singleLine, ...deps]);
 }
 
 function CardName({ card, spec }: PartProps) {
@@ -226,12 +247,14 @@ function CardName({ card, spec }: PartProps) {
   const subRef = useRef<HTMLDivElement>(null);
   // Só tira as quebras de linha das pontas: espaços (inclusive no começo) servem para ajustar a posição.
   const full = card.name.trim() ? card.name.replace(/^[\r\n]+|[\r\n]+$/g, '') : 'Nome da carta';
-  const [main, sub] = style.parenthesesBelow ? splitParentheses(full) : [full, null];
+  const [first, sub] = style.parenthesesBelow ? splitParentheses(full) : [full, null];
+  // Quebra de linha escolhida na carta (automática, uma linha só ou duas linhas).
+  const main = wrapName(first, card.nameWrap);
   const height = style.maxHeight ?? style.size * 1.5;
   // Fonte do layout mais o ajuste da carta (a área do nome continua a mesma); a 2ª linha acompanha na mesma proporção.
   const size = nameFontSize(style.size, card.nameSize);
   const subSize = (style.parenthesesBelow?.size ?? 0) * (size / style.size);
-  useFitName(ref, size, style.maxWidth, height, [main, card.type, spec.id]);
+  useFitName(ref, size, style.maxWidth, height, [main, card.type, spec.id], card.nameWrap === 'single');
   useFit(subRef, subSize, [sub, card.type, spec.id], style.maxWidth);
   // A fonte do título já tem a espessura impressa: sem negrito sintetizado.
   const text = (size: number): CSSProperties => ({
@@ -261,7 +284,17 @@ function CardName({ card, spec }: PartProps) {
     <>
       <div style={line(style.cy, height)}>
         <div ref={ref} style={text(size)}>
-          {main}
+          {(() => {
+            // Parênteses no fim do nome, menores (na mesma linha ou na de baixo).
+            const [before, paren] = splitTrailingParentheses(main);
+            if (!paren) return main;
+            return (
+              <>
+                {before}
+                <span style={{ fontSize: `${style.parenthesesScale ?? NAME_PARENTHESES_SCALE}em` }}>{paren}</span>
+              </>
+            );
+          })()}
         </div>
       </div>
       {sub && style.parenthesesBelow && (

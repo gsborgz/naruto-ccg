@@ -40,6 +40,7 @@ import {
   withLayout,
   withLayoutIcons,
   withLocalizedText,
+  wrapName,
   setArtFrame,
   resetArt,
   type LayoutId,
@@ -179,6 +180,25 @@ test('cartas escaneadas: importam com o layout e as artes extraídas', () => {
   // Carta não escaneada: layout 1, sem arte.
   const unscanned = [...CARDS_BY_ID.values()].find((c) => !c.layout)!;
   assert.equal(fromCatalogCard(unscanned, NOW).art.src, null);
+});
+
+test('nome: quebra de linha automática, uma linha só ou duas linhas', () => {
+  assert.equal(wrapName('Hinata Hyuga (Quimono)', undefined), 'Hinata Hyuga (Quimono)');
+  assert.equal(wrapName('Hinata Hyuga (Quimono)', 'auto'), 'Hinata Hyuga (Quimono)');
+  // Duas linhas: antes do parêntese final; sem parêntese, no espaço mais perto do meio; uma palavra só, como está.
+  assert.equal(wrapName('Hinata Hyuga (Quimono)', 'break'), 'Hinata Hyuga\n(Quimono)');
+  assert.equal(wrapName('Earth Style: Mud Fall', 'break'), 'Earth Style:\nMud Fall');
+  assert.equal(wrapName('Rasengan', 'break'), 'Rasengan');
+  // A quebra digitada vale em "duas linhas" e some em "uma linha só".
+  assert.equal(wrapName('Hinata\nHyuga (Quimono)', 'break'), 'Hinata\nHyuga (Quimono)');
+  assert.equal(wrapName('Hinata Hyuga\n(Quimono)', 'single'), 'Hinata Hyuga (Quimono)');
+  // Carta escaneada: a escolha do layout dela (a do nome traduzido em PT-BR, como o tamanho).
+  const source = catalog('s01-n-001');
+  const card: Card = { ...source, layout: { ...source.layout!, nameWrap: 'single', nameWrapPtBr: 'break' } };
+  assert.equal(fromCatalogCard(card, NOW).nameWrap, 'single');
+  assert.equal(fromCatalogCard(card, NOW, 'layout-02').nameWrap, undefined);
+  const pt = withLocalizedText(fromCatalogCard(card, NOW), { name: 'Outro nome', text: [], flavor: undefined, characteristics: [] }, card);
+  assert.equal(pt.nameWrap, 'break');
 });
 
 test('nome: a fonte é a do layout mais o ajuste da carta (padrão 0)', () => {

@@ -13,8 +13,8 @@ export const COMBAT_ATTRIBUTES_06_02: CombatAttributeIconConfig = {
   power: {
     ...ATTRIBUTE_TEXT_STYLE.power,
     // Saudável na lâmina de baixo; ferido na de cima (girado 90°).
-    healthy: { x: 567, y: 1062 },
-    injured: { x: 1070, y: 544 },
+    healthy: { x: 552.3, y: 1052.2 },
+    injured: { x: 1089.5, y: 544 },
     size: 175.1,
     // Grossura do contorno dos números (pixels da tela).
     strokeWidth: 25.5,

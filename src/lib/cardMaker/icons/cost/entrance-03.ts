@@ -7,5 +7,5 @@ export const COST_ENTRANCE_03: CostIconConfig = {
   aspect: 966 / 1050,
   // Centro da shuriken: média dos layouts 2 a 4.
   // Número: centro em frações do ícone; fonte e contorno em px da carta (não mudam com o size do layout).
-  number: { ...NUMBER_STYLE, x: 0.5, y: 0.5, size: 36, strokeWidth: 5 },
+  number: { ...NUMBER_STYLE, x: 0.5176, y: 0.4808, size: 36, strokeWidth: 5 },
 };

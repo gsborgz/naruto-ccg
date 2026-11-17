@@ -6,7 +6,7 @@ import { CARDS_BY_ID } from '@/data/cards';
 const SETS_DIR = path.join(process.cwd(), 'src', 'data', 'sets');
 
 /** Campos do `layout` da carta que a aba Layout do detalhe pode mudar. */
-const EDITABLE = new Set(['layout', 'panelVariant', 'nameBanner', 'icons.type', 'icons.elements', 'icons.entrance', 'icons.hand', 'icons.attribute']);
+const EDITABLE = new Set(['layout', 'nameSize', 'nameSizePtBr', 'nameWrap', 'nameWrapPtBr', 'panelVariant', 'nameBanner', 'icons.type', 'icons.elements', 'icons.entrance', 'icons.hand', 'icons.attribute']);
 
 /**
  * Só em desenvolvimento (`next dev`): grava o layout e os ícones de uma carta escaneada (aba Layout do detalhe da
@@ -17,7 +17,9 @@ const EDITABLE = new Set(['layout', 'panelVariant', 'nameBanner', 'icons.type', 
 export async function POST(request: NextRequest) {
   if (process.env.NODE_ENV !== 'development') return new NextResponse(null, { status: 404 });
   const { applyCardLayoutEdits } = await import('@/lib/cardMaker/devConfigEdit');
-  type Change = { path: string[]; value: string | boolean | string[] | null };
+  const { NAME_SIZE_RANGE } = await import('@/lib/devCardLayoutEdit');
+  type Change = { path: string[]; value: string | number | boolean | string[] | null };
+  const isNameSize = (c: Change) => c.path.length === 1 && (c.path[0] === 'nameSize' || c.path[0] === 'nameSizePtBr');
 
   const body = (await request.json().catch(() => null)) as { id?: unknown; changes?: Change[] } | null;
   const id = typeof body?.id === 'string' ? body.id : '';
@@ -25,7 +27,12 @@ export async function POST(request: NextRequest) {
   const valid = (c: Change) =>
     Array.isArray(c?.path) &&
     EDITABLE.has(c.path.join('.')) &&
+    // Tamanho do nome: só número, na faixa do slider.
+    (isNameSize(c) ? typeof c.value === 'number' && Math.abs(c.value) <= NAME_SIZE_RANGE : true) &&
+    // Quebra de linha do nome: só os valores conhecidos (sem valor = automática).
+    (c.path[0] === 'nameWrap' || c.path[0] === 'nameWrapPtBr' ? c.value === null || c.value === 'single' || c.value === 'break' : true) &&
     (c.value === null ||
+      (typeof c.value === 'number' && isNameSize(c)) ||
       typeof c.value === 'string' ||
       typeof c.value === 'boolean' ||
       (Array.isArray(c.value) && c.value.every((v) => typeof v === 'string')));

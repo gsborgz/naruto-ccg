@@ -13,13 +13,13 @@ export const COMBAT_ATTRIBUTES_05: CombatAttributeIconConfig = {
   power: {
     ...ATTRIBUTE_TEXT_STYLE.power,
     // Saudável na lâmina de baixo; ferido na de cima (girado 90°).
-    healthy: { x: 560, y: 1060 },
-    injured: { x: 1145, y: 500 },
+    healthy: { x: 432.9, y: 1069.8 },
+    injured: { x: 1135.2, y: 446.2 },
     size: 175.1,
     // Grossura do contorno dos números (pixels da tela).
     strokeWidth: 25.5,
   },
   // Nome do atributo: `strokeWidth` = grossura do contorno em pixels da carta (0 = sem contorno).
   label: { ...ATTRIBUTE_TEXT_STYLE.label, size: 27.4, uppercase: true, strokeWidth: 0 },
-  kanji: ATTRIBUTE_TEXT_STYLE.kanji,
+  kanji: { ...ATTRIBUTE_TEXT_STYLE.kanji, dy: -0.2412 },
 };

@@ -48,7 +48,7 @@ export const LAYOUT_02: LayoutSpec = {
   cost: {
     // Centros medidos (entrada / mão): Ninja (593, 704) / (659, 701); Cliente (611, 705) / (677, 700);
     // Missão (576, 734) / (647, 731).
-    ninja: { entrance: { x: 553.9, y: 675, size: 76 }, hand: { x: 614.4, y: 671.1, size: 87 } },
+    ninja: { entrance: { x: 557.9, y: 665.6, size: 76 }, hand: { x: 619.8, y: 659, size: 87 } },
     client: { entrance: { x: 570.9, y: 669, size: 76 }, hand: { x: 632.3, y: 662.4, size: 87 } },
     mission: { entrance: { x: 541.1, y: 700, size: 76 }, hand: { x: 599.5, y: 693.4, size: 87 } },
   },
@@ -66,15 +66,15 @@ export const LAYOUT_02: LayoutSpec = {
   },
   attribute: { x: 415.2, y: 718.7, size: 333, defaultFrame: '03-01' },
   // A vila fica na linha do nome (no exemplo da Hinata, os dois em y≈706; ver a nota sobre a linha vermelha).
-  village: { x: 83.3, y: 673, size: 62.7 },
+  village: { x: 87.3, y: 667.6, size: 62.7 },
   name: {
-    ninja: { align: 'center', x: 338.5, cy: 699.4, maxWidth: 384, size: 52, color: '#131313' },
+    ninja: { align: 'center', x: 341.2, cy: 695.4, maxWidth: 338.5, size: 41.3, color: '#131313' },
     client: { align: 'center', x: 374, cy: 691, maxWidth: 400, size: 52, color: '#131313' },
     mission: { align: 'left', x: 108, cy: 727, maxWidth: 420, size: 50, color: '#131313' },
     jutsu: { align: 'left', x: 126, cy: 682, maxWidth: 590, size: 38, color: '#fbf3e4', stroke: '#2a160b' },
   },
   characteristics: {
-    ninja: { x: 96, cy: 737, maxWidth: 590, size: 18, color: '#8a2a26', separator: '#8a2a26' },
+    ninja: { x: 94.7, cy: 739.6, maxWidth: 582, size: 14.4, color: '#8a2a26', separator: '#8a2a26' },
     client: { x: 101, cy: 737, maxWidth: 560, size: 18, color: '#8a2a26', separator: '#8a2a26' },
   },
   textBox: {

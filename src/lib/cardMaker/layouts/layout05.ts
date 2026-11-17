@@ -14,7 +14,7 @@ import type { CostLayout, LayoutSpec } from './types.ts';
  */
 
 const MARK_ON_DARK: Record<TextColor, string> = { red: '#ff7a6b', blue: '#8cc8ff' };
-const COST: CostLayout = { entrance: { x: 513.7, y: 890, size: 76 }, hand: { x: 577.8, y: 883.4, size: 87 } };
+const COST: CostLayout = { entrance: { x: 519.1, y: 890, size: 76 }, hand: { x: 575.1, y: 884.7, size: 87 } };
 
 export const LAYOUT_05: LayoutSpec = {
   id: 'layout-05',
@@ -22,15 +22,15 @@ export const LAYOUT_05: LayoutSpec = {
   types: ['ninja'],
   frame: {},
   panel: { ninja: layoutAsset('layout-05', 'ninja-data-panel') },
-  typeIcon: forAllTypes({ x: -3, y: 1.5, size: 173 }),
-  elements: { pos: { x: 586.5, y: 6.5, size: 145 }, slotDy: 180, variant: '02' },
+  typeIcon: forAllTypes({ x: 5, y: 14.9, size: 173 }),
+  elements: { pos: { x: 579.8, y: 29.2, size: 163.8 }, slotDy: 180, variant: '02' },
   cost: { ninja: COST, client: COST, mission: COST },
-  attribute: { x: 409.8, y: 720.8, size: 333, defaultFrame: '07' },
+  attribute: { x: 412.4, y: 720.8, size: 333, defaultFrame: '06-01' },
   // Sem exemplo com vila: célula da esquerda da faixa.
-  village: { x: 25.65, y: 850.65, size: 62.7 },
+  village: { x: 21.6, y: 892.2, size: 62.7 },
   name: forAllTypes({ align: 'center', x: 375, cy: 42, maxWidth: 400, size: 38, color: '#f4f4f4', stroke: '#151515' }),
   nameBanner: { cx: 370, cy: 44, w: 470, default: true },
-  characteristics: forAllTypes({ x: 100, cy: 882, maxWidth: 360, size: 17, color: '#f2f2f2', separator: '#bdbdbd' }),
+  characteristics: forAllTypes({ x: 97.3, cy: 867.3, maxWidth: 595.7, size: 10.8, color: '#f2f2f2', separator: '#bdbdbd' }),
   textBox: {},
   markColor: forAllTypes(MARK_ON_DARK),
   flavor: forAllTypes({ x: 45, w: 600, bottom: 803, size: 18, lineHeight: 22 }),

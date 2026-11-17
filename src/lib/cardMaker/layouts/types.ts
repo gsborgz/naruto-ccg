@@ -57,6 +57,11 @@ export interface NameStyle {
    * tamanho da fonte e distância do centro da 2ª linha ao centro do nome.
    */
   parenthesesBelow?: { size: number; dy: number };
+  /**
+   * Fonte dos parênteses no fim do nome ("Hinata Hyuga (Kimono)"), em fração da fonte do nome. Sem valor:
+   * `NAME_PARENTHESES_SCALE` (vale em todos os layouts; para mudar num só, ponha o campo aqui).
+   */
+  parenthesesScale?: number;
 }
 
 export interface CharacteristicsStyle {

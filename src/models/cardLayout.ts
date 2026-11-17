@@ -11,6 +11,14 @@
 export type LayoutId = 'layout-01' | 'layout-02' | 'layout-03' | 'layout-04' | 'layout-05';
 
 /**
+ * Quebra de linha do nome: `auto` (uma linha, encolhendo até 80%; se não couber, quebra), `single` (sempre numa
+ * linha, encolhendo o quanto precisar) ou `break` (duas linhas: antes do parêntese final ou no espaço mais perto do
+ * meio). Uma quebra digitada no nome (Enter, no criador) vale sempre, menos em `single`.
+ */
+export type NameWrap = 'auto' | 'single' | 'break';
+export const NAME_WRAPS: readonly NameWrap[] = ['auto', 'single', 'break'];
+
+/**
  * Variante do ícone de elemento (arquivos `element-<elemento>-<variante>` em card-layouts/icons/element).
  * O layout 1 usa a 01; a 03 é alternativa (não existe para o Vazio).
  */
@@ -82,6 +90,10 @@ export interface CardLayoutInfo {
    * 0 (ou sem valor): o tamanho do layout.
    */
   nameSizePtBr?: number;
+  /** Quebra de linha do nome (`NameWrap`). Sem valor: `auto`. */
+  nameWrap?: NameWrap;
+  /** A mesma escolha para o nome traduzido (PT-BR), como `nameSizePtBr`. Sem valor: `auto`. */
+  nameWrapPtBr?: NameWrap;
   icons: CardIcons;
   /**
    * Artes extraídas da carta (card-layouts/arts/<set>/<id>/<camada>.png →
