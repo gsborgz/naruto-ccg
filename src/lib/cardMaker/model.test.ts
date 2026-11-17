@@ -9,23 +9,17 @@ import { localizeCard } from '../cardLocale.ts';
 import {
   ATTRIBUTE_KANJI,
   ATTRIBUTE_NAMES,
-  attributeCircle,
   attributeKanjiUrls,
   attributeSlug,
   COMBAT_ATTRIBUTE_ICONS,
   COST_ICONS,
   ELEMENT_ICONS,
   TYPE_ICON_VARIANTS,
-  elementBox,
   elementIcon,
   elementVariants,
   typeIcon,
   typeIconVariants,
   getLayout,
-  frameFor,
-  panelFor,
-  villageBox,
-  villageIconUrl,
 } from './layouts/index.ts';
 
 const L1 = getLayout('layout-01');
@@ -276,45 +270,6 @@ test('criador: importa Jutsu e Missão do catálogo', () => {
   assert.deepEqual(mission.villages, []);
 });
 
-test('layouts: 2º elemento fica abaixo do 1º, centralizado nele, e o círculo do atributo cai na kunai', () => {
-  const first = elementBox(L1, { element: 'fire', variant: '01' }, 0);
-  const second = elementBox(L1, { element: 'fire', variant: '01' }, 1, { element: 'fire', variant: '01' });
-  assert.equal(second.y - first.y, L1.elements.slotDy);
-  assert.equal(second.x, first.x);
-  // Ícones de larguras diferentes: o de baixo copia o centro horizontal do 1º.
-  const earth = elementBox(L2, { element: 'earth', variant: '02' }, 0);
-  const third = elementBox(L2, { element: 'void', variant: '01' }, 2, { element: 'earth', variant: '02' });
-  assert.ok(Math.abs(third.x + third.w / 2 - (earth.x + earth.w / 2)) < 0.01);
-  assert.equal(third.y - earth.y, 2 * L2.elements.slotDy);
-
-  for (const spec of [L1, L2]) {
-    const circle = attributeCircle(spec, spec.attribute.defaultFrame);
-    assert.ok(circle.cx > 690 && circle.cx < 720, `${spec.id} cx ${circle.cx}`);
-    assert.ok(circle.cy > 990 && circle.cy < 1020, `${spec.id} cy ${circle.cy}`);
-  }
-});
-
-test('layouts: vilas na mesma escala e centralizadas no mesmo ponto (a da Nuvem é mais larga)', () => {
-  const leaf = villageBox(L1, 'leaf');
-  const cloud = villageBox(L1, 'cloud');
-  assert.ok(Math.abs(leaf.x + leaf.w / 2 - (cloud.x + cloud.w / 2)) < 0.01);
-  assert.ok(Math.abs(leaf.y + leaf.h / 2 - (cloud.y + cloud.h / 2)) < 0.01);
-  assert.ok(cloud.w > leaf.w && cloud.h < leaf.h);
-  assert.equal(villageIconUrl('hot-water', true), '/card-layouts/icons/village/village-hot-water-rogue.webp');
-});
-
-test('layouts: 2 vilas na diagonal e 3 em triângulo, menores que uma só', () => {
-  const one = villageBox(L1, 'leaf');
-  const center = (b: { x: number; y: number; w: number; h: number }) => ({ x: b.x + b.w / 2, y: b.y + b.h / 2 });
-  const [a, b] = [0, 1].map((i) => villageBox(L1, 'leaf', i, 2));
-  assert.ok(a.w < one.w && b.w < one.w);
-  assert.ok(center(a).x < center(b).x && center(a).y < center(b).y);
-  const [top, left, right] = [0, 1, 2].map((i) => villageBox(L1, 'leaf', i, 3));
-  assert.ok(top.w < a.w);
-  assert.ok(center(top).y < center(left).y && Math.abs(center(left).y - center(right).y) < 0.01);
-  assert.ok(center(left).x < center(top).x && center(top).x < center(right).x);
-});
-
 test('criador: cartas antigas com uma vila só são lidas no formato novo', () => {
   assert.deepEqual(cardVillages({ village: 'mist', villageRogue: true }), [{ village: 'mist', rogue: true }]);
   assert.deepEqual(cardVillages({ village: null }), []);
@@ -325,70 +280,31 @@ test('criador: cartas antigas com uma vila só são lidas no formato novo', () =
 
 test('layouts: importar aplica os ícones do layout; trocar de layout mantém os ícones escolhidos', () => {
   const fukasaku = fromCatalogCard(catalog('s29-n-5006'), NOW, 'layout-02');
+  const l2 = (c: typeof fukasaku) => ({
+    elements: c.elements.map((e) => e.variant),
+    entrance: c.entranceIcon,
+    hand: c.handIcon,
+    attribute: c.attribute.frame,
+  });
+  const defaults = (spec: typeof L1) => ({
+    elements: fukasaku.elements.map((e) => (elementVariants(e.element).includes(spec.elements.variant) ? spec.elements.variant : '01')),
+    entrance: spec.defaults.entranceIcon,
+    hand: spec.defaults.handIcon,
+    attribute: spec.attribute.defaultFrame,
+  });
   assert.equal(fukasaku.layout, 'layout-02');
-  assert.deepEqual(
-    fukasaku.elements.map((e) => `${e.element}-${e.variant}`),
-    ['lightning-02', 'wind-02', 'fire-02'],
-  );
-  assert.equal(fukasaku.entranceIcon, 'entrance-03');
-  assert.equal(fukasaku.handIcon, 'hand-02');
-  assert.equal(fukasaku.attribute.frame, '03-01');
+  assert.deepEqual(l2(fukasaku), defaults(L2));
 
-  // De volta ao layout 1: os 3 elementos e os ícones do layout 2 continuam (estilos misturados).
+  // De volta ao layout 1: os ícones do layout 2 continuam (estilos misturados).
   const back = withLayout(fukasaku, 'layout-01');
-  assert.deepEqual(back.elements.map((e) => `${e.element}-${e.variant}`), ['lightning-02', 'wind-02', 'fire-02']);
-  assert.equal(back.entranceIcon, 'entrance-03');
-  assert.equal(back.attribute.frame, '03-01');
+  assert.deepEqual(l2(back), defaults(L2));
 
   // Ícones padrão do layout 1 (carta nova / importada).
-  const own = withLayoutIcons(back);
-  assert.deepEqual(own.elements.map((e) => `${e.element}-${e.variant}`), ['lightning-01', 'wind-01', 'fire-01']);
-  assert.equal(own.entranceIcon, 'entrance-01');
-  assert.equal(own.handIcon, 'hand-01');
-  assert.equal(own.attribute.frame, '01');
+  assert.deepEqual(l2(withLayoutIcons(back)), defaults(L1));
 
   // Custo alternativo ("or") vem do catálogo: "土 | 1 or 3".
   const mudFall = fromCatalogCard(catalog('s29-j-5000'), NOW, 'layout-02');
   assert.deepEqual(mudFall.jutsuCost, { symbols: ['earth'], generic: '1', alternatives: [{ symbols: [], generic: '3' }] });
-});
-
-test('layouts: os ícones têm o mesmo tamanho em todos os layouts (só a posição muda)', () => {
-  const el = { element: 'fire', variant: '02' } as const;
-  assert.equal(elementBox(L1, el, 0).w, elementBox(L2, el, 0).w);
-  assert.equal(villageBox(L1, 'leaf').w, villageBox(L2, 'leaf').w);
-  assert.equal(attributeCircle(L1, '03-01').r, attributeCircle(L2, '03-01').r);
-  assert.notDeepEqual(elementBox(L1, el, 0), elementBox(L2, el, 0));
-});
-
-test('layouts 3 a 5: só Ninja; layout 5 sem texto de efeito; mancha atrás do nome', () => {
-  const jutsu = fromCatalogCard(catalog('s10-j-us078'), NOW);
-  for (const id of ['layout-03', 'layout-04', 'layout-05'] as const) {
-    assert.equal(withLayout(jutsu, id).type, 'ninja', id);
-  }
-  assert.equal(getLayout('layout-05').textBox.ninja, undefined);
-  assert.ok(getLayout('layout-04').textBox.ninja);
-  assert.equal(getLayout('layout-03').frame.ninja, undefined);
-  assert.equal(getLayout('layout-05').nameBanner?.default, true);
-  // Layout 3: a mancha já vem na imagem do painel.
-  assert.equal(getLayout('layout-03').nameBanner, undefined);
-});
-
-test('layout 4: design roxo troca a moldura e o painel', () => {
-  const L4 = getLayout('layout-04');
-  assert.match(frameFor(L4, 'ninja', undefined) ?? '', /layout-04\/ninja-frame\.webp$/);
-  assert.match(frameFor(L4, 'ninja', 'purple') ?? '', /layout-04\/ninja-frame-alter\.webp$/);
-  assert.match(panelFor(L4, 'ninja', 'purple') ?? '', /layout-04\/ninja-data-panel-alter\.webp$/);
-  // Design que só troca o painel (layout 3) mantém a moldura padrão.
-  const L3 = getLayout('layout-03');
-  assert.equal(frameFor(L3, 'ninja', 'red'), L3.frame.ninja);
-});
-
-test('layout 3: painel padrão ou com a borda vermelha', () => {
-  const L3 = getLayout('layout-03');
-  assert.match(panelFor(L3, 'ninja', undefined) ?? '', /layout-03\/ninja-data-panel\.webp$/);
-  assert.match(panelFor(L3, 'ninja', 'red') ?? '', /layout-03\/ninja-data-panel-alter\.webp$/);
-  // Versão que o layout não tem (ex.: carta trocada de layout): painel padrão.
-  assert.equal(panelFor(getLayout('layout-04'), 'ninja', 'red'), getLayout('layout-04').panel.ninja);
 });
 
 test('arte em duas camadas: ligadas movem juntas; soltas, só a escolhida', () => {

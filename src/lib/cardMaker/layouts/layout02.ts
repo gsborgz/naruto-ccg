@@ -44,11 +44,11 @@ export const LAYOUT_02: LayoutSpec = {
     client: { x: 37.5, y: 38, size: 173 },
   },
   // Centro do 1º espaço em (641, 113); espaços seguintes de 150 a 177 px abaixo nos exemplos.
-  elements: { pos: { x: 568.5, y: 40.5, size: 145 }, slotDy: 165, variant: '02' },
+  elements: { pos: { x: 554.5, y: 52, size: 171.8 }, slotDy: 165, variant: '02' },
   cost: {
     // Centros medidos (entrada / mão): Ninja (593, 704) / (659, 701); Cliente (611, 705) / (677, 700);
     // Missão (576, 734) / (647, 731).
-    ninja: { entrance: { x: 559.3, y: 667, size: 76 }, hand: { x: 615.7, y: 660.4, size: 87 } },
+    ninja: { entrance: { x: 553.9, y: 675, size: 76 }, hand: { x: 614.4, y: 671.1, size: 87 } },
     client: { entrance: { x: 570.9, y: 669, size: 76 }, hand: { x: 632.3, y: 662.4, size: 87 } },
     mission: { entrance: { x: 541.1, y: 700, size: 76 }, hand: { x: 599.5, y: 693.4, size: 87 } },
   },
@@ -64,11 +64,11 @@ export const LAYOUT_02: LayoutSpec = {
     orColor: '#fbf3e4',
     color: '#c8962a',
   },
-  attribute: { x: 418, y: 718.7, size: 333, defaultFrame: '03-01' },
+  attribute: { x: 415.2, y: 718.7, size: 333, defaultFrame: '03-01' },
   // A vila fica na linha do nome (no exemplo da Hinata, os dois em y≈706; ver a nota sobre a linha vermelha).
-  village: { x: 76.65, y: 659.65, size: 62.7 },
+  village: { x: 83.3, y: 673, size: 62.7 },
   name: {
-    ninja: { align: 'center', x: 368, cy: 690, maxWidth: 384, size: 52, color: '#131313' },
+    ninja: { align: 'center', x: 338.5, cy: 699.4, maxWidth: 384, size: 52, color: '#131313' },
     client: { align: 'center', x: 374, cy: 691, maxWidth: 400, size: 52, color: '#131313' },
     mission: { align: 'left', x: 108, cy: 727, maxWidth: 420, size: 50, color: '#131313' },
     jutsu: { align: 'left', x: 126, cy: 682, maxWidth: 590, size: 38, color: '#fbf3e4', stroke: '#2a160b' },

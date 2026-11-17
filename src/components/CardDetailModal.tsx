@@ -1,5 +1,6 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { customDeckCardId, customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
@@ -19,8 +20,11 @@ import { DevNameSizeTuner } from './DevNameSizeTuner';
 import { ElementBadge } from './ElementBadge';
 
 type CardView = 'original' | 'rendered';
-/** Abas da coluna da direita: os dados da carta ou a arte (artes alternativas). */
-type DetailTab = 'details' | 'art';
+/** Abas da coluna da direita: os dados da carta, a arte (artes alternativas) ou o layout (só em desenvolvimento). */
+type DetailTab = 'details' | 'art' | 'layout';
+
+/** Aba Layout: só em desenvolvimento, carregada sob demanda (não pesa no detalhe da carta). */
+const DevCardLayoutTab = dynamic(() => import('./cardMaker/DevCardLayoutTab'), { ssr: false });
 
 interface Props {
   card: Card | null;
@@ -77,6 +81,51 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
   const chosen = useChosenArt(card.id);
   // Com uma arte alternativa (escolhida ou fixada), a carta sai sempre montada: não há Original | Montada.
   const withAltArt = hasFixedArt(card) ? !!card.altArt : !!chosen;
+  // Desenvolvimento: aba Layout (layout e ícones da carta, layout base e arquivos dos ícones), nas cartas escaneadas.
+  const devLayout = process.env.NODE_ENV === 'development' && !!card.layout && !custom && !inMatch;
+  const tabs: [DetailTab, string][] = [
+    ...(canPickArt || devLayout ? ([['details', 'Detalhes']] as [DetailTab, string][]) : []),
+    ...(canPickArt ? ([['art', 'Arte']] as [DetailTab, string][]) : []),
+    ...(devLayout ? ([['layout', 'Layout']] as [DetailTab, string][]) : []),
+  ];
+  const header = (
+    <>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+            {custom ? CARD_TYPE_LABEL[card.type] : `${CARD_TYPE_LABEL[card.type]} · #${card.number} · ${card.set}`}
+          </p>
+          {setName && <p className="text-xs text-muted">{setName}</p>}
+          <h2 className="text-2xl font-bold">{localized.name}</h2>
+          {/* Com o nome traduzido, o impresso continua visível: é ele que vale na regra de cópias. */}
+          {localized.name !== card.name && <p className="text-sm text-muted">{card.name}</p>}
+        </div>
+        <button type="button" onClick={onClose} className="rounded-md px-2 py-1 text-muted hover:bg-surface-2 hover:text-text" aria-label="Fechar">
+          ✕
+        </button>
+      </div>
+
+      {tabs.length > 0 && (
+        <div role="tablist" aria-label="Seções da carta" className="flex gap-1 border-b border-border text-sm">
+          {tabs.map(([value, text]) => (
+            <button
+              key={value}
+              type="button"
+              role="tab"
+              aria-selected={tab === value}
+              onClick={() => setTab(value)}
+              className={`-mb-px border-b-2 px-3 py-1.5 ${tab === value ? 'border-accent font-semibold text-text' : 'border-transparent text-muted hover:text-text'}`}
+            >
+              {text}
+            </button>
+          ))}
+        </div>
+      )}
+    </>
+  );
+
+  if (devLayout && tab === 'layout') return <DevCardLayoutTab card={card} header={header} />;
+
   return (
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:max-w-none">
@@ -118,47 +167,7 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
         )}
       </div>
       <div className="flex min-w-0 flex-col gap-4">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-accent">
-              {custom ? CARD_TYPE_LABEL[card.type] : `${CARD_TYPE_LABEL[card.type]} · #${card.number} · ${card.set}`}
-            </p>
-            {setName && <p className="text-xs text-muted">{setName}</p>}
-            <h2 className="text-2xl font-bold">{localized.name}</h2>
-            {/* Com o nome traduzido, o impresso continua visível: é ele que vale na regra de cópias. */}
-            {localized.name !== card.name && <p className="text-sm text-muted">{card.name}</p>}
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-md px-2 py-1 text-muted hover:bg-surface-2 hover:text-text"
-            aria-label="Fechar"
-          >
-            ✕
-          </button>
-        </div>
-
-        {canPickArt && (
-          <div role="tablist" aria-label="Seções da carta" className="flex gap-1 border-b border-border text-sm">
-            {(
-              [
-                ['details', 'Detalhes'],
-                ['art', 'Arte'],
-              ] as const
-            ).map(([value, text]) => (
-              <button
-                key={value}
-                type="button"
-                role="tab"
-                aria-selected={tab === value}
-                onClick={() => setTab(value)}
-                className={`-mb-px border-b-2 px-3 py-1.5 ${tab === value ? 'border-accent font-semibold text-text' : 'border-transparent text-muted hover:text-text'}`}
-              >
-                {text}
-              </button>
-            ))}
-          </div>
-        )}
+        {header}
 
         {canPickArt && tab === 'art' ? (
           canEditArt ? (
