@@ -587,8 +587,11 @@ export function LayoutEditor() {
       </div>
 
       <div className="flex flex-wrap items-start gap-6">
-        {card ? <EditorCanvas editor={editor} card={card} width={width} referenceOpacity={refOpacity} showBoxes={showBoxes} /> : <p>Escolha uma carta.</p>}
-        <aside className="flex min-w-72 flex-1 flex-col gap-2">
+        {/* A carta fica parada na tela; os campos rolam ao lado. */}
+        <div className="sticky top-[calc(var(--app-header-h)+1rem)] self-start">
+          {card ? <EditorCanvas editor={editor} card={card} width={width} referenceOpacity={refOpacity} showBoxes={showBoxes} /> : <p>Escolha uma carta.</p>}
+        </div>
+        <aside className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex min-w-72 flex-1 flex-col gap-2 max-h-[calc(100dvh-var(--app-header-h)-2rem)] overflow-y-auto overscroll-contain pr-1">
           {card && (
             <>
               <LayoutProperties editor={editor} spec={spec} type={type} panelVariant={card.panelVariant} />

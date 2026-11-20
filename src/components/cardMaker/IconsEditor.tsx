@@ -239,7 +239,7 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
   const groups = Object.keys(GROUP_LABEL) as IconChoice['group'][];
   return (
     <div className="flex flex-wrap items-start gap-6">
-      <nav aria-label="Ícones" className="flex max-h-[80vh] w-56 shrink-0 flex-col gap-3 overflow-y-auto pr-1">
+      <nav aria-label="Ícones" className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex w-56 shrink-0 flex-col gap-3 max-h-[calc(100dvh-var(--app-header-h)-2rem)] overflow-y-auto overscroll-contain pr-1">
         {groups.map((g) => {
           const list = icons.filter((i) => i.choice.group === g);
           if (!list.length) return null;
@@ -266,7 +266,7 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
         })}
       </nav>
 
-      <div className="flex flex-col gap-2">
+      <div className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex flex-col gap-2">
         <div className="flex flex-wrap items-center gap-3 text-xs text-muted">
           <label className="flex items-center gap-2">
             Layout do exemplo
@@ -286,7 +286,7 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
         <EditorCanvas editor={editor} card={card} width={width} iconOnly />
       </div>
 
-      <aside className="flex min-w-72 flex-1 flex-col gap-2">
+      <aside className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex min-w-72 flex-1 flex-col gap-2 max-h-[calc(100dvh-var(--app-header-h)-2rem)] overflow-y-auto overscroll-contain pr-1">
         <div className="rounded-lg bg-surface px-3 py-2 text-xs ring-1 ring-border">
           <p className="text-sm font-semibold text-text">{entry?.label ?? selected.id}</p>
           <p className="text-muted">
