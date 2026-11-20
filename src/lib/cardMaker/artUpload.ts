@@ -34,7 +34,7 @@ async function request<T>(url: string, init: RequestInit): Promise<T> {
 
 /**
  * Envia a arte (data URL já tratado) e devolve o endereço público dela no Blob. Com `cardId` (carta criada), ela já
- * fica como usada pela carta; sem (arte alternativa), é apagada em um dia se nada passar a usá-la.
+ * fica como usada pela carta; sem (carta do catálogo, aba Editar), é apagada em um dia se a carta não for salva.
  */
 export async function uploadArt(dataUrl: string, cardId?: string): Promise<string> {
   const { url } = await request<{ url: string }>('/api/art', { method: 'POST', body: JSON.stringify({ data: dataUrl, cardId }) });
@@ -108,7 +108,7 @@ export async function uploadCardArt(card: CustomCard): Promise<CustomCard> {
 /**
  * Exclui a carta criada de vez: tira de todos os decks deste navegador (eles ficam inválidos até completar de novo),
  * apaga do criador e apaga do Blob as artes dela que nada mais usa (outra carta criada, de qualquer navegador que a
- * registrou, ou uma arte alternativa).
+ * registrou, ou uma carta do catálogo).
  */
 export async function deleteCustomCard(card: CustomCard): Promise<void> {
   deckActions.removeCardEverywhere(customDeckCardId(card.id));

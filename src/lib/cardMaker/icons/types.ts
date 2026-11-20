@@ -7,6 +7,13 @@
  */
 
 /**
+ * Alinhamento de um texto ou número do ícone em relação ao ponto dele (`x`/`cx`): `left` começa no ponto, `center`
+ * fica centrado nele (o padrão) e `right` termina nele. No nome de lado (lido de baixo para cima), `left` é o começo
+ * da leitura (embaixo).
+ */
+export type IconTextAlign = 'left' | 'center' | 'right';
+
+/**
  * Número sobre um ícone (Chakra do custo do Jutsu). Centro em frações da caixa do ícone (`x` da largura,
  * `y` da altura); fonte e contorno em frações da largura (acompanham o tamanho do ícone).
  */
@@ -17,6 +24,8 @@ export interface IconNumberStyle {
   strokeWidth: number;
   color: string;
   stroke: string;
+  /** Sem valor: centrado. */
+  align?: IconTextAlign;
 }
 
 /**
@@ -35,6 +44,8 @@ export interface IconSideLabel {
   strokeWidth: number;
   /** Peso da fonte (Montserrat). */
   weight: number;
+  /** Sem valor: centrado. */
+  align?: IconTextAlign;
   shadow: { color: string; opacity: number; dx: number; dy: number; blur: number };
 }
 
@@ -58,7 +69,13 @@ export type CostNumberStyle = IconNumberStyle;
 /** Ícone de custo de entrada ou de mão: a imagem e o número. */
 export interface CostIconConfig {
   url: string;
+  /** Altura / largura da caixa do ícone (a "div" do ícone; a mesma em todos os custos deixa os ícones padronizados). */
   aspect: number;
+  /**
+   * Onde a imagem fica dentro da caixa (frações da largura da caixa): canto (`x`, `y`) e largura (`w`); a altura
+   * segue a proporção da imagem. Sem valor (ou campo faltando): a imagem começa no canto e ocupa a largura da caixa.
+   */
+  art?: Partial<{ x: number; y: number; w: number }>;
   number: CostNumberStyle;
 }
 
@@ -90,7 +107,7 @@ export interface CombatAttributeIconConfig {
    * Força: saudável (lâmina de baixo) e ferido (lâmina de cima, girado 90°). `strokeWidth`: grossura do
    * contorno (pixels da tela, como `size`).
    */
-  power: { healthy: CanvasPoint; injured: CanvasPoint; size: number; strokeWidth: number; color: string; stroke: string };
+  power: { healthy: CanvasPoint; injured: CanvasPoint; size: number; strokeWidth: number; color: string; stroke: string; align?: IconTextAlign };
   /** Nome do atributo, embaixo do kanji (ou no meio do círculo, sem kanji). */
   label: {
     /** Tamanho com um atributo (pixels da tela). */
@@ -108,6 +125,8 @@ export interface CombatAttributeIconConfig {
     multiMax: number;
     /** Centro do nome abaixo do centro do círculo, em frações do raio, com 1, 2 e 3+ linhas (com kanji). */
     dyWithKanji: [number, number, number];
+    /** Alinhamento das linhas do nome (o bloco fica centrado no círculo). Sem valor: centrado. */
+    align?: IconTextAlign;
   };
   /** Kanji: tamanho e deslocamento vertical em frações do raio; `text*` para o kanji digitado (cartas antigas). */
   kanji: { size: number; dy: number; textSize: number; textColor: string; textStroke: string };

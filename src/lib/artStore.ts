@@ -65,7 +65,8 @@ export function parseArtDataUrl(data: unknown): { bytes: Buffer; type: string; e
 
 /**
  * Guarda a arte (se ainda não existir) e devolve o endereço público dela. Com `ref`, o envio já registra o uso (carta
- * criada); sem, a imagem fica pendente até alguém passar a usar (arte alternativa) ou é apagada depois de um dia.
+ * criada); sem, a imagem fica pendente até alguém passar a usar (a carta do catálogo editada é salva) ou é apagada
+ * depois de um dia.
  */
 export async function saveArt(data: unknown, tokenHash: string, ref?: string): Promise<{ url: string; hash: string }> {
   requireBlob();
@@ -103,13 +104,13 @@ async function storeArt(pathname: string, bytes: Buffer, type: string, hash: str
 
 /*
  * Referências: só fica no Blob a arte que alguma coisa usa. A mesma imagem (mesmo hash) pode estar em várias cartas
- * criadas e artes alternativas, então cada uso é registrado e a imagem só é apagada quando o último sai.
- * - `naruto-ccg:art-refs:<sha256>`: conjunto com quem usa a imagem (`alt:<carta>:<arte>` = arte alternativa;
+ * criadas e cartas do catálogo, então cada uso é registrado e a imagem só é apagada quando o último sai.
+ * - `naruto-ccg:art-refs:<sha256>`: conjunto com quem usa a imagem (`catalog:<carta>` = carta do catálogo editada;
  *   `custom:<hash do token>:<carta>` = carta criada de um navegador).
  * - `naruto-ccg:art-ref:<quem>`: as imagens que esse uso tem agora (lista de `<sha256>.<ext>`), para saber o que saiu
  *   quando ele muda.
  * - `naruto-ccg:art-pending`: imagens enviadas que ainda não têm uso (nota = quando foram enviadas). Se em
- *   `PENDING_TTL_MS` ninguém passar a usar (o registro da arte alternativa falhou, a carta não foi salva), a imagem é
+ *   `PENDING_TTL_MS` ninguém passar a usar (a carta não foi salva), a imagem é
  *   apagada (`sweepPendingArts`, chamada a cada envio).
  */
 
@@ -198,4 +199,42 @@ export async function sweepPendingArts(limit = 20): Promise<number> {
     } else await redis.zrem(PENDING_KEY, file);
   }
   return deleted;
+}
+
+/*
+ * As artes alternativas das cartas do catálogo foram removidas do app (cada um cria a sua carta no criador, a partir
+ * de uma carta do catálogo). `removeLegacyAltArts` apaga uma vez o que ficou guardado: os hashes
+ * `naruto-ccg:alt-arts:<carta>` e as imagens deles que nada mais usa (as de quem enviou, contadas como em
+ * `setArtRefs`). Roda no servidor publicado (que tem o Blob); a marca `naruto-ccg:alt-arts-removed` evita repetir.
+ */
+const ALT_ARTS_REMOVED = 'naruto-ccg:alt-arts-removed';
+
+type LegacyAltArt = { id?: unknown; src?: unknown; front?: { src?: unknown }; owner?: unknown };
+
+export async function removeLegacyAltArts(): Promise<void> {
+  const redis = getRedis();
+  if (await redis.get(ALT_ARTS_REMOVED)) return;
+  const keys: string[] = [];
+  let cursor = '0';
+  do {
+    const [next, found] = await redis.scan(cursor, { match: 'naruto-ccg:alt-arts:*', count: 500 });
+    cursor = String(next);
+    keys.push(...found);
+  } while (cursor !== '0');
+  // Sem o Blob (ex.: local), não dá para apagar as imagens: deixa para o servidor publicado.
+  if (keys.length && !isBlobConfigured()) return;
+  for (const key of keys) {
+    const cardId = key.slice('naruto-ccg:alt-arts:'.length);
+    const arts = (await redis.hgetall<Record<string, LegacyAltArt | string>>(key)) ?? {};
+    for (const raw of Object.values(arts)) {
+      const art = (typeof raw === 'string' ? JSON.parse(raw) : raw) as LegacyAltArt;
+      const srcs = [art.src, art.front?.src].filter((s): s is string => typeof s === 'string');
+      const owner = typeof art.owner === 'string' && art.owner.startsWith('t:') ? art.owner.slice(2) : '';
+      await setArtRefs(`alt:${cardId}:${String(art.id)}`, [], { previous: srcs, tokenHash: owner }).catch((e) =>
+        console.error('Falha ao apagar as imagens de uma arte alternativa', e),
+      );
+    }
+    await redis.del(key);
+  }
+  await redis.set(ALT_ARTS_REMOVED, new Date().toISOString());
 }

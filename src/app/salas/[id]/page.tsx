@@ -22,7 +22,6 @@ import type { PlayerView, RoomView, SeatName } from '@/lib/rooms/model';
 import { useRoom } from '@/lib/rooms/useRoom';
 import { useRoomCustomCards } from '@/lib/rooms/useRoomCustomCards';
 import { withCustomCards } from '@/lib/cardMaker/customDeck';
-import { chosenArtsFor } from '@/lib/altArtClient';
 import { useCustomCards } from '@/lib/cardMaker/store';
 
 const card = 'flex flex-col gap-4 rounded-xl border border-border bg-surface p-5';
@@ -146,7 +145,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   const loadDeck = useCallback(async () => (await roomApi.deck(view.id)).cards, [view.id]);
   // Tema escolhido por você (só neste navegador); sem escolha, o sorteado na partida.
   const myTheme = useArenaTheme();
-  // Cartas criadas dos dois decks (docs/SALAS.md, "Cartas criadas") e as artes alternativas de cada jogador.
+  // Cartas criadas dos dois decks (docs/SALAS.md, "Cartas criadas").
   const roomCards = useRoomCustomCards(view);
 
   if (!game || !you) return <p className="text-muted">Carregando a partida…</p>;
@@ -265,7 +264,7 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
   const customCards = useCustomCards();
   const [deckError, setDeckError] = useState<string | null>(null);
-  // As cartas criadas do deck vão junto (as artes já estão no Vercel Blob), e as artes alternativas escolhidas
+  // As cartas criadas do deck vão junto (as artes já estão no Vercel Blob).
   // neste navegador para as cartas do deck (README, "Artes alternativas").
   const changeDeck = async (deckId: string) => {
     const deck = decks?.find((d) => d.id === deckId);
@@ -273,8 +272,7 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     setDeckError(null);
     try {
       const shared = await withCustomCards(deck, customCards ?? []);
-      const arts = chosenArtsFor(deck.cards);
-      await room.act({ type: 'changeDeck', deck: arts ? { ...shared, arts } : shared });
+      await room.act({ type: 'changeDeck', deck: shared });
     } catch (e) {
       setDeckError((e as Error).message);
     }

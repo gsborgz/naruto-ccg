@@ -1,4 +1,3 @@
-import { parseDeckArts, type AltArtPlacement } from './altArts.ts';
 import type { CustomCard } from './cardMaker/model.ts';
 import { parseSharedCustomCards } from './cardMaker/sharedCard.ts';
 import type { DeckCards } from './deckRules.ts';
@@ -20,11 +19,6 @@ export interface SharedDeck {
    * `src/lib/cardMaker/sharedCard.ts`). Ausente quando o deck só tem cartas do catálogo.
    */
   custom?: Record<string, CustomCard>;
-  /**
-   * Artes alternativas escolhidas por quem levou o deck (carta do catálogo → arte; README, "Artes alternativas"):
-   * na partida, as cartas dele aparecem montadas com elas. Só nas salas.
-   */
-  arts?: Record<string, AltArtPlacement>;
 }
 
 export type SharePayload = { kind: 'deck'; deck: SharedDeck } | { kind: 'collection'; decks: SharedDeck[] };
@@ -70,14 +64,11 @@ export function parseSharedDeck(x: unknown, isKnownCard: (id: string) => boolean
     if (!Number.isInteger(qty) || (qty as number) < 1 || (qty as number) > SHARE_LIMITS.copiesPerCard) return null;
     cards[id] = qty as number;
   }
-  const arts = parseDeckArts(x.arts, cards);
-  if (!arts) return null;
   const used = Object.fromEntries(Object.entries(custom).filter(([id]) => Object.hasOwn(cards, id)));
   return {
     name,
     cards,
     ...(Object.keys(used).length > 0 && { custom: used }),
-    ...(Object.keys(arts).length > 0 && { arts }),
   };
 }
 

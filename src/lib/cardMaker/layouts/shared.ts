@@ -10,7 +10,9 @@ import {
   TYPE_ICON_VARIANTS,
   VILLAGE_CANVAS,
   VILLAGE_CANVAS_DEFAULT,
+  type CostIconConfig,
   type IconSideLabel,
+  type IconTextAlign,
   type NamedIconConfig,
 } from '../icons/index.ts';
 import type { IconBox, IconPlacement, LayoutSpec } from './types.ts';
@@ -134,6 +136,12 @@ export interface PlacedNumber {
   strokeWidth: number;
   color: string;
   stroke: string;
+  align?: IconTextAlign;
+}
+
+/** Imagem do ícone de custo dentro da caixa dele (`CostIconConfig.art`; sem valor, a largura inteira da caixa). */
+export function costArt(icon: CostIconConfig): { x: number; y: number; w: number } {
+  return { x: 0, y: 0, w: 1, ...icon.art };
 }
 
 // ── Custos ────────────────────────────────────────────────────────────────────
@@ -142,14 +150,20 @@ export interface PlacedNumber {
  * Ícone de custo de entrada ou de mão na posição do layout. O `size` do layout só muda a imagem: o número
  * acompanha o centro do ícone, mas a fonte e o contorno são os do arquivo do ícone, em pixels da carta.
  */
-export function costIcon(placement: IconPlacement, id: EntranceIcon | HandIcon): { url: string; box: IconBox; number: PlacedNumber } {
+export function costIcon(
+  placement: IconPlacement,
+  id: EntranceIcon | HandIcon,
+): { url: string; box: IconBox; image: Omit<IconBox, 'h'>; number: PlacedNumber } {
   const icon = COST_ICONS[id];
   const box = boxOf(placement, icon.aspect);
   const n = icon.number;
+  const art = costArt(icon);
   return {
     url: icon.url,
     box,
+    image: { x: box.x + art.x * box.w, y: box.y + art.y * box.w, w: art.w * box.w },
     number: {
+      align: n.align,
       cx: box.x + n.x * box.w,
       cy: box.y + n.y * box.h,
       size: n.size,
@@ -180,7 +194,7 @@ export function chakraIcon(size: number): {
     url: icon.url,
     inline: { w: icon.inline.w * w, h: icon.inline.h * h },
     image: { x: -left, y: -top, w, h },
-    number: { cx: n.x * w - left, cy: n.y * h - top, size: n.size * w, strokeWidth: n.strokeWidth * w, color: n.color, stroke: n.stroke },
+    number: { cx: n.x * w - left, cy: n.y * h - top, size: n.size * w, strokeWidth: n.strokeWidth * w, color: n.color, stroke: n.stroke, align: n.align },
   };
 }
 
@@ -325,6 +339,7 @@ export function attributeIcon(spec: LayoutSpec, frame: AttributeFrame) {
     strokeWidth: p.strokeWidth * k,
     color: p.color,
     stroke: p.stroke,
+    align: p.align,
   });
   return {
     url: icon.url,

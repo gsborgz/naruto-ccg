@@ -55,6 +55,12 @@ export function ContentProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     void load();
+    // As artes alternativas saíram do app: some a escolha que ficou neste navegador.
+    try {
+      localStorage.removeItem('naruto-ccg:art-choices');
+    } catch {
+      // sem localStorage: nada a limpar
+    }
   }, [load]);
 
   const value = useMemo<ContentState | null>(() => {

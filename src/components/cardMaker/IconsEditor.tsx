@@ -24,7 +24,21 @@ import {
 import { assetUrl } from '@/lib/content/assets';
 import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } from '@/models/card';
 import { useImageSize } from './ContentTools';
-import { EditorCanvas, EditorFields, choiceKey, iconObject, selectClass, type ConfigEditor, type IconChoice } from './layoutEditing';
+import type { ConfigTarget } from '@/lib/content/changes';
+import {
+  EditorCanvas,
+  EditorFields,
+  FRAMED_ICON_GROUPS,
+  Pick,
+  choiceKey,
+  getAt,
+  iconObject,
+  selectClass,
+  smallSelect,
+  type ConfigEditor,
+  type IconChoice,
+  type Obj,
+} from './layoutEditing';
 
 /**
  * Aba Ícones do editor de layouts: cada ícone (tipo, tipo alternativo, elemento, custo, Chakra, Atributo de Combate)
@@ -66,6 +80,100 @@ function iconList(): IconEntry[] {
     out.push({ choice: { group: 'attribute', id }, label: `Moldura ${id}`, url: icon.url });
   }
   return out;
+}
+
+/** Ícones que dividem o tamanho da caixa: tipo com o tipo alternativo, elementos, custos de entrada e de mão. */
+const boxGroupOf = (c: IconChoice) => (c.group === 'type-variant' ? 'type' : c.group);
+
+/** Textos e números de cada ícone que podem ser alinhados (caminho do campo `align`). */
+function alignFields(c: IconChoice): { label: string; path: string[] }[] {
+  if (c.group === 'type' || c.group === 'type-variant' || c.group === 'element') return [{ label: 'Nome de lado', path: ['label', 'align'] }];
+  if (c.group === 'cost' || c.group === 'chakra') return [{ label: 'Número', path: ['number', 'align'] }];
+  return [
+    { label: 'Nome do atributo', path: ['label', 'align'] },
+    { label: 'Força', path: ['power', 'align'] },
+  ];
+}
+
+const ALIGN_OPTIONS: [string, string][] = [
+  ['left', 'Esquerda'],
+  ['center', 'Centro'],
+  ['right', 'Direita'],
+];
+
+/**
+ * A caixa do ícone (a "div" de tamanho fixo onde a imagem é enquadrada: largura do layout × proporção) e o alinhamento
+ * dos textos. "Usar em todos" deixa a mesma caixa em todo o grupo (ex.: todos os custos), para padronizar os ícones;
+ * cada imagem é enquadrada na caixa arrastando a caixa "Imagem do ícone" na carta.
+ */
+function IconBoxAndAlign({ editor, icons, selected }: { editor: ConfigEditor; icons: IconEntry[]; selected: IconChoice }) {
+  const root = iconObject(selected);
+  if (!root) return null;
+  const target: ConfigTarget = { kind: 'icon', group: selected.group, id: selected.id };
+  const framed = FRAMED_ICON_GROUPS.has(selected.group);
+  const aspect = Number(root.aspect) || 1;
+  const group = icons.filter((i) => boxGroupOf(i.choice) === boxGroupOf(selected));
+  const setAspect = (v: number) => Number.isFinite(v) && v > 0 && editor.setValue(target, root, ['aspect'], Math.round(v * 10000) / 10000);
+  const applyToGroup = () => {
+    for (const i of group) {
+      const obj = iconObject(i.choice);
+      if (obj && choiceKey(i.choice) !== choiceKey(selected)) editor.setValue({ kind: 'icon', group: i.choice.group, id: i.choice.id }, obj, ['aspect'], aspect);
+    }
+  };
+  const different = group.filter((i) => Number(iconObject(i.choice)?.aspect) !== aspect).length;
+  return (
+    <div className="flex flex-col gap-1.5 rounded-lg bg-surface px-3 py-2 ring-1 ring-border">
+      {framed && (
+        <>
+          <p className="text-xs font-semibold text-muted">Caixa do ícone</p>
+          <Pick label="Proporção (altura ÷ largura)">
+            <input
+              type="number"
+              step={0.01}
+              min={0.1}
+              value={aspect}
+              onChange={(e) => setAspect(e.target.valueAsNumber)}
+              className="w-20 rounded bg-surface-2 px-1.5 py-0.5 text-right text-xs ring-1 ring-border"
+            />
+            <button
+              type="button"
+              disabled={group.length < 2 || different === 0}
+              onClick={applyToGroup}
+              className="rounded px-2 py-1 text-xs text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text disabled:opacity-50"
+              title="Mesma caixa em todos os ícones do grupo"
+            >
+              Usar em todos do grupo{different ? ` (${different} diferentes)` : ''}
+            </button>
+          </Pick>
+          <p className="text-xs text-muted">
+            A largura vem do layout; a altura é a largura × a proporção. Enquadre a imagem dentro da caixa arrastando a caixa
+            &quot;Imagem do ícone&quot; na carta (o canto muda o tamanho).
+          </p>
+        </>
+      )}
+      <p className="text-xs font-semibold text-muted">Alinhamento do texto</p>
+      {alignFields(selected).map((f) => {
+        const value = String(getAt(root as Obj, f.path) ?? 'center');
+        const dirty = `icon:${selected.group}:${selected.id}|${f.path.join('.')}` in editor.changes;
+        return (
+          <Pick key={f.path.join('.')} label={f.label}>
+            <select
+              value={value}
+              onChange={(e) => editor.setValue(target, root, f.path, e.target.value)}
+              className={`${smallSelect} ${dirty ? '!ring-accent' : ''}`}
+            >
+              {ALIGN_OPTIONS.map(([v, l]) => (
+                <option key={v} value={v}>
+                  {l}
+                </option>
+              ))}
+            </select>
+          </Pick>
+        );
+      })}
+      <p className="text-xs text-muted">O texto começa, fica centrado ou termina no ponto dele (a caixa do texto na carta).</p>
+    </div>
+  );
 }
 
 /** Tipo de carta que mostra o ícone. */
@@ -182,11 +290,14 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
         <div className="rounded-lg bg-surface px-3 py-2 text-xs ring-1 ring-border">
           <p className="text-sm font-semibold text-text">{entry?.label ?? selected.id}</p>
           <p className="text-muted">
-            Tamanho padrão da imagem: {size ? `${size.w}×${size.h} px` : '…'}. Uma imagem nova precisa ter esse tamanho (redimensione
-            antes de enviar). As medidas abaixo são relativas ao ícone e valem em todos os layouts; arraste as caixas de dentro do ícone
-            na carta ou mexa nos campos.
+            {FRAMED_ICON_GROUPS.has(selected.group)
+              ? `Imagem atual: ${size ? `${size.w}×${size.h} px` : '…'}. Uma imagem nova pode ter qualquer tamanho: ela é encaixada na caixa do ícone e você ajusta o enquadramento.`
+              : `Tamanho padrão da imagem: ${size ? `${size.w}×${size.h} px` : '…'}. Uma imagem nova precisa ter esse tamanho (as medidas deste ícone são na própria imagem; redimensione antes de enviar).`}{' '}
+            As medidas abaixo são relativas ao ícone e valem em todos os layouts; arraste as caixas de dentro do ícone na carta ou
+            mexa nos campos.
           </p>
         </div>
+        <IconBoxAndAlign editor={editor} icons={icons} selected={selected} />
         {iconObject(selected) ? <EditorFields editor={editor} card={card} layoutFields={false} /> : <p className="text-sm text-muted">Ícone não encontrado.</p>}
       </aside>
     </div>

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isValidShareId } from '@/lib/deckShare';
-import { roomArts, roomCustom, RoomError, seatOf } from '@/lib/rooms/model';
+import { roomCustom, RoomError, seatOf } from '@/lib/rooms/model';
 import { hashToken, readRoom, roomErrorResponse } from '@/lib/rooms/store';
 
 /**
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     if (!room) throw new RoomError(404, 'Sala não encontrada. Ela pode ter expirado.');
     if (!seatOf(room, token ? hashToken(token) : null)) throw new RoomError(401, 'Você não está nesta sala.');
     if (room.status !== 'starting' || !room.game) throw new RoomError(409, 'A partida ainda não começou.');
-    return NextResponse.json({ cards: roomCustom(room), arts: roomArts(room) }, { headers: { 'Cache-Control': 'no-store' } });
+    return NextResponse.json({ cards: roomCustom(room) }, { headers: { 'Cache-Control': 'no-store' } });
   } catch (e) {
     return roomErrorResponse(e);
   }

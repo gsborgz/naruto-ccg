@@ -19,7 +19,7 @@ export function SearchDeckDialog({
   owner,
 }: {
   open: boolean;
-  /** De quem é o deck (para mostrar as cartas com a arte alternativa que ele levou). */
+  /** De quem é o deck. */
   owner?: Side;
   /** Quantidade por carta no deck (ex.: `roomApi.deck`). */
   load: () => Promise<Record<string, number>>;

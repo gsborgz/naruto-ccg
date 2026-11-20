@@ -46,7 +46,8 @@ function errorResponse(e: unknown) {
 
 /**
  * Envia uma arte (`{ data, cardId? }`: data URL já tratado no navegador). Devolve `{ url }`. Com `cardId` (carta
- * criada), a arte já fica como usada por ela; sem, fica pendente até uma arte alternativa passar a usar.
+ * criada), a arte já fica como usada por ela; sem (arte de uma carta do catálogo, na aba Editar), fica pendente até a
+ * carta ser salva.
  */
 export async function POST(request: NextRequest) {
   try {

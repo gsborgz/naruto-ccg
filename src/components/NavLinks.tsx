@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation';
 const LINKS: { href: string; label: string; short: string; match: (path: string) => boolean }[] = [
   { href: '/', label: 'Meus decks', short: 'Decks', match: (p) => p === '/' || p.startsWith('/decks') },
   { href: '/cards', label: 'Cartas', short: 'Cartas', match: (p) => p.startsWith('/cards') },
-  { href: '/criar', label: 'Criar carta', short: 'Criar', match: (p) => p.startsWith('/criar') },
+  { href: '/criar', label: 'Criar carta', short: 'Criar', match: (p) => p.startsWith('/criar') && !p.startsWith('/criar/layouts') },
+  { href: '/criar/layouts', label: 'Layouts', short: 'Layouts', match: (p) => p.startsWith('/criar/layouts') },
   { href: '/jogar', label: 'Jogar', short: 'Jogar', match: (p) => p.startsWith('/jogar') || p.startsWith('/salas') },
 ];
 

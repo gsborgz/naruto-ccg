@@ -2,7 +2,6 @@
 
 import { createContext, useCallback, useContext, useMemo } from 'react';
 import { CARDS_BY_ID } from '@/data/cards';
-import { hasFixedArt, withFixedArt } from '@/lib/altArts';
 import { isCustomCardId } from '@/lib/cardMaker/customIds';
 import { customCardToCard } from '@/lib/cardMaker/deckCard';
 import type { Side } from '@/lib/game/state';
@@ -12,8 +11,8 @@ import { cardImageUrl, type Card } from '@/models/card';
 import { CardFace } from '../CardFace';
 
 /**
- * Procura uma carta. Com `owner` (o dono da carta na partida), ela vem com a arte alternativa que ele levou no deck
- * (ou a original), para desenhar; sem `owner`, só os dados (tipo, regras).
+ * Procura uma carta (catálogo ou carta criada da partida). `owner`: o dono da carta na partida (hoje não muda a carta;
+ * fica para quem chama poder dizer de quem é).
  */
 type Lookup = (id: string, owner?: Side) => Card | undefined;
 
@@ -32,34 +31,17 @@ export function useArenaLookup(): Lookup {
 }
 
 /**
- * Cartas criadas e artes alternativas da partida (`useRoomCustomCards`) para a arena: as regras da tela (Ninja,
- * Reforço, Poder) e o desenho (as artes vêm do Vercel Blob pelo endereço). Cada carta aparece com a arte escolhida
- * pelo dono dela, para os dois jogadores.
+ * Cartas criadas da partida (`useRoomCustomCards`) para a arena: as regras da tela (Ninja, Reforço, Poder) e o desenho
+ * (as artes vêm do Vercel Blob pelo endereço).
  */
 export function ArenaCardsProvider({ roomCards, children }: { roomCards: RoomCards | undefined; children: React.ReactNode }) {
   const customCards = roomCards?.cards;
-  const arts = roomCards?.arts;
   const converted = useMemo(() => {
     const map = new Map<string, Card>();
     for (const [id, c] of Object.entries(customCards ?? {})) map.set(id, customCardToCard(c));
     return map;
   }, [customCards]);
-  // Cartas com a arte do dono, guardadas para a referência não mudar a cada renderização.
-  const withArt = useMemo(() => new Map<string, Card>(), [converted, arts]); // eslint-disable-line react-hooks/exhaustive-deps
-  const lookup = useCallback<Lookup>(
-    (id, owner) => {
-      const card = CARDS_BY_ID.get(id) ?? converted.get(id);
-      if (!card || !owner || isCustomCardId(id)) return card;
-      const key = `${owner}:${id}`;
-      let shown = withArt.get(key);
-      if (!shown) {
-        shown = withFixedArt(card, arts?.[owner]?.[id] ?? null);
-        withArt.set(key, shown);
-      }
-      return shown;
-    },
-    [converted, arts, withArt],
-  );
+  const lookup = useCallback<Lookup>((id) => CARDS_BY_ID.get(id) ?? converted.get(id), [converted]);
 
   const source = useCallback((id: string) => customCards?.[id], [customCards]);
 
@@ -71,8 +53,7 @@ export function ArenaCardsProvider({ roomCards, children }: { roomCards: RoomCar
 }
 
 /**
- * Imagem da carta na arena: a impressa (catálogo) ou, nas cartas criadas e nas com arte alternativa (do dono, ver
- * `Lookup`), a carta montada ocupando o mesmo espaço.
+ * Imagem da carta na arena: a impressa (catálogo) ou, nas cartas criadas, a carta montada ocupando o mesmo espaço.
  */
 export function ArenaCardImage({
   card,
@@ -87,7 +68,7 @@ export function ArenaCardImage({
   className?: string;
   lazy?: boolean;
 }) {
-  if (isCustomCardId(card.id) || (hasFixedArt(card) && card.altArt)) {
+  if (isCustomCardId(card.id)) {
     return (
       <div role="img" aria-label={alt} className={className} style={{ pointerEvents: 'none', ...(className ? {} : { width: '100%', height: '100%' }) }}>
         <CardFace card={card} size={size} className="h-full" />

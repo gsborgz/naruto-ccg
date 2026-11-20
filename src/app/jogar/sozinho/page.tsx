@@ -14,8 +14,6 @@ import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
 import { HeaderSlot } from '@/components/HeaderSlot';
 import { DeckSelect, useValidDecks } from '@/components/PlayerSetup';
 import { CARDS_BY_ID } from '@/data/cards';
-import { chosenArtsFor } from '@/lib/altArtClient';
-import type { AltArtPlacement } from '@/lib/altArts';
 import { setArenaTheme, useArenaTheme } from '@/lib/arenaTheme';
 import { customDeckCardId, isCustomCardId } from '@/lib/cardMaker/customIds';
 import type { CustomCard } from '@/lib/cardMaker/model';
@@ -183,15 +181,8 @@ export default function SoloPage() {
     [save?.decks, customCards], // eslint-disable-line react-hooks/exhaustive-deps
   );
   const { rules } = useMemo(() => rulesFor(custom), [custom]);
-  // Cartas criadas e artes alternativas escolhidas neste navegador, para os dois lados.
-  const roomCards = useMemo<RoomCards | undefined>(() => {
-    if (!save) return undefined;
-    const arts = Object.fromEntries(SIDES.map((s) => [s, chosenArtsFor(save.decks[s].cards) ?? {}])) as Record<
-      Side,
-      Record<string, AltArtPlacement>
-    >;
-    return { cards: custom, arts };
-  }, [save?.decks, custom]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Cartas criadas dos dois lados.
+  const roomCards = useMemo<RoomCards | undefined>(() => (save ? { cards: custom } : undefined), [save, custom]);
   // Busca no deck do lado que você comanda (a referência só muda com a partida, para o diálogo não recarregar à toa).
   const loadDeck = useCallback(async () => (save ? deckContents(save.game, save.viewing) : {}), [save]);
 

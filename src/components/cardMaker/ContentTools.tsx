@@ -43,8 +43,10 @@ export function useImageSize(url: string | undefined): { w: number; h: number } 
  * Botões "Trocar imagem" e "Voltar para a do deploy" de uma imagem da configuração (`url` lógica, `/card-layouts/...`).
  * Nos dois, a imagem que sai é apagada do Blob (não há histórico de imagens).
  *
- * Tamanho padrão: a imagem nova precisa ter o mesmo tamanho da atual (é nele que as posições foram calibradas); se não
- * tiver, o envio é recusado e pede para redimensionar antes.
+ * Tamanho padrão (`exactSize`, o padrão): a imagem nova precisa ter o mesmo tamanho da atual (molduras e painéis, e os
+ * ícones medidos na própria imagem); se não tiver, o envio é recusado e pede para redimensionar antes. Sem
+ * `exactSize` (ícones com caixa: tipo, elemento, custo), qualquer tamanho vale e `onUploaded` recebe o tamanho da
+ * imagem, para quem chama enquadrá-la na caixa do ícone.
  *
  * `ownPath`: o caminho que a imagem deve ter (ex.: o de um layout criado no editor, que começa com as imagens do
  * layout base). Se a configuração aponta para outro, a imagem nova vai para `ownPath` e `onRelocated` recebe o
@@ -57,12 +59,16 @@ export function AssetSwapButton({
   ownPath,
   onRelocated,
   deployFallback = true,
+  exactSize = true,
+  onUploaded,
 }: {
   url: string | undefined;
   label: string;
   ownPath?: string;
   onRelocated?: (url: string) => Promise<void>;
   deployFallback?: boolean;
+  exactSize?: boolean;
+  onUploaded?: (size: { w: number; h: number }) => void;
 }) {
   const content = useOptionalContent();
   const input = useRef<HTMLInputElement>(null);
@@ -82,13 +88,19 @@ export function AssetSwapButton({
       const got = await imageSize(preview);
       URL.revokeObjectURL(preview);
       if (!got) throw new Error('Não foi possível ler a imagem.');
-      if (size && (got.w !== size.w || got.h !== size.h)) {
+      if (exactSize && size && (got.w !== size.w || got.h !== size.h)) {
         throw new Error(`A imagem precisa ter ${size.w}×${size.h} px (o tamanho padrão desta); a enviada tem ${got.w}×${got.h}. Redimensione antes de enviar.`);
       }
       const r = await uploadContentAsset(target, file);
       content?.assetChanged(r.path, r.url, r.version);
       if (target !== path) await onRelocated?.(`/card-layouts/${target}`);
-      setStatus({ ok: true, text: 'Imagem trocada para todo mundo (a anterior foi apagada).' });
+      onUploaded?.(got);
+      setStatus({
+        ok: true,
+        text: onUploaded
+          ? 'Imagem trocada (a anterior foi apagada). Ela foi encaixada na caixa do ícone: ajuste o enquadramento e clique em Salvar.'
+          : 'Imagem trocada para todo mundo (a anterior foi apagada).',
+      });
     } catch (e) {
       setStatus({ ok: false, text: e instanceof Error ? e.message : String(e) });
     } finally {
@@ -120,7 +132,7 @@ export function AssetSwapButton({
         <a href={assetUrl(url)} target="_blank" rel="noreferrer" className="truncate text-accent hover:underline" title={path}>
           {path}
         </a>
-        {size && <span className="text-muted">{size.w}×{size.h} px</span>}
+        {size && <span className="text-muted">{size.w}×{size.h} px{exactSize ? '' : ' (qualquer tamanho)'}</span>}
         <button type="button" className={button} disabled={busy} onClick={() => input.current?.click()}>
           {busy ? 'Enviando…' : 'Trocar imagem'}
         </button>

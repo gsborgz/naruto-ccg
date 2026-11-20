@@ -114,10 +114,10 @@ Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardM
 - **Uma vez só:** o arquivo é `naruto-ccg/art/<sha256>.<ext>`; a mesma imagem não é guardada duas vezes.
 - **Públicas:** quem tiver o endereço exato vê a imagem, sem a senha do site (o endereço tem o hash, impossível de
   adivinhar).
-- **Só o que está em uso:** a mesma imagem pode estar em várias cartas criadas e artes alternativas, então cada uso é
-  registrado no Redis (`naruto-ccg:art-refs:<sha256>`: `custom:<hash do token>:<carta>` ou `alt:<carta>:<arte>`). Ao
-  trocar a arte de uma carta e salvar, ao excluir a carta ou ao remover uma arte alternativa, o uso sai (`PUT /api/art`
-  para as cartas criadas) e a imagem é apagada do Blob quando não sobra nenhum. Importar um deck com cartas criadas
+- **Só o que está em uso:** a mesma imagem pode estar em várias cartas, então cada uso é registrado no Redis
+  (`naruto-ccg:art-refs:<sha256>`: `custom:<hash do token>:<carta>` para as cartas criadas, `catalog:<carta>` para as
+  cartas do catálogo editadas pela aba Editar). Ao trocar a arte de uma carta e salvar ou ao excluir a carta, o uso sai
+  (`PUT /api/art` para as cartas criadas) e a imagem é apagada do Blob quando não sobra nenhum. Importar um deck com cartas criadas
   registra o uso de quem importou. Uma imagem enviada que ninguém passou a usar em 24 h (envio que falhou no meio) é
   apagada (`naruto-ccg:art-pending`). `naruto-ccg:art-owner:<sha256>` (quem enviou primeiro) só vale para as imagens
   de antes desse registro.

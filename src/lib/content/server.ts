@@ -1,3 +1,4 @@
+import { removeLegacyAltArts } from '../artStore.ts';
 import { hydrateContent } from './hydrate.ts';
 import { readContent, readContentVersion } from './store.ts';
 import type { ContentSnapshot } from './types.ts';
@@ -11,7 +12,15 @@ const RECHECK_MS = 15_000;
 let cached: { snapshot: ContentSnapshot; checkedAt: number } | null = null;
 let loading: Promise<ContentSnapshot> | null = null;
 
+/** Limpeza das artes alternativas removidas do app: uma vez por instância (a marca no Redis evita repetir de verdade). */
+let legacyCleanup: Promise<void> | null = null;
+
 async function load(): Promise<ContentSnapshot> {
+  legacyCleanup ??= removeLegacyAltArts().catch((e) => {
+    console.error('Falha ao apagar as artes alternativas antigas', e);
+    legacyCleanup = null;
+  });
+  await legacyCleanup;
   const version = await readContentVersion();
   if (cached && version === cached.snapshot.version) {
     cached.checkedAt = Date.now();

@@ -169,20 +169,6 @@ Decks com cartas do **Criar carta** (`custom-<uuid>`) podem ir para a sala:
 - Os compartilhamentos por código levam as cartas criadas do mesmo jeito; quem importa recebe as cartas no próprio
   criador.
 
-### Artes alternativas
-
-As artes escolhidas no detalhe da carta (README, "Artes alternativas") também vão para a partida:
-
-- No `changeDeck`, o navegador manda `deck.arts` (carta do catálogo → imagem no Blob + enquadramento) com as artes
-  escolhidas para as cartas do deck (`chosenArtsFor` em `src/lib/altArtClient.ts`). O servidor valida
-  (`parseDeckArts` em `src/lib/altArts.ts`: só imagens do Blob e só cartas que o deck usa). A escolha vale no
-  momento em que o deck vai para a sala: trocar a arte depois só conta ao escolher o deck de novo.
-- Na partida, a `RoomView` traz só `artKeys` (`<lado>:<carta>`); as artes vêm junto das cartas criadas, em
-  `GET .../custom-cards` (`arts`: lado → carta → arte).
-- Cada carta aparece com a arte de quem a levou, para os dois jogadores: o dono sai do `uid` da carta (`h…` = anfitrião,
-  `g…` = convidado; `ownerOfUid`), e `useArenaLookup()(id, dono)` devolve a carta com a arte fixada
-  (`withFixedArt`), montada pelo `CardFace`.
-
 ### Escritas simultâneas
 
 Os dois jogadores podem agir ao mesmo tempo (ex.: os dois clicam em Pronto). Toda escrita é um
@@ -436,7 +422,7 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 testar decks:
 
 - O jogador escolhe um deck válido para cada lado (**Jogador 1** e **Jogador 2**; pode ser o mesmo deck). As cartas
-  criadas e as artes alternativas escolhidas neste navegador valem nos dois lados.
+  criadas deste navegador valem nos dois lados.
 - Ele comanda os dois: a arena mostra embaixo o lado que ele está jogando e em cima o outro (com a mão virada para
   baixo, como numa sala). **⇅ Trocar de lado** inverte. Com **Trocar ao passar o turno** (ligado por padrão),
   passar o turno já troca para o novo Atacante.

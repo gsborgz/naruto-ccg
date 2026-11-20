@@ -14,10 +14,12 @@ import {
   TYPE_ICONS,
   TYPE_ICON_VARIANTS,
   attributeIcon,
+  costArt,
   costIcon,
   elementBox,
   elementVariants,
   getLayout,
+  type CostIconConfig,
   type IconPlacement,
   type LayoutSpec,
 } from '@/lib/cardMaker/layouts';
@@ -79,7 +81,15 @@ export interface Handle {
   dashed?: boolean;
   /** Ícone cuja configuração abre ao selecionar a caixa. */
   icon?: IconChoice;
+  /** Valor de um campo que ainda não existe na configuração (caminho com pontos), usado ao arrastar. */
+  defaults?: Record<string, number>;
 }
+
+/** Valor atual de um campo arrastado (o padrão da caixa, se o campo ainda não existe). */
+const driveValue = (h: Handle, path: Path) => {
+  const v = getAt(h.root, path);
+  return v === undefined || v === null ? (h.defaults?.[path.join('.')] ?? 0) : Number(v) || 0;
+};
 
 export const targetKey = (t: ConfigTarget) => (t.kind === 'layout' ? `layout:${t.id}` : `icon:${t.group}:${t.id}`);
 export const changeKey = (t: ConfigTarget, path: Path) => `${targetKey(t)}|${path.join('.')}`;
@@ -341,12 +351,24 @@ export function iconHandles(spec: LayoutSpec, card: CustomCard, c: IconChoice, h
   const target: ConfigTarget = { kind: 'icon', group: c.group, id: c.id };
   const base = { target, root, icon: c };
 
+  // A caixa do ícone (a "div" de tamanho fixo em que a imagem é enquadrada): arrastar a borda de baixo muda a proporção.
+  const boxHandle = (): Handle => ({
+    ...base,
+    id: 'icon-box',
+    label: 'Caixa do ícone (proporção)',
+    section: 'geral',
+    box: host.box,
+    move: [],
+    resize: [{ path: ['aspect'], axis: 'y', k: 1 / host.box.w }],
+  });
+
   if (c.group === 'type' || c.group === 'type-variant' || c.group === 'element') {
     const k = host.box.w;
     const { x, y } = host.box;
     const art = root.art as Box;
     const label = root.label as { cx: number; cy: number; cap: number; length: number };
     return [
+      boxHandle(),
       {
         ...base,
         id: 'icon-art',
@@ -383,7 +405,24 @@ export function iconHandles(spec: LayoutSpec, card: CustomCard, c: IconChoice, h
     const slot = c.id.startsWith('entrance') ? 'entrance' : 'hand';
     const placed = costIcon(spec.cost[costKey(card.type)][slot], c.id as EntranceIcon);
     const n = placed.number;
+    const k = placed.box.w;
+    const art = costArt(root as unknown as CostIconConfig);
     return [
+      boxHandle(),
+      {
+        ...base,
+        id: 'icon-art',
+        label: 'Imagem do ícone',
+        section: 'art',
+        // A altura segue a proporção da imagem; a caixa mostrada usa a da caixa do ícone.
+        box: { x: placed.image.x, y: placed.image.y, w: placed.image.w, h: placed.image.w * (root.aspect as number) },
+        move: [
+          { path: ['art', 'x'], axis: 'x', k: 1 / k },
+          { path: ['art', 'y'], axis: 'y', k: 1 / k },
+        ],
+        resize: [{ path: ['art', 'w'], axis: 'x', k: 1 / k }],
+        defaults: { 'art.x': art.x, 'art.y': art.y, 'art.w': art.w },
+      },
       {
         ...base,
         id: 'icon-number',
@@ -698,7 +737,7 @@ export function EditorCanvas({
     e.preventDefault();
     (e.target as Element).setPointerCapture(e.pointerId);
     editor.select(handle);
-    drag.current = { handle, drives, start: { x: e.clientX, y: e.clientY }, orig: drives.map((d) => Number(getAt(handle.root, d.path)) || 0) };
+    drag.current = { handle, drives, start: { x: e.clientX, y: e.clientY }, orig: drives.map((d) => driveValue(handle, d.path)) };
   };
   const onDragMove = (e: ReactPointerEvent) => {
     const d = drag.current;
@@ -726,7 +765,7 @@ export function EditorCanvas({
       const delta = { x: dir[0] * step, y: dir[1] * step };
       for (const drive of selectedHandle.move) {
         if (!delta[drive.axis]) continue;
-        const v = Number(getAt(selectedHandle.root, drive.path)) || 0;
+        const v = driveValue(selectedHandle, drive.path);
         setValueRef.current(selectedHandle.target, selectedHandle.root, drive.path, round(v + delta[drive.axis] * drive.k, drive.k));
       }
     };
@@ -800,6 +839,28 @@ export function IconEditButton({ editor, icon, host }: { editor: ConfigEditor; i
   );
 }
 
+/** Ícones com caixa fixa e a imagem enquadrada dentro dela (`art`): a imagem nova pode ter qualquer tamanho. */
+export const FRAMED_ICON_GROUPS: ReadonlySet<IconGroup> = new Set(['type', 'type-variant', 'element', 'cost']);
+
+/**
+ * Imagem nova num ícone com caixa: encaixa inteira na caixa (sem cortar, centrada), mantendo a proporção da imagem.
+ * Fica como alteração pendente (Salvar grava), para quem enviou ajustar o enquadramento antes.
+ */
+export function fitIconImage(editor: ConfigEditor, icon: IconChoice, root: Obj, size: { w: number; h: number }) {
+  if (!FRAMED_ICON_GROUPS.has(icon.group) || !size.w || !size.h) return;
+  const target: ConfigTarget = { kind: 'icon', group: icon.group, id: icon.id };
+  const box = Number(root.aspect) || 1;
+  const ratio = size.h / size.w;
+  const w = ratio <= box ? 1 : box / ratio;
+  const h = w * ratio;
+  const r = (v: number) => Math.round(v * 10000) / 10000;
+  editor.setValue(target, root, ['art', 'x'], r((1 - w) / 2));
+  editor.setValue(target, root, ['art', 'y'], r((box - h) / 2));
+  editor.setValue(target, root, ['art', 'w'], r(w));
+  // Tipo e elemento guardam a altura da imagem; o custo segue a proporção dela.
+  if (icon.group !== 'cost') editor.setValue(target, root, ['art', 'h'], r(h));
+}
+
 /**
  * Campos do ícone aberto e do layout da carta (do tipo dela; sem `layoutFields`, só os do ícone, como na aba Ícones).
  * A seção da caixa selecionada abre sozinha.
@@ -836,7 +897,12 @@ export function EditorFields({ editor, card, layoutFields = true }: { editor: Co
             <span className="font-semibold text-text">Ícone {icon.id}</span> — <code>{choiceKey(icon)}</code>. Medidas relativas ao próprio
             ícone: valem em todos os layouts. <ContentHistoryButton kind="icon" id={choiceKey(icon)} />
           </p>
-          <AssetSwapButton label="Imagem" url={typeof iconRoot.url === 'string' ? iconRoot.url : undefined} />
+          <AssetSwapButton
+            label="Imagem"
+            url={typeof iconRoot.url === 'string' ? iconRoot.url : undefined}
+            exactSize={!FRAMED_ICON_GROUPS.has(icon.group)}
+            onUploaded={(size) => fitIconImage(editor, icon, iconRoot, size)}
+          />
           {renderSections(
             iconSections(iconRoot),
             { kind: 'icon', group: icon.group, id: icon.id },

@@ -21,6 +21,7 @@ import {
   villageBox,
   villageIconUrl,
   type IconPlacement,
+  type IconTextAlign,
   type LayoutSpec,
   type PlacedIcon,
   type PlacedNumber,
@@ -62,6 +63,10 @@ interface PartProps {
   card: CustomCard;
   spec: LayoutSpec;
 }
+
+/** Deslocamento e alinhamento de um texto do ícone em relação ao ponto dele (`IconTextAlign`; padrão: centrado). */
+const ALIGN_SHIFT: Record<IconTextAlign, string> = { left: '0%', center: '-50%', right: '-100%' };
+const SVG_ANCHOR: Record<IconTextAlign, 'start' | 'middle' | 'end'> = { left: 'start', center: 'middle', right: 'end' };
 
 /** Contorno de texto: o traço fica por trás do preenchimento (`paint-order`). */
 function stroke(color: string, width: number): CSSProperties {
@@ -120,7 +125,7 @@ function NamedIcon({ icon }: { icon: PlacedIcon }) {
             x={label.cx}
             y={label.cy + label.cap / 2}
             transform={`rotate(-90 ${label.cx} ${label.cy})`}
-            textAnchor="middle"
+            textAnchor={SVG_ANCHOR[label.align ?? 'center']}
             textLength={label.length}
             lengthAdjust="spacingAndGlyphs"
             fontFamily={ICON_LABEL_FONT}
@@ -420,10 +425,10 @@ function Flavor({ card, spec }: PartProps) {
 
 /** Ícone de custo de entrada ou de mão: a posição e o tamanho vêm do layout; o número, do ícone. */
 function CostIcon({ icon, placement, value }: { icon: Parameters<typeof costIcon>[1]; placement: IconPlacement; value: string }) {
-  const { url, box, number } = costIcon(placement, icon);
+  const { url, image, number } = costIcon(placement, icon);
   return (
     <>
-      <Img src={url} x={box.x} y={box.y} w={box.w} h={box.h} />
+      <Img src={url} x={image.x} y={image.y} w={image.w} />
       <OutlinedNumber number={number} text={value} />
     </>
   );
@@ -438,7 +443,7 @@ function OutlinedNumber({ number, text, rotate }: { number: PlacedNumber; text: 
         position: 'absolute',
         left: number.cx,
         top: number.cy,
-        transform: `translate(-50%, -50%)${rotate ? ` rotate(${rotate}deg)` : ''}`,
+        transform: `translate(${ALIGN_SHIFT[number.align ?? 'center']}, -50%)${rotate ? ` rotate(${rotate}deg)` : ''}`,
         fontFamily: NUMBER_FONT,
         fontWeight: 700,
         fontSize: number.size,
@@ -583,7 +588,7 @@ function CombatAttribute({ card, spec }: PartProps) {
             // Sem kanji, o nome do atributo vai no meio do círculo (ex.: layout 5, "Weapon").
             top: hasKanji ? circle.cy + circle.r * (labelLines.length > 2 ? dy3 : labelLines.length > 1 ? dy2 : dy1) : circle.cy,
             transform: 'translate(-50%, -50%)',
-            textAlign: 'center',
+            textAlign: icon.label.align ?? 'center',
             fontFamily: BODY_FONT,
             fontWeight: 700,
             fontSize,

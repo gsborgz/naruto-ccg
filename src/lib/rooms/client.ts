@@ -1,13 +1,11 @@
 'use client';
 
 import type { CustomCard } from '@/lib/cardMaker/model';
-import type { AltArtPlacement } from '@/lib/altArts';
-import type { RoomAction, RoomView, SeatName } from './model';
+import type { RoomAction, RoomView } from './model';
 
-/** Cartas criadas dos dois decks da partida e as artes alternativas que cada jogador levou. */
+/** Cartas criadas dos dois decks da partida. */
 export interface RoomCards {
   cards: Record<string, CustomCard>;
-  arts: Record<SeatName, Record<string, AltArtPlacement>>;
 }
 
 /**

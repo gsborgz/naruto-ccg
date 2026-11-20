@@ -1,6 +1,5 @@
 import { isReinforcementCard, isTokenCard, permanentCoins, type Card } from '../../models/card.ts';
 import { customCardToCard } from '../cardMaker/deckCard.ts';
-import type { AltArtPlacement } from '../altArts.ts';
 import type { CustomCard } from '../cardMaker/model.ts';
 import { summarizeDeck } from '../deckRules.ts';
 import { parseSharedDeck, type SharedDeck } from '../deckShare.ts';
@@ -81,11 +80,6 @@ export interface RoomView {
    * (a sala é consultada a cada segundo e elas não mudam durante a partida).
    */
   customCardIds?: string[];
-  /**
-   * Durante a partida: quais cartas têm arte alternativa em cada deck (`<lado>:<carta>`, para saber quando buscar de
-   * novo). As artes vêm junto das cartas criadas, de `GET .../custom-cards`.
-   */
-  artKeys?: string[];
 }
 
 
@@ -168,11 +162,6 @@ function cardContent(card: CustomCard): string {
 /** Cartas criadas dos dois decks da sala. */
 export function roomCustom(room: Room): Record<string, CustomCard> {
   return { ...room.host.deck?.custom, ...room.guest?.deck?.custom };
-}
-
-/** Artes alternativas que cada jogador levou no deck (carta → arte). */
-export function roomArts(room: Room): Record<SeatName, Record<string, AltArtPlacement>> {
-  return { host: room.host.deck?.arts ?? {}, guest: room.guest?.deck?.arts ?? {} };
 }
 
 /** Procura no catálogo e nas cartas criadas dos dois decks da sala. */
@@ -387,9 +376,7 @@ export function toView(
 }
 
 /** Cartas criadas na partida (só os ids; as cartas vêm de `GET .../custom-cards`). */
-function gameCustomView(room: Room): Pick<RoomView, 'customCardIds' | 'artKeys'> {
+function gameCustomView(room: Room): Pick<RoomView, 'customCardIds'> {
   const customCardIds = Object.keys(roomCustom(room)).sort();
-  const arts = roomArts(room);
-  const artKeys = (['host', 'guest'] as const).flatMap((s) => Object.keys(arts[s]).map((id) => `${s}:${id}`)).sort();
-  return { ...(customCardIds.length > 0 && { customCardIds }), ...(artKeys.length > 0 && { artKeys }) };
+  return customCardIds.length > 0 ? { customCardIds } : {};
 }

@@ -12,17 +12,14 @@ import { readCustomCards } from '@/lib/cardMaker/store';
 import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog';
 import { useCardDesign } from '@/lib/cardDesign';
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
-import { acceptsAltArt, canEditAltArt, hasFixedArt } from '@/lib/altArts';
-import { chooseArt, useChosenArt } from '@/lib/altArtClient';
-import { AltArtDraftFace, AltArtPicker, type AltArtDraft } from './AltArtPicker';
 import { CardCost } from './CardCost';
 import { CardFace } from './CardFace';
 import { NameSizeTuner } from './NameSizeTuner';
 import { ElementBadge } from './ElementBadge';
 
 type CardView = 'original' | 'rendered';
-/** Abas da coluna da direita: os dados da carta, a arte (artes alternativas) ou a edição da carta. */
-type DetailTab = 'details' | 'art' | 'edit';
+/** Abas da coluna da direita: os dados da carta ou a edição da carta. */
+type DetailTab = 'details' | 'edit';
 
 /** Aba Editar: carregada sob demanda (o editor do criador não pesa no detalhe da carta). */
 const CardEditTab = dynamic(() => import('./cardMaker/CardEditTab'), { ssr: false });
@@ -101,15 +98,7 @@ function CardDetails({
   // Ajuste do tamanho do nome (atalho na carta montada), aplicado na carta antes de gravar.
   const [sizeEdit, setSizeEdit] = useState<number | null>(null);
   const shown = card.layout && sizeEdit !== null ? { ...card, layout: { ...card.layout, nameSize: sizeEdit } } : card;
-  // Artes alternativas: só nas cartas do catálogo e fora da partida (lá vale a arte que cada jogador levou). A aba
-  // Arte aparece em todas elas, mas editar só nas cartas já mapeadas (`card.layout`): a arte é montada no layout dela.
-  const canPickArt = !custom && acceptsAltArt(card.id) && !hasFixedArt(card) && !inMatch;
-  const canEditArt = canPickArt && canEditAltArt(card);
   const [tab, setTab] = useState<DetailTab>('details');
-  const [draft, setDraft] = useState<AltArtDraft | null>(null);
-  const chosen = useChosenArt(card.id);
-  // Com uma arte alternativa (escolhida ou fixada), a carta sai sempre montada: não há Original | Montada.
-  const withAltArt = hasFixedArt(card) ? !!card.altArt : !!chosen;
   // Aba Editar: todas as cartas do catálogo, fora da partida; grava no conteúdo do jogo.
   const canEdit = !custom && !inMatch;
   const [editDirty, setEditDirty] = useState(false);
@@ -126,8 +115,7 @@ function CardDetails({
     setTab(next);
   };
   const tabs: [DetailTab, string][] = [
-    ...(canPickArt || canEdit ? ([['details', 'Detalhes']] as [DetailTab, string][]) : []),
-    ...(canPickArt ? ([['art', 'Arte']] as [DetailTab, string][]) : []),
+    ...(canEdit ? ([['details', 'Detalhes']] as [DetailTab, string][]) : []),
     ...(canEdit ? ([['edit', 'Editar']] as [DetailTab, string][]) : []),
   ];
   const header = (
@@ -169,12 +157,8 @@ function CardDetails({
   return (
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:max-w-none">
-        {draft ? (
-          <AltArtDraftFace card={card} draft={draft} onChange={setDraft} className="rounded-lg shadow-xl" />
-        ) : (
-          <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
-        )}
-        {canEdit && card.layout && view === 'rendered' && !withAltArt && !draft && (
+        <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
+        {canEdit && card.layout && view === 'rendered' && (
           <NameSizeTuner
             cardId={card.id}
             saved={card.layout.nameSize ?? 0}
@@ -183,7 +167,7 @@ function CardDetails({
           />
         )}
         {/* Cartas escaneadas (`card.layout`) também podem ser vistas montadas a partir do layout e das artes. */}
-        {card.layout && !withAltArt && !draft && (
+        {card.layout && (
           <div role="group" aria-label="Imagem da carta" className="flex justify-center gap-1 text-sm">
             {(
               [
@@ -207,24 +191,6 @@ function CardDetails({
       <div className="flex min-w-0 flex-col gap-4">
         {header}
 
-        {canPickArt && tab === 'art' ? (
-          canEditArt ? (
-            <AltArtPicker card={card} draft={draft} onDraftChange={setDraft} />
-          ) : (
-            <div className="flex flex-col gap-2 rounded-lg border border-dashed border-border p-3 text-sm text-muted">
-              <p>
-                A coleção desta carta ainda não foi mapeada (layout e ícones das cartas montadas), então a arte dela
-                ainda não pode ser trocada.
-              </p>
-              {chosen && (
-                <button type="button" onClick={() => chooseArt(card.id, null)} className="self-start text-accent hover:underline">
-                  Voltar para a arte original
-                </button>
-              )}
-            </div>
-          )
-        ) : (
-          <>
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
             <dt className="text-muted">Símbolos</dt>
             <dd className="flex gap-1">
@@ -287,8 +253,6 @@ function CardDetails({
               {card.flavor && <p className="italic text-muted">{card.flavor}</p>}
             </div>
           )}
-          </>
-        )}
         {custom && (
           <p className="text-xs text-muted">
             {localCustom ? (
