@@ -3,6 +3,7 @@
 import { compressImage, isCompressed } from '../images/compressImage.ts';
 import { deckActions } from '../deckStore.ts';
 import { getIdentity } from '../rooms/client.ts';
+import { unpublishAltCard } from './altCardsClient.ts';
 import { customDeckCardId } from './customIds.ts';
 import type { CustomCard, CustomCardArt } from './model.ts';
 import { isBlobArt } from './sharedCard.ts';
@@ -113,6 +114,8 @@ export async function uploadCardArt(card: CustomCard): Promise<CustomCard> {
 export async function deleteCustomCard(card: CustomCard): Promise<void> {
   deckActions.removeCardEverywhere(customDeckCardId(card.id));
   customCardActions.remove(card.id);
+  // Sai da lista de artes alternativas antes de a arte ser apagada.
+  await unpublishAltCard(card.id).catch(() => undefined);
   // Apagar do Blob é o último passo: se falhar (sem conexão), a carta já foi excluída.
   await syncCardArtRefs(card.id, null, card).catch(() => undefined);
 }

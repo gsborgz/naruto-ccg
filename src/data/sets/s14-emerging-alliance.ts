@@ -26,13 +26,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"It's a lot easier this way!\" \"\"Wha--?! Whoa! Hey--!\"",
     image: "s14-n-590",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-591",
@@ -55,13 +48,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Vvvvvvvvvv.....\"",
     image: "s14-n-591",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 4.3, y: -8.4, zoom: 1.023, print: true } },
-    },
   },
   {
     id: "s14-n-592",
@@ -82,13 +68,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Hmm, let's see now. Who would be good?\"",
     image: "s14-n-592",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-593",
@@ -109,13 +88,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"He looks kind of like Sasuke, don't you think?\"",
     image: "s14-n-593",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-594",
@@ -137,13 +109,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"We don't have names, feeling, past or future. We just have the mission.\"",
     image: "s14-n-594",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-595",
@@ -164,13 +129,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Come on! He told us to hurry up!\"",
     image: "s14-n-595",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-596",
@@ -191,13 +149,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Go, Naruto! I'll back you up!\"",
     image: "s14-n-596",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-597",
@@ -219,13 +170,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Hey, I'll help you out.\"",
     image: "s14-n-597",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-598",
@@ -247,13 +191,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"That's why I need you, Yamato. You are the only one who successfully inherited the gene of the first hokage.\"",
     image: "s14-n-598",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-599",
@@ -274,13 +211,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"The Kazekage has been returned to his village safely.\"",
     image: "s14-n-599",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-600",
@@ -301,13 +231,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"That's been taken care of.\"",
     image: "s14-n-600",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-601",
@@ -328,13 +251,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Let us finish this here and now..!\"",
     image: "s14-n-601",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-602",
@@ -355,13 +271,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"If anything should ever happen again, I'll protect him! With all of my heart!\"",
     image: "s14-n-602",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-603",
@@ -382,13 +291,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Lord Gaara is totally cute, isn't he! After all, he is Kazekage!!\"",
     image: "s14-n-603",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-604",
@@ -409,13 +311,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Maybe now I can become a member of the Akatsuki, huh?\"",
     image: "s14-n-604",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-605",
@@ -436,13 +331,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Nonsense...\"",
     image: "s14-n-605",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-606",
@@ -463,13 +351,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"You cannot be too careful.\"",
     image: "s14-n-606",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-607",
@@ -490,13 +371,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I have Sasuke in my hands.\"",
     image: "s14-n-607",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-608",
@@ -517,14 +391,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Y..you!\" \"Hi...\"",
     image: "s14-n-608",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-609",
@@ -546,13 +412,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Don't ever forget the will of the foundation.\"",
     image: "s14-n-609",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-610",
@@ -574,13 +433,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"He is supposed to be watched all the time.\"",
     image: "s14-n-610",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-611",
@@ -602,13 +454,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"What if you are wrong?\"",
     image: "s14-n-611",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-612",
@@ -629,13 +474,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "The hero who established the village with the will of fire. He had not only the unrivaled power as a shinobi, but also a natural virtue that bound people together.",
     image: "s14-n-612",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.5, y: -8.8, zoom: 1.0244, print: true } },
-    },
   },
   {
     id: "s14-n-613",
@@ -656,13 +494,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "The hero who accomplished the will of fire as the Hidden Village in the Leaves. He was also a leader who seeked for the stability and peace.\"",
     image: "s14-n-613",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-614",
@@ -684,13 +515,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Your eyes are just like mine, mister, we're both the same.\"",
     image: "s14-n-614",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-615",
@@ -711,13 +535,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Well, I can't promise my information is complete or perfect. But I've got something on just about everyone...\"",
     image: "s14-n-615",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-616",
@@ -739,14 +556,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Come on, show me what you got!\" \"Raaaa!!\"",
     image: "s14-n-616",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-617",
@@ -767,13 +576,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Oh. I forgot to mention this little gadget I wear... You might be able to dodge my blows... but you can't get away from it.\"",
     image: "s14-n-617",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-618",
@@ -794,13 +596,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Try this! Slicing Sound Wave!\"",
     image: "s14-n-618",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-619",
@@ -821,13 +616,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"It's pointless, that won't work on me.\"",
     image: "s14-n-619",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-620",
@@ -849,13 +637,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Yes... Fighting. That......is the only thing I can do now.\"",
     image: "s14-n-620",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-621",
@@ -877,14 +658,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"We've already found you? .. Now wake Sasuke up; we want to fight him.\"",
     image: "s14-n-621",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-622",
@@ -905,13 +678,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Lord Orochimaru...\"",
     image: "s14-n-622",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-623",
@@ -932,13 +698,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"But even as fragile as I was, I had a special power no one else did...\"",
     image: "s14-n-623",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-624",
@@ -960,13 +719,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "I'll expect a hundred human sacrifices.\"",
     image: "s14-n-624",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-625",
@@ -987,13 +739,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Bwa ha ha ha ha ha haaaa!\"",
     image: "s14-n-625",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-626",
@@ -1014,13 +759,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s14-n-626",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 4.5, y: -9, zoom: 1.0251, print: true } },
-    },
   },
   {
     id: "s14-n-627",
@@ -1041,13 +779,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Now, it's your turn...\"",
     image: "s14-n-627",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-628",
@@ -1068,13 +799,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Number 130, number 110, that means you're out, too.\"",
     image: "s14-n-628",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-629",
@@ -1095,13 +819,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I could finish you right now if I wanted to.\"",
     image: "s14-n-629",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-630",
@@ -1122,13 +839,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Don't worry, little man. I'll make it short and sweet.\"",
     image: "s14-n-630",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-631",
@@ -1149,13 +859,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Hi, there!.. I've been wanting to meet you for a really long time, Neji... So.. hi!\"",
     image: "s14-n-631",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-632",
@@ -1176,13 +879,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Fine. Guess there's no point in talkin' anymore...Sasuke!\"",
     image: "s14-n-632",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-633",
@@ -1205,13 +901,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Haaa!! Chaa!!\"",
     image: "s14-n-633",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-634",
@@ -1232,13 +921,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"This is gonna be a real pain in the neck...\"",
     image: "s14-n-634",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-635",
@@ -1259,13 +941,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Pleasingly Plump Forever!!\"",
     image: "s14-n-635",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-636",
@@ -1286,13 +961,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Lady Tsunade!\" \"Oink!\"",
     image: "s14-n-636",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-637",
@@ -1313,13 +981,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I've been waiting to try this out.\"",
     image: "s14-n-637",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-638",
@@ -1341,13 +1002,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"AHAHAHAHAHAHA....\"",
     image: "s14-n-638",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 4.3, y: -8.8, zoom: 1.024, print: true } },
-    },
   },
   {
     id: "s14-n-639",
@@ -1368,14 +1022,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Cha!\" \"Ninja Art: Super Beast Scroll!\"",
     image: "s14-n-639",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-640",
@@ -1397,13 +1043,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Noble Blue Beast of the Leaf Village!\"",
     image: "s14-n-640",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-641",
@@ -1424,14 +1063,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Oh, and standing as close as you are to my friend the Black Ant...big mistake!\"",
     image: "s14-n-641",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-642",
@@ -1452,13 +1083,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"How was that? It's finished.\"",
     image: "s14-n-642",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.2, y: -8.7, zoom: 1.0235, print: true } },
-    },
   },
   {
     id: "s14-n-643",
@@ -1479,13 +1103,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"These eyes aren't the only way I can wield Genjutsu...All I need......is a single finger.\"",
     image: "s14-n-643",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-n-644",
@@ -1507,13 +1124,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Now, whaddya say we finally get down to business, huh!?!?!\"",
     image: "s14-n-644",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.4, y: -8.9, zoom: 1.0238, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1531,13 +1141,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Wait!!\"",
     image: "s14-j-496",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-497",
@@ -1553,13 +1156,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Ninja Art: Super Beast Scroll!!\"",
     image: "s14-j-497",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-498",
@@ -1576,13 +1172,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Fire Style: Phoenix Flower Jutsu!\"",
     image: "s14-j-498",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-499",
@@ -1599,13 +1188,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Everybody, run as far as you can now!\"",
     image: "s14-j-499",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-500",
@@ -1622,13 +1204,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Water Style: Water Shark Bomb Jutsu!!\"",
     image: "s14-j-500",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-501",
@@ -1645,13 +1220,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Paper bomb--!\"",
     image: "s14-j-501",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-502",
@@ -1668,13 +1236,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"We did it...\" \"He can't move. That sealing traps every ounce of chakra stored in a person's body.\"",
     image: "s14-j-502",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-503",
@@ -1691,13 +1252,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Well? What are you going to do now?!\"",
     image: "s14-j-503",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-504",
@@ -1714,13 +1268,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Secret White Move: Chikamatsu's Ten Puppets.\"",
     image: "s14-j-504",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-505",
@@ -1737,13 +1284,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Haaa!!\"",
     image: "s14-j-505",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.6, y: 1.3, zoom: 1.0057, print: true } },
-    },
   },
   {
     id: "s14-j-506",
@@ -1760,13 +1300,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Ninja Art: Shadow Stitching!\"",
     image: "s14-j-506",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-507",
@@ -1782,13 +1315,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"She's bringing him back..?! Are you serious..!?\"",
     image: "s14-j-507",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-508",
@@ -1805,13 +1331,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Secret Red Move: Performance of a Hundred Puppets. It's show time.\"",
     image: "s14-j-508",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.5, y: 1.8, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s14-j-509",
@@ -1828,13 +1347,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"The smallest cut can be fatal, as you know.\"",
     image: "s14-j-509",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-510",
@@ -1850,13 +1362,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"My preparation's complete. Let's go, Naruto!\"",
     image: "s14-j-510",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-511",
@@ -1873,13 +1378,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Even a short eye contact with him...made me scared of Sasuke in the depth of my heart.\"",
     image: "s14-j-511",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-512",
@@ -1896,13 +1394,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s14-j-512",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-513",
@@ -1918,13 +1409,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s14-j-513",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-514",
@@ -1940,13 +1424,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Nothing was detected around here.\"",
     image: "s14-j-514",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-515",
@@ -1963,13 +1440,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Wood Style Transformation!\"",
     image: "s14-j-515",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-516",
@@ -1987,13 +1457,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Striking Multi Shadow Snakes Jutsu!\"",
     image: "s14-j-516",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-517",
@@ -2011,13 +1474,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Give us back Sasuke...\"",
     image: "s14-j-517",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-518",
@@ -2033,13 +1489,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Is he Sasori, Lord Orochimaru?\"",
     image: "s14-j-518",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-519",
@@ -2056,13 +1505,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I get where you're goin'. Awesome move, Kakashi-Sensei!\"",
     image: "s14-j-519",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-520",
@@ -2080,13 +1522,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Now. ~ You're within range. ~ Hmmm!\"",
     image: "s14-j-520",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-521",
@@ -2103,13 +1538,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"ZzZzZzZzZzZzZzZzZ.....\"",
     image: "s14-j-521",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-522",
@@ -2126,13 +1554,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Wood Style Jutsu: Wooden Lock Wall!!\"",
     image: "s14-j-522",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.6, y: 1.5, zoom: 1.0061, print: true } },
-    },
   },
   {
     id: "s14-j-523",
@@ -2149,13 +1570,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Wood Clone Jutsu!\"",
     image: "s14-j-523",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-524",
@@ -2172,13 +1586,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Summoning Jutsu: Triple Rashomon!\"",
     image: "s14-j-524",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-525",
@@ -2195,13 +1602,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I didn't see that coming.\"",
     image: "s14-j-525",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-526",
@@ -2218,13 +1618,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Thunder Funeral! Feast of Lightning!\"",
     image: "s14-j-526",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-527",
@@ -2242,13 +1635,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"The four of them are still alive...One of them is... troublesome....\"",
     image: "s14-j-527",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-528",
@@ -2265,13 +1651,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s14-j-528",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-529",
@@ -2287,13 +1666,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"This device amplifies the vibrations of the impact, transforming them into a wave of sound.\"",
     image: "s14-j-529",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-530",
@@ -2310,13 +1682,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Super Sonic Slicing Wave!\"",
     image: "s14-j-530",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-531",
@@ -2333,13 +1698,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"The thing is Sasuke, Yoroi's unique skills are going to be disastrous for you.\"",
     image: "s14-j-531",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-532",
@@ -2356,13 +1714,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"And I will unless you give up.\"",
     image: "s14-j-532",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-533",
@@ -2379,13 +1730,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Well, whatever you are, I'll snap you out of it.\"",
     image: "s14-j-533",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.9, y: -1.1, zoom: 1.0023, print: true } },
-    },
   },
   {
     id: "s14-j-534",
@@ -2402,13 +1746,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Unorthodox--- is it not? This is my Kekkei Genkai...",
     image: "s14-j-534",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.5, y: -1.2, zoom: 1.0012, print: true } },
-    },
   },
   {
     id: "s14-j-535",
@@ -2424,13 +1761,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"You know those food pellets are only for emergencies... A girl at your age should especially be careful-\"",
     image: "s14-j-535",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.9, y: -2.1, zoom: 1.0001, print: true } },
-    },
   },
   {
     id: "s14-j-536",
@@ -2447,13 +1777,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Th..this is the of the first hokage's exclusive secret technique...\"",
     image: "s14-j-536",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-537",
@@ -2470,13 +1793,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Everyone! Whatever you do, don't look him in the eyes!\"",
     image: "s14-j-537",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-538",
@@ -2493,13 +1809,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Giant Rasengan!\"",
     image: "s14-j-538",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.8, y: 1.2, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s14-j-539",
@@ -2516,13 +1825,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"But I didn't make any eye contact..! How did I get drawn in..?!\"",
     image: "s14-j-539",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-j-540",
@@ -2539,13 +1841,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"At any rate......Now we can fight without any interference.\"",
     image: "s14-j-540",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2566,13 +1861,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"A Medical Ninja must never be hit by an enemy attack.\"",
     image: "s14-m-455",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-456",
@@ -2589,13 +1877,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Well then... shall we go?\" \"Fine. Yessir!\"",
     image: "s14-m-456",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-457",
@@ -2612,13 +1893,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"You're forgetting, I have Kakashi on my back. Technically, he came in second!\"",
     image: "s14-m-457",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-458",
@@ -2635,13 +1909,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"After all, there's an open spot now, right?\"",
     image: "s14-m-458",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-459",
@@ -2658,13 +1925,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I promise!!\"",
     image: "s14-m-459",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-460",
@@ -2682,13 +1942,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"They all came running to help ya..! You've had everyone worried half to death..!\"",
     image: "s14-m-460",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.7, y: 0, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s14-m-461",
@@ -2705,13 +1958,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I couldn't save Sasuke...and Gaara either...\"",
     image: "s14-m-461",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-462",
@@ -2727,13 +1973,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Orochimaru is always with Sasuke. If you go any further, you will end up with becoming his guinea pig.\"",
     image: "s14-m-462",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-463",
@@ -2750,13 +1989,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Naruto---!!\"",
     image: "s14-m-463",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-464",
@@ -2773,13 +2005,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I'd like to be gentle with you guys, but I can control you with fear, if you like...\"",
     image: "s14-m-464",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-465",
@@ -2796,13 +2021,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"It's gonna be busier...\"",
     image: "s14-m-465",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-466",
@@ -2819,13 +2037,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Here, Shikamaru...Your mom asked me to bring you your lunchbox.\"",
     image: "s14-m-466",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-467",
@@ -2842,13 +2053,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s14-m-467",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-468",
@@ -2865,13 +2069,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Don't you know what the word \"comrade\" is? Of course I do...What of it?",
     image: "s14-m-468",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-469",
@@ -2888,13 +2085,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"It's about time.\"",
     image: "s14-m-469",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-470",
@@ -2911,13 +2101,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Wait up, Sasuke......\"",
     image: "s14-m-470",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-471",
@@ -2933,13 +2116,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"That's not good.\"",
     image: "s14-m-471",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-472",
@@ -2955,13 +2131,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Raiga......\"",
     image: "s14-m-472",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-473",
@@ -2978,13 +2147,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Nothing will ever separate us again Ranmaru.\"",
     image: "s14-m-473",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.2, y: -0.1, zoom: 1.0019, print: true } },
-    },
   },
   {
     id: "s14-m-474",
@@ -3000,13 +2162,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"!!\"",
     image: "s14-m-474",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-475",
@@ -3023,13 +2178,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Don't push me .. I'm in a really foul mood.\"",
     image: "s14-m-475",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-476",
@@ -3046,13 +2194,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Is there.. someone who is precious to you?\"",
     image: "s14-m-476",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-477",
@@ -3069,13 +2210,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Hey, what's shakin'?.. Howya doing, everybody? Life treating you good?\"",
     image: "s14-m-477",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-478",
@@ -3092,13 +2226,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"It's hard to explain, but these cards have been Chakra-encoded with everything I've learned over the past four years.\"",
     image: "s14-m-478",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-479",
@@ -3115,13 +2242,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"My teammates are gonna kill me!\"",
     image: "s14-m-479",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-480",
@@ -3139,13 +2259,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s14-m-480",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-481",
@@ -3162,13 +2275,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Because he's...he's my student. And because I care what happens to him.\"",
     image: "s14-m-481",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-482",
@@ -3185,13 +2291,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Sasuke had the same eyes this guy does...\" \"The same eyes..?\"",
     image: "s14-m-482",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-483",
@@ -3207,13 +2306,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Why are you blooming in a place like this...?\"",
     image: "s14-m-483",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-484",
@@ -3231,13 +2323,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"You should be the one thanking me...It's only because of my Impersonation Jutsu... they could join the ranks of the Akatsuki, shortlived as it was.\"",
     image: "s14-m-484",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-485",
@@ -3253,13 +2338,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"The Leaf's current Hokage is Tsunade... And she's known as a world-class Medical Ninja.\"",
     image: "s14-m-485",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-486",
@@ -3276,13 +2354,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"And now you can't move anymore.\"",
     image: "s14-m-486",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-487",
@@ -3299,13 +2370,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"From now, four of us are heading for the Tenchi bridge, capture and bring a spy from 'Akatsuki' here who has been infiltrating into the Orochimaru's organization.\"",
     image: "s14-m-487",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-488",
@@ -3322,13 +2386,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Good...Listen...don't lower your guard at any time.\"",
     image: "s14-m-488",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-489",
@@ -3345,13 +2402,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"He betrayed the Leaf and joined Orochimaru for the power...\"",
     image: "s14-m-489",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-490",
@@ -3369,13 +2419,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"I don't hand it to anyone. It's my brother's.\"",
     image: "s14-m-490",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-491",
@@ -3392,13 +2435,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Let's make it simple! I hate you!!\"",
     image: "s14-m-491",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-492",
@@ -3415,13 +2451,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Long time no see, Lord Sasori.\"",
     image: "s14-m-492",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-493",
@@ -3437,13 +2466,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Effect: When this Mission card's effect is applied, draw 1 card. Players cannot discard any cards from their Deck due to their effects during the Exchange of Jutsu.",
     ],
     image: "s14-m-493",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-494",
@@ -3458,13 +2480,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Effect: If you paid the Hand cost of this card with a \"Respective Dreams\" Mission card, you win 1 Battle Reward and randomly select up to 2 cards in your opponent's hand and discard them(it).",
     ],
     image: "s14-m-494",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-495",
@@ -3479,13 +2494,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
       "Effect: If you paid the Hand cost of this card with a \"Pledge under a Starry Sky\" Mission card, move 2 cards from your opponent's Battle Reward area to your hand and randomly select up to 2 cards in your opponent's hand and discard them(it).",
     ],
     image: "s14-m-495",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-496",
@@ -3502,13 +2510,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Danzo is a hard-liner who used to oppose to the third hokage.\"",
     image: "s14-m-496",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-497",
@@ -3524,13 +2525,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Tsunade, Naruto is no ordinary child. He is a 'Jinchuriki'.\"",
     image: "s14-m-497",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-498",
@@ -3548,13 +2542,6 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Boy! Give me your kunai.\"",
     image: "s14-m-498",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s14-m-499",
@@ -3571,12 +2558,5 @@ export const S14_EMERGING_ALLIANCE: Card[] = [
     ],
     flavor: "\"Over there...\"",
     image: "s14-m-499",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

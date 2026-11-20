@@ -17,6 +17,7 @@ import {
   type LayoutId,
 } from '@/lib/cardMaker/model';
 import { deleteCustomCard, hasPendingArt, syncAllCardArtRefs, syncCardArtRefs, uploadCardArt } from '@/lib/cardMaker/artUpload';
+import { publishAltCard } from '@/lib/cardMaker/altCardsClient';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import { customCardActions, useCustomCards } from '@/lib/cardMaker/store';
@@ -131,6 +132,8 @@ export default function CardMakerPage() {
     // O servidor fica sabendo das artes que a carta usa agora: a que foi trocada (ou a recém-enviada, se a carta não
     // coube no navegador) sai do Blob se nada mais a usa.
     void syncCardArtRefs(sent.id, saved ? toSave : (stored ?? null), saved ? stored : toSave).catch(() => undefined);
+    // Carta importada do catálogo: aparece (ou é atualizada) nas artes alternativas do detalhe da carta de origem.
+    if (saved) void publishAltCard(toSave).catch(() => undefined);
     setDraft((d) => d && withUploadedArt(d, sent, toSave));
     setSaving(false);
   };

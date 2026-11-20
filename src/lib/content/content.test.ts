@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { CARDS, CARDS_BY_ID } from '../../data/cards.ts';
-import type { Card, NinjaCard } from '../../models/card.ts';
-import { catalogDraft, toCatalogCard } from '../cardMaker/catalogEdit.ts';
+import { cardImageUrl, type Card, type NinjaCard } from '../../models/card.ts';
+import { catalogDraft, toCatalogCard, withAltDesign, withoutLayout } from '../cardMaker/catalogEdit.ts';
 import { CHAKRA_ICON, ELEMENT_ICONS, TYPE_ICON_VARIANTS } from '../cardMaker/icons/index.ts';
 import { SEED_ICONS } from '../cardMaker/icons/seed.ts';
 import { LAYOUTS, LAYOUT_LIST } from '../cardMaker/layouts/index.ts';
@@ -114,6 +114,41 @@ test('aba Editar: o que o editor muda vai para a carta e para o layout dela', ()
   assert.equal(again.name, 'Naruto\nUzumaki');
   assert.equal(again.text, '[Efeito:] compre {2} cards.');
   assert.deepEqual(again.villages, [{ village: 'sand', rogue: true }]);
+});
+
+test('aba Editar: carta sem layout começa no layout escolhido, com a impressa de fundo; e pode voltar para a original', () => {
+  const card = CARDS_BY_ID.get('fx-n-001')!;
+  const plain = withoutLayout(card);
+  assert.equal('layout' in plain, false);
+  const draft = catalogDraft(plain, 'layout-02');
+  assert.equal(draft.layout, 'layout-02');
+  assert.equal(draft.art.src, cardImageUrl(card, 'full'));
+  assert.equal(toCatalogCard(plain, draft).layout?.layout, 'layout-02');
+});
+
+test('arte alternativa: vira o design padrão só com o visual da carta criada', () => {
+  const card = CARDS_BY_ID.get('fx-n-001')!;
+  const blob = `https://abc.public.blob.vercel-storage.com/naruto-ccg/art/${'a'.repeat(64)}.webp`;
+  const alt = {
+    ...catalogDraft(withoutLayout(card), 'layout-02'),
+    name: 'Outro nome',
+    text: 'Outro texto',
+    healthy: '9/9',
+    nameSize: -3,
+    art: { src: blob, x: 5, y: 6, zoom: 1.5 },
+  };
+  const chosen = withAltDesign(card, alt);
+  const { layout: _a, ...data } = chosen;
+  const { layout: _b, ...original } = card;
+  assert.deepEqual(data, original);
+  assert.equal(chosen.layout?.layout, 'layout-02');
+  assert.equal(chosen.layout?.nameSize, -3);
+  assert.deepEqual(chosen.layout?.art.back, { x: 5, y: 6, zoom: 1.5, src: blob });
+  assert.equal(chosen.layout?.icons.elements.length, Math.min(card.elements.length, 3));
+  assert.equal(chosen.layout?.nameText, undefined);
+  assert.equal(chosen.layout?.textMarkup, undefined);
+  const parsed = parseCatalogCard(chosen, card, new Set(Object.keys(LAYOUTS)));
+  assert.ok(parsed.ok);
 });
 
 test('aba Editar: o servidor confere a carta antes de gravar', () => {

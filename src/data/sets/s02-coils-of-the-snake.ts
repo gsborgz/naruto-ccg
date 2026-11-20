@@ -26,13 +26,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Are there any in your squads you'd recommend? Who are ready for the exams despite their inexperience?\"",
     image: "s02-n-044",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-045",
@@ -53,13 +46,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"These cards have been Chakra-encoded with everything I've learned over the past four years.\"",
     image: "s02-n-045",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-046",
@@ -80,13 +66,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I don't quit and I don't run!\"",
     image: "s02-n-046",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-047",
@@ -107,13 +86,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You've heard of the Uchiha Clan, yet you're challenging me?\"",
     image: "s02-n-047",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-048",
@@ -131,13 +103,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"Okay, focus, Sakura, focus. This is where you show your stuff.\"",
     image: "s02-n-048",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 1.4, y: 0.4, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s02-n-049",
@@ -155,13 +120,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"Yeah, for us, but maybe not for them.\"",
     image: "s02-n-049",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-050",
@@ -179,13 +137,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"It looks like the exams are going to be fun this year..\"",
     image: "s02-n-050",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-051",
@@ -203,13 +154,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"We're the best of the best, and you, my friend, are history.\"",
     image: "s02-n-051",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-052",
@@ -230,13 +174,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Anyone fool enough to be caught cheating by the sentinels doesn't deserve to be here.\"",
     image: "s02-n-052",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-053",
@@ -257,13 +194,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"All right then, please come out, Guy Sensei.\"",
     image: "s02-n-053",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-054",
@@ -284,13 +214,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We go with you to make sure you're not up to anything.\"",
     image: "s02-n-054",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-055",
@@ -311,13 +234,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If you insult the Sound shinobi, you better be ready for the consequences.\"",
     image: "s02-n-055",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-056",
@@ -338,13 +254,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You heard what he said about the Hidden Sound Village? He called us little.\"",
     image: "s02-n-056",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-057",
@@ -362,13 +271,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"I say we teach this guy some manners.\"",
     image: "s02-n-057",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-058",
@@ -389,13 +291,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Shut up! ... or I'll kill you!\"",
     image: "s02-n-058",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-059",
@@ -416,13 +311,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're annoying ... all of you.\"",
     image: "s02-n-059",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-060",
@@ -443,13 +331,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Fine ... I'm not involved in any of this, okay?\"",
     image: "s02-n-060",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-061",
@@ -470,13 +351,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Eat this!\"",
     image: "s02-n-061",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-062",
@@ -497,13 +371,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Gotta hand it to you, you're quicker than the last one.\"",
     image: "s02-n-062",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-063",
@@ -524,13 +391,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Welllll, I was just thinking ... maybe after you clean this all up, I could take you out for some ramen. The good stuff.\"",
     image: "s02-n-063",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-064",
@@ -551,13 +411,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"How about we put an end to this now?\"",
     image: "s02-n-064",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-065",
@@ -578,13 +431,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'm Moegi, the sassiest Kunoichi in preschool! Check me out!\"",
     image: "s02-n-065",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-066",
@@ -605,13 +451,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Call me Udon!\"",
     image: "s02-n-066",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-067",
@@ -632,13 +471,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If you think I'm gonna end up a pile of snake waste in the woods, you're crazy!\"",
     image: "s02-n-067",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-068",
@@ -659,13 +491,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"In fact, I've never felt better.\"",
     image: "s02-n-068",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-069",
@@ -686,13 +511,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Okay ... No more caving ...\"",
     image: "s02-n-069",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-070",
@@ -713,13 +531,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Formation Ino!\"",
     image: "s02-n-070",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-071",
@@ -740,13 +551,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Shika!\"",
     image: "s02-n-071",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-072",
@@ -767,13 +571,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Cho!\"",
     image: "s02-n-072",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-073",
@@ -794,13 +591,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"There is something I must tell you right away ...\"",
     image: "s02-n-073",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-074",
@@ -821,13 +611,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"That's no way to treat a buddha.\"",
     image: "s02-n-074",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-075",
@@ -849,13 +632,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Hssss\"",
     image: "s02-n-075",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-076",
@@ -873,13 +649,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"That was almost too easy!\"",
     image: "s02-n-076",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-077",
@@ -897,13 +666,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"The nerve of those brats from the Village of Sand ...\"",
     image: "s02-n-077",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-078",
@@ -921,13 +683,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     text: [],
     flavor: "\"How foolhardy ...\"",
     image: "s02-n-078",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-079",
@@ -948,13 +703,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'm so glad there's time for a little taste of payback!\"",
     image: "s02-n-079",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-080",
@@ -975,13 +723,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The night is young ...! Heh heh heh ...\"",
     image: "s02-n-080",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-081",
@@ -1002,13 +743,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I wonder how long they'll last ...\"",
     image: "s02-n-081",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-082",
@@ -1029,13 +763,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Fancy meeting you here.\"",
     image: "s02-n-082",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-083",
@@ -1056,13 +783,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Now then, let me just borrow your left hand.\"",
     image: "s02-n-083",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-n-084",
@@ -1083,13 +803,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Yes, you'll do nicely.\"",
     image: "s02-n-084",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1106,13 +819,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Dancing ... Leaf Shadow!\"",
     image: "s02-j-043",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 1.4, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s02-j-044",
@@ -1128,13 +834,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"A'right, that's enough ... Lee!\"",
     image: "s02-j-044",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 1.3, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s02-j-045",
@@ -1150,13 +849,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"He's got the biggest eyebrows yet! They're almost alive!\"",
     image: "s02-j-045",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-046",
@@ -1173,13 +865,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"That's how you'll end up if you take the chunin exams.\"",
     image: "s02-j-046",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 1.1, zoom: 1.0045, print: true } },
-    },
   },
   {
     id: "s02-j-047",
@@ -1196,13 +881,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Why don't you just give up now, before you get hurt?\"",
     image: "s02-j-047",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 1.3, zoom: 1.004, print: true } },
-    },
   },
   {
     id: "s02-j-048",
@@ -1219,13 +897,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Genjutsu or Ninjutsu ... whatever 'magic' he's using ... I'll see it now!\"",
     image: "s02-j-048",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.8, y: 2, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s02-j-049",
@@ -1241,13 +912,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Shadow Clone Jutsu ...... Kakashi-style!\"",
     image: "s02-j-049",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 2.1, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s02-j-050",
@@ -1263,13 +927,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Maybe I can help you kids out a little.\"",
     image: "s02-j-050",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 1.6, zoom: 1.0037, print: true } },
-    },
   },
   {
     id: "s02-j-051",
@@ -1285,13 +942,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"They can pierce deeply, but rarely kill unless they target a vital organ ... not in the neck. These senbon are modified from needles used for medical treatments like acupuncture.\"",
     image: "s02-j-051",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.3, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s02-j-052",
@@ -1308,13 +958,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Thanks for the present. Hope you don't mind if I return it.\"",
     image: "s02-j-052",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.6, zoom: 1.0034, print: true } },
-    },
   },
   {
     id: "s02-j-053",
@@ -1331,13 +974,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Hang on, I saw it all - He dodged the attack. How did that happen?\"",
     image: "s02-j-053",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 1.2, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s02-j-054",
@@ -1353,13 +989,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Wind Scythe Jutsu!\"",
     image: "s02-j-054",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 1.4, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s02-j-055",
@@ -1375,13 +1004,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"They haven't even noticed that there's one more sentinel than there used to be ...\"",
     image: "s02-j-055",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 0.3, zoom: 1.0032, print: true } },
-    },
   },
   {
     id: "s02-j-056",
@@ -1398,13 +1020,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The opening of the third eye!\"",
     image: "s02-j-056",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.5, y: 1.1, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s02-j-057",
@@ -1421,13 +1036,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Only Gaara has ever mastered the art. He draws the sand within the sphere of his own massive chakra ...\"",
     image: "s02-j-057",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 0.9, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s02-j-058",
@@ -1443,13 +1051,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're a long way from home and you're way out of your league.\"",
     image: "s02-j-058",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.9, y: 2.3, zoom: 1.0039, print: true } },
-    },
   },
   {
     id: "s02-j-059",
@@ -1465,13 +1066,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Makibishi spikes.\"",
     image: "s02-j-059",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 2.4, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s02-j-060",
@@ -1488,13 +1082,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Lee! When you can see it, adjust your headband.\"",
     image: "s02-j-060",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.6, y: 1.6, zoom: 1.0034, print: true } },
-    },
   },
   {
     id: "s02-j-061",
@@ -1510,13 +1097,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Those aren't just illusions, they're solid clones! He's mastered an extremely advanced Jutsu!!\"",
     image: "s02-j-061",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.6, y: 1.8, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s02-j-062",
@@ -1533,13 +1113,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Just a little longer and it'll be all done.\"",
     image: "s02-j-062",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 2.3, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s02-j-063",
@@ -1556,13 +1129,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Let's finish this ... now!\"",
     image: "s02-j-063",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 1.5, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s02-j-064",
@@ -1578,13 +1144,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Naruto ... isn't ... like that!\"",
     image: "s02-j-064",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-065",
@@ -1600,13 +1159,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I won't let you ...\"",
     image: "s02-j-065",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 1.4, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s02-j-066",
@@ -1622,13 +1174,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Fake rocks? ... What's up with that?\"",
     image: "s02-j-066",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 1.6, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s02-j-067",
@@ -1644,13 +1189,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This paper bomb explodes after a certain amount of time.\"",
     image: "s02-j-067",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 1.4, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s02-j-068",
@@ -1666,13 +1204,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Focus my chakra ...\"",
     image: "s02-j-068",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-069",
@@ -1689,13 +1220,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Th-this looks like ... the Art of Paralysis!\"",
     image: "s02-j-069",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 1.9, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s02-j-070",
@@ -1711,13 +1235,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Ohh ...\"",
     image: "s02-j-070",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-071",
@@ -1733,13 +1250,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Fire Style! Phoenix Flower Jutsu!\"",
     image: "s02-j-071",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.2, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s02-j-072",
@@ -1756,13 +1266,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Incredible! A Sharingan Windmill Triple Attack!\"",
     image: "s02-j-072",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-073",
@@ -1779,13 +1282,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Fire Style: Dragon Flame Jutsu!\"",
     image: "s02-j-073",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-074",
@@ -1801,13 +1297,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Summoning Jutsu!\"",
     image: "s02-j-074",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 1.5, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s02-j-075",
@@ -1823,13 +1312,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're completely surrounded. No gaps ... No blind spots.\"",
     image: "s02-j-075",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 0.4, zoom: 1.0037, print: true } },
-    },
   },
   {
     id: "s02-j-076",
@@ -1846,13 +1328,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Yah! Striking Shadow Snake!\"",
     image: "s02-j-076",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-077",
@@ -1869,13 +1344,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Right ... It's over. You and I are going to die here ...\"",
     image: "s02-j-077",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 1.3, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s02-j-078",
@@ -1892,13 +1360,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Uhn! ... I can't move ...\"",
     image: "s02-j-078",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 1.7, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s02-j-079",
@@ -1915,13 +1376,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Yaaaaah!!\"",
     image: "s02-j-079",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-080",
@@ -1938,13 +1392,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We've been very, very cautiously ...... running around in circles!\"",
     image: "s02-j-080",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-081",
@@ -1961,13 +1408,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Heh heh ... You're all trapped like rats!\"",
     image: "s02-j-081",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 1.9, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s02-j-082",
@@ -1983,13 +1423,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"There's nothing where their faces used to be, like they melted or something.\"",
     image: "s02-j-082",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 2.3, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s02-j-083",
@@ -2006,13 +1439,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Okay, Team Ino, let's show these guys who's boss.\"",
     image: "s02-j-083",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-j-084",
@@ -2029,13 +1455,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I just gave him a little parting gift.\"",
     image: "s02-j-084",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2052,13 +1471,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Stand up, idiot!\"",
     image: "s02-m-043",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-044",
@@ -2075,13 +1487,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"No-o-o-o!\"",
     image: "s02-m-044",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-045",
@@ -2098,13 +1503,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"What is this energy?\"",
     image: "s02-m-045",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-046",
@@ -2121,13 +1519,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's too soon! They need more experience before they are tested.\"",
     image: "s02-m-046",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.2, y: 0.5, zoom: 0.9983, print: true } },
-    },
   },
   {
     id: "s02-m-047",
@@ -2145,13 +1536,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Iruka needs to hear this. He needs to realize that they are not his students anymore. They are mine.\"",
     image: "s02-m-047",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-048",
@@ -2168,13 +1552,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You see, only groups of three are allowed to apply for and take the exam.\"",
     image: "s02-m-048",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-049",
@@ -2191,13 +1568,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"They're from the Village Hidden in the Sound.\"",
     image: "s02-m-049",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-050",
@@ -2214,13 +1584,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Well done, Haku.\"",
     image: "s02-m-050",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-051",
@@ -2237,13 +1600,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"So this is the Chunin exam, huh? ...... It's a freak show.\"",
     image: "s02-m-051",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-052",
@@ -2260,13 +1616,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"He ... he's the d-devil!\"",
     image: "s02-m-052",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-053",
@@ -2282,13 +1631,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Not a written test, no waaaay!!\"",
     image: "s02-m-053",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-054",
@@ -2304,13 +1646,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Five strikes and you're out. You just failed the test.\"",
     image: "s02-m-054",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-055",
@@ -2327,13 +1662,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Kankuro ... back off. You're an embarrassment to our village.\"",
     image: "s02-m-055",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-056",
@@ -2350,13 +1678,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You don't know what's going on, do you? We have permission.\"",
     image: "s02-m-056",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-057",
@@ -2372,13 +1693,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Lee! ... That last technique is forbidden, you know that!\"",
     image: "s02-m-057",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-058",
@@ -2395,13 +1709,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"A weirdo?\"",
     image: "s02-m-058",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-059",
@@ -2418,13 +1725,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Now, if we are ready we'll proceed to the first stage of the Chunin exam.\"",
     image: "s02-m-059",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-060",
@@ -2441,13 +1741,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Man, what a mess. Scars and puncture wounds. Burn marks ... What he must have endured.\"",
     image: "s02-m-060",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-061",
@@ -2464,13 +1757,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"When we're all together ... We are the Konohamaru Ninja Squad!!\"",
     image: "s02-m-061",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-062",
@@ -2487,13 +1773,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Believe it, this is NO BIG DEAL!\"",
     image: "s02-m-062",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-063",
@@ -2509,13 +1788,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Here we all are, the nine rookies. This is gonna be fun.\"",
     image: "s02-m-063",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-064",
@@ -2531,13 +1803,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"That way at least ONE of you will end up tied to a post.\"",
     image: "s02-m-064",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-065",
@@ -2554,13 +1819,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'm not going to lose out to Sasuke!\"",
     image: "s02-m-065",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-066",
@@ -2576,13 +1834,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I got rid of all your weeds! Pretty cool, huh?\"",
     image: "s02-m-066",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-067",
@@ -2599,13 +1850,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Lucky us ... We needed the Heaven Scroll.\"",
     image: "s02-m-067",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 0.2, zoom: 1.0011, print: true } },
-    },
   },
   {
     id: "s02-m-068",
@@ -2622,13 +1866,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If qualities of heaven are your desire, acquire wisdom and knowledge to take your mind higher. If earthly qualities are what you lack, train your body in the fields and prepare to attack.\"",
     image: "s02-m-068",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-069",
@@ -2645,13 +1882,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Nothing makes dumplings go down like a little sweet red bean soup.\"",
     image: "s02-m-069",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-070",
@@ -2667,13 +1897,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You ready for the second test? Good! Then let's go!\"",
     image: "s02-m-070",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-071",
@@ -2691,13 +1914,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Don't worry. I'm all right. It's only the power flowing through me.\"",
     image: "s02-m-071",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-072",
@@ -2713,13 +1929,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If I haven't the courage to face this demon how can I ever hope to face him?\"",
     image: "s02-m-072",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-073",
@@ -2736,13 +1945,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The second part of the test has begun!\"",
     image: "s02-m-073",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.4, y: 0, zoom: 0.9998, print: true } },
-    },
   },
   {
     id: "s02-m-074",
@@ -2759,13 +1961,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We'll strike a deal. I give you this scroll and you let us go.\"",
     image: "s02-m-074",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.8, y: -1.5, zoom: 1.0013, print: true } },
-    },
   },
   {
     id: "s02-m-075",
@@ -2781,13 +1976,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Something about this Kabuto just ... bugs me!\"",
     image: "s02-m-075",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-076",
@@ -2805,13 +1993,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Looking in her eyes ... I saw the moment of my own death ... !\"",
     image: "s02-m-076",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-077",
@@ -2828,13 +2009,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The question will be: 'When does a ninja strike?' And the response is ...\"",
     image: "s02-m-077",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.7, y: -0.6, zoom: 0.9988, print: true } },
-    },
   },
   {
     id: "s02-m-078",
@@ -2851,13 +2025,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Sorry. This is one test you fail.\"",
     image: "s02-m-078",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-079",
@@ -2874,13 +2041,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"In just 97 minutes ... This is unprecedented!\"",
     image: "s02-m-079",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-080",
@@ -2897,13 +2057,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Now it's my turn to take the lead. And all of you can watch me from the background.\"",
     image: "s02-m-080",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-081",
@@ -2920,13 +2073,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We really lucked out ... The first people to fall into the trap we set were carrying the Earth Scroll we needed!\"",
     image: "s02-m-081",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-082",
@@ -2943,13 +2089,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"All right. That's enough resting up, I think ... The other teams will be calling it a day soon.\"",
     image: "s02-m-082",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.4, y: 0, zoom: 1.0016, print: true } },
-    },
   },
   {
     id: "s02-m-083",
@@ -2965,13 +2104,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This is Sakura.\"",
     image: "s02-m-083",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-m-084",
@@ -2988,13 +2120,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I can't help it! I gotta eat!\"",
     image: "s02-m-084",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -3012,13 +2137,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Can I ... Can I be that strong too ... ? Father!\"",
     image: "s02-c-001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-c-002",
@@ -3035,13 +2153,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'm building a bridge there that will change our world! I expect you to get me there safely even if it means giving up your life!\"",
     image: "s02-c-002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-c-003",
@@ -3058,13 +2169,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I put out big money for you ... Because you're supposed to be hot-shot assassins!\"",
     image: "s02-c-003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-c-004",
@@ -3081,13 +2185,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Ohhh! My poor little Tora! Mommy was so worried about her naughty little fuzzykins!\"",
     image: "s02-c-004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s02-c-005",
@@ -3104,13 +2201,6 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Too bad ... You'll have to come with us. Now.\"",
     image: "s02-c-005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 3.4, y: -2.6, zoom: 1.0054, print: true } },
-    },
   },
   {
     id: "s02-c-006",
@@ -3127,12 +2217,5 @@ export const S02_COILS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"What a waste ... I was in the mood to cut something.\"",
     image: "s02-c-006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

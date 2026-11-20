@@ -26,13 +26,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Now, ... your body will be mine.\"",
     image: "s08-n-255",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-256",
@@ -53,13 +46,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I'll destroy you...\"",
     image: "s08-n-256",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-257",
@@ -81,13 +67,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I've decided to join Orochimaru!\"",
     image: "s08-n-257",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-258",
@@ -109,13 +88,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"What are you doing here, stranger?\"",
     image: "s08-n-258",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 5.6, y: 0.8, zoom: 1.0115, print: true } },
-    },
   },
   {
     id: "s08-n-259",
@@ -136,13 +108,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I find this clan hopelessly unfit for my capacity.\"",
     image: "s08-n-259",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-260",
@@ -163,13 +128,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I'm proud of you, son...\"",
     image: "s08-n-260",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-261",
@@ -190,13 +148,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Your father always cares about both of you.\"",
     image: "s08-n-261",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-262",
@@ -218,13 +169,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Let's go, Lee!!\" \"Yes, Guy sensei!!!\"",
     image: "s08-n-262",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-263",
@@ -245,13 +189,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Forgive me, Sasuke... There'll be another time.\" \"It hurts!\"",
     image: "s08-n-263",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-264",
@@ -272,13 +209,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Now, what do you think?\" \"......\"",
     image: "s08-n-264",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-265",
@@ -300,13 +230,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Let's finish this quickly! Change to 'State 2'!!\"",
     image: "s08-n-265",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-266",
@@ -327,13 +250,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"My moves are irregular, aren't they? This is my Kekkei Genkai.\"",
     image: "s08-n-266",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-267",
@@ -354,13 +270,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
       "Valid: When you are the Attacker, at the beginning of the Battle Phase, you may move this in-play Ninja into any of your Teams.",
     ],
     image: "s08-n-267",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-268",
@@ -381,13 +290,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"We owe the Leaf Village ... a great debt.\"",
     image: "s08-n-268",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-269",
@@ -408,13 +310,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Your Jutsu seems to have no effect on puppets.\"",
     image: "s08-n-269",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-270",
@@ -435,13 +330,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Are you going to give up again?\"",
     image: "s08-n-270",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-271",
@@ -463,13 +351,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Creak\"",
     image: "s08-n-271",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-272",
@@ -491,13 +372,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Creak\"",
     image: "s08-n-272",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-273",
@@ -518,13 +392,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Only one more shot of Wolf Fang Over Fang is possible... The next will be the last.\"",
     image: "s08-n-273",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-274",
@@ -545,13 +412,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"...I won't let such a thing happen ......\"",
     image: "s08-n-274",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-275",
@@ -572,13 +432,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"No way... He's already catching up...\"",
     image: "s08-n-275",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-276",
@@ -599,13 +452,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Everyone, go!!\"",
     image: "s08-n-276",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-277",
@@ -626,13 +472,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I can never lose... I have a reason for that.\"",
     image: "s08-n-277",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-278",
@@ -653,13 +492,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Naruto, can you move according to my plan?\" \"!\"",
     image: "s08-n-278",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-279",
@@ -681,13 +513,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I've hardened my bones to the limit.... They'll penetrate beyond your sand shield.\"",
     image: "s08-n-279",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-280",
@@ -709,13 +534,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It was a stupid game... but I did find some enjoyment in it. This is a reward for that.\"",
     image: "s08-n-280",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-281",
@@ -737,13 +555,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Well, it's time for a meal...\"",
     image: "s08-n-281",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-282",
@@ -765,13 +576,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"How do you want it?\" \"...... Broken in pieces.\"",
     image: "s08-n-282",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-283",
@@ -793,13 +597,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Heh-heh... In 'State 2,' I can use dozens of Genjutsu with my flute...\"",
     image: "s08-n-283",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-288",
@@ -821,13 +618,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Hyaaah!!!\"",
     image: "s08-n-288",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-289",
@@ -849,13 +639,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I am even more special than you.\"",
     image: "s08-n-289",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-290",
@@ -876,13 +659,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Yes... Sasuke is alive...\"",
     image: "s08-n-290",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-291",
@@ -903,13 +679,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I guessed it was a trap for luring us into this place.\"",
     image: "s08-n-291",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-292",
@@ -930,13 +699,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Control your Chakra with the utmost care!\"",
     image: "s08-n-292",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-293",
@@ -957,13 +719,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I'm sorry ... I couldn't come in time....\"",
     image: "s08-n-293",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-294",
@@ -984,13 +739,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It gets too dangerous from here... It's a mission for adults.\"",
     image: "s08-n-294",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-295",
@@ -1011,13 +759,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It's extremely simple for me to generate sand out of soil.\"",
     image: "s08-n-295",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-296",
@@ -1038,13 +779,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I must rescue Arashi...!\"",
     image: "s08-n-296",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-297",
@@ -1065,13 +799,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"My final mission is to guide my guest to the other world...\"",
     image: "s08-n-297",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 5.3, y: -1.3, zoom: 1.0097, print: true } },
-    },
   },
   {
     id: "s08-n-298",
@@ -1092,13 +819,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Everyone, stop talking and finish this now!\"",
     image: "s08-n-298",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-299",
@@ -1119,13 +839,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Everything is for the revival of the Fuma clan!\"",
     image: "s08-n-299",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-300",
@@ -1146,13 +859,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Don't worry. My little ones are making a silver path that leads to them.\"",
     image: "s08-n-300",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-301",
@@ -1173,13 +879,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"That's when I can end my life in my true form...!\"",
     image: "s08-n-301",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 3.6, y: 2, zoom: 1.0103, print: true } },
-    },
   },
   {
     id: "s08-n-302",
@@ -1201,13 +900,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I believed... we could revive our clan some day.... I did believe in it...\"",
     image: "s08-n-302",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-303",
@@ -1225,13 +917,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     text: [],
     flavor: "\"I'm sorry, Sasame... I made you sad...\"",
     image: "s08-n-303",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-304",
@@ -1253,13 +938,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"The Arashi you know no longer exists.\"",
     image: "s08-n-304",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-305",
@@ -1281,13 +959,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You know nothing!!\"",
     image: "s08-n-305",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-306",
@@ -1308,13 +979,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Sakura!\" \"Naruto...!\"",
     image: "s08-n-306",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us055",
@@ -1335,13 +999,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It's only natural. The prey must never let down its guard, not even for a moment...in the presence of its predator.\"",
     image: "s08-n-us055",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us056",
@@ -1362,13 +1019,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"A sound wave I can channel with my chakra, focusing all its energy on any target I desire!\"",
     image: "s08-n-us056",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us057",
@@ -1389,13 +1039,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"See, I can manipulate ultrasonic waves and air pressure. I can obliterate boulders, or make the ground itself as soft as a feather cushion.\"",
     image: "s08-n-us057",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us058",
@@ -1416,13 +1059,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"In fact, they say the Uchiha clan's Sharingan was derived from the Byakugan sometime long ago. But for sheer power of insight... The Byakugan is the stronger of the two.'",
     image: "s08-n-us058",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us059",
@@ -1444,13 +1080,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Hmph.\"",
     image: "s08-n-us059",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us060",
@@ -1471,13 +1100,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Katsuyu!\" \"Acid Slime!\"",
     image: "s08-n-us060",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us061",
@@ -1498,13 +1120,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Why did you do this..? Itachi, why?\" \"To test the limits... of my ability...\"",
     image: "s08-n-us061",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us062",
@@ -1525,13 +1140,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"By concentrating his Chakra in his nose, Kiba can make his sense of smell a thousand times more sensitive than average. It's easy for him to distinguish people by their scent.\"",
     image: "s08-n-us062",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us063",
@@ -1552,13 +1160,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"One more and we are finished! The fifth gate — Gate of Closing ... open!!\"",
     image: "s08-n-us063",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us064",
@@ -1579,13 +1180,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Shino?... How did you find us?\" \"I planted a beetle on you as you left the arena... A female beetle.\"",
     image: "s08-n-us064",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-n-us065",
@@ -1606,13 +1200,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"But, now, finally, you're the one watching me. And I'll show you what I can do, ... Naruto!\"",
     image: "s08-n-us065",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1629,13 +1216,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Leaf's Severe Hurricane!!\"",
     image: "s08-j-232",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.6, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s08-j-233",
@@ -1651,13 +1231,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Oh... I'm a bit loopy.\"",
     image: "s08-j-233",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 1.5, zoom: 1.0045, print: true } },
-    },
   },
   {
     id: "s08-j-234",
@@ -1674,13 +1247,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"We're going together...\"",
     image: "s08-j-234",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 2.1, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s08-j-235",
@@ -1696,13 +1262,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Arf!\"",
     image: "s08-j-235",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 2.2, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s08-j-236",
@@ -1718,13 +1277,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Take this!! Wolf Fang Over Fang!!\"",
     image: "s08-j-236",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s08-j-237",
@@ -1741,13 +1293,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Slamming Palm!!\"",
     image: "s08-j-237",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-j-238",
@@ -1764,13 +1309,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Accuracy: 100%, Power: Maximum.\"",
     image: "s08-j-238",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -5, y: 1.7, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-239",
@@ -1787,13 +1325,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Multiple Fists Barrage!!\"",
     image: "s08-j-239",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 1.8, zoom: 1.0045, print: true } },
-    },
   },
   {
     id: "s08-j-240",
@@ -1810,13 +1341,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Summoning Jutsu... Rashomon!!\"",
     image: "s08-j-240",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: 1.4, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-241",
@@ -1832,13 +1356,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Hey... Who are you looking for?\"",
     image: "s08-j-241",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.2, y: 1.8, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s08-j-242",
@@ -1854,13 +1371,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I'm gonna play a melody of death!\"",
     image: "s08-j-242",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.7, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s08-j-243",
@@ -1877,13 +1387,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Finale, Ninth Passage, Demon Revolution!!\"",
     image: "s08-j-243",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-j-244",
@@ -1900,13 +1403,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"This Genjutsu immobilizes and binds the enemy!\"",
     image: "s08-j-244",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.5, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s08-j-245",
@@ -1923,13 +1419,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Watch my Willow Dance!\"",
     image: "s08-j-245",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.6, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s08-j-246",
@@ -1946,13 +1435,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Camellia Dance!!\"",
     image: "s08-j-246",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 1.7, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s08-j-247",
@@ -1969,13 +1451,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Larch Dance.\"",
     image: "s08-j-247",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.7, zoom: 1.0039, print: true } },
-    },
   },
   {
     id: "s08-j-248",
@@ -1992,13 +1467,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I gathered subterranean minerals with high levels of hardness, pressurized them with my Chakra, and mixed them into the sand.\"",
     image: "s08-j-248",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -4.6, y: 1.6, zoom: 1.0045, print: true } },
-    },
   },
   {
     id: "s08-j-249",
@@ -2015,13 +1483,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"The end.\"",
     image: "s08-j-249",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.7, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s08-j-250",
@@ -2038,13 +1499,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Cyclone Scythe Jutsu!!\"",
     image: "s08-j-250",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.7, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s08-j-251",
@@ -2061,13 +1515,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"That Jutsu is my only option ...\"",
     image: "s08-j-251",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 3.7, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s08-j-252",
@@ -2084,13 +1531,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Vine!\"",
     image: "s08-j-252",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 1.5, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-253",
@@ -2107,13 +1547,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Flower!\"",
     image: "s08-j-253",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 1.5, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s08-j-254",
@@ -2129,13 +1562,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Ugh... Now is your chance, Kiba!\"",
     image: "s08-j-254",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 3.5, zoom: 1.0039, print: true } },
-    },
   },
   {
     id: "s08-j-255",
@@ -2152,13 +1578,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s08-j-255",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 1.4, zoom: 1.0039, print: true } },
-    },
   },
   {
     id: "s08-j-256",
@@ -2175,13 +1594,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Those Chakra threads are connected to the Chakra Network of my heart...\"",
     image: "s08-j-256",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 1.9, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s08-j-259",
@@ -2198,13 +1610,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Chidori!!\"",
     image: "s08-j-259",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 1.5, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-260",
@@ -2221,13 +1626,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I'm gonna make you sorry with this!\"",
     image: "s08-j-260",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -4.9, y: 1.5, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s08-j-263",
@@ -2243,13 +1641,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"There!\"",
     image: "s08-j-263",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 2, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s08-j-264",
@@ -2266,13 +1657,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I'm going to show you the Bracken Dance.\"",
     image: "s08-j-264",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.9, y: 2.4, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s08-j-265",
@@ -2289,13 +1673,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"The Chakra cage shrinks gradually...\"",
     image: "s08-j-265",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.6, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s08-j-266",
@@ -2311,13 +1688,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Although we're using his hair as the medium, take extreme care to restore the right composition of cells in the lost parts!\"",
     image: "s08-j-266",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 1.9, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-267",
@@ -2334,13 +1704,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Sand Shower!!\"",
     image: "s08-j-267",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.2, y: 1.7, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-268",
@@ -2357,13 +1720,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Sand Tsunami!!\"",
     image: "s08-j-268",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 1.8, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s08-j-269",
@@ -2380,13 +1736,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It's not finished yet.\"",
     image: "s08-j-269",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 1.3, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s08-j-270",
@@ -2403,13 +1752,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"...This Jutsu buries and traps the enemy 650 feet below the ground level.",
     image: "s08-j-270",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.5, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s08-j-271",
@@ -2426,13 +1768,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"My little ones made a path with their silver threads and let us know where you were going!\"",
     image: "s08-j-271",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.5, y: 3.8, zoom: 1.0039, print: true } },
-    },
   },
   {
     id: "s08-j-272",
@@ -2449,13 +1784,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Remember that our true nature belongs to the dark subterranean world...\"",
     image: "s08-j-272",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -5.1, y: 3.5, zoom: 1.004, print: true } },
-    },
   },
   {
     id: "s08-j-273",
@@ -2472,13 +1800,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I can use this Jutsu only once in my lifetime, but I don't hesitate to use it for our goal...\"",
     image: "s08-j-273",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 4, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s08-j-us045",
@@ -2495,13 +1816,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You've both just been swallowed by the Mountain Toad. Welcome, my friends, to the belly of the beast.\"",
     image: "s08-j-us045",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 1.7, zoom: 1.004, print: true } },
-    },
   },
   {
     id: "s08-j-us046",
@@ -2518,13 +1832,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"But now...This is the end...\"",
     image: "s08-j-us046",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 1.6, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s08-j-us047",
@@ -2541,13 +1848,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Thank goodness that Jiraiya's here! Now, unless you want to make this frog really mad, you'll never bother us again!\"",
     image: "s08-j-us047",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 1.4, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s08-j-us048",
@@ -2563,13 +1863,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You live up to your reputation. However...\" \"!\"",
     image: "s08-j-us048",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.4, zoom: 1.0038, print: true } },
-    },
   },
   {
     id: "s08-j-us049",
@@ -2586,13 +1879,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Proctor... It's over.\"",
     image: "s08-j-us049",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: 3.5, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s08-j-us050",
@@ -2608,13 +1894,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Whenever he gets stuck on a move, he does that thing with his hands. He's working out a strategy.\"",
     image: "s08-j-us050",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 3.1, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s08-j-us051",
@@ -2631,13 +1910,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I should have guessed you'd use that shadow clone jutsu... It's your specialty, after all...I was careless.\"",
     image: "s08-j-us051",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -4.5, y: 1.5, zoom: 1.004, print: true } },
-    },
   },
   {
     id: "s08-j-us052",
@@ -2654,13 +1926,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"But I know what to do. .. This will draw out that ninth ninja and reveal where he's hiding!\"",
     image: "s08-j-us052",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 3.3, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s08-j-us053",
@@ -2676,13 +1941,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You and I are a lot alike... more than you know... We shouldn't be doing this.\"",
     image: "s08-j-us053",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.4, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s08-j-us054",
@@ -2698,13 +1956,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Fire Style: Fireball Jutsu!!\"",
     image: "s08-j-us054",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.8, y: 1.5, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s08-j-us055",
@@ -2721,13 +1972,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"The next 72 hours will be nothing but this. Over and over.\"",
     image: "s08-j-us055",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.2, y: 2.4, zoom: 1.0036, print: true } },
-    },
   },
   {
     id: "s08-j-us056",
@@ -2744,13 +1988,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It looks to me like somebody used our teammate as a punching bag...No one does that and gets away with it!\"",
     image: "s08-j-us056",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.1, y: 4.6, zoom: 1.0048, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2768,13 +2005,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Are you from the Mist Village?\" \"...No.\"",
     image: "s08-m-236",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 2.4, zoom: 1.0009, print: true } },
-    },
   },
   {
     id: "s08-m-237",
@@ -2791,13 +2021,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"As I said before, the first attack is a fake...\"",
     image: "s08-m-237",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 2.8, zoom: 1.0012, print: true } },
-    },
   },
   {
     id: "s08-m-238",
@@ -2815,13 +2038,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Let me handle this guy!\"",
     image: "s08-m-238",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.1, y: 3, zoom: 1.0004, print: true } },
-    },
   },
   {
     id: "s08-m-239",
@@ -2837,13 +2053,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Inuzuka Style: Man-Beast Transformation Combo!!\"",
     image: "s08-m-239",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 2.4, zoom: 1.0027, print: true } },
-    },
   },
   {
     id: "s08-m-240",
@@ -2859,13 +2068,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Actually ...He's going berserk!!\"",
     image: "s08-m-240",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.3, y: 1.9, zoom: 1.0014, print: true } },
-    },
   },
   {
     id: "s08-m-241",
@@ -2882,13 +2084,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I have no energy left... I can't move...\"",
     image: "s08-m-241",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 0.8, zoom: 1.0036, print: true } },
-    },
   },
   {
     id: "s08-m-242",
@@ -2905,13 +2100,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"This is a precious vessel for our dreams...\"",
     image: "s08-m-242",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 0.9, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s08-m-243",
@@ -2928,13 +2116,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Teach them how powerful the Kaguya clan is!\"",
     image: "s08-m-243",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 1.7, zoom: 1.0022, print: true } },
-    },
   },
   {
     id: "s08-m-244",
@@ -2951,13 +2132,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"'State 2' increases my power by more than 10 times. No one can rival me......\"",
     image: "s08-m-244",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 1.6, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s08-m-245",
@@ -2974,13 +2148,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Did it make me stronger to be with those 'friends'?\"",
     image: "s08-m-245",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-m-246",
@@ -2997,13 +2164,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"We're shinobi...\" \"From the Sand Village...\" \"The ally of the Leaf Village...\"",
     image: "s08-m-246",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.2, y: 2.6, zoom: 1.0014, print: true } },
-    },
   },
   {
     id: "s08-m-247",
@@ -3020,13 +2180,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Fifth Hokage! You've been dozing off, haven't you?\"",
     image: "s08-m-247",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-m-248",
@@ -3042,13 +2195,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"If you become the last survivor, you'll be freed from this prison.\"",
     image: "s08-m-248",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.8, y: 3, zoom: 1.0011, print: true } },
-    },
   },
   {
     id: "s08-m-249",
@@ -3065,13 +2211,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I have made... a lot of friends...\"",
     image: "s08-m-249",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 2.8, zoom: 1.0017, print: true } },
-    },
   },
   {
     id: "s08-m-250",
@@ -3088,13 +2227,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"How much longer can I stay alive...?\"",
     image: "s08-m-250",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 2.5, zoom: 1.0019, print: true } },
-    },
   },
   {
     id: "s08-m-251",
@@ -3111,13 +2243,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"That will make us powerless in the darkness.\"",
     image: "s08-m-251",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.8, y: 1.3, zoom: 1.0029, print: true } },
-    },
   },
   {
     id: "s08-m-252",
@@ -3134,13 +2259,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"In terms of teamwork, we're a few notches above them.\"",
     image: "s08-m-252",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.7, y: 2.2, zoom: 1.0014, print: true } },
-    },
   },
   {
     id: "s08-m-253",
@@ -3157,13 +2275,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Each of us must be ready for a one-on-one fight to reach Sasuke.\"",
     image: "s08-m-253",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.8, y: 1.9, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s08-m-254",
@@ -3180,13 +2291,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"His appearance has changed ...!\"",
     image: "s08-m-254",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-m-255",
@@ -3203,13 +2307,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"This is the border called 'The Final Valley.'\"",
     image: "s08-m-255",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.7, y: 0.6, zoom: 0.9986, print: true } },
-    },
   },
   {
     id: "s08-m-256",
@@ -3226,13 +2323,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"His red Chakra is ... different from ordinary Chakra.\"",
     image: "s08-m-256",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 3.3, zoom: 1.0032, print: true } },
-    },
   },
   {
     id: "s08-m-257",
@@ -3249,13 +2339,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Naruto... I...\"",
     image: "s08-m-257",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-m-259",
@@ -3271,13 +2354,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You can't ... control me ...!\"",
     image: "s08-m-259",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 2.6, zoom: 1.0018, print: true } },
-    },
   },
   {
     id: "s08-m-260",
@@ -3293,13 +2369,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"This is the entrance to hell. We don't know what we might encounter...\"",
     image: "s08-m-260",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 2.8, zoom: 1.0029, print: true } },
-    },
   },
   {
     id: "s08-m-261",
@@ -3316,13 +2385,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"I don't want you ... to follow in my footsteps.\"",
     image: "s08-m-261",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.3, y: 2.9, zoom: 1.0013, print: true } },
-    },
   },
   {
     id: "s08-m-262",
@@ -3338,13 +2400,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Anything is possible ... with sand.\"",
     image: "s08-m-262",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.1, y: 1.9, zoom: 1.003, print: true } },
-    },
   },
   {
     id: "s08-m-263",
@@ -3360,13 +2415,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"In any country, young girls are charming!\"",
     image: "s08-m-263",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.7, y: 1.8, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s08-m-265",
@@ -3383,13 +2431,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Neji Hyuga and Choji Akimichi are critically injured... Their conditions are currently unpredictable.\"",
     image: "s08-m-265",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.3, y: 1.4, zoom: 1.0012, print: true } },
-    },
   },
   {
     id: "s08-m-266",
@@ -3406,13 +2447,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"What you see is a mere lump of flesh barely sustaining life with Ninja Art: Puppet of the Dead Man!\"",
     image: "s08-m-266",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.1, y: 1.2, zoom: 1.0022, print: true } },
-    },
   },
   {
     id: "s08-m-267",
@@ -3428,13 +2462,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Then, let's put an end to this battle...\"",
     image: "s08-m-267",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 2.3, zoom: 1.001, print: true } },
-    },
   },
   {
     id: "s08-m-us041",
@@ -3450,13 +2477,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"From now on, we will fight as equals.\"",
     image: "s08-m-us041",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.8, y: 1.8, zoom: 1.0016, print: true } },
-    },
   },
   {
     id: "s08-m-us042",
@@ -3472,13 +2492,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"My poor brother...If you wish to kill me, hate and curse me! Then, someday... show up with the same eyes as mine.\"",
     image: "s08-m-us042",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 1.7, zoom: 1.0019, print: true } },
-    },
   },
   {
     id: "s08-m-us043",
@@ -3494,13 +2507,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Leave behind Squads One and Two ... and head to the gate .. right now!\" \"Yes, sir!\"",
     image: "s08-m-us043",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 1.9, zoom: 1.0017, print: true } },
-    },
   },
   {
     id: "s08-m-us044",
@@ -3517,13 +2523,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Hi, there!.. I've been wanting to meet you for a really long time, Neji... So.. hi!\"",
     image: "s08-m-us044",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 1.9, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s08-m-us045",
@@ -3540,13 +2539,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You're hot...\"",
     image: "s08-m-us045",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-m-us046",
@@ -3563,13 +2555,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Don't use your Sharingan.\"",
     image: "s08-m-us046",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: 1.5, zoom: 1.0014, print: true } },
-    },
   },
   {
     id: "s08-m-us047",
@@ -3586,13 +2571,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Ibiki, you may reveal which ninja have been paired up.\" \"Yes, sir.\"",
     image: "s08-m-us047",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.2, y: 1.4, zoom: 1.0002, print: true } },
-    },
   },
   {
     id: "s08-m-us048",
@@ -3608,13 +2586,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"On top of Tsukuyomi, to have to use Amaterasu as well... It was more exhausting than I thought.\"",
     image: "s08-m-us048",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 0.4, zoom: 1.002, print: true } },
-    },
   },
   {
     id: "s08-m-us049",
@@ -3632,13 +2603,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"You're still too weak... You don't have enough hate.\"",
     image: "s08-m-us049",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 0.7, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s08-m-us050",
@@ -3656,13 +2620,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"It is a place where, every year, shinobi are born — raised — grow old — fight — and die to protect their home.\"",
     image: "s08-m-us050",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.3, y: 0.5, zoom: 1.0025, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -3680,13 +2637,6 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Both you and Itachi belong to the Uchiha clan, the distinguished clan of the Leaf Village. Have confidence in yourself!\"",
     image: "s08-c-032",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s08-c-033",
@@ -3703,12 +2653,5 @@ export const S08_BATTLE_OF_DESTINY: Card[] = [
     ],
     flavor: "\"Hi, Sasuke. Are you going to school?\"",
     image: "s08-c-033",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

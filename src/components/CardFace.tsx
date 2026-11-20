@@ -18,7 +18,7 @@ interface Props {
   card: Card;
   /** `thumb`: miniatura (grades); `full`: imagem em tamanho cheio (detalhe). */
   size: 'thumb' | 'full';
-  /** Mostra a carta montada quando ela tem `layout` (cartas escaneadas). Padrão: não (a imagem impressa). */
+  /** Mostra a carta montada quando ela tem `layout` (escolhido pela aba Editar ou pelas artes alternativas). Padrão: não (a imagem impressa). */
   rendered?: boolean;
   /** Imagem original: prioridade de carregamento (primeiras linhas da grade). */
   eager?: boolean;
@@ -51,10 +51,9 @@ function CatalogCardFace({ card, size, rendered = false, eager = false, classNam
         backgroundImage: `url(${cardImageUrl(card, 'thumb')})`,
         // Os cantos com o raio da moldura da carta, na montada e na impressa: as imagens impressas (e a miniatura por
         // trás da montada) têm o canto reto, preenchido com a cor da borda, que apareceria fora do canto da carta.
-        // Coleções ainda não mapeadas: o raio padrão
-        // (montada sem layout mapeado = layout 1, como em `fromCatalogCard`).
+        // Carta sem layout (a impressa): o raio padrão.
         borderRadius: cardCornerCss(
-          card.layout?.layout ?? (showRendered ? 'layout-01' : undefined),
+          card.layout?.layout,
           card.type,
           card.layout?.panelVariant,
         ),

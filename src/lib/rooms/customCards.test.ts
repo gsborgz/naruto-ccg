@@ -112,6 +112,9 @@ test('cartas criadas na sala: campos desconhecidos e a referência do catálogo 
   // Arte do próprio site continua aceita.
   assert.ok(parseSharedCustomCard({ ...custom('z'), art: { src: '/card-layouts/arts/s01/s01-n-001/back.webp', x: 0, y: 0, zoom: 1 } }));
   assert.equal(parseSharedCustomCard({ ...custom('z'), art: { src: '/cards/../segredo', x: 0, y: 0, zoom: 1 } }), null);
+  // A carta de origem (artes alternativas) passa, se for um id de carta.
+  assert.equal(parseSharedCustomCard({ ...custom('z'), source: 'fx-n-001' })?.source, 'fx-n-001');
+  assert.equal(parseSharedCustomCard({ ...custom('z'), source: '../x' }), null);
 });
 
 test('cartas criadas na sala: entram na partida com as regras de cada uma', () => {

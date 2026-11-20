@@ -10,19 +10,20 @@ import { customDeckCardId, customSourceId, isCustomCardId } from '@/lib/cardMake
 import { deleteCustomCard } from '@/lib/cardMaker/artUpload';
 import { readCustomCards } from '@/lib/cardMaker/store';
 import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog';
-import { useCardDesign } from '@/lib/cardDesign';
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFace } from './CardFace';
 import { NameSizeTuner } from './NameSizeTuner';
 import { ElementBadge } from './ElementBadge';
 
-type CardView = 'original' | 'rendered';
 /** Abas da coluna da direita: os dados da carta ou a edição da carta. */
 type DetailTab = 'details' | 'edit';
 
 /** Aba Editar: carregada sob demanda (o editor do criador não pesa no detalhe da carta). */
 const CardEditTab = dynamic(() => import('./cardMaker/CardEditTab'), { ssr: false });
+
+/** Artes alternativas no fim do detalhe: carregadas sob demanda (montam cartas do criador). */
+const AltCardList = dynamic(() => import('./cardMaker/AltCardList'), { ssr: false });
 
 const UNSAVED = 'Descartar as alterações não salvas desta carta?';
 
@@ -93,8 +94,6 @@ function CardDetails({
   const localCustom = useIsLocalCustomCard(card.id);
   // Na partida (cartas vindas da sala) não se exclui nada: a carta é a cópia que foi para a sala.
   const inMatch = useContext(CustomSourceContext) !== null;
-  // Abre no design escolhido na listagem (padrão: a original); o outro fica a um clique.
-  const [view, setView] = useState<CardView>(useCardDesign());
   // Ajuste do tamanho do nome (atalho na carta montada), aplicado na carta antes de gravar.
   const [sizeEdit, setSizeEdit] = useState<number | null>(null);
   const shown = card.layout && sizeEdit !== null ? { ...card, layout: { ...card.layout, nameSize: sizeEdit } } : card;
@@ -155,37 +154,18 @@ function CardDetails({
   if (canEdit && tab === 'edit') return <CardEditTab card={card} header={header} onDirtyChange={reportDirty} />;
 
   return (
+    <>
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:max-w-none">
-        <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
-        {canEdit && card.layout && view === 'rendered' && (
+        {/* O design padrão da carta: montada, se ela tem `layout` (escolhido na aba Editar ou nas artes alternativas); senão a impressa. */}
+        <CardFace card={shown} size="full" rendered className="rounded-lg shadow-xl" />
+        {canEdit && card.layout && (
           <NameSizeTuner
             cardId={card.id}
             saved={card.layout.nameSize ?? 0}
             value={sizeEdit ?? card.layout.nameSize ?? 0}
             onChange={setSizeEdit}
           />
-        )}
-        {/* Cartas escaneadas (`card.layout`) também podem ser vistas montadas a partir do layout e das artes. */}
-        {card.layout && (
-          <div role="group" aria-label="Imagem da carta" className="flex justify-center gap-1 text-sm">
-            {(
-              [
-                ['original', 'Original'],
-                ['rendered', 'Montada'],
-              ] as const
-            ).map(([value, label]) => (
-              <button
-                key={value}
-                type="button"
-                aria-pressed={view === value}
-                onClick={() => setView(value)}
-                className={`rounded-md px-3 py-1 ${view === value ? 'bg-accent font-semibold text-bg' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
         )}
       </div>
       <div className="flex min-w-0 flex-col gap-4">
@@ -280,6 +260,8 @@ function CardDetails({
         {actions && <div className="mt-auto">{actions}</div>}
       </div>
     </div>
+    {canEdit && <AltCardList card={card} />}
+    </>
   );
 }
 

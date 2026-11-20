@@ -23,13 +23,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [],
     flavor: "\"Iruka sensei!\" \"You're as restless as always.\"",
     image: "s05-n-186",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-187",
@@ -51,13 +44,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"They want me, don't they?\"",
     image: "s05-n-187",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-188",
@@ -78,13 +64,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Why are you doing this ...? Itachi!!\"",
     image: "s05-n-188",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-189",
@@ -105,13 +84,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I have a good idea! I'll take this for Sasuke later.\"",
     image: "s05-n-189",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-190",
@@ -129,13 +101,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     text: [],
     flavor: "\"Number 102, stand up ... You fail.\"",
     image: "s05-n-190",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 3.7, y: 1.7, zoom: 1.0115, print: true } },
-    },
   },
   {
     id: "s05-n-191",
@@ -156,13 +121,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I vow ... to avenge you.\"",
     image: "s05-n-191",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-192",
@@ -183,13 +141,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"His eyes have remained unchanged ...\"",
     image: "s05-n-192",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-193",
@@ -210,13 +161,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I am the handsome devil of the Leaf Village ... Might Guy!!\"",
     image: "s05-n-193",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-194",
@@ -237,13 +181,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Kurenai ... You took too much time.\"",
     image: "s05-n-194",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-195",
@@ -264,13 +201,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Don't be silly. I'm just getting dumplings for Anko.\"",
     image: "s05-n-195",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-196",
@@ -291,13 +221,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Kuromaru, let's go!\"",
     image: "s05-n-196",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-197",
@@ -319,13 +242,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Yeah!\"",
     image: "s05-n-197",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-198",
@@ -346,13 +262,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
       "Valid: If this Ninja is discarded after being in play, move it to the bottom of your Deck instead.",
     ],
     image: "s05-n-198",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-199",
@@ -373,13 +282,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"We need the Fifth Hokage at this moment!\"",
     image: "s05-n-199",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-200",
@@ -400,13 +302,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"We're in need of a reliable, strong leader.\"",
     image: "s05-n-200",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-201",
@@ -427,13 +322,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Alright! With this money, I'll not only pay off all my debts but also completely reverse the situation!!\"",
     image: "s05-n-201",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-202",
@@ -454,13 +342,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I'm Kisame Hoshigaki ... Glad to get acquainted with you.\"",
     image: "s05-n-202",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-203",
@@ -481,13 +362,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Only a Sharingan user who has the same blood as mine can defeat me.\"",
     image: "s05-n-203",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-204",
@@ -508,13 +382,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"You pervy sage!\" \"Stop calling me by that name in front of others!! OK?\"",
     image: "s05-n-204",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-205",
@@ -535,13 +402,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Compress ... and ... sustain the Chakra!!!.\"",
     image: "s05-n-205",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-206",
@@ -562,13 +422,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I won't lose to you... Not anymore, Ino.\" \"No matter what happens, I won't lose to you either, Sakura, okay?\"",
     image: "s05-n-206",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-207",
@@ -589,13 +442,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"This is my grandfather's room ...\"",
     image: "s05-n-207",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0.3, y: 5.4, zoom: 1.0114, print: true } },
-    },
   },
   {
     id: "s05-n-208",
@@ -616,13 +462,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"You're his Jonin, aren't you? ... A word. Over here.\"",
     image: "s05-n-208",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-209",
@@ -644,13 +483,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Tsunade, could this be ...\"",
     image: "s05-n-209",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-210",
@@ -672,13 +504,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"That's why I'm determined to become Hokage ...\"",
     image: "s05-n-210",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-211",
@@ -699,13 +524,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"... because I am your attendant.\"",
     image: "s05-n-211",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-212",
@@ -727,13 +545,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Oink\"",
     image: "s05-n-212",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-213",
@@ -755,13 +566,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"This is the first time I've been summoned ...\"",
     image: "s05-n-213",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-214",
@@ -782,13 +586,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Then, our brilliant scheme was known from the beginning!\"",
     image: "s05-n-214",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-215",
@@ -810,13 +607,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"It seems I need to teach you a lesson!!\"",
     image: "s05-n-215",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-216",
@@ -837,13 +627,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I've severed some of your biceps, rectus and femoris muscles.\"",
     image: "s05-n-216",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 4.2, y: 0.4, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s05-n-217",
@@ -864,13 +647,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"... I'll revive your brother and the man you dearly loved.\"",
     image: "s05-n-217",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-218",
@@ -892,13 +668,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Oh, darn! My Jutsu doesn't work right ...\"",
     image: "s05-n-218",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-219",
@@ -920,13 +689,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I'm going to destroy you jerks, here and now!!\"",
     image: "s05-n-219",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-220",
@@ -947,13 +709,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Good to see some old familiar faces.\"",
     image: "s05-n-220",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-221",
@@ -974,13 +729,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Do you want to get swallowed?\"",
     image: "s05-n-221",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-222",
@@ -1002,13 +750,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Yes ... ma'am.\"",
     image: "s05-n-222",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-n-223",
@@ -1029,13 +770,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Don't tell me that the money is ...\" \"Yes! Freshly borrowed!\"",
     image: "s05-n-223",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1053,13 +787,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Severe Leaf Hurricane!\"",
     image: "s05-j-173",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 1.9, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s05-j-174",
@@ -1076,13 +803,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Dynamic Entryyyyy!!!\"",
     image: "s05-j-174",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-j-175",
@@ -1099,13 +819,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"You two are already trapped in my 'stomach'!\"",
     image: "s05-j-175",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 2, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s05-j-176",
@@ -1122,13 +835,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I'll show you the real power of my Sharingan, or ... my bloodline trait!\"",
     image: "s05-j-176",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 2.9, zoom: 1.0067, print: true } },
-    },
   },
   {
     id: "s05-j-177",
@@ -1145,13 +851,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"In the Tsukuyomi world, I control everything, including space, time, ... and even mass.\"",
     image: "s05-j-177",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.7, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s05-j-178",
@@ -1168,13 +867,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I even had to use Amaterasu ...\"",
     image: "s05-j-178",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.6, y: 1.7, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s05-j-179",
@@ -1191,13 +883,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Ice Style: Black Dragon Blizzard!\"",
     image: "s05-j-179",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.7, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s05-j-180",
@@ -1213,13 +898,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Ice Style: Tsubame Snowstorm!\"",
     image: "s05-j-180",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 1.6, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s05-j-181",
@@ -1234,13 +912,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Ice Style: Wolf-Fang Avalanche Jutsu!!\"",
     image: "s05-j-181",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.1, y: 2.8, zoom: 1.0071, print: true } },
-    },
   },
   {
     id: "s05-j-182",
@@ -1256,13 +927,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Ice Style: Snowy White Whale!\"",
     image: "s05-j-182",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.9, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s05-j-183",
@@ -1279,13 +943,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"It's made up of adhesive threads containing Chakra ...\"",
     image: "s05-j-183",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 1.7, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s05-j-184",
@@ -1301,13 +958,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"My great sword 'Shark Skin' doesn't cut ... It scrapes!\"",
     image: "s05-j-184",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.5, y: 1.9, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s05-j-185",
@@ -1324,13 +974,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Water Style ... Water Shark Bomb Jutsu!\"",
     image: "s05-j-185",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.8, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s05-j-186",
@@ -1347,13 +990,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I might name this Jutsu ... Sakura Blizzard Jutsu!\"",
     image: "s05-j-186",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 3, zoom: 1.0066, print: true } },
-    },
   },
   {
     id: "s05-j-187",
@@ -1370,13 +1006,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Now it's ... over!\"",
     image: "s05-j-187",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 2.4, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s05-j-188",
@@ -1393,13 +1022,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Wind Style ... Infinite Sand Storm Devastation!\"",
     image: "s05-j-188",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 2.7, zoom: 1.0057, print: true } },
-    },
   },
   {
     id: "s05-j-189",
@@ -1415,13 +1037,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Alright. It should be safe for now.\"",
     image: "s05-j-189",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.8, y: 4, zoom: 1.0054, print: true } },
-    },
   },
   {
     id: "s05-j-190",
@@ -1437,13 +1052,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"The device absorbs the wearer's Chakra to create an extremely strong barrier. You can't remove or destroy it ... with any means.\"",
     image: "s05-j-190",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 4.3, zoom: 1.0062, print: true } },
-    },
   },
   {
     id: "s05-j-191",
@@ -1460,13 +1068,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"What??\"",
     image: "s05-j-191",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 4.6, zoom: 1.0066, print: true } },
-    },
   },
   {
     id: "s05-j-192",
@@ -1483,13 +1084,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"A tap on the forehead ......?\"",
     image: "s05-j-192",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 2.7, zoom: 1.0058, print: true } },
-    },
   },
   {
     id: "s05-j-193",
@@ -1505,13 +1099,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Ninja Art: Needle Jizo!!\"",
     image: "s05-j-193",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 2.3, zoom: 1.0061, print: true } },
-    },
   },
   {
     id: "s05-j-194",
@@ -1528,13 +1115,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"She still has that extraordinary power ... Be aware that a single blow can finish us.\"",
     image: "s05-j-194",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 3.1, zoom: 1.0059, print: true } },
-    },
   },
   {
     id: "s05-j-195",
@@ -1551,13 +1131,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Gamabunta, I need oil!!\"",
     image: "s05-j-195",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2.2, zoom: 1.006, print: true } },
-    },
   },
   {
     id: "s05-j-196",
@@ -1574,13 +1147,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"This boy can use Medical Ninjutsu ...\"",
     image: "s05-j-196",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.3, zoom: 1.0061, print: true } },
-    },
   },
   {
     id: "s05-j-197",
@@ -1597,13 +1163,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"You're my first prey!!\"",
     image: "s05-j-197",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2.2, zoom: 1.0058, print: true } },
-    },
   },
   {
     id: "s05-j-198",
@@ -1620,13 +1179,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"She's the only one who can prepare tasteless and odorless drugs against Ninja.\"",
     image: "s05-j-198",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-j-199",
@@ -1643,13 +1195,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I'll stop you!\"",
     image: "s05-j-199",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.6, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s05-j-200",
@@ -1665,13 +1210,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Loaded needles!?\"",
     image: "s05-j-200",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.1, y: 2.1, zoom: 1.006, print: true } },
-    },
   },
   {
     id: "s05-j-201",
@@ -1687,13 +1225,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Even a single breath of this toxic air will risk my life ......\"",
     image: "s05-j-201",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.7, y: 2.9, zoom: 1.0076, print: true } },
-    },
   },
   {
     id: "s05-j-202",
@@ -1710,13 +1241,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Reserve Seal... Release!!\"",
     image: "s05-j-202",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.4, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s05-j-203",
@@ -1733,13 +1257,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I gave electric properties to my Chakra, generated an electric field and infused it into your nervous system.\"",
     image: "s05-j-203",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 2.7, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s05-j-204",
@@ -1755,13 +1272,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Katsuyu ... Take that kid to Shizune!\"",
     image: "s05-j-204",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.1, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s05-j-205",
@@ -1778,13 +1288,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Lady Tsunade ...!\" \"Yes!\"",
     image: "s05-j-205",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 2.6, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s05-j-206",
@@ -1801,13 +1304,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Acid Slime!!\"",
     image: "s05-j-206",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 3.1, zoom: 1.0058, print: true } },
-    },
   },
   {
     id: "s05-j-207",
@@ -1824,13 +1320,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Don't go ... Don't go! Don't go! Don't go!\"",
     image: "s05-j-207",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 4, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s05-j-208",
@@ -1846,13 +1335,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Tsunade's physical strength is as superhuman as ever ...\"",
     image: "s05-j-208",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 4.9, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s05-j-209",
@@ -1868,13 +1350,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Such a tiny swamp isn't enough to drown the snake ...\"",
     image: "s05-j-209",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 4.5, zoom: 1.0028, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -1891,13 +1366,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Is the raving beauty you wanna interview the person called Tsunade?\"",
     image: "s05-m-174",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 1.7, zoom: 1.0028, print: true } },
-    },
   },
   {
     id: "s05-m-175",
@@ -1914,13 +1382,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I see ...\"",
     image: "s05-m-175",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.9, y: 2.5, zoom: 1.0026, print: true } },
-    },
   },
   {
     id: "s05-m-176",
@@ -1937,13 +1398,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"We're not gonna seclude ourselves in the mountains for training ...\"",
     image: "s05-m-176",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.2, y: 2.2, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s05-m-177",
@@ -1960,13 +1414,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Dad! Mom!\"",
     image: "s05-m-177",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1, y: 2.6, zoom: 1.0018, print: true } },
-    },
   },
   {
     id: "s05-m-178",
@@ -1983,13 +1430,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"My ... ignorant brother ...\"",
     image: "s05-m-178",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.3, y: 2.1, zoom: 1.003, print: true } },
-    },
   },
   {
     id: "s05-m-179",
@@ -2005,13 +1445,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"He joined a certain organization ...\"",
     image: "s05-m-179",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 1.5, zoom: 1.0024, print: true } },
-    },
   },
   {
     id: "s05-m-180",
@@ -2029,13 +1462,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"An attractive man like me naturally draws and pleases the eyes of girls!!\"",
     image: "s05-m-180",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.5, y: 1.7, zoom: 1.0022, print: true } },
-    },
   },
   {
     id: "s05-m-181",
@@ -2053,13 +1479,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Sasuke ...? No ... who's he?\"",
     image: "s05-m-181",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.2, y: 1.4, zoom: 1.0015, print: true } },
-    },
   },
   {
     id: "s05-m-182",
@@ -2076,13 +1495,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"How come Sasuke's Jutsu is blocked so easily ...?\"",
     image: "s05-m-182",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.5, y: 1.9, zoom: 1.0017, print: true } },
-    },
   },
   {
     id: "s05-m-183",
@@ -2099,13 +1511,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"A considerable time has passed since his death ... Probably, this took place before the start of the Chunin Exam ...\"",
     image: "s05-m-183",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.5, y: 2, zoom: 1.0026, print: true } },
-    },
   },
   {
     id: "s05-m-184",
@@ -2121,13 +1526,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"... I wonder how many people have lost their happiness for such a thing ...\"",
     image: "s05-m-184",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 1.8, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s05-m-185",
@@ -2145,13 +1543,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"That system turned out to be still incomplete.\"",
     image: "s05-m-185",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.4, y: 2.1, zoom: 1.0024, print: true } },
-    },
   },
   {
     id: "s05-m-186",
@@ -2168,13 +1559,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Iridescent Chakra is flaming!\"",
     image: "s05-m-186",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.4, y: 2, zoom: 1.0018, print: true } },
-    },
   },
   {
     id: "s05-m-187",
@@ -2191,13 +1575,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"'3 Don'ts for Ninjas' is about three types of desire that corrupt ninja.\"",
     image: "s05-m-187",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.4, y: 2.3, zoom: 1.0026, print: true } },
-    },
   },
   {
     id: "s05-m-188",
@@ -2214,13 +1591,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"The gap between us hasn't narrowed in the slightest ... Why ...?\"",
     image: "s05-m-188",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.4, y: 2.1, zoom: 1.0028, print: true } },
-    },
   },
   {
     id: "s05-m-189",
@@ -2237,13 +1607,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Under these circumstances, the highest priority must be given to preparation for further crisis situations.\"",
     image: "s05-m-189",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-m-190",
@@ -2260,13 +1623,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"All work and no play makes Jack a dull boy! We'll start your training after a good rest.\"",
     image: "s05-m-190",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.2, y: 2.1, zoom: 1.0017, print: true } },
-    },
   },
   {
     id: "s05-m-191",
@@ -2282,13 +1638,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Try to build up your Chakra by focusing on that mark.\"",
     image: "s05-m-191",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.5, y: 2.1, zoom: 1.0014, print: true } },
-    },
   },
   {
     id: "s05-m-192",
@@ -2304,13 +1653,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Strike!!\"",
     image: "s05-m-192",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.7, y: 1.9, zoom: 1.0022, print: true } },
-    },
   },
   {
     id: "s05-m-193",
@@ -2326,13 +1668,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Manda and Orochimaru, and Katsuyu and Tsunade ...\"",
     image: "s05-m-193",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.1, y: 2.1, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s05-m-194",
@@ -2349,13 +1684,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Failure of the operation means ... death.\"",
     image: "s05-m-194",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2, y: 2, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s05-m-195",
@@ -2373,13 +1701,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Tsunade ... Our Village has made a request that you take office as Fifth Hokage ...\"",
     image: "s05-m-195",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 2.2, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s05-m-196",
@@ -2396,13 +1717,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"When the necklace is worn by others, they always ... lose their lives!!\"",
     image: "s05-m-196",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.5, y: 1.7, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s05-m-197",
@@ -2418,13 +1732,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Are you seeking a fight, knowing that we are the famous Haze Ninja Trio?\"",
     image: "s05-m-197",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.2, y: 2, zoom: 1.0026, print: true } },
-    },
   },
   {
     id: "s05-m-198",
@@ -2441,13 +1748,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Come back soon.\" \"Yeah, I sure will!\"",
     image: "s05-m-198",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.8, y: 3, zoom: 1.0011, print: true } },
-    },
   },
   {
     id: "s05-m-199",
@@ -2463,13 +1763,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Don't you want to see them again, Tsunade ......?\"",
     image: "s05-m-199",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 1.8, zoom: 1.0018, print: true } },
-    },
   },
   {
     id: "s05-m-200",
@@ -2487,13 +1780,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Heh-heh ... You have a good look in your eyes.\"",
     image: "s05-m-200",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 1.7, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s05-m-201",
@@ -2510,13 +1796,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"My affection for them never goes away ...\"",
     image: "s05-m-201",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.5, y: 0.7, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s05-m-202",
@@ -2532,13 +1811,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"7 ... 7 ... 7 ... Yes!\"",
     image: "s05-m-202",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 1.3, y: 2.1, zoom: 1.0022, print: true } },
-    },
   },
   {
     id: "s05-m-203",
@@ -2555,13 +1827,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Well, well. You look as unfriendly as before.\"",
     image: "s05-m-203",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-m-204",
@@ -2577,13 +1842,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"... Whew.\"",
     image: "s05-m-204",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 2.7, zoom: 1.0031, print: true } },
-    },
   },
   {
     id: "s05-m-205",
@@ -2600,13 +1858,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I'm ... in trouble!\"",
     image: "s05-m-205",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 0.6, zoom: 1.0087, print: true } },
-    },
   },
   {
     id: "s05-m-206",
@@ -2623,13 +1874,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"...... Sorry ...\"",
     image: "s05-m-206",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-m-207",
@@ -2645,13 +1889,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Oh, no! Not again!\"",
     image: "s05-m-207",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.1, y: 2, zoom: 1.0038, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -2669,13 +1906,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Are you OK?\"",
     image: "s05-c-007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-c-025",
@@ -2692,13 +1922,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"I'll play the double role of the queen of the Land of Snow and an actress!\"",
     image: "s05-c-025",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-c-026",
@@ -2715,13 +1938,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Hi.\"",
     image: "s05-c-026",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-c-027",
@@ -2738,13 +1954,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Mew\"",
     image: "s05-c-027",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-c-028",
@@ -2761,13 +1970,6 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"We lent you the amount of your losses.\"",
     image: "s05-c-028",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s05-c-029",
@@ -2784,12 +1986,5 @@ export const S05_THE_DREAM_LEGACY: Card[] = [
     ],
     flavor: "\"Here is the due bill.\"",
     image: "s05-c-029",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

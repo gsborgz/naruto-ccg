@@ -23,13 +23,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"I'll never back down again and let someone else rescue me.\"",
     image: "s01-n-001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-002",
@@ -47,13 +40,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"I'm not like them.\"",
     image: "s01-n-002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-003",
@@ -71,13 +57,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"Did you see that, Sasuke? ♥\"",
     image: "s01-n-003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-004",
@@ -98,13 +77,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I am again the winner, Sakura!\"",
     image: "s01-n-004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-005",
@@ -125,13 +97,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"What a nuisance.\"",
     image: "s01-n-005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-006",
@@ -152,13 +117,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I'm NOT fat!\"",
     image: "s01-n-006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-007",
@@ -179,13 +137,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Old man! I challenge you-u-u!\"",
     image: "s01-n-007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-008",
@@ -206,13 +157,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"For him, I have nothing but respect. He's an excellent student.\"",
     image: "s01-n-008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-009",
@@ -230,13 +174,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"You will never be accepted in this village!!\"",
     image: "s01-n-009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 5.6, y: -0.1, zoom: 1.0077, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-010",
@@ -254,13 +191,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"As your elite ninja trainer I am never wrong, which means I'm always right!\"",
     image: "s01-n-010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-011",
@@ -278,13 +208,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"I'll protect you with my life. All of you.\"",
     image: "s01-n-011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-012",
@@ -305,13 +228,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Don't worry. We'll be busy again before you know it.\"",
     image: "s01-n-012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-013",
@@ -332,13 +248,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"There's no longer any need to worry.\"",
     image: "s01-n-013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-014",
@@ -356,13 +265,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"Hunh?\"",
     image: "s01-n-014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-015",
@@ -380,13 +282,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"What?\"",
     image: "s01-n-015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -6,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 4.9, y: 0.6, zoom: 1.0112, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-016",
@@ -404,13 +299,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"You're right. It was his last battle.\"",
     image: "s01-n-016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 6.3, y: 2.2, zoom: 1.0099, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-017",
@@ -428,13 +316,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"Well, I'm only a child.\"",
     image: "s01-n-017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 4.5, y: 2.2, zoom: 1.0077, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-018",
@@ -452,13 +333,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"It's over!\"",
     image: "s01-n-018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-019",
@@ -479,13 +353,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Heh-heh! You're over-confident, Sensei! That's why you weren't ready for a Shadow Clone Attack, my best jutsu!\"",
     image: "s01-n-019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-020",
@@ -506,13 +373,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Groups of three... that'll just slow me down...\"",
     image: "s01-n-020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-021",
@@ -533,13 +393,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Mind if I sit next to you?\"",
     image: "s01-n-021",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-022",
@@ -560,13 +413,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Naruto! Get down!\"",
     image: "s01-n-022",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-023",
@@ -587,13 +433,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"How about we put an end to this now?\"",
     image: "s01-n-023",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-024",
@@ -614,13 +453,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I am Zabuza Momochi... 'The Demon of the Hidden Mist'!!\"",
     image: "s01-n-024",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-025",
@@ -641,13 +473,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I won't let you live...\"",
     image: "s01-n-025",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-026",
@@ -668,13 +493,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Stay calm... Focus... Concentrate... See everything!!\"",
     image: "s01-n-026",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-027",
@@ -695,13 +513,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Hey, this is fun!\"",
     image: "s01-n-027",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-028",
@@ -722,13 +533,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Let's go, Akamaru!!\"",
     image: "s01-n-028",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-029",
@@ -746,13 +550,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"......\"",
     image: "s01-n-029",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-030",
@@ -773,13 +570,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Naruto... you graduated after all! I'm so happy.\"",
     image: "s01-n-030",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-031",
@@ -800,13 +590,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I want to prove that you can become a splendid ninja even if you can't use Ninjutsu or Genjutsu!\"",
     image: "s01-n-031",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-032",
@@ -824,13 +607,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"It's not like Lee to keep us waiting!\"",
     image: "s01-n-032",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-033",
@@ -848,13 +624,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"Hmph... I don't like it...\"",
     image: "s01-n-033",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-034",
@@ -875,13 +644,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I appoint you as leader of the Konohamaru team!\"",
     image: "s01-n-034",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-035",
@@ -902,13 +664,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Yes. Because of my father's mission, I have to move to another village.\"",
     image: "s01-n-035",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-036",
@@ -929,13 +684,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Arf!!\"",
     image: "s01-n-036",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-037",
@@ -956,13 +704,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"You made a big mistake insulting these ninjas and calling them brats.\"",
     image: "s01-n-037",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-038",
@@ -980,13 +721,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     text: [],
     flavor: "\"The only survivor from the Uchiha Clan.\"",
     image: "s01-n-038",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-039",
@@ -1007,13 +741,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Ah, the exuberance of youth. All of you are full of it.\"",
     image: "s01-n-039",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-040",
@@ -1034,13 +761,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I am trained in silent killing. My genius lies in the ability to hunt by sound alone!\"",
     image: "s01-n-040",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-041",
@@ -1061,13 +781,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Let me prove it to you. This particular move of mine exceeds your genius... completely!\"",
     image: "s01-n-041",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0.6, y: 5, zoom: 1.0095, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-042",
@@ -1089,13 +802,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"My eyes can already penetrate 'Tenketsu'...\"",
     image: "s01-n-042",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-n-043",
@@ -1116,13 +822,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I will show you what speed really means!\"",
     image: "s01-n-043",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1139,13 +838,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Ugh!\"",
     image: "s01-j-001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.2, y: 2.7, zoom: 1.0037, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-002",
@@ -1161,13 +853,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Here goes nothing!\"",
     image: "s01-j-002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.6, zoom: 1.004, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-003",
@@ -1184,13 +869,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Aah, Ooh ♥\"",
     image: "s01-j-003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 2.6, zoom: 1.0041, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-004",
@@ -1207,13 +885,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Gotcha! With my Harem Jutsu!\"",
     image: "s01-j-004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 2.7, zoom: 1.0047, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-005",
@@ -1229,13 +900,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Take your best shot, fool. I'll give it back to you a thousand-fold!\"",
     image: "s01-j-005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -9,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 2.6, zoom: 1.0044, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-006",
@@ -1252,13 +916,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"One ninja faced the Nine-Tailed Fox in mortal combat: he sacrificed his life to capture the beast and seal it in a human body.\"",
     image: "s01-j-006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -10,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.6, y: 1.1, zoom: 1.0035, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-007",
@@ -1275,13 +932,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Your technique worked on me once, but it won't work again.\"",
     image: "s01-j-007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.2, zoom: 1.0038, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-008",
@@ -1296,13 +946,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"He's finally started down the path... to becoming a true ninja.\"",
     image: "s01-j-008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.1, y: 1.1, zoom: 1.003, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-009",
@@ -1318,13 +961,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Leaf Village Secret Finger Jutsu!\"",
     image: "s01-j-009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-010",
@@ -1340,13 +976,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Horse! Tiger!!\" \"I'll pinpoint the target!\"",
     image: "s01-j-010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.9, y: 1.6, zoom: 1.0031, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-011",
@@ -1363,13 +992,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Do it!\"",
     image: "s01-j-011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -7,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 2.3, zoom: 1.0043, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-012",
@@ -1385,13 +1007,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I am not that easy to fool!\"",
     image: "s01-j-012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: -0.1, zoom: 1.0035, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-013",
@@ -1407,13 +1022,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Ninja Art: Hidden Mist Jutsu.\"",
     image: "s01-j-013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 2.5, zoom: 1.004, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-014",
@@ -1430,13 +1038,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"As the name suggests... it happens in an instant without sound or warning of any kind.\"",
     image: "s01-j-014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-015",
@@ -1452,13 +1053,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Clone Jutsu!\"",
     image: "s01-j-015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2.6, zoom: 1.0045, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-016",
@@ -1474,13 +1068,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Transform!\"",
     image: "s01-j-016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-017",
@@ -1496,13 +1083,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Another substitution!\"",
     image: "s01-j-017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 1.1, zoom: 1.0033, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-018",
@@ -1518,13 +1098,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Saw through my disguise, huh?\"",
     image: "s01-j-018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 1.1, zoom: 1.004, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-019",
@@ -1540,13 +1113,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Sa... Saku... ra... H-help... me...\"",
     image: "s01-j-019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -7.5,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.5, zoom: 1.0036, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-020",
@@ -1562,13 +1128,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I used the Escape Jutsu... no sweat, it's a very basic technique.\"",
     image: "s01-j-020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.9, y: 0.4, zoom: 1.0066, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-021",
@@ -1585,13 +1144,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"It's Sasuke's head... it's been severed!!!\"",
     image: "s01-j-021",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -6,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.5, y: 2.2, zoom: 1.0034, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-022",
@@ -1608,13 +1160,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Ninja Art: Mind Transfer Jutsu!!\"",
     image: "s01-j-022",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.5, y: 2.1, zoom: 1.0034, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-023",
@@ -1631,13 +1176,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I won't let you!\"",
     image: "s01-j-023",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -7,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 2.5, zoom: 1.0041, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-024",
@@ -1654,13 +1192,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Expansion Jutsu!\"",
     image: "s01-j-024",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -3,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 1.8, zoom: 1.0028, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-025",
@@ -1676,13 +1207,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Ohhh. Shadow Clone Jutsu... And there's a quite a few of them.\"",
     image: "s01-j-025",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -5.5,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 2.3, zoom: 1.0042, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-026",
@@ -1699,13 +1223,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Leaf Hurricane!!\"",
     image: "s01-j-026",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.3, zoom: 1.0034, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-027",
@@ -1722,13 +1239,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Leaf Whirlwind!!!\"",
     image: "s01-j-027",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.4, zoom: 1.0045, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-028",
@@ -1745,13 +1255,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Get ready.\"",
     image: "s01-j-028",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -12.5,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 1.7, zoom: 1.0048, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-029",
@@ -1767,13 +1270,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Demon Wind Shuriken!!! Windmill of Shadows!!\"",
     image: "s01-j-029",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -9,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 1.2, zoom: 1.004, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-030",
@@ -1790,13 +1286,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Lightning Blade!\"",
     image: "s01-j-030",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 1.1, zoom: 1.004, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-031",
@@ -1813,13 +1302,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"This time, I'll go personally... and this sword will be the last thing he ever sees.\"",
     image: "s01-j-031",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.7, y: 2.5, zoom: 1.0049, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-032",
@@ -1835,13 +1317,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Heh-heh-heh... That prison is inescapable. You're trapped.\"",
     image: "s01-j-032",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 3.2, zoom: 1.004, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-033",
@@ -1858,13 +1333,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"丑申卯子亥酉丑午酉子寅戌寅巳丑未巳亥未子壬申酉辰酉丑午未寅巳子申卯亥辰未子丑申酉壬子亥申!!\"",
     image: "s01-j-033",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.7, y: 2.6, zoom: 1.0047, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-034",
@@ -1881,13 +1349,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Water Jutsu: Giant Vortex Jutsu!!!\"",
     image: "s01-j-034",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.8, y: 2.7, zoom: 1.0048, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-035",
@@ -1904,13 +1365,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Hidden Jutsu: A Thousand Needles of Death!!\"",
     image: "s01-j-035",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.7, y: 2, zoom: 1.0035, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-036",
@@ -1927,13 +1381,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"They're... mirrors?\"",
     image: "s01-j-036",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2.6, zoom: 1.0063, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-037",
@@ -1949,13 +1396,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"A second shuriken in the shadow of the first shuriken!\"",
     image: "s01-j-037",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-038",
@@ -1971,13 +1411,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Please excuse me, and farewell.\"",
     image: "s01-j-038",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -3,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.7, y: 0.8, zoom: 1.0033, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-039",
@@ -1993,13 +1426,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"They are called 'parasitic insects,' which attack the target in a group and devour its chakra.\"",
     image: "s01-j-039",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.9, y: 1, zoom: 1.003, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-040",
@@ -2014,13 +1440,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"This won't be any ordinary tree climbing.\" \"But, there's just one rule... No hand!!\"",
     image: "s01-j-040",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.4, y: 1.3, zoom: 1.0043, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-041",
@@ -2036,13 +1455,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I realized, if I couldn't see you, I'd have to smell you out...\"",
     image: "s01-j-041",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -9.5,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 2.8, zoom: 1.0042, print: true, clean: true } },
-    },
   },
   {
     id: "s01-j-042",
@@ -2058,13 +1470,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Byakugan!!\"",
     image: "s01-j-042",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2082,13 +1487,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"You want another bowl?\"",
     image: "s01-m-001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -6,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.2, y: 2, zoom: 1.003, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-002",
@@ -2105,13 +1503,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"My future dream is... to be the greatest Hokage! Then the whole village will stop disrespecting me and start treating me like I'm somebody! Somebody important! Believe it!\"",
     image: "s01-m-002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -6,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-003",
@@ -2128,13 +1519,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Congratulations... You graduate.\"",
     image: "s01-m-003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.1, y: 2.3, zoom: 1.0011, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-004",
@@ -2151,13 +1535,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Hey! Hey! Sensei!\"",
     image: "s01-m-004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 2.4, zoom: 1.0008, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-005",
@@ -2174,13 +1551,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Twelve years ago, a Nine-Tailed Fox suddenly appeared.\"",
     image: "s01-m-005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 2.3, zoom: 1.0014, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-006",
@@ -2196,13 +1566,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Can you verify ribbon on right ear?\"",
     image: "s01-m-006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 2.3, zoom: 0.9998, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-007",
@@ -2219,13 +1582,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Don't let it bother you. With your weak attacks, it doesn't really matter if I'm reading or whatever.\"",
     image: "s01-m-007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 1, zoom: 1.0012, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-008",
@@ -2242,13 +1598,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Ugh, rotten!\"",
     image: "s01-m-008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 2.2, zoom: 1.0013, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-009",
@@ -2266,13 +1615,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I'm going to restore my clan... and destroy a certain person.\"",
     image: "s01-m-009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-010",
@@ -2289,13 +1631,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"The finest hope of the Uchiha Clan doesn't seem too impressive.\"",
     image: "s01-m-010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-011",
@@ -2311,13 +1646,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Your profile was in our bingo book.\"",
     image: "s01-m-011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.4, y: 1.3, zoom: 1.0028, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-012",
@@ -2334,13 +1662,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I am Tazuna, a master bridge builder.\"",
     image: "s01-m-012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-013",
@@ -2357,13 +1678,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Gato... is a well-respected tycoon of a famous company; that's true. But below the surface, he sells drugs and contraband using gangs and ninja...\"",
     image: "s01-m-013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-014",
@@ -2380,13 +1694,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"One shallow breath, one tiny movement of the eye, is enough to draw his attack. It's suffocating.\"",
     image: "s01-m-014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-015",
@@ -2402,13 +1709,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Cha!\"",
     image: "s01-m-015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.3, y: 1.6, zoom: 1.0029, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-016",
@@ -2424,13 +1724,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"All right! Next, we do some research on female beauty!\"",
     image: "s01-m-016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -5.5,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.5, y: -0.1, zoom: 1.003, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-017",
@@ -2446,13 +1739,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"All Genin will be grouped into three-man squads. Each squad will be led by a Jonin, an elite ninja.\"",
     image: "s01-m-017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-018",
@@ -2468,13 +1754,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Sakuraaaa! Isn't it time for you to get going?\"",
     image: "s01-m-018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -4.4, y: -1, zoom: 1.0075, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-019",
@@ -2491,13 +1770,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"You fail!\"",
     image: "s01-m-019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-020",
@@ -2514,13 +1786,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Now everyone will review the Transformation Jutsu!\"",
     image: "s01-m-020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-021",
@@ -2537,13 +1802,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"That was your fault!\"",
     image: "s01-m-021",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.4, y: 1.6, zoom: 1.0035, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-022",
@@ -2560,13 +1818,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Don't let it near the village!\"",
     image: "s01-m-022",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.9, y: 2.7, zoom: 1.0026, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-023",
@@ -2584,13 +1835,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"That one's a clone, too!!\"",
     image: "s01-m-023",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.8, y: 1.9, zoom: 1.0013, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-024",
@@ -2606,13 +1850,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Upon this wound, I make this pledge! Believe it!\"",
     image: "s01-m-024",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-025",
@@ -2629,13 +1866,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"You know how in stories the hero usually shows up at the last minute and then kicks butt? Well, that's what I'm going to do right now!\"",
     image: "s01-m-025",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-026",
@@ -2653,13 +1883,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Naruto's building a solid reputation as the most clueless ninja in history. The more he helps, the worse things get.\"",
     image: "s01-m-026",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2, y: -0.7, zoom: 1.0022, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-027",
@@ -2677,13 +1900,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"So... he, too, has a Kekkei Genkai, the power of a unique bloodline trait.\"",
     image: "s01-m-027",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-028",
@@ -2700,13 +1916,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I can't swim, and I'm scared!! I'm sorry, Poochie...\"",
     image: "s01-m-028",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-029",
@@ -2723,13 +1932,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"So, he can keep up with Haku's speed.\"",
     image: "s01-m-029",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.6, y: -0.1, zoom: 1.0022, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-030",
@@ -2746,13 +1948,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Encountering suspicion, the ninja prepares quickly. Hesitation leads to disaster.\"",
     image: "s01-m-030",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.8, y: -1, zoom: 1.0041, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-031",
@@ -2768,13 +1963,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"I'm sorry to have imposed on you.\"",
     image: "s01-m-031",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-032",
@@ -2790,13 +1978,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"That must be...\"",
     image: "s01-m-032",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-033",
@@ -2812,13 +1993,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"We have brought you here to witness his punishment. His punishment is execution!\"",
     image: "s01-m-033",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-034",
@@ -2835,13 +2009,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s01-m-034",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3.3, y: 1.6, zoom: 1.0018, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-035",
@@ -2857,13 +2024,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Konohamaru... you've brought it for me.\"",
     image: "s01-m-035",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-036",
@@ -2880,13 +2040,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Why didn't someone wake me???!!\"",
     image: "s01-m-036",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.5, y: 2.9, zoom: 0.9996, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-037",
@@ -2904,13 +2057,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Sakura! Protect Mr. Tazuna!!\"",
     image: "s01-m-037",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-038",
@@ -2927,13 +2073,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Those who stray from the path of justice have no courage, but under the wing of a strong leader, cowardice cannot survive.\"",
     image: "s01-m-038",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-039",
@@ -2949,13 +2088,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Can I... Can I... be strong, too?\"",
     image: "s01-m-039",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -6,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.9, y: 2.1, zoom: 1.0001, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-040",
@@ -2973,13 +2105,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Starting today, his name is Shooting Star... and he's MY dog now!!\"",
     image: "s01-m-040",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.3, y: -0.2, zoom: 1.0028, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-041",
@@ -2996,13 +2121,6 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"Manji Battle Formation... Protect the Bridge Builder...\"",
     image: "s01-m-041",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: -8,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.1, y: 2.6, zoom: 0.9995, print: true, clean: true } },
-    },
   },
   {
     id: "s01-m-042",
@@ -3019,12 +2137,5 @@ export const S01_THE_PATH_TO_HOKAGE: Card[] = [
     ],
     flavor: "\"That's enough! I'll do it...\"",
     image: "s01-m-042",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true, clean: true } },
-    },
   },
 ];

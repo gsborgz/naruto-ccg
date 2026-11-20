@@ -26,13 +26,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Sakura...I swear I'll protect you!\"",
     image: "s06-n-173",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-174",
@@ -53,13 +46,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Itachi chose me to be the avenger of the clan... He chose me to be the one to kill him!\"",
     image: "s06-n-174",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-175",
@@ -81,13 +67,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Aw, come on, Pops, don't be like that, why don't 'cha just settle down and hear the kid out?\"",
     image: "s06-n-175",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-176",
@@ -109,13 +88,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I'll show you what duty... is all about.\"",
     image: "s06-n-176",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-177",
@@ -137,13 +109,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I hope you're ready to die! Let's dooo this!!\"",
     image: "s06-n-177",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-178",
@@ -164,13 +129,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I don't want to be alone any more.\"",
     image: "s06-n-178",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-179",
@@ -192,13 +150,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"When I fight, I fight for me and me alone!\"",
     image: "s06-n-179",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-180",
@@ -219,13 +170,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"After all... you're special Gaara. I hold you very dear to me.\"",
     image: "s06-n-180",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-181",
@@ -246,13 +190,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Long time no see, Kakashi. Aren't you running away just like last time?\"",
     image: "s06-n-181",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-182",
@@ -273,13 +210,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Nothing works against this\"",
     image: "s06-n-182",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-183",
@@ -300,13 +230,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Don't underestimate Snow Ninja. This attack is not enough to beat us\"",
     image: "s06-n-183",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: 1.9, zoom: 1, print: true } },
-    },
   },
   {
     id: "s06-n-184",
@@ -327,13 +250,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Alright! This is the latest technique 'Chakra Armor'!!\"",
     image: "s06-n-184",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 3.8, y: 0.1, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s06-n-185",
@@ -354,13 +270,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"We can't beat them yet. That's why we escaped\"",
     image: "s06-n-185",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us001",
@@ -381,13 +290,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I have to do it..!\"",
     image: "s06-n-us001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us002",
@@ -409,13 +311,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Grrrrrrrrrrrr!\"",
     image: "s06-n-us002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us003",
@@ -436,13 +331,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Itachi...I will beat you.\"",
     image: "s06-n-us003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us004",
@@ -463,13 +351,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Tell me, which one of these people did this to you?\"",
     image: "s06-n-us004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us005",
@@ -490,13 +371,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Just this once — when it's life or death... you'd think just maybe I could come through..!\"",
     image: "s06-n-us005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us006",
@@ -517,13 +391,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"A girl's gotta be tough if she's going to survive something like this!\"",
     image: "s06-n-us006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us007",
@@ -544,13 +411,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"In fact I'm the best.\"",
     image: "s06-n-us007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us008",
@@ -571,13 +431,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Yes ... This is your last battle. Ever!\"",
     image: "s06-n-us008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us009",
@@ -598,13 +451,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"You've really grown, haven't you?\"",
     image: "s06-n-us009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us010",
@@ -625,13 +471,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"If I were you, I'd let Akamaru go.\"",
     image: "s06-n-us010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us011",
@@ -652,13 +491,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I planted a beetle on you as you left the arena... A female beetle.\"",
     image: "s06-n-us011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us012",
@@ -679,13 +511,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"That too is my nindo. My ninja way.\"",
     image: "s06-n-us012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us013",
@@ -706,13 +531,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Take it away, Choji!\"",
     image: "s06-n-us013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us014",
@@ -733,13 +551,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I'll leave the girl to you.\"",
     image: "s06-n-us014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us015",
@@ -760,13 +571,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Just this once — when it's life or death... you'd think just maybe I could come through..!\"",
     image: "s06-n-us015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us016",
@@ -787,13 +591,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"My pleasure!\"",
     image: "s06-n-us016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us017",
@@ -814,13 +611,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"You're lucky to still be breathing.\"",
     image: "s06-n-us017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us018",
@@ -841,13 +631,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Rotation!\"",
     image: "s06-n-us018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us019",
@@ -868,13 +651,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"The lotus of the Leaf Village blooms twice.\"",
     image: "s06-n-us019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us020",
@@ -896,13 +672,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"It has just begun!\"",
     image: "s06-n-us020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us021",
@@ -923,13 +692,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Just bring it! I am not gonna hold back..\"",
     image: "s06-n-us021",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us022",
@@ -950,13 +712,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I will play with you for a while\"",
     image: "s06-n-us022",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us023",
@@ -977,13 +732,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Don't let anything steer you off the path you've drawn for yourself, forge ahead to the end!\"",
     image: "s06-n-us023",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us024",
@@ -1004,13 +752,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"To put it simply, my reason for living is the killing of others.\"",
     image: "s06-n-us024",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us025",
@@ -1031,13 +772,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"No use in hiding!\"",
     image: "s06-n-us025",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us026",
@@ -1058,13 +792,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"If you really want to see how deadly my Ninjutsu can be, then you're in for a real treat!\"",
     image: "s06-n-us026",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us027",
@@ -1085,13 +812,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I'm going to teach you a killer technique.\"",
     image: "s06-n-us027",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us028",
@@ -1112,13 +832,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"You are not my comrade any more.\"",
     image: "s06-n-us028",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us029",
@@ -1139,13 +852,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Today is the last day they call us 'Sannin'.\"",
     image: "s06-n-us029",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us030",
@@ -1166,13 +872,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Heh-heh...give me a break.\"",
     image: "s06-n-us030",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us031",
@@ -1193,13 +892,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I will protect the leaf village!\"",
     image: "s06-n-us031",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us032",
@@ -1220,13 +912,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I recorded all the data on this.\"",
     image: "s06-n-us032",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us033",
@@ -1247,13 +932,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Looks like you've got a rival, Haku.\"",
     image: "s06-n-us033",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us034",
@@ -1274,13 +952,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Who do you think you're dealing with!?\"",
     image: "s06-n-us034",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us035",
@@ -1301,13 +972,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"If I hadn't intervened, you'd be dead now ... that much is certain.\"",
     image: "s06-n-us035",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us036",
@@ -1328,13 +992,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"You will never learn the secret.\"",
     image: "s06-n-us036",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us037",
@@ -1355,13 +1012,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Your hatred...is not enough.\"",
     image: "s06-n-us037",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us038",
@@ -1382,13 +1032,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I don't like him to use his jutsu...\"",
     image: "s06-n-us038",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us039",
@@ -1410,13 +1053,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I'll even consider making you my henchman...\" \"Okay! Chief toad!\"",
     image: "s06-n-us039",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-n-us040",
@@ -1437,13 +1073,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"...I had to go and get myself into this sticky situation...\" \"You did well, Shikamaru...\"",
     image: "s06-n-us040",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1460,13 +1089,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Oh ho ho, anti-amphibian, huh? Well, take that, ya bigot!\"",
     image: "s06-j-163",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.9, zoom: 1.0038, print: true } },
-    },
   },
   {
     id: "s06-j-164",
@@ -1483,13 +1105,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"That worthless little flunky!\"",
     image: "s06-j-164",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 3.6, zoom: 1.0069, print: true } },
-    },
   },
   {
     id: "s06-j-165",
@@ -1506,13 +1121,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Water Style! Liquid Bullets!\"",
     image: "s06-j-165",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: 2.8, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s06-j-166",
@@ -1529,13 +1137,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Sand Shuriken!\"",
     image: "s06-j-166",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.8, y: 3, zoom: 1.0057, print: true } },
-    },
   },
   {
     id: "s06-j-167",
@@ -1551,13 +1152,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"The only danger...is if the Medium...finally falls asleep.\"",
     image: "s06-j-167",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.3, y: 3.1, zoom: 1.0059, print: true } },
-    },
   },
   {
     id: "s06-j-168",
@@ -1574,13 +1168,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Wind Style... Air Bullets!\"",
     image: "s06-j-168",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.1, y: 2.4, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s06-j-169",
@@ -1597,13 +1184,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I...I've had it with yoooou!\"",
     image: "s06-j-169",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 1.7, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s06-j-170",
@@ -1620,13 +1200,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Ninja Art Summoning: Bring Down the House Jutsu!\"",
     image: "s06-j-170",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.8, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s06-j-171",
@@ -1643,13 +1216,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"The only reason I am alive is...to kill you!!\"",
     image: "s06-j-171",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 1.9, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s06-j-172",
@@ -1666,13 +1232,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"It can't be... Then you've mastered even that forbidden jutsu?\"",
     image: "s06-j-172",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.7, y: 1.7, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s06-j-us001",
@@ -1688,13 +1247,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I am not alone this time.\"",
     image: "s06-j-us001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.8, zoom: 1.0037, print: true } },
-    },
   },
   {
     id: "s06-j-us002",
@@ -1711,13 +1263,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Transform!\"",
     image: "s06-j-us002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-j-us003",
@@ -1733,13 +1278,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Eat this!\"",
     image: "s06-j-us003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.9, y: 3.3, zoom: 1.0068, print: true } },
-    },
   },
   {
     id: "s06-j-us004",
@@ -1756,13 +1294,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Now, take this!\"",
     image: "s06-j-us004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.7, y: 2.9, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s06-j-us005",
@@ -1779,13 +1310,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"One more and we're finished!\"",
     image: "s06-j-us005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 3.5, zoom: 1.0062, print: true } },
-    },
   },
   {
     id: "s06-j-us006",
@@ -1801,13 +1325,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Leaf Hurricane!\"",
     image: "s06-j-us006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 1.7, zoom: 1.0045, print: true } },
-    },
   },
   {
     id: "s06-j-us007",
@@ -1824,13 +1341,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I won't let this thing take over. No way!\"",
     image: "s06-j-us007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.9, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s06-j-us008",
@@ -1847,13 +1357,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I can see it now!\"",
     image: "s06-j-us008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 2.1, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s06-j-us009",
@@ -1869,13 +1372,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"A Thousand Years of Death!\"",
     image: "s06-j-us009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 1.9, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s06-j-us010",
@@ -1891,13 +1387,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Water Clone Jutsu.\"",
     image: "s06-j-us010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: 1.7, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s06-j-us011",
@@ -1914,13 +1403,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Water Style! Water Dragon Jutsu!\"",
     image: "s06-j-us011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 2, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s06-j-us012",
@@ -1937,13 +1419,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Water Style!! Water Shark Bomb Jutsu!\"",
     image: "s06-j-us012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 3, zoom: 1.0062, print: true } },
-    },
   },
   {
     id: "s06-j-us013",
@@ -1959,13 +1434,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"If you fight me, you won't be able to recover.\"",
     image: "s06-j-us013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.5, y: 3.7, zoom: 1.0077, print: true } },
-    },
   },
   {
     id: "s06-j-us014",
@@ -1981,13 +1449,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"You haven't seen half of what Crow can do. So far he's been playing nice!\"",
     image: "s06-j-us014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 3.2, zoom: 1.0063, print: true } },
-    },
   },
   {
     id: "s06-j-us015",
@@ -2003,13 +1464,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"No use in hiding!\"",
     image: "s06-j-us015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 3.4, zoom: 1.0064, print: true } },
-    },
   },
   {
     id: "s06-j-us016",
@@ -2026,13 +1480,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Right under your feet.\"",
     image: "s06-j-us016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.6, y: 3.3, zoom: 1.0028, print: true } },
-    },
   },
   {
     id: "s06-j-us017",
@@ -2049,13 +1496,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Oh no you don't, mummy-man. Time to put you under wraps\"",
     image: "s06-j-us017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 3.8, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s06-j-us018",
@@ -2072,13 +1512,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Defend yourself ... my brother.\"",
     image: "s06-j-us018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 3.7, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s06-j-us019",
@@ -2095,13 +1528,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Ha!\"",
     image: "s06-j-us019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-j-us020",
@@ -2118,13 +1544,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Expansion Jutsu!\"",
     image: "s06-j-us020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2143,13 +1562,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Once you wear it in training, you will easily see the difference and will never train without it!!\"",
     image: "s06-m-169",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2, y: 2.3, zoom: 1.0021, print: true } },
-    },
   },
   {
     id: "s06-m-170",
@@ -2167,13 +1579,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"This suits amplifies the Chakra in your body and boosts your Jutsu.\"",
     image: "s06-m-170",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 1.9, zoom: 1.0037, print: true } },
-    },
   },
   {
     id: "s06-m-171",
@@ -2189,13 +1594,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I wonder if he likes sweets\"",
     image: "s06-m-171",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.2, y: 2.3, zoom: 1.0011, print: true } },
-    },
   },
   {
     id: "s06-m-172",
@@ -2212,13 +1610,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"That was the only way we could bring the princess back to this land.\"",
     image: "s06-m-172",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-m-173",
@@ -2235,13 +1626,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Why do they do it? Why do people risk their lives for other people?\"",
     image: "s06-m-173",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-m-us001",
@@ -2258,13 +1642,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I'm really starting to hate you stinking frogs–?\"",
     image: "s06-m-us001",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.8, y: 2.9, zoom: 1.0023, print: true } },
-    },
   },
   {
     id: "s06-m-us002",
@@ -2282,13 +1659,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Guy-sensei... please let this work!\"",
     image: "s06-m-us002",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 3.1, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s06-m-us003",
@@ -2305,13 +1675,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"WHAT?\" \"WHAT?\"",
     image: "s06-m-us003",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 2.8, zoom: 1.0031, print: true } },
-    },
   },
   {
     id: "s06-m-us004",
@@ -2328,13 +1691,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Just give me...Gimme some Chakra! I'm going to protect everyone!\"",
     image: "s06-m-us004",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 3.1, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s06-m-us005",
@@ -2351,13 +1707,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Are you ready, Enma?\"",
     image: "s06-m-us005",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.3, y: 2.4, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s06-m-us006",
@@ -2374,13 +1723,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Only the ones with Sharingan Eye can beat me.\"",
     image: "s06-m-us006",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 1.8, zoom: 1.0022, print: true } },
-    },
   },
   {
     id: "s06-m-us007",
@@ -2397,13 +1739,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I was calling forth my ninja hounds.\"",
     image: "s06-m-us007",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 1.2, zoom: 1.0027, print: true } },
-    },
   },
   {
     id: "s06-m-us008",
@@ -2420,13 +1755,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"It was all an act. ... With a cute little mask.\"",
     image: "s06-m-us008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 1.1, zoom: 1.0032, print: true } },
-    },
   },
   {
     id: "s06-m-us009",
@@ -2443,13 +1771,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Now then, .. shall we begin this?\"",
     image: "s06-m-us009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 1.8, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s06-m-us010",
@@ -2466,13 +1787,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Oh. I think you've already guessed.\"",
     image: "s06-m-us010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 1.2, zoom: 1.0019, print: true } },
-    },
   },
   {
     id: "s06-m-us011",
@@ -2489,13 +1803,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Just a little longer, Haku.\"",
     image: "s06-m-us011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.8, y: 2.7, zoom: 1.0031, print: true } },
-    },
   },
   {
     id: "s06-m-us012",
@@ -2511,13 +1818,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Eyes full of loneliness...\"",
     image: "s06-m-us012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 2.5, zoom: 1.0035, print: true } },
-    },
   },
   {
     id: "s06-m-us013",
@@ -2534,13 +1834,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Bring it on, Orochimaru!\"",
     image: "s06-m-us013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 3, zoom: 1.0029, print: true } },
-    },
   },
   {
     id: "s06-m-us014",
@@ -2558,13 +1851,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"His inner demon has been awakened.\"",
     image: "s06-m-us014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.7, y: 2.4, zoom: 1.0037, print: true } },
-    },
   },
   {
     id: "s06-m-us015",
@@ -2581,13 +1867,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"If I create a diversion with a Clone Jutsu...\"",
     image: "s06-m-us015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.1, y: 1.9, zoom: 1.0035, print: true } },
-    },
   },
   {
     id: "s06-m-us016",
@@ -2605,13 +1884,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"It's the mark of those who are bound to a destiny they cannot escape.\"",
     image: "s06-m-us016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.8, y: 2.1, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s06-m-us017",
@@ -2628,13 +1900,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Asuma?! .. How did you...?\"",
     image: "s06-m-us017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 2, zoom: 1.0016, print: true } },
-    },
   },
   {
     id: "s06-m-us018",
@@ -2650,13 +1915,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"The whole time I thought I was keeping out of range of his shadow jutsu — when I was really walking right into it.\"",
     image: "s06-m-us018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-m-us019",
@@ -2673,13 +1931,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"That was Ninjutsu, the third shinobi battle skill.\"",
     image: "s06-m-us019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 2, zoom: 1.0007, print: true } },
-    },
   },
   {
     id: "s06-m-us020",
@@ -2696,13 +1947,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Whoa! Everybody's here!\"",
     image: "s06-m-us020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 0.9, zoom: 1.0035, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -2720,13 +1964,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Oh, I have been possessed by the legendary movie makers!\"",
     image: "s06-c-020",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-c-021",
@@ -2743,13 +1980,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"This role...as a Princess Gale cannot be performed by anyone except Yukie.\"",
     image: "s06-c-021",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-c-022",
@@ -2766,13 +1996,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Don't give it up and believe the future. Then, the spring will come.\"",
     image: "s06-c-022",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-c-023",
@@ -2789,13 +2012,6 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"Let's go beyond that rainbow!!\"",
     image: "s06-c-023",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s06-c-024",
@@ -2812,12 +2028,5 @@ export const S06_ETERNAL_RIVALRY: Card[] = [
     ],
     flavor: "\"I will become a princess.\"",
     image: "s06-c-024",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

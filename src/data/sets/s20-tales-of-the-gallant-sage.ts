@@ -27,13 +27,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Very smart.\"",
     image: "s20-n-1037",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1038",
@@ -54,13 +47,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"But he suddenly just vanished...\"",
     image: "s20-n-1038",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1039",
@@ -82,13 +68,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"He's ready, just like I said.\"",
     image: "s20-n-1039",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1040",
@@ -109,13 +88,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Then allow me to pick up the slack.\"",
     image: "s20-n-1040",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1041",
@@ -136,13 +108,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"So sorry...\"",
     image: "s20-n-1041",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1042",
@@ -163,13 +128,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "When any of your Teams with a Mental Power of 10 or more win any Victory, you win 1 Battle Reward.",
     ],
     image: "s20-n-1042",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1043",
@@ -190,13 +148,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You and me, we believe in different things.\"",
     image: "s20-n-1043",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1044",
@@ -217,13 +168,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"If you keep talking the whole time, it'll seem like forever.\"",
     image: "s20-n-1044",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1045",
@@ -246,13 +190,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Yes, father.\"",
     image: "s20-n-1045",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1046",
@@ -274,14 +211,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Let's all pull together on this.\" \"I'll cover you!\"",
     image: "s20-n-1046",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1047",
@@ -303,13 +232,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I'm here because I want to be.\"",
     image: "s20-n-1047",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1048",
@@ -332,13 +254,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Watch closely.\"",
     image: "s20-n-1048",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1049",
@@ -359,13 +274,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You're rarin' to go for once!\"",
     image: "s20-n-1049",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1050",
@@ -386,13 +294,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"It's got to be a lie...\"",
     image: "s20-n-1050",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1051",
@@ -413,13 +314,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I want them for my ritual.\"",
     image: "s20-n-1051",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1052",
@@ -440,13 +334,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Woof!!\"",
     image: "s20-n-1052",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1053",
@@ -467,14 +354,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You're probably my only junior that I acknowldege as an equal...\" \"I got it!\"",
     image: "s20-n-1053",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1054",
@@ -495,13 +374,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Please prepare yourselves.\"",
     image: "s20-n-1054",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1055",
@@ -522,14 +394,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You disgust me.\" \"This is it, Sasuke.\"",
     image: "s20-n-1055",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1056",
@@ -550,13 +414,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You don't have to be friends.\"",
     image: "s20-n-1056",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1057",
@@ -577,13 +434,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You know I can sweet talk anyone.\"",
     image: "s20-n-1057",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1058",
@@ -605,13 +455,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Better look closely at yourself.\"",
     image: "s20-n-1058",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1059",
@@ -632,14 +475,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You can't escape my nose!\" \"Awoo...\"",
     image: "s20-n-1059",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1060",
@@ -659,13 +494,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "During the Exchange of Jutsu, you can pay 3 Chakra. In that case, negate 1 Jutsu being played. While this effect is on the Chain, players cannot play cards or activate effects.",
     ],
     image: "s20-n-1060",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1061",
@@ -687,13 +515,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Don't talk about Sasuke like you own him!\"",
     image: "s20-n-1061",
-    layout: {
-      layout: "layout-04",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1062",
@@ -715,13 +536,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"RRRRAAAR!!!\"",
     image: "s20-n-1062",
-    layout: {
-      layout: "layout-04",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1063",
@@ -744,13 +558,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Why go so far as to summon us to fight this fellow, Jiraiya-boy?\"",
     image: "s20-n-1063",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1064",
@@ -773,13 +580,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Found him!\"",
     image: "s20-n-1064",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1065",
@@ -801,13 +601,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"All right. Clumsy as I am, I shall try.\"",
     image: "s20-n-1065",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1066",
@@ -828,13 +621,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"That disciple will become a Ninja who will bring about a great change to the ninja world.\"",
     image: "s20-n-1066",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1067",
@@ -857,14 +643,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: This Ninja is unaffected by your opponent's Jutsus.",
     ],
     image: "s20-n-1067",
-    layout: {
-      layout: "layout-03",
-      panelVariant: "red",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02", "02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1068",
@@ -887,13 +665,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I'm counting on you. Buy me some time until then!\"",
     image: "s20-n-1068",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1069",
@@ -914,13 +685,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Brilliant, Master Guy! A training drill.\"",
     image: "s20-n-1069",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1070",
@@ -941,13 +705,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"No, it's Lord Eight-Tails. Okay?\"",
     image: "s20-n-1070",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1071",
@@ -968,13 +725,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"This is my show now!\"",
     image: "s20-n-1071",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1072",
@@ -996,13 +746,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Or so the book says...\"",
     image: "s20-n-1072",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1073",
@@ -1023,13 +766,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You're a man!\"",
     image: "s20-n-1073",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1074",
@@ -1050,13 +786,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "When this Ninja card is discarded from your hand, you can put it in play.",
     ],
     image: "s20-n-1074",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1075",
@@ -1077,13 +806,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"So from here on out, no more Mr. Nice Guy...\"",
     image: "s20-n-1075",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1076",
@@ -1104,13 +826,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Let's take him down and go in together!\"",
     image: "s20-n-1076",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1077",
@@ -1131,13 +846,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"So, care to play around with me....\"",
     image: "s20-n-1077",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1078",
@@ -1159,13 +867,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I want to see what kind of shinobi you really are.\"",
     image: "s20-n-1078",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1079",
@@ -1186,13 +887,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I will not be extinguished, for I am not alone.\"",
     image: "s20-n-1079",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1080",
@@ -1214,13 +908,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"This is my vendetta.\"",
     image: "s20-n-1080",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1081",
@@ -1240,13 +927,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "During the Exchange of Jutsu, you can discard your hand. Then apply each of the following effects according to how many cards you discarded for this effect: 2+) Injure 1 Ninja Battling against this Ninja. 3+) Draw 2 cards.",
     ],
     image: "s20-n-1081",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1082",
@@ -1268,13 +948,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"In exchange for your lives, I would know your names...\"",
     image: "s20-n-1082",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1083",
@@ -1296,13 +969,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Hissssss\"",
     image: "s20-n-1083",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1084",
@@ -1324,13 +990,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"But either way you're gonna die!\"",
     image: "s20-n-1084",
-    layout: {
-      layout: "layout-04",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1085",
@@ -1351,13 +1010,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: When this Ninja is put in play, heal 1 of your injured Ninjas.",
     ],
     image: "s20-n-1085",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1086",
@@ -1378,13 +1030,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "While this Ninja's Team has a \"Manipulation\" Ninja, this Ninja gets the following effect: \"When this Ninja Blocks, you can draw 1 card.\"",
     ],
     image: "s20-n-1086",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1087",
@@ -1405,13 +1050,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "While this Ninja's Team has a \"Manipulation\" Ninja, this Ninja gets the following effects: \"Ninjas that Battle this Ninja cannot Attack during their next turn.\"",
     ],
     image: "s20-n-1087",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1088",
@@ -1433,13 +1071,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I must clear my own path.\"",
     image: "s20-n-1088",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1089",
@@ -1459,13 +1090,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "While this Ninja's Team has a \"Manipulation\" Ninja, this Ninja gets the following effects: \"This Ninja's Team can Block up to 2 Teams. Your \"Sand\" Ninjas are unaffected by your opponent's Ninja and Mission card effects.\"",
     ],
     image: "s20-n-1089",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1090",
@@ -1487,13 +1111,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"That's an impossible dream now...\"",
     image: "s20-n-1090",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1091",
@@ -1515,13 +1132,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"She looks so peaceful.\"",
     image: "s20-n-1091",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1092",
@@ -1542,13 +1152,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I'll be finished with you in no time.\"",
     image: "s20-n-1092",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1093",
@@ -1568,13 +1171,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: This Ninja cannot be sent out to Attack with a non [SECRET SKILLS] Ninja. Head Ninjas that Battle this Ninja are discarded at the end of the turn.",
     ],
     image: "s20-n-1093",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1094",
@@ -1596,13 +1192,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I will get you!\"",
     image: "s20-n-1094",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1095",
@@ -1624,13 +1213,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"We could have avoided this...\"",
     image: "s20-n-1095",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1096",
@@ -1651,13 +1233,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "If your Turn Marker is even, move your opponent's Turn Marker down by 1.",
     ],
     image: "s20-n-1096",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["01", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1097",
@@ -1679,13 +1254,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Valid: Effect text of \"Rinnegan\" Ninjas cannot be negated.",
     ],
     image: "s20-n-1097",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1098",
@@ -1707,13 +1275,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Then everything went blank in my head...\"",
     image: "s20-n-1098",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1099",
@@ -1735,13 +1296,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Do not move...\"",
     image: "s20-n-1099",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1100",
@@ -1764,13 +1318,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Tell me now.\"",
     image: "s20-n-1100",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-n-1101",
@@ -1793,13 +1340,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You taught me not to let my guard down.\"",
     image: "s20-n-1101",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1818,13 +1358,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Naruto... Watch me.\"",
     image: "s20-j-773",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.4, y: 1.6, zoom: 1.0065, print: true } },
-    },
   },
   {
     id: "s20-j-774",
@@ -1841,13 +1374,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"8 Trigrams Palm Rotation.\"",
     image: "s20-j-774",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.5, y: 2.8, zoom: 1.009, print: true } },
-    },
   },
   {
     id: "s20-j-775",
@@ -1865,13 +1391,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Game over.\"",
     image: "s20-j-775",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-776",
@@ -1889,13 +1408,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"8 Trigrams Air Palm!!\"",
     image: "s20-j-776",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-777",
@@ -1911,13 +1423,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Give it up! You can't escape!\"",
     image: "s20-j-777",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-778",
@@ -1933,13 +1438,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"It's too late, Naruto.\"",
     image: "s20-j-778",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-779",
@@ -1957,13 +1455,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Foolish little brother.\"",
     image: "s20-j-779",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-780",
@@ -1981,13 +1472,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Aaaargh!! Stop it!!\"",
     image: "s20-j-780",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-781",
@@ -2004,13 +1488,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I think I'm gonna stir up some fried pain tonight!\"",
     image: "s20-j-781",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: -0.7, y: 0.8, zoom: 1.006, print: true } },
-    },
   },
   {
     id: "s20-j-782",
@@ -2026,13 +1503,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Expert [Senjutsu]: negate 1 Jutsu the target is using.",
     ],
     image: "s20-j-782",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.7, y: 0.9, zoom: 1.0064, print: true } },
-    },
   },
   {
     id: "s20-j-783",
@@ -2048,13 +1518,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"But I never imagined I'd catch you.\"",
     image: "s20-j-783",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.4, y: 1.5, zoom: 1.0065, print: true } },
-    },
   },
   {
     id: "s20-j-784",
@@ -2072,13 +1535,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Kebari Senbon is my fastest jutsu with the widest attack range.\"",
     image: "s20-j-784",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-785",
@@ -2096,13 +1552,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Now none of your bodies will be able to move.\"",
     image: "s20-j-785",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-786",
@@ -2119,13 +1568,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"That was disappointing.\"",
     image: "s20-j-786",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-787",
@@ -2143,13 +1585,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Now then, shall we get started?\"",
     image: "s20-j-787",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-788",
@@ -2165,13 +1600,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Teshi Sendan! Distal Shrapnel!\"",
     image: "s20-j-788",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.2, y: 2.3, zoom: 1.0089, print: true } },
-    },
   },
   {
     id: "s20-j-789",
@@ -2189,13 +1617,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Got him!\"",
     image: "s20-j-789",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-790",
@@ -2212,13 +1633,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"My kumonenkin is metal that hardens upon contact with air.\"",
     image: "s20-j-790",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.9, y: -0.7, zoom: 1.0018, print: true } },
-    },
   },
   {
     id: "s20-j-791",
@@ -2235,13 +1649,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You fight with me!\"",
     image: "s20-j-791",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-792",
@@ -2258,13 +1665,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Zesshi Nensan! Acid Slime!\"",
     image: "s20-j-792",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-793",
@@ -2282,13 +1682,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I'll start medical ninjutsu!\"",
     image: "s20-j-793",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-794",
@@ -2306,13 +1699,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"THWAK!\"",
     image: "s20-j-794",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-795",
@@ -2329,13 +1715,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"So you did fiddle a bit.\"",
     image: "s20-j-795",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-796",
@@ -2352,13 +1731,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Let's end this here and now...\"",
     image: "s20-j-796",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.9, y: -0.6, zoom: 1.0032, print: true } },
-    },
   },
   {
     id: "s20-j-797",
@@ -2376,13 +1748,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"What's the matter?\"",
     image: "s20-j-797",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-798",
@@ -2399,13 +1764,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Art of Summoning...\"",
     image: "s20-j-798",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-799",
@@ -2422,13 +1780,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Those eyes...said to hold the most noble of the three great ocular jutsu.\"",
     image: "s20-j-799",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 0.7, zoom: 1.0035, print: true } },
-    },
   },
   {
     id: "s20-j-800",
@@ -2446,13 +1797,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"He absorbs jutsu...\"",
     image: "s20-j-800",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-j-801",
@@ -2470,13 +1814,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Do not move...\"",
     image: "s20-j-801",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: -0.6, zoom: 1.0033, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2494,13 +1831,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Hey... Is somebody there?\"",
     image: "s20-m-723",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-724",
@@ -2519,13 +1849,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You are within the boundaries of my 8 trigrams.\"",
     image: "s20-m-724",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.3, y: 2.2, zoom: 1.0074, print: true } },
-    },
   },
   {
     id: "s20-m-725",
@@ -2540,13 +1863,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: If you have Ninjas with a combined Mental Power of 13 or more, your opponent must reorganize their Ninjas into Teams of 1.",
     ],
     image: "s20-m-725",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-726",
@@ -2564,13 +1880,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
       "Effect: When this Mission is removed from play, you can draw 1 card.",
     ],
     image: "s20-m-726",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-727",
@@ -2586,13 +1895,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"The gods shall punish those who don't understand the pain of others.\"",
     image: "s20-m-727",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-728",
@@ -2609,13 +1911,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Long time no see, Sasuke.\"",
     image: "s20-m-728",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-729",
@@ -2633,13 +1928,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"You're in the way.\"",
     image: "s20-m-729",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-730",
@@ -2656,13 +1944,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"He's back, here, in this village?!\"",
     image: "s20-m-730",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-731",
@@ -2679,13 +1960,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Behind this mask...\"",
     image: "s20-m-731",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-732",
@@ -2703,13 +1977,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I can't... tell you apart at all...\"",
     image: "s20-m-732",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.3, y: -0.7, zoom: 1.0036, print: true } },
-    },
   },
   {
     id: "s20-m-733",
@@ -2726,13 +1993,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"It's also known as maze mountain.\"",
     image: "s20-m-733",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-734",
@@ -2749,13 +2009,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"The Toad Sage Jiraiya falls victim to no woman's charm.\"",
     image: "s20-m-734",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-735",
@@ -2773,13 +2026,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"The pursuit of happiness isn't for us...\"",
     image: "s20-m-735",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-736",
@@ -2797,13 +2043,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"This is the dream vessel.\"",
     image: "s20-m-736",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-737",
@@ -2821,13 +2060,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"I can't believe he would summon those two...\"",
     image: "s20-m-737",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.6, y: -1.2, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s20-m-738",
@@ -2843,13 +2075,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Seems you prepared before you came.\"",
     image: "s20-m-738",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-739",
@@ -2868,13 +2093,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Suigetsu, are you stupid?!\"",
     image: "s20-m-739",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-740",
@@ -2890,13 +2108,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Master Orochimaru... This is...?\"",
     image: "s20-m-740",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-741",
@@ -2914,13 +2125,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"What is this, some sort of reunion or something?\"",
     image: "s20-m-741",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 1.7, y: -2.3, zoom: 1.0038, print: true } },
-    },
   },
   {
     id: "s20-m-742",
@@ -2936,13 +2140,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Don't you ever lose... to Sakura.\"",
     image: "s20-m-742",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-743",
@@ -2960,13 +2157,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"The very first puppets you created.\"",
     image: "s20-m-743",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-744",
@@ -2983,13 +2173,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"What took you so long?\"",
     image: "s20-m-744",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-745",
@@ -3006,13 +2189,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Heh...Enjoy the show...\"",
     image: "s20-m-745",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-746",
@@ -3028,13 +2204,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"From here on out, you're on your own.\"",
     image: "s20-m-746",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-747",
@@ -3052,13 +2221,6 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"Have I failed?\"",
     image: "s20-m-747",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s20-m-748",
@@ -3074,12 +2236,5 @@ export const S20_TALES_OF_THE_GALLANT_SAGE: Card[] = [
     ],
     flavor: "\"These are litmus papers that react to chakra.\"",
     image: "s20-m-748",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

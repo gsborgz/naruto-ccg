@@ -55,6 +55,9 @@ const layoutId = (v: unknown): string => (typeof v === 'string' && LAYOUT_ID.tes
 const ICON_ID = /^[a-z0-9][a-z0-9-]{0,39}$/;
 const iconId = <T extends string>(v: unknown, prefix = ''): T =>
   typeof v === 'string' && ICON_ID.test(v) && v.startsWith(prefix) ? (v as T) : fail();
+/** Id de uma carta do catálogo (ex.: `s01-n-001`). */
+export const CATALOG_CARD_ID = /^[a-z0-9-]{1,40}$/;
+const catalogId = (v: unknown): string => (typeof v === 'string' && CATALOG_CARD_ID.test(v) ? v : fail());
 /** Arte do próprio site: arte extraída ou carta impressa (sem `..`, sem endereço externo). */
 const SITE_ART = /^\/(card-layouts|cards)\/[A-Za-z0-9_.\-/]+$/;
 
@@ -153,6 +156,7 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
       typeVariant: optStr(x.typeVariant, 40),
       printedFlavor: optStr(x.printedFlavor, 600),
       flavorShade: optBool(x.flavorShade),
+      source: x.source === undefined ? undefined : catalogId(x.source),
     };
     for (const [k, v] of Object.entries(optional)) if (v !== undefined) (card as unknown as Rec)[k] = v;
     return card;

@@ -26,13 +26,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I've gotten stronger ...!\"",
     image: "s03-n-085",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-086",
@@ -53,13 +46,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"From here on in ... it's all original.\"",
     image: "s03-n-086",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-087",
@@ -80,13 +66,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"When this goes on my forehead .. Then that's when I'll become a ... true shinobi who won't lose to you.\"",
     image: "s03-n-087",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-088",
@@ -107,13 +86,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Gotcha, Sakura!\"",
     image: "s03-n-088",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-089",
@@ -134,13 +106,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Look at that thread you're holding. Don't you find it a little strange that it would even cast a shadow at this height?\"",
     image: "s03-n-089",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-090",
@@ -161,13 +126,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"This will protect my ears from his attacks.\"",
     image: "s03-n-090",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-091",
@@ -188,13 +146,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I told you it was gonna get serious.\"",
     image: "s03-n-091",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-092",
@@ -215,13 +166,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You see, while an ace in the hole is good ... two aces are better.\"",
     image: "s03-n-092",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-093",
@@ -242,13 +186,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Not in front of the person I admire most, who's finally seeing the real me!\"",
     image: "s03-n-093",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 3.6, y: -1.7, zoom: 1.0023, print: true } },
-    },
   },
   {
     id: "s03-n-094",
@@ -269,13 +206,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Now is the time to prove and protect my Ninja Philosophy!!\"",
     image: "s03-n-094",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-095",
@@ -296,13 +226,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"So that's it, huh? That's all there is to the Main Branch's power?\"",
     image: "s03-n-095",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-096",
@@ -323,13 +246,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"She must have dodged them somehow... But if I try a different approach ....\"",
     image: "s03-n-096",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-097",
@@ -350,13 +266,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Today's class is flower arranging.\"",
     image: "s03-n-097",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-098",
@@ -377,13 +286,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Get her to the emergency room. Stat!!\"",
     image: "s03-n-098",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-099",
@@ -401,13 +303,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     text: [],
     flavor: "\"Then, you mean ...!\"",
     image: "s03-n-099",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 1.4, y: 0.9, zoom: 0.9993, print: true } },
-    },
   },
   {
     id: "s03-n-100",
@@ -428,13 +323,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I might occasionally intervene if a match seems hopeless. To save as many lives as possible..\"",
     image: "s03-n-100",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-101",
@@ -455,13 +343,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Oh, please.\"",
     image: "s03-n-101",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-102",
@@ -483,13 +364,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Croak.\"",
     image: "s03-n-102",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-103",
@@ -510,13 +384,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"No ... it's over.\"",
     image: "s03-n-103",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-104",
@@ -537,13 +404,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Like you said yourself ... always have an ace in the hole ... right?\"",
     image: "s03-n-104",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-105",
@@ -564,13 +424,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"It won't work. You can't block the sound out once it's inside your head. It's useless.\"",
     image: "s03-n-105",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-106",
@@ -591,13 +444,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You're just noticing it now?\"",
     image: "s03-n-106",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-107",
@@ -618,13 +464,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I dislocate every one of my joints, softening my body. Then with my Chakra, I can control it perfectly.\"",
     image: "s03-n-107",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-108",
@@ -645,13 +484,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Wish I could stick around and play a little longer...\"",
     image: "s03-n-108",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-109",
@@ -672,13 +504,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Hey, guys. Good morning. I, uh, kind of got lost on the road of life.\"",
     image: "s03-n-109",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-110",
@@ -699,13 +524,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I'm gonna teach you a new technique ...\"",
     image: "s03-n-110",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-111",
@@ -726,13 +544,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Woof!\"",
     image: "s03-n-111",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-112",
@@ -753,13 +564,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Heh-heh ...\"",
     image: "s03-n-112",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-113",
@@ -780,13 +584,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You're the one who's going to die here.\"",
     image: "s03-n-113",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-114",
@@ -807,13 +604,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Wasn't much of a match ... Kinda boring..\"",
     image: "s03-n-114",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-115",
@@ -834,13 +624,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I had no fear of defeat right from the start of our match.\"",
     image: "s03-n-115",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-116",
@@ -861,13 +644,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Rat, Tiger, Dog, Ox, Hare, Tiger ...!\"",
     image: "s03-n-116",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-117",
@@ -888,13 +664,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Is that all you can do?\"",
     image: "s03-n-117",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-118",
@@ -915,13 +684,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Yes... it's that chakra!\"",
     image: "s03-n-118",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-119",
@@ -942,13 +704,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Demon Wind Shuriken ...\"",
     image: "s03-n-119",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-120",
@@ -969,13 +724,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I'm hoping with all my heart that he'll feel better soon!\"",
     image: "s03-n-120",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-121",
@@ -997,13 +745,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Aaagh!\"",
     image: "s03-n-121",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-122",
@@ -1024,13 +765,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I can't believe this ...!\"",
     image: "s03-n-122",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-123",
@@ -1051,13 +785,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"... I've gotten out of shape.\"",
     image: "s03-n-123",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-124",
@@ -1078,13 +805,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Well ... he didn't win, but I'll treat him to a barbecue anyway.\"",
     image: "s03-n-124",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-125",
@@ -1105,13 +825,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Yes, father.\"",
     image: "s03-n-125",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-126",
@@ -1132,13 +845,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Never forget your destiny ...!!\"",
     image: "s03-n-126",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-127",
@@ -1159,13 +865,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Don't worry. I just stimulated some acupuncture points to relax your body.\"",
     image: "s03-n-127",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-128",
@@ -1187,13 +886,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Hey, kid! Do you know whose head you are running around on?\"",
     image: "s03-n-128",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-129",
@@ -1213,13 +905,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
       "Valid: At the beginning of your turn, you can give 1 Damage to this Ninja to heal all of your injured Ninjas except this Ninja.",
     ],
     image: "s03-n-129",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-130",
@@ -1240,13 +925,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"There is only one rat to get rid of. No sweat.\"",
     image: "s03-n-130",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-131",
@@ -1267,13 +945,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I just succeeded my father ...\"",
     image: "s03-n-131",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-132",
@@ -1294,13 +965,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I've finally got the Hero's Water!\"",
     image: "s03-n-132",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-133",
@@ -1321,13 +985,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Don't think of escaping, or you'll have your arms slashed.\"",
     image: "s03-n-133",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-134",
@@ -1348,13 +1005,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Well, let's see how strong our hero is!\"",
     image: "s03-n-134",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-n-135",
@@ -1375,13 +1025,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Hmmph. It's an old story ...\"",
     image: "s03-n-135",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1399,13 +1042,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Na! Ru! To! Uzumaki Barrage!!\"",
     image: "s03-j-085",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.7, y: 1.3, zoom: 0.9933, print: true } },
-    },
   },
   {
     id: "s03-j-086",
@@ -1422,13 +1058,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Take this! Primary Lotus!\"",
     image: "s03-j-086",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-j-087",
@@ -1445,13 +1074,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"The Third Gate, Gate of Life, Release!\"",
     image: "s03-j-087",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: 1.3, zoom: 0.9945, print: true } },
-    },
   },
   {
     id: "s03-j-088",
@@ -1467,13 +1089,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Hey! Isn't this considered 'doping?'\"",
     image: "s03-j-088",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.2, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-089",
@@ -1490,13 +1105,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Ninja Art of Beast Mimicry: Man Beast Clone!\"",
     image: "s03-j-089",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.7, y: 1.4, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-090",
@@ -1513,13 +1121,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Now we gotcha! Man-Beast: Ultimate Taijutsu!!\"",
     image: "s03-j-090",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 1.8, zoom: 0.9935, print: true } },
-    },
   },
   {
     id: "s03-j-091",
@@ -1536,13 +1137,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I'm not done yet!!\"",
     image: "s03-j-091",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 2.3, zoom: 0.9934, print: true } },
-    },
   },
   {
     id: "s03-j-092",
@@ -1558,13 +1152,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Five-Pronged ... Seal!\"",
     image: "s03-j-092",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 0.5, zoom: 1.0026, print: true } },
-    },
   },
   {
     id: "s03-j-093",
@@ -1580,13 +1167,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Heh! Oh please, not that old trick!\"",
     image: "s03-j-093",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 2.4, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-094",
@@ -1602,13 +1182,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Those who hear the sound of my bells fall into that state.\"",
     image: "s03-j-094",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.7, zoom: 0.9943, print: true } },
-    },
   },
   {
     id: "s03-j-095",
@@ -1623,13 +1196,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"... You're ... feeding on my Chakra ...\"",
     image: "s03-j-095",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.5, y: 1.9, zoom: 0.9953, print: true } },
-    },
   },
   {
     id: "s03-j-096",
@@ -1645,13 +1211,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"The more you struggle, the tighter I'll squeeze.\"",
     image: "s03-j-096",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 1.6, zoom: 0.9943, print: true } },
-    },
   },
   {
     id: "s03-j-097",
@@ -1668,13 +1227,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Now it's our turn to show Ninjutsu!\"",
     image: "s03-j-097",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.6, y: 1.3, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-098",
@@ -1691,13 +1243,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"They hide, using Earth Style, and attack while we are focused on their clones!\"",
     image: "s03-j-098",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.7, y: -0.6, zoom: 0.9908, print: true } },
-    },
   },
   {
     id: "s03-j-099",
@@ -1714,13 +1259,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Gaara can also wear the sand like armor, as a last line of defense.\"",
     image: "s03-j-099",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 1.6, zoom: 0.9943, print: true } },
-    },
   },
   {
     id: "s03-j-100",
@@ -1737,13 +1275,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"There wasn't any pain. I crushed him with more force than necessary, so it was over quickly.\"",
     image: "s03-j-100",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-j-101",
@@ -1760,13 +1291,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I can take over your body and make you say that you're giving up on this match!\"",
     image: "s03-j-101",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1, y: 4.6, zoom: 0.9945, print: true } },
-    },
   },
   {
     id: "s03-j-102",
@@ -1783,13 +1307,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I'm just a little bit chubby, okay?\"",
     image: "s03-j-102",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -2.1, y: 4.8, zoom: 0.9948, print: true } },
-    },
   },
   {
     id: "s03-j-103",
@@ -1806,13 +1323,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"The Hyuga clan has a special Taijutsu that has been passed down from generation to generation.\"",
     image: "s03-j-103",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 4.8, zoom: 0.994, print: true } },
-    },
   },
   {
     id: "s03-j-104",
@@ -1827,13 +1337,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"How about this?!\"",
     image: "s03-j-104",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 4.6, zoom: 0.9947, print: true } },
-    },
   },
   {
     id: "s03-j-105",
@@ -1849,13 +1352,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Rising Twin Dragons!\"",
     image: "s03-j-105",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.8, y: 3.4, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-106",
@@ -1872,13 +1368,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"His arm becomes as powerful as the sharpest blade that can sever anything.\"",
     image: "s03-j-106",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.1, y: 1.3, zoom: 0.9946, print: true } },
-    },
   },
   {
     id: "s03-j-107",
@@ -1895,13 +1384,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"But, next time you see me ... will be the last time you see anything.\"",
     image: "s03-j-107",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 1.3, zoom: 0.9938, print: true } },
-    },
   },
   {
     id: "s03-j-108",
@@ -1917,13 +1399,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Their Byakugan... There are few things invisible to those eyes.\"",
     image: "s03-j-108",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.5, y: 3, zoom: 0.9937, print: true } },
-    },
   },
   {
     id: "s03-j-109",
@@ -1939,13 +1414,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Summoning Jutsu!\"",
     image: "s03-j-109",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-j-110",
@@ -1962,13 +1430,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Then, you'll assist my training? ♥\"",
     image: "s03-j-110",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-j-111",
@@ -1985,13 +1446,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Hidden Lotus!\"",
     image: "s03-j-111",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.2, y: 7.1, zoom: 0.9856, print: true } },
-    },
   },
   {
     id: "s03-j-112",
@@ -2006,13 +1460,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"That's what he gets for coming late! Surpri-ise!\"",
     image: "s03-j-112",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2.3, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-113",
@@ -2028,13 +1475,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Leaf Village Secret Finger Jutsu! A Thousand Years of Death!\"",
     image: "s03-j-113",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.5, zoom: 0.9945, print: true } },
-    },
   },
   {
     id: "s03-j-114",
@@ -2051,13 +1491,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Leaf Village Style ... Crescent Moon Dance!!\"",
     image: "s03-j-114",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 2.9, zoom: 0.9947, print: true } },
-    },
   },
   {
     id: "s03-j-115",
@@ -2072,13 +1505,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Walk on the hot water ... ?\"",
     image: "s03-j-115",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -3.1, y: 2, zoom: 0.9963, print: true } },
-    },
   },
   {
     id: "s03-j-116",
@@ -2094,13 +1520,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Do you hear that?... This device amplifies the vibrations of the impact, transforming them into a wave of sound.\"",
     image: "s03-j-116",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 1, zoom: 0.9944, print: true } },
-    },
   },
   {
     id: "s03-j-117",
@@ -2117,13 +1536,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Waterfall Village Style ... Water Cutting Blade!\"",
     image: "s03-j-117",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 0.4, zoom: 0.9921, print: true } },
-    },
   },
   {
     id: "s03-j-118",
@@ -2139,13 +1551,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Agh!\"",
     image: "s03-j-118",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 0.9, zoom: 0.9937, print: true } },
-    },
   },
   {
     id: "s03-j-119",
@@ -2160,13 +1565,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Shut up, brats!\"",
     image: "s03-j-119",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 1.3, zoom: 0.9943, print: true } },
-    },
   },
   {
     id: "s03-j-120",
@@ -2182,13 +1580,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Drinking this increases the amount of Chakra by dozens of times.\"",
     image: "s03-j-120",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-j-121",
@@ -2204,13 +1595,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"This is a carrier kite used by the Hidden Leaf Village.\"",
     image: "s03-j-121",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.7, zoom: 0.994, print: true } },
-    },
   },
   {
     id: "s03-j-122",
@@ -2225,13 +1609,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I didn't expect the cliff-climbing training to be so tough ...\"",
     image: "s03-j-122",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.4, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-j-123",
@@ -2247,13 +1624,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"No one can stop my wind blade ...\"",
     image: "s03-j-123",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 1.8, zoom: 0.9934, print: true } },
-    },
   },
   {
     id: "s03-j-124",
@@ -2269,13 +1639,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You see, it wasn't meant for Naruto so much as for anybody who might happen to be nearby trying to eavesdrop on us.\"",
     image: "s03-j-124",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 3.8, zoom: 0.9938, print: true } },
-    },
   },
   {
     id: "s03-j-125",
@@ -2291,13 +1654,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"With such a difference between our levels, you're no match for me.\"",
     image: "s03-j-125",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 3.1, zoom: 0.9949, print: true } },
-    },
   },
   {
     id: "s03-j-126",
@@ -2313,13 +1669,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Five Pronged Seal Release!\"",
     image: "s03-j-126",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.7, y: 3.7, zoom: 1.0023, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2338,13 +1687,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I got him; he totally fell for it!\"",
     image: "s03-m-085",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-086",
@@ -2360,13 +1702,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"When you throw a stone without aiming at the target, you somehow hit it. This is an application of this law!\"",
     image: "s03-m-086",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.7, y: 0.1, zoom: 0.9942, print: true } },
-    },
   },
   {
     id: "s03-m-087",
@@ -2383,13 +1718,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"In case I forgot to mention it, from here on in, you fight as individuals ...\"",
     image: "s03-m-087",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.8, y: 1.2, zoom: 1.0029, print: true } },
-    },
   },
   {
     id: "s03-m-088",
@@ -2406,13 +1734,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Not even conscious, and still determined to show the world what you can do...\"",
     image: "s03-m-088",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-089",
@@ -2429,13 +1750,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Hmm... Not bad.\"",
     image: "s03-m-089",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-090",
@@ -2453,13 +1767,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You must have used your Sharingan to copy it when you fought with Rock Lee that time..\"",
     image: "s03-m-090",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-091",
@@ -2476,13 +1783,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Never underestimate a canine's olfactory acuity!\"",
     image: "s03-m-091",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-092",
@@ -2499,13 +1799,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Cuz I'm the... top dog around here.\"",
     image: "s03-m-092",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-093",
@@ -2522,13 +1815,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You know how it is in the game of chess ... some pieces must be sacrificed.\"",
     image: "s03-m-093",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.7, y: 0.9, zoom: 0.9944, print: true } },
-    },
   },
   {
     id: "s03-m-094",
@@ -2545,13 +1831,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"This village that appeared so mysteriously ... The Sound Village - It's my creation.\"",
     image: "s03-m-094",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3.2, y: 1, zoom: 0.9938, print: true } },
-    },
   },
   {
     id: "s03-m-095",
@@ -2567,13 +1846,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Don't use your Sharingan.\"",
     image: "s03-m-095",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3.6, y: -0.8, zoom: 0.9981, print: true } },
-    },
   },
   {
     id: "s03-m-096",
@@ -2589,13 +1861,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Might blow my cover. Wouldn't be much use as a spy after that.\"",
     image: "s03-m-096",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-097",
@@ -2611,13 +1876,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"!!!\"",
     image: "s03-m-097",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.5, y: -0.1, zoom: 0.9946, print: true } },
-    },
   },
   {
     id: "s03-m-098",
@@ -2634,13 +1892,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"The wise shinobi is the one who carefully scouts the physical layout of the battlefield....\"",
     image: "s03-m-098",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-099",
@@ -2657,13 +1908,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"We have to have a preliminary exam before we can move onto the real one.\"",
     image: "s03-m-099",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-100",
@@ -2680,13 +1924,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"The names of each pair of opponents are chosen completely at random. Before each match these names will appear on the display.\"",
     image: "s03-m-100",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.5, y: 0.3, zoom: 0.9937, print: true } },
-    },
   },
   {
     id: "s03-m-101",
@@ -2703,13 +1940,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Watch out. There's something weird about it..\"",
     image: "s03-m-101",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-102",
@@ -2727,13 +1957,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Just take it from her, Naruto!\"",
     image: "s03-m-102",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-103",
@@ -2751,13 +1974,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"My eyes can't be deceived.\"",
     image: "s03-m-103",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-104",
@@ -2774,13 +1990,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Yes. Hmm... in the way a branch of a great tree is related to its trunk... They're more like cousins, technically.\"",
     image: "s03-m-104",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.9, y: 0.5, zoom: 0.9926, print: true } },
-    },
   },
   {
     id: "s03-m-105",
@@ -2797,13 +2006,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Now ... It's my turn, so say goodbye.\"",
     image: "s03-m-105",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-106",
@@ -2819,13 +2021,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Why are you and the other Jonin butting in?!\"",
     image: "s03-m-106",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-107",
@@ -2841,13 +2036,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"If you leave this place and come with me, I will make you strong, boy. Follow me.\"",
     image: "s03-m-107",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3, y: 0.2, zoom: 0.9943, print: true } },
-    },
   },
   {
     id: "s03-m-108",
@@ -2864,13 +2052,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Stop... Please...\"",
     image: "s03-m-108",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.6, y: 0.2, zoom: 0.994, print: true } },
-    },
   },
   {
     id: "s03-m-109",
@@ -2886,13 +2067,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"No holding back ... A fair fight!\"",
     image: "s03-m-109",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.8, y: 0, zoom: 0.9946, print: true } },
-    },
   },
   {
     id: "s03-m-110",
@@ -2909,13 +2083,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You have the gift of perseverance. And that's what makes you a genius.\"",
     image: "s03-m-110",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-111",
@@ -2932,13 +2099,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Think of me as but a weapon to be kept at your side and used as you see fit.\"",
     image: "s03-m-111",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2, y: 0.5, zoom: 0.9928, print: true } },
-    },
   },
   {
     id: "s03-m-112",
@@ -2955,13 +2115,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Kakashi-sensei! ... He's alive!\"",
     image: "s03-m-112",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-113",
@@ -2978,13 +2131,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You see, buddy, that old-fashioned Taijutsu stuff won't work against us.\"",
     image: "s03-m-113",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-114",
@@ -3001,13 +2147,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Squad seven, go!\"",
     image: "s03-m-114",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-115",
@@ -3024,13 +2163,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"He'll never recover enough to resume his life as a Ninja ...\"",
     image: "s03-m-115",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.8, y: 0.2, zoom: 0.9937, print: true } },
-    },
   },
   {
     id: "s03-m-116",
@@ -3047,13 +2179,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"You've been living my body so long... Give me your chakra as a rent!\"",
     image: "s03-m-116",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3.4, y: 1.4, zoom: 0.9947, print: true } },
-    },
   },
   {
     id: "s03-m-117",
@@ -3070,13 +2195,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"He sacrificed his life to save our village\"",
     image: "s03-m-117",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-118",
@@ -3092,13 +2210,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I'll give you the answer! I am a sage associated with toad spirits from Mt. Myoboku and therefore generally known as 'Toad Sage'!!\"",
     image: "s03-m-118",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2, y: 1.2, zoom: 1.003, print: true } },
-    },
   },
   {
     id: "s03-m-119",
@@ -3114,13 +2225,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"One more time, Sasuke ...\"",
     image: "s03-m-119",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.5, y: 2.4, zoom: 1.0036, print: true } },
-    },
   },
   {
     id: "s03-m-120",
@@ -3137,13 +2241,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"She shut down Tenten's weapons attack like it was nothing!\"",
     image: "s03-m-120",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3.5, y: 0.7, zoom: 0.9949, print: true } },
-    },
   },
   {
     id: "s03-m-121",
@@ -3160,13 +2257,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Since I've come this far I'll see it through.\"",
     image: "s03-m-121",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-122",
@@ -3183,13 +2273,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Phew. Nothing is better than a soak after training ...\"",
     image: "s03-m-122",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.4, y: 2.8, zoom: 0.994, print: true } },
-    },
   },
   {
     id: "s03-m-123",
@@ -3206,13 +2289,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I'm trembling with ... excitement.\"",
     image: "s03-m-123",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-124",
@@ -3230,13 +2306,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Don't lay a finger on people in our village .... Fight me!\"",
     image: "s03-m-124",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-125",
@@ -3252,13 +2321,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Is it possible for a Ninja like you ...?\"",
     image: "s03-m-125",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.7, y: 0.5, zoom: 1.0003, print: true } },
-    },
   },
   {
     id: "s03-m-126",
@@ -3275,13 +2337,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"So, you're finally waking up, huh?\"",
     image: "s03-m-126",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-127",
@@ -3298,13 +2353,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Why does he have to be my teacher?!\"",
     image: "s03-m-127",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -3.3, y: 0.3, zoom: 0.9946, print: true } },
-    },
   },
   {
     id: "s03-m-128",
@@ -3321,13 +2369,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Once the treaty was signed, the stupid lords of the Land of Wind pressed forward with disarmament of the Hidden Sand Village ...\"",
     image: "s03-m-128",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.7, y: 1.4, zoom: 0.9934, print: true } },
-    },
   },
   {
     id: "s03-m-129",
@@ -3343,13 +2384,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"What a formidable talent ...\"",
     image: "s03-m-129",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-130",
@@ -3366,13 +2400,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"It's a noble flower that endures the winter cold in the hope of welcoming spring.\"",
     image: "s03-m-130",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-131",
@@ -3389,13 +2416,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"And I'll make you acknowledge that I'm your master!\"",
     image: "s03-m-131",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-m-132",
@@ -3412,13 +2432,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Dog poop!!\"",
     image: "s03-m-132",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -3436,13 +2449,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Listen, kid ... You sure you want me to take your picture like that?\"",
     image: "s03-c-008",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-c-009",
@@ -3459,13 +2465,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"The bridge isn't far now. We'll be in the Land of Waves ... very soon.\"",
     image: "s03-c-009",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-c-010",
@@ -3482,13 +2481,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Shooting Star is running away ... Get him!!\"",
     image: "s03-c-010",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-c-011",
@@ -3505,13 +2497,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Please?\"",
     image: "s03-c-011",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-c-012",
@@ -3528,13 +2513,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"We're gonna clean this place.\"",
     image: "s03-c-012",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-c-013",
@@ -3551,13 +2529,6 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"I was told by my mother.\"",
     image: "s03-c-013",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s03-c-014",
@@ -3574,12 +2545,5 @@ export const S03_CURSE_OF_THE_SAND: Card[] = [
     ],
     flavor: "\"Sure. Go ahead with our idea.\"",
     image: "s03-c-014",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

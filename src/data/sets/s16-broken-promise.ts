@@ -27,13 +27,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I've always wanted to test my new technique...!\"",
     image: "s16-n-709",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-710",
@@ -54,13 +47,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"You're getting better. But, don't push yourself too hard. Or, the scar will reopen.\"",
     image: "s16-n-710",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-711",
@@ -82,13 +68,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This time...I'll protect my comrades!\"",
     image: "s16-n-711",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-712",
@@ -110,13 +89,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"The marks have been set.\"",
     image: "s16-n-712",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-713",
@@ -137,13 +109,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Come on, crybaby! Let's end this now.\"",
     image: "s16-n-713",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-714",
@@ -164,13 +129,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I'm taking her with me.\"",
     image: "s16-n-714",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-715",
@@ -191,13 +149,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Don't get carried away!!\"",
     image: "s16-n-715",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-716",
@@ -219,13 +170,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"IT SEEMS LIKE THEY HAVE ARRIVED.\"",
     image: "s16-n-716",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-717",
@@ -246,13 +190,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Ah I thought you were dead already.\"",
     image: "s16-n-717",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-718",
@@ -273,13 +210,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"One of us will be tied to the log...\"",
     image: "s16-n-718",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-719",
@@ -301,13 +231,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Let's do this!!\"",
     image: "s16-n-719",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-720",
@@ -328,13 +251,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I think I won this bet.\"",
     image: "s16-n-720",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-721",
@@ -355,13 +271,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I will take care of this. You stay here and support me.\"",
     image: "s16-n-721",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-722",
@@ -382,13 +291,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Good. It might take some time to heal, but this is not a fatal injury or anything...\"",
     image: "s16-n-722",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-723",
@@ -410,13 +312,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Arf!!\" \"Arf!!\"",
     image: "s16-n-723",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-724",
@@ -438,13 +333,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Only one 'Yes' is enough!\"",
     image: "s16-n-724",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-725",
@@ -465,13 +353,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s16-n-725",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-726",
@@ -493,13 +374,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"No matter what it takes, I will be the Hokage.\"",
     image: "s16-n-726",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-727",
@@ -521,13 +395,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Humph.\"",
     image: "s16-n-727",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-728",
@@ -549,13 +416,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Naruto--! Sasuke--!!\"",
     image: "s16-n-728",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-729",
@@ -577,14 +437,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This is lady Tsunade's order.\" \"Naruto, I'm glad to be assigned to the same mission.\"",
     image: "s16-n-729",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-730",
@@ -606,14 +458,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Well then, shall we go, team Asuma?\"",
     image: "s16-n-730",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-731",
@@ -635,13 +479,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Hi, everybody!\"",
     image: "s16-n-731",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-732",
@@ -662,13 +499,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Sometimes, you need a sacrifice to protect your 'king' against the stronger players.\"",
     image: "s16-n-732",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -8.5, y: -10, zoom: 1.0976, print: true } },
-    },
   },
   {
     id: "s16-n-733",
@@ -689,13 +519,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I am the one who trapped you!\"",
     image: "s16-n-733",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-734",
@@ -716,13 +539,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Grrrrrrrrrrrr\"",
     image: "s16-n-734",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-735",
@@ -743,13 +559,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Is this Sasori's true form?\" \"You are so slow...\"",
     image: "s16-n-735",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -4.9, y: -9.9, zoom: 1.0986, print: true } },
-    },
   },
   {
     id: "s16-n-736",
@@ -770,13 +579,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Senpai, you talk a lot...Hahaha.\" \"......\"",
     image: "s16-n-736",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -3.2, y: -9.7, zoom: 1.0968, print: true } },
-    },
   },
   {
     id: "s16-n-737",
@@ -797,13 +599,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"It's time for you to come with us, Naruto.\"",
     image: "s16-n-737",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -8.9, y: -9.4, zoom: 1.0957, print: true } },
-    },
   },
   {
     id: "s16-n-738",
@@ -824,13 +619,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I won't let you!\"",
     image: "s16-n-738",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-739",
@@ -852,13 +640,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I will go!\"",
     image: "s16-n-739",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-740",
@@ -880,13 +661,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Kakashi-senpai, are you visiting Obito's grave? You should come earlier rather than coming up with excuses for being late.\"",
     image: "s16-n-740",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-741",
@@ -909,13 +683,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I always come here early. But, this place fills me with regret.\"",
     image: "s16-n-741",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -2.1, y: -10.4, zoom: 1.1024, print: true } },
-    },
   },
   {
     id: "s16-n-742",
@@ -937,13 +704,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I'm counting on you, Pakkun!\" \"You got it.\"",
     image: "s16-n-742",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -3.9, y: -10.2, zoom: 1.0995, print: true } },
-    },
   },
   {
     id: "s16-n-743",
@@ -964,13 +724,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Here we come!\"",
     image: "s16-n-743",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-744",
@@ -991,13 +744,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Come on, Akamaru!\" \"Arf, Arf!\"",
     image: "s16-n-744",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-745",
@@ -1018,13 +764,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "The ones who create forest using a secret jutsu that is known only by a few.",
     image: "s16-n-745",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-746",
@@ -1046,13 +785,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Give us back Gaara!!\"",
     image: "s16-n-746",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-747",
@@ -1075,13 +807,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Don't call Sasuke's name like that! He is not your possession!! Got it?\"",
     image: "s16-n-747",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5, y: -8.7, zoom: 1.0157, print: true } },
-    },
   },
   {
     id: "s16-n-748",
@@ -1102,13 +827,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Oh yeah. No more chatting, right?\"",
     image: "s16-n-748",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-749",
@@ -1130,13 +848,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Ninjas in this village have a will of fire.\"",
     image: "s16-n-749",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -6.5, y: -6, zoom: 1.0997, print: true } },
-    },
   },
   {
     id: "s16-n-750",
@@ -1158,13 +869,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Well done, Yura. I didn't know you had given an order to fortify the village before the meeting.\"",
     image: "s16-n-750",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-751",
@@ -1185,14 +889,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Ha!\" \"Here I come!!\"",
     image: "s16-n-751",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-752",
@@ -1213,13 +909,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Naruto-! Long time no see!\"",
     image: "s16-n-752",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-753",
@@ -1240,13 +929,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Yeah, my ninjutsu is Ninja Art Magnet!!\"",
     image: "s16-n-753",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-754",
@@ -1267,13 +949,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That won't work. Water gushes out from underground.\"",
     image: "s16-n-754",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-755",
@@ -1294,13 +969,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That's right. And this is just the beginning. My jutsu is beyond anything you could imagine.\"",
     image: "s16-n-755",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-756",
@@ -1322,13 +990,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I won't let my guard down again. I'm calling on all my strength to crush you.",
     image: "s16-n-756",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -3.1, y: -9.6, zoom: 1.0979, print: true } },
-    },
   },
   {
     id: "s16-n-757",
@@ -1349,13 +1010,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Ranmaru, open your eyes. Take a look at the outside world.\"",
     image: "s16-n-757",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-758",
@@ -1376,13 +1030,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"If it weren't for Raiga, I wouldn't be alive.\"",
     image: "s16-n-758",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-759",
@@ -1403,13 +1050,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"...\"",
     image: "s16-n-759",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-760",
@@ -1430,13 +1070,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Lady Toki!\"",
     image: "s16-n-760",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-761",
@@ -1457,13 +1090,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I'm the complete package. You wanna see?\"",
     image: "s16-n-761",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-762",
@@ -1484,13 +1110,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Lord Orochimaru...\" \"I'm going to teach you something very special today.\"",
     image: "s16-n-762",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-763",
@@ -1511,13 +1130,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Naruto...are you doing this for me?\"",
     image: "s16-n-763",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 9.8, y: -7, zoom: 1.0191, print: true } },
-    },
   },
   {
     id: "s16-n-764",
@@ -1540,13 +1152,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Grrrrrrr\"",
     image: "s16-n-764",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -4.2, y: -8.8, zoom: 1.0944, print: true } },
-    },
   },
   {
     id: "s16-n-765",
@@ -1567,13 +1172,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Once a package has been entrusted to a messenger ninja, he is absolutely forbidden from ever opening it or examining its contents.\"",
     image: "s16-n-765",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -14.3, y: -10.4, zoom: 1.0642, print: true } },
-    },
   },
   {
     id: "s16-n-766",
@@ -1594,13 +1192,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Sumaru...\"",
     image: "s16-n-766",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-767",
@@ -1621,13 +1212,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Natsuhiboshi, why are your eyes so red? Because I had a bad dream last night.\"",
     image: "s16-n-767",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-768",
@@ -1649,13 +1233,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"...\"",
     image: "s16-n-768",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-769",
@@ -1676,13 +1253,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Does that mean she is still alive?\"",
     image: "s16-n-769",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-770",
@@ -1703,13 +1273,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Are you saying that she took the star?\"",
     image: "s16-n-770",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-771",
@@ -1731,13 +1294,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That Grandma. She is full of surprises.\"",
     image: "s16-n-771",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-772",
@@ -1759,13 +1315,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Our hokage gave us one more piece of identification so you can be absolutely sure we are who we say we are.\"",
     image: "s16-n-772",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-773",
@@ -1787,13 +1336,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "What the heck is that?!",
     image: "s16-n-773",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-774",
@@ -1814,13 +1356,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Just stick to the plan, OK?\"",
     image: "s16-n-774",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-775",
@@ -1842,13 +1377,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This is a perfect disguise. Even Lee can't tell that it's me.\"",
     image: "s16-n-775",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-776",
@@ -1870,13 +1398,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"It doesn't concern you. Now, get going.\"",
     image: "s16-n-776",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-777",
@@ -1897,13 +1418,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"She didn't want me to become a genjutsu user.\"",
     image: "s16-n-777",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-778",
@@ -1924,13 +1438,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I can't stand it any more.\"",
     image: "s16-n-778",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: -10.2, y: -7.9, zoom: 1.1008, print: true } },
-    },
   },
   {
     id: "s16-n-779",
@@ -1951,13 +1458,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Naruto, I have something to tell you.\"",
     image: "s16-n-779",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-780",
@@ -1978,13 +1478,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Two of you stay here and take care of those two. The rest of us will go one-on-one.\"",
     image: "s16-n-780",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-781",
@@ -2005,13 +1498,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"It's too late for regrets.\"",
     image: "s16-n-781",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-782",
@@ -2035,13 +1521,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Too bad. Moving at my will is not the only ability this sword has.\"",
     image: "s16-n-782",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-n-783",
@@ -2062,13 +1541,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That's right. This armor absorbs chakra.\"",
     image: "s16-n-783",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -2085,13 +1557,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Hey Kakashi, long time no see.\" \"I guess we don't have time to chat here.\"",
     image: "s16-j-602",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-603",
@@ -2107,13 +1572,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I'll give you this. My special kunai.\"",
     image: "s16-j-603",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-604",
@@ -2130,13 +1588,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That told me where you were hiding. It's my turn now.\"",
     image: "s16-j-604",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-605",
@@ -2152,13 +1603,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This is a keepsake from my father.\"",
     image: "s16-j-605",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-606",
@@ -2174,13 +1618,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Obito...you...\"",
     image: "s16-j-606",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-607",
@@ -2197,13 +1634,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"So long, Sasori.\"",
     image: "s16-j-607",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-608",
@@ -2220,13 +1650,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"No one can escape from my Tsukuyomi.\"",
     image: "s16-j-608",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-609",
@@ -2243,13 +1666,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Did he realize it? No. Then why?\"",
     image: "s16-j-609",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-610",
@@ -2266,13 +1682,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This is the problem of this training that it doesn't give him only experience but also fatigue.\"",
     image: "s16-j-610",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-611",
@@ -2289,13 +1698,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Water Style: Water Dragon Jutsu!\"",
     image: "s16-j-611",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 1.2, y: 8.5, zoom: 1.0095, print: true } },
-    },
   },
   {
     id: "s16-j-612",
@@ -2311,13 +1713,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Striking Shadow Snake!\"",
     image: "s16-j-612",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-613",
@@ -2334,13 +1729,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"There!!\"",
     image: "s16-j-613",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 1.9, y: 3.3, zoom: 0.9973, print: true } },
-    },
   },
   {
     id: "s16-j-614",
@@ -2357,13 +1745,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That sly old dog...\"",
     image: "s16-j-614",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-615",
@@ -2380,13 +1761,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Wood Style, Tree Bind Eternal Burial!\"",
     image: "s16-j-615",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-616",
@@ -2402,13 +1776,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This is made of special metal that absorbs the user's chakra.\"",
     image: "s16-j-616",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -9.5, y: 7.6, zoom: 1.094, print: true } },
-    },
   },
   {
     id: "s16-j-617",
@@ -2425,13 +1792,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Those eyes...he is extremely dangerous...!\"",
     image: "s16-j-617",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-618",
@@ -2448,13 +1808,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"He looks a little different now...\"",
     image: "s16-j-618",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-619",
@@ -2470,13 +1823,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Compress the chakra by spinning it at super high speeds.\"",
     image: "s16-j-619",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: -9.3, y: -9.2, zoom: 1.0515, print: true } },
-    },
   },
   {
     id: "s16-j-620",
@@ -2492,13 +1838,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Change the nature of your chakra like an electric current, and change its shape like an electric discharge to decide the range and the power of the attack .\"",
     image: "s16-j-620",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: -4.9, y: 9.4, zoom: 1.0936, print: true } },
-    },
   },
   {
     id: "s16-j-621",
@@ -2514,13 +1853,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I will defeat you and bring Sasuke back to the Leaf Village!!\"",
     image: "s16-j-621",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -3.3, y: 15.2, zoom: 1.1065, print: true } },
-    },
   },
   {
     id: "s16-j-622",
@@ -2537,13 +1869,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Oh is that so? How can I lose when I possess the star?\"",
     image: "s16-j-622",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-623",
@@ -2560,13 +1885,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Is this the jutsu that defeated Kikunojo?\"",
     image: "s16-j-623",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-624",
@@ -2583,13 +1901,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"My magnetic sand interferes with electrical impulses in his brain.\"",
     image: "s16-j-624",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 1.8, y: 2.1, zoom: 0.9925, print: true } },
-    },
   },
   {
     id: "s16-j-625",
@@ -2606,13 +1917,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Rasengan!!\"",
     image: "s16-j-625",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-626",
@@ -2629,13 +1933,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"when did he..? I can't believe he was able to cast genjutsu on me.\"",
     image: "s16-j-626",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-627",
@@ -2652,13 +1949,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"What are you doing?\" \"What do you think of my work, sensei? Amazing isn't it?\"",
     image: "s16-j-627",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-628",
@@ -2674,13 +1964,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Canceling tone!\"",
     image: "s16-j-628",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-629",
@@ -2698,13 +1981,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Three headed dragons?\"",
     image: "s16-j-629",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 2, y: 2.1, zoom: 0.9925, print: true } },
-    },
   },
   {
     id: "s16-j-630",
@@ -2721,13 +1997,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"These swords change the wind direction depending on the attack and increase its power to the maximum level.\"",
     image: "s16-j-630",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-631",
@@ -2743,13 +2012,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Wind Scythe Jutsu\"",
     image: "s16-j-631",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-632",
@@ -2765,13 +2027,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Soaring Shot Sword!\"",
     image: "s16-j-632",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-633",
@@ -2788,13 +2043,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"All right!\"",
     image: "s16-j-633",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-634",
@@ -2811,13 +2059,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I see. He sharpened his sword with his chakra to paralyze my body after the attack...\"",
     image: "s16-j-634",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0.9, y: 7.5, zoom: 1.093, print: true } },
-    },
   },
   {
     id: "s16-j-635",
@@ -2834,13 +2075,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Chidori Stream!\"",
     image: "s16-j-635",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-636",
@@ -2857,13 +2091,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Take this! Water Style: Bubbling Water!\"",
     image: "s16-j-636",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 4, y: 2.8, zoom: 0.9952, print: true } },
-    },
   },
   {
     id: "s16-j-637",
@@ -2880,13 +2107,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Take this! Flower Shuriken: Burning Petals and Fallen Leaves!\"",
     image: "s16-j-637",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-638",
@@ -2901,13 +2121,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I found you!\"",
     image: "s16-j-638",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-639",
@@ -2922,13 +2135,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s16-j-639",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-640",
@@ -2944,13 +2150,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Noooooooo!!\"",
     image: "s16-j-640",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: -4.2, y: 8.9, zoom: 1.0929, print: true } },
-    },
   },
   {
     id: "s16-j-641",
@@ -2967,13 +2166,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Is that...?\" \"Yes...\" \"This is it!\"",
     image: "s16-j-641",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-642",
@@ -2989,13 +2181,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"That's right. They are the very first puppets that you made.\"",
     image: "s16-j-642",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-643",
@@ -3012,13 +2197,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Don't fool around with me!!\"",
     image: "s16-j-643",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-j-644",
@@ -3034,13 +2212,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Beast Mimicry Ninja Art: Man Beast Clone\"",
     image: "s16-j-644",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -3057,13 +2228,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"It seems like the will of fire has been succeeded successfully.\"",
     image: "s16-m-585",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-586",
@@ -3079,13 +2243,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Let's go!!\"",
     image: "s16-m-586",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-587",
@@ -3102,13 +2259,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"This paper will tell you what chakra type you have.\"",
     image: "s16-m-587",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-588",
@@ -3125,13 +2275,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Earth Style: Rampart of Flowing Soil!!\"",
     image: "s16-m-588",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-589",
@@ -3148,13 +2291,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"All right! I will eat for Shikamaru as well!\"",
     image: "s16-m-589",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 4.9, y: 0.4, zoom: 1.0781, print: true } },
-    },
   },
   {
     id: "s16-m-590",
@@ -3170,13 +2306,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s16-m-590",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-591",
@@ -3193,13 +2322,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"You shouldn't use that Jutsu now, Sasuke\"",
     image: "s16-m-591",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-592",
@@ -3215,13 +2337,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "You are not alone. We will train harder and get stronger together...\"",
     image: "s16-m-592",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-593",
@@ -3237,13 +2352,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Checkmate.\" \"Oh, no! I lost again!\"",
     image: "s16-m-593",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-594",
@@ -3260,13 +2368,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I have no interest in him. Help me train right now, Orochimaru...\"",
     image: "s16-m-594",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-595",
@@ -3282,13 +2383,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Infiltration must be quick and silent...\"",
     image: "s16-m-595",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-596",
@@ -3305,13 +2399,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"......\"",
     image: "s16-m-596",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-597",
@@ -3327,13 +2414,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Let me hear your explanation.\"",
     image: "s16-m-597",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-598",
@@ -3350,13 +2430,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"They are both smiling...\"",
     image: "s16-m-598",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 6.4, y: 1.8, zoom: 1.0028, print: true } },
-    },
   },
   {
     id: "s16-m-599",
@@ -3373,13 +2446,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Let's go, shall we?\"",
     image: "s16-m-599",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.1, y: 1.5, zoom: 1.0823, print: true } },
-    },
   },
   {
     id: "s16-m-600",
@@ -3395,13 +2461,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
       "Effect: Each time your opponent puts 1 or more Ninja cards in play except by deploying them, draw 1 card.",
     ],
     image: "s16-m-600",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-601",
@@ -3417,13 +2476,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Hehehe...\" \"That me over there did good job.\"",
     image: "s16-m-601",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-602",
@@ -3439,13 +2491,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"They will give their lives to deliver anything, anywhere. War, fun, fire, nothing can stop them.\"",
     image: "s16-m-602",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-603",
@@ -3462,13 +2507,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Natsuhiboshi, why are your eyes so red? Because I had a bad dream last night.\"",
     image: "s16-m-603",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-604",
@@ -3485,13 +2523,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"What the heck is this?\" \"The music is getting louder.\"",
     image: "s16-m-604",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-605",
@@ -3509,13 +2540,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Kurenai sensei...What on earth happened to you?\"",
     image: "s16-m-605",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 4.4, y: 5, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s16-m-606",
@@ -3532,13 +2556,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Darn, this is some good ramen!\"",
     image: "s16-m-606",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-607",
@@ -3556,13 +2573,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I wanted to show this to my brother... the picture of our dreams...\"",
     image: "s16-m-607",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 7.6, y: 3.2, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s16-m-608",
@@ -3580,13 +2590,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Hey, Sai! The meeting for the next mission is starting soon!\"",
     image: "s16-m-608",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-609",
@@ -3605,13 +2608,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I have a favor to ask.\" \"A favor?\"",
     image: "s16-m-609",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-610",
@@ -3628,13 +2624,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Hi Kakashi.\" \"How are you feeling, Kakashi?\" \"Aren't you supposed to knock first, Asuma sensei?\"",
     image: "s16-m-610",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-611",
@@ -3652,13 +2641,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Sai, you can't say that in front of Choji. Got it?\" \"?\"",
     image: "s16-m-611",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-612",
@@ -3675,13 +2657,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Byakugan!!\"",
     image: "s16-m-612",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-613",
@@ -3698,13 +2673,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I will...give you...my sharingan. Whatever...they say...you are...an admirable jonin...\"",
     image: "s16-m-613",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-614",
@@ -3722,13 +2690,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"......\" \"What's that supposed to mean? Why would I give you something?\"",
     image: "s16-m-614",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 5.4, y: 5.4, zoom: 1.0054, print: true } },
-    },
   },
   {
     id: "s16-m-615",
@@ -3748,13 +2709,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I could only stand and stare when I came across that hideous sight.\"",
     image: "s16-m-615",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-616",
@@ -3772,13 +2726,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"So long, Naruto...\"",
     image: "s16-m-616",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-617",
@@ -3796,13 +2743,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Let's do this training using Shadow Clone Jutsu the whole time.\"",
     image: "s16-m-617",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-618",
@@ -3818,13 +2758,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Let's save Rin now!\" \"Yeah!\"",
     image: "s16-m-618",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 5.8, y: 4.2, zoom: 1.0791, print: true } },
-    },
   },
   {
     id: "s16-m-619",
@@ -3840,13 +2773,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Water Style: Waterfall Basin Jutsu!!\"",
     image: "s16-m-619",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-m-620",
@@ -3862,13 +2788,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Ninja Art: Super Beast Scroll!\"",
     image: "s16-m-620",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -3886,13 +2805,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Forgive me, Kikunojo...\"",
     image: "s16-c-052",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-c-053",
@@ -3909,13 +2821,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Ah, it's true. They must be who they say they are.\"",
     image: "s16-c-053",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-c-054",
@@ -3933,13 +2838,6 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"I am so sorry for sorry, pretty lady. But, I suffer from a little low blood pressure.\"",
     image: "s16-c-054",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s16-c-055",
@@ -3956,12 +2854,5 @@ export const S16_BROKEN_PROMISE: Card[] = [
     ],
     flavor: "\"Yakumo...\"",
     image: "s16-c-055",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

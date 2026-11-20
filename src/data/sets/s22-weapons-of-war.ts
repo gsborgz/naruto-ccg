@@ -26,13 +26,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'm pleasingly plump!\"",
     image: "s22-n-1206",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1207",
@@ -54,13 +47,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Ur...urm...\"",
     image: "s22-n-1207",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1208",
@@ -82,13 +68,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Cut it out!\"",
     image: "s22-n-1208",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1209",
@@ -110,13 +89,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Thank goodness for that...\"",
     image: "s22-n-1209",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1210",
@@ -137,13 +109,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Ho ho...It's more fun this way anyway...\"",
     image: "s22-n-1210",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1211",
@@ -164,13 +129,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Slowpokes.\"",
     image: "s22-n-1211",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1212",
@@ -192,13 +150,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'll go.\"",
     image: "s22-n-1212",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1213",
@@ -219,13 +170,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"It's finally come.\"",
     image: "s22-n-1213",
-    layout: {
-      layout: "layout-02",
-      nameSize: -3.5,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1214",
@@ -246,13 +190,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You do it!\"",
     image: "s22-n-1214",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1215",
@@ -273,13 +210,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I won't let you hurt them.\"",
     image: "s22-n-1215",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1216",
@@ -299,13 +229,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "When this Ninja is deployed, move 2 of your opponent's Battle Rewards to your hand. Then, shuffle any number of cards from your Discard Pile into your Deck.",
     ],
     image: "s22-n-1216",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1217",
@@ -326,13 +249,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Woof woof!!\"",
     image: "s22-n-1217",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1218",
@@ -353,13 +269,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"So this time, I'm not holding back!!\"",
     image: "s22-n-1218",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1219",
@@ -380,13 +289,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Guess this is it...\"",
     image: "s22-n-1219",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1220",
@@ -407,13 +309,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Don't you dare call me 'a cute little doggie'!\"",
     image: "s22-n-1220",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1221",
@@ -435,13 +330,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Hayate...\"",
     image: "s22-n-1221",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1222",
@@ -462,13 +350,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'll say it once more.\"",
     image: "s22-n-1222",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1223",
@@ -490,13 +371,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Okay...let's go!\"",
     image: "s22-n-1223",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1224",
@@ -517,13 +391,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Now what shall we play next?\"",
     image: "s22-n-1224",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1225",
@@ -545,13 +412,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Don't make fake smiles like that in front of me.\"",
     image: "s22-n-1225",
-    layout: {
-      layout: "layout-04",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1226",
@@ -572,13 +432,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I wish someone would kill me already.\"",
     image: "s22-n-1226",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1227",
@@ -599,13 +452,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You're done for.\"",
     image: "s22-n-1227",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1228",
@@ -627,13 +473,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"So what do you want to know?\"",
     image: "s22-n-1228",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.2, y: -8, zoom: 1.025, print: true } },
-    },
   },
   {
     id: "s22-n-1229",
@@ -653,14 +492,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[EOJ] (1), Remove 4 cards in your Discard Pile from the game: Give 1 Damage to target opposing Ninja.",
     ],
     image: "s22-n-1229",
-    layout: {
-      layout: "layout-03",
-      panelVariant: "red",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1230",
@@ -681,13 +512,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Your skills rival my own!!\"",
     image: "s22-n-1230",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1231",
@@ -708,13 +532,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Charge!!\"",
     image: "s22-n-1231",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1232",
@@ -736,13 +553,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Valid: When this Ninja is put in play, all your other \"Ink\" Ninjas get +1/+1 during this turn.",
     ],
     image: "s22-n-1232",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1233",
@@ -763,13 +573,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Well...here we go!\"",
     image: "s22-n-1233",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1234",
@@ -791,13 +594,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Spill it! Who are you?\"",
     image: "s22-n-1234",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1235",
@@ -819,13 +615,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Go get 'em.\"",
     image: "s22-n-1235",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1236",
@@ -847,13 +636,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You're...pretty weak.\"",
     image: "s22-n-1236",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1237",
@@ -874,13 +656,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "♪\"Yo, first I'll squash y'all flat, splat-splat.\"♪",
     image: "s22-n-1237",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.1, y: -8, zoom: 1.0256, print: true } },
-    },
   },
   {
     id: "s22-n-1238",
@@ -902,13 +677,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You wouldn't want me to get in trouble, would you?\"",
     image: "s22-n-1238",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1239",
@@ -929,13 +697,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Hope you all can keep up with me!!\"",
     image: "s22-n-1239",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1240",
@@ -957,13 +718,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"This could be bad...\"",
     image: "s22-n-1240",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1241",
@@ -983,14 +737,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[EOJ] Discard 2 Lightning cards and place this Ninja card from your hand into 1 of your Battling Teams: Injure 1 opposing Ninja. At the end of the turn, move this Ninja to your hand.",
     ],
     image: "s22-n-1241",
-    layout: {
-      layout: "layout-03",
-      panelVariant: "red",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1242",
@@ -1012,13 +758,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "♪\"To spear my foes I was born, a glorious longhorn.\"♪",
     image: "s22-n-1242",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.3, y: -8.3, zoom: 1.0262, print: true } },
-    },
   },
   {
     id: "s22-n-1243",
@@ -1040,13 +779,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Crazy old man!!\"",
     image: "s22-n-1243",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1244",
@@ -1067,13 +799,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Lord Orochimaru!!\"",
     image: "s22-n-1244",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1245",
@@ -1094,13 +819,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"What a flashy diversion.\"",
     image: "s22-n-1245",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1246",
@@ -1122,13 +840,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Got you!\"",
     image: "s22-n-1246",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1247",
@@ -1150,13 +861,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"He's getting on my nerves...\"",
     image: "s22-n-1247",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1248",
@@ -1177,13 +881,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Step back.\"",
     image: "s22-n-1248",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1249",
@@ -1203,13 +900,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[Valid | Attacker | EOJ] (0): When this Ninja wins any Victory during this turn, move 1 of your opponent's Stand-By Ninjas to its owners hand.",
     ],
     image: "s22-n-1249",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1250",
@@ -1229,13 +919,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "When your opponent plays a Jutsu, you can reveal the top card of your Deck. In that case, if the revealed card is a Jutsu or Mission card, negate and move the Jutsu your opponent played to their hand.",
     ],
     image: "s22-n-1250",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1251",
@@ -1255,13 +938,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[Attacker | Mission] (3): Move 1 card in your Discard Pile to your Chakra area or 1 Mission card from your Discard Pile to your hand.",
     ],
     image: "s22-n-1251",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1252",
@@ -1283,13 +959,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Yes, milady?\"",
     image: "s22-n-1252",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1253",
@@ -1310,13 +979,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Heh...then come on!\"",
     image: "s22-n-1253",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1254",
@@ -1337,13 +999,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Oink.\"",
     image: "s22-n-1254",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1255",
@@ -1364,13 +1019,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"And that, my friend, is a true backup plan.\"",
     image: "s22-n-1255",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1256",
@@ -1391,13 +1039,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"If it is a trap... then we fight!\"",
     image: "s22-n-1256",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.4, y: -7.8, zoom: 1.0251, print: true } },
-    },
   },
   {
     id: "s22-n-1257",
@@ -1419,13 +1060,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'm here to serve you.\"",
     image: "s22-n-1257",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1258",
@@ -1446,13 +1080,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"That does make sense.\"",
     image: "s22-n-1258",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1259",
@@ -1472,13 +1099,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[Valid | EOJ] (1): Heal target Ninja and draw 1 card.",
     ],
     image: "s22-n-1259",
-    layout: {
-      layout: "layout-03",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1260",
@@ -1500,13 +1120,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Good morning.\"",
     image: "s22-n-1260",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1261",
@@ -1528,13 +1141,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Where do you think you're going?\"",
     image: "s22-n-1261",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1262",
@@ -1551,13 +1157,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Sound"],
     text: [],
     image: "s22-n-1262",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1263",
@@ -1574,13 +1173,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Ninjutsu"],
     text: [],
     image: "s22-n-1263",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1264",
@@ -1597,13 +1189,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Sound"],
     text: [],
     image: "s22-n-1264",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1265",
@@ -1620,13 +1205,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Ice"],
     text: [],
     image: "s22-n-1265",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1266",
@@ -1643,13 +1221,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Weapon"],
     text: [],
     image: "s22-n-1266",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1267",
@@ -1666,13 +1237,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Sand"],
     text: [],
     image: "s22-n-1267",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1268",
@@ -1689,13 +1253,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Manipulation"],
     text: [],
     image: "s22-n-1268",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-n-1269",
@@ -1712,13 +1269,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     attributes: ["Ninjutsu"],
     text: [],
     image: "s22-n-1269",
-    layout: {
-      layout: "layout-05",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "alter", elements: ["03"], entrance: "entrance-03", hand: "hand-02", attribute: "05" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1736,13 +1286,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'll definitely find it!\"",
     image: "s22-j-839",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-840",
@@ -1757,13 +1300,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You thought you had me beat?\"",
     image: "s22-j-840",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-841",
@@ -1780,13 +1316,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Take care of my body while I'm gone.\"",
     image: "s22-j-841",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-842",
@@ -1801,13 +1330,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Here I come, fatso.\"",
     image: "s22-j-842",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-843",
@@ -1823,13 +1345,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Just kidding.\"",
     image: "s22-j-843",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-844",
@@ -1845,13 +1360,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "*Fwip*",
     image: "s22-j-844",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1, y: -0.9, zoom: 1.0015, print: true } },
-    },
   },
   {
     id: "s22-j-845",
@@ -1867,13 +1375,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "*Fwunk*",
     image: "s22-j-845",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.6, y: 2.1, zoom: 1.0072, print: true } },
-    },
   },
   {
     id: "s22-j-846",
@@ -1890,13 +1391,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Sharingan!\"",
     image: "s22-j-846",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-847",
@@ -1913,13 +1407,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "*Shkeen*",
     image: "s22-j-847",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.9, y: 1.3, zoom: 1.0054, print: true } },
-    },
   },
   {
     id: "s22-j-848",
@@ -1935,13 +1422,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You're relieved from duty!\"",
     image: "s22-j-848",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-849",
@@ -1956,13 +1436,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I predict the Hidden Leaf shall emerge victorious from this battle.\"",
     image: "s22-j-849",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.7, y: 0.2, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s22-j-850",
@@ -1978,13 +1451,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Will ya quit yakkin' in mah ear!\"",
     image: "s22-j-850",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-851",
@@ -2001,13 +1467,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'll give ya a taste of my hook.\"",
     image: "s22-j-851",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1, y: 1.5, zoom: 1.0062, print: true } },
-    },
   },
   {
     id: "s22-j-852",
@@ -2025,13 +1484,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Lariat!!!\"",
     image: "s22-j-852",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.2, y: 1.1, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s22-j-853",
@@ -2048,13 +1500,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Yo, I'm not letting y'all get away this late in the game, fools, ya fools!\"",
     image: "s22-j-853",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-854",
@@ -2070,13 +1515,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Master Guy!\"",
     image: "s22-j-854",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.9, y: 0.4, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s22-j-855",
@@ -2091,13 +1529,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "*Sploosh*",
     image: "s22-j-855",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-856",
@@ -2112,13 +1543,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"See? Look, Sir Utakata!\"",
     image: "s22-j-856",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-857",
@@ -2135,13 +1559,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Injure the target. Then, the target becomes a Stand-by Ninja.",
     ],
     image: "s22-j-857",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-858",
@@ -2158,13 +1575,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Splecchh.\"",
     image: "s22-j-858",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-859",
@@ -2180,13 +1590,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I gotta get back my energy.\"",
     image: "s22-j-859",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.4, y: 0.4, zoom: 1.0059, print: true } },
-    },
   },
   {
     id: "s22-j-860",
@@ -2203,13 +1606,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"We face them full strength!\"",
     image: "s22-j-860",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-861",
@@ -2225,13 +1621,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Back to the Past Jutsu.\"",
     image: "s22-j-861",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -0.7, y: -1.5, zoom: 0.9996, print: true } },
-    },
   },
   {
     id: "s22-j-862",
@@ -2247,13 +1636,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Tsunade-sama...\"",
     image: "s22-j-862",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-863",
@@ -2270,13 +1652,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I'll make this short and sweet.\"",
     image: "s22-j-863",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-j-864",
@@ -2293,13 +1668,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"What's the matter?\"",
     image: "s22-j-864",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1, y: 0.5, zoom: 1.0044, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2317,13 +1685,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You must be joking!!\"",
     image: "s22-m-788",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-789",
@@ -2339,13 +1700,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"We'd better get cracking.\"",
     image: "s22-m-789",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.7, y: -0.7, zoom: 1.0038, print: true } },
-    },
   },
   {
     id: "s22-m-790",
@@ -2361,13 +1715,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "[Mission] (2): Target Ninja gets +2/+2 during this turn.",
     ],
     image: "s22-m-790",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-791",
@@ -2383,13 +1730,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I know.\"",
     image: "s22-m-791",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-792",
@@ -2407,13 +1747,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"In order to protect a country, you need to protect the top, the Feudal Lord.\"",
     image: "s22-m-792",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-793",
@@ -2431,13 +1764,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"That's not your toy ... you know ...\"",
     image: "s22-m-793",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-794",
@@ -2454,13 +1780,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"It's really soft and bouncy.\"",
     image: "s22-m-794",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 1.4, y: -3.5, zoom: 1.0007, print: true } },
-    },
   },
   {
     id: "s22-m-795",
@@ -2476,13 +1795,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Your opponent wins 2 Battle Rewards. At the beginning of your next turn, move 2 of your opponents Battle Rewards to your hand. If your Turn Marker is 5 or higher, draw 1 card.",
     ],
     image: "s22-m-795",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-796",
@@ -2499,13 +1811,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"That is why... there is meaning in defeating you.\"",
     image: "s22-m-796",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.2, y: 1.2, zoom: 1.0083, print: true } },
-    },
   },
   {
     id: "s22-m-797",
@@ -2521,13 +1826,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: At the beginning of your turn, if you have 5 or less Growth coins among your Ninjas, place a Growth coin on 1 of your Ninjas. Then, if you have 6 or more Growth coins, draw a card. Then, if you have 10 or more Growth coins, you win the game.",
     ],
     image: "s22-m-797",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-798",
@@ -2545,13 +1843,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"They're my eyes... Mine...\"",
     image: "s22-m-798",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-799",
@@ -2567,13 +1858,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"We're not going to have as much time to ourselves.\"",
     image: "s22-m-799",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-800",
@@ -2589,13 +1873,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"What? Not more training!\"",
     image: "s22-m-800",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-801",
@@ -2612,13 +1889,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I think this tale is wonderful.\"",
     image: "s22-m-801",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.4, y: -0.2, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s22-m-802",
@@ -2634,13 +1904,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Bit my tongue.\"",
     image: "s22-m-802",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-803",
@@ -2657,13 +1920,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"What?!\"",
     image: "s22-m-803",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-804",
@@ -2679,13 +1935,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"The Bijuu are mythical demon beasts with tails.\"",
     image: "s22-m-804",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-805",
@@ -2701,13 +1950,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Doesn't he remind you of the two?\"",
     image: "s22-m-805",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-806",
@@ -2724,13 +1966,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"What's up with those moves?!\"",
     image: "s22-m-806",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-807",
@@ -2747,13 +1982,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I don't have time to nap!\"",
     image: "s22-m-807",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-808",
@@ -2770,13 +1998,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"They haven't found our exact location yet...\"",
     image: "s22-m-808",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-809",
@@ -2793,13 +2014,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Maybe I should cut you up.\"",
     image: "s22-m-809",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-810",
@@ -2815,13 +2029,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Even if the people in the village are not blood related...\"",
     image: "s22-m-810",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-811",
@@ -2839,13 +2046,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I was developing... a new technique.\"",
     image: "s22-m-811",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.6, y: -0.9, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s22-m-812",
@@ -2862,13 +2062,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"Wonder why he left it blank?\"",
     image: "s22-m-812",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-813",
@@ -2885,13 +2078,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"You lowered your guard at the last moment.\"",
     image: "s22-m-813",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-814",
@@ -2908,13 +2094,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I also didn't notice it...\"",
     image: "s22-m-814",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.2, y: -1.1, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s22-m-815",
@@ -2929,13 +2108,6 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
       "Effect: Draw 3 cards. Then, move 1 card in your hand to the bottom of your Deck.",
     ],
     image: "s22-m-815",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s22-m-816",
@@ -2952,12 +2124,5 @@ export const S22_WEAPONS_OF_WAR: Card[] = [
     ],
     flavor: "\"I am the one who will run this village starting today...\"",
     image: "s22-m-816",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

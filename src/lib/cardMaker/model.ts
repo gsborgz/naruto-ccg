@@ -131,6 +131,11 @@ export interface CustomCard {
   /** Imagem da carta original, quando importada do catálogo (para comparar o mapeamento). */
   reference?: string;
   /**
+   * Id da carta do catálogo de onde a carta foi importada (Importar do catálogo). Com valor, a carta salva aparece
+   * como arte alternativa no detalhe dessa carta (`src/lib/altCards.ts`).
+   */
+  source?: string;
+  /**
    * Frase que já vem impressa na arte de fundo (carta do catálogo com a impressa de fundo, `print`). Com valor, a
    * frase montada ganha um sombreado por trás que apaga de leve a impressa; o sombreado cobre o maior dos dois
    * blocos (a frase montada pode ter outro número de linhas, ex.: em PT-BR). Sem valor: sem sombreado.
@@ -393,6 +398,7 @@ function catalogFields(card: Card, now: string): CustomCard {
     flavor: card.flavor ?? '',
     text: card.text.map(catalogTextToMarkup).join('\n'),
     reference: cardImageUrl(card),
+    source: card.id,
   };
   if (card.type === 'jutsu') {
     const part = (o: { symbols: ElementSymbol[]; generic: number | 'X' }): JutsuCostPart => ({

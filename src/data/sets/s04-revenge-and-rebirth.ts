@@ -26,13 +26,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Such a great amount of power .... It feels stronger than during the training!!\"",
     image: "s04-n-136",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-137",
@@ -53,13 +46,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's convenient ... because my technique also takes time to activate ...\"",
     image: "s04-n-137",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-138",
@@ -80,13 +66,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You can avoid even this attack ......\"",
     image: "s04-n-138",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-139",
@@ -107,13 +86,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Why do I feel ... so jealous ...?\"",
     image: "s04-n-139",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-140",
@@ -134,13 +106,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Did you think you won?\"",
     image: "s04-n-140",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-141",
@@ -161,13 +126,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Please ... let me go.\"",
     image: "s04-n-141",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-142",
@@ -188,13 +146,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I didn't think that kid would survive so far ...\"",
     image: "s04-n-142",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-143",
@@ -215,13 +166,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Those who have survived merely with luck can't go any further, though.\"",
     image: "s04-n-143",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-144",
@@ -242,13 +186,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Hold up your heads and show your faces to the guests.\"",
     image: "s04-n-144",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 5.2, y: -3, zoom: 1.0039, print: true } },
-    },
   },
   {
     id: "s04-n-145",
@@ -269,13 +206,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Don't be so angry with me ... Mom....\"",
     image: "s04-n-145",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-146",
@@ -296,13 +226,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"But ... now I know how the Jutsu works!\"",
     image: "s04-n-146",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-147",
@@ -323,13 +246,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Could we wait ... just for another 10 minutes?\"",
     image: "s04-n-147",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-148",
@@ -350,13 +266,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"We can finally come in.\"",
     image: "s04-n-148",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-149",
@@ -377,13 +286,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I'm totally frustrated!\"",
     image: "s04-n-149",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-150",
@@ -404,13 +306,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Stop it! We're a team.\"",
     image: "s04-n-150",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-151",
@@ -431,13 +326,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You all smell sweaty!\"",
     image: "s04-n-151",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-152",
@@ -458,13 +346,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Because a rather demanding task is in store for me ...\"",
     image: "s04-n-152",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-153",
@@ -485,13 +366,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Come closer ... kid ...\"",
     image: "s04-n-153",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-154",
@@ -512,13 +386,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This is the opening of Naruto's Ninja Technique Journal!!\"",
     image: "s04-n-154",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-155",
@@ -539,13 +406,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"As I thought, ... only Chidori is effective.\"",
     image: "s04-n-155",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-156",
@@ -566,13 +426,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"... Because I was his original opponent.\"",
     image: "s04-n-156",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-157",
@@ -590,13 +443,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     text: [],
     flavor: "\"It seems that one used the Genjutsu ...\"",
     image: "s04-n-157",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-158",
@@ -617,13 +463,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Good job, Shikamaru ...\"",
     image: "s04-n-158",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-159",
@@ -644,13 +483,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I've used my Parasitic Insects to remove the poison.\"",
     image: "s04-n-159",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-160",
@@ -671,13 +503,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This reminds me of the good old days!\"",
     image: "s04-n-160",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-161",
@@ -698,13 +523,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The trio of Ino, Shika, Cho reunited ...\"",
     image: "s04-n-161",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-162",
@@ -725,13 +543,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Yeah!\"",
     image: "s04-n-162",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-163",
@@ -752,13 +563,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I'll destroy you to correct my old mistake!!\"",
     image: "s04-n-163",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-164",
@@ -779,13 +583,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"All right!!\"",
     image: "s04-n-164",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-165",
@@ -806,13 +603,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"What's this smell ...?\"",
     image: "s04-n-165",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-166",
@@ -833,13 +623,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I'll gain a body with more youth, beauty, and strength ...\"",
     image: "s04-n-166",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-167",
@@ -860,13 +643,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's been a long time, Sarutobi ...\"",
     image: "s04-n-167",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-168",
@@ -887,13 +663,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You've grown old, Sarutobi ...\"",
     image: "s04-n-168",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-169",
@@ -914,13 +683,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"That's why I dispatched Gaara's team.\"",
     image: "s04-n-169",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-170",
@@ -941,13 +703,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's a simple thing for a first-class puppet master like me.\"",
     image: "s04-n-170",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-171",
@@ -968,13 +723,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Creak\"",
     image: "s04-n-171",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-n-172",
@@ -995,13 +743,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Here we go!\" \"All right!!\"",
     image: "s04-n-172",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01", attribute: "01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1018,13 +759,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Gaaah!\"",
     image: "s04-j-127",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 2.9, zoom: 1.0057, print: true } },
-    },
   },
   {
     id: "s04-j-128",
@@ -1040,13 +774,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"That's using your head, Naruto. That ought to confuse him.\" \"Aaarrh!!\"",
     image: "s04-j-128",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 1.2, y: 3.1, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s04-j-129",
@@ -1061,13 +788,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's the chakra of the Nine-Tailed Fox ... But when did this boy learn how to harness its strength?\"",
     image: "s04-j-129",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 2.4, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s04-j-130",
@@ -1084,13 +804,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I encouraged Sasuke to visualize Lee's movements.\"",
     image: "s04-j-130",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 2.5, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s04-j-131",
@@ -1107,13 +820,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"That's why the technique is called ... 'Chidori'!\"",
     image: "s04-j-131",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2.6, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s04-j-132",
@@ -1130,13 +836,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Don't worry. I'm a doctor.\"",
     image: "s04-j-132",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-j-133",
@@ -1153,13 +852,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This is the Dead Soul Jutsu, which manipulates a dead body by reviving its heart temporarily ...\"",
     image: "s04-j-133",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 1.8, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s04-j-134",
@@ -1175,13 +867,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Wha, what's happening ...?\"",
     image: "s04-j-134",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 1.9, zoom: 1.0057, print: true } },
-    },
   },
   {
     id: "s04-j-135",
@@ -1198,13 +883,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"They've generated an impenetrable barrier ...!\"",
     image: "s04-j-135",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 2, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s04-j-136",
@@ -1220,13 +898,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The next will be my last move ...\"",
     image: "s04-j-136",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.9, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s04-j-137",
@@ -1243,13 +914,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Yes, ... it was this attack that made all my weapons totally powerless ...\"",
     image: "s04-j-137",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 2, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s04-j-138",
@@ -1266,13 +930,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Gaara ... Don't tell me you mean to use that technique!\"",
     image: "s04-j-138",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 1.9, zoom: 1.004, print: true } },
-    },
   },
   {
     id: "s04-j-139",
@@ -1289,13 +946,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"His Sand Shield has changed into a Sand Clone ...!!\"",
     image: "s04-j-139",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.8, y: 2.7, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s04-j-140",
@@ -1312,13 +962,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You can't escape!\"",
     image: "s04-j-140",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 4.6, zoom: 1.0057, print: true } },
-    },
   },
   {
     id: "s04-j-141",
@@ -1335,13 +978,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"For generations, the main household of our clan has practiced a secret ninjutsu ...... known as the Curse Mark Jutsu.\"",
     image: "s04-j-141",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.1, y: 4.9, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s04-j-142",
@@ -1358,13 +994,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"We live with the fear that they will use this Curse Mark to turn our brains to jelly, anytime they wish.\"",
     image: "s04-j-142",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 3.8, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s04-j-143",
@@ -1381,13 +1010,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's an ultimate defense, even more impenetrable than Gaara's shell of sand...\"",
     image: "s04-j-143",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.6, y: 4.6, zoom: 1.0066, print: true } },
-    },
   },
   {
     id: "s04-j-144",
@@ -1404,13 +1026,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You're in range of my 8 Trigrams Palms Rotation.\"",
     image: "s04-j-144",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.4, y: 3.8, zoom: 1.0042, print: true } },
-    },
   },
   {
     id: "s04-j-145",
@@ -1427,13 +1042,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Na! Ru! To! 2K Uzumaki Barrage!!\"",
     image: "s04-j-145",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.5, y: 2.2, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s04-j-146",
@@ -1450,13 +1058,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Experience my secret Ultimate Taijutsu!!\"",
     image: "s04-j-146",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 1.8, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s04-j-147",
@@ -1473,13 +1074,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Shuriken Shadow Clone Jutsu!\"",
     image: "s04-j-147",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.1, y: 2.4, zoom: 1.005, print: true } },
-    },
   },
   {
     id: "s04-j-148",
@@ -1496,13 +1090,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Let us begin!\"",
     image: "s04-j-148",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.4, y: 2.7, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s04-j-149",
@@ -1518,13 +1105,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This is Death ... which the Fourth Hokage said to be visible only to those who have entered into a contract for the technique!\"",
     image: "s04-j-149",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 2.6, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s04-j-150",
@@ -1541,13 +1121,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The Snake Sword ...\"",
     image: "s04-j-150",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 2.3, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s04-j-151",
@@ -1564,13 +1137,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It can't be! They are ...!!\"",
     image: "s04-j-151",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.9, y: 2.6, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s04-j-152",
@@ -1586,13 +1152,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"He can activate such an advanced Water-Style technique where there's no water!\"",
     image: "s04-j-152",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0.3, y: 1.8, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s04-j-153",
@@ -1609,13 +1168,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Water Style: Water Shock Wave!\"",
     image: "s04-j-153",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.7, y: 1.8, zoom: 1.0046, print: true } },
-    },
   },
   {
     id: "s04-j-154",
@@ -1632,13 +1184,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Oh, it's insects again!\"",
     image: "s04-j-154",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.6, y: 1.8, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s04-j-155",
@@ -1655,13 +1200,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I'll teach you the true horror of this tactical puppet, Crow!\"",
     image: "s04-j-155",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.2, y: 2.3, zoom: 1.0059, print: true } },
-    },
   },
   {
     id: "s04-j-156",
@@ -1678,13 +1216,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The needlepoint is covered with a generous amount of poison.\"",
     image: "s04-j-156",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.3, y: 1.9, zoom: 1.0048, print: true } },
-    },
   },
   {
     id: "s04-j-157",
@@ -1701,13 +1232,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This darkness is dangerous ...\"",
     image: "s04-j-157",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: 0, y: 2.7, zoom: 1.0052, print: true } },
-    },
   },
   {
     id: "s04-j-158",
@@ -1723,13 +1247,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Earth Style: Mud Wall!\"",
     image: "s04-j-158",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.2, y: 4.4, zoom: 1.0049, print: true } },
-    },
   },
   {
     id: "s04-j-159",
@@ -1745,13 +1262,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's a secret technique only the First Hokage can use ...!\"",
     image: "s04-j-159",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 4.5, zoom: 1.0053, print: true } },
-    },
   },
   {
     id: "s04-j-160",
@@ -1768,13 +1278,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I can't control my body ...!!\"",
     image: "s04-j-160",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.4, y: 4.6, zoom: 1.0056, print: true } },
-    },
   },
   {
     id: "s04-j-161",
@@ -1791,13 +1294,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Then ... take this one too.\"",
     image: "s04-j-161",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -1.4, y: 4.2, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s04-j-162",
@@ -1814,13 +1310,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Expansion Jutsu!!\"",
     image: "s04-j-162",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"] },
-      art: { back: { x: -0.3, y: 4.3, zoom: 1.0055, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -1838,13 +1327,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Those who conquer byways also conquer time!\"",
     image: "s04-m-133",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.4, y: 2.2, zoom: 1.002, print: true } },
-    },
   },
   {
     id: "s04-m-134",
@@ -1861,13 +1343,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Whatever happens, I will win!!\"",
     image: "s04-m-134",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.8, y: 3.7, zoom: 1.0019, print: true } },
-    },
   },
   {
     id: "s04-m-135",
@@ -1884,13 +1359,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"After becoming the Hokage ... I'll change the Hyuga Clan!!\"",
     image: "s04-m-135",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.1, y: 2.1, zoom: 1.0029, print: true } },
-    },
   },
   {
     id: "s04-m-136",
@@ -1906,13 +1374,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Shikamaruuu! Knock her down with a combo of 16 hits!!!\"",
     image: "s04-m-136",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-137",
@@ -1929,13 +1390,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Do I know this person ...?\"",
     image: "s04-m-137",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.9, y: 2.3, zoom: 1.0029, print: true } },
-    },
   },
   {
     id: "s04-m-138",
@@ -1952,13 +1406,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"What happened ...? Is that all you can do?\"",
     image: "s04-m-138",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-139",
@@ -1974,13 +1421,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Your name?\" \"Sasuke ... Uchiha.\"",
     image: "s04-m-139",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.2, y: 1.3, zoom: 1.0033, print: true } },
-    },
   },
   {
     id: "s04-m-140",
@@ -1997,13 +1437,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This is ... my blood!!\"",
     image: "s04-m-140",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 1, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s04-m-141",
@@ -2019,13 +1452,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The work is progressing smoothly on schedule.\"",
     image: "s04-m-141",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-142",
@@ -2042,13 +1468,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"One night ... Lady Hinata was nearly abducted by an unknown enemy.\"",
     image: "s04-m-142",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.5, y: 0.8, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s04-m-143",
@@ -2064,13 +1483,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"This is the maximum range of his attack!!\"",
     image: "s04-m-143",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.5, y: 1, zoom: 0.9996, print: true } },
-    },
   },
   {
     id: "s04-m-144",
@@ -2087,13 +1499,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"There have been some changes in the tournament.\"",
     image: "s04-m-144",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.5, y: 1.8, zoom: 1.0028, print: true } },
-    },
   },
   {
     id: "s04-m-145",
@@ -2111,13 +1516,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I think ... I should leave her alone at the moment ....\"",
     image: "s04-m-145",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.4, y: 2, zoom: 1.0015, print: true } },
-    },
   },
   {
     id: "s04-m-146",
@@ -2133,13 +1531,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You're gonna be the heroes of this official exam!\"",
     image: "s04-m-146",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-147",
@@ -2157,13 +1548,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You haven't recovered from the damage from the match ...!\"",
     image: "s04-m-147",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-148",
@@ -2181,13 +1565,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"You got me. ... I give up!\"",
     image: "s04-m-148",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-149",
@@ -2205,13 +1582,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"His results were way beyond my expectations! He was an absolute genius with an IQ of 200 or higher!\"",
     image: "s04-m-149",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.1, y: 1.9, zoom: 1.0015, print: true } },
-    },
   },
   {
     id: "s04-m-150",
@@ -2230,13 +1600,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's a symbol of one who is bound by an inescapable fate!\"",
     image: "s04-m-150",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-151",
@@ -2253,13 +1616,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The Curse Mark is out of control again ......\"",
     image: "s04-m-151",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.1, y: 0.5, zoom: 1.0043, print: true } },
-    },
   },
   {
     id: "s04-m-152",
@@ -2275,13 +1631,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"On the contrary ... I can't resist playing with it!!\"",
     image: "s04-m-152",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.6, y: 1.2, zoom: 1.003, print: true } },
-    },
   },
   {
     id: "s04-m-153",
@@ -2298,13 +1647,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"That's my rival!\"",
     image: "s04-m-153",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.5, y: 2.4, zoom: 1.0034, print: true } },
-    },
   },
   {
     id: "s04-m-154",
@@ -2321,13 +1663,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"What an incredible battle they are fighting ...\"",
     image: "s04-m-154",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0.1, y: 1.9, zoom: 1.0024, print: true } },
-    },
   },
   {
     id: "s04-m-155",
@@ -2344,13 +1679,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"How ominous ...\"",
     image: "s04-m-155",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 1.1, zoom: 1.0062, print: true } },
-    },
   },
   {
     id: "s04-m-156",
@@ -2368,13 +1696,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"It's the first A-ranked mission since the one in the Land of Waves!!\"",
     image: "s04-m-156",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-157",
@@ -2390,13 +1711,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Why didn't you ... dodge my attack ...?\"",
     image: "s04-m-157",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -2.9, y: 1.5, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s04-m-158",
@@ -2412,13 +1726,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I am the Third Hokage, the man who inherited the will of the Hidden Leaf Village from the First and Second Hokages!!!\"",
     image: "s04-m-158",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.2, y: 1.6, zoom: 1.0017, print: true } },
-    },
   },
   {
     id: "s04-m-159",
@@ -2435,13 +1742,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Heh-heh ... Finally, you tracked me down ...\"",
     image: "s04-m-159",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-160",
@@ -2458,13 +1758,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Your life is going to end here ...\"",
     image: "s04-m-160",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-161",
@@ -2482,13 +1775,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Old fossil! Give my arms back!!\"",
     image: "s04-m-161",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-162",
@@ -2505,13 +1791,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Love only yourself, and fight only for yourself.\"",
     image: "s04-m-162",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-m-163",
@@ -2527,13 +1806,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"If you act in a team of more than 4, which exceeds the size of the basic platoon, you lose speed and cannot hide well ...\"",
     image: "s04-m-163",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.9, y: 0.8, zoom: 1.0055, print: true } },
-    },
   },
   {
     id: "s04-m-164",
@@ -2551,13 +1823,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Let me handle this.\"",
     image: "s04-m-164",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.4, y: 1.1, zoom: 1.004, print: true } },
-    },
   },
   {
     id: "s04-m-165",
@@ -2575,13 +1840,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"My sister should have wanted to protect you, Gaara, even after her death ...\"",
     image: "s04-m-165",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1.2, y: 2, zoom: 1.0025, print: true } },
-    },
   },
   {
     id: "s04-m-166",
@@ -2599,13 +1857,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"By the way, this is the real source of those dog footprints.\"",
     image: "s04-m-166",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.3, y: 2.3, zoom: 1.002, print: true } },
-    },
   },
   {
     id: "s04-m-167",
@@ -2622,13 +1873,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"The Hyuga Clan is the most powerful in the Hidden Leaf Village .... Remember that.\"",
     image: "s04-m-167",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -1, y: 2.6, zoom: 1.0015, print: true } },
-    },
   },
   {
     id: "s04-m-168",
@@ -2644,13 +1888,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"I've finally caught up with you ...\"",
     image: "s04-m-168",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: -0.9, y: 1.7, zoom: 1.0023, print: true } },
-    },
   },
   // ── CLIENT ──
   {
@@ -2668,13 +1905,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Don't get so full of yourself!\"",
     image: "s04-c-015",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-c-016",
@@ -2691,13 +1921,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Here you go.\"",
     image: "s04-c-016",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 3.5, y: 0.7, zoom: 1.0072, print: true } },
-    },
   },
   {
     id: "s04-c-017",
@@ -2714,13 +1937,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Thank you. Have a nice day!\"",
     image: "s04-c-017",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-c-018",
@@ -2737,13 +1953,6 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"All right! Then, I'll be the Fifth Hokage!\"",
     image: "s04-c-018",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s04-c-019",
@@ -2760,12 +1969,5 @@ export const S04_REVENGE_AND_REBIRTH: Card[] = [
     ],
     flavor: "\"Someone precious?\"",
     image: "s04-c-019",
-    layout: {
-      layout: "layout-01",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["01", "01"], entrance: "entrance-01", hand: "hand-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];

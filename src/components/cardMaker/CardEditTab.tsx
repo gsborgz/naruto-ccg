@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { uploadArt } from '@/lib/cardMaker/artUpload';
-import { catalogDraft, toCatalogCard } from '@/lib/cardMaker/catalogEdit';
-import { moveArt, type ArtLayer, type CustomCard, type CustomCardArt } from '@/lib/cardMaker/model';
+import { catalogDraft, toCatalogCard, withoutLayout } from '@/lib/cardMaker/catalogEdit';
+import { LAYOUT_LIST } from '@/lib/cardMaker/layouts';
+import { moveArt, type ArtLayer, type CustomCard, type CustomCardArt, type LayoutId } from '@/lib/cardMaker/model';
 import { compressImage, isCompressed } from '@/lib/images/compressImage';
 import { saveCatalogCard } from '@/lib/content/client';
 import { useContent } from '@/lib/content/ContentProvider';
 import type { Card } from '@/models/card';
+import { CardFace } from '../CardFace';
 import { CardEditor } from './CardEditor';
 import { CardRender } from './CardRender';
 import { ContentHistoryButton } from './ContentTools';
@@ -18,6 +20,9 @@ import { ContentHistoryButton } from './ContentTools';
  * custos, força, atributo, vilas, artes e enquadramento), numa carta do catálogo. Grava no conteúdo do jogo (Redis):
  * vale para todo mundo na hora, sem deploy. Os textos são os do conteúdo (PT-BR). O layout base (molduras, posições)
  * e os ícones em si são editados em Criar carta → Editar layouts.
+ *
+ * A carta sem `layout` mostra a imagem impressa: a aba pede um layout para começar a montar a carta. Com layout,
+ * **Voltar para a original** tira o `layout` (a carta volta a mostrar a impressa).
  */
 
 /** Envia ao Vercel Blob a camada de arte que ainda é imagem local (data URL). */
@@ -38,8 +43,14 @@ export default function CardEditTab({
   onDirtyChange?: (dirty: boolean) => void;
 }) {
   const content = useContent();
-  const initial = useMemo(() => catalogDraft(card), [card]);
-  const [draft, setDraft] = useState<CustomCard>(initial);
+  // `null`: a carta sem layout (a imagem impressa).
+  const initial = useMemo(() => (card.layout ? catalogDraft(card) : null), [card]);
+  const [draft, setDraft] = useState<CustomCard | null>(initial);
+  const layoutChoices = LAYOUT_LIST.filter((l) => l.types.includes(card.type));
+  const [chosenLayout, setChosenLayout] = useState<LayoutId | ''>('');
+  /** Começa a montar a carta no layout escolhido (o mesmo que ela tinha: volta ao que estava gravado). */
+  const applyLayout = (id: LayoutId) =>
+    setDraft(card.layout?.layout === id ? catalogDraft(card) : catalogDraft(withoutLayout(card), id));
   const [artLayer, setArtLayer] = useState<ArtLayer>('back');
   const [saving, setSaving] = useState(false);
   const [status, setStatus] = useState<{ ok: boolean; text: string } | null>(null);
@@ -63,10 +74,13 @@ export default function CardEditTab({
     setSaving(true);
     setStatus(null);
     try {
-      const art = (await uploadLayer(draft.art, false)) ?? draft.art;
-      const artFront = await uploadLayer(draft.artFront, true);
-      const sent: CustomCard = { ...draft, art, ...(artFront && { artFront }) };
-      const { version } = await saveCatalogCard(toCatalogCard(card, sent));
+      let next = withoutLayout(card);
+      if (draft) {
+        const art = (await uploadLayer(draft.art, false)) ?? draft.art;
+        const artFront = await uploadLayer(draft.artFront, true);
+        next = toCatalogCard(card, { ...draft, art, ...(artFront && { artFront }) });
+      }
+      const { version } = await saveCatalogCard(next);
       content.saved(version);
       setStatus({ ok: true, text: 'Carta salva para todo mundo.' });
     } catch (e) {
@@ -80,16 +94,19 @@ export default function CardEditTab({
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:sticky sm:top-4 sm:max-w-none">
         <div ref={ref} className="w-full">
-          {width > 0 && (
+          {!draft && <CardFace card={card} size="full" className="rounded-lg shadow-xl" />}
+          {draft && width > 0 && (
             <CardRender
               card={draft}
               width={width}
               referenceOpacity={refOpacity}
-              onArtMove={(dx, dy) => setDraft((d) => moveArt(d, artLayer, dx, dy))}
+              onArtMove={(dx, dy) => setDraft((d) => d && moveArt(d, artLayer, dx, dy))}
               className="rounded-lg shadow-xl"
             />
           )}
         </div>
+        {draft && (
+          <>
         <label className="flex items-center gap-2 text-xs text-muted">
           Original por cima
           <input
@@ -104,6 +121,8 @@ export default function CardEditTab({
           {Math.round(refOpacity * 100)}%
         </label>
         <p className="text-xs text-muted">Arraste a arte na carta para enquadrar.</p>
+          </>
+        )}
       </div>
       <div className="flex min-w-0 flex-col gap-4">
         {header}
@@ -130,16 +149,58 @@ export default function CardEditTab({
           </span>
         </div>
         {status && <p className={`text-xs ${status.ok ? 'text-ok' : 'text-danger'}`}>{status.text}</p>}
-        <div className="flex flex-wrap items-center gap-2 rounded-lg bg-surface-2 px-3 py-2">
-          <p className="min-w-0 flex-1 text-xs text-muted">As molduras, as posições e os ícones em si valem para todas as cartas do layout.</p>
-          <Link
-            href={`/criar/layouts?layout=${draft.layout}&carta=${card.id}`}
-            className="rounded-lg px-3 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/50 hover:bg-accent/10"
-          >
-            Editar layout
-          </Link>
-        </div>
-        <CardEditor card={draft} onChange={setDraft} artLayer={artLayer} onArtLayerChange={setArtLayer} />
+        {draft ? (
+          <>
+            <div className="flex flex-wrap items-center gap-2 rounded-lg bg-surface-2 px-3 py-2">
+              <p className="min-w-0 flex-1 text-xs text-muted">As molduras, as posições e os ícones em si valem para todas as cartas do layout.</p>
+              <Link
+                href={`/criar/layouts?layout=${draft.layout}&carta=${card.id}`}
+                className="rounded-lg px-3 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/50 hover:bg-accent/10"
+              >
+                Editar layout
+              </Link>
+              <button
+                type="button"
+                onClick={() => setDraft(null)}
+                title="Tira o layout da carta: ela volta a mostrar a imagem impressa (vale ao salvar)."
+                className="rounded-lg px-3 py-1.5 text-sm text-muted ring-1 ring-border hover:bg-surface hover:text-danger"
+              >
+                Voltar para a original
+              </button>
+            </div>
+            <CardEditor card={draft} onChange={setDraft} artLayer={artLayer} onArtLayerChange={setArtLayer} />
+          </>
+        ) : (
+          <div className="flex flex-col gap-3 rounded-lg bg-surface-2 p-4">
+            <p className="text-sm">
+              Esta carta mostra a <strong>imagem original</strong>. Escolha um layout para montá-la: a impressa fica de
+              fundo e dá para trocar a arte, os ícones e os textos.
+            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <select
+                aria-label="Layout"
+                value={chosenLayout}
+                onChange={(e) => setChosenLayout(e.target.value as LayoutId | '')}
+                className="min-w-0 flex-1 rounded-lg border border-border bg-surface px-3 py-1.5 text-sm"
+              >
+                <option value="">Escolha um layout…</option>
+                {layoutChoices.map((l) => (
+                  <option key={l.id} value={l.id}>
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+              <button
+                type="button"
+                disabled={!chosenLayout}
+                onClick={() => chosenLayout && applyLayout(chosenLayout)}
+                className="rounded-lg bg-accent px-4 py-1.5 text-sm font-semibold text-bg hover:bg-accent-strong disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                Aplicar layout
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

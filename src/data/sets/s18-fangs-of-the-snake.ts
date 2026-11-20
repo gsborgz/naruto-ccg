@@ -27,13 +27,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"There is only one destiny we all share equally...death.\"",
     image: "s18-n-883",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-884",
@@ -54,13 +47,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Stronger than hers?\"",
     image: "s18-n-884",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-885",
@@ -81,13 +67,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Here I come fatso! Partial Expansion Jutsu!!\"",
     image: "s18-n-885",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-886",
@@ -108,13 +87,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"A real man doesn't let a woman do his fighting for him.\"",
     image: "s18-n-886",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-887",
@@ -137,13 +109,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I have more than just Byakugan!\"",
     image: "s18-n-887",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-888",
@@ -164,13 +129,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'm Ino Yamanaka. My family owns the Yamanaka Flower Shop.\"",
     image: "s18-n-888",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-889",
@@ -193,13 +151,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Rotation!\"",
     image: "s18-n-889",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-890",
@@ -222,13 +173,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"When you're sad and alone, you can only trust in yourself.\"",
     image: "s18-n-890",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-891",
@@ -250,13 +194,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"My Will of Fire...is now yours.\"",
     image: "s18-n-891",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-892",
@@ -278,13 +215,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Sorry, but from here on out...I'm playing for keeps!\"",
     image: "s18-n-892",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-893",
@@ -305,13 +235,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Art to me is...explosiveness itself!\"",
     image: "s18-n-893",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-894",
@@ -332,13 +255,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Valid: Your opponent's Mission and Client cards get +X Entrance cost. X = the number of your opponent's face-up Battle Rewards.",
     ],
     image: "s18-n-894",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-895",
@@ -361,14 +277,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I might not be at my cousin Neji's level, but I...\" \"8 Trigrams 64 Palms..! Haaa!!\"",
     image: "s18-n-895",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-896",
@@ -390,13 +298,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"In peace and harmony... Hehehehe!\"",
     image: "s18-n-896",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-897",
@@ -419,13 +320,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Ugh...You stink of insects.\"",
     image: "s18-n-897",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-898",
@@ -447,13 +341,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Is there no mistake, Sis?\"",
     image: "s18-n-898",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-899",
@@ -474,13 +361,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's too late Naruto... It's already too late. I can't go back anymore.\"",
     image: "s18-n-899",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-900",
@@ -501,13 +381,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "When your opponent's Tracked Ninja is sent out to Attack, you can put a \"Ninja Dog\" Ninja card from your hand or Chakra area into this Ninja's Team in any position.",
     ],
     image: "s18-n-900",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-901",
@@ -528,13 +401,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I don't want those words to be just empty talk!\"",
     image: "s18-n-901",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-902",
@@ -556,13 +422,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're such a snappy female, as usual.\"",
     image: "s18-n-902",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-903",
@@ -583,13 +442,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"What's the meaning of this? We pierced his vital spots.\"",
     image: "s18-n-903",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-904",
@@ -610,13 +462,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I must tell Lord Hokage about this quick.\"",
     image: "s18-n-904",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-905",
@@ -638,13 +483,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"W-W-Wait, D-Deidara Sensei!\"",
     image: "s18-n-905",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-906",
@@ -667,13 +505,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Your weapons have a thick scent of my blood on them now. Those are my adorable ninja dogs. And their sense of smell is without equal.\"",
     image: "s18-n-906",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-907",
@@ -694,13 +525,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"He has grown. But...he's still not good enough.\"",
     image: "s18-n-907",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-908",
@@ -721,13 +545,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Mold Chakra in your stomach and inhale through your nose!\"",
     image: "s18-n-908",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-909",
@@ -748,13 +565,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We've been summoned.\"",
     image: "s18-n-909",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-910",
@@ -775,13 +585,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Be gentle, okay?\"",
     image: "s18-n-910",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-911",
@@ -802,13 +605,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This is.. a toad ... isn't it?\"",
     image: "s18-n-911",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-912",
@@ -829,13 +625,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"....\"",
     image: "s18-n-912",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-913",
@@ -856,13 +645,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Guy sensei, I did it! All your training has not been in vain!\"",
     image: "s18-n-913",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-914",
@@ -883,13 +665,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Everyone, please direct these kunai knives towards the enemy all at once. I will do the rest.\"",
     image: "s18-n-914",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-915",
@@ -910,13 +685,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The fact is, I'm stronger than Kakashi...and faster...\"",
     image: "s18-n-915",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-916",
@@ -937,13 +705,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This store's ink works really well for molding my Chakra.\"",
     image: "s18-n-916",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-917",
@@ -964,13 +725,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I can't display my true strength on a lame mission like this!\"",
     image: "s18-n-917",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-918",
@@ -991,13 +745,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"So...looks like we've got ourselves a tough guy...\"",
     image: "s18-n-918",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-919",
@@ -1019,13 +766,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This isn't the time to be throwing in the towel!\"",
     image: "s18-n-919",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-920",
@@ -1046,13 +786,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Heh! Since you'll be my first victim, let's make this entertaining.\"",
     image: "s18-n-920",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-921",
@@ -1073,13 +806,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You sure do suffer when you have a stupid leader. You underlings!\"",
     image: "s18-n-921",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-922",
@@ -1100,13 +826,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Come with us!\"",
     image: "s18-n-922",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-923",
@@ -1127,13 +846,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This is why I cannot leave Lord Orochimaru's side.\"",
     image: "s18-n-923",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-924",
@@ -1155,13 +867,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Free at last. Thank you, Sasuke.\"",
     image: "s18-n-924",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 3.7, y: -8.7, zoom: 1.025, print: true } },
-    },
   },
   {
     id: "s18-n-925",
@@ -1182,13 +887,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"So it's you, after all ...Sasuke.\"",
     image: "s18-n-925",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-926",
@@ -1209,13 +907,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're good at controlling your Curse Mark!\"",
     image: "s18-n-926",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5, y: -8.6, zoom: 1.0256, print: true } },
-    },
   },
   {
     id: "s18-n-927",
@@ -1236,13 +927,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I will become your blade.\"",
     image: "s18-n-927",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-928",
@@ -1263,13 +947,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If you go to Lord Orochimaru, you won't be alone anymore.\"",
     image: "s18-n-928",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-929",
@@ -1291,13 +968,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"-Are you coming? -Or not?!\"",
     image: "s18-n-929",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-930",
@@ -1318,13 +988,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You can't bring back the dead, can you?\"",
     image: "s18-n-930",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-931",
@@ -1346,13 +1009,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"From this point on, we move together. And henceforth, we will call ourselves... Hebi.\"",
     image: "s18-n-931",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-932",
@@ -1373,13 +1029,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Power that was not used in a lifetime rests inside the human body.\"",
     image: "s18-n-932",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-933",
@@ -1401,14 +1050,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I see... Your strength is amazing...\" \"Aren't you... afraid of me?\"",
     image: "s18-n-933",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-934",
@@ -1430,13 +1071,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You wanted it so badly that you went after the fledgling in the nest... But you became targeted as the prey instead...\"",
     image: "s18-n-934",
-    layout: {
-      layout: "layout-04",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-935",
@@ -1457,13 +1091,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I fight for my sake only and live to love no one but myself.\"",
     image: "s18-n-935",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 4.7, y: -8.7, zoom: 1.0261, print: true } },
-    },
   },
   {
     id: "s18-n-936",
@@ -1484,13 +1111,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"And now...lets have a puppet show!\"",
     image: "s18-n-936",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 5.2, y: -8.7, zoom: 1.027, print: true } },
-    },
   },
   {
     id: "s18-n-937",
@@ -1512,13 +1132,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Excuse me, will you be my Sensei? Please teach me!\"",
     image: "s18-n-937",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-938",
@@ -1539,13 +1152,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Excuse me did I ask for your opinion?!",
     image: "s18-n-938",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 4.3, y: -8.2, zoom: 1.0213, print: true } },
-    },
   },
   {
     id: "s18-n-939",
@@ -1567,13 +1173,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We'll see how much better they are. The Chunin Exams are almost upon us.\"",
     image: "s18-n-939",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-940",
@@ -1595,13 +1194,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Cha!\"",
     image: "s18-n-940",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-941",
@@ -1623,13 +1215,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Creak, Creak, Creak...\"",
     image: "s18-n-941",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-942",
@@ -1650,13 +1235,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"They're the first puppets you ever made. The father and...the mother.\"",
     image: "s18-n-942",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-943",
@@ -1677,13 +1255,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Sorry, but you're the one who's getting tied up!\"",
     image: "s18-n-943",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-944",
@@ -1705,13 +1276,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If you seal off your five senses the Genjutsu will no longer have any effect on you.\"",
     image: "s18-n-944",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-945",
@@ -1733,13 +1297,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I don't like waiting for people, and I don't like making people wait...I'll finish this right away.\"",
     image: "s18-n-945",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 4.1, y: -7.8, zoom: 1.0245, print: true } },
-    },
   },
   {
     id: "s18-n-946",
@@ -1761,13 +1318,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The battle to come promises to be a most fearful one.\"",
     image: "s18-n-946",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "03-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-947",
@@ -1789,13 +1339,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Now...what will you do?\"",
     image: "s18-n-947",
-    layout: {
-      layout: "layout-04",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-01" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-n-948",
@@ -1817,14 +1360,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The cardinal rule of the desert. If you hit a sandstorm, stay put.\" \"Sand Prison!\"",
     image: "s18-n-948",
-    layout: {
-      layout: "layout-04",
-      panelVariant: "purple",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02", attribute: "06-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── JUTSU ──
   {
@@ -1842,13 +1377,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\" 10th Edict of Enlightenment!\"",
     image: "s18-j-706",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-707",
@@ -1865,13 +1393,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I've no intention...of dropping...out!\"",
     image: "s18-j-707",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: -1.5, y: -0.1, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s18-j-708",
@@ -1888,13 +1409,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Haaa!\"",
     image: "s18-j-708",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-709",
@@ -1911,13 +1425,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"ROAR!!!\"",
     image: "s18-j-709",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.2, y: 1.3, zoom: 1.0074, print: true } },
-    },
   },
   {
     id: "s18-j-710",
@@ -1933,13 +1440,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"When you curse someone, you dig two holes.\"",
     image: "s18-j-710",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-711",
@@ -1955,13 +1455,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'm your opponent!\"",
     image: "s18-j-711",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-712",
@@ -1977,13 +1470,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Behind us!\"",
     image: "s18-j-712",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-713",
@@ -2000,13 +1486,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This pain is not an illusion. This pain is absolutely no different from reality. How long will your spirit sustain?\"",
     image: "s18-j-713",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-714",
@@ -2022,13 +1501,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Then why didn't you tell me!?\" \"Because if we told you you'd raised a big fuss!\"",
     image: "s18-j-714",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-715",
@@ -2044,13 +1516,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Thanks...Akamaru...\"",
     image: "s18-j-715",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-716",
@@ -2067,13 +1532,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Aim for the legs! Immobilize Akamaru!\"",
     image: "s18-j-716",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.4, y: 0.4, zoom: 1.0051, print: true } },
-    },
   },
   {
     id: "s18-j-717",
@@ -2089,13 +1547,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If you're not going to do anything, you're in the way, so beat it!\"",
     image: "s18-j-717",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-718",
@@ -2112,13 +1563,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"There isn't anything else to hold on to. I need to check our surroundings, so in the meantime just endure it.\"",
     image: "s18-j-718",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-719",
@@ -2134,13 +1578,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"How stubborn...You're still alive, huh?\"",
     image: "s18-j-719",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.6, y: -1.7, zoom: 1.0004, print: true } },
-    },
   },
   {
     id: "s18-j-720",
@@ -2157,13 +1594,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"We fought him earlier. He's fast... Stay alert!\"",
     image: "s18-j-720",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-721",
@@ -2179,13 +1609,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Kakashi...I will take your heart to replace the one you took from me.\"",
     image: "s18-j-721",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-722",
@@ -2203,13 +1626,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Now! Wind Style: Toad Water Pistol!\"",
     image: "s18-j-722",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: -1.5, y: 1.6, zoom: 1.0079, print: true } },
-    },
   },
   {
     id: "s18-j-723",
@@ -2227,13 +1643,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Collaboration Jutsu! Wind Style: Toad Flame Bombs!\"",
     image: "s18-j-723",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-724",
@@ -2249,13 +1658,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'll beat you into the oblivion if that's what it's gonna take...to bring you back!\"",
     image: "s18-j-724",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-725",
@@ -2271,13 +1673,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Whoa, that is totally awesome! ...That may be the coolest thing I've ever seen!\"",
     image: "s18-j-725",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-726",
@@ -2293,13 +1688,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"With Chakra alone, he caused this much damage..\"",
     image: "s18-j-726",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.5, y: 0.1, zoom: 1.0044, print: true } },
-    },
   },
   {
     id: "s18-j-727",
@@ -2316,13 +1704,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"His timing for using the Shadow Clone Jutsu has gotten better.\"",
     image: "s18-j-727",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-728",
@@ -2338,13 +1719,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Now, Sasuke... Give me your body!\"",
     image: "s18-j-728",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.7, y: 0.8, zoom: 1.006, print: true } },
-    },
   },
   {
     id: "s18-j-729",
@@ -2360,13 +1734,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"My future lies in this child!\"",
     image: "s18-j-729",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-730",
@@ -2383,13 +1750,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Not another copy of me...!\"",
     image: "s18-j-730",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.6, y: 1.9, zoom: 1.0077, print: true } },
-    },
   },
   {
     id: "s18-j-731",
@@ -2405,13 +1765,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"One down.\"",
     image: "s18-j-731",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-732",
@@ -2428,13 +1781,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I want revenge.\"",
     image: "s18-j-732",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-733",
@@ -2451,13 +1797,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"A snake that slithers on the ground can only dream of flying through the air.\"",
     image: "s18-j-733",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-734",
@@ -2473,13 +1812,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's over... that was too quick.\"",
     image: "s18-j-734",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-735",
@@ -2495,13 +1827,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Stop it, both of you!\"",
     image: "s18-j-735",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-736",
@@ -2517,13 +1842,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Look out!\" \"Kakashi Sensei...!\"",
     image: "s18-j-736",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-737",
@@ -2540,13 +1858,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Gaara's even using his \"Ultimate Defense\" sand in this fight.\"",
     image: "s18-j-737",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: -1.2, y: 1.9, zoom: 1.008, print: true } },
-    },
   },
   {
     id: "s18-j-738",
@@ -2563,13 +1874,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"His fingers always move before he attacks...\"",
     image: "s18-j-738",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-739",
@@ -2585,13 +1889,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You haven't changed at all, have you, you jerk?!\"",
     image: "s18-j-739",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-740",
@@ -2607,13 +1904,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're finished...little girl.\"",
     image: "s18-j-740",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-741",
@@ -2630,13 +1920,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"That was an extraordinary amount of attacks. I couldn't even count them all with the Sharingan. What a Jutsu...\"",
     image: "s18-j-741",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-j-742",
@@ -2653,13 +1936,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's useless to hide!\"",
     image: "s18-j-742",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"] },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   // ── MISSION ──
   {
@@ -2676,13 +1952,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "Effect: When your opponent wins or gets any Battle Rewards, draw 1 card.",
     ],
     image: "s18-m-670",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-671",
@@ -2700,13 +1969,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
       "(5+) At the end of the turn, draw 1 and discard 1 card.",
     ],
     image: "s18-m-671",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.1, y: -1.2, zoom: 1.0032, print: true } },
-    },
   },
   {
     id: "s18-m-672",
@@ -2724,13 +1986,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"This fire Change in Chakra Nature is strong against the wind next to it, but weak against water on the other side.\"",
     image: "s18-m-672",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-673",
@@ -2746,13 +2001,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The Will of Fire shines upon the village.\"",
     image: "s18-m-673",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-674",
@@ -2771,13 +2019,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I took each of these hearts from Shinobi I once fought. I can always replenish my stock...with your hearts\"",
     image: "s18-m-674",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-675",
@@ -2794,13 +2035,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You're late, Sasori my man...I thought you didn't like to keep people waiting.\"",
     image: "s18-m-675",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-676",
@@ -2817,13 +2051,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's very rare for you to summon me.\" \"Pakkun is out on a mission, so Biscuit, I need you to find Naruto right away.\"",
     image: "s18-m-676",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.1, y: -1.1, zoom: 1.0041, print: true } },
-    },
   },
   {
     id: "s18-m-677",
@@ -2840,13 +2067,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Our voices travel farther than wireless radios, and our noses that can instantly sniff out danger will protect you.\"",
     image: "s18-m-677",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-678",
@@ -2862,13 +2082,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"These things here are different too, huh...\"",
     image: "s18-m-678",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.5, y: -1.2, zoom: 1.0036, print: true } },
-    },
   },
   {
     id: "s18-m-679",
@@ -2887,13 +2100,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I didn't notice in time...No wonder my Genjutsu's having no effect. This is a shadow clone.\"",
     image: "s18-m-679",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-680",
@@ -2910,13 +2116,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"You don't need to worry. The Medical Corp will figure something out soon.\"",
     image: "s18-m-680",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-681",
@@ -2932,13 +2131,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"First comes special rhythm training!\"",
     image: "s18-m-681",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-682",
@@ -2955,13 +2147,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Alright, these will be somewhat harsh measures, but let's try...\"",
     image: "s18-m-682",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-683",
@@ -2978,13 +2163,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Young lady, the dango here sure is wonderful!\"",
     image: "s18-m-683",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-684",
@@ -3001,13 +2179,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Asuma....\"",
     image: "s18-m-684",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-685",
@@ -3025,13 +2196,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"If we get food this awesome every mission, Captain Yamato can stay with us forever!\"",
     image: "s18-m-685",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.1, y: -0.4, zoom: 1.0047, print: true } },
-    },
   },
   {
     id: "s18-m-686",
@@ -3049,13 +2213,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"That is truly a small Nine-Tails in and of itself!\"",
     image: "s18-m-686",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-687",
@@ -3073,13 +2230,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's a teleportation technique in which you sign a contract in blood with all kinds of living creatures and then summon them whenever you like with Ninjutsu, Ninja Art.\"",
     image: "s18-m-687",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-688",
@@ -3096,13 +2246,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"The Fourth Hokage originally developed the Rasengan intending to add his own Change in Chakra Nature to it.\"",
     image: "s18-m-688",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-689",
@@ -3119,13 +2262,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"By the eyes of a hawk soaring high above the sky.\"",
     image: "s18-m-689",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.6, y: -1.6, zoom: 1.0036, print: true } },
-    },
   },
   {
     id: "s18-m-690",
@@ -3142,13 +2278,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"It's all right. We're best friends.\"",
     image: "s18-m-690",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-691",
@@ -3165,13 +2294,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Let's go!\"",
     image: "s18-m-691",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.7, y: 0.7, zoom: 1.0072, print: true } },
-    },
   },
   {
     id: "s18-m-692",
@@ -3189,13 +2311,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "You couldn't even live up to the Uchiha name, much less surpass it.",
     image: "s18-m-692",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0.4, y: -1.5, zoom: 1.0045, print: true } },
-    },
   },
   {
     id: "s18-m-693",
@@ -3212,13 +2327,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"My own puppet?\"",
     image: "s18-m-693",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-694",
@@ -3234,13 +2342,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"However...I...used this to bring down a nation!\"",
     image: "s18-m-694",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: -0.3, y: -0.6, zoom: 1.006, print: true } },
-    },
   },
   {
     id: "s18-m-695",
@@ -3258,13 +2359,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"I'll show you...my puppet show!\" Crow! Black Ant! Salamander!\"",
     image: "s18-m-695",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-696",
@@ -3284,13 +2378,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Allies of the Leaf Village..\" \"Were Shinobi...\" \"Of the Sand...\"",
     image: "s18-m-696",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-697",
@@ -3307,13 +2394,6 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"So? You think I've become a bit womanly?\"",
     image: "s18-m-697",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
   {
     id: "s18-m-698",
@@ -3329,12 +2409,5 @@ export const S18_FANGS_OF_THE_SNAKE: Card[] = [
     ],
     flavor: "\"Four-Corner Sealing Barrier...Lock!\"",
     image: "s18-m-698",
-    layout: {
-      layout: "layout-02",
-      nameSize: 0,
-      nameSizePtBr: 0,
-      icons: { type: "default", elements: ["02", "02"], entrance: "entrance-03", hand: "hand-02" },
-      art: { back: { x: 0, y: -0.5, zoom: 0.999, print: true } },
-    },
   },
 ];
