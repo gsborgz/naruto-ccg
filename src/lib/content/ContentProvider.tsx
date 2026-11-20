@@ -32,7 +32,8 @@ async function fetchContent(): Promise<number> {
   if (!res.ok) throw new Error(`Erro ${res.status}`);
   const { version } = (await res.json()) as { version: number };
   if (version === contentVersion()) return version;
-  const snapshot = await fetch(`/api/content/${version}`);
+  // `?p=`: formato da resposta (2 = com `namesEn`); muda o endereço para não usar a resposta antiga do cache.
+  const snapshot = await fetch(`/api/content/${version}?p=2`);
   if (!snapshot.ok) throw new Error(`Erro ${snapshot.status}`);
   const content = (await snapshot.json()) as ContentSnapshot;
   hydrateContent(content);

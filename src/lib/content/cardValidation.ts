@@ -126,7 +126,7 @@ export function parseCatalogCard(
       set: original.set,
       text: strList(c.text, 30, 3000, 'Texto'),
       image: original.image,
-      ...(original.token && { token: true }),
+      ...(c.token === true && { token: true }),
       ...(c.flavor !== undefined && c.flavor !== '' && { flavor: str(c.flavor, 1500, 'Frase') }),
       ...(c.layout !== undefined && { layout: layoutInfo(c.layout, layouts) }),
     };

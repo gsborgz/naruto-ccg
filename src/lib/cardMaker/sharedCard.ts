@@ -156,6 +156,7 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
       typeVariant: optStr(x.typeVariant, 40),
       printedFlavor: optStr(x.printedFlavor, 600),
       flavorShade: optBool(x.flavorShade),
+      token: optBool(x.token),
       source: x.source === undefined ? undefined : catalogId(x.source),
     };
     for (const [k, v] of Object.entries(optional)) if (v !== undefined) (card as unknown as Rec)[k] = v;

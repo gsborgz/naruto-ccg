@@ -1,14 +1,15 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } from '@/models/card';
-import { INITIAL_FILTERS, type CardFilterState, type SortKey } from '@/lib/cardFilters';
+import { CARD_TYPE_LABEL, ELEMENT_LABEL, type ElementSymbol } from '@/models/card';
+import { INITIAL_FILTERS, type CardFilterState, type SortKey, type TypeFilter } from '@/lib/cardFilters';
 import { SET_NAMES } from '@/data/sets';
 import { setName as setNameOf } from '@/lib/setName';
 import { CardDesignToggle } from './CardDesignToggle';
 import { ElementBadge } from './ElementBadge';
 
-const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
+const TYPES: TypeFilter[] = ['ninja', 'jutsu', 'mission', 'client', 'token'];
+const TYPE_LABEL: Record<TypeFilter, string> = { ...CARD_TYPE_LABEL, token: 'Token' };
 const ELEMENTS: ElementSymbol[] = ['lightning', 'fire', 'wind', 'water', 'earth', 'void'];
 const SETS = Object.keys(SET_NAMES);
 const SORTS: { value: SortKey; label: string }[] = [
@@ -77,7 +78,7 @@ function TypeChips({ value, onChange, className = '' }: Pick<Props, 'value' | 'o
       className={`${chip(value.types.includes(t))} ${className}`}
       onClick={() => onChange({ ...value, types: toggle(value.types, t) })}
     >
-      {CARD_TYPE_LABEL[t]}
+      {TYPE_LABEL[t]}
     </button>
   ));
 }
@@ -204,7 +205,7 @@ function MobileFilters({ value, onChange, resultCount, extraSets }: Props) {
         )}
         {value.types.map((t) => (
           <ActiveChip key={t} onRemove={() => onChange({ ...value, types: toggle(value.types, t) })}>
-            {CARD_TYPE_LABEL[t]}
+            {TYPE_LABEL[t]}
           </ActiveChip>
         ))}
         {value.elements.map((e) => (

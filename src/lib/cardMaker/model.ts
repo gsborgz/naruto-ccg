@@ -143,6 +143,11 @@ export interface CustomCard {
   printedFlavor?: string;
   /** Liga ou desliga o sombreado da frase (só vale com `printedFlavor`). Sem valor: ligado. */
   flavorShade?: boolean;
+  /**
+   * Carta de Token: no deck vai para a parte Tokens (1 cópia de cada, fora das 50 e do Reforço; `isTokenCard`).
+   * Sem valor: não é Token.
+   */
+  token?: boolean;
   createdAt: string;
   updatedAt: string;
 }
@@ -399,6 +404,7 @@ function catalogFields(card: Card, now: string): CustomCard {
     text: card.text.map(catalogTextToMarkup).join('\n'),
     reference: cardImageUrl(card),
     source: card.id,
+    ...(card.token && { token: true }),
   };
   if (card.type === 'jutsu') {
     const part = (o: { symbols: ElementSymbol[]; generic: number | 'X' }): JutsuCostPart => ({

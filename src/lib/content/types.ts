@@ -16,6 +16,11 @@ export interface ContentSnapshot {
   layouts: Record<LayoutId, LayoutSpec>;
   icons: IconsContent;
   assets: AssetMap;
+  /**
+   * Nome impresso (inglês, de src/data/sets/) das cartas em que ele difere do nome do conteúdo (PT-BR), para a busca
+   * achar a carta pelos dois. Não fica no Redis: a rota `/api/content/<versão>` junta na resposta.
+   */
+  namesEn?: Record<string, string>;
 }
 
 /**

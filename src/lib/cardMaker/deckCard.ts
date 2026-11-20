@@ -55,6 +55,7 @@ export function customCardToCard(c: CustomCard): Card {
     set: CUSTOM_SET,
     text: plainText(c.text),
     ...(c.flavor.trim() && { flavor: c.flavor.trim() }),
+    ...(c.token && { token: true }),
     image: '',
   };
   const characteristics = hasCharacteristics(c.type) ? c.characteristics.map((s) => s.trim()).filter(Boolean) : [];

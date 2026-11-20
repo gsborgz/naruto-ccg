@@ -142,7 +142,9 @@ export async function seedContent(): Promise<void> {
     await redis.hset(KEY.layout, seed.layouts);
     await redis.hset(KEY.icon, seed.icons);
     await redis.set(KEY.format, CONTENT_FORMAT);
-    await redis.set(KEY.version, 1);
+    // A versão começa no horário (ms), e não em 1: um Redis apagado e gravado de novo não repete uma versão que o
+    // navegador já guardou em cache para sempre (`/api/content/<versão>`) com outro conteúdo.
+    await redis.set(KEY.version, Date.now());
   } finally {
     await redis.del(KEY.seedLock);
   }

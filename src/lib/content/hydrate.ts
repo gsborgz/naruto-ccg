@@ -1,4 +1,4 @@
-import { CARDS, CARDS_BY_ID } from '../../data/cards.ts';
+import { CARD_NAMES_EN, CARDS, CARDS_BY_ID } from '../../data/cards.ts';
 import { installIcons } from '../cardMaker/icons/index.ts';
 import { LAYOUTS, LAYOUT_LIST } from '../cardMaker/layouts/index.ts';
 import type { LayoutSpec } from '../cardMaker/layouts/types.ts';
@@ -30,6 +30,9 @@ export function hydrateContent(snapshot: ContentSnapshot): void {
   const byId = CARDS_BY_ID as Map<string, Card>;
   byId.clear();
   for (const c of snapshot.cards) byId.set(c.id, c);
+  const namesEn = CARD_NAMES_EN as Map<string, string>;
+  namesEn.clear();
+  for (const [id, name] of Object.entries(snapshot.namesEn ?? {})) namesEn.set(id, name);
 
   for (const key of Object.keys(LAYOUTS)) delete LAYOUTS[key as LayoutId];
   LAYOUT_LIST.length = 0;

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { indexDeck, cannotAddReasonIn, summarizeDeck } from '../deckRules.ts';
+import { deckPartOf, indexDeck, cannotAddReasonIn, summarizeDeck } from '../deckRules.ts';
 import { CARDS_BY_ID } from '../../data/cards.ts';
 import { customDeckCardId, customSourceId, hasCustomCards, isCustomCardId } from './customIds.ts';
 import { customCardToCard, UNNAMED_CARD } from './deckCard.ts';
@@ -91,4 +91,15 @@ test('cartas criadas seguem as regras de montagem', () => {
   assert.equal(cannotAddReasonIn(indexDeck({ [ninja.id]: 3 }, lookup2), ninja2), null);
   // Mais de 3 cópias da carta criada: deck inválido.
   assert.ok(summarizeDeck({ [ninja.id]: 4 }, lookup).issues.some((i) => i.code === 'copies'));
+});
+
+test('carta criada marcada como Token vai para a parte Tokens', () => {
+  const token = customCardToCard(card({ id: 't', name: 'Clone das Sombras', token: true }));
+  assert.equal(token.token, true);
+  assert.equal(deckPartOf(token), 'token');
+  const lookup = (id: string) => (id === token.id ? token : undefined);
+  const summary = summarizeDeck({ [token.id]: 1 }, lookup);
+  assert.equal(summary.tokens, 1);
+  assert.equal(summary.total, 0);
+  assert.equal(customCardToCard(card({ id: 'n' })).token, undefined);
 });

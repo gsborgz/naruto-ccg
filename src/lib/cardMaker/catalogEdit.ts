@@ -35,7 +35,7 @@ const round = (n: number) => Math.round(n * 100) / 100;
 
 /**
  * A carta editada (`draft`) de volta no formato do catálogo, a partir da original: os dados de jogo e os textos saem
- * do editor; o id, a coleção, o número, a imagem impressa e o Token ficam os da original. O visual (layout, ícones,
+ * do editor; o id, a coleção, o número e a imagem impressa ficam os da original. O visual (layout, ícones,
  * design, artes, ajustes do nome) vai para o `layout` da carta, com o que não sai dos dados (texto com marcação,
  * nome com quebra de linha, vilas) só quando difere.
  */
@@ -49,7 +49,6 @@ export function toCatalogCard(original: Card, draft: CustomCard): Card {
     set: original.set,
     number: original.number,
     image: original.image,
-    ...(original.token && { token: true }),
   } as Card;
 
   const layout = visualLayout(original, draft, card.type);

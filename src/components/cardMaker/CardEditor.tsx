@@ -475,6 +475,14 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
             </button>
           ))}
         </div>
+        <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+          <input
+            type="checkbox"
+            checked={card.token ?? false}
+            onChange={(e) => set('token', e.target.checked || undefined)}
+          />
+          Token (no deck, vai para a parte Tokens: 1 cópia de cada, fora das 50 cartas e do Reforço)
+        </label>
         {typeIconVariants(type).length > 0 && (
           <label className={label}>
             Ícone do tipo

@@ -11,3 +11,6 @@ import type { Card } from '../models/card.ts';
 export const CARDS: Card[] = [];
 
 export const CARDS_BY_ID: ReadonlyMap<string, Card> = new Map<string, Card>();
+
+/** Nome impresso (inglês) das cartas em que ele difere do nome em PT-BR (`ContentSnapshot.namesEn`), para a busca. */
+export const CARD_NAMES_EN: ReadonlyMap<string, string> = new Map<string, string>();

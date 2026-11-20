@@ -1,12 +1,17 @@
-import type { Card, CardType, ElementSymbol } from '../models/card.ts';
+import { CARD_NAMES_EN } from '../data/cards.ts';
+import { isTokenCard, type Card, type CardType, type ElementSymbol } from '../models/card.ts';
 
 export type SortKey = 'type' | 'name' | 'cost';
+
+/** Categoria do filtro: um tipo de carta ou `token` (as cartas de Token, de qualquer tipo; `isTokenCard`). */
+export type TypeFilter = CardType | 'token';
 
 export interface CardFilterState {
   query: string;
   /** Código do set (ex.: "S01"), ou "" para todas as coleções. */
   set: string;
-  types: CardType[];
+  /** Categorias marcadas: a carta entra se for de qualquer uma delas. */
+  types: TypeFilter[];
   elements: ElementSymbol[];
   sort: SortKey;
 }
@@ -39,18 +44,19 @@ const haystackCache = new WeakMap<Card, string>();
 function haystackOf(c: Card): string {
   let h = haystackCache.get(c);
   if (h === undefined) {
-    h = normalize([c.name, ...('characteristics' in c ? c.characteristics : []), ...c.text].join(' '));
+    // O nome impresso (inglês) também é achado, nas cartas em que ele difere do PT-BR.
+    h = normalize([c.name, CARD_NAMES_EN.get(c.id) ?? '', ...('characteristics' in c ? c.characteristics : []), ...c.text].join(' '));
     haystackCache.set(c, h);
   }
   return h;
 }
 
-/** Busca e ordena pelos textos das cartas (os do conteúdo do jogo, em PT-BR). */
+/** Busca e ordena pelos textos das cartas (os do conteúdo do jogo, em PT-BR, e o nome impresso, em inglês). */
 export function filterCards(cards: Card[], f: CardFilterState): Card[] {
   const q = normalize(f.query.trim());
   const result = cards.filter((c) => {
     if (f.set && c.set !== f.set) return false;
-    if (f.types.length && !f.types.includes(c.type)) return false;
+    if (f.types.length && !f.types.includes(c.type) && !(f.types.includes('token') && isTokenCard(c))) return false;
     if (f.elements.length && !c.elements.some((e) => f.elements.includes(e))) return false;
     if (q && !haystackOf(c).includes(q)) return false;
     return true;
@@ -68,7 +74,7 @@ export function filterCards(cards: Card[], f: CardFilterState): Card[] {
 }
 
 const SORT_KEYS: readonly SortKey[] = ['type', 'name', 'cost'];
-const CARD_TYPES = Object.keys(TYPE_ORDER) as CardType[];
+const TYPE_FILTERS: readonly TypeFilter[] = [...(Object.keys(TYPE_ORDER) as CardType[]), 'token'];
 const ELEMENTS: readonly ElementSymbol[] = ['lightning', 'fire', 'wind', 'water', 'earth', 'void'];
 
 /**
@@ -95,7 +101,7 @@ export function filtersFromSearchParams(params: { get(name: string): string | nu
   return {
     query: params.get('q') ?? '',
     set: params.get('set') ?? '',
-    types: list('type', CARD_TYPES),
+    types: list('type', TYPE_FILTERS),
     elements: list('element', ELEMENTS),
     sort: sort && SORT_KEYS.includes(sort) ? sort : INITIAL_FILTERS.sort,
   };
