@@ -6,7 +6,7 @@ import { BOARD_THEME_IDS } from './game/boardThemes';
 /**
  * Tema da arena escolhido por ESTE jogador (seletor 🎨): preferência por navegador, que vale só para quem
  * escolheu e para as próximas partidas. Sem escolha, a arena usa o tema sorteado na partida
- * (`GameState.theme`). Mesmo padrão de `cardDesign.ts`.
+ * (`GameState.theme`).
  */
 const STORAGE_KEY = 'naruto-ccg:arena-theme';
 

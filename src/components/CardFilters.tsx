@@ -5,7 +5,6 @@ import { CARD_TYPE_LABEL, ELEMENT_LABEL, type ElementSymbol } from '@/models/car
 import { INITIAL_FILTERS, type CardFilterState, type SortKey, type TypeFilter } from '@/lib/cardFilters';
 import { SET_NAMES } from '@/data/sets';
 import { setName as setNameOf } from '@/lib/setName';
-import { CardDesignToggle } from './CardDesignToggle';
 import { ElementBadge } from './ElementBadge';
 
 const TYPES: TypeFilter[] = ['ninja', 'jutsu', 'mission', 'client', 'token'];
@@ -130,7 +129,6 @@ function DesktopFilters({ value, onChange, resultCount, extraSets }: Props) {
         <span className="mx-1 h-5 w-px bg-border" />
         <ElementChips value={value} onChange={onChange} />
         <span className="ml-auto flex items-center gap-3 text-sm text-muted">
-          <CardDesignToggle />
           {resultCount} cartas
         </span>
       </div>
@@ -285,10 +283,6 @@ function MobileFilters({ value, onChange, resultCount, extraSets }: Props) {
                 </div>
               </section>
 
-              <section className="flex items-center justify-between gap-3">
-                <h3 className="text-xs font-semibold tracking-wide text-muted uppercase">Cartas</h3>
-                <CardDesignToggle />
-              </section>
             </div>
 
             <div className="flex gap-2 border-t border-border px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
