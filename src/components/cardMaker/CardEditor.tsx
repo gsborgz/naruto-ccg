@@ -5,6 +5,10 @@ import { translateAttribute } from '@/data/ptbr/glossary';
 import { useEffect, useState } from 'react';
 import {
   ATTRIBUTE_KANJI,
+  COST_ICONS,
+  attributeFrames,
+  entranceIcons,
+  handIcons,
   ATTRIBUTE_NAMES,
   attributeSlug,
   LAYOUT_LIST,
@@ -16,7 +20,6 @@ import {
   typeIconVariants,
 } from '@/lib/cardMaker/layouts';
 import {
-  ATTRIBUTE_FRAMES,
   withLayout,
   VILLAGES,
   MAX_VILLAGES,
@@ -82,17 +85,19 @@ const VILLAGE_LABEL: Record<Village, string> = {
   artisan: 'Artesãos',
   nadeshiko: 'Nadeshiko',
 };
-const ENTRANCE_ICONS: { value: EntranceIcon; label: string }[] = [
-  { value: 'entrance-01', label: 'Shuriken verde' },
-  { value: 'entrance-02', label: 'Escudo' },
-  { value: 'entrance-03', label: 'Shuriken azul' },
-  { value: 'entrance-04', label: 'Entrada 04' },
-];
-const HAND_ICONS: { value: HandIcon; label: string }[] = [
-  { value: 'hand-01', label: 'Cartas vermelhas' },
-  { value: 'hand-02', label: 'Cartas douradas' },
-  { value: 'hand-03', label: 'Mão 03' },
-];
+/** Nomes dos ícones de custo impressos; os criados no editor usam o nome deles (`name`) ou o id. */
+const COST_ICON_LABELS: Record<string, string> = {
+  'entrance-01': 'Shuriken verde',
+  'entrance-02': 'Escudo',
+  'entrance-03': 'Shuriken azul',
+  'entrance-04': 'Entrada 04',
+  'hand-01': 'Cartas vermelhas',
+  'hand-02': 'Cartas douradas',
+  'hand-03': 'Mão 03',
+};
+const costLabel = (id: string) => COST_ICONS[id as EntranceIcon]?.name || COST_ICON_LABELS[id] || id;
+const ENTRANCE_ICON_OPTIONS = (): { value: EntranceIcon; label: string }[] => entranceIcons().map((value) => ({ value, label: costLabel(value) }));
+const HAND_ICON_OPTIONS = (): { value: HandIcon; label: string }[] => handIcons().map((value) => ({ value, label: costLabel(value) }));
 
 /**
  * Trata a imagem escolhida (reduz e comprime, ver `compressImage`). Ela fica no rascunho e só vai para o servidor
@@ -737,7 +742,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
                     set('entranceIcon', e.target.value as EntranceIcon)
                   }
                 >
-                  {ENTRANCE_ICONS.map((o) => (
+                  {ENTRANCE_ICON_OPTIONS().map((o) => (
                     <option key={o.value} value={o.value}>
                       {o.label}
                     </option>
@@ -759,7 +764,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
                   value={card.handIcon}
                   onChange={(e) => set('handIcon', e.target.value as HandIcon)}
                 >
-                  {HAND_ICONS.map((o) => (
+                  {HAND_ICON_OPTIONS().map((o) => (
                     <option key={o.value} value={o.value}>
                       {o.label}
                     </option>
@@ -862,7 +867,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
                     })
                   }
                 >
-                  {ATTRIBUTE_FRAMES.map((f) => (
+                  {attributeFrames().map((f) => (
                     <option key={f} value={f}>
                       Kunai {f}
                     </option>

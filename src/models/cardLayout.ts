@@ -23,17 +23,17 @@ export type NameWrap = 'auto' | 'single' | 'break';
 export const NAME_WRAPS: readonly NameWrap[] = ['auto', 'single', 'break'];
 
 /**
- * Variante do ícone de elemento (arquivos `element-<elemento>-<variante>` em card-layouts/icons/element).
- * O layout 1 usa a 01; a 03 é alternativa (não existe para o Vazio).
+ * Variante do ícone de elemento (`element:<elemento>-<variante>` no conteúdo). As impressas são 01, 02 e 03 (o layout 1
+ * usa a 01; a 03 não existe para o Vazio); outras são criadas na aba Ícones do editor de layouts (04, 05…).
  */
-export type ElementVariant = '01' | '02' | '03';
+export type ElementVariant = string;
 
-/** Ícones de custo (arquivos `cost-entrance-XX` e `cost-hand-XX` em card-layouts/icons/cost). */
-export type EntranceIcon = 'entrance-01' | 'entrance-02' | 'entrance-03' | 'entrance-04';
-export type HandIcon = 'hand-01' | 'hand-02' | 'hand-03';
+/** Ícones de custo (`cost:entrance-XX` e `cost:hand-XX` no conteúdo; os impressos e os criados no editor). */
+export type EntranceIcon = `entrance-${string}`;
+export type HandIcon = `hand-${string}`;
 
-/** Moldura do Atributo de Combate (arquivos `combat-attributes-<variante>`). */
-export type AttributeFrame = '01' | '02' | '03-01' | '03-02' | '05' | '06-01' | '06-02' | '06-03' | '07';
+/** Moldura do Atributo de Combate (`attribute:<moldura>` no conteúdo: as impressas, 01 a 07, e as criadas no editor). */
+export type AttributeFrame = string;
 
 /** Camadas de arte: `back` fica atrás da moldura; `front` na frente da moldura e atrás do painel. */
 export type ArtLayer = 'back' | 'front';

@@ -49,8 +49,17 @@ export interface IconSideLabel {
   shadow: { color: string; opacity: number; dx: number; dy: number; blur: number };
 }
 
+/**
+ * Campos de todo ícone criado na aba Ícones do editor de layouts (cópia de outro): `created` (pode ser excluído; a imagem
+ * nova vai para a pasta dele) e `name`, o nome nos seletores (ex.: o do ícone alternativo do tipo).
+ */
+export interface CreatedIconFields {
+  created?: boolean;
+  name?: string;
+}
+
 /** Ícone de tipo ou de elemento: a arte e o nome escrito de lado. */
-export interface NamedIconConfig {
+export interface NamedIconConfig extends CreatedIconFields {
   url: string;
   /** Altura / largura da caixa do ícone (a caixa em que as posições dos layouts foram calibradas). */
   aspect: number;
@@ -67,7 +76,7 @@ export interface NamedIconConfig {
 export type CostNumberStyle = IconNumberStyle;
 
 /** Ícone de custo de entrada ou de mão: a imagem e o número. */
-export interface CostIconConfig {
+export interface CostIconConfig extends CreatedIconFields {
   url: string;
   /** Altura / largura da caixa do ícone (a "div" do ícone; a mesma em todos os custos deixa os ícones padronizados). */
   aspect: number;
@@ -80,7 +89,7 @@ export interface CostIconConfig {
 }
 
 /** Chakra genérico do custo do Jutsu: aparece na linha do custo, só com a parte útil da tela. */
-export interface ChakraIconConfig {
+export interface ChakraIconConfig extends CreatedIconFields {
   url: string;
   aspect: number;
   number: IconNumberStyle;
@@ -98,7 +107,7 @@ export interface CanvasPoint {
  * Atributo de Combate (as duas kunais e o círculo ou losango): medidas em pixels da tela original
  * (`canvas`), escaladas junto com o ícone.
  */
-export interface CombatAttributeIconConfig {
+export interface CombatAttributeIconConfig extends CreatedIconFields {
   url: string;
   canvas: { w: number; h: number };
   /** Centro e raio do círculo (ou losango) onde ficam o kanji e o nome do atributo. */

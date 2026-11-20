@@ -60,7 +60,8 @@ function placement(v: unknown): CardArtPlacement {
   return out;
 }
 
-const VARIANTS = ['01', '02', '03'];
+/** Variante de elemento: as impressas (01 a 03) e as criadas na aba Ícones. */
+const VARIANT = /^[a-z0-9][a-z0-9-]{0,19}$/;
 
 function layoutInfo(v: unknown, layouts: ReadonlySet<string>): CardLayoutInfo {
   if (!isRec(v)) fail('Layout da carta inválido.');
@@ -69,7 +70,7 @@ function layoutInfo(v: unknown, layouts: ReadonlySet<string>): CardLayoutInfo {
   if (!layouts.has(id)) fail(`Layout desconhecido: ${id}.`);
   if (!isRec(l.icons)) fail('Ícones da carta inválidos.');
   const icons = l.icons as Rec;
-  const elementVariants = Array.isArray(icons.elements) && icons.elements.length <= 3 && icons.elements.every((e) => VARIANTS.includes(e as string));
+  const elementVariants = Array.isArray(icons.elements) && icons.elements.length <= 3 && icons.elements.every((e) => typeof e === 'string' && VARIANT.test(e));
   if (!elementVariants) fail('Variante de elemento inválida.');
   const out: CardLayoutInfo = {
     layout: id,

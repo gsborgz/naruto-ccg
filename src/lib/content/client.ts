@@ -47,6 +47,16 @@ export async function deleteContentLayout(id: string): Promise<{ version: number
   return post('/api/content/layouts', { id }, 'DELETE');
 }
 
+/** Cria um ícone cópia de `base` (`<grupo>:<id>`); depois, `useContent().reload()` traz o ícone novo. */
+export async function createContentIcon(base: string, name?: string): Promise<{ key: string; version: number }> {
+  return post('/api/content/icons', { base, name });
+}
+
+/** Exclui um ícone criado no editor (nada pode usá-lo). Depois, `useContent().reload()`. */
+export async function deleteContentIcon(key: string): Promise<{ version: number }> {
+  return post('/api/content/icons', { key }, 'DELETE');
+}
+
 /** Edições da configuração dos layouts e dos ícones (já aplicadas na memória pelo editor). */
 export async function saveConfigChanges(
   changes: { target: ConfigTarget; path: string[]; value: ContentChange['value'] }[],

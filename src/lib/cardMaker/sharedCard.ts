@@ -1,10 +1,11 @@
 import { ELEMENT_LABEL, type CardType, type ElementSymbol } from '../../models/card.ts';
 import { customDeckCardId } from './customIds.ts';
 import {
-  ATTRIBUTE_FRAMES,
   MAX_VILLAGES,
   VILLAGES,
   type CardElement,
+  type EntranceIcon,
+  type HandIcon,
   type CustomCard,
   type CustomCardArt,
   type JutsuCostPart,
@@ -50,9 +51,10 @@ const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 /** Os layouts das coleções e os criados no editor de layouts (sem o layout no conteúdo, a carta usa o layout 1). */
 const LAYOUT_ID = /^layout-[a-z0-9-]{1,40}$/;
 const layoutId = (v: unknown): string => (typeof v === 'string' && LAYOUT_ID.test(v) ? v : fail());
-const VARIANTS = ['01', '02', '03'] as const;
-const ENTRANCE_ICONS = ['entrance-01', 'entrance-02', 'entrance-03', 'entrance-04'] as const;
-const HAND_ICONS = ['hand-01', 'hand-02', 'hand-03'] as const;
+/** Ids de ícone: os impressos e os criados na aba Ícones do editor (sem ícone no conteúdo, a carta usa o padrão). */
+const ICON_ID = /^[a-z0-9][a-z0-9-]{0,39}$/;
+const iconId = <T extends string>(v: unknown, prefix = ''): T =>
+  typeof v === 'string' && ICON_ID.test(v) && v.startsWith(prefix) ? (v as T) : fail();
 /** Arte do próprio site: arte extraída ou carta impressa (sem `..`, sem endereço externo). */
 const SITE_ART = /^\/(card-layouts|cards)\/[A-Za-z0-9_.\-/]+$/;
 
@@ -105,7 +107,7 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
     const id = str(x.id, 64);
     if (!/^[A-Za-z0-9-]+$/.test(id)) return null;
     const elements: CardElement[] = arr(x.elements, 3).map((e) =>
-      isRec(e) ? { element: oneOf(e.element, ELEMENTS), variant: oneOf(e.variant, VARIANTS) } : fail(),
+      isRec(e) ? { element: oneOf(e.element, ELEMENTS), variant: iconId(e.variant) } : fail(),
     );
     const villages: VillageMark[] = arr(x.villages ?? [], MAX_VILLAGES).map((v) =>
       isRec(v) && typeof v.rogue === 'boolean' ? { village: oneOf(v.village, VILLAGES), rogue: v.rogue } : fail(),
@@ -127,12 +129,12 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
       villages,
       entranceCost: str(x.entranceCost, 4),
       handCost: str(x.handCost, 4),
-      entranceIcon: oneOf(x.entranceIcon, ENTRANCE_ICONS),
-      handIcon: oneOf(x.handIcon, HAND_ICONS),
+      entranceIcon: iconId<EntranceIcon>(x.entranceIcon, 'entrance-'),
+      handIcon: iconId<HandIcon>(x.handIcon, 'hand-'),
       healthy: str(x.healthy, 12),
       injured: str(x.injured, 12),
       attribute: {
-        frame: oneOf(attribute.frame, ATTRIBUTE_FRAMES),
+        frame: iconId(attribute.frame),
         label: str(attribute.label, 80),
         ...(kanji !== undefined && { kanji }),
       },

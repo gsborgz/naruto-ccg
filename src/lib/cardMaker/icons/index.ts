@@ -30,12 +30,30 @@ export type IconsContent = Record<string, AnyIconConfig>;
 export const TYPE_ICONS = {} as Record<CardType, NamedIconConfig>;
 
 /**
- * Ícones alternativos do tipo, escolhidos na carta (`CustomCard.typeVariant`): id e nome do seletor. O ícone de cada
- * um é o `type-variant:<tipo>-<id>` do conteúdo (ex.: `type-variant:ninja-alter`).
+ * Nome no seletor dos ícones alternativos do tipo impressos. Os criados no editor têm o nome na configuração (`name`).
+ * O ícone de cada um é o `type-variant:<tipo>-<id>` do conteúdo (ex.: `type-variant:ninja-alter`).
  */
-export const TYPE_ICON_VARIANT_DEFS: Partial<Record<CardType, { id: string; label: string }[]>> = {
-  ninja: [{ id: 'alter', label: 'Alternativo' }],
-};
+const TYPE_ICON_VARIANT_LABELS: Record<string, string> = { alter: 'Alternativo' };
+
+const CARD_TYPES: readonly CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
+
+/** Ordem dos ids: números em ordem numérica ("03-02" antes de "05", "10" depois de "09"). */
+const byId = (a: string, b: string) => a.localeCompare(b, 'en', { numeric: true });
+
+/** Ícones de custo de entrada existentes (os impressos e os criados no editor). */
+export function entranceIcons(): EntranceIcon[] {
+  return (Object.keys(COST_ICONS) as EntranceIcon[]).filter((id) => id.startsWith('entrance-')).sort(byId);
+}
+
+/** Ícones de custo de mão existentes. */
+export function handIcons(): HandIcon[] {
+  return (Object.keys(COST_ICONS) as HandIcon[]).filter((id) => id.startsWith('hand-')).sort(byId);
+}
+
+/** Molduras do Atributo de Combate existentes. */
+export function attributeFrames(): AttributeFrame[] {
+  return Object.keys(COMBAT_ATTRIBUTE_ICONS).sort(byId);
+}
 
 export const TYPE_ICON_VARIANTS: Partial<Record<CardType, { id: string; label: string; icon: NamedIconConfig }[]>> = {};
 
@@ -71,9 +89,15 @@ export function installIcons(icons: IconsContent): void {
   replaceContents(
     TYPE_ICON_VARIANTS,
     Object.fromEntries(
-      Object.entries(TYPE_ICON_VARIANT_DEFS).map(([type, defs]) => [
+      CARD_TYPES.map((type) => [
         type,
-        defs.flatMap((d) => (variants[`${type}-${d.id}`] ? [{ ...d, icon: variants[`${type}-${d.id}`] }] : [])),
+        Object.entries(variants)
+          .filter(([key]) => key.startsWith(`${type}-`))
+          .map(([key, icon]) => {
+            const id = key.slice(type.length + 1);
+            return { id, label: icon.name || TYPE_ICON_VARIANT_LABELS[id] || id, icon };
+          })
+          .sort((a, b) => byId(a.id, b.id)),
       ]),
     ),
   );

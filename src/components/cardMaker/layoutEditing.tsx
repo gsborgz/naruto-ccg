@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
 import { CardRender } from '@/components/cardMaker/CardRender';
 import {
   CARD_H,
@@ -137,8 +137,8 @@ export function iconObject(c: IconChoice): Obj | undefined {
 }
 
 // Listas fixas: os ícones de custo vêm do conteúdo (Redis), que só é carregado depois que este módulo é importado.
-export const ENTRANCE_ICONS: EntranceIcon[] = ['entrance-01', 'entrance-02', 'entrance-03', 'entrance-04'];
-export const HAND_ICONS: HandIcon[] = ['hand-01', 'hand-02', 'hand-03'];
+/** Ícones de custo existentes (os impressos e os criados na aba Ícones). */
+export { entranceIcons, handIcons, attributeFrames } from '@/lib/cardMaker/icons';
 export const ELEMENTS = Object.keys(ELEMENT_LABEL) as ElementSymbol[];
 
 /** Chave do ícone de elemento que a carta mostra (variante inexistente cai na 01, como no app). */
@@ -538,6 +538,59 @@ export function FieldInput({ value, dirty, onChange }: { value: number | string 
   );
 }
 
+/** Nomes em português dos campos da configuração (a chave fica na dica). */
+const FIELD_LABELS: Record<string, string> = {
+  geral: 'geral',
+  aspect: 'proporção da caixa (altura ÷ largura)',
+  art: 'imagem',
+  label: 'nome',
+  number: 'número',
+  power: 'força',
+  circle: 'círculo',
+  kanji: 'kanji',
+  canvas: 'tela',
+  inline: 'espaço na linha',
+  shadow: 'sombra',
+  healthy: 'saudável',
+  injured: 'ferido',
+  text: 'texto',
+  x: 'x',
+  y: 'y',
+  w: 'largura',
+  h: 'altura',
+  cx: 'centro x',
+  cy: 'centro y',
+  r: 'raio',
+  dx: 'deslocamento x',
+  dy: 'deslocamento y',
+  size: 'tamanho',
+  cap: 'altura das letras',
+  length: 'comprimento',
+  weight: 'peso da fonte',
+  color: 'cor',
+  stroke: 'contorno: cor',
+  strokeWidth: 'contorno: espessura',
+  align: 'alinhamento',
+  opacity: 'opacidade',
+  blur: 'desfoque',
+  uppercase: 'maiúsculas',
+  multiMax: 'aumento com vários atributos',
+  dyWithKanji: 'posição com kanji (1, 2 e 3 linhas)',
+  textSize: 'tamanho do kanji digitado',
+  textColor: 'cor do kanji digitado',
+  textStroke: 'contorno do kanji digitado',
+  maxWidth: 'largura máxima',
+  maxHeight: 'altura máxima',
+  lineHeight: 'altura da linha',
+  separator: 'separador',
+  bottom: 'base',
+  top: 'topo',
+  gap: 'espaço entre blocos',
+};
+
+/** Rótulo de um campo: o nome em português, ou a própria chave. */
+export const fieldLabel = (key: string) => FIELD_LABELS[key] ?? key;
+
 export function FieldTree({
   value,
   path,
@@ -559,12 +612,16 @@ export function FieldTree({
       {Object.entries(value as Obj).map(([k, v]) =>
         v !== null && typeof v === 'object' && !Array.isArray(v) ? (
           <div key={k} className="flex flex-col gap-1">
-            <span className="text-xs font-semibold text-muted">{k}</span>
+            <span className="text-xs font-semibold text-muted" title={k}>
+              {fieldLabel(k)}
+            </span>
             <FieldTree value={v} path={[...path, k]} isDirty={isDirty} onChange={onChange} />
           </div>
         ) : Array.isArray(v) ? (
           <div key={k} className="flex items-center justify-between gap-2">
-            <span className="text-xs text-muted">{k}</span>
+            <span className="text-xs text-muted" title={k}>
+              {fieldLabel(k)}
+            </span>
             <span className="flex gap-1">
               {v.map((item, i) => (
                 <FieldTree key={i} value={item} path={[...path, k, String(i)]} isDirty={isDirty} onChange={onChange} />
@@ -573,7 +630,9 @@ export function FieldTree({
           </div>
         ) : (
           <label key={k} className="flex items-center justify-between gap-2">
-            <span className="text-xs text-muted">{k}</span>
+            <span className="text-xs text-muted" title={k}>
+              {fieldLabel(k)}
+            </span>
             <FieldTree value={v} path={[...path, k]} isDirty={isDirty} onChange={onChange} />
           </label>
         ),
@@ -602,7 +661,7 @@ export function layoutSections(spec: LayoutSpec, t: CardType): Section[] {
 
 /** Campos da configuração do ícone: os soltos em "geral" e um grupo por objeto (arte, nome, número...). */
 export function iconSections(icon: Obj): Section[] {
-  const plain = Object.entries(icon).filter(([k, v]) => k !== 'url' && (typeof v !== 'object' || v === null));
+  const plain = Object.entries(icon).filter(([k, v]) => k !== 'url' && k !== 'created' && (typeof v !== 'object' || v === null));
   const nested = Object.entries(icon).filter(([, v]) => v !== null && typeof v === 'object');
   return [
     ...(plain.length ? [{ key: 'geral', path: [] as Path, value: Object.fromEntries(plain) }] : []),
@@ -661,11 +720,13 @@ export function useConfigEditor() {
     setVersion((v) => v + 1);
   };
 
-  /** Seleciona uma caixa da carta; a de um ícone abre a configuração dele. */
+  /**
+   * Seleciona uma caixa da carta. A configuração de um ícone não abre por aqui (só na aba Ícones, com `editIcon`); sair
+   * da seleção (`null`) fecha o ícone aberto.
+   */
   const select = (h: Handle | null) => {
     setSelected(h?.id ?? null);
     if (!h) setActiveIcon(null);
-    else if (h.target.kind === 'layout') setActiveIcon(h.icon ? { icon: h.icon, host: h.id } : null);
   };
 
   /** Abre a configuração do ícone (`host`: a caixa dele na carta). */
@@ -825,13 +886,20 @@ export function EditorCanvas({
 // ── Campos ────────────────────────────────────────────────────────────────────
 
 /** Botão ✎ que abre a configuração de um ícone. */
+/**
+ * Quem abre um ícone na aba Ícones (o editor de layouts): com ele, o ✎ leva o ícone para lá, em vez de abrir a
+ * configuração dele no lugar.
+ */
+export const OpenIconContext = createContext<((icon: IconChoice) => void) | null>(null);
+
 export function IconEditButton({ editor, icon, host }: { editor: ConfigEditor; icon: IconChoice; host: string }) {
+  const openElsewhere = useContext(OpenIconContext);
   const on = editor.activeIcon && choiceKey(editor.activeIcon.icon) === choiceKey(icon);
   return (
     <button
       type="button"
-      title={`Editar o ícone ${choiceKey(icon)}`}
-      onClick={() => editor.editIcon(icon, host)}
+      title={openElsewhere ? `Editar o ícone ${choiceKey(icon)} na aba Ícones` : `Editar o ícone ${choiceKey(icon)}`}
+      onClick={() => (openElsewhere ? openElsewhere(icon) : editor.editIcon(icon, host))}
       className={`rounded px-1.5 py-0.5 text-xs ring-1 ${on ? 'bg-fuchsia-500/20 text-fuchsia-300 ring-fuchsia-400' : 'text-muted ring-border hover:text-text'}`}
     >
       ✎
@@ -865,8 +933,20 @@ export function fitIconImage(editor: ConfigEditor, icon: IconChoice, root: Obj, 
  * Campos do ícone aberto e do layout da carta (do tipo dela; sem `layoutFields`, só os do ícone, como na aba Ícones).
  * A seção da caixa selecionada abre sozinha.
  */
-export function EditorFields({ editor, card, layoutFields = true }: { editor: ConfigEditor; card: CustomCard; layoutFields?: boolean }) {
+export function EditorFields({
+  editor,
+  card,
+  layoutFields = true,
+  iconFields = true,
+}: {
+  editor: ConfigEditor;
+  card: CustomCard;
+  layoutFields?: boolean;
+  /** Sem os campos do ícone aberto (o editor de layouts deixa os ícones para a aba Ícones). */
+  iconFields?: boolean;
+}) {
   const { spec, icon, selectedHandle } = editorState(editor, card);
+  const content = useOptionalContent();
   const iconRoot = icon ? iconObject(icon) : undefined;
   const { changes } = editor;
   const layoutTarget: ConfigTarget = { kind: 'layout', id: spec.id };
@@ -875,7 +955,7 @@ export function EditorFields({ editor, card, layoutFields = true }: { editor: Co
     sections.map((s) => (
       <details key={`${targetKey(target)}:${s.key}`} open={openKey === s.key || undefined} className="rounded-lg bg-surface px-3 py-2 ring-1 ring-border">
         <summary className="cursor-pointer text-sm font-semibold">
-          {s.key}
+          {fieldLabel(s.key)}
           {sectionDirty(s, changes, target, root) && <span className="ml-2 text-accent">●</span>}
         </summary>
         <div className="mt-2">
@@ -891,7 +971,7 @@ export function EditorFields({ editor, card, layoutFields = true }: { editor: Co
 
   return (
     <div className="flex flex-col gap-2">
-      {icon && iconRoot && (
+      {iconFields && icon && iconRoot && (
         <div className="flex flex-col gap-2 rounded-lg p-2 ring-1 ring-fuchsia-400/60">
           <p className="text-xs text-muted">
             <span className="font-semibold text-text">Ícone {icon.id}</span> — <code>{choiceKey(icon)}</code>. Medidas relativas ao próprio
@@ -902,6 +982,17 @@ export function EditorFields({ editor, card, layoutFields = true }: { editor: Co
             url={typeof iconRoot.url === 'string' ? iconRoot.url : undefined}
             exactSize={!FRAMED_ICON_GROUPS.has(icon.group)}
             onUploaded={(size) => fitIconImage(editor, icon, iconRoot, size)}
+            // Ícone criado no editor: a imagem nova vai para a pasta dele (a do ícone copiado fica como está).
+            {...(iconRoot.created === true && {
+              ownPath: `icons/custom/${icon.group}-${icon.id}.webp`,
+              deployFallback: false,
+              onRelocated: async (url: string) => {
+                const target: ConfigTarget = { kind: 'icon', group: icon.group, id: icon.id };
+                setAt(iconRoot, ['url'], url);
+                const { version } = await saveConfigChanges([{ target, path: ['url'], value: url }]);
+                content?.saved(version);
+              },
+            })}
           />
           {renderSections(
             iconSections(iconRoot),

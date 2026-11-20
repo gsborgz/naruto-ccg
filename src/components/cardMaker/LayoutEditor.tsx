@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { CARDS, CARDS_BY_ID } from '@/data/cards';
 import { LAYOUTS, LAYOUT_LIST, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, frameFor, panelFor, type LayoutSpec } from '@/lib/cardMaker/layouts';
 import {
-  ATTRIBUTE_FRAMES,
   MAX_VILLAGES,
   VILLAGES,
   cardVillages,
@@ -21,10 +20,11 @@ import {
 import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } from '@/models/card';
 import {
   ELEMENTS,
-  ENTRANCE_ICONS,
+  attributeFrames,
+  entranceIcons,
   EditorCanvas,
   EditorFields,
-  HAND_ICONS,
+  handIcons,
   IconEditButton,
   Pick,
   elementKey,
@@ -39,7 +39,7 @@ import { IconsEditor } from './IconsEditor';
 import { createContentLayout, deleteContentLayout, saveConfigChanges } from '@/lib/content/client';
 import { useContent } from '@/lib/content/ContentProvider';
 import type { ConfigTarget } from '@/lib/content/changes';
-import { getAt, setAt } from './layoutEditing';
+import { OpenIconContext, getAt, setAt, type IconChoice } from './layoutEditing';
 
 /** Layouts das coleções impressas (as imagens deles estão no deploy; não podem ser excluídos). */
 const PRINTED_LAYOUTS = ['layout-01', 'layout-02', 'layout-03', 'layout-04', 'layout-05'];
@@ -215,7 +215,7 @@ function IconPicker({
           <>
             <Pick label="Custo de entrada">
               <select value={card.entranceIcon} onChange={(e) => onChange({ entranceIcon: e.target.value as EntranceIcon })} className={smallSelect}>
-                {ENTRANCE_ICONS.map((id) => (
+                {entranceIcons().map((id) => (
                   <option key={id} value={id}>
                     {id}
                   </option>
@@ -225,7 +225,7 @@ function IconPicker({
             </Pick>
             <Pick label="Custo de mão">
               <select value={card.handIcon} onChange={(e) => onChange({ handIcon: e.target.value as HandIcon })} className={smallSelect}>
-                {HAND_ICONS.map((id) => (
+                {handIcons().map((id) => (
                   <option key={id} value={id}>
                     {id}
                   </option>
@@ -243,7 +243,7 @@ function IconPicker({
         {t === 'ninja' && (
           <Pick label="Atributo de Combate">
             <select value={card.attribute.frame} onChange={(e) => onChange({ attributeFrame: e.target.value as AttributeFrame })} className={smallSelect}>
-              {ATTRIBUTE_FRAMES.map((id) => (
+              {attributeFrames().map((id) => (
                 <option key={id} value={id}>
                   {id}
                 </option>
@@ -347,7 +347,7 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
         </Pick>
         <Pick label="Custo de entrada">
           <select value={spec.defaults.entranceIcon} onChange={(e) => set(['defaults', 'entranceIcon'], e.target.value)} className={ring(['defaults', 'entranceIcon'])}>
-            {ENTRANCE_ICONS.map((id) => (
+            {entranceIcons().map((id) => (
               <option key={id} value={id}>
                 {id}
               </option>
@@ -356,7 +356,7 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
         </Pick>
         <Pick label="Custo de mão">
           <select value={spec.defaults.handIcon} onChange={(e) => set(['defaults', 'handIcon'], e.target.value)} className={ring(['defaults', 'handIcon'])}>
-            {HAND_ICONS.map((id) => (
+            {handIcons().map((id) => (
               <option key={id} value={id}>
                 {id}
               </option>
@@ -365,7 +365,7 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
         </Pick>
         <Pick label="Atributo de Combate">
           <select value={spec.attribute.defaultFrame} onChange={(e) => set(['attribute', 'defaultFrame'], e.target.value)} className={ring(['attribute', 'defaultFrame'])}>
-            {ATTRIBUTE_FRAMES.map((id) => (
+            {attributeFrames().map((id) => (
               <option key={id} value={id}>
                 {id}
               </option>
@@ -388,6 +388,8 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
 export function LayoutEditor() {
   const content = useContent();
   const [tab, setTab] = useState<'layouts' | 'icons'>('layouts');
+  // Ícone aberto pelo ✎ do editor de layouts, para a aba Ícones começar nele.
+  const [iconToOpen, setIconToOpen] = useState<IconChoice | undefined>(undefined);
   const [layoutId, setLayoutId] = useState<LayoutId>('layout-01');
   const spec = LAYOUTS[layoutId] ?? LAYOUTS['layout-01'];
   const [type, setType] = useState<CardType>('ninja');
@@ -402,6 +404,15 @@ export function LayoutEditor() {
   const [status, setStatus] = useState<{ ok: boolean; text: string } | null>(null);
   const [saving, setSaving] = useState(false);
   const editor = useConfigEditor();
+  const switchTab = (next: 'layouts' | 'icons') => {
+    // Na aba Layouts não há ícone aberto (as caixas e os campos de dentro dos ícones ficam na aba Ícones).
+    if (next === 'layouts') editor.select(null);
+    setTab(next);
+  };
+  const openIcon = (icon: IconChoice) => {
+    setIconToOpen(icon);
+    setTab('icons');
+  };
   const { dirtyCount } = editor;
 
   useEffect(() => {
@@ -488,7 +499,7 @@ export function LayoutEditor() {
               type="button"
               role="tab"
               aria-selected={tab === value}
-              onClick={() => setTab(value)}
+              onClick={() => switchTab(value)}
               className={`rounded-md px-3 py-1 ${tab === value ? 'bg-accent font-semibold text-bg' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
             >
               {text}
@@ -521,9 +532,9 @@ export function LayoutEditor() {
         </span>
       </header>
 
-      {tab === 'icons' && <IconsEditor editor={editor} />}
+      {tab === 'icons' && <IconsEditor key={iconToOpen ? `${iconToOpen.group}:${iconToOpen.id}` : 'icons'} editor={editor} initial={iconToOpen} />}
       {tab === 'layouts' && (
-      <>
+      <OpenIconContext.Provider value={openIcon}>
       <div className="flex flex-wrap items-center gap-3">
         <select value={layoutId} onChange={(e) => setLayoutId(e.target.value as LayoutId)} className={selectClass}>
           {LAYOUT_LIST.map((l) => (
@@ -581,7 +592,7 @@ export function LayoutEditor() {
           <input type="checkbox" checked={showBoxes} onChange={(e) => setShowBoxes(e.target.checked)} /> Caixas
         </label>
         <span>
-          Arraste as caixas (canto: tamanho; Shift: um eixo só). Setas movem a selecionada (Shift = 10, Alt = 0,1). Clique num ícone (ou no ✎)
+          Arraste as caixas (canto: tamanho; Shift: um eixo só). Setas movem a selecionada (Shift = 10, Alt = 0,1). O ✎ de cada ícone abre ele na aba Ícones
           para editar a configuração dele.
         </span>
       </div>
@@ -608,12 +619,12 @@ export function LayoutEditor() {
                 <MigrateAssetsButton />
                 <SweepAssetsButton />
               </section>
-              <EditorFields editor={editor} card={card} />
+              <EditorFields editor={editor} card={card} iconFields={false} />
             </>
           )}
         </aside>
       </div>
-      </>
+      </OpenIconContext.Provider>
       )}
     </div>
   );

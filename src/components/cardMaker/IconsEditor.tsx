@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { createContentIcon, deleteContentIcon } from '@/lib/content/client';
+import { useContent } from '@/lib/content/ContentProvider';
 import {
   CHAKRA_ICON,
   COMBAT_ATTRIBUTE_ICONS,
@@ -28,6 +30,7 @@ import type { ConfigTarget } from '@/lib/content/changes';
 import {
   EditorCanvas,
   EditorFields,
+  FieldInput,
   FRAMED_ICON_GROUPS,
   Pick,
   choiceKey,
@@ -70,14 +73,14 @@ function iconList(): IconEntry[] {
   }
   for (const [id, icon] of Object.entries(ELEMENT_ICONS).sort(([a], [b]) => a.localeCompare(b))) {
     const [element, variant] = id.split('-');
-    out.push({ choice: { group: 'element', id }, label: `${ELEMENT_LABEL[element as ElementSymbol] ?? element} ${variant}`, url: icon.url });
+    out.push({ choice: { group: 'element', id }, label: icon.name || `${ELEMENT_LABEL[element as ElementSymbol] ?? element} ${variant}`, url: icon.url });
   }
   for (const [id, icon] of Object.entries(COST_ICONS).sort(([a], [b]) => a.localeCompare(b))) {
-    out.push({ choice: { group: 'cost', id }, label: id.startsWith('entrance') ? `Entrada ${id.slice(9)}` : `Mão ${id.slice(5)}`, url: icon.url });
+    out.push({ choice: { group: 'cost', id }, label: icon.name || (id.startsWith('entrance') ? `Entrada ${id.slice(9)}` : `Mão ${id.slice(5)}`), url: icon.url });
   }
   out.push({ choice: { group: 'chakra', id: 'chakra-any' }, label: 'Chakra genérico', url: CHAKRA_ICON.url });
   for (const [id, icon] of Object.entries(COMBAT_ATTRIBUTE_ICONS).sort(([a], [b]) => a.localeCompare(b))) {
-    out.push({ choice: { group: 'attribute', id }, label: `Moldura ${id}`, url: icon.url });
+    out.push({ choice: { group: 'attribute', id }, label: icon.name || `Moldura ${id}`, url: icon.url });
   }
   return out;
 }
@@ -85,13 +88,16 @@ function iconList(): IconEntry[] {
 /** Ícones que dividem o tamanho da caixa: tipo com o tipo alternativo, elementos, custos de entrada e de mão. */
 const boxGroupOf = (c: IconChoice) => (c.group === 'type-variant' ? 'type' : c.group);
 
-/** Textos e números de cada ícone que podem ser alinhados (caminho do campo `align`). */
-function alignFields(c: IconChoice): { label: string; path: string[] }[] {
-  if (c.group === 'type' || c.group === 'type-variant' || c.group === 'element') return [{ label: 'Nome de lado', path: ['label', 'align'] }];
-  if (c.group === 'cost' || c.group === 'chakra') return [{ label: 'Número', path: ['number', 'align'] }];
+/**
+ * Textos e números de cada ícone e o objeto de cada um na configuração (`label`, `number`, `power`), com o campo
+ * do tamanho (`cap` no nome de lado: a altura das letras).
+ */
+function textParts(c: IconChoice): { label: string; key: string; size: string; weight?: boolean }[] {
+  if (c.group === 'type' || c.group === 'type-variant' || c.group === 'element') return [{ label: 'Nome de lado', key: 'label', size: 'cap', weight: true }];
+  if (c.group === 'cost' || c.group === 'chakra') return [{ label: 'Número', key: 'number', size: 'size' }];
   return [
-    { label: 'Nome do atributo', path: ['label', 'align'] },
-    { label: 'Força', path: ['power', 'align'] },
+    { label: 'Nome do atributo', key: 'label', size: 'size' },
+    { label: 'Força', key: 'power', size: 'size' },
   ];
 }
 
@@ -151,27 +157,47 @@ function IconBoxAndAlign({ editor, icons, selected }: { editor: ConfigEditor; ic
           </p>
         </>
       )}
-      <p className="text-xs font-semibold text-muted">Alinhamento do texto</p>
-      {alignFields(selected).map((f) => {
-        const value = String(getAt(root as Obj, f.path) ?? 'center');
-        const dirty = `icon:${selected.group}:${selected.id}|${f.path.join('.')}` in editor.changes;
+      {textParts(selected).map((part) => {
+        const path = (field: string) => [part.key, field];
+        const dirty = (field: string) => `icon:${selected.group}:${selected.id}|${path(field).join('.')}` in editor.changes;
+        const value = (field: string) => getAt(root as Obj, path(field));
+        const field = (name: string, label: string) => {
+          const v = value(name);
+          if (typeof v !== 'number' && typeof v !== 'string') return null;
+          return (
+            <Pick key={name} label={label}>
+              <FieldInput value={v} dirty={dirty(name)} onChange={(next) => editor.setValue(target, root, path(name), next)} />
+            </Pick>
+          );
+        };
         return (
-          <Pick key={f.path.join('.')} label={f.label}>
-            <select
-              value={value}
-              onChange={(e) => editor.setValue(target, root, f.path, e.target.value)}
-              className={`${smallSelect} ${dirty ? '!ring-accent' : ''}`}
-            >
-              {ALIGN_OPTIONS.map(([v, l]) => (
-                <option key={v} value={v}>
-                  {l}
-                </option>
-              ))}
-            </select>
-          </Pick>
+          <div key={part.key} className="flex flex-col gap-1">
+            <p className="text-xs font-semibold text-muted">Texto: {part.label}</p>
+            {field(part.size, part.size === 'cap' ? 'Tamanho (altura das letras)' : 'Tamanho')}
+            {part.weight && field('weight', 'Peso da fonte')}
+            {field('color', 'Cor')}
+            {field('stroke', 'Contorno: cor')}
+            {field('strokeWidth', 'Contorno: espessura (0 = sem)')}
+            <Pick label="Alinhamento">
+              <select
+                value={String(value('align') ?? 'center')}
+                onChange={(e) => editor.setValue(target, root, path('align'), e.target.value)}
+                className={`${smallSelect} ${dirty('align') ? '!ring-accent' : ''}`}
+              >
+                {ALIGN_OPTIONS.map(([v, l]) => (
+                  <option key={v} value={v}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+            </Pick>
+          </div>
         );
       })}
-      <p className="text-xs text-muted">O texto começa, fica centrado ou termina no ponto dele (a caixa do texto na carta).</p>
+      <p className="text-xs text-muted">
+        Alinhamento: o texto começa, fica centrado ou termina no ponto dele (a caixa do texto na carta). A posição é a caixa do
+        texto na carta; a sombra e o resto ficam nos campos abaixo.
+      </p>
     </div>
   );
 }
@@ -217,9 +243,94 @@ function sampleCard(c: IconChoice, layout: LayoutId): CustomCard {
   return card;
 }
 
-export function IconsEditor({ editor }: { editor: ConfigEditor }) {
-  const icons = useMemo(iconList, []);
-  const [selected, setSelected] = useState<IconChoice>(icons[0]?.choice ?? { group: 'type', id: 'ninja' });
+/** Grupos com ícones novos (o Chakra genérico é um só). */
+const CREATABLE = new Set<IconChoice['group']>(['type', 'type-variant', 'element', 'cost', 'attribute']);
+
+/** O que o ícone novo vai ser, para o botão e a confirmação. */
+function newIconLabel(c: IconChoice): string {
+  if (c.group === 'element') return `nova variante de ${ELEMENT_LABEL[c.id.split('-')[0] as ElementSymbol] ?? 'elemento'}`;
+  if (c.group === 'cost') return c.id.startsWith('entrance-') ? 'novo custo de entrada' : 'novo custo de mão';
+  if (c.group === 'attribute') return 'nova moldura do Atributo de Combate';
+  return `novo ícone alternativo de ${CARD_TYPE_LABEL[c.id.split('-')[0] as CardType]}`;
+}
+
+/**
+ * "+ Novo ícone": cópia do ícone aberto, com o próximo id livre do grupo (no tipo, um ícone alternativo, com nome).
+ * "Excluir ícone": só os criados aqui, se nenhuma carta nem layout os usa (a imagem sai do Blob).
+ */
+function IconCreateDelete({ editor, selected, onCreated }: { editor: ConfigEditor; selected: IconChoice; onCreated: (c: IconChoice) => void }) {
+  const content = useContent();
+  const [status, setStatus] = useState<{ ok: boolean; text: string } | null>(null);
+  const [busy, setBusy] = useState(false);
+  const root = iconObject(selected);
+  const pendingFirst = () => !editor.dirtyCount || (alert('Salve ou descarte as alterações antes.'), false);
+  const run = async (action: () => Promise<void>) => {
+    setBusy(true);
+    setStatus(null);
+    try {
+      await action();
+    } catch (e) {
+      setStatus({ ok: false, text: e instanceof Error ? e.message : String(e) });
+    } finally {
+      setBusy(false);
+    }
+  };
+  const create = () =>
+    run(async () => {
+      if (!pendingFirst()) return;
+      const isType = selected.group === 'type' || selected.group === 'type-variant';
+      const name = isType ? prompt('Nome do ícone alternativo (aparece no seletor do ícone do tipo):')?.trim() : undefined;
+      if (isType && !name) return;
+      const { key } = await createContentIcon(`${selected.group}:${selected.id}`, name);
+      await content.reload();
+      const [group, id] = [key.slice(0, key.indexOf(':')), key.slice(key.indexOf(':') + 1)];
+      onCreated({ group: group as IconChoice['group'], id });
+      setStatus({ ok: true, text: `Ícone ${key} criado (cópia de ${selected.group}:${selected.id}). Troque a imagem e ajuste as medidas.` });
+    });
+  const remove = () =>
+    run(async () => {
+      if (!pendingFirst() || !confirm(`Excluir o ícone ${selected.group}:${selected.id}? A imagem dele sai do Blob. Não dá para desfazer.`)) return;
+      await deleteContentIcon(`${selected.group}:${selected.id}`);
+      onCreated({ group: 'type', id: 'ninja' });
+      await content.reload();
+      setStatus({ ok: true, text: 'Ícone excluído.' });
+    });
+  return (
+    <div className="flex flex-col gap-1">
+      <div className="flex flex-wrap gap-2">
+        {CREATABLE.has(selected.group) && (
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void create()}
+            className="rounded px-2 py-1 text-xs text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text disabled:opacity-50"
+            title="Cópia deste ícone (imagem, caixa e textos), com um id novo"
+          >
+            + Novo ícone ({newIconLabel(selected)})
+          </button>
+        )}
+        {root?.created === true && (
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void remove()}
+            className="rounded px-2 py-1 text-xs text-danger ring-1 ring-danger/40 hover:bg-danger/10 disabled:opacity-50"
+          >
+            Excluir ícone
+          </button>
+        )}
+      </div>
+      {status && <p className={`text-xs ${status.ok ? 'text-ok' : 'text-danger'}`}>{status.text}</p>}
+    </div>
+  );
+}
+
+export function IconsEditor({ editor, initial }: { editor: ConfigEditor; initial?: IconChoice }) {
+  const version = useContent().version;
+  // Refeita a cada versão do conteúdo (um ícone criado ou excluído entra ou sai da lista).
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const icons = useMemo(iconList, [version]);
+  const [selected, setSelected] = useState<IconChoice>(initial ?? icons[0]?.choice ?? { group: 'type', id: 'ninja' });
   const type = cardTypeFor(selected);
   const layouts = LAYOUT_LIST.filter((l) => l.types.includes(type));
   const [layoutId, setLayoutId] = useState<LayoutId>('layout-02');
@@ -236,16 +347,32 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceKey(selected), layout]);
 
-  const groups = Object.keys(GROUP_LABEL) as IconChoice['group'][];
+  // Categoria mostrada na lista (a do ícone aberto; trocar de categoria abre o primeiro ícone dela).
+  const groups = (Object.keys(GROUP_LABEL) as IconChoice['group'][]).filter((g) => icons.some((i) => i.choice.group === g));
+  const category = selected.group;
+  const list = icons.filter((i) => i.choice.group === category);
+  const chooseCategory = (g: IconChoice['group']) => {
+    const first = icons.find((i) => i.choice.group === g);
+    if (first) setSelected(first.choice);
+  };
   return (
     <div className="flex flex-wrap items-start gap-6">
-      <nav aria-label="Ícones" className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex w-56 shrink-0 flex-col gap-3 max-h-[calc(100dvh-var(--app-header-h)-2rem)] overflow-y-auto overscroll-contain pr-1">
-        {groups.map((g) => {
-          const list = icons.filter((i) => i.choice.group === g);
-          if (!list.length) return null;
-          return (
-            <div key={g} className="flex flex-col gap-1">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">{GROUP_LABEL[g]}</h3>
+      <nav aria-label="Ícones" className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex w-56 shrink-0 flex-col gap-2 max-h-[calc(100dvh-var(--app-header-h)-2rem)] overflow-y-auto overscroll-contain pr-1">
+        <label className="flex flex-col gap-1 text-xs font-semibold uppercase tracking-wider text-muted">
+          Categoria
+          <select
+            value={category}
+            onChange={(e) => chooseCategory(e.target.value as IconChoice['group'])}
+            className={`${selectClass} normal-case tracking-normal text-text`}
+          >
+            {groups.map((g) => (
+              <option key={g} value={g}>
+                {GROUP_LABEL[g]} ({icons.filter((i) => i.choice.group === g).length})
+              </option>
+            ))}
+          </select>
+        </label>
+            <div className="flex flex-col gap-1">
               {list.map((i) => {
                 const on = choiceKey(i.choice) === choiceKey(selected);
                 return (
@@ -262,8 +389,6 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
                 );
               })}
             </div>
-          );
-        })}
       </nav>
 
       <div className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex flex-col gap-2">
@@ -288,7 +413,10 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
 
       <aside className="sticky top-[calc(var(--app-header-h)+1rem)] self-start flex min-w-72 flex-1 flex-col gap-2 max-h-[calc(100dvh-var(--app-header-h)-2rem)] overflow-y-auto overscroll-contain pr-1">
         <div className="rounded-lg bg-surface px-3 py-2 text-xs ring-1 ring-border">
-          <p className="text-sm font-semibold text-text">{entry?.label ?? selected.id}</p>
+          <p className="text-sm font-semibold text-text">
+            {entry?.label ?? selected.id}
+            {iconObject(selected)?.created === true && <span className="ml-2 font-normal text-muted">(criado no editor)</span>}
+          </p>
           <p className="text-muted">
             {FRAMED_ICON_GROUPS.has(selected.group)
               ? `Imagem atual: ${size ? `${size.w}×${size.h} px` : '…'}. Uma imagem nova pode ter qualquer tamanho: ela é encaixada na caixa do ícone e você ajusta o enquadramento.`
@@ -297,6 +425,7 @@ export function IconsEditor({ editor }: { editor: ConfigEditor }) {
             mexa nos campos.
           </p>
         </div>
+        <IconCreateDelete editor={editor} selected={selected} onCreated={setSelected} />
         <IconBoxAndAlign editor={editor} icons={icons} selected={selected} />
         {iconObject(selected) ? <EditorFields editor={editor} card={card} layoutFields={false} /> : <p className="text-sm text-muted">Ícone não encontrado.</p>}
       </aside>

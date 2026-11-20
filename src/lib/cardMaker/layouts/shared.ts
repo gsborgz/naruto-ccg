@@ -88,11 +88,15 @@ export function typeIcon(spec: LayoutSpec, type: CardType, variant?: string): Pl
 /** Quantos elementos uma carta pode ter, em qualquer layout (um abaixo do outro, a cada `slotDy`). */
 export const MAX_ELEMENTS = 3;
 
-const ELEMENT_VARIANTS: readonly ElementVariant[] = ['01', '02', '03'];
-
-/** Variantes que existem para o elemento (as que têm configuração em icons/element/; o Vazio só tem a 01). */
+/**
+ * Variantes que existem para o elemento (as impressas, 01 a 03, e as criadas no editor; o Vazio só tem a 01), em ordem
+ * numérica.
+ */
 export function elementVariants(element: CardElement['element']): ElementVariant[] {
-  return ELEMENT_VARIANTS.filter((v) => ELEMENT_ICONS[`${element}-${v}`]);
+  return Object.keys(ELEMENT_ICONS)
+    .filter((key) => key.startsWith(`${element}-`))
+    .map((key) => key.slice(element.length + 1))
+    .sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
 }
 
 /** Configuração do ícone do elemento (a variante pedida, ou a 01 se ela não existir). */
@@ -154,7 +158,8 @@ export function costIcon(
   placement: IconPlacement,
   id: EntranceIcon | HandIcon,
 ): { url: string; box: IconBox; image: Omit<IconBox, 'h'>; number: PlacedNumber } {
-  const icon = COST_ICONS[id];
+  // Ícone que não existe mais (criado no editor e excluído): o primeiro do mesmo tipo.
+  const icon = COST_ICONS[id] ?? COST_ICONS[id.startsWith('hand-') ? 'hand-01' : 'entrance-01'];
   const box = boxOf(placement, icon.aspect);
   const n = icon.number;
   const art = costArt(icon);
@@ -314,21 +319,26 @@ export function attributeKanjiUrls(label: string): string[] | null {
   return slugs.map((s) => `${ICON_ASSETS}/attributes/${s}.webp`);
 }
 
+/** Moldura do Atributo de Combate (a 01 se ela não existe mais, ex.: criada no editor e excluída). */
+function attributeConfig(frame: AttributeFrame) {
+  return COMBAT_ATTRIBUTE_ICONS[frame] ?? COMBAT_ATTRIBUTE_ICONS['01'];
+}
+
 /** Escala da tela do ícone do atributo para a carta, no tamanho do layout. */
 function attributeScale(spec: LayoutSpec, frame: AttributeFrame) {
-  return spec.attribute.size / COMBAT_ATTRIBUTE_ICONS[frame].canvas.w;
+  return spec.attribute.size / attributeConfig(frame).canvas.w;
 }
 
 /** Centro e raio do círculo (ou losango) da moldura na carta. */
 export function attributeCircle(spec: LayoutSpec, frame: AttributeFrame) {
   const k = attributeScale(spec, frame);
-  const c = COMBAT_ATTRIBUTE_ICONS[frame].circle;
+  const c = attributeConfig(frame).circle;
   return { cx: spec.attribute.x + c.cx * k, cy: spec.attribute.y + c.cy * k, r: c.r * k };
 }
 
 /** Ícone do Atributo de Combate na carta: imagem, círculo, números de força e estilos do nome e do kanji. */
 export function attributeIcon(spec: LayoutSpec, frame: AttributeFrame) {
-  const icon = COMBAT_ATTRIBUTE_ICONS[frame];
+  const icon = attributeConfig(frame);
   const k = attributeScale(spec, frame);
   const { x, y } = spec.attribute;
   const p = icon.power;

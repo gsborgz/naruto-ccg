@@ -59,7 +59,6 @@ export interface CardElement {
   variant: ElementVariant;
 }
 
-export const ATTRIBUTE_FRAMES: AttributeFrame[] = ['01', '02', '03-01', '03-02', '05', '06-01', '06-02', '06-03', '07'];
 
 /** Deslocamento em unidades da carta (750×1050) e zoom sobre o enquadramento "cobrir" (`CardArtPlacement`). */
 export interface CustomCardArt extends Omit<CardArtPlacement, 'src'> {
