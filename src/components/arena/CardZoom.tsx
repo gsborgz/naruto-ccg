@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import type { Card } from '@/models/card';
-import { useCardName } from '@/lib/cardLanguage';
 import { ArenaCardImage } from './arenaCards';
 import styles from './GameArena.module.css';
 
@@ -45,7 +44,7 @@ export function useAltKey(): boolean {
  */
 export function CardZoom({ hovered }: { hovered: HoveredCard | null }) {
   const alt = useAltKey();
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
   if (!hovered || !(alt || hovered.always)) return null;
   return (
     <ArenaCardImage

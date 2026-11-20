@@ -47,7 +47,9 @@ export function isBlobArt(src: string | null | undefined): boolean {
 
 const ELEMENTS = Object.keys(ELEMENT_LABEL) as ElementSymbol[];
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
-const LAYOUT_IDS = ['layout-01', 'layout-02', 'layout-03', 'layout-04', 'layout-05'] as const;
+/** Os layouts das coleções e os criados no editor de layouts (sem o layout no conteúdo, a carta usa o layout 1). */
+const LAYOUT_ID = /^layout-[a-z0-9-]{1,40}$/;
+const layoutId = (v: unknown): string => (typeof v === 'string' && LAYOUT_ID.test(v) ? v : fail());
 const VARIANTS = ['01', '02', '03'] as const;
 const ENTRANCE_ICONS = ['entrance-01', 'entrance-02', 'entrance-03', 'entrance-04'] as const;
 const HAND_ICONS = ['hand-01', 'hand-02', 'hand-03'] as const;
@@ -115,7 +117,7 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
     const kanji = optStr(attribute.kanji, 10);
     const card: CustomCard = {
       id,
-      layout: oneOf(x.layout, LAYOUT_IDS),
+      layout: layoutId(x.layout),
       type: oneOf(x.type, TYPES),
       name: str(x.name, 120),
       elements,

@@ -3,7 +3,7 @@
  * Arquivo leve, sem o modelo do criador: é importado pela face das cartas e pelos nomes das coleções.
  */
 
-export const CUSTOM_SET = 'CUSTOM';
+export const CUSTOM_SET = 'CUSTOM' as const;
 export const CUSTOM_SET_NAME = 'Cartas criadas';
 
 const PREFIX = 'custom-';

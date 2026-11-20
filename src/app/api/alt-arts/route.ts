@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { ensureContent } from '@/lib/content/server';
 import { CARDS_BY_ID } from '@/data/cards';
 import { addAltArt, listAltArts, removeAltArt } from '@/lib/altArtStore';
 import { canEditAltArt, isAltArtId } from '@/lib/altArts';
@@ -43,6 +44,7 @@ function errorResponse(e: unknown) {
 /** `?card=<id>`: as artes alternativas da carta. */
 export async function GET(request: NextRequest) {
   try {
+    await ensureContent();
     const cardId = cardIdOf(request.nextUrl.searchParams.get('card'));
     const arts = await listAltArts(cardId, optionalTokenHash(request));
     return NextResponse.json({ arts }, { headers: { 'Cache-Control': 'no-store' } });
@@ -57,6 +59,7 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
+    await ensureContent();
     const tokenHash = tokenHashOf(request);
     const data = await body(request);
     const cardId = cardIdOf(data.cardId);
@@ -73,6 +76,7 @@ export async function POST(request: NextRequest) {
 /** `{ cardId, id }`: remove a arte (só quem enviou). */
 export async function DELETE(request: NextRequest) {
   try {
+    await ensureContent();
     const tokenHash = tokenHashOf(request);
     const data = await body(request);
     if (!isAltArtId(data.id)) throw new ArtError(400, 'Arte inválida.');

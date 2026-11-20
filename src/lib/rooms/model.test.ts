@@ -51,7 +51,7 @@ const guest: Joiner = { playerId: 'p-guest', tokenHash: 'h-guest', nickname: 'Sa
 function lobbyWithDecks() {
   let room = joinRoom(createRoom('r1', host, NOW), guest, NOW);
   room = act(room, 'host', { type: 'changeDeck', deck: validDeck('Konoha') });
-  return act(room, 'guest', { type: 'changeDeck', deck: validDeck('Uchiha', 500) });
+  return act(room, 'guest', { type: 'changeDeck', deck: validDeck('Uchiha', 60) });
 }
 
 function expectRoomError(fn: () => unknown, status: number) {
@@ -92,7 +92,7 @@ test('salas: os dois prontos iniciam; trocar de deck desmarca o pronto', () => {
   room = act(room, 'host', { type: 'setReady', ready: true });
   assert.equal(room.status, 'lobby');
 
-  const changed = act(room, 'host', { type: 'changeDeck', deck: validDeck('Outro', 1000) });
+  const changed = act(room, 'host', { type: 'changeDeck', deck: validDeck('Outro', 60) });
   assert.equal(changed.host.ready, false);
   assert.equal(changed.host.deck?.name, 'Outro');
 
@@ -149,7 +149,7 @@ test('salas: a visão esconde tokens e o deck do oponente', () => {
   const withSquad = act(
     room,
     'host',
-    { type: 'changeDeck', deck: { name: 'Konoha', cards: { ...validDeck('Konoha').cards, 's13-n-549': 2 } } },
+    { type: 'changeDeck', deck: { name: 'Konoha', cards: { ...validDeck('Konoha').cards, 'fx-q-001': 2 } } },
   );
   const hostView = toView(withSquad, 'guest', {}, nowMs, lookup).players[0];
   assert.deepEqual([hostView.deckSize, hostView.reinforcementSize], [50, 2]);

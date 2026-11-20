@@ -5,7 +5,6 @@ import { CARDS } from '@/data/cards';
 import { CUSTOM_SET, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { filterCards, INITIAL_FILTERS, type CardFilterState } from '@/lib/cardFilters';
 import { useCardDesign } from '@/lib/cardDesign';
-import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, cardImageUrl, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFace } from './CardFace';
@@ -62,7 +61,7 @@ interface TileProps {
  * mudou são re-renderizadas (a grade pode ter milhares de cartas).
  */
 const CardTile = memo(function CardTile({ card, eager, rendered, count, blocked, onSelect, onSetQty }: TileProps) {
-  const name = useCardName()(card);
+  const name = card.name;
   return (
     <li className="group flex flex-col gap-1.5 [contain-intrinsic-size:auto_320px] [content-visibility:auto]">
       <button
@@ -123,13 +122,8 @@ export function CardBrowser({
   useEffect(() => onFiltersChange?.(filters), [filters, onFiltersChange]);
   // Os filtros (e a contagem) atualizam na hora; a grade pesada segue logo depois, sem travar a digitação.
   const deferredFilters = useDeferredValue(filters);
-  const { language, translations } = useCardLanguage();
   const rendered = useCardDesign() === 'rendered';
-  const searchTranslations = language === 'pt-BR' ? translations : null;
-  const cards = useMemo(
-    () => filterCards(source, deferredFilters, searchTranslations),
-    [source, deferredFilters, searchTranslations],
-  );
+  const cards = useMemo(() => filterCards(source, deferredFilters), [source, deferredFilters]);
   const extraSets = useMemo(() => (source.some((c) => c.set === CUSTOM_SET) ? [CUSTOM_SET] : []), [source]);
 
   return (

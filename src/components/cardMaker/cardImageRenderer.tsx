@@ -2,13 +2,11 @@
 
 import { flushSync } from 'react-dom';
 import { createRoot } from 'react-dom/client';
-import { localizeCard } from '@/lib/cardLocale';
 import { customDeckCardId, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { elementToPng } from '@/lib/cardMaker/exportPng';
 import { CARD_W } from '@/lib/cardMaker/layouts/shared';
-import { fromCatalogCard, withLocalizedText, type CustomCard } from '@/lib/cardMaker/model';
+import { fromCatalogCard, type CustomCard } from '@/lib/cardMaker/model';
 import type { Card } from '@/models/card';
-import type { CardLanguage, CardTranslations } from '@/models/cardTranslation';
 import { CardRender } from './CardRender';
 
 /** Data fixa: a carta montada não é salva, só desenhada. */
@@ -22,11 +20,9 @@ export interface CardImageRenderer {
 
 /**
  * Desenha cartas montadas (as escaneadas, com `layout`, e as do criador) fora da tela, uma de cada vez, e as
- * converte em PNG. Os textos das cartas do catálogo seguem o idioma escolhido (como a carta montada na tela).
+ * converte em PNG.
  */
 export function createCardImageRenderer(options: {
-  language: CardLanguage;
-  translations: CardTranslations | null;
   /** Cartas do criador deste navegador. */
   customCards: CustomCard[];
 }): CardImageRenderer {
@@ -40,8 +36,7 @@ export function createCardImageRenderer(options: {
   const source = (card: Card): CustomCard | undefined => {
     if (isCustomCardId(card.id)) return custom.get(card.id);
     if (!card.layout) return undefined;
-    const localized = localizeCard(card, options.language, options.translations);
-    return withLocalizedText(fromCatalogCard(card, NOW), localized, card);
+    return fromCatalogCard(card, NOW);
   };
 
   return {

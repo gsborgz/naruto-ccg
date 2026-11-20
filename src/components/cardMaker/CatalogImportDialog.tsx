@@ -3,24 +3,12 @@
 import { useMemo, useState } from 'react';
 import { Dialog } from '@/components/Dialog';
 import { CARDS } from '@/data/cards';
-import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
-import { localizeCard } from '@/lib/cardLocale';
-import { fromCatalogCard, withLocalizedText, type CustomCard, type LayoutId } from '@/lib/cardMaker/model';
+import { fromCatalogCard, type CustomCard, type LayoutId } from '@/lib/cardMaker/model';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card } from '@/models/card';
-import type { CardLanguage, CardTranslations } from '@/models/cardTranslation';
 
-/**
- * Carta do criador a partir de uma carta do catálogo, com nome, textos, frase e características no idioma
- * escolhido (PT-BR: as traduções precisam já ter carregado; o que não tiver tradução fica em inglês).
- */
-export function importCatalogCard(
-  card: Card,
-  language: CardLanguage,
-  translations: CardTranslations | null,
-  layout?: LayoutId,
-): CustomCard {
-  const custom = fromCatalogCard(card, undefined, layout);
-  return language === 'en' ? custom : withLocalizedText(custom, localizeCard(card, language, translations), card);
+/** Carta do criador a partir de uma carta do catálogo (com os textos do conteúdo do jogo). */
+export function importCatalogCard(card: Card, layout?: LayoutId): CustomCard {
+  return fromCatalogCard(card, undefined, layout);
 }
 
 interface Props {
@@ -33,11 +21,9 @@ interface Props {
 
 const MAX_RESULTS = 40;
 
-/** Busca uma carta do catálogo para servir de ponto de partida (textos no idioma escolhido: EN | PT). */
+/** Busca uma carta do catálogo para servir de ponto de partida . */
 export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
   const [query, setQuery] = useState('');
-  const { language, translations } = useCardLanguage();
-  const cardName = useCardName();
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -46,12 +32,11 @@ export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
       .filter(
         (c) =>
           c.name.toLowerCase().includes(q) ||
-          cardName(c).toLowerCase().includes(q) ||
           c.id.includes(q) ||
           c.number.toLowerCase() === q,
       )
       .slice(0, MAX_RESULTS);
-  }, [query, cardName]);
+  }, [query]);
 
   return (
     <Dialog open={open} onClose={onClose} title="Importar do catálogo">
@@ -68,10 +53,8 @@ export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
           <li key={card.id}>
             <button
               type="button"
-              // Em PT-BR, espera as traduções para não importar em inglês.
-              disabled={language === 'pt-BR' && !translations}
               onClick={() => {
-                onPick(importCatalogCard(card, language, translations, layout));
+                onPick(importCatalogCard(card, layout));
                 onClose();
               }}
               className="flex w-full items-center gap-3 rounded-lg p-1.5 text-left hover:bg-surface-2"
@@ -79,7 +62,7 @@ export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={cardImageUrl(card, 'thumb')} alt="" className="h-14 w-10 rounded object-cover" loading="lazy" />
               <span className="flex min-w-0 flex-col">
-                <span className="truncate text-sm font-semibold">{cardName(card)}</span>
+                <span className="truncate text-sm font-semibold">{card.name}</span>
                 <span className="text-xs text-muted">
                   {card.set} {card.number} · {CARD_TYPE_LABEL[card.type]}
                 </span>

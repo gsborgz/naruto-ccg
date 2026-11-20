@@ -1,3 +1,4 @@
+import type { SetCode } from '../data/sets.ts';
 import type { CardLayoutInfo } from './cardLayout.ts';
 
 export type CardType = 'ninja' | 'jutsu' | 'mission' | 'client';
@@ -27,8 +28,8 @@ interface BaseCard {
   elements: ElementSymbol[];
   /** Número impresso (ex.: "001", "US072", "PR-065"). Apenas informativo. */
   number: string;
-  /** Código do set (ex.: "S01", "TP1"); nomes em `src/data/sets.ts`. */
-  set: string;
+  /** Coleção da carta (ex.: "S01", "TP1"; lista em `src/data/sets.ts`); `CUSTOM` nas cartas do criador. */
+  set: SetCode | 'CUSTOM';
   /** Texto de efeito, uma linha por bloco impresso. */
   text: string[];
   /** Frase impressa acima da caixa de texto (fala do anime), quando a carta tem. Opcional. */
@@ -115,7 +116,8 @@ export function deckNameKey(card: Pick<Card, 'name'>): string {
   return card.name.trim().replace(/\s+/g, ' ').toLowerCase();
 }
 
-const NAME_PREFIX = 'Name:';
+/** "Nome: X" (PT-BR, o texto das cartas no conteúdo do jogo) ou "Name: X" (como impresso, nas cartas criadas). */
+const NAME_PREFIX = /^(?:Nome|Name):/;
 
 /**
  * Nomes da carta EM JOGO (rulebook PT-BR, p. 44, (B)): o nome impresso mais cada "Name: X" das
@@ -126,8 +128,8 @@ export function getInPlayNames(card: Card): string[] {
   const extra =
     'characteristics' in card
       ? card.characteristics
-          .filter((c) => c.startsWith(NAME_PREFIX))
-          .map((c) => c.slice(NAME_PREFIX.length).trim())
+          .filter((c) => NAME_PREFIX.test(c))
+          .map((c) => c.replace(NAME_PREFIX, '').trim())
           .filter(Boolean)
       : [];
   return [card.name, ...extra];
@@ -139,7 +141,8 @@ export function isTokenCard(card: Card): boolean {
 }
 
 /** Características que mandam a carta para o Baralho de Reforço em vez do Deck. */
-export const REINFORCEMENT_CHARACTERISTICS = ['Squad', 'Reinforcement'] as const;
+/** Em PT-BR (o texto das cartas no conteúdo do jogo) e como impresso (nas cartas criadas, digitadas em inglês). */
+export const REINFORCEMENT_CHARACTERISTICS = ['Esquadrão', 'Reforço', 'Squad', 'Reinforcement'] as const;
 
 /**
  * A carta fica no Baralho de Reforço [Reinforcement Deck], nunca no Deck (docs/REGRAS.md 4.17 e 6.8):

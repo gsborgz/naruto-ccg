@@ -25,7 +25,6 @@ import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
 import { coinPower, formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
 import { isReinforcementCard, type Card } from '@/models/card';
 import { ArenaCardImage, ownerOfUid, useArenaLookup } from './arenaCards';
-import { useCardName } from '@/lib/cardLanguage';
 import { CardZoom, type HoveredCard } from './CardZoom';
 import styles from './GameArena.module.css';
 
@@ -415,7 +414,7 @@ function TableCard({
 }) {
   const lookup = useArenaLookup();
   const card = lookup(inst.cardId, ownerOfUid(inst.uid));
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
   const setHovered = useContext(HoverContext);
   const controls = useContext(ControlsContext);
   const open = () => (onClick ? onClick() : card && onInspect(card, inst));
@@ -477,7 +476,7 @@ function ZoneListDialog({
   onClose: () => void;
 }) {
   const targets = (['hand', 'village', 'battlefield', 'chakra', 'discard', 'deck', 'removed'] as const).filter((t) => t !== zone);
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
   const lookup = useArenaLookup();
   return (
     <Dialog open onClose={onClose} title={title}>
@@ -637,7 +636,7 @@ function PeekRewardDialog({
   opponentName: string;
   onClose: () => void;
 }) {
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
   // Só mostra a carta olhada NESTE diálogo (um Prêmio olhado antes não aparece ao abrir de novo).
   const [asked, setAsked] = useState(false);
   const shown = asked && peek && peek.area === area ? peek : null;
@@ -2123,7 +2122,7 @@ function LogLine({
   other: string;
   onInspect: Inspect;
 }) {
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
   const lookup = useArenaLookup();
   const setHovered = useContext(HoverContext);
   const card = (cardId: string | undefined) => {

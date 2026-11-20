@@ -5,7 +5,6 @@ import { Dialog } from '@/components/Dialog';
 import { CARD_TYPE_LABEL } from '@/models/card';
 import type { Side } from '@/lib/game/state';
 import { ArenaCardImage, useArenaLookup } from './arenaCards';
-import { useCardName } from '@/lib/cardLanguage';
 import { CardZoom, type HoveredCard } from './CardZoom';
 
 /**
@@ -48,7 +47,7 @@ export function SearchDeckDialog({
     };
   }, [open, load]);
 
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
   const lookup = useArenaLookup();
   const entries = useMemo(() => {
     if (!counts) return [];
@@ -58,7 +57,7 @@ export function SearchDeckDialog({
       .map((e) => ({ ...e, name: e.card ? nameOf(e.card) : e.id }))
       .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.card?.name ?? '').toLowerCase().includes(q))
       .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-  }, [counts, query, nameOf, lookup, owner]);
+  }, [counts, query, lookup, owner]);
 
   return (
     <Dialog open={open} onClose={onClose} title="Buscar no deck">

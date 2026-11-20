@@ -6,6 +6,7 @@ import { customDeckCardId } from '@/lib/cardMaker/customIds';
 import { customCardToCard } from '@/lib/cardMaker/deckCard';
 import type { CustomCard } from '@/lib/cardMaker/model';
 import { useCustomCards } from '@/lib/cardMaker/store';
+import { useOptionalContent } from '@/lib/content/ContentProvider';
 import type { Card } from '@/models/card';
 
 export interface CardCatalog {
@@ -17,13 +18,17 @@ export interface CardCatalog {
   customCount: number;
 }
 
-const catalogOnly: CardCatalog = { cards: CARDS, lookup: (id) => CARDS_BY_ID.get(id), customCount: 0 };
+const lookupCatalog = (id: string) => CARDS_BY_ID.get(id);
 
-/** Catálogo + cartas do criador deste navegador. Durante o SSR, só o catálogo. */
+/**
+ * Catálogo + cartas do criador deste navegador. Durante o SSR, só o catálogo. A lista é refeita a cada versão do
+ * conteúdo (uma carta editada pelo site entra no lugar da antiga).
+ */
 export function useCardCatalog(): CardCatalog {
   const custom = useCustomCards();
+  const version = useOptionalContent()?.version;
   return useMemo(() => {
-    if (!custom?.length) return catalogOnly;
+    if (!custom?.length) return { cards: [...CARDS], lookup: lookupCatalog, customCount: 0 };
     const converted = custom.map(customCardToCard);
     const byId = new Map(converted.map((c) => [c.id, c]));
     return {
@@ -31,7 +36,9 @@ export function useCardCatalog(): CardCatalog {
       lookup: (id) => CARDS_BY_ID.get(id) ?? byId.get(id),
       customCount: converted.length,
     };
-  }, [custom]);
+    // `version`: o conteúdo mudou (CARDS foi atualizado no lugar).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [custom, version]);
 }
 
 /**

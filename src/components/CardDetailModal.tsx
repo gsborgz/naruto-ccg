@@ -2,29 +2,32 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import { CARDS_BY_ID } from '@/data/cards';
+import { useOptionalContent } from '@/lib/content/ContentProvider';
+import { setName as setNameOf } from '@/lib/setName';
 import { customDeckCardId, customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { deleteCustomCard } from '@/lib/cardMaker/artUpload';
 import { readCustomCards } from '@/lib/cardMaker/store';
 import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog';
 import { useCardDesign } from '@/lib/cardDesign';
-import { useCardLanguage, useLocalizedCard, useSetName } from '@/lib/cardLanguage';
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { acceptsAltArt, canEditAltArt, hasFixedArt } from '@/lib/altArts';
 import { chooseArt, useChosenArt } from '@/lib/altArtClient';
 import { AltArtDraftFace, AltArtPicker, type AltArtDraft } from './AltArtPicker';
 import { CardCost } from './CardCost';
-import type { LayoutSizeField } from '@/lib/devCardLayoutEdit';
 import { CardFace } from './CardFace';
-import { DevNameSizeTuner } from './DevNameSizeTuner';
+import { NameSizeTuner } from './NameSizeTuner';
 import { ElementBadge } from './ElementBadge';
 
 type CardView = 'original' | 'rendered';
-/** Abas da coluna da direita: os dados da carta, a arte (artes alternativas) ou o layout (só em desenvolvimento). */
-type DetailTab = 'details' | 'art' | 'layout';
+/** Abas da coluna da direita: os dados da carta, a arte (artes alternativas) ou a edição da carta. */
+type DetailTab = 'details' | 'art' | 'edit';
 
-/** Aba Layout: só em desenvolvimento, carregada sob demanda (não pesa no detalhe da carta). */
-const DevCardLayoutTab = dynamic(() => import('./cardMaker/DevCardLayoutTab'), { ssr: false });
+/** Aba Editar: carregada sob demanda (o editor do criador não pesa no detalhe da carta). */
+const CardEditTab = dynamic(() => import('./cardMaker/CardEditTab'), { ssr: false });
+
+const UNSAVED = 'Descartar as alterações não salvas desta carta?';
 
 interface Props {
   card: Card | null;
@@ -37,6 +40,14 @@ interface Props {
 
 export function CardDetailModal({ card, onClose, actions, onDeleted }: Props) {
   const ref = useRef<HTMLDialogElement>(null);
+  // Alterações não salvas na aba Editar: pergunta antes de fechar.
+  const dirty = useRef(false);
+  const requestClose = () => {
+    if (!dirty.current || confirm(UNSAVED)) {
+      dirty.current = false;
+      onClose();
+    }
+  };
 
   useEffect(() => {
     const dialog = ref.current;
@@ -49,29 +60,47 @@ export function CardDetailModal({ card, onClose, actions, onDeleted }: Props) {
     <dialog
       ref={ref}
       onClose={onClose}
-      onClick={(e) => e.target === e.currentTarget && onClose()}
+      onCancel={(e) => {
+        e.preventDefault();
+        requestClose();
+      }}
+      onClick={(e) => e.target === e.currentTarget && requestClose()}
       className="m-auto w-[min(56rem,calc(100vw-2rem))] rounded-xl border border-border bg-surface p-0 text-text backdrop:bg-black/70"
     >
-      {card && <CardDetails key={card.id} card={card} onClose={onClose} actions={actions} onDeleted={onDeleted} />}
+      {card && (
+        <CardDetails
+          key={card.id}
+          card={card}
+          onClose={requestClose}
+          actions={actions}
+          onDeleted={onDeleted}
+          onDirtyChange={(d) => (dirty.current = d)}
+        />
+      )}
     </dialog>
   );
 }
 
-function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card }) {
-  const { language } = useCardLanguage();
-  const localized = useLocalizedCard(card);
-  const setName = useSetName()(card.set);
-  const custom = isCustomCardId(card.id);
+function CardDetails({
+  card: opened,
+  onClose,
+  actions,
+  onDeleted,
+  onDirtyChange,
+}: Props & { card: Card; onDirtyChange: (dirty: boolean) => void }) {
+  // A carta como está no conteúdo agora (depois de salvar na aba Editar, a nova versão).
+  useOptionalContent();
+  const custom = isCustomCardId(opened.id);
+  const card = (!custom && CARDS_BY_ID.get(opened.id)) || opened;
+  const setName = setNameOf(card.set);
   const localCustom = useIsLocalCustomCard(card.id);
   // Na partida (cartas vindas da sala) não se exclui nada: a carta é a cópia que foi para a sala.
   const inMatch = useContext(CustomSourceContext) !== null;
   // Abre no design escolhido na listagem (padrão: a original); o outro fica a um clique.
   const [view, setView] = useState<CardView>(useCardDesign());
-  // Desenvolvimento: ajuste do tamanho do nome, aplicado na carta montada antes de gravar no arquivo da coleção.
-  // Nome traduzido na tela → `nameSizePtBr`; senão `nameSize` (como em `withLocalizedText`).
-  const [sizeEdits, setSizeEdits] = useState<Partial<Record<LayoutSizeField, number>>>({});
-  const sizeField: LayoutSizeField = language === 'pt-BR' && localized.name !== card.name ? 'nameSizePtBr' : 'nameSize';
-  const shown = card.layout && Object.keys(sizeEdits).length > 0 ? { ...card, layout: { ...card.layout, ...sizeEdits } } : card;
+  // Ajuste do tamanho do nome (atalho na carta montada), aplicado na carta antes de gravar.
+  const [sizeEdit, setSizeEdit] = useState<number | null>(null);
+  const shown = card.layout && sizeEdit !== null ? { ...card, layout: { ...card.layout, nameSize: sizeEdit } } : card;
   // Artes alternativas: só nas cartas do catálogo e fora da partida (lá vale a arte que cada jogador levou). A aba
   // Arte aparece em todas elas, mas editar só nas cartas já mapeadas (`card.layout`): a arte é montada no layout dela.
   const canPickArt = !custom && acceptsAltArt(card.id) && !hasFixedArt(card) && !inMatch;
@@ -81,12 +110,25 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
   const chosen = useChosenArt(card.id);
   // Com uma arte alternativa (escolhida ou fixada), a carta sai sempre montada: não há Original | Montada.
   const withAltArt = hasFixedArt(card) ? !!card.altArt : !!chosen;
-  // Desenvolvimento: aba Layout (layout e ícones da carta, layout base e arquivos dos ícones), nas cartas escaneadas.
-  const devLayout = process.env.NODE_ENV === 'development' && !!card.layout && !custom && !inMatch;
+  // Aba Editar: todas as cartas do catálogo, fora da partida; grava no conteúdo do jogo.
+  const canEdit = !custom && !inMatch;
+  const [editDirty, setEditDirty] = useState(false);
+  const reportDirty = useCallback(
+    (d: boolean) => {
+      setEditDirty(d);
+      onDirtyChange(d);
+    },
+    [onDirtyChange],
+  );
+  const switchTab = (next: DetailTab) => {
+    if (tab === 'edit' && next !== 'edit' && editDirty && !confirm(UNSAVED)) return;
+    if (next !== 'edit') reportDirty(false);
+    setTab(next);
+  };
   const tabs: [DetailTab, string][] = [
-    ...(canPickArt || devLayout ? ([['details', 'Detalhes']] as [DetailTab, string][]) : []),
+    ...(canPickArt || canEdit ? ([['details', 'Detalhes']] as [DetailTab, string][]) : []),
     ...(canPickArt ? ([['art', 'Arte']] as [DetailTab, string][]) : []),
-    ...(devLayout ? ([['layout', 'Layout']] as [DetailTab, string][]) : []),
+    ...(canEdit ? ([['edit', 'Editar']] as [DetailTab, string][]) : []),
   ];
   const header = (
     <>
@@ -96,9 +138,7 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
             {custom ? CARD_TYPE_LABEL[card.type] : `${CARD_TYPE_LABEL[card.type]} · #${card.number} · ${card.set}`}
           </p>
           {setName && <p className="text-xs text-muted">{setName}</p>}
-          <h2 className="text-2xl font-bold">{localized.name}</h2>
-          {/* Com o nome traduzido, o impresso continua visível: é ele que vale na regra de cópias. */}
-          {localized.name !== card.name && <p className="text-sm text-muted">{card.name}</p>}
+          <h2 className="text-2xl font-bold">{card.name}</h2>
         </div>
         <button type="button" onClick={onClose} className="rounded-md px-2 py-1 text-muted hover:bg-surface-2 hover:text-text" aria-label="Fechar">
           ✕
@@ -113,7 +153,7 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
               type="button"
               role="tab"
               aria-selected={tab === value}
-              onClick={() => setTab(value)}
+              onClick={() => switchTab(value)}
               className={`-mb-px border-b-2 px-3 py-1.5 ${tab === value ? 'border-accent font-semibold text-text' : 'border-transparent text-muted hover:text-text'}`}
             >
               {text}
@@ -124,7 +164,7 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
     </>
   );
 
-  if (devLayout && tab === 'layout') return <DevCardLayoutTab card={card} header={header} />;
+  if (canEdit && tab === 'edit') return <CardEditTab card={card} header={header} onDirtyChange={reportDirty} />;
 
   return (
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
@@ -134,14 +174,12 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
         ) : (
           <CardFace card={shown} size="full" rendered={view === 'rendered'} className="rounded-lg shadow-xl" />
         )}
-        {process.env.NODE_ENV === 'development' && card.layout && view === 'rendered' && !withAltArt && !draft && (
-          <DevNameSizeTuner
-            key={sizeField}
+        {canEdit && card.layout && view === 'rendered' && !withAltArt && !draft && (
+          <NameSizeTuner
             cardId={card.id}
-            field={sizeField}
-            saved={card.layout[sizeField] ?? 0}
-            value={sizeEdits[sizeField] ?? card.layout[sizeField] ?? 0}
-            onChange={(value) => setSizeEdits((edits) => ({ ...edits, [sizeField]: value }))}
+            saved={card.layout.nameSize ?? 0}
+            value={sizeEdit ?? card.layout.nameSize ?? 0}
+            onChange={setSizeEdit}
           />
         )}
         {/* Cartas escaneadas (`card.layout`) também podem ser vistas montadas a partir do layout e das artes. */}
@@ -209,14 +247,14 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
                   {card.injured.combat}/{card.injured.support}
                 </dd>
                 <dt className="text-muted">Atributo</dt>
-                <dd>{localized.attributes.join(' / ')}</dd>
+                <dd>{card.attributes.join(' / ')}</dd>
               </>
             )}
-            {localized.characteristics.length > 0 && (
+            {'characteristics' in card && card.characteristics.length > 0 && (
               <>
                 <dt className="text-muted">Características</dt>
                 <dd className="flex flex-wrap gap-1">
-                  {localized.characteristics.map((c) => (
+                  {card.characteristics.map((c) => (
                     <span key={c} className="rounded bg-surface-2 px-1.5 py-0.5 text-xs">
                       {c}
                     </span>
@@ -241,12 +279,12 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
             </p>
           )}
 
-          {(localized.text.length > 0 || localized.flavor) && (
+          {(card.text.length > 0 || card.flavor) && (
             <div className="space-y-2 rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
-              {localized.text.map((line, i) => (
+              {card.text.map((line, i) => (
                 <p key={i}>{line}</p>
               ))}
-              {localized.flavor && <p className="italic text-muted">{localized.flavor}</p>}
+              {card.flavor && <p className="italic text-muted">{card.flavor}</p>}
             </div>
           )}
           </>
@@ -273,9 +311,6 @@ function CardDetails({ card, onClose, actions, onDeleted }: Props & { card: Card
               onClose();
             }}
           />
-        )}
-        {language === 'pt-BR' && !localized.translated && !custom && (
-          <p className="text-xs text-muted">Esta carta ainda não tem tradução: os textos estão em inglês, como impressos.</p>
         )}
 
         {actions && <div className="mt-auto">{actions}</div>}

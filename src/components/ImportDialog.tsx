@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { CARDS_BY_ID } from '@/data/cards';
-import { customCardActions } from '@/lib/cardMaker/store';
+import { syncCardArtRefs } from '@/lib/cardMaker/artUpload';
+import { customCardActions, readCustomCards } from '@/lib/cardMaker/store';
 import { deckLookup } from '@/lib/rooms/model';
 import { DECK_RULES, summarizeDeck } from '@/lib/deckRules';
 import { sharedDecks, type SharedDeck } from '@/lib/deckShare';
@@ -44,10 +45,14 @@ export function ImportDialog({ open, onClose }: { open: boolean; onClose: () => 
   const confirmImport = () => {
     if (!found) return;
     // As cartas criadas dos decks entram no criador deste navegador (com as artes no Vercel Blob).
-    if (!customCardActions.addMissing(found.flatMap((d) => Object.values(d.custom ?? {})))) {
+    const incoming = found.flatMap((d) => Object.values(d.custom ?? {}));
+    if (!customCardActions.addMissing(incoming)) {
       setError('Não coube no armazenamento do navegador: apague algumas cartas criadas e tente de novo.');
       return;
     }
+    // As cartas que entraram passam a usar as artes delas também: elas não saem do Blob se o autor excluir a dele.
+    const ids = new Set(incoming.map((c) => c.id));
+    for (const c of readCustomCards().filter((c) => ids.has(c.id))) void syncCardArtRefs(c.id, c).catch(() => undefined);
     deckActions.importDecks(found);
     close();
   };

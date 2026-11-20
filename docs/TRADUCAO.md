@@ -1,17 +1,16 @@
 # Tradução PT-BR das cartas
 
-Os dados das cartas (`src/data/sets/`) ficam em inglês, como impressos. A versão em português fica à parte, em `src/data/ptbr/`, e só é usada na **exibição**: as regras do jogo (montagem, Baralho de Reforço, `Name: X`…) continuam lendo os dados em inglês.
+O app mostra as cartas em PT-BR. O texto em PT-BR é o que fica no conteúdo do jogo (Redis) e é editado pelo site, na aba **Editar** do detalhe da carta. O texto em inglês, como impresso, fica fixo no código (`src/data/sets/`), sem edição, e é a fonte da revisão contra as imagens (docs/REVISAO-CARTAS.md). As regras do jogo leem os termos em PT-BR (`Esquadrão`, `Reforço`, `Nome: X`) e também os impressos (`Squad`, `Reinforcement`, `Name: X`), que aparecem nas cartas criadas.
 
-No app, o seletor **EN | PT** do cabeçalho escolhe o idioma dos textos das cartas (efeitos, frases, e características). A escolha fica no localStorage (`naruto-ccg:card-language`). As traduções só são baixadas quando o jogador escolhe PT. Carta sem tradução aparece em inglês, com um aviso no detalhe.
+Os arquivos de `src/data/ptbr/` são a **carga inicial** dos textos em PT-BR: com o Redis vazio (ou com o formato antigo, de textos em inglês), o app grava as cartas já traduzidas (`cardsToPtBr` em `src/lib/content/ptbr.ts`). Depois disso, corrigir uma tradução nesses arquivos só muda o app levando a carta para o Redis com `npm run content:sync-cards -- <SET ou ids>`, o que troca também o que foi editado pelo site (a versão anterior fica no histórico). Para uma carta só, prefira editar pelo site.
 
 ## Arquivos
 
 - `src/data/ptbr/sets/<mesmo nome do arquivo em src/data/sets>.ts`: um objeto por coleção, com a chave sendo o `id` da carta e os campos `name` (só quando o nome muda; ver abaixo), `text` (mesmas linhas do original, na mesma ordem) e `flavor` (com as mesmas aspas do original).
 - `src/data/ptbr/index.ts`: junta as coleções (`CARD_TRANSLATIONS_PTBR`) e lista as que estão completas (`TRANSLATED_SETS`).
 - `src/data/ptbr/glossary.ts`: características, Atributos de Combate e nomes das coleções (iguais em todas as cartas, por isso ficam no glossário e não carta a carta).
-- `src/data/ptbr/ptbr.test.ts`: confere ids, quantidade de linhas, títulos `[…]`, rótulos (`Alvo:`, `Efeito:`…), frases, se o glossário cobre tudo e se cartas com o mesmo nome em inglês têm o mesmo nome em PT-BR.
 
-Para traduzir uma coleção nova: crie o arquivo em `sets/`, inclua em `index.ts` (no objeto e em `TRANSLATED_SETS`) e rode `npm test`.
+Para traduzir uma coleção nova: crie o arquivo em `sets/`, inclua em `index.ts` (no objeto e em `TRANSLATED_SETS`) e leve as cartas para o Redis com `npm run content:sync-cards -- <SET>`. Os testes não conferem mais as traduções carta a carta: confira à mão as mesmas linhas, títulos `[…]`, rótulos (`Alvo:`, `Efeito:`…) e frases do original, e que cartas com o mesmo nome em inglês tenham o mesmo nome em PT-BR.
 
 ## Nomes das cartas
 
@@ -20,7 +19,7 @@ O rulebook PT-BR mantém os nomes em inglês, mas aqui eles são traduzidos para
 - **Jutsus e Missões**: `Shadow Clone Jutsu` → `Jutsu Clones das Sombras`, `Hokage Rocks` → `Monumento dos Hokages`, `Fire Style: Fireball Jutsu` → `Estilo Fogo: Jutsu Bola de Fogo`. Nomes japoneses ficam como estão (`Rasengan`, `Chidori`, `Kamui`).
 - **Ninjas e Clientes descritivos**: `Giant Spider` → `Aranha Gigante`, `The Third Hokage` → `O Terceiro Hokage`, `Six Tails` → `Seis Caudas`, e os sufixos: `(Childhood)` → `(Infância)`, `(Sage Mode)` → `(Modo Sábio)`, `(State 2)` → `(Estado 2)`, `(Deva Path)` → `(Caminho Deva)`.
 - **Personagens não mudam**: `Naruto Uzumaki`, `Kakashi Hatake`, `Gaara of the Desert`, `Might Guy`.
-- O mesmo nome em inglês tem sempre o mesmo nome em PT-BR (o teste confere).
+- O mesmo nome em inglês tem sempre o mesmo nome em PT-BR.
 - **Citações no texto** usam o nome PT-BR da carta citada (`card de Missão "O Vale do Fim"`), inclusive partes de nome (`"Amassos" no nome`, `"Mundo" no nome`). `Name: X` vira `Nome: X` com o nome PT-BR de X, quando houver.
 - **Nomes consagrados no Brasil** seguem a dublagem/mangá: `Make-Out Paradise` → `Jardim dos Amassos` (e a série: `Táticas dos Amassos`, `Violência dos Amassos`), `Body Flicker` → `Deslocamento Instantâneo`.
 - **Citações impressas com o nome errado**: o texto em inglês fica como impresso (`src/data/sets/`), mas a tradução cita a carta certa:

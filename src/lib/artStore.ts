@@ -63,14 +63,26 @@ export function parseArtDataUrl(data: unknown): { bytes: Buffer; type: string; e
   return { bytes, type, ext: m[1] === 'jpeg' ? 'jpg' : m[1] };
 }
 
-/** Guarda a arte (se ainda não existir) e devolve o endereço público dela. */
-export async function saveArt(data: unknown, tokenHash: string): Promise<{ url: string; hash: string }> {
+/**
+ * Guarda a arte (se ainda não existir) e devolve o endereço público dela. Com `ref`, o envio já registra o uso (carta
+ * criada); sem, a imagem fica pendente até alguém passar a usar (arte alternativa) ou é apagada depois de um dia.
+ */
+export async function saveArt(data: unknown, tokenHash: string, ref?: string): Promise<{ url: string; hash: string }> {
   requireBlob();
   const { bytes, type, ext } = parseArtDataUrl(data);
   const hash = createHash('sha256').update(bytes).digest('hex');
   const pathname = artPathname(hash, ext);
-  // Quem envia primeiro fica como dono (pode apagar). Reenvio da mesma imagem não muda o dono.
-  await getRedis().set(ownerKey(hash), `t:${tokenHash}`, { nx: true });
+  const redis = getRedis();
+  // Quem envia primeiro fica como dono (para as imagens de antes das referências). Reenvio não muda o dono.
+  await redis.set(ownerKey(hash), `t:${tokenHash}`, { nx: true });
+  if ((await redis.scard(refsKey(hash))) === 0) await redis.zadd(PENDING_KEY, { score: Date.now(), member: `${hash}.${ext}` });
+  await sweepPendingArts().catch((e) => console.error('Falha ao apagar artes sem uso', e));
+  const saved = await storeArt(pathname, bytes, type, hash);
+  if (ref) await addArtRef(ref, saved.url);
+  return saved;
+}
+
+async function storeArt(pathname: string, bytes: Buffer, type: string, hash: string): Promise<{ url: string; hash: string }> {
   return withBlobAuth(async () => {
     try {
       const existing = await head(pathname);
@@ -89,15 +101,101 @@ export async function saveArt(data: unknown, tokenHash: string): Promise<{ url: 
   });
 }
 
-/** Apaga a arte do Blob. Só quem a enviou primeiro (mesmo token de jogador). */
-export async function deleteArt(url: string, tokenHash: string): Promise<void> {
+/*
+ * Referências: só fica no Blob a arte que alguma coisa usa. A mesma imagem (mesmo hash) pode estar em várias cartas
+ * criadas e artes alternativas, então cada uso é registrado e a imagem só é apagada quando o último sai.
+ * - `naruto-ccg:art-refs:<sha256>`: conjunto com quem usa a imagem (`alt:<carta>:<arte>` = arte alternativa;
+ *   `custom:<hash do token>:<carta>` = carta criada de um navegador).
+ * - `naruto-ccg:art-ref:<quem>`: as imagens que esse uso tem agora (lista de `<sha256>.<ext>`), para saber o que saiu
+ *   quando ele muda.
+ * - `naruto-ccg:art-pending`: imagens enviadas que ainda não têm uso (nota = quando foram enviadas). Se em
+ *   `PENDING_TTL_MS` ninguém passar a usar (o registro da arte alternativa falhou, a carta não foi salva), a imagem é
+ *   apagada (`sweepPendingArts`, chamada a cada envio).
+ */
+
+const refsKey = (hash: string) => `naruto-ccg:art-refs:${hash}`;
+const refKey = (ref: string) => `naruto-ccg:art-ref:${ref}`;
+const PENDING_KEY = 'naruto-ccg:art-pending';
+const PENDING_TTL_MS = 24 * 60 * 60 * 1000;
+
+/** `<sha256>.<ext>` de um endereço de arte do Blob (ou null). */
+export function artFileOf(url: string): string | null {
+  try {
+    const m = /\/naruto-ccg\/art\/([0-9a-f]{64}\.(?:webp|jpg|png))$/.exec(new URL(url).pathname);
+    return m ? m[1] : null;
+  } catch {
+    return null;
+  }
+}
+
+const hashOf = (file: string) => file.slice(0, 64);
+
+/** Apaga a imagem do Blob e tudo o que o Redis guarda dela. */
+async function deleteArtFile(file: string): Promise<void> {
+  const hash = hashOf(file);
+  await withBlobAuth(() => del(`naruto-ccg/art/${file}`));
+  await getRedis().pipeline().del(ownerKey(hash)).del(refsKey(hash)).zrem(PENDING_KEY, file).exec();
+}
+
+/** Tira um uso da imagem; sem nenhum uso, ela é apagada do Blob. */
+async function releaseArt(file: string, ref: string): Promise<void> {
+  const [, left] = await getRedis().multi().srem(refsKey(hashOf(file)), ref).scard(refsKey(hashOf(file))).exec<[number, number]>();
+  if (left === 0) await deleteArtFile(file);
+}
+
+/**
+ * Diz quais imagens um uso (`ref`) tem agora: as novas ganham o uso, as que saíram perdem e, sem nenhum outro, são
+ * apagadas do Blob. `legacy` serve para usos de antes das referências (sem lista guardada): as imagens que ele tinha
+ * (`previous`) e não tem mais são apagadas se ninguém registrou uso nelas e se foram enviadas por `tokenHash`.
+ */
+export async function setArtRefs(
+  ref: string,
+  urls: readonly string[],
+  legacy?: { previous: readonly string[]; tokenHash: string },
+): Promise<void> {
   requireBlob();
-  const m = /\/naruto-ccg\/art\/([0-9a-f]{64})\.(webp|jpg|png)$/.exec(new URL(url).pathname);
-  if (!m) throw new ArtError(400, 'Endereço de imagem inválido.');
-  const hash = m[1];
-  const owner = await getRedis().get<string>(ownerKey(hash));
-  if (owner === null) throw new ArtError(404, 'Imagem não encontrada.');
-  if (owner !== `t:${tokenHash}`) throw new ArtError(403, 'Só quem enviou a imagem pode apagá-la.');
-  await withBlobAuth(() => del(artPathname(hash, m[2])));
-  await getRedis().del(ownerKey(hash));
+  const redis = getRedis();
+  const files = [...new Set(urls.map(artFileOf).filter((f): f is string => !!f))];
+  const prev = await redis.get<string[]>(refKey(ref));
+  const before = new Set(prev ?? []);
+  const added = files.filter((f) => !before.has(f));
+  const removed = [...before].filter((f) => !files.includes(f));
+  const tx = redis.multi();
+  for (const f of added) tx.sadd(refsKey(hashOf(f)), ref).zrem(PENDING_KEY, f);
+  if (files.length) tx.set(refKey(ref), files);
+  else tx.del(refKey(ref));
+  await tx.exec();
+  for (const f of removed) await releaseArt(f, ref);
+  if (prev === null && legacy) {
+    for (const url of legacy.previous) {
+      const f = artFileOf(url);
+      if (!f || files.includes(f)) continue;
+      const [owner, uses] = await redis.pipeline().get<string>(ownerKey(hashOf(f))).scard(refsKey(hashOf(f))).exec<[string | null, number]>();
+      if (uses === 0 && owner === `t:${legacy.tokenHash}`) await deleteArtFile(f);
+    }
+  }
+}
+
+/** Dá mais um uso a uma imagem (sem tirar os outros do mesmo `ref`): o envio da arte de uma carta criada. */
+export async function addArtRef(ref: string, url: string): Promise<void> {
+  const file = artFileOf(url);
+  if (!file) return;
+  const prev = (await getRedis().get<string[]>(refKey(ref))) ?? [];
+  if (prev.includes(file)) return;
+  await getRedis().multi().sadd(refsKey(hashOf(file)), ref).zrem(PENDING_KEY, file).set(refKey(ref), [...prev, file]).exec();
+}
+
+/** Apaga as imagens enviadas há mais de `PENDING_TTL_MS` que ninguém passou a usar (algumas por vez). */
+export async function sweepPendingArts(limit = 20): Promise<number> {
+  const redis = getRedis();
+  const stale = await redis.zrange<string[]>(PENDING_KEY, '-inf', Date.now() - PENDING_TTL_MS, { byScore: true, offset: 0, count: limit });
+  let deleted = 0;
+  for (const raw of stale) {
+    const file = String(raw);
+    if ((await redis.scard(refsKey(hashOf(file)))) === 0) {
+      await deleteArtFile(file);
+      deleted++;
+    } else await redis.zrem(PENDING_KEY, file);
+  }
+  return deleted;
 }

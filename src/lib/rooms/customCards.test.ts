@@ -70,7 +70,7 @@ function choose(room: Room, who: SeatName, deck: SharedDeck): Room {
 function startedRoom(): Room {
   let room = joinRoom(createRoom('r1', host, NOW), guest, NOW);
   room = choose(room, 'host', deckWithCustom('Konoha', 'h'));
-  room = choose(room, 'guest', deckWithCustom('Uchiha', 'g', 600, ART_B));
+  room = choose(room, 'guest', deckWithCustom('Uchiha', 'g', 60, ART_B));
   room = act(room, 'host', { type: 'setReady', ready: true });
   return act(room, 'guest', { type: 'setReady', ready: true });
 }
@@ -83,13 +83,13 @@ test('cartas criadas na sala: o deck leva as cartas e é validado com elas', () 
   const { custom: _c, ...withoutDefs } = deckWithCustom('Konoha', 'h');
   assert.throws(() => parseRoomDeck(withoutDefs, lookup), RoomError);
 
-  // Definição inválida (layout que não existe, arte de endereço externo, chave que não bate com o id).
+  // Definição inválida (id de layout fora do formato, arte de endereço externo, chave que não bate com o id).
   const bad = (change: (d: SharedDeck) => void) => {
     const d = JSON.parse(JSON.stringify(deckWithCustom('Konoha', 'h'))) as SharedDeck;
     change(d);
     assert.throws(() => parseRoomDeck(d, lookup), RoomError);
   };
-  bad((d) => ((d.custom![customDeckCardId('h-2')] as unknown as Record<string, unknown>).layout = 'layout-99'));
+  bad((d) => ((d.custom![customDeckCardId('h-2')] as unknown as Record<string, unknown>).layout = 'Layout 99!'));
   bad((d) => (d.custom![customDeckCardId('h-2')].art.src = 'https://exemplo.com/a.png'));
   // Arte ainda não enviada (data URL) ou de outro endereço da Vercel: recusada.
   bad((d) => (d.custom![customDeckCardId('h-2')].art.src = 'data:image/png;base64,AAAA'));
@@ -133,7 +133,7 @@ test('cartas criadas na sala: a mesma carta nos dois decks só se for a mesma ve
   const hostDeck = deckWithCustom('Konoha', 'h');
   room = choose(room, 'host', hostDeck);
   // O convidado importou as cartas do anfitrião (mesmo id, mesmo conteúdo): pode.
-  const copy = deckWithCustom('Copia', 'h', 600);
+  const copy = deckWithCustom('Copia', 'h', 60);
   copy.custom = JSON.parse(JSON.stringify(hostDeck.custom));
   assert.equal(choose(room, 'guest', copy).guest?.deck?.name, 'Copia');
   // Editou a carta depois de importar: versões diferentes, recusado.
@@ -151,7 +151,7 @@ test('compartilhamento por código leva as cartas criadas', () => {
   // Sem as definições, as cartas criadas são desconhecidas.
   assert.equal(parseSharePayload({ kind: 'deck', deck: { name: 'x', cards: deck.cards } }, known), null);
   // Coleção: cada deck com as suas.
-  const collection = parseSharePayload({ kind: 'collection', decks: [deck, deckWithCustom('Uchiha', 'g', 600, ART_B)] }, known);
+  const collection = parseSharePayload({ kind: 'collection', decks: [deck, deckWithCustom('Uchiha', 'g', 60, ART_B)] }, known);
   assert.ok(collection && collection.kind === 'collection');
   assert.deepEqual(collection.decks.map((d) => Object.keys(d.custom ?? {}).length), [4, 4]);
 });

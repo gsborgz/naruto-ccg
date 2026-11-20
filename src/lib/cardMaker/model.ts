@@ -1,5 +1,4 @@
 import { cardImageUrl, type Card, type CardType, type ElementSymbol } from '../../models/card.ts';
-import type { LocalizedCardText } from '../../models/cardTranslation.ts';
 import {
   cardArtUrl,
   type ArtLayer,
@@ -13,6 +12,7 @@ import {
   type NameWrap,
 } from '../../models/cardLayout.ts';
 import { getLayout } from './layouts/index.ts';
+import { CHARACTERISTICS_PTBR } from '../../data/ptbr/glossary.ts';
 
 /**
  * Carta criada no criador de cartas (`/criar`). No montador de decks ela vira uma carta do catálogo
@@ -62,7 +62,7 @@ export interface CardElement {
 export const ATTRIBUTE_FRAMES: AttributeFrame[] = ['01', '02', '03-01', '03-02', '05', '06-01', '06-02', '06-03', '07'];
 
 /** Deslocamento em unidades da carta (750×1050) e zoom sobre o enquadramento "cobrir" (`CardArtPlacement`). */
-export interface CustomCardArt extends CardArtPlacement {
+export interface CustomCardArt extends Omit<CardArtPlacement, 'src'> {
   /**
    * Endereço da arte no Vercel Blob (enviada pelo jogador), data URL tratado enquanto ainda não foi enviada
    * (`artUpload.ts`), URL da arte extraída de uma carta do catálogo (`cardArtUrl`), ou null sem arte.
@@ -278,7 +278,7 @@ export function migrateCustomCard(card: CustomCard & { nameScale?: number }): Cu
 }
 
 /** Característica impressa → símbolo da vila (só os nomes exatos; "Rock", "Land of Snow" etc. ficam de fora). */
-const VILLAGE_BY_CHARACTERISTIC: Record<string, Village> = {
+const VILLAGE_BY_CHARACTERISTIC_EN: Record<string, Village> = {
   Leaf: 'leaf',
   Sand: 'sand',
   Mist: 'mist',
@@ -297,6 +297,14 @@ const VILLAGE_BY_CHARACTERISTIC: Record<string, Village> = {
   Artisan: 'artisan',
   Nadeshiko: 'nadeshiko',
 };
+
+/** O mesmo em PT-BR (o texto das cartas no conteúdo do jogo, ex.: "Folha") e como impresso. */
+const VILLAGE_BY_CHARACTERISTIC: Record<string, Village> = Object.fromEntries(
+  Object.entries(VILLAGE_BY_CHARACTERISTIC_EN).flatMap(([en, v]) => [
+    [en, v],
+    [CHARACTERISTICS_PTBR[en] ?? en, v],
+  ]),
+);
 
 /** Vilas da carta (até `MAX_VILLAGES`), convertendo o formato antigo de uma vila só. */
 export function cardVillages(card: Pick<CustomCard, 'villages' | 'village' | 'villageRogue'>): VillageMark[] {
@@ -320,7 +328,7 @@ const power = (p: { combat: number | 'X'; support: number | 'X' }) => `${p.comba
 const cost = (n: number) => (n < 0 ? 'X' : String(n));
 
 /**
- * Preenche uma carta do criador com os dados de uma carta do catálogo (texto em inglês, como impresso).
+ * Preenche uma carta do criador com os dados de uma carta do catálogo (os textos do conteúdo do jogo, em PT-BR).
  * A imagem do catálogo (que já tem a moldura) fica só como referência.
  *
  * Carta já escaneada (`card.layout`): vem no layout dela (se nenhum outro for pedido) e com as artes
@@ -334,7 +342,9 @@ export function fromCatalogCard(card: Card, now = new Date().toISOString(), layo
   if (!info) return result;
   const art = (layer: ArtLayer): CustomCardArt | undefined => {
     const placement = info.art[layer];
-    const src = !placement?.print
+    const src = placement?.src
+      ? placement.src
+      : !placement?.print
       ? cardArtUrl(card.id, layer)
       : placement.clean
         ? cardArtUrl(card.id, 'print-clean')
@@ -347,31 +357,14 @@ export function fromCatalogCard(card: Card, now = new Date().toISOString(), layo
     art: art('back') ?? result.art,
     ...(front && { artFront: front }),
     // Fundo = a impressa: a frase dela aparece por baixo da montada.
-    ...(info.art.back?.print && { printedFlavor: card.flavor ?? '' }),
+    ...(info.art.back?.print && !info.art.back.src && { printedFlavor: card.flavor ?? '' }),
+    ...(info.flavorShade === false && { flavorShade: false }),
+    // O que a aba Editar do detalhe guarda além dos dados da carta.
+    ...(info.nameText && { name: info.nameText }),
+    ...(info.textMarkup !== undefined && { text: info.textMarkup }),
+    ...(info.villages && { villages: info.villages.filter((v) => (VILLAGES as readonly string[]).includes(v.village)) as VillageMark[] }),
   };
   return target === info.layout ? withCardIcons(withArt, info) : withArt;
-}
-
-/**
- * Troca nome, textos, frase e características pelos de outro idioma (ex.: PT-BR, de `localizeCard`). O Atributo
- * de Combate fica em inglês, pois escolhe o kanji impresso; as vilas já vieram das características em inglês.
- */
-export function withLocalizedText(
-  card: CustomCard,
-  localized: Pick<LocalizedCardText, 'name' | 'text' | 'flavor' | 'characteristics'>,
-  source?: Card,
-): CustomCard {
-  // Nome traduzido de carta escaneada, no layout dela: o ajuste da fonte do nome traduzido.
-  const info = source?.layout;
-  const translatedName = info && card.layout === info.layout && localized.name !== source.name;
-  return {
-    ...card,
-    ...(translatedName && { nameSize: info.nameSizePtBr ?? 0, nameWrap: info.nameWrapPtBr }),
-    name: localized.name,
-    text: localized.text.map(catalogTextToMarkup).join('\n'),
-    flavor: localized.flavor ?? '',
-    characteristics: [...localized.characteristics],
-  };
 }
 
 /** Ícones e design impressos na carta escaneada (`CardLayoutInfo`); o que a carta não tiver fica como está. */

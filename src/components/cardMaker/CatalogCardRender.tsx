@@ -1,9 +1,8 @@
 'use client';
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { useLocalizedCard } from '@/lib/cardLanguage';
 import type { AltArtFrame, AltArtPlacement } from '@/lib/altArts';
-import { fromCatalogCard, withLocalizedText, type CustomCard, type CustomCardArt } from '@/lib/cardMaker/model';
+import { fromCatalogCard, type CustomCard, type CustomCardArt } from '@/lib/cardMaker/model';
 import type { Card } from '@/models/card';
 import { CardRender } from './CardRender';
 
@@ -41,8 +40,7 @@ function withPreview(card: CustomCard, preview: ArtPreview): CustomCard {
 
 /**
  * Carta do catálogo montada virtualmente (layout + ícones + textos + artes extraídas), ocupando a largura do
- * contêiner. Usa o layout e as artes de `card.layout` (cartas escaneadas). Nome, textos, frase e características
- * seguem o idioma escolhido (EN | PT); o Atributo de Combate fica em inglês, pois escolhe o kanji impresso.
+ * contêiner. Usa o layout e as artes de `card.layout` (cartas escaneadas), com os textos do conteúdo do jogo.
  * Com `art` (arte alternativa), ela entra no lugar da arte da carta; vale também para as cartas ainda não
  * escaneadas, montadas no layout padrão. `preview`: a arte nova em edição; `onArtMove`: arrastar a arte
  * (enquadramento de uma arte nova).
@@ -61,13 +59,12 @@ export function CatalogCardRender({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
-  const localized = useLocalizedCard(card);
   // Com a impressa de fundo, a frase montada ganha um sombreado que apaga de leve a impressa (`printedFlavor`).
   const custom = useMemo(() => {
-    const montada = withLocalizedText(fromCatalogCard(card, NOW), localized, card);
+    const montada = fromCatalogCard(card, NOW);
     if (preview) return withPreview(montada, preview);
     return art ? withAltArt(montada, art) : montada;
-  }, [card, localized, art, preview]);
+  }, [card, art, preview]);
 
   useLayoutEffect(() => {
     const el = ref.current;

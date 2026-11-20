@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { NextRequest, NextResponse } from 'next/server';
+import { ensureContent } from '@/lib/content/server';
 import { CARDS_BY_ID } from '@/data/cards';
 import { parseSharePayload, shareKey, type StoredShare } from '@/lib/deckShare';
 import { getRedis } from '@/lib/redis';
@@ -15,6 +16,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: 'JSON inválido' }, { status: 400 });
   }
 
+  await ensureContent();
   const payload = parseSharePayload(body, isKnownCard);
   if (!payload) return NextResponse.json({ message: 'Deck inválido' }, { status: 400 });
 

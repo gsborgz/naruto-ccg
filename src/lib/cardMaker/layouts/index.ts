@@ -1,26 +1,18 @@
 import type { CardType } from '../../../models/card.ts';
 import type { LayoutId } from '../model.ts';
-import { LAYOUT_01 } from './layout01.ts';
-import { LAYOUT_02 } from './layout02.ts';
-import { LAYOUT_03 } from './layout03.ts';
-import { LAYOUT_04 } from './layout04.ts';
-import { LAYOUT_05 } from './layout05.ts';
 import type { LayoutSpec } from './types.ts';
 
 export * from './shared.ts';
 export * from '../icons/index.ts';
 export type * from './types.ts';
 
-/** Layouts do criador, na ordem do seletor. Cada um tem a configuração própria (`layoutXX.ts`). */
-export const LAYOUTS: Record<LayoutId, LayoutSpec> = {
-  'layout-01': LAYOUT_01,
-  'layout-02': LAYOUT_02,
-  'layout-03': LAYOUT_03,
-  'layout-04': LAYOUT_04,
-  'layout-05': LAYOUT_05,
-};
+/**
+ * Layouts do criador, na ordem do seletor. Começam vazios e são preenchidos com o conteúdo do Redis
+ * (src/lib/content/hydrate.ts). A carga inicial fica em `seed.ts` (a configuração calibrada de cada layout, `layoutXX.ts`).
+ */
+export const LAYOUTS = {} as Record<LayoutId, LayoutSpec>;
 
-export const LAYOUT_LIST: LayoutSpec[] = Object.values(LAYOUTS);
+export const LAYOUT_LIST: LayoutSpec[] = [];
 
 /**
  * Painel de dados da carta: a versão escolhida (`panelVariant`) ou o painel padrão do layout
@@ -40,5 +32,5 @@ const designVariant = (spec: LayoutSpec, variant: string | undefined) =>
 
 /** Configuração do layout (cartas salvas com um layout desconhecido caem no layout 1). */
 export function getLayout(id: string | undefined): LayoutSpec {
-  return LAYOUTS[id as LayoutId] ?? LAYOUT_01;
+  return LAYOUTS[id as LayoutId] ?? LAYOUTS['layout-01'];
 }

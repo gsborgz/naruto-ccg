@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { NextRequest, NextResponse } from 'next/server';
+import { ensureContent } from '@/lib/content/server';
 import { CARDS_BY_ID } from '@/data/cards';
 import { createRoom, parseNickname, RoomError, toView } from '@/lib/rooms/model';
 import { insertRoom, parseIdentity, readJson, roomErrorResponse, touchSeen } from '@/lib/rooms/store';
@@ -9,6 +10,7 @@ const lookup = (id: string) => CARDS_BY_ID.get(id);
 /** Cria uma sala com quem pediu como anfitrião. */
 export async function POST(request: NextRequest) {
   try {
+    await ensureContent();
     const body = await readJson(request);
     const { playerId, tokenHash } = parseIdentity(body);
     const nickname = parseNickname(body.nickname);

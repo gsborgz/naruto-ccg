@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } from '@/models/card';
 import { INITIAL_FILTERS, type CardFilterState, type SortKey } from '@/lib/cardFilters';
 import { SET_NAMES } from '@/data/sets';
-import { useSetName } from '@/lib/cardLanguage';
+import { setName as setNameOf } from '@/lib/setName';
 import { CardDesignToggle } from './CardDesignToggle';
 import { ElementBadge } from './ElementBadge';
 
@@ -50,7 +50,7 @@ function SearchInput({ value, onChange, className = '' }: Pick<Props, 'value' | 
 }
 
 function SetSelect({ value, onChange, extraSets = [], className = '' }: Omit<Props, 'resultCount'> & { className?: string }) {
-  const setName = useSetName();
+  const setName = setNameOf;
   return (
     <select
       value={value.set}
@@ -158,7 +158,7 @@ function ActiveChip({ children, onRemove }: { children: React.ReactNode; onRemov
 function MobileFilters({ value, onChange, resultCount, extraSets }: Props) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDialogElement>(null);
-  const setName = useSetName();
+  const setName = setNameOf;
   const active = activeFilterCount(value);
 
   useEffect(() => {

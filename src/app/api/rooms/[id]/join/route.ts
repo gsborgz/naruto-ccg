@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { ensureContent } from '@/lib/content/server';
 import { CARDS_BY_ID } from '@/data/cards';
 import { isValidShareId } from '@/lib/deckShare';
 import { joinRoom, parseNickname, RoomError, seatOf, toView } from '@/lib/rooms/model';
@@ -9,6 +10,7 @@ const lookup = (id: string) => CARDS_BY_ID.get(id);
 /** Entra como convidado (ou reconecta, se o token já ocupa um lugar). */
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    await ensureContent();
     const { id } = await params;
     if (!isValidShareId(id)) throw new RoomError(400, 'Código de sala inválido.');
     const body = await readJson(request);

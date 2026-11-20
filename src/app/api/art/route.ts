@@ -1,14 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { ArtError, deleteArt, saveArt } from '@/lib/artStore';
+import { ArtError, saveArt, setArtRefs } from '@/lib/artStore';
 import { isBlobArt } from '@/lib/cardMaker/sharedCard';
 import { hashToken } from '@/lib/rooms/store';
 
 /**
  * Artes das cartas criadas no Vercel Blob (docs/DEPLOY.md, "Artes das cartas criadas"). Exige `X-Player-Token`
- * (a identidade anônima do jogador, a mesma das salas): quem envia primeiro uma imagem é o único que pode apagá-la.
+ * (a identidade anônima do jogador, a mesma das salas). Cada carta criada registra o uso das suas artes
+ * (`custom:<hash do token>:<id da carta>`, em `artStore.ts`): a imagem só sai do Blob quando nada mais a usa.
  */
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+const CARD_ID = /^[\w-]{1,80}$/;
+
+/** O uso das artes de uma carta criada deste jogador. */
+function customRef(tokenHash: string, cardId: unknown): string {
+  if (typeof cardId !== 'string' || !CARD_ID.test(cardId)) throw new ArtError(400, 'Carta inválida.');
+  return `custom:${tokenHash}:${cardId}`;
+}
+
+const blobArts = (x: unknown): string[] => {
+  if (!Array.isArray(x) || x.length > 4 || !x.every((u) => typeof u === 'string' && isBlobArt(u))) {
+    throw new ArtError(400, 'Endereço de imagem inválido.');
+  }
+  return x as string[];
+};
 
 function tokenHashOf(request: NextRequest): string {
   const token = request.headers.get('x-player-token');
@@ -28,24 +44,33 @@ function errorResponse(e: unknown) {
   return NextResponse.json({ message: 'Erro inesperado ao guardar a imagem.' }, { status: 500 });
 }
 
-/** Envia uma arte (`{ data }`: data URL já tratado no navegador). Devolve `{ url }`. */
+/**
+ * Envia uma arte (`{ data, cardId? }`: data URL já tratado no navegador). Devolve `{ url }`. Com `cardId` (carta
+ * criada), a arte já fica como usada por ela; sem, fica pendente até uma arte alternativa passar a usar.
+ */
 export async function POST(request: NextRequest) {
   try {
     const tokenHash = tokenHashOf(request);
-    const { url } = await saveArt((await body(request)).data, tokenHash);
+    const json = await body(request);
+    const ref = json.cardId === undefined ? undefined : customRef(tokenHash, json.cardId);
+    const { url } = await saveArt(json.data, tokenHash, ref);
     return NextResponse.json({ url });
   } catch (e) {
     return errorResponse(e);
   }
 }
 
-/** Apaga uma arte (`{ url }`). Só quem a enviou primeiro. */
-export async function DELETE(request: NextRequest) {
+/**
+ * As artes que uma carta criada deste jogador usa agora (`{ cardId, urls, previous? }`; `urls: []` = a carta foi
+ * excluída). As que saíram e que nada mais usa são apagadas do Blob. `previous` = as que a carta usava, para as
+ * cartas salvas antes das referências.
+ */
+export async function PUT(request: NextRequest) {
   try {
     const tokenHash = tokenHashOf(request);
-    const { url } = await body(request);
-    if (typeof url !== 'string' || !isBlobArt(url)) throw new ArtError(400, 'Endereço de imagem inválido.');
-    await deleteArt(url, tokenHash);
+    const json = await body(request);
+    const previous = json.previous === undefined ? [] : blobArts(json.previous);
+    await setArtRefs(customRef(tokenHash, json.cardId), blobArts(json.urls), { previous, tokenHash });
     return NextResponse.json({ ok: true });
   } catch (e) {
     return errorResponse(e);

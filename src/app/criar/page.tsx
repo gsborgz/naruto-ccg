@@ -1,12 +1,12 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { CardEditor } from '@/components/cardMaker/CardEditor';
 import { CardRender } from '@/components/cardMaker/CardRender';
 import { CARD_H, CARD_W } from '@/lib/cardMaker/layouts';
 import { CatalogImportDialog, importCatalogCard } from '@/components/cardMaker/CatalogImportDialog';
 import { CARDS_BY_ID } from '@/data/cards';
-import { useCardLanguage } from '@/lib/cardLanguage';
 import {
   moveArt,
   newCustomCard,
@@ -16,7 +16,7 @@ import {
   type CustomCard,
   type LayoutId,
 } from '@/lib/cardMaker/model';
-import { deleteCustomCard, hasPendingArt, uploadCardArt } from '@/lib/cardMaker/artUpload';
+import { deleteCustomCard, hasPendingArt, syncAllCardArtRefs, syncCardArtRefs, uploadCardArt } from '@/lib/cardMaker/artUpload';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import { customCardActions, useCustomCards } from '@/lib/cardMaker/store';
@@ -88,6 +88,11 @@ export default function CardMakerPage() {
     return () => query.removeEventListener('change', update);
   }, []);
 
+  // Cartas salvas antes de o servidor contar quem usa cada arte: registra uma vez (artUpload.ts).
+  useEffect(() => {
+    void syncAllCardArtRefs().catch(() => undefined);
+  }, []);
+
   // Abre a carta mais recente ao carregar, ou a de `/criar?carta=<id>` (link "Editar no criador" do montador).
   useEffect(() => {
     if (!cards || draft || !cards.length) return;
@@ -121,7 +126,11 @@ export default function CardMakerPage() {
         `A carta foi salva neste navegador, mas a arte não foi enviada ao servidor (${(e as Error).message}). Clique em Salvar de novo.`,
       );
     }
-    setSaveFailed(!customCardActions.save(toSave));
+    const saved = customCardActions.save(toSave);
+    setSaveFailed(!saved);
+    // O servidor fica sabendo das artes que a carta usa agora: a que foi trocada (ou a recém-enviada, se a carta não
+    // coube no navegador) sai do Blob se nada mais a usa.
+    void syncCardArtRefs(sent.id, saved ? toSave : (stored ?? null), saved ? stored : toSave).catch(() => undefined);
     setDraft((d) => d && withUploadedArt(d, sent, toSave));
     setSaving(false);
   };
@@ -131,22 +140,18 @@ export default function CardMakerPage() {
 
   // `/criar?importar=<id da carta>[&layout=layout-02]`: começa uma carta nova a partir de uma carta do catálogo
   // (sem `layout`: o da carta, se ela já foi escaneada, ou o layout 1).
-  // Em PT-BR, espera as traduções carregarem para importar com os textos traduzidos.
-  const { language, translations } = useCardLanguage();
-  const translationsReady = language === 'en' || !!translations;
   const imported = useRef(false);
   useEffect(() => {
-    if (!translationsReady) return;
     const params = new URLSearchParams(window.location.search);
     const id = params.get('importar');
     const layout = (params.get('layout') ?? undefined) as LayoutId | undefined;
     if (!id || imported.current) return;
     imported.current = true;
     const source = CARDS_BY_ID.get(id);
-    if (source) create(importCatalogCard(source, language, translations, layout));
+    if (source) create(importCatalogCard(source, layout));
     window.history.replaceState(null, '', '/criar');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [translationsReady]);
+  }, []);
 
   const open = (card: CustomCard) => {
     if (card.id === draft?.id || !confirmDiscard()) return;
@@ -219,6 +224,10 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          {/* Editor das molduras, ícones e posições de cada layout (vale para todas as cartas montadas). */}
+          <Link href="/criar/layouts" className={button}>
+            Editar layouts
+          </Link>
           <button type="button" onClick={() => setImporting(true)} className={button}>
             Importar do catálogo
           </button>

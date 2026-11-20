@@ -27,6 +27,7 @@ import {
 } from '@/lib/cardMaker/layouts';
 import { cardCorner } from '@/lib/cardMaker/layouts/corners';
 import { ATTRIBUTE_SHADOW } from '@/lib/cardMaker/icons';
+import { assetUrl } from '@/lib/content/assets';
 import {
   cardVillages,
   hasCharacteristics,
@@ -71,7 +72,7 @@ function Img({ src, x, y, w, h, style }: { src: string; x: number; y: number; w:
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={src}
+      src={assetUrl(src)}
       alt=""
       draggable={false}
       // maxWidth: o preflight do Tailwind limita <img> à largura do pai.
@@ -458,7 +459,7 @@ function jutsuCostParts(part: JutsuCostPart, style: NonNullable<LayoutSpec['juts
     // eslint-disable-next-line @next/next/no-img-element
     <img
       key={`${key}s${i}`}
-      src={JUTSU_COST_ELEMENT_ICON[element]}
+      src={assetUrl(JUTSU_COST_ELEMENT_ICON[element])}
       alt=""
       draggable={false}
       style={{ width: style.elementSize, height: style.elementSize, maxWidth: 'none' }}
@@ -628,7 +629,7 @@ function ArtImage({ art }: { art: CustomCard['art'] }) {
     // eslint-disable-next-line @next/next/no-img-element
     <img
       ref={measure}
-      src={art.src}
+      src={assetUrl(art.src)}
       alt=""
       draggable={false}
       onLoad={(e) => setNatural({ src: art.src!, w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })}

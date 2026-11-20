@@ -14,6 +14,7 @@ import {
   type NamedIconConfig,
 } from '../icons/index.ts';
 import type { IconBox, IconPlacement, LayoutSpec } from './types.ts';
+import { COMBAT_ATTRIBUTES_PTBR } from '../../../data/ptbr/glossary.ts';
 
 /**
  * O que é comum a todos os layouts: tamanho da carta, assets e as funções que põem cada ícone na
@@ -261,6 +262,13 @@ export const ATTRIBUTE_NAMES: Readonly<Record<string, string>> = {
   'wisdom': 'Wisdom',
 };
 
+/** Atributo em PT-BR → como impresso (o primeiro, quando dois impressos têm a mesma tradução). */
+const ATTRIBUTE_EN_BY_PTBR: ReadonlyMap<string, string> = new Map(
+  Object.entries(COMBAT_ATTRIBUTES_PTBR)
+    .reverse()
+    .map(([en, pt]) => [pt, en]),
+);
+
 /** Arquivos de kanji existentes. */
 export const ATTRIBUTE_KANJI: ReadonlySet<string> = new Set(Object.keys(ATTRIBUTE_NAMES));
 
@@ -269,7 +277,8 @@ export const MAX_ATTRIBUTES = 3;
 
 /** Arquivo do kanji de um atributo ("Sand Iron" → sand-iron; "?" → unknown). */
 export function attributeSlug(name: string): string {
-  const trimmed = name.trim();
+  // O conteúdo do jogo guarda o atributo em PT-BR ("Arma"); o arquivo tem o nome impresso, em inglês ("weapon").
+  const trimmed = ATTRIBUTE_EN_BY_PTBR.get(name.trim()) ?? name.trim();
   if (trimmed === '?') return 'unknown';
   return trimmed.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }

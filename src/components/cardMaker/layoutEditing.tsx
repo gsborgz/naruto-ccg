@@ -21,20 +21,23 @@ import {
   type IconPlacement,
   type LayoutSpec,
 } from '@/lib/cardMaker/layouts';
-import type { ConfigTarget, ConfigValue } from '@/lib/cardMaker/devConfigEdit';
+import type { ConfigTarget, ConfigValue } from '@/lib/content/changes';
+import { saveConfigChanges } from '@/lib/content/client';
+import { useOptionalContent } from '@/lib/content/ContentProvider';
+import { AssetSwapButton, ContentHistoryButton } from './ContentTools';
 import type { AttributeFrame, CardElement, CustomCard, EntranceIcon, HandIcon } from '@/lib/cardMaker/model';
 import { CARD_TYPE_LABEL, ELEMENT_LABEL, type CardType, type ElementSymbol } from '@/models/card';
 
 /**
- * Edição dos layouts e dos ícones do criador, só em desenvolvimento: usada pela página `/criar/layouts` e pela aba
- * Layout do detalhe da carta (`DevCardLayoutTab`).
+ * Edição dos layouts e dos ícones do criador: usada pela página `/criar/layouts` e pela aba Layout do detalhe da
+ * carta (`DevCardLayoutTab`).
  *
  * Mexe direto nos objetos de configuração carregados (`LAYOUTS`, `TYPE_ICONS`...), que são os mesmos que a carta
- * montada lê, então a prévia muda na hora. As alterações ficam numa lista (`useConfigEditor`) e são gravadas nos
- * arquivos (src/lib/cardMaker/layouts/layoutXX.ts e icons/**) pela rota `/api/dev/card-config`.
+ * montada lê, então a prévia muda na hora. As alterações ficam numa lista (`useConfigEditor`) e são gravadas no
+ * conteúdo do jogo (Redis) pela rota `/api/content/config`, valendo para todo mundo na hora.
  *
- * Valores compartilhados no código (`forAllTypes(...)`, constantes como `COST`) mudam para todos que os usam, aqui
- * e no arquivo. Nos ícones, um campo herdado de defaults.ts muda só no ícone editado.
+ * Tipos de carta com a mesma configuração (no código original, `forAllTypes(...)` e constantes como `COST`) dividem o
+ * objeto (`linkSharedTypes`) e mudam juntos, aqui e no servidor. Nos ícones, cada campo muda só no ícone editado.
  */
 
 export type Obj = Record<string, unknown>;
@@ -74,7 +77,7 @@ export interface Handle {
   resize?: Drive[];
   /** Só para conferência (ex.: espaços seguintes dos elementos). */
   dashed?: boolean;
-  /** Ícone cujo arquivo abre ao selecionar a caixa. */
+  /** Ícone cuja configuração abre ao selecionar a caixa. */
   icon?: IconChoice;
 }
 
@@ -102,15 +105,6 @@ export interface IconChoice {
   id: string;
 }
 
-export const ICON_DIR: Record<IconGroup, string> = {
-  'type': 'type',
-  'type-variant': 'type',
-  'element': 'element',
-  'cost': 'cost',
-  'chakra': 'cost',
-  'attribute': 'combat-attributes',
-};
-export const iconFile = (c: IconChoice) => `icons/${ICON_DIR[c.group]}/${c.id}.ts`;
 export const choiceKey = (c: IconChoice) => `${c.group}:${c.id}`;
 
 export function iconObject(c: IconChoice): Obj | undefined {
@@ -132,8 +126,9 @@ export function iconObject(c: IconChoice): Obj | undefined {
   }
 }
 
-export const ENTRANCE_ICONS = Object.keys(COST_ICONS).filter((k) => k.startsWith('entrance')) as EntranceIcon[];
-export const HAND_ICONS = Object.keys(COST_ICONS).filter((k) => k.startsWith('hand')) as HandIcon[];
+// Listas fixas: os ícones de custo vêm do conteúdo (Redis), que só é carregado depois que este módulo é importado.
+export const ENTRANCE_ICONS: EntranceIcon[] = ['entrance-01', 'entrance-02', 'entrance-03', 'entrance-04'];
+export const HAND_ICONS: HandIcon[] = ['hand-01', 'hand-02', 'hand-03'];
 export const ELEMENTS = Object.keys(ELEMENT_LABEL) as ElementSymbol[];
 
 /** Chave do ícone de elemento que a carta mostra (variante inexistente cai na 01, como no app). */
@@ -566,7 +561,7 @@ export function layoutSections(spec: LayoutSpec, t: CardType): Section[] {
   return out;
 }
 
-/** Campos do arquivo do ícone: os soltos em "geral" e um grupo por objeto (arte, nome, número...). */
+/** Campos da configuração do ícone: os soltos em "geral" e um grupo por objeto (arte, nome, número...). */
 export function iconSections(icon: Obj): Section[] {
   const plain = Object.entries(icon).filter(([k, v]) => k !== 'url' && (typeof v !== 'object' || v === null));
   const nested = Object.entries(icon).filter(([, v]) => v !== null && typeof v === 'object');
@@ -605,11 +600,12 @@ export function useConfigEditor() {
   const [selected, setSelected] = useState<string | null>(null);
   const [activeIcon, setActiveIcon] = useState<{ icon: IconChoice; host: string } | null>(null);
   const [, setVersion] = useState(0);
+  const content = useOptionalContent();
 
   const setValue = (target: ConfigTarget, root: Obj, path: Path, value: ConfigValue) => {
     if (target.kind === 'icon') {
       // Os ícones dividem objetos de defaults.ts (ex.: `kanji: ATTRIBUTE_TEXT_STYLE.kanji`): copia o caminho antes de
-      // mudar, para a prévia mudar só este ícone, como no arquivo (onde o campo é sobrescrito só nele).
+      // mudar, para a prévia mudar só este ícone, como fica gravado (o campo muda só nele).
       let o = root;
       for (const k of path.slice(0, -1)) {
         const child = o[k];
@@ -626,32 +622,27 @@ export function useConfigEditor() {
     setVersion((v) => v + 1);
   };
 
-  /** Seleciona uma caixa da carta; a de um ícone abre o arquivo dele. */
+  /** Seleciona uma caixa da carta; a de um ícone abre a configuração dele. */
   const select = (h: Handle | null) => {
     setSelected(h?.id ?? null);
     if (!h) setActiveIcon(null);
     else if (h.target.kind === 'layout') setActiveIcon(h.icon ? { icon: h.icon, host: h.id } : null);
   };
 
-  /** Abre o arquivo do ícone (`host`: a caixa dele na carta). */
+  /** Abre a configuração do ícone (`host`: a caixa dele na carta). */
   const editIcon = (c: IconChoice, host: string) => {
     setActiveIcon({ icon: c, host });
     setSelected(host);
   };
 
-  /** Grava as alterações nos arquivos; devolve os arquivos gravados. */
+  /** Grava as alterações no conteúdo do jogo; devolve os itens gravados (layouts e ícones). */
   const save = async (): Promise<string[]> => {
     const list = Object.values(changes);
     if (!list.length) return [];
-    const res = await fetch('/api/dev/card-config', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ changes: list }),
-    });
-    const body = (await res.json().catch(() => ({}))) as { written?: string[]; message?: string };
-    if (!res.ok) throw new Error(body.message ?? `Erro ${res.status}`);
+    const { version, written } = await saveConfigChanges(list);
+    content?.saved(version);
     setChanges({});
-    return body.written ?? [];
+    return written;
   };
 
   return { changes, dirtyCount: Object.keys(changes).length, selected, activeIcon, setValue, select, editIcon, save };
@@ -684,14 +675,19 @@ export function EditorCanvas({
   width,
   referenceOpacity = 0,
   showBoxes = true,
+  iconOnly = false,
 }: {
   editor: ConfigEditor;
   card: CustomCard;
   width: number;
   referenceOpacity?: number;
   showBoxes?: boolean;
+  /** Só as caixas de dentro do ícone aberto (aba Ícones): as do layout não aparecem, para não mexer nele sem querer. */
+  iconOnly?: boolean;
 }) {
-  const { spec, handles, selectedHandle } = editorState(editor, card);
+  const state = editorState(editor, card);
+  const { spec, selectedHandle } = state;
+  const handles = iconOnly ? state.handles.filter((h) => h.target.kind === 'icon') : state.handles;
   const scale = width / CARD_W;
   const drag = useRef<{ handle: Handle; drives: Drive[]; start: { x: number; y: number }; orig: number[] } | null>(null);
   const setValueRef = useRef(editor.setValue);
@@ -789,13 +785,13 @@ export function EditorCanvas({
 
 // ── Campos ────────────────────────────────────────────────────────────────────
 
-/** Botão ✎ que abre o arquivo de um ícone. */
+/** Botão ✎ que abre a configuração de um ícone. */
 export function IconEditButton({ editor, icon, host }: { editor: ConfigEditor; icon: IconChoice; host: string }) {
   const on = editor.activeIcon && choiceKey(editor.activeIcon.icon) === choiceKey(icon);
   return (
     <button
       type="button"
-      title={`Editar ${iconFile(icon)}`}
+      title={`Editar o ícone ${choiceKey(icon)}`}
       onClick={() => editor.editIcon(icon, host)}
       className={`rounded px-1.5 py-0.5 text-xs ring-1 ${on ? 'bg-fuchsia-500/20 text-fuchsia-300 ring-fuchsia-400' : 'text-muted ring-border hover:text-text'}`}
     >
@@ -805,10 +801,10 @@ export function IconEditButton({ editor, icon, host }: { editor: ConfigEditor; i
 }
 
 /**
- * Campos do ícone aberto (arquivo dele) e do layout da carta (do tipo dela). A seção da caixa selecionada abre
- * sozinha.
+ * Campos do ícone aberto e do layout da carta (do tipo dela; sem `layoutFields`, só os do ícone, como na aba Ícones).
+ * A seção da caixa selecionada abre sozinha.
  */
-export function EditorFields({ editor, card }: { editor: ConfigEditor; card: CustomCard }) {
+export function EditorFields({ editor, card, layoutFields = true }: { editor: ConfigEditor; card: CustomCard; layoutFields?: boolean }) {
   const { spec, icon, selectedHandle } = editorState(editor, card);
   const iconRoot = icon ? iconObject(icon) : undefined;
   const { changes } = editor;
@@ -837,9 +833,10 @@ export function EditorFields({ editor, card }: { editor: ConfigEditor; card: Cus
       {icon && iconRoot && (
         <div className="flex flex-col gap-2 rounded-lg p-2 ring-1 ring-fuchsia-400/60">
           <p className="text-xs text-muted">
-            <span className="font-semibold text-text">Ícone {icon.id}</span> — <code>src/lib/cardMaker/{iconFile(icon)}</code>. Medidas relativas ao próprio
-            ícone: valem em todos os layouts.
+            <span className="font-semibold text-text">Ícone {icon.id}</span> — <code>{choiceKey(icon)}</code>. Medidas relativas ao próprio
+            ícone: valem em todos os layouts. <ContentHistoryButton kind="icon" id={choiceKey(icon)} />
           </p>
+          <AssetSwapButton label="Imagem" url={typeof iconRoot.url === 'string' ? iconRoot.url : undefined} />
           {renderSections(
             iconSections(iconRoot),
             { kind: 'icon', group: icon.group, id: icon.id },
@@ -848,15 +845,19 @@ export function EditorFields({ editor, card }: { editor: ConfigEditor; card: Cus
           )}
         </div>
       )}
+      {layoutFields && (
+      <>
       <p className="text-xs text-muted">
-        {spec.label}, campos do tipo {CARD_TYPE_LABEL[card.type]} — <code>src/lib/cardMaker/layouts/layout{spec.id.slice(-2)}.ts</code>. Vale para todas
-        as cartas do layout; valores em <code>forAllTypes</code> ou em constantes valem para todos que os usam.
+        {spec.label}, campos do tipo {CARD_TYPE_LABEL[card.type]} — <code>{spec.id}</code>. Vale para todas as cartas do layout; um valor
+        igual em vários tipos de carta muda em todos eles. <ContentHistoryButton kind="layout" id={spec.id} />
       </p>
       {renderSections(
         layoutSections(spec, card.type),
         layoutTarget,
         spec as unknown as Obj,
         selectedHandle?.target.kind === 'layout' ? selectedHandle.section : undefined,
+      )}
+      </>
       )}
       {editor.dirtyCount > 0 && (
         <details className="rounded-lg px-3 py-2 text-xs ring-1 ring-border">

@@ -43,7 +43,14 @@ Abra cada folha e compare **todos os campos** com o impresso:
 
 ## 2. Corrigir
 
-Corrija direto no `src/data/sets/<set>.ts` quando a imagem deixar claro o valor certo.
+Corrija direto no `src/data/sets/<set>.ts` quando a imagem deixar claro o valor certo. Esse arquivo é só a carga inicial: o app lê as cartas do Redis (seção "Conteúdo do jogo" do README). Por isso, no fim da revisão, leve as correções para o Redis:
+
+```bash
+npm run content:sync-cards -- <SET> --dry-run   # mostra as cartas que mudaram
+npm run content:sync-cards -- <SET>             # grava (o layout de cada carta fica o do Redis)
+```
+
+O Redis é o das variáveis do `.env.local` (o local, por padrão). O `content:sync-cards` grava a carta com os textos em PT-BR (a tradução de `src/data/ptbr/`) e troca também o que foi editado pelo site nessa carta (a versão anterior fica no histórico). Para levar ao site publicado, rode depois `npm run content:push` (envia de uma vez o que mudou no Redis local; ver "Conteúdo do jogo" no README). O `dump_set.ts` lê os arquivos em inglês (`src/data/sets/`), não o Redis: a revisão compara com a imagem impressa.
 
 - **A imagem impressa vale** sobre os dados.
 - **Erros de impressão óbvios** podem ser limpos quando atrapalham o uso. Ex.: S01 J-003 imprime `"Male""` e o TS guarda `"Male"`. Anote cada caso no relatório final.
@@ -79,7 +86,7 @@ python -I scripts/review-set/sheets.py crop $W 300 388 <ids…>  # frases de 3 l
    ```bash
    python -I scripts/review-set/add_flavor.py src/data/sets/<set>.ts $W/flavor.json
    ```
-   O script coloca `flavor: "..."` antes de `image:` em cada carta e regrava todas as frases a cada execução, então pode rodar de novo à vontade. Ele falha se o JSON tiver um id que não existe no TS.
+   O script coloca `flavor: "..."` antes de `image:` em cada carta e regrava todas as frases a cada execução, então pode rodar de novo à vontade. Ele falha se o JSON tiver um id que não existe no TS. Depois, leve as frases para o Redis com `npm run content:sync-cards -- <SET>` (ver "2. Corrigir").
 
 O OCR nativo do Windows foi testado no S06 e errou demais (texto branco sobre a arte); a leitura é visual.
 

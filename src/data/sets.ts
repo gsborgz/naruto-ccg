@@ -1,5 +1,8 @@
-/** Coleções já importadas: código do set → nome. */
-export const SET_NAMES: Record<string, string> = {
+/**
+ * Coleções já importadas: código do set → nome. Os códigos são o "enum" do campo `set` de cada carta
+ * (`SetCode`); as cartas do criador usam `CUSTOM` (src/lib/cardMaker/customIds.ts).
+ */
+export const SET_NAMES = {
   S01: 'The Path to Hokage',
   S02: 'Coils of the Snake',
   S03: 'Curse of the Sand',
@@ -34,4 +37,10 @@ export const SET_NAMES: Record<string, string> = {
   TP3: 'Tournament Pack 3',
   TP4: 'Tournament Pack 4',
   PR: 'Naruto CCG: Promos',
-};
+} as const satisfies Record<string, string>;
+
+export type SetCode = keyof typeof SET_NAMES;
+
+export const SET_CODES = Object.keys(SET_NAMES) as SetCode[];
+
+export const isSetCode = (value: unknown): value is SetCode => typeof value === 'string' && Object.hasOwn(SET_NAMES, value);

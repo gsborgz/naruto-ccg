@@ -2,7 +2,6 @@
 
 import { memo } from 'react';
 import type { Card } from '@/models/card';
-import { useCardName } from '@/lib/cardLanguage';
 
 interface Props {
   card: Card;
@@ -18,7 +17,7 @@ export const QtyControls = memo(function QtyControls({ card, qty, blocked, onSet
   const btn = `grid place-items-center rounded-md font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-35 ${
     compact ? 'size-8' : 'size-10 text-lg'
   }`;
-  const name = useCardName()(card);
+  const name = card.name;
 
   return (
     <div className="flex items-center gap-2">

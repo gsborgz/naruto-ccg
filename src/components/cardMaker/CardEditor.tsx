@@ -1,9 +1,12 @@
 'use client';
 
 import { compressImage, ImageTooLargeError } from '@/lib/images/compressImage';
+import { translateAttribute } from '@/data/ptbr/glossary';
 import { useEffect, useState } from 'react';
 import {
+  ATTRIBUTE_KANJI,
   ATTRIBUTE_NAMES,
+  attributeSlug,
   LAYOUT_LIST,
   MAX_ELEMENTS,
   MAX_ATTRIBUTES,
@@ -192,7 +195,8 @@ function JutsuCostRow({
 }
 
 /** Opções dos seletores de atributo: os que têm kanji, em ordem alfabética do nome impresso. */
-const ATTRIBUTE_OPTIONS = Object.values(ATTRIBUTE_NAMES).sort((a, b) => a.localeCompare(b));
+/** Os atributos com kanji, em PT-BR (como no conteúdo do jogo; o kanji é achado pelo nome em PT-BR também). */
+const ATTRIBUTE_OPTIONS = [...new Set(Object.values(ATTRIBUTE_NAMES).map(translateAttribute))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
 /**
  * Até 3 Atributos de Combate (a maioria dos Ninjas tem 1; 190 têm 2; os trios do S25 têm 3).
@@ -210,8 +214,9 @@ function AttributeSelects({ value, onChange }: { value: string; onChange: (value
     <div className="grid grid-cols-3 gap-2">
       {Array.from({ length: MAX_ATTRIBUTES }, (_, slot) => {
         const current = names[slot] ?? '';
-        // Cartas antigas podem ter um nome sem kanji: mantém como opção para não perder o valor.
+        // Cartas antigas (nome em inglês, ou sem kanji): mantém como opção para não perder o valor.
         const extra = current && !ATTRIBUTE_OPTIONS.includes(current) ? [current] : [];
+        const noKanji = (n: string) => !ATTRIBUTE_KANJI.has(attributeSlug(n));
         return (
           <label key={slot} className={label}>
             {slot === 0 ? 'Atributo' : `${slot + 1}º atributo`}
@@ -225,7 +230,7 @@ function AttributeSelects({ value, onChange }: { value: string; onChange: (value
               {[...extra, ...ATTRIBUTE_OPTIONS].map((n) => (
                 <option key={n} value={n}>
                   {n === '?' ? '? (desconhecido)' : n}
-                  {extra.includes(n) ? ' (sem kanji)' : ''}
+                  {extra.includes(n) && noKanji(n) ? ' (sem kanji)' : ''}
                 </option>
               ))}
             </select>

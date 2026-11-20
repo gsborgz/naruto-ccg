@@ -130,7 +130,7 @@ test('partida: cada jogador só vê o que as regras permitem', () => {
 test('partida: validação das ações e embaralhamento', () => {
   assert.deepEqual(parseGameAction({ type: 'move', uid: 'h1', to: 'chakra' }), { type: 'move', uid: 'h1', to: 'chakra' });
   assert.equal(parseGameAction({ type: 'move', uid: 'h1', to: 'mesa' }), null);
-  assert.deepEqual(parseGameAction({ type: 'search', cardId: 's01-n-001' }), { type: 'search', cardId: 's01-n-001' });
+  assert.deepEqual(parseGameAction({ type: 'search', cardId: 'fx-n-001' }), { type: 'search', cardId: 'fx-n-001' });
   assert.equal(parseGameAction({ type: 'hack' }), null);
   assert.deepEqual([...shuffle([1, 2, 3, 4, 5], seeded())].sort(), [1, 2, 3, 4, 5]);
 });

@@ -17,9 +17,9 @@ test('ids das cartas criadas no deck', () => {
   assert.equal(id, 'custom-abc');
   assert.ok(isCustomCardId(id));
   assert.equal(customSourceId(id), 'abc');
-  assert.ok(!isCustomCardId('s01-n-001'));
-  assert.ok(hasCustomCards({ 's01-n-001': 3, [id]: 1 }));
-  assert.ok(!hasCustomCards({ 's01-n-001': 3, [id]: 0 }));
+  assert.ok(!isCustomCardId('fx-n-001'));
+  assert.ok(hasCustomCards({ 'fx-n-001': 3, [id]: 1 }));
+  assert.ok(!hasCustomCards({ 'fx-n-001': 3, [id]: 0 }));
 });
 
 test('Ninja criado vira carta do catálogo', () => {
@@ -83,7 +83,7 @@ test('cartas criadas seguem as regras de montagem', () => {
   assert.equal(summary.total, 0);
 
   // O limite de 3 conta a carta (id): a carta criada "Naruto Uzumaki" não soma com as impressas.
-  assert.equal(cannotAddReasonIn(indexDeck({ 's01-n-001': 3, [ninja.id]: 2 }, lookup), ninja), null);
+  assert.equal(cannotAddReasonIn(indexDeck({ 'fx-n-001': 3, [ninja.id]: 2 }, lookup), ninja), null);
   assert.notEqual(cannotAddReasonIn(indexDeck({ [ninja.id]: 3 }, lookup), ninja), null);
   // Duas cartas criadas com o mesmo nome também contam separado.
   const ninja2 = customCardToCard(card({ id: 'n2', name: 'Naruto Uzumaki' }));

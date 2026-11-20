@@ -7,7 +7,6 @@ import { DECK_RULES, deckPartOf, type CardLookup, type DeckSummary } from '@/lib
 import { sortCost } from '@/lib/cardFilters';
 import type { Deck } from '@/lib/deckStore';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card, type CardType } from '@/models/card';
-import { useCardLanguage, useCardName } from '@/lib/cardLanguage';
 import type { PrintDesign } from '@/lib/print/printDeck';
 import { CardFace } from './CardFace';
 
@@ -58,7 +57,7 @@ function DeckCard({
   onSetQty: (card: Card, qty: number) => void;
 }) {
   const { card, qty } = entry;
-  const name = useCardName()(card);
+  const name = card.name;
   return (
     <li className="group relative">
       <button
@@ -135,7 +134,6 @@ function PrintButton({ deck, lookup }: { deck: Deck; lookup: CardLookup }) {
   const [design, setDesign] = useState<PrintDesign>('original');
   const [progress, setProgress] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { language, translations } = useCardLanguage();
   const customCards = useCustomCards();
   useEffect(() => setDesign(readPrintDesign()), []);
 
@@ -162,7 +160,7 @@ function PrintButton({ deck, lookup }: { deck: Deck; lookup: CardLookup }) {
         const card = lookup(id);
         return card && printsRendered(card, design);
       });
-      if (needsRender) renderer = createCardImageRenderer({ language, translations, customCards: customCards ?? [] });
+      if (needsRender) renderer = createCardImageRenderer({ customCards: customCards ?? [] });
       await downloadDeckPdf(deck.name, deck.cards, {
         design,
         lookup,
@@ -237,7 +235,7 @@ export function DeckPanel({
   onClose?: () => void;
 }) {
   const [tab, setTab] = useState<Tab>('ninja');
-  const nameOf = useCardName();
+  const nameOf = (c: { name: string }) => c.name;
 
   const entries = Object.entries(deck.cards)
     .map(([id, qty]) => ({ card: lookup(id), qty }))

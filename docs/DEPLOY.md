@@ -114,12 +114,46 @@ Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardM
 - **Uma vez só:** o arquivo é `naruto-ccg/art/<sha256>.<ext>`; a mesma imagem não é guardada duas vezes.
 - **Públicas:** quem tiver o endereço exato vê a imagem, sem a senha do site (o endereço tem o hash, impossível de
   adivinhar).
-- **Dono:** `naruto-ccg:art-owner:<sha256>` no Redis guarda quem enviou primeiro (hash do token anônimo do jogador).
-  Só ele pode apagar (`DELETE /api/art`), o que acontece ao **excluir a carta permanentemente**.
+- **Só o que está em uso:** a mesma imagem pode estar em várias cartas criadas e artes alternativas, então cada uso é
+  registrado no Redis (`naruto-ccg:art-refs:<sha256>`: `custom:<hash do token>:<carta>` ou `alt:<carta>:<arte>`). Ao
+  trocar a arte de uma carta e salvar, ao excluir a carta ou ao remover uma arte alternativa, o uso sai (`PUT /api/art`
+  para as cartas criadas) e a imagem é apagada do Blob quando não sobra nenhum. Importar um deck com cartas criadas
+  registra o uso de quem importou. Uma imagem enviada que ninguém passou a usar em 24 h (envio que falhou no meio) é
+  apagada (`naruto-ccg:art-pending`). `naruto-ccg:art-owner:<sha256>` (quem enviou primeiro) só vale para as imagens
+  de antes desse registro.
 - **Só no Salvar:** a arte vai para o servidor apenas quando o jogador clica em **Salvar** no criador; nada é enviado
   sozinho. Se o envio falhar (sem Blob ou sem conexão), a carta é salva no localStorage com a arte tratada e o
   criador avisa para salvar de novo; enquanto isso, a carta não vai para salas nem compartilhamentos. Artes antigas
   (até 1500 px, JPEG) são tratadas no próximo **Salvar** da carta.
+
+## Conteúdo do jogo (cartas, layouts, ícones)
+
+As cartas, a configuração dos layouts e dos ícones e as imagens das molduras e ícones ficam no Redis e no Blob, para
+serem editadas pelo site sem deploy (seção "Conteúdo do jogo" do README). Não há variável nova: usa o mesmo Upstash e o
+mesmo Blob das artes.
+
+1. **Primeira abertura:** com o Redis sem conteúdo, a primeira visita grava nele a carga inicial (as cartas de
+   `src/data/sets/` e a configuração de `src/lib/cardMaker/`, ~3 MB). Leva alguns segundos, uma vez só.
+2. **Imagens para o Blob:** em **Criar carta → Editar layouts**, clique em **Enviar imagens do deploy para o Blob**.
+   Ele copia as ~170 molduras, painéis e ícones de `public/card-layouts/` para o Blob
+   (`naruto-ccg/card-layouts/...`), em lotes. Antes disso as imagens continuam vindo do deploy, então nada quebra.
+   Depois dele, **Trocar imagem** no editor já não depende de deploy.
+3. **Quem edita:** qualquer um com a senha do site: as cartas pela aba **Editar** do detalhe, os layouts e os ícones em
+   **Criar carta → Editar layouts**. Cada layout, ícone e carta guarda as últimas 5 versões (**Histórico** nos editores).
+   Os textos das cartas ficam em PT-BR; um Redis com o formato antigo (textos em inglês) é convertido na primeira leitura,
+   uma vez só (`naruto-ccg:content:format`).
+4. **Só o que está em uso no Blob:** trocar uma imagem apaga a anterior (as imagens não têm histórico) e **Voltar para a
+   do deploy** apaga a trocada. **Apagar imagens sem uso** (no editor de layouts) apaga de `naruto-ccg/card-layouts/`
+   o que não está no mapa (ex.: sobra de um envio interrompido; arquivos de menos de 10 min ficam).
+5. **Do local para produção:** o que muda no Redis local (scan, `content:sync-cards`, edições no `npm run dev`) vai para
+   produção com `npm run content:push`. Ele lê o destino do `.env.production.local` (só local, fora do Git), com
+   `KV_REST_API_URL` e `KV_REST_API_TOKEN` copiados da Vercel (Settings → Environment Variables, ou
+   `vercel env pull .env.production.local --environment=production`, que cria o arquivo só com as variáveis de produção).
+   Mostra o que vai mudar e pede confirmação; item editado pelo site depois do último envio fica de fora (`--overwrite`
+   envia mesmo assim). Só as chaves `naruto-ccg:content:*` são lidas e gravadas (o banco é dividido com o pokedex).
+
+Custo: o navegador baixa o conteúdo inteiro (~2,8 MB) só quando a versão muda; a resposta fica em cache na CDN e no
+navegador. Cada edição gera uma versão nova. No servidor, cada função confere a versão no Redis no máximo a cada 15 s.
 
 ## 4. Conferir
 
@@ -139,7 +173,9 @@ Se o passo 2 der "Não foi possível gerar o código", veja **Deployments → (d
 - **Testar antes:** push em outra branch → a Vercel gera um link de *preview* só para aquela branch.
   Por padrão, previews só abrem com login na Vercel; produção é pública.
 - **Rodar local:** continua `npm run dev` com o Redis no Docker (`compose.yaml`). O banco local e o de
-  produção são separados, então nada do que você testa localmente aparece no site.
+  produção são separados, então nada do que você testa localmente aparece no site, nem o conteúdo do jogo (o
+  Redis local recebe a carga inicial na primeira abertura). As imagens enviadas localmente vão para o Blob, que é um
+  só, mas só aparecem no site se forem enviadas pelo site publicado (o mapa das imagens fica no Redis).
 - **Salas de jogo (próxima etapa):** usam o mesmo Upstash e as mesmas rotas de API. Nenhuma configuração nova.
 
 ## Limites para ficar de olho

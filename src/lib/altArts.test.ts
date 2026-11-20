@@ -38,7 +38,7 @@ test('artes alternativas: camada da frente opcional, também só do Vercel Blob'
   assert.equal(parseAltArtPlacement({ ...art, front: { ...front, zoom: 0 } }), null);
   assert.deepEqual(altArtSources(art), [ART, FRONT]);
   assert.deepEqual(placementOf({ ...art, id: 'x', cardId: 'y', createdAt: '' } as typeof art), art);
-  assert.deepEqual(parseDeckArts({ 's01-n-001': art }, { 's01-n-001': 1 }), { 's01-n-001': art });
+  assert.deepEqual(parseDeckArts({ 'fx-n-001': art }, { 'fx-n-001': 1 }), { 'fx-n-001': art });
 });
 
 test('artes alternativas: editar só nas cartas já mapeadas (com layout)', () => {
@@ -50,10 +50,10 @@ test('artes alternativas: editar só nas cartas já mapeadas (com layout)', () =
 });
 
 test('artes alternativas do deck: só as cartas do catálogo que o deck usa', () => {
-  const cards = { 's01-n-001': 1, 'custom-abc': 1 };
+  const cards = { 'fx-n-001': 1, 'custom-abc': 1 };
   const art = { src: ART, x: 0, y: 0, zoom: 1 };
-  assert.deepEqual(parseDeckArts({ 's01-n-001': art, 's01-n-002': art, 'custom-abc': art }, cards), { 's01-n-001': art });
-  assert.equal(parseDeckArts({ 's01-n-001': { ...art, src: 'x' } }, cards), null);
+  assert.deepEqual(parseDeckArts({ 'fx-n-001': art, 'fx-n-002': art, 'custom-abc': art }, cards), { 'fx-n-001': art });
+  assert.equal(parseDeckArts({ 'fx-n-001': { ...art, src: 'x' } }, cards), null);
   assert.deepEqual(parseDeckArts(undefined, cards), {});
 });
 
@@ -68,7 +68,7 @@ test('artes alternativas: o deck compartilhado leva as artes e as valida', () =>
 
 test('artes alternativas na sala: cada jogador leva as suas e a partida avisa quais existem', () => {
   const hostDeck = deck('Konoha', 0);
-  const guestDeck = deck('Suna', 600);
+  const guestDeck = deck('Suna', 60);
   const hostCard = Object.keys(hostDeck.cards)[0];
   hostDeck.arts = { [hostCard]: { src: ART, x: 0, y: 0, zoom: 1 } };
   let room: Room = joinRoom(
@@ -85,7 +85,7 @@ test('artes alternativas na sala: cada jogador leva as suas e a partida avisa qu
 });
 
 test('artes alternativas: a carta com a arte fixada ignora a escolha do navegador', () => {
-  const card = CARDS_BY_ID.get('s01-n-001')!;
+  const card = CARDS_BY_ID.get('fx-n-001')!;
   assert.equal(hasFixedArt(card), false);
   assert.equal(hasFixedArt(withFixedArt(card, null)), true);
 });

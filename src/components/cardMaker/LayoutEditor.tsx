@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { CARDS, CARDS_BY_ID } from '@/data/cards';
-import { LAYOUTS, LAYOUT_LIST, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, type LayoutSpec } from '@/lib/cardMaker/layouts';
+import { LAYOUTS, LAYOUT_LIST, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, frameFor, panelFor, type LayoutSpec } from '@/lib/cardMaker/layouts';
 import {
   ATTRIBUTE_FRAMES,
   MAX_VILLAGES,
@@ -34,11 +34,42 @@ import {
   useConfigEditor,
   type ConfigEditor,
 } from './layoutEditing';
+import { AssetSwapButton, ContentHistoryButton, MigrateAssetsButton, SweepAssetsButton } from './ContentTools';
+import { IconsEditor } from './IconsEditor';
+import { createContentLayout, deleteContentLayout, saveConfigChanges } from '@/lib/content/client';
+import { useContent } from '@/lib/content/ContentProvider';
+import type { ConfigTarget } from '@/lib/content/changes';
+import { getAt, setAt } from './layoutEditing';
+
+/** Layouts das coleções impressas (as imagens deles estão no deploy; não podem ser excluídos). */
+const PRINTED_LAYOUTS = ['layout-01', 'layout-02', 'layout-03', 'layout-04', 'layout-05'];
+
+/** Caminhos da configuração do layout com o valor dado (ex.: a moldura usada por dois tipos). */
+function pathsWithValue(node: unknown, value: string, path: string[] = []): string[][] {
+  if (node === value) return [path];
+  if (Array.isArray(node)) return node.flatMap((v, i) => pathsWithValue(v, value, [...path, String(i)]));
+  if (node && typeof node === 'object') return Object.entries(node).flatMap(([k, v]) => pathsWithValue(v, value, [...path, k]));
+  return [];
+}
+
+/** Id de layout a partir do nome ("Layout Akatsuki" → "layout-akatsuki"). */
+function slugId(name: string): string {
+  const slug = name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/^layout\s*/, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 39);
+  return `layout-${slug || Date.now().toString(36)}`;
+}
 
 /**
- * Editor dos layouts e dos ícones do criador (`/criar/layouts`, só em desenvolvimento), com uma carta de exemplo
- * do catálogo e a original por cima. Os ícones da carta podem ser trocados (só na prévia) e o arquivo de cada um,
- * aberto e editado. **Salvar** grava nos arquivos; **Descartar** recarrega a página, que volta aos valores deles.
+ * Editor dos layouts e dos ícones do criador (`/criar/layouts`), com uma carta de exemplo do catálogo e a original por
+ * cima. Os ícones da carta podem ser trocados (só na prévia) e a configuração de cada um, aberta e editada; as imagens
+ * (moldura, painel, ícone) podem ser trocadas. **Salvar** grava no conteúdo do jogo (Redis), para todo mundo;
+ * **Descartar** recarrega a página, que volta ao que está gravado. **Histórico** volta uma das últimas versões.
  * A edição em si fica em `layoutEditing.tsx` (a mesma da aba Layout do detalhe da carta).
  */
 
@@ -74,7 +105,7 @@ function samplesFor(layout: LayoutId, type: CardType): { id: string; name: strin
   return list.map((c) => ({ id: c.id, name: c.name }));
 }
 
-/** Seletores para trocar os ícones da carta de exemplo (só na prévia), com o ✎ que abre o arquivo de cada um. */
+/** Seletores para trocar os ícones da carta de exemplo (só na prévia), com o ✎ que abre a configuração de cada um. */
 function IconPicker({
   editor,
   spec,
@@ -256,9 +287,109 @@ function IconPicker({
   );
 }
 
+/**
+ * O que é do layout: nome, ícones que ele usa por padrão e as imagens (moldura e painel) do tipo da carta de exemplo.
+ * Num layout criado no editor, trocar uma imagem que ainda é a do layout base grava a nova na pasta dele.
+ */
+function LayoutProperties({ editor, spec, type, panelVariant }: { editor: ConfigEditor; spec: LayoutSpec; type: CardType; panelVariant?: string }) {
+  const content = useContent();
+  const target: ConfigTarget = { kind: 'layout', id: spec.id };
+  const root = spec as unknown as Record<string, unknown>;
+  const printed = PRINTED_LAYOUTS.includes(spec.id);
+  const set = (path: string[], value: string) => editor.setValue(target, root, path, value);
+  const dirty = (path: string[]) => `layout:${spec.id}|${path.join('.')}` in editor.changes;
+  const ring = (path: string[]) => `${smallSelect} ${dirty(path) ? '!ring-accent' : ''}`;
+
+  /** A imagem nova foi para a pasta do layout: a configuração passa a usá-la (grava na hora). */
+  const relocate = (oldUrl: string | undefined) => async (url: string) => {
+    if (!oldUrl) return;
+    const changes = pathsWithValue(spec, oldUrl).map((path) => ({ target, path, value: url }));
+    for (const c of changes) setAt(spec, c.path, url);
+    if (changes.length) content.saved((await saveConfigChanges(changes)).version);
+  };
+  const image = (label: string, url: string | undefined) => {
+    const file = url?.split('/').pop();
+    return (
+      <AssetSwapButton
+        key={label}
+        label={label}
+        url={url}
+        deployFallback={printed}
+        ownPath={printed || !file ? undefined : `${spec.id}/${file}`}
+        onRelocated={relocate(url)}
+      />
+    );
+  };
+
+  return (
+    <details open className="rounded-lg bg-surface px-3 py-2 ring-1 ring-border">
+      <summary className="cursor-pointer text-sm font-semibold">
+        Layout <span className="font-normal text-muted">({spec.id})</span>
+      </summary>
+      <div className="mt-2 flex flex-col gap-1.5">
+        <Pick label="Nome">
+          <input
+            value={spec.label}
+            onChange={(e) => set(['label'], e.target.value)}
+            className={`w-48 rounded bg-surface-2 px-1.5 py-1 text-xs ring-1 ${dirty(['label']) ? 'ring-accent' : 'ring-border'}`}
+          />
+        </Pick>
+        <p className="text-xs text-muted">Tipos de carta: {spec.types.map((t) => CARD_TYPE_LABEL[t]).join(', ')}.</p>
+        <p className="text-xs font-semibold text-muted">Ícones que o layout usa por padrão</p>
+        <Pick label="Variante dos elementos">
+          <select value={spec.elements.variant} onChange={(e) => set(['elements', 'variant'], e.target.value)} className={ring(['elements', 'variant'])}>
+            {['01', '02', '03'].map((v) => (
+              <option key={v} value={v}>
+                {v}
+              </option>
+            ))}
+          </select>
+        </Pick>
+        <Pick label="Custo de entrada">
+          <select value={spec.defaults.entranceIcon} onChange={(e) => set(['defaults', 'entranceIcon'], e.target.value)} className={ring(['defaults', 'entranceIcon'])}>
+            {ENTRANCE_ICONS.map((id) => (
+              <option key={id} value={id}>
+                {id}
+              </option>
+            ))}
+          </select>
+        </Pick>
+        <Pick label="Custo de mão">
+          <select value={spec.defaults.handIcon} onChange={(e) => set(['defaults', 'handIcon'], e.target.value)} className={ring(['defaults', 'handIcon'])}>
+            {HAND_ICONS.map((id) => (
+              <option key={id} value={id}>
+                {id}
+              </option>
+            ))}
+          </select>
+        </Pick>
+        <Pick label="Atributo de Combate">
+          <select value={spec.attribute.defaultFrame} onChange={(e) => set(['attribute', 'defaultFrame'], e.target.value)} className={ring(['attribute', 'defaultFrame'])}>
+            {ATTRIBUTE_FRAMES.map((id) => (
+              <option key={id} value={id}>
+                {id}
+              </option>
+            ))}
+          </select>
+        </Pick>
+        <p className="text-xs font-semibold text-muted">Imagens ({CARD_TYPE_LABEL[type]}{panelVariant ? `, design ${panelVariant}` : ''})</p>
+        {image('Moldura', frameFor(spec, type, panelVariant))}
+        {image('Painel', panelFor(spec, type, panelVariant))}
+        {!printed && (
+          <p className="text-xs text-muted">
+            Enquanto a imagem é a do layout base, trocar grava a nova em <code>{spec.id}/</code> (a do layout base fica como está).
+          </p>
+        )}
+      </div>
+    </details>
+  );
+}
+
 export function LayoutEditor() {
+  const content = useContent();
+  const [tab, setTab] = useState<'layouts' | 'icons'>('layouts');
   const [layoutId, setLayoutId] = useState<LayoutId>('layout-01');
-  const spec = LAYOUTS[layoutId];
+  const spec = LAYOUTS[layoutId] ?? LAYOUTS['layout-01'];
   const [type, setType] = useState<CardType>('ninja');
   const samples = useMemo(() => samplesFor(layoutId, type), [layoutId, type]);
   const [sampleId, setSampleId] = useState('');
@@ -277,6 +408,45 @@ export function LayoutEditor() {
     if (!spec.types.includes(type)) setType(spec.types[0]);
   }, [spec, type]);
 
+  // `/criar/layouts?layout=layout-02&carta=s13-n-549` (link "editar o layout" da aba Editar do detalhe da carta).
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const wanted = params.get('layout');
+    if (wanted && LAYOUTS[wanted]) setLayoutId(wanted);
+    const found = CARDS_BY_ID.get(params.get('carta') ?? '');
+    if (found) {
+      setType(found.type);
+      setSampleId(found.id);
+    }
+  }, []);
+
+  const pendingFirst = () => !dirtyCount || (alert('Salve ou descarte as alterações antes.'), false);
+  const createLayout = async () => {
+    if (!pendingFirst()) return;
+    const label = prompt(`Nome do layout novo (cópia de "${spec.label}": molduras, painéis, posições e ícones):`)?.trim();
+    if (!label) return;
+    try {
+      const id = slugId(label);
+      await createContentLayout(id, label, spec.id);
+      await content.reload();
+      setLayoutId(id);
+      setStatus({ ok: true, text: `Layout "${label}" criado (${id}). Troque as imagens e ajuste as posições.` });
+    } catch (e) {
+      setStatus({ ok: false, text: e instanceof Error ? e.message : String(e) });
+    }
+  };
+  const removeLayout = async () => {
+    if (!pendingFirst() || !confirm(`Excluir o layout "${spec.label}"? As imagens dele saem do Blob. Não dá para desfazer.`)) return;
+    try {
+      await deleteContentLayout(spec.id);
+      setLayoutId('layout-01');
+      await content.reload();
+      setStatus({ ok: true, text: 'Layout excluído.' });
+    } catch (e) {
+      setStatus({ ok: false, text: e instanceof Error ? e.message : String(e) });
+    }
+  };
+
   useEffect(() => {
     if (!dirtyCount) return;
     const warn = (e: BeforeUnloadEvent) => e.preventDefault();
@@ -294,7 +464,7 @@ export function LayoutEditor() {
     setStatus(null);
     try {
       const written = await editor.save();
-      setStatus({ ok: true, text: written.length ? `Gravado: ${written.join(', ')}` : 'Nada mudou nos arquivos.' });
+      setStatus({ ok: true, text: written.length ? `Salvo: ${written.join(', ')}` : 'Nada mudou.' });
     } catch (err) {
       setStatus({ ok: false, text: err instanceof Error ? err.message : String(err) });
     } finally {
@@ -306,7 +476,27 @@ export function LayoutEditor() {
     <div className="flex flex-col gap-4">
       <header className="flex flex-wrap items-center gap-3">
         <h1 className="text-xl font-bold">Editor de layouts</h1>
-        <span className="text-xs text-muted">só em desenvolvimento</span>
+        <div role="tablist" aria-label="Seções do editor" className="flex gap-1 text-sm">
+          {(
+            [
+              ['layouts', 'Layouts'],
+              ['icons', 'Ícones'],
+            ] as const
+          ).map(([value, text]) => (
+            <button
+              key={value}
+              type="button"
+              role="tab"
+              aria-selected={tab === value}
+              onClick={() => setTab(value)}
+              className={`rounded-md px-3 py-1 ${tab === value ? 'bg-accent font-semibold text-bg' : 'text-muted hover:bg-surface-2 hover:text-text'}`}
+            >
+              {text}
+            </button>
+          ))}
+        </div>
+        <span className="text-xs text-muted">as alterações valem para todo mundo</span>
+        {tab === 'layouts' && <ContentHistoryButton kind="layout" id={layoutId} />}
         <span className="ml-auto flex items-center gap-2">
           {status && <span className={`text-xs ${status.ok ? 'text-ok' : 'text-danger'}`}>{status.text}</span>}
           <span className="text-xs text-muted">
@@ -331,6 +521,9 @@ export function LayoutEditor() {
         </span>
       </header>
 
+      {tab === 'icons' && <IconsEditor editor={editor} />}
+      {tab === 'layouts' && (
+      <>
       <div className="flex flex-wrap items-center gap-3">
         <select value={layoutId} onChange={(e) => setLayoutId(e.target.value as LayoutId)} className={selectClass}>
           {LAYOUT_LIST.map((l) => (
@@ -339,6 +532,14 @@ export function LayoutEditor() {
             </option>
           ))}
         </select>
+        <button type="button" onClick={() => void createLayout()} className="rounded-lg px-3 py-1.5 text-sm text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text">
+          + Novo layout
+        </button>
+        {!PRINTED_LAYOUTS.includes(spec.id) && (
+          <button type="button" onClick={() => void removeLayout()} className="rounded-lg px-3 py-1.5 text-sm text-danger ring-1 ring-danger/40 hover:bg-danger/10">
+            Excluir layout
+          </button>
+        )}
         <select value={type} onChange={(e) => setType(e.target.value as CardType)} className={selectClass}>
           {spec.types.map((t) => (
             <option key={t} value={t}>
@@ -381,7 +582,7 @@ export function LayoutEditor() {
         </label>
         <span>
           Arraste as caixas (canto: tamanho; Shift: um eixo só). Setas movem a selecionada (Shift = 10, Alt = 0,1). Clique num ícone (ou no ✎)
-          para editar o arquivo dele.
+          para editar a configuração dele.
         </span>
       </div>
 
@@ -390,6 +591,7 @@ export function LayoutEditor() {
         <aside className="flex min-w-72 flex-1 flex-col gap-2">
           {card && (
             <>
+              <LayoutProperties editor={editor} spec={spec} type={type} panelVariant={card.panelVariant} />
               <IconPicker
                 editor={editor}
                 spec={spec}
@@ -398,11 +600,18 @@ export function LayoutEditor() {
                 onChange={(o) => setOverrides((prev) => ({ ...prev, ...o }))}
                 onReset={() => setOverrides({})}
               />
+              <section className="flex flex-col gap-1.5 rounded-lg p-2 ring-1 ring-border">
+                <h2 className="text-sm font-semibold">Imagens no Blob</h2>
+                <MigrateAssetsButton />
+                <SweepAssetsButton />
+              </section>
               <EditorFields editor={editor} card={card} />
             </>
           )}
         </aside>
       </div>
+      </>
+      )}
     </div>
   );
 }

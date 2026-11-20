@@ -8,7 +8,11 @@
  * mais novas misturam ícones de layouts diferentes.
  */
 
-export type LayoutId = 'layout-01' | 'layout-02' | 'layout-03' | 'layout-04' | 'layout-05';
+/**
+ * Id do layout (`layout-01` a `layout-05`, os das coleções impressas, ou um criado no editor de layouts). Os layouts
+ * ficam no conteúdo do jogo (Redis), editáveis pelo site.
+ */
+export type LayoutId = string;
 
 /**
  * Quebra de linha do nome: `auto` (uma linha, encolhendo até 80%; se não couber, quebra), `single` (sempre numa
@@ -54,6 +58,11 @@ export interface CardArtPlacement {
    * é o mesmo. Assim o elemento montado (e o nome dele em PT-BR) não fica por cima do impresso.
    */
   clean?: boolean;
+  /**
+   * Imagem enviada no lugar da extraída ou da impressa (aba Editar do detalhe da carta): endereço no Vercel Blob. Com
+   * ela, `print` e `clean` não valem.
+   */
+  src?: string;
 }
 
 /** Ícones impressos na carta (o desenho de cada um; a posição vem do layout). */
@@ -84,16 +93,26 @@ export interface CardLayoutInfo {
    * aumenta. 0 (ou sem valor): o tamanho do layout.
    */
   nameSize?: number;
-  /**
-   * O mesmo ajuste para o nome traduzido (PT-BR), que tem outro comprimento. Só vale quando o nome muda na
-   * tradução (Jutsus, Missões, Ninjas descritivos); nomes de personagem, iguais nos dois idiomas, usam `nameSize`.
-   * 0 (ou sem valor): o tamanho do layout.
-   */
-  nameSizePtBr?: number;
   /** Quebra de linha do nome (`NameWrap`). Sem valor: `auto`. */
   nameWrap?: NameWrap;
-  /** A mesma escolha para o nome traduzido (PT-BR), como `nameSizePtBr`. Sem valor: `auto`. */
+  /**
+   * @deprecated Só na carga inicial (src/data/sets/, com os nomes em inglês): o ajuste do nome em PT-BR, que vira o
+   * `nameSize` ao gravar o conteúdo (`cardsToPtBr`). O conteúdo do jogo não tem este campo.
+   */
+  nameSizePtBr?: number;
+  /** @deprecated Como `nameSizePtBr`, para a quebra de linha. */
   nameWrapPtBr?: NameWrap;
+  /** Nome como desenhado na carta montada, quando difere do nome da carta (ex.: com uma quebra de linha digitada). */
+  nameText?: string;
+  /**
+   * Texto de efeito com a marcação do criador (negrito, {vermelho}, (azul)), quando difere do que sai do `text` da
+   * carta (`catalogTextToMarkup`). O `text` da carta fica com o mesmo texto sem marcação (busca, detalhe).
+   */
+  textMarkup?: string;
+  /** Vilas à esquerda do nome, quando diferem das que saem das características da carta. */
+  villages?: { village: string; rogue: boolean }[];
+  /** Sombreado atrás da frase sobre a impressa de fundo (`CustomCard.flavorShade`). Sem valor: ligado. */
+  flavorShade?: boolean;
   icons: CardIcons;
   /**
    * Artes extraídas da carta (card-layouts/arts/<set>/<id>/<camada>.png →

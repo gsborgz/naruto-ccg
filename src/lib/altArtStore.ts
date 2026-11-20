@@ -1,13 +1,16 @@
 import { randomUUID } from 'node:crypto';
 import { ALT_ART_LIMITS, altArtSources, parseAltArtPlacement, type AltArt, type AltArtView } from './altArts.ts';
-import { ArtError, deleteArt } from './artStore.ts';
+import { ArtError, setArtRefs } from './artStore.ts';
 import { getRedis } from './redis.ts';
 
 /**
  * Artes alternativas das cartas do catálogo no Redis (só no servidor). Um hash por carta,
  * `naruto-ccg:alt-arts:<id da carta>`: id da arte → arte + `owner` (`t:<hash do token>` de quem enviou, o único que
- * pode remover). A imagem fica no Vercel Blob (`artStore.ts`), enviada antes pelo navegador.
+ * pode remover). A imagem fica no Vercel Blob (`artStore.ts`), enviada antes pelo navegador; cada arte registra o uso
+ * das suas imagens (`alt:<carta>:<arte>`), e a imagem sai do Blob quando nada mais a usa.
  */
+
+const altArtRef = (cardId: string, id: string) => `alt:${cardId}:${id}`;
 
 type Stored = AltArt & { owner: string };
 
@@ -70,19 +73,22 @@ export async function addAltArt(cardId: string, placement: unknown, tokenHash: s
     owner: `t:${tokenHash}`,
   };
   await getRedis().hset(altArtsKey(cardId), { [art.id]: art });
+  await setArtRefs(altArtRef(cardId, art.id), altArtSources(art));
   return toView(art, tokenHash);
 }
 
 /**
- * Remove a arte da carta (só quem enviou) e apaga as imagens do Blob (fundo e frente). O Blob guarda cada imagem uma vez só: se a
- * mesma imagem foi usada em outra arte ou numa carta criada, ela some de lá também (caso raro: o mesmo arquivo).
+ * Remove a arte da carta (só quem enviou) e apaga do Blob as imagens dela (fundo e frente) que nada mais usa (outra
+ * arte ou carta criada com o mesmo arquivo).
  */
 export async function removeAltArt(cardId: string, id: string, tokenHash: string): Promise<void> {
   const art = readStored(await getRedis().hget(altArtsKey(cardId), id));
   if (!art) throw new ArtError(404, 'Arte não encontrada.');
   if (art.owner !== `t:${tokenHash}`) throw new ArtError(403, 'Só quem enviou a arte pode removê-la.');
   await getRedis().hdel(altArtsKey(cardId), id);
-  // Só apaga se esta pessoa enviou a imagem primeiro (`deleteArt` confere); uma falha aqui não desfaz a remoção.
-  // Fundo e frente.
-  for (const src of altArtSources(art)) await deleteArt(src, tokenHash).catch(() => undefined);
+  // Artes de antes das referências: apaga as imagens que esta pessoa enviou e que nada registrado usa. Uma falha aqui
+  // não desfaz a remoção.
+  await setArtRefs(altArtRef(cardId, id), [], { previous: altArtSources(art), tokenHash }).catch((e) =>
+    console.error('Falha ao apagar as imagens da arte alternativa', e),
+  );
 }

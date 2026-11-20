@@ -1,20 +1,13 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
-import { CARDS_BY_ID } from '../../data/cards.ts';
-import { cardImageUrl, type Card } from '../../models/card.ts';
-import { cardArtUrl } from '../../models/cardLayout.ts';
-import { CARD_TRANSLATIONS_PTBR } from '../../data/ptbr/index.ts';
-import { localizeCard } from '../cardLocale.ts';
+import { type Card, type JutsuCard, type MissionCard, type NinjaCard } from '../../models/card.ts';
+import { fixtureNinja } from '../content/testFixture.ts';
 import {
   ATTRIBUTE_KANJI,
   ATTRIBUTE_NAMES,
   attributeKanjiUrls,
   attributeSlug,
-  COMBAT_ATTRIBUTE_ICONS,
-  COST_ICONS,
-  ELEMENT_ICONS,
-  TYPE_ICON_VARIANTS,
   elementIcon,
   elementVariants,
   typeIcon,
@@ -39,7 +32,6 @@ import {
   setArtImage,
   withLayout,
   withLayoutIcons,
-  withLocalizedText,
   wrapName,
   setArtFrame,
   resetArt,
@@ -47,10 +39,31 @@ import {
 } from './model.ts';
 
 const NOW = '2026-01-01T00:00:00.000Z';
-const catalog = (id: string) => {
-  const card = CARDS_BY_ID.get(id);
-  assert.ok(card, id);
-  return card;
+/** Cartas inventadas (src/lib/content/testFixture.ts): os testes conferem a conversão, não os dados impressos. */
+const scannedNinja = (extra: Partial<NinjaCard> = {}): NinjaCard => fixtureNinja(1, extra);
+const unscannedNinja = (extra: Partial<NinjaCard> = {}): NinjaCard => fixtureNinja(2, extra);
+const jutsuCard = (cost: JutsuCard['cost']): JutsuCard => ({
+  id: 'fx-j-900',
+  name: 'Estilo Terra: Muralha de Lama',
+  type: 'jutsu',
+  elements: ['earth'],
+  number: '900',
+  set: 'S01',
+  text: [],
+  image: 'fx-j-900',
+  cost,
+});
+const missionCard: MissionCard = {
+  id: 'fx-m-900',
+  name: 'Missão',
+  type: 'mission',
+  elements: ['water'],
+  number: '900',
+  set: 'S01',
+  text: ['Permanente (3)', 'Efeito: seus Ninjas com "Byakugan" não são afetados pelos Jutsus do oponente.'],
+  image: 'fx-m-900',
+  entranceCost: 1,
+  handCost: 0,
 };
 
 test('criador: só os colchetes marcam negrito; o resto sai como foi escrito', () => {
@@ -132,54 +145,58 @@ test('criador: texto do catálogo vira marcação que reproduz o impresso', () =
 });
 
 test('criador: importa Ninja do catálogo (custos, força, vila e atributo)', () => {
-  const card = fromCatalogCard(catalog('s10-n-352'), NOW);
+  const source = unscannedNinja({ entranceCost: 5, handCost: 2, healthy: { combat: 7, support: 2 }, injured: { combat: 5, support: 2 }, attributes: ['Óleo'] });
+  const card = fromCatalogCard(source, NOW);
   assert.equal(card.type, 'ninja');
-  assert.equal(card.name, 'Jiraiya');
+  assert.equal(card.name, source.name);
   assert.equal(card.entranceCost, '5');
   assert.equal(card.handCost, '2');
   assert.equal(card.healthy, '7/2');
   assert.equal(card.injured, '5/2');
+  // Vila pela característica, em PT-BR (o conteúdo do jogo) ou como impressa.
   assert.deepEqual(card.villages, [{ village: 'leaf', rogue: false }]);
-  // "Rogue Ninja" não risca o símbolo da vila; só "Akatsuki" risca.
-  const rogueNinja = catalog('s01-n-017');
-  assert.ok(rogueNinja.type === 'ninja' && rogueNinja.characteristics.includes('Rogue Ninja'));
-  assert.deepEqual(fromCatalogCard(rogueNinja, NOW).villages, [{ village: 'mist', rogue: false }]);
-  const akatsuki: Card = { ...rogueNinja, characteristics: [...rogueNinja.characteristics, 'Akatsuki'] };
-  assert.deepEqual(fromCatalogCard(akatsuki, NOW).villages, [{ village: 'mist', rogue: true }]);
-  assert.deepEqual(fromCatalogCard(catalog('s03-n-132'), NOW).villages?.map((v) => v.village), ['waterfall']);
+  assert.deepEqual(fromCatalogCard(unscannedNinja({ characteristics: ['Leaf'] }), NOW).villages, [{ village: 'leaf', rogue: false }]);
+  // "Ninja Renegado" não risca o símbolo da vila; só "Akatsuki" risca.
+  assert.deepEqual(fromCatalogCard(unscannedNinja({ characteristics: ['Névoa', 'Ninja Renegado'] }), NOW).villages, [{ village: 'mist', rogue: false }]);
+  assert.deepEqual(fromCatalogCard(unscannedNinja({ characteristics: ['Névoa', 'Akatsuki'] }), NOW).villages, [{ village: 'mist', rogue: true }]);
   // Mais de uma vila nas características.
-  assert.deepEqual(fromCatalogCard(catalog('s08-n-264'), NOW).villages?.map((v) => v.village), ['leaf', 'sand']);
+  assert.deepEqual(fromCatalogCard(unscannedNinja({ characteristics: ['Folha', 'Areia'] }), NOW).villages?.map((v) => v.village), ['leaf', 'sand']);
   assert.deepEqual(card.elements, [{ element: 'lightning', variant: '01' }]);
-  assert.equal(card.attribute.label, 'Oil');
-  assert.equal(card.reference, '/cards/s10/s10-n-352.webp');
+  assert.equal(card.attribute.label, 'Óleo');
+  assert.equal(card.reference, `/cards/s01/${source.id}.webp`);
 });
 
 test('cartas escaneadas: importam com o layout e as artes extraídas', () => {
   // Sem arte extraída: a carta impressa faz o fundo, no enquadramento do scan.
-  const source = catalog('s01-n-001');
+  const source = scannedNinja();
+  const id = source.id;
   const { print: _print, clean: _clean, ...placed } = source.layout!.art.back!;
   const printed = fromCatalogCard({ ...source, layout: { ...source.layout!, art: { back: { ...placed, print: true } } } }, NOW);
   assert.equal(printed.layout, 'layout-01');
-  assert.deepEqual(printed.art, { src: '/cards/s01/s01-n-001.webp', ...placed });
+  assert.deepEqual(printed.art, { src: `/cards/s01/${id}.webp`, ...placed });
   assert.equal(printed.artFront, undefined);
   // Impressa sem os ícones de elemento (`clean`): mesmo enquadramento, outra imagem.
   const naruto = fromCatalogCard({ ...source, layout: { ...source.layout!, art: { back: { ...placed, print: true, clean: true } } } }, NOW);
-  assert.deepEqual(naruto.art, { src: '/card-layouts/arts/s01/s01-n-001/print-clean.webp', ...placed });
+  assert.deepEqual(naruto.art, { src: `/card-layouts/arts/fx/${id}/print-clean.webp`, ...placed });
   // Com artes extraídas: cada camada vem de card-layouts/arts/<set>/<id>/.
   const extracted: Card = {
     ...source,
     layout: { ...source.layout!, art: { back: { x: 1, y: 2, zoom: 0.9 }, front: { x: 3, y: 4, zoom: 1.1 } } },
   };
   const withArts = fromCatalogCard(extracted, NOW);
-  assert.deepEqual(withArts.art, { src: '/card-layouts/arts/s01/s01-n-001/back.webp', x: 1, y: 2, zoom: 0.9 });
-  assert.deepEqual(withArts.artFront, { src: '/card-layouts/arts/s01/s01-n-001/front.webp', x: 3, y: 4, zoom: 1.1 });
+  assert.deepEqual(withArts.art, { src: `/card-layouts/arts/fx/${id}/back.webp`, x: 1, y: 2, zoom: 0.9 });
+  assert.deepEqual(withArts.artFront, { src: `/card-layouts/arts/fx/${id}/front.webp`, x: 3, y: 4, zoom: 1.1 });
   // Outro layout pedido: vale o pedido, as artes continuam.
   const other = fromCatalogCard(extracted, NOW, 'layout-02');
   assert.equal(other.layout, 'layout-02');
-  assert.equal(other.artFront?.src, '/card-layouts/arts/s01/s01-n-001/front.webp');
+  assert.equal(other.artFront?.src, `/card-layouts/arts/fx/${id}/front.webp`);
+  // Arte enviada pela aba Editar (Vercel Blob): no lugar da impressa.
+  const blob = 'https://abc.public.blob.vercel-storage.com/naruto-ccg/art/' + 'a'.repeat(64) + '.webp';
+  const uploaded = fromCatalogCard({ ...source, layout: { ...source.layout!, art: { back: { x: 0, y: 0, zoom: 1, src: blob } } } }, NOW);
+  assert.equal(uploaded.art.src, blob);
+  assert.equal(uploaded.printedFlavor, undefined);
   // Carta não escaneada: layout 1, sem arte.
-  const unscanned = [...CARDS_BY_ID.values()].find((c) => !c.layout)!;
-  assert.equal(fromCatalogCard(unscanned, NOW).art.src, null);
+  assert.equal(fromCatalogCard(unscannedNinja(), NOW).art.src, null);
 });
 
 test('nome: quebra de linha automática, uma linha só ou duas linhas', () => {
@@ -192,13 +209,11 @@ test('nome: quebra de linha automática, uma linha só ou duas linhas', () => {
   // A quebra digitada vale em "duas linhas" e some em "uma linha só".
   assert.equal(wrapName('Hinata\nHyuga (Quimono)', 'break'), 'Hinata\nHyuga (Quimono)');
   assert.equal(wrapName('Hinata Hyuga\n(Quimono)', 'single'), 'Hinata Hyuga (Quimono)');
-  // Carta escaneada: a escolha do layout dela (a do nome traduzido em PT-BR, como o tamanho).
-  const source = catalog('s01-n-001');
-  const card: Card = { ...source, layout: { ...source.layout!, nameWrap: 'single', nameWrapPtBr: 'break' } };
+  // Carta escaneada: a escolha do layout dela; em outro layout, não vale.
+  const source = scannedNinja();
+  const card: Card = { ...source, layout: { ...source.layout!, nameWrap: 'single' } };
   assert.equal(fromCatalogCard(card, NOW).nameWrap, 'single');
   assert.equal(fromCatalogCard(card, NOW, 'layout-02').nameWrap, undefined);
-  const pt = withLocalizedText(fromCatalogCard(card, NOW), { name: 'Outro nome', text: [], flavor: undefined, characteristics: [] }, card);
-  assert.equal(pt.nameWrap, 'break');
 });
 
 test('nome: a fonte é a do layout mais o ajuste da carta (padrão 0)', () => {
@@ -209,7 +224,7 @@ test('nome: a fonte é a do layout mais o ajuste da carta (padrão 0)', () => {
   assert.equal(nameFontSize(50, 4), 54);
   assert.equal(nameFontSize(50, -100), 4); // nunca some
   // Catálogo: o ajuste da carta escaneada vale no layout dela; em outro layout, volta a 0.
-  const source = catalog('s01-n-001');
+  const source = scannedNinja();
   assert.equal(fromCatalogCard(source, NOW).nameSize, 0);
   const adjusted: Card = { ...source, layout: { ...source.layout!, nameSize: -3 } };
   assert.equal(fromCatalogCard(adjusted, NOW).nameSize, -3);
@@ -222,7 +237,7 @@ test('nome: a fonte é a do layout mais o ajuste da carta (padrão 0)', () => {
 });
 
 test('cartas escaneadas: os ícones vêm da carta, não do layout (coleções misturam ícones)', () => {
-  const source = catalog('s01-n-001');
+  const source = scannedNinja();
   // Layout 1 com ícones de outros layouts.
   const mixed = {
     ...source,
@@ -245,47 +260,12 @@ test('cartas escaneadas: os ícones vêm da carta, não do layout (coleções mi
   assert.equal(other.entranceIcon, L2.defaults.entranceIcon);
 });
 
-test('cartas escaneadas: layout conhecido e artes geradas em public/', () => {
-  const scanned = [...CARDS_BY_ID.values()].filter((c) => c.layout);
-  assert.ok(scanned.length >= 2);
-  for (const card of scanned) {
-    const info = card.layout!;
-    assert.equal(getLayout(info.layout).id, info.layout, `${card.id}: layout ${info.layout}`);
-    assert.ok(getLayout(info.layout).types.includes(card.type), `${card.id}: o layout não tem o tipo ${card.type}`);
-    if (info.panelVariant) {
-      assert.ok(getLayout(info.layout).panelVariants?.some((v) => v.id === info.panelVariant), `${card.id}: design ${info.panelVariant}`);
-    }
-    // Ícones: um por elemento, custos só fora do Jutsu, Atributo só no Ninja, e todos com arquivo.
-    const { icons } = info;
-    assert.equal(icons.elements.length, card.elements.length, `${card.id}: variantes dos elementos`);
-    card.elements.forEach((el, i) => assert.ok(ELEMENT_ICONS[`${el}-${icons.elements[i]}`], `${card.id}: ${el}-${icons.elements[i]}`));
-    assert.ok(
-      icons.type === 'default' || TYPE_ICON_VARIANTS[card.type]?.some((v) => v.id === icons.type),
-      `${card.id}: ícone do tipo ${icons.type}`,
-    );
-    assert.equal(icons.entrance !== undefined && icons.hand !== undefined, card.type !== 'jutsu', `${card.id}: ícones de custo`);
-    if (icons.entrance) assert.ok(COST_ICONS[icons.entrance] && COST_ICONS[icons.hand!], `${card.id}: ícones de custo`);
-    assert.equal(icons.attribute !== undefined, card.type === 'ninja', `${card.id}: moldura do Atributo`);
-    if (icons.attribute) assert.ok(COMBAT_ATTRIBUTE_ICONS[icons.attribute], `${card.id}: moldura ${icons.attribute}`);
-    assert.ok(info.art.back || info.art.front, `${card.id}: sem arte`);
-    for (const layer of ['back', 'front'] as const) {
-      const art = info.art[layer];
-      if (!art) continue;
-      assert.ok(art.zoom > 0, `${card.id}: zoom da arte ${layer}`);
-      const file = art.print
-        ? `public${art.clean ? cardArtUrl(card.id, 'print-clean') : cardImageUrl(card, 'full')}`
-        : `public/card-layouts/arts/${card.id.split('-')[0]}/${card.id}/${layer}.webp`;
-      assert.ok(existsSync(file), `${card.id}: falta a arte ${layer} (npm run cards:layouts)`);
-    }
-  }
-});
-
 test('criador: importa Jutsu e Missão do catálogo', () => {
-  const jutsu = fromCatalogCard(catalog('s10-j-us078'), NOW);
+  const jutsu = fromCatalogCard(jutsuCard({ symbols: ['water'], generic: 1 }), NOW);
   assert.deepEqual(jutsu.jutsuCost, { symbols: ['water'], generic: '1' });
 
-  const mission = fromCatalogCard(catalog('s10-m-us087'), NOW);
-  assert.equal(mission.text, '[Permanent \\(3\\)]\n[Effect:] Your Ninjas with a "Byakugan" cannot be affected by the effects of your opponent\'s Jutsu cards.');
+  const mission = fromCatalogCard(missionCard, NOW);
+  assert.equal(mission.text, '[Permanente \\(3\\)]\n[Efeito:] seus Ninjas com "Byakugan" não são afetados pelos Jutsus do oponente.');
   assert.equal(mission.characteristics.length, 0);
   assert.deepEqual(mission.villages, []);
 });
@@ -299,7 +279,7 @@ test('criador: cartas antigas com uma vila só são lidas no formato novo', () =
 });
 
 test('layouts: importar aplica os ícones do layout; trocar de layout mantém os ícones escolhidos', () => {
-  const fukasaku = fromCatalogCard(catalog('s29-n-5006'), NOW, 'layout-02');
+  const fukasaku = fromCatalogCard(unscannedNinja({ elements: ['wind', 'fire'] }), NOW, 'layout-02');
   const l2 = (c: typeof fukasaku) => ({
     elements: c.elements.map((e) => e.variant),
     entrance: c.entranceIcon,
@@ -323,7 +303,7 @@ test('layouts: importar aplica os ícones do layout; trocar de layout mantém os
   assert.deepEqual(l2(withLayoutIcons(back)), defaults(L1));
 
   // Custo alternativo ("or") vem do catálogo: "土 | 1 or 3".
-  const mudFall = fromCatalogCard(catalog('s29-j-5000'), NOW, 'layout-02');
+  const mudFall = fromCatalogCard(jutsuCard({ symbols: ['earth'], generic: 1, alternatives: [{ symbols: [], generic: 3 }] }), NOW, 'layout-02');
   assert.deepEqual(mudFall.jutsuCost, { symbols: ['earth'], generic: '1', alternatives: [{ symbols: [], generic: '3' }] });
 });
 
@@ -366,23 +346,22 @@ test('atributos: o kanji vem da imagem do atributo (um ou dois, "?" = unknown)',
   assert.equal(attributeKanjiUrls('Banana'), null);
   assert.equal(attributeKanjiUrls(''), null);
 
-  // Importação traz todos os atributos.
-  const twoAttrs = [...CARDS_BY_ID.values()].find((c) => c.type === 'ninja' && c.attributes.length > 1);
-  assert.ok(twoAttrs && twoAttrs.type === 'ninja');
-  assert.equal(fromCatalogCard(twoAttrs, NOW).attribute.label, twoAttrs.attributes.join('/'));
+  // O conteúdo do jogo guarda o atributo em PT-BR: o kanji é achado pelo nome traduzido também.
+  assert.deepEqual(attributeKanjiUrls('Arma'), ['/card-layouts/icons/attributes/weapon.webp']);
+  assert.deepEqual(attributeKanjiUrls('Artes Marciais/Árvore'), [
+    '/card-layouts/icons/attributes/martial-arts.webp',
+    '/card-layouts/icons/attributes/tree.webp',
+  ]);
 
-  // Trios do S25: três atributos.
-  const trio = fromCatalogCard(catalog('s25-n-1486'), NOW);
-  assert.equal(trio.attribute.label, 'Mind/Shadow/Food');
+  // Importação traz todos os atributos (até 3).
+  const trio = fromCatalogCard(unscannedNinja({ attributes: ['Mente', 'Sombra', 'Comida'] }), NOW);
+  assert.equal(trio.attribute.label, 'Mente/Sombra/Comida');
   assert.equal(attributeKanjiUrls(trio.attribute.label)?.length, 3);
   // O nome impresso de cada arquivo leva de volta ao mesmo arquivo.
   for (const [file, name] of Object.entries(ATTRIBUTE_NAMES)) assert.equal(attributeSlug(name), file);
+  assert.ok(ATTRIBUTE_KANJI.size > 0);
 
-  // Todo atributo do catálogo tem kanji, e a lista bate com os arquivos gerados.
-  for (const card of CARDS_BY_ID.values()) {
-    if (card.type !== 'ninja') continue;
-    for (const a of card.attributes) assert.ok(ATTRIBUTE_KANJI.has(attributeSlug(a)), `${card.id}: ${a}`);
-  }
+  // A lista bate com os arquivos gerados.
   const { readdirSync } = await import('node:fs');
   const files = readdirSync('public/card-layouts/icons/attributes').map((f) => f.replace(/\.webp$/, ''));
   assert.deepEqual(new Set(files), new Set(ATTRIBUTE_KANJI));
@@ -408,44 +387,14 @@ test('ícones alternativos: elemento 03 (menos o Vazio) e Ninja alternativo', ()
   assert.ok(existsSync(`public${typeIcon(L1, 'ninja', 'alter').url}`));
 });
 
-test('importar em PT-BR: nome, textos, frase e características traduzidos; vilas e atributo em inglês', () => {
-  const source = catalog('s01-n-017');
-  const card = withLocalizedText(fromCatalogCard(source, NOW), localizeCard(source, 'pt-BR', CARD_TRANSLATIONS_PTBR));
-  assert.equal(card.flavor, CARD_TRANSLATIONS_PTBR['s01-n-017'].flavor);
-  assert.notDeepEqual(card.characteristics, source.type === 'ninja' ? source.characteristics : []);
-  assert.deepEqual(card.villages, fromCatalogCard(source, NOW).villages);
-  assert.equal(card.attribute.label, fromCatalogCard(source, NOW).attribute.label);
-});
-
 test('frase: com a impressa de fundo, guarda a frase impressa (sombreado); outra arte de fundo tira', () => {
-  const source = catalog('s01-n-017');
+  const source = scannedNinja();
   const card = fromCatalogCard(source, NOW);
   assert.equal(card.printedFlavor, source.flavor ?? '');
-  // Em PT-BR a frase montada muda, a impressa continua a em inglês.
-  const pt = withLocalizedText(card, localizeCard(source, 'pt-BR', CARD_TRANSLATIONS_PTBR), source);
-  assert.equal(pt.flavor, CARD_TRANSLATIONS_PTBR['s01-n-017'].flavor);
-  assert.equal(pt.printedFlavor, source.flavor);
   assert.equal(setArtImage(card, 'back', 'data:image/png;base64,').printedFlavor, undefined);
   assert.equal(setArtImage(card, 'front', 'data:image/png;base64,').printedFlavor, source.flavor);
   // Carta não escaneada e carta nova: sem frase impressa.
-  assert.equal(fromCatalogCard([...CARDS_BY_ID.values()].find((c) => !c.layout)!, NOW).printedFlavor, undefined);
+  assert.equal(fromCatalogCard(unscannedNinja(), NOW).printedFlavor, undefined);
   assert.equal(newCustomCard('ninja', NOW).printedFlavor, undefined);
 });
 
-test('importar em PT-BR: nome traduzido usa o ajuste nameSizePtBr; nome igual ao inglês usa nameSize', () => {
-  const pt = (c: Card, layout?: LayoutId) =>
-    withLocalizedText(fromCatalogCard(c, NOW, layout), localizeCard(c, 'pt-BR', CARD_TRANSLATIONS_PTBR), c);
-  // Jutsu com nome traduzido.
-  const jutsu = [...CARDS_BY_ID.values()].find(
-    (c) => c.layout && CARD_TRANSLATIONS_PTBR[c.id]?.name && CARD_TRANSLATIONS_PTBR[c.id].name !== c.name,
-  )!;
-  const adjusted: Card = { ...jutsu, layout: { ...jutsu.layout!, nameSize: 2, nameSizePtBr: -5 } };
-  assert.equal(pt(adjusted).nameSize, -5);
-  assert.equal(fromCatalogCard(adjusted, NOW).nameSize, 2);
-  assert.equal(pt({ ...jutsu, layout: { ...jutsu.layout!, nameSizePtBr: undefined } }).nameSize, 0);
-  assert.equal(pt(adjusted, 'layout-02').nameSize, 0); // outro layout: o ajuste não vale
-  // Personagem: o nome não muda em PT-BR, vale o ajuste do nome em inglês.
-  const naruto = catalog('s01-n-001');
-  const character: Card = { ...naruto, layout: { ...naruto.layout!, nameSize: 3, nameSizePtBr: -5 } };
-  assert.equal(pt(character).nameSize, 3);
-});
