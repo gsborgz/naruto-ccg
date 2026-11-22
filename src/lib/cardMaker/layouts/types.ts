@@ -188,10 +188,10 @@ export interface LayoutSpec {
   /** Linha acima do texto de efeito. Sem valor: `TEXT_DIVIDER_DEFAULT` (layouts/index.ts). */
   textDivider?: TextDividerStyle;
   /**
-   * Cor da linha acima do texto, própria de cada layout (gravada no registro do layout só quando alguém define no
-   * editor de layouts). Sem valor: `TEXT_DIVIDER_COLOR` (o vermelho).
+   * Cor da linha acima do texto por tipo de carta (cada tipo tem o seu painel), gravada no registro do layout só
+   * quando alguém define no editor de layouts. Tipo sem valor: `TEXT_DIVIDER_COLOR` (o vermelho).
    */
-  textDividerColor?: string;
+  textDividerColor?: Partial<Record<CardType, string>>;
   /** Ícones de custo usados pelo layout (aplicados ao escolher o layout). */
   defaults: { entranceIcon: EntranceIcon; handIcon: HandIcon };
 }

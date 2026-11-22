@@ -15,6 +15,7 @@ import {
   getLayout,
   cardLayout,
   TEXT_DIVIDER_DEFAULT,
+  textDividerColor,
 } from './layouts/index.ts';
 
 const L1 = getLayout('layout-01');
@@ -422,4 +423,13 @@ test('posições ajustadas só na carta: mudam o layout dela, não o layout carr
   // Trocar de layout apaga os ajustes; continuar no mesmo layout mantém.
   assert.equal(withLayout(adjusted, 'layout-02').layoutOverrides, undefined);
   assert.deepEqual(withLayout(adjusted, 'layout-01').layoutOverrides, adjusted.layoutOverrides);
+});
+
+test('cor da linha acima do texto: uma por tipo de carta no layout', () => {
+  const spec = { ...L1, textDividerColor: { ninja: '#123456' } };
+  assert.equal(textDividerColor(spec, 'ninja'), '#123456');
+  assert.equal(textDividerColor(spec, 'jutsu'), undefined);
+  assert.equal(textDividerColor(spec, 'mission'), undefined);
+  // Valor antigo (uma cor só, de antes de ser por tipo): ignorado.
+  assert.equal(textDividerColor({ ...L1, textDividerColor: '#ff0000' as never }, 'ninja'), undefined);
 });

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { CARDS, CARDS_BY_ID } from '@/data/cards';
-import { LAYOUTS, LAYOUT_LIST, TEXT_DIVIDER_COLOR, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, frameFor, panelFor, type LayoutSpec } from '@/lib/cardMaker/layouts';
+import { LAYOUTS, LAYOUT_LIST, TEXT_DIVIDER_COLOR, textDividerColor, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, frameFor, panelFor, type LayoutSpec } from '@/lib/cardMaker/layouts';
 import {
   MAX_VILLAGES,
   VILLAGES,
@@ -299,6 +299,13 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
   const set = (path: string[], value: string) => editor.setValue(target, root, path, value);
   const dirty = (path: string[]) => `layout:${spec.id}|${path.join('.')}` in editor.changes;
   const ring = (path: string[]) => `${smallSelect} ${dirty(path) ? '!ring-accent' : ''}`;
+  // Cor da linha acima do texto: uma por tipo de carta (`textDividerColor.<tipo>`), só no tipo da prévia.
+  const dividerColor = textDividerColor(spec, type);
+  const setDividerColor = (value: string) => {
+    // Sem cores ainda (ou um valor antigo, de antes de ser por tipo): começa o objeto, só com o tipo editado.
+    if (!spec.textDividerColor || typeof spec.textDividerColor !== 'object') spec.textDividerColor = {};
+    set(['textDividerColor', type], value);
+  };
 
   /** A imagem nova foi para a pasta do layout: a configuração passa a usá-la (grava na hora). */
   const relocate = (oldUrl: string | undefined) => async (url: string) => {
@@ -334,19 +341,19 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
             className={`w-48 rounded bg-surface-2 px-1.5 py-1 text-xs ring-1 ${dirty(['label']) ? 'ring-accent' : 'ring-border'}`}
           />
         </Pick>
-        <Pick label="Cor da linha acima do texto">
+        <Pick label={`Cor da linha acima do texto (${CARD_TYPE_LABEL[type]})`}>
           <span className="flex items-center gap-1">
             <input
               type="color"
-              value={/^#[0-9a-f]{6}$/i.test(spec.textDividerColor ?? '') ? spec.textDividerColor : TEXT_DIVIDER_COLOR}
-              onChange={(e) => set(['textDividerColor'], e.target.value)}
+              value={/^#[0-9a-f]{6}$/i.test(dividerColor ?? '') ? dividerColor : TEXT_DIVIDER_COLOR}
+              onChange={(e) => setDividerColor(e.target.value)}
               className="h-6 w-7 cursor-pointer bg-transparent"
             />
             <input
-              value={spec.textDividerColor ?? ''}
+              value={dividerColor ?? ''}
               placeholder={`${TEXT_DIVIDER_COLOR} (padrão)`}
-              onChange={(e) => set(['textDividerColor'], e.target.value)}
-              className={`w-36 rounded bg-surface-2 px-1.5 py-1 text-xs ring-1 ${dirty(['textDividerColor']) ? 'ring-accent' : 'ring-border'}`}
+              onChange={(e) => setDividerColor(e.target.value)}
+              className={`w-36 rounded bg-surface-2 px-1.5 py-1 text-xs ring-1 ${dirty(['textDividerColor', type]) ? 'ring-accent' : 'ring-border'}`}
             />
           </span>
         </Pick>

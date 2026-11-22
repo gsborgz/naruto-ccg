@@ -16,6 +16,7 @@ import {
   elementIcon,
   cardLayout,
   TEXT_DIVIDER_COLOR,
+  textDividerColor,
   frameFor,
   panelFor,
   typeIcon,
@@ -416,8 +417,8 @@ function TextDivider({ card, spec }: PartProps) {
   const w = box.w - style.inset * 2;
   const h = style.thickness;
   if (w <= 0 || h <= 0) return null;
-  // Cor própria do layout (`textDividerColor`) ou a padrão.
-  const color = spec.textDividerColor || TEXT_DIVIDER_COLOR;
+  // Cor própria do tipo de carta no layout (`textDividerColor`) ou a padrão.
+  const color = textDividerColor(spec, card.type) ?? TEXT_DIVIDER_COLOR;
   return (
     <svg
       viewBox="0 0 1000 20"
