@@ -2,7 +2,15 @@ import { getRedis } from '../redis.ts';
 import { setArtRefs } from '../artStore.ts';
 import { catalogDraft, designLayout, versionOf } from '../cardMaker/catalogEdit.ts';
 import { parseSharedCustomCard } from '../cardMaker/sharedCard.ts';
-import { readCustomEntries, SYSTEM_OWNER, writeCustomEntry, type CustomCardEntry } from '../customCards/keys.ts';
+import {
+  CUSTOM_KEY,
+  customArtRef,
+  customCardArts,
+  readCustomEntries,
+  SYSTEM_OWNER,
+  writeCustomEntry,
+  type CustomCardEntry,
+} from '../customCards/keys.ts';
 import type { IconsContent } from '../cardMaker/icons/index.ts';
 import type { LayoutSpec } from '../cardMaker/layouts/types.ts';
 import type { LayoutId } from '../cardMaker/model.ts';
@@ -142,7 +150,8 @@ async function ensureReady(): Promise<void> {
  */
 async function migrateContent(): Promise<void> {
   const redis = getRedis();
-  const locked = await redis.set(KEY.seedLock, '1', { nx: true, ex: 120 });
+  // A trava dura o tempo máximo da função (300 s): outra função não começa a mesma conversão enquanto esta roda.
+  const locked = await redis.set(KEY.seedLock, '1', { nx: true, ex: 300 });
   if (!locked) {
     for (let i = 0; i < 60; i++) {
       await new Promise((r) => setTimeout(r, 1000));
@@ -185,14 +194,61 @@ async function migrateDesigns(cards: Card[]): Promise<void> {
     icons: icons ?? {},
     assets: Object.fromEntries(Object.entries(assets ?? {}).map(([k, v]) => [k, String(v)])),
   });
+  // Versões do sistema de uma conversão cortada no meio (a função passou do tempo): a carta não chegou a apontar para
+  // elas. Antes do formato 3, só a conversão cria versões do sistema, então as que nenhuma carta usa sobraram.
+  const used = new Set(cards.flatMap((c) => (c.design ? [c.design] : [])));
+  const systemIds = (await redis.smembers<string[]>(CUSTOM_KEY.of(SYSTEM_OWNER))) ?? [];
+  const orphans = [...(await readCustomEntries(systemIds.filter((id) => !used.has(id)))).values()].filter(
+    (e) => e.owner === SYSTEM_OWNER,
+  );
+  for (let i = 0; i < orphans.length; i += 200) {
+    const tx = redis.multi();
+    for (const { card } of orphans.slice(i, i + 200)) {
+      tx.hdel(CUSTOM_KEY.cards, card.id).srem(CUSTOM_KEY.of(SYSTEM_OWNER), card.id);
+      if (card.source) tx.srem(CUSTOM_KEY.versions(card.source), card.id);
+    }
+    await tx.exec();
+  }
+  for (const { card } of orphans) {
+    if (customCardArts(card).length) {
+      await setArtRefs(customArtRef(SYSTEM_OWNER, card.id), []).catch((e) => console.error('Falha ao soltar as artes da versão', e));
+    }
+  }
+
+  // O `layout` de cada carta vira uma versão do sistema. Tudo montado na memória e gravado em lotes (cada lote numa
+  // transação: a versão e a carta que aponta para ela entram juntas): com milhares de cartas, um pedido ao Redis por
+  // carta passava do tempo máximo da função.
+  const now = new Date().toISOString();
+  const migrated: { card: Card; entry: CustomCardEntry; hadArt: boolean }[] = [];
   for (const card of cards) {
     if (!card.layout) continue;
-    const stored = await storedCard({ ...card, design: undefined });
-    await redis.hset(KEY.card, { [card.id]: stored });
-    // As artes enviadas pela aba Editar contavam como usadas pela carta do catálogo; agora contam pela versão.
-    if (card.layout.art.back?.src || card.layout.art.front?.src) {
-      await setArtRefs(`catalog:${card.id}`, []).catch((e) => console.error('Falha ao soltar as artes da carta', e));
+    const plain = { ...card, design: undefined };
+    const version = { ...versionOf(plain, catalogDraft(plain)), id: crypto.randomUUID(), createdAt: now, updatedAt: now };
+    const { layout, design: _design, ...rest } = card;
+    migrated.push({
+      card: { ...(rest as Card), design: version.id },
+      entry: { card: version, owner: SYSTEM_OWNER, author: '' },
+      hadArt: !!(layout.art.back?.src || layout.art.front?.src),
+    });
+  }
+  for (let i = 0; i < migrated.length; i += 200) {
+    const part = migrated.slice(i, i + 200);
+    const tx = redis
+      .multi()
+      .hset(CUSTOM_KEY.cards, Object.fromEntries(part.map(({ entry }) => [entry.card.id, entry])))
+      .sadd(CUSTOM_KEY.of(SYSTEM_OWNER), part[0].entry.card.id, ...part.slice(1).map(({ entry }) => entry.card.id))
+      .hset(KEY.card, Object.fromEntries(part.map(({ card }) => [card.id, card])));
+    for (const { card, entry } of part) tx.sadd(CUSTOM_KEY.versions(card.id), entry.card.id);
+    await tx.exec();
+  }
+  // As artes: só as poucas cartas com arte enviada. Primeiro o uso pela versão, depois sai o da carta do catálogo
+  // (as enviadas pela aba Editar contavam como usadas por ela).
+  for (const { card, entry, hadArt } of migrated) {
+    const urls = customCardArts(entry.card);
+    if (urls.length) {
+      await setArtRefs(customArtRef(SYSTEM_OWNER, entry.card.id), urls).catch((e) => console.error('Falha ao registrar as artes da versão', e));
     }
+    if (hadArt) await setArtRefs(`catalog:${card.id}`, []).catch((e) => console.error('Falha ao soltar as artes da carta', e));
   }
   // Artes alternativas antigas: `naruto-ccg:alt-cards:<carta>` (hash `<hash do token>:<id>` → { card, author }).
   let cursor = '0';

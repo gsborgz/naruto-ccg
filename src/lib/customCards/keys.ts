@@ -38,15 +38,18 @@ export async function readCustomEntries(ids: readonly string[]): Promise<Map<str
   const unique = [...new Set(ids)];
   const out = new Map<string, CustomCardEntry>();
   if (!unique.length) return out;
-  const redis = getRedis();
-  for (let i = 0; i < unique.length; i += 200) {
-    const part = unique.slice(i, i + 200);
-    const values = await redis.hmget<Record<string, CustomCardEntry | null>>(CUSTOM_KEY.cards, ...part);
+  // Em partes de 200, todas num só pedido (pipeline).
+  const parts: string[][] = [];
+  for (let i = 0; i < unique.length; i += 200) parts.push(unique.slice(i, i + 200));
+  const pipe = getRedis().pipeline();
+  for (const part of parts) pipe.hmget(CUSTOM_KEY.cards, ...part);
+  const results = await pipe.exec<(Record<string, CustomCardEntry | null> | null)[]>();
+  parts.forEach((part, i) => {
     for (const id of part) {
-      const v = values?.[id];
+      const v = results[i]?.[id];
       if (v && typeof v === 'object' && v.card) out.set(id, v);
     }
-  }
+  });
   return out;
 }
 
