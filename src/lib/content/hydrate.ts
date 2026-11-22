@@ -1,6 +1,6 @@
 import { CARD_NAMES_EN, CARDS, CARDS_BY_ID } from '../../data/cards.ts';
 import { installIcons } from '../cardMaker/icons/index.ts';
-import { LAYOUTS, LAYOUT_LIST } from '../cardMaker/layouts/index.ts';
+import { LAYOUTS, LAYOUT_LIST, TEXT_DIVIDER_DEFAULT } from '../cardMaker/layouts/index.ts';
 import type { LayoutSpec } from '../cardMaker/layouts/types.ts';
 import type { LayoutId } from '../cardMaker/model.ts';
 import type { Card } from '../../models/card.ts';
@@ -40,6 +40,8 @@ export function hydrateContent(snapshot: ContentSnapshot): void {
   for (const id of ids) {
     // Tipos com a mesma configuração voltam a dividir o objeto, como no código original (ver `linkSharedTypes`).
     const spec = linkSharedTypes(snapshot.layouts[id]) as LayoutSpec;
+    // Linha acima do texto: os campos que o layout ainda não gravou ficam com o padrão (e aparecem no editor de layouts).
+    spec.textDivider = { ...TEXT_DIVIDER_DEFAULT, ...spec.textDivider };
     LAYOUTS[id] = spec;
     LAYOUT_LIST.push(spec);
   }

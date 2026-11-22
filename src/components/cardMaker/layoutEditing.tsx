@@ -600,7 +600,11 @@ const FIELD_LABELS: Record<string, string> = {
   separator: 'separador',
   bottom: 'base',
   top: 'topo',
-  gap: 'espaço entre blocos',
+  gap: 'espaço entre blocos (na linha acima do texto: distância até o texto)',
+  textDivider: 'linha acima do texto',
+  inset: 'recuo dos lados',
+  thickness: 'espessura',
+  default: 'ligada por padrão',
 };
 
 /** Rótulo de um campo: o nome em português, ou a própria chave. */
