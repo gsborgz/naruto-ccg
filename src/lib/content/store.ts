@@ -108,7 +108,14 @@ async function withDesignLayouts(cards: Card[]): Promise<Card[]> {
   return cards.map((c) => {
     const { layout: _layout, design, ...rest } = c;
     const entry = design ? entries.get(design) : undefined;
-    return entry ? { ...rest, design, layout: designLayout(rest as Card, entry.card) } : (rest as Card);
+    if (!entry) return rest as Card;
+    try {
+      return { ...rest, design, layout: designLayout(rest as Card, entry.card) };
+    } catch (e) {
+      // Uma versão com defeito não derruba o catálogo: a carta mostra a impressa.
+      console.error(`Falha ao montar o design ${design} da carta ${c.id}`, e);
+      return { ...rest, design } as Card;
+    }
   });
 }
 
@@ -223,7 +230,17 @@ async function migrateDesigns(cards: Card[]): Promise<void> {
   for (const card of cards) {
     if (!card.layout) continue;
     const plain = { ...card, design: undefined };
-    const version = { ...versionOf(plain, catalogDraft(plain)), id: crypto.randomUUID(), createdAt: now, updatedAt: now };
+    let draft;
+    try {
+      draft = catalogDraft(plain);
+    } catch (e) {
+      // Layout com defeito: a carta fica sem design (mostra a impressa) em vez de parar a conversão.
+      console.error(`Falha ao converter o layout da carta ${card.id}; ela volta para a impressa`, e);
+      const { layout: _layout, design: _design, ...rest } = card;
+      await redis.hset(KEY.card, { [card.id]: rest });
+      continue;
+    }
+    const version = { ...versionOf(plain, draft), id: crypto.randomUUID(), createdAt: now, updatedAt: now };
     const { layout, design: _design, ...rest } = card;
     migrated.push({
       card: { ...(rest as Card), design: version.id },

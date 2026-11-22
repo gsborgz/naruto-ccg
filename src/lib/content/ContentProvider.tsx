@@ -26,15 +26,21 @@ interface ContentState {
 
 const ContentContext = createContext<ContentState | null>(null);
 
+/** O erro com a mensagem do servidor, se ele mandou uma. */
+async function responseError(res: Response): Promise<Error> {
+  const body = (await res.json().catch(() => null)) as { message?: unknown } | null;
+  return new Error(typeof body?.message === 'string' ? `Erro ${res.status}: ${body.message}` : `Erro ${res.status}`);
+}
+
 async function fetchContent(): Promise<number> {
   const res = await fetch('/api/content', { cache: 'no-store' });
   if (res.status === 401) throw new Unauthorized();
-  if (!res.ok) throw new Error(`Erro ${res.status}`);
+  if (!res.ok) throw await responseError(res);
   const { version } = (await res.json()) as { version: number };
   if (version === contentVersion()) return version;
   // `?p=`: formato da resposta (2 = com `namesEn`); muda o endereço para não usar a resposta antiga do cache.
   const snapshot = await fetch(`/api/content/${version}?p=2`);
-  if (!snapshot.ok) throw new Error(`Erro ${snapshot.status}`);
+  if (!snapshot.ok) throw await responseError(snapshot);
   const content = (await snapshot.json()) as ContentSnapshot;
   hydrateContent(content);
   return content.version;

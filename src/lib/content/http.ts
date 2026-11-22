@@ -8,7 +8,9 @@ export function contentErrorResponse(e: unknown): NextResponse {
     return NextResponse.json({ message: e.message }, { status: e.status });
   }
   console.error(e);
-  return NextResponse.json({ message: 'Erro ao acessar o conteúdo do jogo.' }, { status: 500 });
+  // O motivo vai junto (o site é fechado por senha): sem ele, só os logs da Vercel dizem o que houve.
+  const detail = e instanceof Error ? e.message : String(e);
+  return NextResponse.json({ message: `Erro ao acessar o conteúdo do jogo: ${detail}` }, { status: 500 });
 }
 
 /** Corpo JSON do pedido, ou `null` se não for um objeto JSON. */
