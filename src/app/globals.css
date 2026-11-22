@@ -115,6 +115,17 @@ body {
 }
 
 /*
+ * Modais (<dialog> aberto com showModal): a rolagem do mouse fica no modal e não passa para a página atrás
+ * (overscroll-behavior), e a página fica parada enquanto um modal está aberto.
+ */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+html:has(dialog:modal) {
+  overflow: hidden;
+}
+
+/*
  * Tela cheia numa partida (.arena-screen = ARENA_SCREEN): a arena ocupa a tela inteira, sem o espaçamento do
  * <main>. Os controles da partida ficam no menu ⋯ dentro da arena (GameArena, `fullscreenMenu`).
  */
