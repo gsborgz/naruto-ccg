@@ -433,3 +433,19 @@ test('cor da linha acima do texto: uma por tipo de carta no layout', () => {
   // Valor antigo (uma cor só, de antes de ser por tipo): ignorado.
   assert.equal(textDividerColor({ ...L1, textDividerColor: '#ff0000' as never }, 'ninja'), undefined);
 });
+
+test('ícones no texto: ~1~ vira o Chakra genérico e ~fire~ o símbolo do elemento', () => {
+  const runs = parseTextBlock('Pague ~2~ e ~fogo~ ou [~X~ e ~Water~]. ~nada~ fica.');
+  const icons = runs.filter((r) => r.icon).map((r) => r.icon);
+  assert.deepEqual(icons, [
+    { kind: 'chakra', value: '2' },
+    { kind: 'element', element: 'fire' },
+    { kind: 'chakra', value: 'X' },
+    { kind: 'element', element: 'water' },
+  ]);
+  // O ícone fica com o estilo do trecho (negrito dentro de [ ]) e com o que foi digitado.
+  assert.equal(runs.find((r) => r.icon?.kind === 'chakra' && r.icon.value === 'X')?.bold, true);
+  assert.equal(runs.find((r) => r.icon?.kind === 'chakra')?.text, '~2~');
+  // O que não é valor nem elemento sai como foi digitado.
+  assert.ok(runs.some((r) => !r.icon && r.text.includes('~nada~ fica.')));
+});

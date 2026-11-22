@@ -40,6 +40,7 @@ import {
   wrapName,
   type CustomCard,
   type JutsuCostPart,
+  type TextIcon,
 } from '@/lib/cardMaker/model';
 import { CARD_FONT_VARIABLES, TEXT_BOLD_WEIGHT } from './fonts';
 
@@ -353,6 +354,60 @@ function Characteristics({ card, spec }: PartProps) {
   );
 }
 
+/** Altura dos ícones no meio do texto (`~1~`, `~fire~`), em relação à fonte do texto. */
+const TEXT_ICON_EM = 1.25;
+
+/**
+ * Ícone no meio do texto de efeito: Chakra genérico com o valor ou o símbolo do elemento. As medidas são em `em`, para
+ * acompanhar a fonte do texto (que encolhe para caber na caixa).
+ */
+function TextIconView({ icon }: { icon: TextIcon }) {
+  const inline: CSSProperties = { display: 'inline-block', position: 'relative', verticalAlign: '-0.28em', margin: '0 0.06em' };
+  if (icon.kind === 'element') {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={assetUrl(JUTSU_COST_ELEMENT_ICON[icon.element])}
+        alt=""
+        draggable={false}
+        style={{ ...inline, width: `${TEXT_ICON_EM}em`, height: `${TEXT_ICON_EM}em`, maxWidth: 'none' }}
+      />
+    );
+  }
+  const c = chakraIcon(TEXT_ICON_EM);
+  const n = c.number;
+  return (
+    <span style={{ ...inline, width: `${c.inline.w}em`, height: `${c.inline.h}em` }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={assetUrl(c.url)}
+        alt=""
+        draggable={false}
+        style={{ position: 'absolute', left: `${c.image.x}em`, top: `${c.image.y}em`, width: `${c.image.w}em`, height: `${c.image.h}em`, maxWidth: 'none' }}
+      />
+      <span
+        style={{
+          position: 'absolute',
+          left: `${n.cx}em`,
+          top: `${n.cy}em`,
+          transform: `translate(${ALIGN_SHIFT[n.align ?? 'center']}, -50%)`,
+          fontFamily: NUMBER_FONT,
+          fontWeight: 700,
+          fontSize: `${n.size}em`,
+          lineHeight: 1,
+          whiteSpace: 'nowrap',
+          color: n.color,
+          // O contorno em `em` da fonte do número (`strokeWidth` vem nas mesmas unidades que `size`).
+          WebkitTextStroke: `${n.size ? n.strokeWidth / n.size : 0}em ${n.stroke}`,
+          paintOrder: 'stroke fill',
+        }}
+      >
+        {icon.value}
+      </span>
+    </span>
+  );
+}
+
 /** Escala da fonte do texto de efeito sobre o tamanho do layout (vale para todas as cartas montadas). */
 const EFFECT_TEXT_SCALE = 0.92;
 
@@ -382,7 +437,10 @@ function EffectText({ card, spec }: PartProps) {
     >
       {blocks.map((runs, i) => (
         <p key={i} style={{ margin: 0, marginTop: i > 0 ? `${style.gap / style.size}em` : 0 }}>
-          {runs.map((run, j) => (
+          {runs.map((run, j) =>
+            run.icon ? (
+              <TextIconView key={j} icon={run.icon} />
+            ) : (
             <span
               key={j}
               style={{
@@ -392,7 +450,8 @@ function EffectText({ card, spec }: PartProps) {
             >
               {run.text}
             </span>
-          ))}
+            ),
+          )}
         </p>
       ))}
     </div>

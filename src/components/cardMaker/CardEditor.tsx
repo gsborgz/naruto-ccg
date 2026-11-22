@@ -966,7 +966,8 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
               [negrito], {'{vermelho}'} e (azul): a marcação não aparece na
               carta; dobrada ([[ ]], {'{{ }}'}, (( ))) ela aparece. Dá para
               combinar ([{'{'}trecho{'}'}]). Para escrever o símbolo normal, use
-              \ antes: \(3\).
+              \ antes: \(3\). Ícones: ~1~ (ou ~X~) vira o Chakra genérico com o valor e ~fire~ (ou ~fogo~, ~water~,
+              ~agua~...) o símbolo do elemento.
             </span>
           </label>
         ) : (
@@ -1007,7 +1008,8 @@ export function CardDataEditor({ card, onChange }: { card: CustomCard; onChange:
           />
           <span className="font-normal">
             [negrito], {'{vermelho}'} e (azul) marcam trechos; dobrada ([[ ]], {'{{ }}'}, (( ))) a marcação aparece. Para
-            escrever o símbolo normal, use \ antes: \(3\).
+            escrever o símbolo normal, use \ antes: \(3\). Ícones: ~1~ (ou ~X~) vira o Chakra genérico com o valor e
+            ~fire~ (ou ~fogo~...) o símbolo do elemento.
           </span>
         </label>
         <label className={label}>

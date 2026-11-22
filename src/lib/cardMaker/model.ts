@@ -481,6 +481,38 @@ export interface TextRun {
   text: string;
   bold: boolean;
   color?: TextColor;
+  /**
+   * Ícone no meio do texto (`~1~`, `~X~`: Chakra genérico com o valor; `~fire~`, `~fogo~`: o símbolo do elemento).
+   * `text` fica com o que foi digitado (é o que sai nos textos sem desenho, ex.: os dados das regras).
+   */
+  icon?: TextIcon;
+}
+
+export type TextIcon = { kind: 'chakra'; value: string } | { kind: 'element'; element: ElementSymbol };
+
+/** Nomes de elemento aceitos entre tis (`~fire~`), em inglês e em português, sem acento. */
+const TEXT_ICON_ELEMENTS: Record<string, ElementSymbol> = {
+  fire: 'fire',
+  fogo: 'fire',
+  water: 'water',
+  agua: 'water',
+  wind: 'wind',
+  vento: 'wind',
+  earth: 'earth',
+  terra: 'earth',
+  lightning: 'lightning',
+  raio: 'lightning',
+  trovao: 'lightning',
+  void: 'void',
+  vazio: 'void',
+};
+
+/** O ícone de `~valor~`: número ou X → Chakra genérico; nome de elemento → o símbolo dele; outra coisa → nenhum. */
+export function textIcon(token: string): TextIcon | null {
+  const t = token.trim();
+  if (/^(\d{1,2}|x)$/i.test(t)) return { kind: 'chakra', value: t.toUpperCase() };
+  const element = TEXT_ICON_ELEMENTS[t.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '')];
+  return element ? { kind: 'element', element } : null;
 }
 
 /** Linhas de duração de Missão, impressas inteiras em negrito (ex.: "Permanent (3)"). */
@@ -540,7 +572,8 @@ function findClose(s: string, from: number, open: string, close: string, double:
  * escrito (sem mudar maiúsculas). As marcações podem ser combinadas (ex.: `[{trecho}]`):
  * - `[trecho]` → negrito; `{trecho}` → vermelho; `(trecho)` → azul (a marcação não aparece);
  * - dobrada (`[[trecho]]`, `{{trecho}}`, `((trecho))`) → o mesmo estilo, mostrando os símbolos;
- * - `\` antes de um símbolo o escreve normal (ex.: `Permanent \(3\)`).
+ * - `\` antes de um símbolo o escreve normal (ex.: `Permanent \(3\)`);
+ * - `~1~` (número ou X) → ícone do Chakra genérico com o valor; `~fire~` (ou `~fogo~` etc.) → símbolo do elemento.
  */
 export function parseTextBlock(line: string): TextRun[] {
   const trimmed = line.trim();
@@ -549,7 +582,7 @@ export function parseTextBlock(line: string): TextRun[] {
   const push = (text: string, style: Style) => {
     if (!text) return;
     const last = runs[runs.length - 1];
-    if (last && last.bold === style.bold && last.color === style.color) last.text += text;
+    if (last && !last.icon && last.bold === style.bold && last.color === style.color) last.text += text;
     else runs.push(style.color ? { text, bold: style.bold, color: style.color } : { text, bold: style.bold });
   };
 
@@ -564,6 +597,17 @@ export function parseTextBlock(line: string): TextRun[] {
       if (c === '\\' && i + 1 < s.length) {
         buffer += s[++i];
         continue;
+      }
+      // `~1~`, `~fire~`: ícone no meio do texto (o que não for valor nem elemento sai como foi digitado).
+      if (c === '~') {
+        const end = s.indexOf('~', i + 1);
+        const icon = end > i + 1 && end - i <= 16 ? textIcon(s.slice(i + 1, end)) : null;
+        if (icon) {
+          flush();
+          runs.push({ text: s.slice(i, end + 1), bold: style.bold, ...(style.color && { color: style.color }), icon });
+          i = end;
+          continue;
+        }
       }
       const mark = MARKS[c];
       if (mark) {
