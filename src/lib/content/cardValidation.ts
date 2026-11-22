@@ -90,6 +90,7 @@ function layoutInfo(v: unknown, layouts: ReadonlySet<string>): CardLayoutInfo {
   if (art.front !== undefined) out.art.front = placement(art.front);
   if (l.panelVariant !== undefined) out.panelVariant = str(l.panelVariant, 40, 'Design');
   if (l.nameBanner !== undefined) out.nameBanner = bool(l.nameBanner, 'Mancha do nome');
+  if (l.textDivider !== undefined) out.textDivider = bool(l.textDivider, 'Linha acima do texto');
   if (l.nameSize !== undefined) out.nameSize = num(l.nameSize, -NAME_SIZE_RANGE, NAME_SIZE_RANGE, 'Tamanho do nome');
   if (l.nameWrap !== undefined) {
     if (!NAME_WRAPS.includes(l.nameWrap as never)) fail('Quebra de linha do nome inválida.');

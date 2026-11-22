@@ -88,6 +88,8 @@ export interface CardLayoutInfo {
   panelVariant?: string;
   /** Mancha atrás do nome (layouts com o nome no topo). Sem valor: o padrão do layout. */
   nameBanner?: boolean;
+  /** Linha acima do texto de efeito. Sem valor: o padrão do layout. */
+  textDivider?: boolean;
   /**
    * Ajuste da fonte do nome, em pixels da carta, sobre o tamanho do layout: negativo diminui, positivo
    * aumenta. 0 (ou sem valor): o tamanho do layout.

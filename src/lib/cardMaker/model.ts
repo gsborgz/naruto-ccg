@@ -117,6 +117,8 @@ export interface CustomCard {
   artLinked?: boolean;
   /** Mancha preta atrás do nome (layouts com o nome no topo). Sem valor: o padrão do layout. */
   nameBanner?: boolean;
+  /** Linha acima do texto de efeito (`LayoutSpec.textDivider`). Sem valor: o padrão do layout. */
+  textDivider?: boolean;
   /**
    * Ajuste da fonte do nome, em pixels da carta, sobre o tamanho do layout (`NameStyle.size`):
    * negativo diminui, positivo aumenta. 0 (ou sem valor, nas cartas antigas): o tamanho do layout.
@@ -395,6 +397,7 @@ function withCardIcons(card: CustomCard, info: CardLayoutInfo): CustomCard {
   if (icons.type !== 'default') next.typeVariant = icons.type;
   if (info.panelVariant) next.panelVariant = info.panelVariant;
   if (info.nameBanner !== undefined) next.nameBanner = info.nameBanner;
+  if (info.textDivider !== undefined) next.textDivider = info.textDivider;
   next.nameSize = info.nameSize ?? 0;
   if (info.nameWrap) next.nameWrap = info.nameWrap;
   return next;

@@ -398,6 +398,31 @@ function EffectText({ card, spec }: PartProps) {
  */
 const FLAVOR_SHADE = '0 0 4px rgba(10,10,14,0.8), 0 0 9px rgba(10,10,14,0.6), 0 0 16px rgba(10,10,14,0.45)';
 
+/**
+ * Linha acima do texto de efeito (`LayoutSpec.textDivider`): um traço de pincel que afina nas pontas, centrado
+ * `gap` px acima do topo da caixa de texto e com a largura dela.
+ */
+function TextDivider({ card, spec }: PartProps) {
+  const box = spec.textBox[card.type];
+  const style = spec.textDivider;
+  if (!box || !style || !(card.textDivider ?? style.default)) return null;
+  const w = box.w - style.inset * 2;
+  const h = style.thickness;
+  if (w <= 0 || h <= 0) return null;
+  return (
+    <svg
+      viewBox="0 0 1000 20"
+      preserveAspectRatio="none"
+      style={{ position: 'absolute', left: box.x + style.inset, top: box.top - style.gap - h / 2, width: w, height: h, overflow: 'visible', pointerEvents: 'none' }}
+    >
+      {/* Traço principal: mais grosso no primeiro terço, afinando até as pontas. */}
+      <path d="M0,10 C60,5 260,1 450,2 C700,3 900,6 1000,10 C900,13 700,17 450,18 C260,19 60,15 0,10 Z" fill={style.color} />
+      {/* Fiapo do pincel na borda de cima. */}
+      <path d="M20,9 C200,3 500,3 980,9" fill="none" stroke={style.color} strokeWidth={1.2} opacity={0.5} vectorEffect="non-scaling-stroke" />
+    </svg>
+  );
+}
+
 function Flavor({ card, spec }: PartProps) {
   const style = spec.flavor[card.type];
   if (!card.flavor.trim()) return null;
@@ -753,6 +778,7 @@ export function CardRender({ card, width, referenceOpacity = 0, onArtMove, class
           })()}
         {type === 'jutsu' && <JutsuCost {...parts} />}
         {hasCharacteristics(type) && <Characteristics {...parts} />}
+        <TextDivider {...parts} />
         <EffectText {...parts} />
 
         {referenceOpacity > 0 && card.reference && (

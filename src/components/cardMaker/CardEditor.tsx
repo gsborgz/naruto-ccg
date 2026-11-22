@@ -643,6 +643,16 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
             Mancha preta atrás do nome
           </label>
         )}
+        {spec.textBox[type] && (
+          <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+            <input
+              type="checkbox"
+              checked={card.textDivider ?? spec.textDivider?.default ?? true}
+              onChange={(e) => set('textDivider', e.target.checked)}
+            />
+            Linha acima do texto (a posição muda em Ajustar posições)
+          </label>
+        )}
         {spec.panelVariants && spec.panelVariants.length > 0 && (
           <label className={label}>
             Design

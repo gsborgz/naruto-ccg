@@ -1,6 +1,6 @@
 import type { CardType } from '../../../models/card.ts';
 import type { LayoutId } from '../model.ts';
-import type { LayoutSpec } from './types.ts';
+import type { LayoutSpec, TextDividerStyle } from './types.ts';
 
 export * from './shared.ts';
 export * from '../icons/index.ts';
@@ -30,6 +30,9 @@ export function frameFor(spec: LayoutSpec, type: CardType, variant: string | und
 const designVariant = (spec: LayoutSpec, variant: string | undefined) =>
   variant ? spec.panelVariants?.find((v) => v.id === variant) : undefined;
 
+/** Linha acima do texto de efeito nos layouts que ainda não têm a sua (`LayoutSpec.textDivider`). */
+export const TEXT_DIVIDER_DEFAULT: TextDividerStyle = { gap: 14, inset: 0, thickness: 6, color: '#8e2a1f', default: true };
+
 /** Caminho de um ajuste de posição da carta (`CustomCard.layoutOverrides`): campos do layout separados por ponto. */
 export const LAYOUT_OVERRIDE_PATH = /^[A-Za-z][A-Za-z0-9-]*(.[A-Za-z0-9-]+){1,5}$/;
 
@@ -39,7 +42,9 @@ export const LAYOUT_OVERRIDE_PATH = /^[A-Za-z][A-Za-z0-9-]*(.[A-Za-z0-9-]+){1,5}
  * dividem o mesmo objeto no layout não mudam juntos).
  */
 export function cardLayout(card: { layout?: string; layoutOverrides?: Record<string, number> }): LayoutSpec {
-  const base = getLayout(card.layout);
+  const loaded = getLayout(card.layout);
+  // Layouts gravados antes da linha acima do texto ficam com a padrão (e o ajuste da carta vale nela também).
+  const base = loaded.textDivider ? loaded : { ...loaded, textDivider: TEXT_DIVIDER_DEFAULT };
   const overrides = card.layoutOverrides;
   if (!overrides) return base;
   let spec: LayoutSpec | null = null;

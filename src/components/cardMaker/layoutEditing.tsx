@@ -291,6 +291,21 @@ export function layoutHandles(spec: LayoutSpec, card: CustomCard): Handle[] {
     });
   }
 
+  // Linha acima do texto: só o centro vertical (gap) e a largura (inset, igual dos dois lados) mudam; segue a caixa de texto.
+  const divider = spec.textDivider;
+  if (text && divider) {
+    const h = Math.max(divider.thickness, 8);
+    out.push({
+      ...base,
+      id: 'textDivider',
+      label: 'Linha acima do texto',
+      section: 'textDivider',
+      box: { x: text.x + divider.inset, y: text.top - divider.gap - h / 2, w: text.w - divider.inset * 2, h },
+      move: [{ path: ['textDivider', 'gap'], axis: 'y', k: -1 }],
+      resize: [{ path: ['textDivider', 'inset'], axis: 'x', k: -0.5 }],
+    });
+  }
+
   const flavor = spec.flavor[t];
   const fh = flavor.lineHeight * 3;
   out.push({

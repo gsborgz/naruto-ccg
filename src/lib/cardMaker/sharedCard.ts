@@ -151,6 +151,7 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
     const optional = {
       artLinked: optBool(x.artLinked),
       nameBanner: optBool(x.nameBanner),
+      textDivider: optBool(x.textDivider),
       nameSize: x.nameSize === undefined ? undefined : num(x.nameSize, -200, 200),
       nameWrap: x.nameWrap === 'single' || x.nameWrap === 'break' || x.nameWrap === 'auto' ? x.nameWrap : undefined,
       panelVariant: optStr(x.panelVariant, 40),

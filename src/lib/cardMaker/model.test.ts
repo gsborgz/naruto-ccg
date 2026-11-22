@@ -14,6 +14,7 @@ import {
   typeIconVariants,
   getLayout,
   cardLayout,
+  TEXT_DIVIDER_DEFAULT,
 } from './layouts/index.ts';
 
 const L1 = getLayout('layout-01');
@@ -414,7 +415,10 @@ test('posições ajustadas só na carta: mudam o layout dela, não o layout carr
   // O layout carregado (o de todas as cartas) não muda.
   assert.equal(getLayout('layout-01').name.ninja.cy, cy);
   assert.equal(getLayout('layout-01').cost.ninja.entrance.x, x);
-  assert.equal(cardLayout(card), L1);
+  assert.equal(cardLayout(card).name, L1.name);
+  // Layout sem a linha acima do texto: a padrão; o ajuste da carta vale nela.
+  assert.deepEqual(cardLayout(card).textDivider, L1.textDivider ?? TEXT_DIVIDER_DEFAULT);
+  assert.equal(cardLayout({ ...card, layoutOverrides: { 'textDivider.gap': 30 } }).textDivider?.gap, 30);
   // Trocar de layout apaga os ajustes; continuar no mesmo layout mantém.
   assert.equal(withLayout(adjusted, 'layout-02').layoutOverrides, undefined);
   assert.deepEqual(withLayout(adjusted, 'layout-01').layoutOverrides, adjusted.layoutOverrides);

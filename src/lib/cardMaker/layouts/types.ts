@@ -90,6 +90,22 @@ export interface TextBoxStyle {
   weight?: number;
 }
 
+/**
+ * Linha que separa o texto de efeito do nome e das características (traço de pincel), sempre logo acima da caixa de
+ * texto: acompanha a posição e a largura dela (`TextBoxStyle`).
+ */
+export interface TextDividerStyle {
+  /** Distância do centro da linha ao topo da caixa de texto. */
+  gap: number;
+  /** Quanto a linha fica mais curta que a caixa de texto, de cada lado (negativo: mais comprida). */
+  inset: number;
+  /** Espessura no meio do traço (as pontas afinam). */
+  thickness: number;
+  color: string;
+  /** Vem ligada nas cartas do layout (a carta pode ligar ou desligar: `CustomCard.textDivider`). */
+  default: boolean;
+}
+
 export interface FlavorStyle {
   x: number;
   w: number;
@@ -170,6 +186,8 @@ export interface LayoutSpec {
    * A carta pode ligar ou desligar (`CustomCard.nameBanner`).
    */
   nameBanner?: { cx: number; cy: number; w: number; default: boolean };
+  /** Linha acima do texto de efeito. Sem valor: `TEXT_DIVIDER_DEFAULT` (layouts/index.ts). */
+  textDivider?: TextDividerStyle;
   /** Ícones de custo usados pelo layout (aplicados ao escolher o layout). */
   defaults: { entranceIcon: EntranceIcon; handIcon: HandIcon };
 }
