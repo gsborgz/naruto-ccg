@@ -44,6 +44,9 @@ function useSize<T extends HTMLElement>() {
 /** Espaço sob a prévia (comparar com a original, ajustar posições, aviso e botões). */
 const PREVIEW_CONTROLS = 150;
 
+/** Caixas que a alter pode ajustar (os dados e os textos são os da carta): a do texto de efeito e a das características. */
+const ALTER_BOXES = ['textBox', 'characteristics'];
+
 const button = 'rounded-lg px-4 py-2 font-semibold text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text';
 
 /** Conteúdo da carta para saber se o rascunho mudou (as datas não contam). */
@@ -329,9 +332,10 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
           {draft && (
             <div className="flex flex-col gap-3">
               <div ref={previewRef} className="w-full">
-                {positions && !isAlter ? (
+                {positions ? (
                   <CardPositionEditor
                     card={draft}
+                    only={isAlter ? ALTER_BOXES : undefined}
                     width={width}
                     referenceOpacity={reference}
                     onChange={(update) => setDraft((d) => d && update(d))}
@@ -361,16 +365,20 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
                 </label>
               )}
               {downloadFailed && <p className="text-xs text-danger">Não foi possível gerar a imagem da carta.</p>}
-              {!isAlter && (
+              {(
                 <div className="flex flex-wrap items-center gap-2 text-xs">
                   <button
                     type="button"
                     onClick={() => setPositions((p) => !p)}
                     aria-pressed={positions}
-                    title="Arraste os elementos na carta (o canto muda o tamanho; as setas movem o selecionado). Vale só para esta carta: o layout não muda."
+                    title={
+                      isAlter
+                        ? 'Ajuste a caixa do texto e a das características na carta (o canto muda o tamanho). Vale só para esta alter: o layout não muda.'
+                        : 'Arraste os elementos na carta (o canto muda o tamanho; as setas movem o selecionado). Vale só para esta carta: o layout não muda.'
+                    }
                     className={`rounded-lg px-3 py-1.5 font-semibold ring-1 ${positions ? 'bg-accent/15 text-accent ring-accent' : 'text-muted ring-border hover:bg-surface-2 hover:text-text'}`}
                   >
-                    {positions ? 'Concluir posições' : 'Ajustar posições'}
+                    {positions ? 'Concluir' : isAlter ? 'Ajustar caixas de texto' : 'Ajustar posições'}
                   </button>
                   {overrideCount(draft) > 0 && (
                     <>

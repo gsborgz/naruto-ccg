@@ -139,4 +139,25 @@ export interface CombatAttributeIconConfig extends CreatedIconFields {
   };
   /** Kanji: tamanho e deslocamento vertical em frações do raio; `text*` para o kanji digitado (cartas antigas). */
   kanji: { size: number; dy: number; textSize: number; textColor: string; textStroke: string };
+  /**
+   * Dois atributos: os dois kanjis lado a lado, com "/" entre eles, e os nomes um acima do outro (com 3 ou mais, só os
+   * nomes). Sem valor (ícones gravados antes): `ATTRIBUTE_PAIR_DEFAULT`.
+   */
+  pair?: AttributePairStyle;
+}
+
+/** Medidas do Atributo de Combate com dois atributos, em frações do raio do círculo (`CombatAttributeIconConfig.pair`). */
+export interface AttributePairStyle {
+  /** Tamanho de cada kanji. */
+  kanjiSize: number;
+  /** Distância entre os centros dos dois kanjis. */
+  kanjiGap: number;
+  /** Centro dos kanjis em relação ao centro do círculo (negativo: para cima). */
+  kanjiDy: number;
+  /** Tamanho da "/" entre os kanjis. */
+  slashSize: number;
+  /** Centro do bloco dos dois nomes em relação ao centro do círculo. */
+  labelDy: number;
+  /** Fonte dos nomes em relação à de um atributo só (`label.size`). */
+  labelScale: number;
 }

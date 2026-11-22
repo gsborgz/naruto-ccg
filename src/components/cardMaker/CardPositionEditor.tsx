@@ -15,15 +15,18 @@ export function CardPositionEditor({
   card,
   width,
   referenceOpacity = 0,
+  only,
   onChange,
 }: {
   card: CustomCard;
   width: number;
   referenceOpacity?: number;
+  /** Só estas caixas (ids de `layoutHandles`, ex.: `textBox`); sem valor, todas. */
+  only?: readonly string[];
   onChange: (update: (card: CustomCard) => CustomCard) => void;
 }) {
   const spec = cardLayout(card);
-  const handles = layoutHandles(spec, card);
+  const handles = layoutHandles(spec, card).filter((h) => !only || only.includes(h.id));
   const [selected, setSelected] = useState<string | null>(null);
   const selectedHandle = handles.find((h) => h.id === selected);
   const scale = width / CARD_W;

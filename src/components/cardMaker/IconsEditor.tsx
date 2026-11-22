@@ -218,7 +218,10 @@ function hostFor(c: IconChoice): string {
 }
 
 /** Carta de exemplo que mostra o ícone, no layout escolhido. */
-function sampleCard(c: IconChoice, layout: LayoutId): CustomCard {
+/** Atributos da carta de exemplo do Atributo de Combate, por quantidade (1, 2 ou 3). */
+const SAMPLE_ATTRIBUTES: Record<number, string> = { 1: 'Ninjutsu', 2: 'Ninjutsu/Taijutsu', 3: 'Ninjutsu/Taijutsu/Genjutsu' };
+
+function sampleCard(c: IconChoice, layout: LayoutId, attributes = 1): CustomCard {
   const type = cardTypeFor(c);
   const base = withLayoutIcons(withLayout({ ...newCustomCard(type, '2026-01-01T00:00:00.000Z'), name: 'Exemplo' }, layout));
   const card: CustomCard = {
@@ -227,7 +230,7 @@ function sampleCard(c: IconChoice, layout: LayoutId): CustomCard {
     handCost: '2',
     healthy: '5/3',
     injured: '2/1',
-    attribute: { ...base.attribute, label: 'Ninjutsu' },
+    attribute: { ...base.attribute, label: SAMPLE_ATTRIBUTES[attributes] ?? 'Ninjutsu' },
     jutsuCost: { symbols: ['fire'], generic: '2' },
   };
   if (c.group === 'type-variant') card.typeVariant = c.id.split('-').slice(1).join('-');
@@ -335,7 +338,9 @@ export function IconsEditor({ editor, initial }: { editor: ConfigEditor; initial
   const layouts = LAYOUT_LIST.filter((l) => l.types.includes(type));
   const [layoutId, setLayoutId] = useState<LayoutId>('layout-02');
   const layout = layouts.some((l) => l.id === layoutId) ? layoutId : (layouts[0]?.id ?? 'layout-01');
-  const card = useMemo(() => sampleCard(selected, layout), [selected, layout]);
+  // Quantos atributos a carta de exemplo tem (Atributo de Combate): 1 (kanji e nome), 2 (dois kanjis) ou 3 (só os nomes).
+  const [attributes, setAttributes] = useState(1);
+  const card = useMemo(() => sampleCard(selected, layout, attributes), [selected, layout, attributes]);
   const [width, setWidth] = useState(520);
   const entry = icons.find((i) => choiceKey(i.choice) === choiceKey(selected));
   const size = useImageSize(entry?.url);
@@ -403,6 +408,16 @@ export function IconsEditor({ editor, initial }: { editor: ConfigEditor; initial
               ))}
             </select>
           </label>
+          {selected.group === 'attribute' && (
+            <label className="flex items-center gap-2">
+              Atributos no exemplo
+              <select value={attributes} onChange={(e) => setAttributes(Number(e.target.value))} className={selectClass}>
+                <option value={1}>1 (kanji e nome)</option>
+                <option value={2}>2 (dois kanjis e os nomes)</option>
+                <option value={3}>3 (só os nomes)</option>
+              </select>
+            </label>
+          )}
           <label className="flex items-center gap-2">
             Tamanho
             <input type="range" min={300} max={900} step={10} value={width} onChange={(e) => setWidth(Number(e.target.value))} />

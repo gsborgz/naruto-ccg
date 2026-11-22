@@ -90,6 +90,8 @@ export interface CardLayoutInfo {
   nameBanner?: boolean;
   /** Linha acima do texto de efeito. Sem valor: o padrão do layout. */
   textDivider?: boolean;
+  /** Posições ajustadas só nesta carta, por cima do layout (`CustomCard.layoutOverrides`; ex.: caixas de texto da alter). */
+  layoutOverrides?: Record<string, number>;
   /**
    * Ajuste da fonte do nome, em pixels da carta, sobre o tamanho do layout: negativo diminui, positivo
    * aumenta. 0 (ou sem valor): o tamanho do layout.

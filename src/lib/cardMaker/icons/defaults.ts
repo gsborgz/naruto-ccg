@@ -1,4 +1,4 @@
-import type { CombatAttributeIconConfig, IconNumberStyle, IconSideLabel } from './types.ts';
+import type { CombatAttributeIconConfig, IconNumberStyle, IconSideLabel, AttributePairStyle } from './types.ts';
 
 /** Pasta pública dos ícones (gerada por `npm run cards:layouts`). */
 export const ICON_ASSETS = '/card-layouts/icons';
@@ -31,6 +31,16 @@ export const NUMBER_STYLE: Pick<IconNumberStyle, 'color' | 'stroke'> = { color: 
 export const ATTRIBUTE_SHADOW = { color: 'rgba(20, 10, 4, 0.9)', tight: 0.06, soft: 0.2 };
 
 /** Atributo de Combate: o que é igual em todas as molduras. */
+/** Dois atributos, nos ícones que ainda não têm medidas próprias (`CombatAttributeIconConfig.pair`). */
+export const ATTRIBUTE_PAIR_DEFAULT: AttributePairStyle = {
+  kanjiSize: 0.95,
+  kanjiGap: 0.95,
+  kanjiDy: -0.2,
+  slashSize: 0.75,
+  labelDy: 0.56,
+  labelScale: 0.8,
+};
+
 export const ATTRIBUTE_TEXT_STYLE: {
   power: Pick<CombatAttributeIconConfig['power'], 'strokeWidth' | 'color' | 'stroke'>;
   label: Pick<CombatAttributeIconConfig['label'], 'color' | 'stroke' | 'multiMax' | 'dyWithKanji'>;

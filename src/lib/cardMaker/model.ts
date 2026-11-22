@@ -398,6 +398,7 @@ function withCardIcons(card: CustomCard, info: CardLayoutInfo): CustomCard {
   if (info.panelVariant) next.panelVariant = info.panelVariant;
   if (info.nameBanner !== undefined) next.nameBanner = info.nameBanner;
   if (info.textDivider !== undefined) next.textDivider = info.textDivider;
+  if (info.layoutOverrides) next.layoutOverrides = { ...info.layoutOverrides };
   next.nameSize = info.nameSize ?? 0;
   if (info.nameWrap) next.nameWrap = info.nameWrap;
   return next;

@@ -567,6 +567,8 @@ function CombatAttribute({ card, spec }: PartProps) {
   // (o texto digitado só vale para cartas antigas cujo nome não tem imagem).
   const labelLines = attributeNames(label);
   const single = labelLines.length <= 1;
+  // Dois atributos com imagem de kanji: os dois kanjis lado a lado ("/" no meio) e os nomes um acima do outro.
+  const pairUrls = labelLines.length === 2 ? attributeKanjiUrls(label) : null;
   const kanjiUrl = single ? attributeKanjiUrls(label)?.[0] : undefined;
   const legacyKanji = single && !kanjiUrl ? kanji : undefined;
   const hasKanji = Boolean(kanjiUrl || legacyKanji);
@@ -583,6 +585,61 @@ function CombatAttribute({ card, spec }: PartProps) {
   // Sombra do kanji (imagem): segue o contorno do desenho. Do texto: `text-shadow` com as mesmas medidas.
   const imageShadow = `drop-shadow(0 0 ${tight}px ${shadow.color}) drop-shadow(0 0 ${soft}px ${shadow.color})`;
   const textShadow = `0 0 ${tight}px ${shadow.color}, 0 0 ${soft}px ${shadow.color}`;
+  if (pairUrls) {
+    const p = icon.pair;
+    const size = circle.r * p.kanjiSize;
+    const cy = circle.cy + circle.r * p.kanjiDy;
+    const half = (circle.r * p.kanjiGap) / 2;
+    return (
+      <>
+        <Img src={icon.url} x={box.x} y={box.y} w={box.w} h={box.h} />
+        {pairUrls.map((url, i) => (
+          <Img key={i} src={url} x={circle.cx + (i ? half : -half) - size / 2} y={cy - size / 2} w={size} h={size} style={{ filter: imageShadow }} />
+        ))}
+        <div
+          style={{
+            position: 'absolute',
+            left: circle.cx,
+            top: cy,
+            transform: 'translate(-50%, -50%)',
+            fontFamily: BODY_FONT,
+            fontWeight: 700,
+            fontSize: circle.r * p.slashSize,
+            lineHeight: 1,
+            color: icon.label.color,
+            textShadow,
+            ...(icon.label.strokeWidth > 0 ? stroke(icon.label.stroke, icon.label.strokeWidth * 2) : {}),
+          }}
+        >
+          /
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            left: circle.cx,
+            top: circle.cy + circle.r * p.labelDy,
+            transform: 'translate(-50%, -50%)',
+            textAlign: icon.label.align ?? 'center',
+            fontFamily: BODY_FONT,
+            fontWeight: 700,
+            fontSize: labelSize * p.labelScale,
+            textTransform: icon.label.uppercase ? 'uppercase' : undefined,
+            letterSpacing: 0.3,
+            lineHeight: 1.1,
+            whiteSpace: 'pre',
+            color: icon.label.color,
+            textShadow,
+            ...(icon.label.strokeWidth > 0 ? stroke(icon.label.stroke, icon.label.strokeWidth * 2) : {}),
+          }}
+        >
+          {labelLines.join('\n')}
+        </div>
+        <OutlinedNumber number={icon.healthy} text={card.healthy} />
+        <OutlinedNumber number={icon.injured} text={card.injured} rotate={-90} />
+      </>
+    );
+  }
+
   return (
     <>
       <Img src={icon.url} x={box.x} y={box.y} w={box.w} h={box.h} />

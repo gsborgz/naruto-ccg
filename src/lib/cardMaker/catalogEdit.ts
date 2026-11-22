@@ -80,6 +80,7 @@ function visualLayout(original: Card, draft: CustomCard, type: Card['type']): Ca
   if (draft.panelVariant) layout.panelVariant = draft.panelVariant;
   if (draft.nameBanner !== undefined) layout.nameBanner = draft.nameBanner;
   if (draft.textDivider !== undefined) layout.textDivider = draft.textDivider;
+  if (draft.layoutOverrides && Object.keys(draft.layoutOverrides).length) layout.layoutOverrides = { ...draft.layoutOverrides };
   if (draft.nameSize) layout.nameSize = draft.nameSize;
   if (draft.nameWrap && draft.nameWrap !== 'auto') layout.nameWrap = draft.nameWrap;
   if (draft.flavorShade === false) layout.flavorShade = false;

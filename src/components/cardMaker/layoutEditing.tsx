@@ -14,6 +14,8 @@ import {
   TYPE_ICONS,
   TYPE_ICON_VARIANTS,
   attributeIcon,
+  attributeKanjiUrls,
+  attributeNames,
   costArt,
   costIcon,
   elementBox,
@@ -472,6 +474,59 @@ export function iconHandles(spec: LayoutSpec, card: CustomCard, c: IconChoice, h
       ],
       resize: [{ path: ['power', 'size'], axis: 'y', k: 1 / k }],
     });
+    // Dois atributos (com as imagens dos kanjis): as caixas do par no lugar das de um atributo só.
+    const pairMode = attributeNames(card.attribute.label).length === 2 && !!attributeKanjiUrls(card.attribute.label);
+    const p = a.pair;
+    const pairSize = r * p.kanjiSize;
+    const pairCy = cy + r * p.kanjiDy;
+    const pairW = r * p.kanjiGap + pairSize;
+    const pairLabelH = a.label.size * p.labelScale * 1.1 * 2;
+    const pairLabelCy = cy + r * p.labelDy;
+    const textHandles: Handle[] = pairMode
+      ? [
+          {
+            ...base,
+            id: 'icon-pair-kanji',
+            label: 'Dois kanjis (kanjiDy; canto: kanjiGap e kanjiSize)',
+            section: 'pair',
+            box: { x: cx - pairW / 2, y: pairCy - pairSize / 2, w: pairW, h: pairSize },
+            move: [{ path: ['pair', 'kanjiDy'], axis: 'y', k: 1 / r }],
+            resize: [
+              { path: ['pair', 'kanjiGap'], axis: 'x', k: 1 / r },
+              { path: ['pair', 'kanjiSize'], axis: 'y', k: 1 / r },
+            ],
+          },
+          {
+            ...base,
+            id: 'icon-pair-label',
+            label: 'Dois nomes (labelDy; canto: labelScale)',
+            section: 'pair',
+            box: { x: cx - r * 0.8, y: pairLabelCy - pairLabelH / 2, w: r * 1.6, h: pairLabelH },
+            move: [{ path: ['pair', 'labelDy'], axis: 'y', k: 1 / r }],
+            resize: [{ path: ['pair', 'labelScale'], axis: 'y', k: 1 / (2.2 * a.label.size) }],
+          },
+        ]
+      : [
+          {
+            ...base,
+            id: 'icon-kanji',
+            label: 'Kanji (dy, size)',
+            section: 'kanji',
+            box: { x: cx - kanjiSize / 2, y: kanjiCy - kanjiSize / 2, w: kanjiSize, h: kanjiSize },
+            move: [{ path: ['kanji', 'dy'], axis: 'y', k: 1 / r }],
+            resize: [{ path: ['kanji', 'size'], axis: 'y', k: 1 / r }],
+          },
+          {
+            // Com 1 atributo; com 2 ou 3 linhas o nome usa dyWithKanji[1] e [2] (editáveis nos campos).
+            ...base,
+            id: 'icon-attr-label',
+            label: 'Nome do atributo (dyWithKanji[0], size)',
+            section: 'label',
+            box: { x: cx - r * 0.8, y: labelCy - labelH / 2, w: r * 1.6, h: labelH },
+            move: [{ path: ['label', 'dyWithKanji', '0'], axis: 'y', k: 1 / r }],
+            resize: [{ path: ['label', 'size'], axis: 'y', k: 1 / (1.1 * k) }],
+          },
+        ];
     return [
       {
         ...base,
@@ -487,25 +542,7 @@ export function iconHandles(spec: LayoutSpec, card: CustomCard, c: IconChoice, h
       },
       point('healthy', 'Força (saudável)', a.healthy),
       point('injured', 'Força (ferido)', a.injured),
-      {
-        ...base,
-        id: 'icon-kanji',
-        label: 'Kanji (dy, size)',
-        section: 'kanji',
-        box: { x: cx - kanjiSize / 2, y: kanjiCy - kanjiSize / 2, w: kanjiSize, h: kanjiSize },
-        move: [{ path: ['kanji', 'dy'], axis: 'y', k: 1 / r }],
-        resize: [{ path: ['kanji', 'size'], axis: 'y', k: 1 / r }],
-      },
-      {
-        // Com 1 atributo; com 2 ou 3 linhas o nome usa dyWithKanji[1] e [2] (editáveis nos campos).
-        ...base,
-        id: 'icon-attr-label',
-        label: 'Nome do atributo (dyWithKanji[0], size)',
-        section: 'label',
-        box: { x: cx - r * 0.8, y: labelCy - labelH / 2, w: r * 1.6, h: labelH },
-        move: [{ path: ['label', 'dyWithKanji', '0'], axis: 'y', k: 1 / r }],
-        resize: [{ path: ['label', 'size'], axis: 'y', k: 1 / (1.1 * k) }],
-      },
+      ...textHandles,
     ];
   }
   return [];
@@ -602,6 +639,13 @@ const FIELD_LABELS: Record<string, string> = {
   top: 'topo',
   gap: 'espaço entre blocos (na linha acima do texto: distância até o texto)',
   textDivider: 'linha acima do texto',
+  pair: 'dois atributos (kanjis lado a lado, nomes um acima do outro)',
+  kanjiSize: 'tamanho de cada kanji',
+  kanjiGap: 'distância entre os kanjis',
+  kanjiDy: 'posição dos kanjis',
+  slashSize: 'tamanho da "/"',
+  labelDy: 'posição dos nomes',
+  labelScale: 'fonte dos nomes (× a de um atributo)',
   inset: 'recuo dos lados',
   thickness: 'espessura',
   default: 'ligada por padrão',
