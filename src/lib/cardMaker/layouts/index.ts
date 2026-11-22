@@ -44,7 +44,8 @@ export const LAYOUT_OVERRIDE_PATH = /^[A-Za-z][A-Za-z0-9-]*(.[A-Za-z0-9-]+){1,5}
 export function cardLayout(card: { layout?: string; layoutOverrides?: Record<string, number> }): LayoutSpec {
   const loaded = getLayout(card.layout);
   // Layouts gravados antes da linha acima do texto ficam com a padrão (e o ajuste da carta vale nela também).
-  const base = loaded.textDivider ? loaded : { ...loaded, textDivider: TEXT_DIVIDER_DEFAULT };
+  // Cópia do padrão: um objeto dividido entre layouts faria uma edição num valer em todos.
+  const base = loaded.textDivider ? loaded : { ...loaded, textDivider: { ...TEXT_DIVIDER_DEFAULT } };
   const overrides = card.layoutOverrides;
   if (!overrides) return base;
   let spec: LayoutSpec | null = null;
