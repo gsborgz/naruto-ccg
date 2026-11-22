@@ -165,7 +165,7 @@ export default function CardMakerPage() {
   /**
    * Importa a carta do catálogo escolhida. `new`: uma carta nova com os dados dela, tudo editável e sem ligação com a do
    * catálogo (a imagem original fica só para comparar). `alter`: ligada à carta do catálogo (`source`), com os dados
-   * travados; só as artes mudam (começa sem arte).
+   * travados; mudam o layout, a moldura do Atributo de Combate e as artes (começa sem arte).
    */
   const importAs = (kind: 'new' | 'alter') => {
     if (!importChoice) return;
@@ -244,9 +244,12 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
           <Link href="/criar/layouts" className={button}>
             Editar layouts
           </Link>
-          <button type="button" onClick={() => setImporting(true)} className={button}>
-            Importar do catálogo
-          </button>
+          {/* Some enquanto uma carta nova (ainda não salva) está aberta. */}
+          {!isNew && (
+            <button type="button" onClick={() => setImporting(true)} className={button}>
+              Importar do catálogo
+            </button>
+          )}
           <button
             type="button"
             onClick={() =>
@@ -440,7 +443,7 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
             <button type="button" onClick={() => importAs('alter')} className={`${button} text-left`}>
               Criar uma alter para ela
               <span className="block text-xs font-normal">
-                Os dados, os textos e o layout ficam travados; você envia só as artes novas. No montador de deck, a alter
+                Os dados e os textos ficam travados; você escolhe o layout e a moldura do Atributo de Combate e envia as artes novas. No montador de deck, a alter
                 pode ser escolhida como o design da carta.
               </span>
             </button>

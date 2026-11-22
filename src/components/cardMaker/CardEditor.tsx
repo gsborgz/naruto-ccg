@@ -392,8 +392,8 @@ interface Props {
   artLayer: ArtLayer;
   onArtLayerChange: (layer: ArtLayer) => void;
   /**
-   * `alter`: a carta é uma alter de uma carta do catálogo (`source`): os dados, os textos e o layout ficam travados
-   * (os da carta); só as artes (fundo e frente, com o enquadramento) mudam.
+   * `alter`: a carta é uma alter de uma carta do catálogo (`source`): os dados e os textos ficam travados
+   * (os da carta); mudam o layout, a moldura do Atributo de Combate e as artes (fundo e frente, com o enquadramento).
    */
   mode?: 'full' | 'alter';
 }
@@ -484,10 +484,39 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
     return (
       <div className="flex flex-col gap-4">
         <p className="rounded-lg bg-surface-2 px-3 py-2 text-sm text-muted">
-          <strong className="text-text">Alter</strong> de uma carta do catálogo: os dados, os textos e o layout são os da
-          carta. Envie as artes novas e enquadre na prévia. No montador de deck, a alter pode ser escolhida como o design
+          <strong className="text-text">Alter</strong> de uma carta do catálogo: os dados e os textos são os da carta. Escolha
+          o layout, envie as artes novas e enquadre na prévia. No montador de deck, a alter pode ser escolhida como o design
           da carta.
         </p>
+        <Section title="Design">
+          <label className={label}>
+            Layout
+            <select className={input} value={spec.id} onChange={(e) => onChange(withLayout(card, e.target.value as LayoutId))}>
+              {/* Só os layouts que têm o tipo da carta (a alter não muda o tipo). */}
+              {LAYOUT_LIST.filter((l) => l.types.includes(type)).map((l) => (
+                <option key={l.id} value={l.id}>
+                  {l.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          {type === 'ninja' && (
+            <label className={label}>
+              Moldura do Atributo de Combate
+              <select
+                className={input}
+                value={card.attribute.frame}
+                onChange={(e) => set('attribute', { ...card.attribute, frame: e.target.value as CustomCard['attribute']['frame'] })}
+              >
+                {attributeFrames().map((f) => (
+                  <option key={f} value={f}>
+                    Kunai {f}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+        </Section>
         <Section title="Arte">{artControls}</Section>
       </div>
     );
