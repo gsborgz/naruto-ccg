@@ -16,7 +16,7 @@ import {
   MAX_ATTRIBUTES,
   attributeNames,
   elementVariants,
-  getLayout,
+  cardLayout,
   typeIconVariants,
 } from '@/lib/cardMaker/layouts';
 import {
@@ -402,7 +402,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
   const set = <K extends keyof CustomCard>(key: K, value: CustomCard[K]) =>
     onChange({ ...card, [key]: value });
   const type = card.type;
-  const spec = getLayout(card.layout);
+  const spec = cardLayout(card);
   const baseNameSize = spec.name[type].size;
   const nameSize = card.nameSize ?? 0;
 

@@ -115,6 +115,10 @@ test('cartas criadas na sala: campos desconhecidos e a referência do catálogo 
   // A carta de origem (artes alternativas) passa, se for um id de carta.
   assert.equal(parseSharedCustomCard({ ...custom('z'), source: 'fx-n-001' })?.source, 'fx-n-001');
   assert.equal(parseSharedCustomCard({ ...custom('z'), source: '../x' }), null);
+  // Posições ajustadas só na carta: caminhos de campo e números.
+  assert.deepEqual(parseSharedCustomCard({ ...custom('z'), layoutOverrides: { 'name.ninja.cy': 80 } })?.layoutOverrides, { 'name.ninja.cy': 80 });
+  assert.equal(parseSharedCustomCard({ ...custom('z'), layoutOverrides: { __proto__x: 1 } }), null);
+  assert.equal(parseSharedCustomCard({ ...custom('z'), layoutOverrides: { 'name.ninja.cy': 'a' } }), null);
 });
 
 test('cartas criadas na sala: entram na partida com as regras de cada uma', () => {

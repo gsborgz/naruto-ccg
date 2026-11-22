@@ -1,5 +1,6 @@
 import { ELEMENT_LABEL, type CardType, type ElementSymbol } from '../../models/card.ts';
 import { customDeckCardId } from './customIds.ts';
+import { LAYOUT_OVERRIDE_PATH } from './layouts/index.ts';
 import {
   MAX_VILLAGES,
   VILLAGES,
@@ -160,6 +161,18 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
       source: x.source === undefined ? undefined : catalogId(x.source),
     };
     for (const [k, v] of Object.entries(optional)) if (v !== undefined) (card as unknown as Rec)[k] = v;
+    if (x.layoutOverrides !== undefined) {
+      const raw = x.layoutOverrides;
+      if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Invalid();
+      const entries = Object.entries(raw as Rec);
+      if (entries.length > 80) throw new Invalid();
+      const overrides: Record<string, number> = {};
+      for (const [path, v] of entries) {
+        if (path.length > 80 || !LAYOUT_OVERRIDE_PATH.test(path)) throw new Invalid();
+        overrides[path] = num(v, -5000, 5000);
+      }
+      if (entries.length) card.layoutOverrides = overrides;
+    }
     return card;
   } catch (e) {
     if (e instanceof Invalid) return null;

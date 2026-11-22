@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { CardEditor } from '@/components/cardMaker/CardEditor';
 import { CardRender } from '@/components/cardMaker/CardRender';
+import { CardPositionEditor, overrideCount } from '@/components/cardMaker/CardPositionEditor';
 import { CARD_H, CARD_W } from '@/lib/cardMaker/layouts';
 import { CatalogImportDialog, importCatalogCard } from '@/components/cardMaker/CatalogImportDialog';
 import { Dialog } from '@/components/Dialog';
@@ -40,8 +41,8 @@ function useSize<T extends HTMLElement>() {
   return [ref, size] as const;
 }
 
-/** Espaço sob a prévia (comparar com a original, aviso e botões). */
-const PREVIEW_CONTROLS = 110;
+/** Espaço sob a prévia (comparar com a original, ajustar posições, aviso e botões). */
+const PREVIEW_CONTROLS = 150;
 
 const button = 'rounded-lg px-4 py-2 font-semibold text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text';
 
@@ -72,6 +73,8 @@ export default function CardMakerPage() {
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [reference, setReference] = useState(0);
+  // Ajustar posições: caixas arrastáveis na prévia, que mudam só esta carta (`layoutOverrides`), não o layout.
+  const [positions, setPositions] = useState(false);
   // Camada que o arrastar move quando as duas camadas de arte não estão ligadas.
   const [artLayer, setArtLayer] = useState<ArtLayer>('back');
   // Baixar: monta a carta fora da tela no tamanho cheio (750×1050) e exporta em 2×.
@@ -323,13 +326,22 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
           {draft && (
             <div className="flex flex-col gap-3">
               <div ref={previewRef} className="w-full">
-                <CardRender
-                  card={draft}
-                  width={width}
-                  referenceOpacity={reference}
-                  onArtMove={(dx, dy) => setDraft((d) => d && moveArt(d, artLayer, dx, dy))}
-                  className="mx-auto shadow-2xl"
-                />
+                {positions && !isAlter ? (
+                  <CardPositionEditor
+                    card={draft}
+                    width={width}
+                    referenceOpacity={reference}
+                    onChange={(update) => setDraft((d) => d && update(d))}
+                  />
+                ) : (
+                  <CardRender
+                    card={draft}
+                    width={width}
+                    referenceOpacity={reference}
+                    onArtMove={(dx, dy) => setDraft((d) => d && moveArt(d, artLayer, dx, dy))}
+                    className="mx-auto shadow-2xl"
+                  />
+                )}
               </div>
               {draft.reference && (
                 <label className="flex items-center gap-3 text-xs font-semibold text-muted">
@@ -346,6 +358,31 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
                 </label>
               )}
               {downloadFailed && <p className="text-xs text-danger">Não foi possível gerar a imagem da carta.</p>}
+              {!isAlter && (
+                <div className="flex flex-wrap items-center gap-2 text-xs">
+                  <button
+                    type="button"
+                    onClick={() => setPositions((p) => !p)}
+                    aria-pressed={positions}
+                    title="Arraste os elementos na carta (o canto muda o tamanho; as setas movem o selecionado). Vale só para esta carta: o layout não muda."
+                    className={`rounded-lg px-3 py-1.5 font-semibold ring-1 ${positions ? 'bg-accent/15 text-accent ring-accent' : 'text-muted ring-border hover:bg-surface-2 hover:text-text'}`}
+                  >
+                    {positions ? 'Concluir posições' : 'Ajustar posições'}
+                  </button>
+                  {overrideCount(draft) > 0 && (
+                    <>
+                      <span className="text-muted">{overrideCount(draft)} ajuste(s) só nesta carta</span>
+                      <button
+                        type="button"
+                        onClick={() => setDraft((d) => d && (({ layoutOverrides: _o, ...rest }) => rest)(d))}
+                        className="text-accent hover:underline"
+                      >
+                        Voltar às do layout
+                      </button>
+                    </>
+                  )}
+                </div>
+              )}
               <div className="flex gap-2">
                 <button
                   type="button"

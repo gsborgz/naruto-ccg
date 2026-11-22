@@ -14,7 +14,7 @@ import {
   chakraIcon,
   costIcon,
   elementIcon,
-  getLayout,
+  cardLayout,
   frameFor,
   panelFor,
   typeIcon,
@@ -689,7 +689,8 @@ function Art({ card, onArtMove, scale }: { card: CustomCard; onArtMove?: Props['
  */
 export function CardRender({ card, width, referenceOpacity = 0, onArtMove, className }: Props) {
   const scale = width / CARD_W;
-  const spec = getLayout(card.layout);
+  // O layout com as posições ajustadas só nesta carta.
+  const spec = cardLayout(card);
   const type = card.type;
   const frame = frameFor(spec, type, card.panelVariant);
   const panel = panelFor(spec, type, card.panelVariant);

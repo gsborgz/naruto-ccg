@@ -131,6 +131,12 @@ export interface CustomCard {
   /** Imagem da carta original, quando importada do catálogo (para comparar o mapeamento). */
   reference?: string;
   /**
+   * Posições ajustadas só nesta carta (**Ajustar posições** no criador), por cima da configuração do layout: caminho
+   * do campo no layout (ex.: `name.ninja.cy`, `cost.ninja.entrance.x`) → valor, em pixels da carta. O layout não
+   * muda (`cardLayout` em layouts/index.ts aplica na hora de montar). Trocar de layout apaga os ajustes.
+   */
+  layoutOverrides?: Record<string, number>;
+  /**
    * Id da carta do catálogo de onde a carta foi importada (Importar do catálogo). Com valor, a carta salva aparece
    * como arte alternativa no detalhe dessa carta (`src/lib/altCards.ts`).
    */
@@ -442,8 +448,9 @@ export type TextColor = 'red' | 'blue';
  */
 export function withLayout(card: CustomCard, layoutId: LayoutId): CustomCard {
   const spec = getLayout(layoutId);
+  const { layoutOverrides: _overrides, ...rest } = card;
   return {
-    ...card,
+    ...(spec.id === card.layout ? card : rest),
     layout: spec.id,
     type: spec.types.includes(card.type) ? card.type : spec.types[0],
   };

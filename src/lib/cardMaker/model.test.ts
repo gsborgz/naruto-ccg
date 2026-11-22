@@ -13,6 +13,7 @@ import {
   typeIcon,
   typeIconVariants,
   getLayout,
+  cardLayout,
 } from './layouts/index.ts';
 
 const L1 = getLayout('layout-01');
@@ -398,3 +399,23 @@ test('frase: com a impressa de fundo, guarda a frase impressa (sombreado); outra
   assert.equal(newCustomCard('ninja', NOW).printedFlavor, undefined);
 });
 
+
+test('posições ajustadas só na carta: mudam o layout dela, não o layout carregado', () => {
+  const card = { ...newCustomCard('ninja', NOW), layout: 'layout-01' as const };
+  const cy = L1.name.ninja.cy;
+  const x = L1.cost.ninja.entrance.x;
+  const adjusted = { ...card, layoutOverrides: { 'name.ninja.cy': cy + 12, 'cost.ninja.entrance.x': x - 3, 'nada.aqui': 5, 'name.ninja.color': 1 } };
+  const spec = cardLayout(adjusted);
+  assert.equal(spec.name.ninja.cy, cy + 12);
+  assert.equal(spec.cost.ninja.entrance.x, x - 3);
+  // Campos que não existem ou não são números ficam de fora.
+  assert.equal(spec.name.ninja.color, L1.name.ninja.color);
+  assert.ok(!('nada' in spec));
+  // O layout carregado (o de todas as cartas) não muda.
+  assert.equal(getLayout('layout-01').name.ninja.cy, cy);
+  assert.equal(getLayout('layout-01').cost.ninja.entrance.x, x);
+  assert.equal(cardLayout(card), L1);
+  // Trocar de layout apaga os ajustes; continuar no mesmo layout mantém.
+  assert.equal(withLayout(adjusted, 'layout-02').layoutOverrides, undefined);
+  assert.deepEqual(withLayout(adjusted, 'layout-01').layoutOverrides, adjusted.layoutOverrides);
+});
