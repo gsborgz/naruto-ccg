@@ -1,6 +1,7 @@
 import type { CustomCard } from './cardMaker/model.ts';
 import { parseSharedCustomCards } from './cardMaker/sharedCard.ts';
 import type { DeckCards } from './deckRules.ts';
+import { parseDeckDesigns } from './decks/types.ts';
 
 /**
  * Compartilhamento de decks por UUID (mesmo modelo do projeto pokedex): o navegador envia uma cópia
@@ -19,6 +20,8 @@ export interface SharedDeck {
    * `src/lib/cardMaker/sharedCard.ts`). Ausente quando o deck só tem cartas do catálogo.
    */
   custom?: Record<string, CustomCard>;
+  /** Design escolhido para cada carta do catálogo no deck (`Deck.designs`: id da versão ou `original`). */
+  designs?: Record<string, string>;
 }
 
 export type SharePayload = { kind: 'deck'; deck: SharedDeck } | { kind: 'collection'; decks: SharedDeck[] };
@@ -55,6 +58,8 @@ export function parseSharedDeck(x: unknown, isKnownCard: (id: string) => boolean
   if (!isRecord(x) || typeof x.name !== 'string' || !isRecord(x.cards)) return null;
   const custom = parseSharedCustomCards(x.custom);
   if (!custom) return null;
+  const designs = parseDeckDesigns(x.designs);
+  if (!designs) return null;
   const name = x.name.trim().slice(0, SHARE_LIMITS.nameLength) || 'Deck sem nome';
   const entries = Object.entries(x.cards);
   if (entries.length > SHARE_LIMITS.entriesPerDeck) return null;
@@ -69,6 +74,7 @@ export function parseSharedDeck(x: unknown, isKnownCard: (id: string) => boolean
     name,
     cards,
     ...(Object.keys(used).length > 0 && { custom: used }),
+    ...(Object.keys(designs).length > 0 && { designs }),
   };
 }
 

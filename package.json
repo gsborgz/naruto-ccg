@@ -14,8 +14,7 @@
     "content:sync-cards": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=.env.local src/lib/content/syncCards.ts",
     "services:up": "docker compose up -d",
     "services:stop": "docker compose stop",
-    "services:down": "docker compose down",
-    "content:push": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=.env.local src/lib/content/push.ts"
+    "services:down": "docker compose down"
   },
   "dependencies": {
     "@upstash/redis": "^1.41.0",

@@ -166,8 +166,11 @@ Decks com cartas do **Criar carta** (`custom-<uuid>`) podem ir para a sala:
   `src/components/arena/arenaCards.tsx`). As imagens vêm direto do Blob.
 - O oponente vê as cartas criadas do seu deck (os textos, não a ordem) a partir do início da partida: elas são
   necessárias para desenhar as cartas que ele vê.
-- Os compartilhamentos por código levam as cartas criadas do mesmo jeito; quem importa recebe as cartas no próprio
-  criador.
+- **Design de cada carta:** o deck leva o design escolhido para cada carta do catálogo (`designs`, ver o README,
+  "Montador"). Na partida, `GET .../custom-cards` traz também esses designs e as versões escolhidas (da nuvem; a
+  `RoomView` lista `design:<id>` em `customCardIds`), e a arena desenha cada carta com o design do deck do dono.
+- Os compartilhamentos por código levam as cartas criadas e os designs do mesmo jeito; quem importa um código antigo
+  fica com as cartas criadas que ainda não estavam na nuvem.
 
 ### Escritas simultâneas
 
@@ -393,8 +396,9 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 - **Visibilidade** (docs/REGRAS.md, "Zonas"): Vila, Campo de Batalha, Chakra, Descartes e Removidos são
   públicos; Mão e Reforço só o dono vê; Deck e Prêmios ninguém vê. O que não pode ser visto chega ao
   navegador só como contagem (`ZoneView.count`, sem `cards`).
-- **Busca:** `GET /api/rooms/<id>/deck` (só o dono, só durante a partida) devolve a quantidade por carta no
-  deck, **sem a ordem**. A tela mostra em ordem alfabética.
+- **Busca:** `GET /api/rooms/<id>/deck` (só o dono, só durante a partida) devolve os ids das cartas na
+  **ordem do deck** (do topo para o fundo), como ao procurar no deck físico; a tela mostra nessa ordem, com a
+  posição de cada carta, e o filtro por nome mantém a ordem. Buscar termina embaralhando o deck.
 - **Na tela:** arrastar (HTML5 drag and drop) entre as suas zonas, inclusive mão e os contadores Reforço e
   Removidos da sua placa; clique no seu Deck compra 1 carta, **R** com o mouse sobre ele embaralha (com uma animação
   das cartas girando, que o oponente também vê, disparada pelo registro) e **F** abre a busca no Deck; clique nos Descartes, no Chakra ou em Reforço/Removidos abre a lista com botões para mover;

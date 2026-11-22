@@ -123,8 +123,8 @@ test('partida: cada jogador só vê o que as regras permitem', () => {
   assert.equal(asHost.host.reinforcement.cards?.length, 2); // Reforço: o dono vê
   assert.equal(asGuest.host.reinforcement.cards, undefined);
 
-  const contents = deckContents(g, 'host');
-  assert.equal(Object.values(contents).reduce((s, n) => s + n, 0), g.players.host.deck.length);
+  // Na ordem do deck, do topo para o fundo.
+  assert.deepEqual(deckContents(g, 'host'), g.players.host.deck.map((c) => c.cardId));
 });
 
 test('partida: validação das ações e embaralhamento', () => {

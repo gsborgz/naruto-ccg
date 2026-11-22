@@ -86,24 +86,46 @@ function visualLayout(original: Card, draft: CustomCard, type: Card['type']): Ca
 }
 
 /**
- * A carta do catálogo com o visual de uma carta criada (arte alternativa escolhida como design padrão): só o
- * `layout` muda (layout, ícones, design, artes e ajustes do nome); os dados e os textos ficam os da carta. Os
- * elementos ficam os da carta: cada um usa a variante do elemento na mesma posição da criada, se houver.
+ * O `layout` da carta do catálogo montado a partir da versão escolhida (`card.design`, uma carta do criador): o
+ * visual (layout, ícones, design, artes, ajustes do nome) vem da versão; os dados e os textos ficam os da carta. Os
+ * elementos ficam os da carta: cada um usa a variante do elemento na mesma posição da versão, se houver. O texto com
+ * marcação (negrito, cores) e o nome com quebra de linha da versão valem quando dizem o mesmo que os da carta (a
+ * versão feita pela aba Editar); as vilas da versão valem quando diferem das que a carta tiraria das características.
  */
-export function withAltDesign(card: Card, alt: CustomCard): Card {
-  const layout = visualLayout(card, alt, card.type);
-  layout.icons.elements = card.elements.slice(0, 3).map((_, i) => alt.elements[i]?.variant ?? '01');
-  return { ...card, layout };
+export function designLayout(card: Card, version: CustomCard): CardLayoutInfo {
+  const layout = visualLayout(card, version, card.type);
+  layout.icons.elements = card.elements.slice(0, 3).map((_, i) => version.elements[i]?.variant ?? '01');
+  const parsed = customCardToCard(version);
+  const markup = version.text.trim();
+  if (JSON.stringify(parsed.text) === JSON.stringify(card.text) && markup !== card.text.map(catalogTextToMarkup).join('\n')) {
+    layout.textMarkup = markup;
+  }
+  const name = version.name.trim();
+  if (name.replace(/\s+/g, ' ') === card.name && name !== card.name) layout.nameText = name;
+  if (version.type === card.type) {
+    const derived = cardVillages(fromCatalogCard({ ...card, layout: undefined }, NOW));
+    const villages = cardVillages(version);
+    if (JSON.stringify(villages) !== JSON.stringify(derived)) layout.villages = villages;
+  }
+  return layout;
 }
 
-/** A carta do catálogo sem `layout`: volta a mostrar a imagem impressa. */
+/** A carta do catálogo com o visual de uma versão (como o servidor monta para `card.design`). */
+export function withDesign(card: Card, version: CustomCard): Card {
+  return { ...card, design: version.id, layout: designLayout(card, version) };
+}
+
+/**
+ * A versão (carta do criador) que guarda o visual da carta editada pela aba Editar: a carta do editor, ligada à carta
+ * do catálogo (`source`), sem a imagem de comparação.
+ */
+export function versionOf(card: Card, draft: CustomCard): CustomCard {
+  const { reference: _reference, ...rest } = draft;
+  return { ...rest, source: card.id };
+}
+
+/** A carta do catálogo sem design (sem `layout` nem `design`): volta a mostrar a imagem impressa. */
 export function withoutLayout(card: Card): Card {
-  const { layout: _layout, ...rest } = card;
+  const { layout: _layout, design: _design, ...rest } = card;
   return rest as Card;
-}
-
-/** Endereços de arte no Vercel Blob que a carta usa (para o servidor contar o uso). */
-export function catalogCardArts(card: Card): string[] {
-  const art = card.layout?.art;
-  return [art?.back?.src, art?.front?.src].filter((s): s is string => !!s);
 }

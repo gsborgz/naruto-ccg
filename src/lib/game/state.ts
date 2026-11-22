@@ -1005,13 +1005,11 @@ function peekView(game: GameState, viewer: Side | null): Pick<GameView, 'peek'> 
 }
 
 /**
- * Conteúdo do deck do jogador para a busca: quantidade por carta, **sem a ordem** (a ordem do deck
- * é segredo até para o dono). Quem chama ordena para exibir.
+ * Conteúdo do deck do jogador para a busca: os ids das cartas **na ordem do deck** (do topo para o
+ * fundo), como ao procurar no deck físico. Só o dono vê; a busca termina embaralhando o deck.
  */
-export function deckContents(game: GameState, who: Side): Record<string, number> {
-  const counts: Record<string, number> = {};
-  for (const c of game.players[who].deck) counts[c.cardId] = (counts[c.cardId] ?? 0) + 1;
-  return counts;
+export function deckContents(game: GameState, who: Side): string[] {
+  return game.players[who].deck.map((c) => c.cardId);
 }
 
 export function parseGameAction(x: unknown): GameAction | null {

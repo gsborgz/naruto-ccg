@@ -37,9 +37,12 @@ const notFound = wanted.filter((w) => !SEED_CARDS.some((c) => w.toUpperCase() ==
 const changed: Card[] = [];
 for (const seed of picked) {
   const current = CARDS_BY_ID.get(seed.id);
-  const next = JSON.parse(JSON.stringify(withLayout || !current ? seed : { ...seed, layout: current.layout })) as Card;
+  // O design fica o do Redis (a versão escolhida, `design`), a não ser com --with-layout.
+  const next = JSON.parse(JSON.stringify(withLayout || !current ? seed : { ...seed, design: current.design })) as Card;
   if (!next.layout) delete next.layout;
-  if (JSON.stringify(next) !== JSON.stringify(current)) changed.push(next);
+  if (!next.design) delete next.design;
+  const { layout: _layout, ...stored } = current ?? ({} as Card);
+  if (JSON.stringify(next) !== JSON.stringify(current?.layout ? stored : current)) changed.push(next);
 }
 
 console.log(`${picked.length} cartas nos arquivos; ${changed.length} diferentes do Redis.`);

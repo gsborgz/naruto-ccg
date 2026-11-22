@@ -48,13 +48,18 @@ const revealOnHover =
 function DeckCard({
   entry,
   blocked,
+  chosen,
   onSelect,
   onSetQty,
+  onDesign,
 }: {
   entry: Entry;
   blocked: string | null;
+  /** O deck tem um design escolhido para a carta (`Deck.designs`). */
+  chosen: boolean;
   onSelect: (card: Card) => void;
   onSetQty: (card: Card, qty: number) => void;
+  onDesign?: (card: Card) => void;
 }) {
   const { card, qty } = entry;
   const name = card.name;
@@ -67,20 +72,22 @@ function DeckCard({
         aria-label={`Ver detalhes de ${name}`}
         title={name}
       >
-        {isCustomCardId(card.id) ? (
-          <CardFace card={card} size="thumb" />
-        ) : (
-          <img
-            src={cardImageUrl(card, 'thumb')}
-            alt={card.name}
-            width={300}
-            height={420}
-            loading="lazy"
-            decoding="async"
-            className="aspect-[5/7] w-full object-cover"
-          />
-        )}
+        {/* O design da carta neste deck: o escolhido, ou o padrão dela (montada se tem `layout`). */}
+        <CardFace card={card} size="thumb" rendered />
       </button>
+      {onDesign && !isCustomCardId(card.id) && (
+        <button
+          type="button"
+          onClick={() => onDesign(card)}
+          title={chosen ? 'Design escolhido neste deck (trocar)' : 'Escolher o design desta carta neste deck'}
+          aria-label={`Design de ${name} neste deck`}
+          className={`absolute top-1 right-1 grid size-6 place-items-center rounded-full text-xs shadow ring-1 ${
+            chosen ? 'bg-accent text-bg ring-accent' : `bg-surface/90 text-text ring-border ${revealOnHover}`
+          }`}
+        >
+          🎨
+        </button>
+      )}
       <div className="absolute inset-x-0 -bottom-3 flex items-center justify-center gap-1">
         <span className={revealOnHover}>
           <button
@@ -218,6 +225,7 @@ export function DeckPanel({
   onClear,
   onSave,
   onClose,
+  onDesign,
 }: {
   deck: Deck;
   /** Procura as cartas do deck (catálogo + cartas criadas). */
@@ -233,6 +241,8 @@ export function DeckPanel({
   onSave: () => void;
   /** Painel aberto por cima da lista (celular): mostra o botão de fechar. */
   onClose?: () => void;
+  /** Abre a escolha do design da carta neste deck. */
+  onDesign?: (card: Card) => void;
 }) {
   const [tab, setTab] = useState<Tab>('ninja');
   const nameOf = (c: { name: string }) => c.name;
@@ -341,8 +351,10 @@ export function DeckPanel({
                 key={entry.card.id}
                 entry={entry}
                 blocked={blockedOf(entry.card)}
+                chosen={!!deck.designs?.[entry.card.id]}
                 onSelect={onSelect}
                 onSetQty={onSetQty}
+                onDesign={onDesign}
               />
             ))}
           </ul>

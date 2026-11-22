@@ -33,7 +33,9 @@ export function NameSizeTuner({ cardId, saved, value, onChange }: Props) {
     setSaving(true);
     setStatus(null);
     try {
-      content.saved(await saveCardLayout(cardId, [{ path: ['nameSize'], value }]));
+      await saveCardLayout(cardId, [{ path: ['nameSize'], value }]);
+      // O ajuste vai para uma versão do site (pode ser outra que a de antes): recarrega a carta montada.
+      await content.reload();
       setJustSaved(value);
       setStatus({ kind: 'ok', text: 'Salvo.' });
     } catch (e) {

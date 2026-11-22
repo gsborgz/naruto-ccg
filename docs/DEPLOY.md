@@ -115,16 +115,15 @@ Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardM
 - **Públicas:** quem tiver o endereço exato vê a imagem, sem a senha do site (o endereço tem o hash, impossível de
   adivinhar).
 - **Só o que está em uso:** a mesma imagem pode estar em várias cartas, então cada uso é registrado no Redis
-  (`naruto-ccg:art-refs:<sha256>`: `custom:<hash do token>:<carta>` para as cartas criadas, `catalog:<carta>` para as
-  cartas do catálogo editadas pela aba Editar). Ao trocar a arte de uma carta e salvar ou ao excluir a carta, o uso sai
-  (`PUT /api/art` para as cartas criadas) e a imagem é apagada do Blob quando não sobra nenhum. Importar um deck com cartas criadas
-  registra o uso de quem importou. Uma imagem enviada que ninguém passou a usar em 24 h (envio que falhou no meio) é
+  (`naruto-ccg:art-refs:<sha256>`: `custom:<dono>:<carta>` para as cartas criadas, inclusive as versões das cartas do
+  catálogo; `catalog:<carta>` era o das cartas do catálogo antes das versões). O servidor registra o uso ao gravar a
+  carta na nuvem e tira ao trocar a arte ou excluir a carta (`src/lib/customCards/keys.ts`); a imagem é apagada do Blob
+  quando não sobra nenhum. Uma imagem enviada que ninguém passou a usar em 24 h (envio que falhou no meio) é
   apagada (`naruto-ccg:art-pending`). `naruto-ccg:art-owner:<sha256>` (quem enviou primeiro) só vale para as imagens
   de antes desse registro.
 - **Só no Salvar:** a arte vai para o servidor apenas quando o jogador clica em **Salvar** no criador; nada é enviado
-  sozinho. Se o envio falhar (sem Blob ou sem conexão), a carta é salva no localStorage com a arte tratada e o
-  criador avisa para salvar de novo; enquanto isso, a carta não vai para salas nem compartilhamentos. Artes antigas
-  (até 1500 px, JPEG) são tratadas no próximo **Salvar** da carta.
+  sozinho. Se o envio falhar (sem Blob ou sem conexão), a carta não é salva e o criador avisa para salvar de novo.
+  Artes antigas (até 1500 px, JPEG) são tratadas no próximo **Salvar** da carta.
 
 ## Conteúdo do jogo (cartas, layouts, ícones)
 
@@ -145,12 +144,6 @@ mesmo Blob das artes.
 4. **Só o que está em uso no Blob:** trocar uma imagem apaga a anterior (as imagens não têm histórico) e **Voltar para a
    do deploy** apaga a trocada. **Apagar imagens sem uso** (no editor de layouts) apaga de `naruto-ccg/card-layouts/`
    o que não está no mapa (ex.: sobra de um envio interrompido; arquivos de menos de 10 min ficam).
-5. **Do local para produção:** o que muda no Redis local (scan, `content:sync-cards`, edições no `npm run dev`) vai para
-   produção com `npm run content:push`. Ele lê o destino do `.env.production.local` (só local, fora do Git), com
-   `KV_REST_API_URL` e `KV_REST_API_TOKEN` copiados da Vercel (Settings → Environment Variables, ou
-   `vercel env pull .env.production.local --environment=production`, que cria o arquivo só com as variáveis de produção).
-   Mostra o que vai mudar e pede confirmação; item editado pelo site depois do último envio fica de fora (`--overwrite`
-   envia mesmo assim). Só as chaves `naruto-ccg:content:*` são lidas e gravadas (o banco é dividido com o pokedex).
 
 Custo: o navegador baixa o conteúdo inteiro (~2,8 MB) só quando a versão muda; a resposta fica em cache na CDN e no
 navegador. Cada edição gera uma versão nova. No servidor, cada função confere a versão no Redis no máximo a cada 15 s.

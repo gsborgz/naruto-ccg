@@ -375,8 +375,18 @@ export function toView(
   };
 }
 
-/** Cartas criadas na partida (só os ids; as cartas vêm de `GET .../custom-cards`). */
+/** Design escolhido para cada carta do catálogo no deck de cada lado (`Deck.designs`). */
+export function roomDesigns(room: Room): { host: Record<string, string>; guest: Record<string, string> } {
+  return { host: room.host.deck?.designs ?? {}, guest: room.guest?.deck?.designs ?? {} };
+}
+
+/**
+ * Cartas criadas na partida (só os ids; as cartas vêm de `GET .../custom-cards`), e as versões escolhidas como design
+ * nos decks (`design:<id da versão>`).
+ */
 function gameCustomView(room: Room): Pick<RoomView, 'customCardIds'> {
-  const customCardIds = Object.keys(roomCustom(room)).sort();
+  const designs = roomDesigns(room);
+  const versions = [...new Set([...Object.values(designs.host), ...Object.values(designs.guest)])].map((v) => `design:${v}`);
+  const customCardIds = [...Object.keys(roomCustom(room)), ...versions].sort();
   return customCardIds.length > 0 ? { customCardIds } : {};
 }

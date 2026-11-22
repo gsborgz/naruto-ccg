@@ -3,9 +3,13 @@
 import type { CustomCard } from '@/lib/cardMaker/model';
 import type { RoomAction, RoomView } from './model';
 
-/** Cartas criadas dos dois decks da partida. */
+/** Cartas criadas dos dois decks da partida e o design escolhido nos decks (`Deck.designs`). */
 export interface RoomCards {
   cards: Record<string, CustomCard>;
+  /** Lado → carta do catálogo → id da versão (ou `original`). */
+  designs?: { host: Record<string, string>; guest: Record<string, string> };
+  /** As versões escolhidas, pelo id. */
+  versions?: Record<string, CustomCard>;
 }
 
 /**
@@ -52,6 +56,17 @@ function saveIdentity() {
   } catch {
     // idem
   }
+}
+
+/**
+ * Troca o token da identidade (o "código da conta" de outro navegador): os decks e as cartas na nuvem passam a ser os
+ * daquela conta. A sala em que estava fica esquecida (o lugar nela é do token antigo).
+ */
+export function setIdentityToken(token: string) {
+  const identity = getIdentity();
+  identity.token = token;
+  delete identity.lastRoomId;
+  saveIdentity();
 }
 
 /** Lembra o último apelido usado, para preencher o campo da próxima vez. */
@@ -116,8 +131,8 @@ export const roomApi = {
   /** `null` quando a ação apagou a sala (o último jogador saiu). */
   act: (id: string, action: RoomAction) =>
     request<RoomView | null>(`/api/rooms/${id}/actions`, { method: 'POST', body: JSON.stringify(action) }),
-  /** Conteúdo do seu deck (quantidade por carta, sem a ordem) para buscar uma carta. */
-  deck: (id: string) => request<{ cards: Record<string, number> }>(`/api/rooms/${id}/deck`),
+  /** Conteúdo do seu deck (ids na ordem do deck, do topo para o fundo) para buscar uma carta. */
+  deck: (id: string) => request<{ cards: string[] }>(`/api/rooms/${id}/deck`),
   /** Cartas criadas dos dois decks da partida (id no deck → carta). */
   customCards: (id: string) => request<RoomCards>(`/api/rooms/${id}/custom-cards`),
 };

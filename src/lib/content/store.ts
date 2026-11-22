@@ -1,10 +1,15 @@
 import { getRedis } from '../redis.ts';
+import { setArtRefs } from '../artStore.ts';
+import { catalogDraft, designLayout, versionOf } from '../cardMaker/catalogEdit.ts';
+import { parseSharedCustomCard } from '../cardMaker/sharedCard.ts';
+import { readCustomEntries, SYSTEM_OWNER, writeCustomEntry, type CustomCardEntry } from '../customCards/keys.ts';
 import type { IconsContent } from '../cardMaker/icons/index.ts';
 import type { LayoutSpec } from '../cardMaker/layouts/types.ts';
 import type { LayoutId } from '../cardMaker/model.ts';
 import type { Card } from '../../models/card.ts';
 import type { AssetMap } from './assets.ts';
 import { applyChanges, type ContentChange } from './changes.ts';
+import { hydrateContent } from './hydrate.ts';
 import { cardsToPtBr } from './ptbr.ts';
 import { seedSnapshot } from './seed.ts';
 import { HISTORY_SIZE, type ContentKind, type ContentSnapshot, type HistoryEntry } from './types.ts';
@@ -14,7 +19,9 @@ import { HISTORY_SIZE, type ContentKind, type ContentSnapshot, type HistoryEntry
  * `naruto-ccg:`.
  *
  * - `naruto-ccg:content:version`: número que aumenta a cada gravação (o cache do navegador e do servidor usa ele).
- * - `naruto-ccg:content:cards`: hash id da carta → carta (JSON).
+ * - `naruto-ccg:content:cards`: hash id da carta → carta (JSON). O visual da carta não fica aqui: ela guarda só o id
+ *   da versão escolhida (`design`, uma carta do criador na nuvem, `src/lib/customCards/`); o `layout` é montado ao
+ *   ler (`readContent`).
  * - `naruto-ccg:content:layouts`: hash id do layout → configuração do layout.
  * - `naruto-ccg:content:icons`: hash `<grupo>:<id>` → configuração do ícone.
  * - `naruto-ccg:content:assets`: hash caminho da imagem (`layout-02/jutsu-frame.webp`) → URL no Vercel Blob.
@@ -26,8 +33,11 @@ import { HISTORY_SIZE, type ContentKind, type ContentSnapshot, type HistoryEntry
  * Com o Redis vazio, a primeira leitura grava a carga inicial (`seedSnapshot`); com um formato antigo, converte.
  */
 
-/** Formato atual: 2 = os textos das cartas (nome, texto, frase, características, atributos) em PT-BR. */
-export const CONTENT_FORMAT = 2;
+/**
+ * Formato atual: 2 = os textos das cartas (nome, texto, frase, características, atributos) em PT-BR; 3 = o visual das
+ * cartas numa versão (`design`), e não no `layout` gravado na carta.
+ */
+export const CONTENT_FORMAT = 3;
 
 export const KEY = {
   version: 'naruto-ccg:content:version',
@@ -68,7 +78,7 @@ export async function readContent(): Promise<ContentSnapshot> {
     .exec<[number | string, Record<string, Card> | null, Record<string, LayoutSpec> | null, IconsContent | null, AssetMap | null]>();
   // Mesma ordem da carga inicial (coleção por coleção), não a do hash.
   const order = new Map(seedOrder().map((id, i) => [id, i]));
-  const list = Object.values(cards ?? {}).sort(
+  const list = (await withDesignLayouts(Object.values(cards ?? {}))).sort(
     (a, b) => (order.get(a.id) ?? Infinity) - (order.get(b.id) ?? Infinity) || a.id.localeCompare(b.id),
   );
   return {
@@ -81,6 +91,42 @@ export async function readContent(): Promise<ContentSnapshot> {
 }
 
 /** Grava a carga inicial (Redis vazio) ou converte o conteúdo de um formato antigo. */
+/**
+ * Monta o `layout` das cartas a partir da versão escolhida (`design`). Versão que não existe mais: a carta mostra a
+ * impressa.
+ */
+async function withDesignLayouts(cards: Card[]): Promise<Card[]> {
+  const entries = await readCustomEntries(cards.flatMap((c) => (c.design ? [c.design] : [])));
+  return cards.map((c) => {
+    const { layout: _layout, design, ...rest } = c;
+    const entry = design ? entries.get(design) : undefined;
+    return entry ? { ...rest, design, layout: designLayout(rest as Card, entry.card) } : (rest as Card);
+  });
+}
+
+/**
+ * A carta como fica gravada: sem `layout`, com o id da versão (`design`). Uma carta com `layout` (scan, histórico
+ * antigo, ajuste do tamanho do nome, `content:sync-cards`) que não é o da versão dela vira uma versão do sistema (a
+ * do sistema que ela já usa é atualizada; a de um jogador não é mexida). Precisa dos layouts e ícones carregados
+ * (`ensureContent` ou `hydrateContent`).
+ */
+async function storedCard(card: Card): Promise<Card> {
+  const { layout, ...rest } = card;
+  if (!layout) return rest as Card;
+  const entry = card.design ? (await readCustomEntries([card.design])).get(card.design) : undefined;
+  if (entry && JSON.stringify(designLayout(rest as Card, entry.card)) === JSON.stringify(layout)) return rest as Card;
+  const reuse = entry?.owner === SYSTEM_OWNER ? entry : null;
+  const now = new Date().toISOString();
+  const version = {
+    ...versionOf(card, catalogDraft(card)),
+    id: reuse?.card.id ?? crypto.randomUUID(),
+    createdAt: reuse?.card.createdAt ?? now,
+    updatedAt: now,
+  };
+  await writeCustomEntry({ card: version, owner: SYSTEM_OWNER, author: '' }, reuse);
+  return { ...(rest as Card), design: version.id };
+}
+
 async function ensureReady(): Promise<void> {
   const [version, format] = await getRedis().pipeline().get<number | string>(KEY.version).get<number | string>(KEY.format).exec<[number | string | null, number | string | null]>();
   if (version === null || version === undefined) return seedContent();
@@ -88,8 +134,11 @@ async function ensureReady(): Promise<void> {
 }
 
 /**
- * Formato 1 → 2: as cartas tinham os textos em inglês (como impressos) e o app traduzia na hora; agora o conteúdo
- * guarda o PT-BR. Mantém o `layout` de cada carta (editado pelo site). Usa a mesma trava da carga inicial.
+ * Converte o conteúdo para o formato atual. Usa a mesma trava da carga inicial.
+ * - 1 → 2: as cartas tinham os textos em inglês (como impressos) e o app traduzia na hora; agora o conteúdo guarda o
+ *   PT-BR.
+ * - 2 → 3: o `layout` gravado em cada carta vira uma versão do sistema (`design`), e as artes alternativas antigas
+ *   (`naruto-ccg:alt-cards:*`, com a carta inteira dentro) viram cartas do criador na nuvem, do jogador que as criou.
  */
 async function migrateContent(): Promise<void> {
   const redis = getRedis();
@@ -102,17 +151,68 @@ async function migrateContent(): Promise<void> {
     throw new ContentError(503, 'O conteúdo do jogo está sendo convertido. Tente de novo em instantes.');
   }
   try {
-    if (Number((await redis.get<number | string>(KEY.format)) ?? 1) >= CONTENT_FORMAT) return;
-    const cards = Object.values((await redis.hgetall<Record<string, Card>>(KEY.card)) ?? {});
-    const converted = cardsToPtBr(cards);
-    for (let i = 0; i < converted.length; i += 300) {
-      await redis.hset(KEY.card, Object.fromEntries(converted.slice(i, i + 300).map((c) => [c.id, c])));
+    const format = Number((await redis.get<number | string>(KEY.format)) ?? 1);
+    if (format >= CONTENT_FORMAT) return;
+    let cards = Object.values((await redis.hgetall<Record<string, Card>>(KEY.card)) ?? {});
+    if (format < 2) {
+      cards = cardsToPtBr(cards);
+      for (let i = 0; i < cards.length; i += 300) {
+        await redis.hset(KEY.card, Object.fromEntries(cards.slice(i, i + 300).map((c) => [c.id, c])));
+      }
     }
+    if (format < 3) await migrateDesigns(cards);
     await redis.set(KEY.format, CONTENT_FORMAT);
     await bumpVersion();
   } finally {
     await redis.del(KEY.seedLock);
   }
+}
+
+/** Formato 2 → 3 (ver `migrateContent`). */
+async function migrateDesigns(cards: Card[]): Promise<void> {
+  const redis = getRedis();
+  // Os layouts e ícones, para montar as versões a partir do `layout` das cartas.
+  const [layouts, icons, assets] = await redis
+    .pipeline()
+    .hgetall<Record<string, LayoutSpec>>(KEY.layout)
+    .hgetall<IconsContent>(KEY.icon)
+    .hgetall<AssetMap>(KEY.asset)
+    .exec<[Record<string, LayoutSpec> | null, IconsContent | null, AssetMap | null]>();
+  hydrateContent({
+    version: -1,
+    cards,
+    layouts: (layouts ?? {}) as Record<LayoutId, LayoutSpec>,
+    icons: icons ?? {},
+    assets: Object.fromEntries(Object.entries(assets ?? {}).map(([k, v]) => [k, String(v)])),
+  });
+  for (const card of cards) {
+    if (!card.layout) continue;
+    const stored = await storedCard({ ...card, design: undefined });
+    await redis.hset(KEY.card, { [card.id]: stored });
+    // As artes enviadas pela aba Editar contavam como usadas pela carta do catálogo; agora contam pela versão.
+    if (card.layout.art.back?.src || card.layout.art.front?.src) {
+      await setArtRefs(`catalog:${card.id}`, []).catch((e) => console.error('Falha ao soltar as artes da carta', e));
+    }
+  }
+  // Artes alternativas antigas: `naruto-ccg:alt-cards:<carta>` (hash `<hash do token>:<id>` → { card, author }).
+  let cursor = '0';
+  do {
+    const [next, keys] = await redis.scan(cursor, { match: 'naruto-ccg:alt-cards:*', count: 200 });
+    cursor = String(next);
+    for (const key of keys) {
+      const all = (await redis.hgetall<Record<string, unknown>>(key)) ?? {};
+      for (const [field, raw] of Object.entries(all)) {
+        const value = (typeof raw === 'string' ? JSON.parse(raw) : raw) as { card?: unknown; author?: unknown } | null;
+        const card = parseSharedCustomCard(value?.card);
+        const owner = field.split(':')[0];
+        if (!card || !owner || (await readCustomEntries([card.id])).size) continue;
+        const entry: CustomCardEntry = { card, owner, author: typeof value?.author === 'string' ? value.author : '' };
+        await writeCustomEntry(entry, null);
+        await redis.del(`naruto-ccg:alt-card-source:${owner}:${card.id}`);
+      }
+      await redis.del(key);
+    }
+  } while (cursor !== '0');
 }
 
 let seedIds: string[] | null = null;
@@ -185,11 +285,16 @@ export async function saveChanges(kind: 'layout' | 'icon', id: string, changes: 
   return bumpVersion();
 }
 
+/**
+ * Edições no `layout` montado da carta (ajuste do tamanho do nome). A carta passa a usar uma versão do sistema com o
+ * visual editado (`storedCard`). Precisa do conteúdo carregado (`ensureContent`).
+ */
 export async function saveCardLayoutChanges(id: string, changes: ContentChange[]): Promise<number> {
-  const card = await readItem<Card>('card', id);
-  if (!card.layout) throw new ContentError(400, 'A carta ainda não foi escaneada (não tem layout).');
-  const next = { ...card, layout: applyChanges(card.layout, changes) };
-  await pushHistory('card', id, card);
+  const stored = await readItem<Card>('card', id);
+  const [card] = await withDesignLayouts([stored]);
+  if (!card.layout) throw new ContentError(400, 'A carta não tem design montado (mostra a impressa).');
+  const next = await storedCard({ ...card, layout: applyChanges(card.layout, changes) });
+  await pushHistory('card', id, stored);
   await getRedis().hset(KEY.card, { [id]: next });
   return bumpVersion();
 }
@@ -214,8 +319,7 @@ export async function deleteLayout(id: string): Promise<{ version: number; dropp
   if (PRINTED_LAYOUTS.includes(id)) throw new ContentError(400, 'Os layouts das coleções não podem ser excluídos.');
   await readItem<LayoutSpec>('layout', id);
   const redis = getRedis();
-  const cards = Object.values((await redis.hgetall<Record<string, Card>>(KEY.card)) ?? {});
-  const users = cards.filter((c) => c.layout?.layout === id);
+  const users = (await readContent()).cards.filter((c) => c.layout?.layout === id);
   if (users.length) {
     throw new ContentError(409, `O layout é usado por ${users.length} carta(s) (ex.: ${users[0].id}). Troque o layout delas antes.`);
   }
@@ -232,12 +336,35 @@ export async function readCard(id: string): Promise<Card> {
   return readItem<Card>('card', id);
 }
 
-/** Grava uma carta inteira editada pelo site (aba Editar do detalhe), guardando a versão anterior. */
+/**
+ * Grava uma carta inteira editada pelo site (aba Editar do detalhe, escolha da versão), guardando a versão anterior.
+ * Com `layout`, ver `storedCard`.
+ */
 export async function saveCard(card: Card): Promise<{ version: number; previous: Card }> {
   const previous = await readItem<Card>('card', card.id);
+  const next = await storedCard(card);
   await pushHistory('card', card.id, previous);
-  await getRedis().hset(KEY.card, { [card.id]: card });
+  await getRedis().hset(KEY.card, { [card.id]: next });
   return { version: await bumpVersion(), previous };
+}
+
+/** Só aumenta a versão do conteúdo (uma versão escolhida por alguma carta mudou ou saiu). */
+export async function touchContent(): Promise<number> {
+  return bumpVersion();
+}
+
+/** A carta do catálogo, como está gravada (com `design`, sem `layout`), ou null. */
+export async function readStoredCard(id: string): Promise<Card | null> {
+  return (await getRedis().hget<Card>(KEY.card, id)) ?? null;
+}
+
+/** Tira a versão escolhida da carta (a versão foi excluída): ela volta para a impressa. Guarda a anterior. */
+export async function clearDesign(id: string): Promise<void> {
+  const card = await readStoredCard(id);
+  if (!card?.design) return;
+  const { design: _design, ...rest } = card;
+  await pushHistory('card', id, card);
+  await getRedis().hset(KEY.card, { [id]: rest });
 }
 
 /**
@@ -249,8 +376,10 @@ export async function saveCards(cards: Card[]): Promise<number> {
   const redis = getRedis();
   for (const card of cards) {
     const previous = await redis.hget<Card>(KEY.card, card.id);
+    const next = await storedCard(card);
+    if (JSON.stringify(next) === JSON.stringify(previous)) continue;
     await pushHistory('card', card.id, previous);
-    await redis.hset(KEY.card, { [card.id]: card });
+    await redis.hset(KEY.card, { [card.id]: next });
   }
   return bumpVersion();
 }
@@ -287,7 +416,8 @@ export async function restoreHistory(kind: ContentKind, id: string, index: numbe
   const entry = (await readHistory(kind, id))[index];
   if (!entry) throw new ContentError(404, 'Versão não encontrada no histórico.');
   const current = await readItem<object>(kind, id);
+  const value = kind === 'card' ? await storedCard(entry.value as Card) : entry.value;
   await pushHistory(kind, id, current);
-  await getRedis().hset(KEY[kind], { [id]: entry.value });
+  await getRedis().hset(KEY[kind], { [id]: value });
   return bumpVersion();
 }

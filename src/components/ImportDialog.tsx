@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import { CARDS_BY_ID } from '@/data/cards';
-import { syncCardArtRefs } from '@/lib/cardMaker/artUpload';
-import { customCardActions, readCustomCards } from '@/lib/cardMaker/store';
+import { cloudRequest, fetchOtherCards } from '@/lib/cloud/library';
+import { customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
+import { getIdentity } from '@/lib/rooms/client';
 import { deckLookup } from '@/lib/rooms/model';
 import { DECK_RULES, summarizeDeck } from '@/lib/deckRules';
 import { sharedDecks, type SharedDeck } from '@/lib/deckShare';
@@ -42,19 +43,28 @@ export function ImportDialog({ open, onClose }: { open: boolean; onClose: () => 
     }
   };
 
-  const confirmImport = () => {
+  const confirmImport = async () => {
     if (!found) return;
-    // As cartas criadas dos decks entram no criador deste navegador (com as artes no Vercel Blob).
-    const incoming = found.flatMap((d) => Object.values(d.custom ?? {}));
-    if (!customCardActions.addMissing(incoming)) {
-      setError('Não coube no armazenamento do navegador: apague algumas cartas criadas e tente de novo.');
-      return;
+    setBusy(true);
+    setError(null);
+    try {
+      // As cartas criadas dos decks ficam na nuvem: as que ainda não estão lá (código antigo) passam a ser suas.
+      const incoming = found.flatMap((d) => Object.values(d.custom ?? {}));
+      if (incoming.length) {
+        await cloudRequest('/api/me/import', { method: 'POST', body: JSON.stringify({ cards: incoming, author: getIdentity().nickname }) });
+      }
+      deckActions.importDecks(found);
+      // As cartas criadas e os designs escolhidos que os decks usam, para desenhá-los.
+      const ids = found.flatMap((d) => [
+        ...Object.keys(d.cards).filter(isCustomCardId).map(customSourceId),
+        ...Object.values(d.designs ?? {}),
+      ]);
+      await fetchOtherCards(ids);
+      close();
+    } catch (err) {
+      setError((err as Error).message);
+      setBusy(false);
     }
-    // As cartas que entraram passam a usar as artes delas também: elas não saem do Blob se o autor excluir a dele.
-    const ids = new Set(incoming.map((c) => c.id));
-    for (const c of readCustomCards().filter((c) => ids.has(c.id))) void syncCardArtRefs(c.id, c).catch(() => undefined);
-    deckActions.importDecks(found);
-    close();
   };
 
   return (

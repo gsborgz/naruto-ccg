@@ -63,6 +63,10 @@ function placement(v: unknown): CardArtPlacement {
 /** Variante de elemento: as impressas (01 a 03) e as criadas na aba Ícones. */
 const VARIANT = /^[a-z0-9][a-z0-9-]{0,19}$/;
 
+/** Id da versão escolhida (uma carta do criador). */
+const designId = (v: unknown): string =>
+  typeof v === 'string' && /^[A-Za-z0-9-]{1,64}$/.test(v) ? v : fail('Versão escolhida inválida.');
+
 function layoutInfo(v: unknown, layouts: ReadonlySet<string>): CardLayoutInfo {
   if (!isRec(v)) fail('Layout da carta inválido.');
   const l = v as Rec;
@@ -129,6 +133,7 @@ export function parseCatalogCard(
       ...(c.token === true && { token: true }),
       ...(c.flavor !== undefined && c.flavor !== '' && { flavor: str(c.flavor, 1500, 'Frase') }),
       ...(c.layout !== undefined && { layout: layoutInfo(c.layout, layouts) }),
+      ...(c.design !== undefined && { design: designId(c.design) }),
     };
     const costs = () => ({ entranceCost: int(c.entranceCost, -1, 99, 'Custo de entrada'), handCost: int(c.handCost, -1, 99, 'Custo de mão') });
     const characteristics = () => strList(c.characteristics, 30, 120, 'Características');

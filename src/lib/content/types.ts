@@ -35,8 +35,6 @@ export const CONTENT_KINDS: readonly ContentKind[] = ['card', 'layout', 'icon'];
 export interface HistoryEntry {
   savedAt: string;
   value: unknown;
-  /** Quem trocou o item (`content:push`, o envio do conteúdo local para produção). Sem valor: uma edição pelo site. */
-  by?: string;
 }
 
 /** Quantas versões anteriores de cada item ficam guardadas. */

@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { SEED_CARDS } from '@/data/sets/index';
 import { contentErrorResponse } from '@/lib/content/http';
 import { ensureContent } from '@/lib/content/server';
 import type { Card } from '@/models/card';
@@ -18,7 +17,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ ver
     const content = await ensureContent();
     const current = String(content.version) === version;
     return NextResponse.json(
-      { ...content, namesEn: namesEnFor(content.version, content.cards) },
+      { ...content, namesEn: await namesEnFor(content.version, content.cards) },
       { headers: { 'Cache-Control': current ? 'public, max-age=31536000, s-maxage=31536000, immutable' : 'no-store' } },
     );
   } catch (e) {
@@ -28,8 +27,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ ver
 
 let cached: { version: number; names: Record<string, string> } | null = null;
 
-function namesEnFor(version: number, cards: Card[]): Record<string, string> {
+async function namesEnFor(version: number, cards: Card[]): Promise<Record<string, string>> {
   if (cached?.version === version) return cached.names;
+  // Sob demanda: os arquivos das coleções são grandes e só servem aqui.
+  const { SEED_CARDS } = await import('@/data/sets/index');
   const current = new Map(cards.map((c) => [c.id, c.name]));
   const names: Record<string, string> = {};
   for (const c of SEED_CARDS) {

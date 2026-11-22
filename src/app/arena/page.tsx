@@ -138,7 +138,7 @@ export default function ArenaPreviewPage() {
       else throw e;
     }
   };
-  const loadDeck = useCallback(async () => (game ? deckContents(game, 'host') : {}), [game]);
+  const loadDeck = useCallback(async () => (game ? deckContents(game, 'host') : []), [game]);
 
   if (!game) return <p className="text-muted">Preparando a prévia…</p>;
 

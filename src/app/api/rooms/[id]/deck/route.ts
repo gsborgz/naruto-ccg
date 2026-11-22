@@ -5,7 +5,7 @@ import { RoomError, seatOf } from '@/lib/rooms/model';
 import { hashToken, readRoom, roomErrorResponse } from '@/lib/rooms/store';
 
 /**
- * Conteúdo do SEU deck para buscar uma carta: quantidade por carta, sem a ordem (que continua secreta).
+ * Conteúdo do SEU deck para buscar uma carta: os ids das cartas na ordem do deck (do topo para o fundo).
  * Só o dono, e só durante a partida. Exige `X-Player-Token`.
  */
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {

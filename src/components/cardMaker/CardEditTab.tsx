@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { uploadArt } from '@/lib/cardMaker/artUpload';
-import { catalogDraft, toCatalogCard, withoutLayout } from '@/lib/cardMaker/catalogEdit';
+import { catalogDraft, toCatalogCard, versionOf, withoutLayout } from '@/lib/cardMaker/catalogEdit';
 import { LAYOUT_LIST } from '@/lib/cardMaker/layouts';
 import { moveArt, type ArtLayer, type CustomCard, type CustomCardArt, type LayoutId } from '@/lib/cardMaker/model';
 import { compressImage, isCompressed } from '@/lib/images/compressImage';
@@ -17,12 +17,13 @@ import { ContentHistoryButton } from './ContentTools';
 
 /**
  * Aba Editar do detalhe da carta: tudo o que o criador de cartas tem (layout, design, ícones, nome, textos, frase,
- * custos, força, atributo, vilas, artes e enquadramento), numa carta do catálogo. Grava no conteúdo do jogo (Redis):
- * vale para todo mundo na hora, sem deploy. Os textos são os do conteúdo (PT-BR). O layout base (molduras, posições)
- * e os ícones em si são editados em Criar carta → Editar layouts.
+ * custos, força, atributo, vilas, artes e enquadramento), numa carta do catálogo. Os dados e os textos (PT-BR) vão
+ * para a carta no conteúdo do jogo; o visual vai para uma versão dela (a de quem editou, ou a do site que ela já usa),
+ * que passa a ser o design padrão: vale para todo mundo na hora, sem deploy. O layout base (molduras, posições) e os
+ * ícones em si são editados em Criar carta → Editar layouts.
  *
- * A carta sem `layout` mostra a imagem impressa: a aba pede um layout para começar a montar a carta. Com layout,
- * **Voltar para a original** tira o `layout` (a carta volta a mostrar a impressa).
+ * A carta sem design mostra a imagem impressa: a aba pede um layout para começar a montar a carta. Com design,
+ * **Voltar para a original** tira o design padrão ao salvar (a versão continua nas Artes alternativas).
  */
 
 /** Envia ao Vercel Blob a camada de arte que ainda é imagem local (data URL). */
@@ -74,14 +75,16 @@ export default function CardEditTab({
     setSaving(true);
     setStatus(null);
     try {
-      let next = withoutLayout(card);
       if (draft) {
+        // Os dados e os textos vão para a carta; o visual, para a versão dela (a de quem editou ou do sistema).
         const art = (await uploadLayer(draft.art, false)) ?? draft.art;
         const artFront = await uploadLayer(draft.artFront, true);
-        next = toCatalogCard(card, { ...draft, art, ...(artFront && { artFront }) });
+        const edited = { ...draft, art, ...(artFront && { artFront }) };
+        await saveCatalogCard(toCatalogCard(card, edited), versionOf(card, edited));
+      } else {
+        await saveCatalogCard(withoutLayout(card));
       }
-      const { version } = await saveCatalogCard(next);
-      content.saved(version);
+      await content.reload();
       setStatus({ ok: true, text: 'Carta salva para todo mundo.' });
     } catch (e) {
       setStatus({ ok: false, text: e instanceof Error ? e.message : String(e) });

@@ -16,11 +16,11 @@ import {
   type CustomCard,
   type LayoutId,
 } from '@/lib/cardMaker/model';
-import { deleteCustomCard, hasPendingArt, syncAllCardArtRefs, syncCardArtRefs, uploadCardArt } from '@/lib/cardMaker/artUpload';
-import { publishAltCard } from '@/lib/cardMaker/altCardsClient';
+import { deleteCustomCard, hasPendingArt, uploadCardArt } from '@/lib/cardMaker/artUpload';
+import { customCardSource } from '@/lib/cardMaker/versions';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
-import { customCardActions, useCustomCards } from '@/lib/cardMaker/store';
+import { customCardActions, useOwnCustomCards } from '@/lib/cardMaker/store';
 import { CARD_TYPE_LABEL } from '@/models/card';
 import { elementToPng, pngFileName, saveBlob } from '@/lib/cardMaker/exportPng';
 
@@ -64,10 +64,9 @@ function withUploadedArt(current: CustomCard, sent: CustomCard, uploaded: Custom
 }
 
 export default function CardMakerPage() {
-  const cards = useCustomCards();
+  const cards = useOwnCustomCards();
   const [draft, setDraft] = useState<CustomCard | null>(null);
   const [importing, setImporting] = useState(false);
-  const [saveFailed, setSaveFailed] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [reference, setReference] = useState(0);
@@ -89,11 +88,6 @@ export default function CardMakerPage() {
     return () => query.removeEventListener('change', update);
   }, []);
 
-  // Cartas salvas antes de o servidor contar quem usa cada arte: registra uma vez (artUpload.ts).
-  useEffect(() => {
-    void syncAllCardArtRefs().catch(() => undefined);
-  }, []);
-
   // Abre a carta mais recente ao carregar, ou a de `/criar?carta=<id>` (link "Editar no criador" do montador).
   useEffect(() => {
     if (!cards || draft || !cards.length) return;
@@ -111,31 +105,25 @@ export default function CardMakerPage() {
   const guard = useLeaveGuard(dirty);
 
   /**
-   * Salva a carta: envia ao servidor (Vercel Blob) as artes ainda não enviadas e grava no navegador. Se o envio
-   * falhar, a carta é gravada mesmo assim (com a arte só aqui) e o aviso pede para salvar de novo.
+   * Salva a carta na nuvem: envia ao servidor (Vercel Blob) as artes ainda não enviadas e grava a carta. Carta importada
+   * do catálogo: vira (ou atualiza) uma versão dela, nas Artes alternativas do detalhe. Se o envio da arte falhar, nada é
+   * gravado e o aviso pede para salvar de novo.
    */
   const save = async () => {
     if (!draft || saving) return;
     const sent = draft;
     setSaving(true);
     setSaveError(null);
-    let toSave = sent;
     try {
-      toSave = await uploadCardArt(sent);
+      const uploaded = await uploadCardArt(sent);
+      const source = customCardSource(uploaded);
+      await customCardActions.save(source ? { ...uploaded, source } : uploaded);
+      setDraft((d) => d && { ...withUploadedArt(d, sent, uploaded), ...(source && d.id === sent.id && { source }) });
     } catch (e) {
-      setSaveError(
-        `A carta foi salva neste navegador, mas a arte não foi enviada ao servidor (${(e as Error).message}). Clique em Salvar de novo.`,
-      );
+      setSaveError(`A carta não foi salva: a arte não foi enviada ao servidor (${(e as Error).message}). Clique em Salvar de novo.`);
+    } finally {
+      setSaving(false);
     }
-    const saved = customCardActions.save(toSave);
-    setSaveFailed(!saved);
-    // O servidor fica sabendo das artes que a carta usa agora: a que foi trocada (ou a recém-enviada, se a carta não
-    // coube no navegador) sai do Blob se nada mais a usa.
-    void syncCardArtRefs(sent.id, saved ? toSave : (stored ?? null), saved ? stored : toSave).catch(() => undefined);
-    // Carta importada do catálogo: aparece (ou é atualizada) nas artes alternativas do detalhe da carta de origem.
-    if (saved) void publishAltCard(toSave).catch(() => undefined);
-    setDraft((d) => d && withUploadedArt(d, sent, toSave));
-    setSaving(false);
   };
 
   /** Troca de carta: com alterações não salvas, pergunta antes de descartar. */
@@ -261,12 +249,6 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
       </div>
 
       {saveError && <p className="rounded-lg bg-danger/10 px-3 py-2 text-sm text-danger">{saveError}</p>}
-      {!saveError && pendingArt && !dirty && (
-        <p className="rounded-lg bg-danger/10 px-3 py-2 text-sm text-danger">
-          A arte desta carta ainda não foi enviada ao servidor: ela não vai para salas nem compartilhamentos. Clique em
-          Salvar para enviar.
-        </p>
-      )}
 
       {cards && !draft && (
         <p className="rounded-xl border border-dashed border-border p-8 text-center text-muted">
@@ -330,11 +312,6 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
                     className="flex-1"
                   />
                 </label>
-              )}
-              {saveFailed && (
-                <p className="text-xs text-danger">
-                  O navegador não tem espaço para salvar esta carta (a arte ocupa muito). Use uma imagem menor.
-                </p>
               )}
               {downloadFailed && <p className="text-xs text-danger">Não foi possível gerar a imagem da carta.</p>}
               <div className="flex gap-2">

@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { contentErrorResponse, readJson } from '@/lib/content/http';
 import { invalidateContent } from '@/lib/content/server';
-import { setArtRefs } from '@/lib/artStore';
-import { catalogCardArts } from '@/lib/cardMaker/catalogEdit';
-import { ContentError, readCard, readHistory, restoreHistory } from '@/lib/content/store';
+import { ensureContent } from '@/lib/content/server';
+import { ContentError, readHistory, restoreHistory } from '@/lib/content/store';
 import { CONTENT_KINDS, HISTORY_SIZE, type ContentKind } from '@/lib/content/types';
 
 function item(kind: unknown, id: unknown): { kind: ContentKind; id: string } {
@@ -32,12 +31,9 @@ export async function POST(request: NextRequest) {
     const { kind, id } = item(body?.kind, body?.id);
     const index = Number(body?.index);
     if (!Number.isInteger(index) || index < 0 || index >= HISTORY_SIZE) throw new ContentError(400, 'Versão inválida.');
+    // Carta com o `layout` antigo no histórico: vira uma versão (precisa dos layouts carregados).
+    await ensureContent();
     const version = await restoreHistory(kind, id, index);
-    // Carta do catálogo: as artes enviadas para a versão restaurada voltam a contar como usadas por ela.
-    if (kind === 'card') {
-      const arts = catalogCardArts(await readCard(id));
-      if (arts.length) await setArtRefs(`catalog:${id}`, arts).catch((e) => console.error('Falha ao registrar as artes da carta', e));
-    }
     invalidateContent();
     return NextResponse.json({ version });
   } catch (e) {

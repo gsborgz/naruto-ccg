@@ -8,7 +8,7 @@ import { useOptionalContent } from '@/lib/content/ContentProvider';
 import { setName as setNameOf } from '@/lib/setName';
 import { customDeckCardId, customSourceId, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { deleteCustomCard } from '@/lib/cardMaker/artUpload';
-import { readCustomCards } from '@/lib/cardMaker/store';
+import { isOwnCustomCard, readCustomCards } from '@/lib/cardMaker/store';
 import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog';
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
@@ -266,13 +266,13 @@ function CardDetails({
 }
 
 /**
- * Exclui de vez a carta criada: some do criador e de todos os decks deste navegador (que ficam inválidos até
+ * Exclui de vez a carta criada: some do criador e de todos os decks do jogador (que ficam inválidos até
  * completar de novo), e a arte dela é apagada do Vercel Blob.
  */
 function DeleteCustomCardButton({ cardId, onDeleted }: { cardId: string; onDeleted: () => void }) {
   const [busy, setBusy] = useState(false);
   const remove = async () => {
-    const source = readCustomCards().find((c) => customDeckCardId(c.id) === cardId);
+    const source = readCustomCards().find((c) => customDeckCardId(c.id) === cardId && isOwnCustomCard(c.id));
     if (!source) return;
     const name = source.name.trim() || 'carta sem nome';
     if (

@@ -8,8 +8,8 @@ import { ArenaCardImage, useArenaLookup } from './arenaCards';
 import { CardZoom, type HoveredCard } from './CardZoom';
 
 /**
- * Buscar uma carta no deck: mostra o que há no deck (por nome, sem revelar a ordem) e leva a carta
- * escolhida para a mão. O servidor embaralha o deck em seguida.
+ * Buscar uma carta no deck: mostra as cartas na ordem do deck (do topo para o fundo, como ao
+ * procurar no deck físico) e leva a escolhida para a mão. O servidor embaralha o deck em seguida.
  */
 export function SearchDeckDialog({
   open,
@@ -21,12 +21,12 @@ export function SearchDeckDialog({
   open: boolean;
   /** De quem é o deck. */
   owner?: Side;
-  /** Quantidade por carta no deck (ex.: `roomApi.deck`). */
-  load: () => Promise<Record<string, number>>;
+  /** Ids das cartas na ordem do deck, do topo para o fundo (ex.: `roomApi.deck`). */
+  load: () => Promise<string[]>;
   onPick: (cardId: string) => void;
   onClose: () => void;
 }) {
-  const [counts, setCounts] = useState<Record<string, number> | null>(null);
+  const [counts, setCounts] = useState<string[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   // Alt + mouse sobre uma carta: a carta ampliada (como na arena).
@@ -52,17 +52,18 @@ export function SearchDeckDialog({
   const entries = useMemo(() => {
     if (!counts) return [];
     const q = query.trim().toLowerCase();
-    return Object.entries(counts)
-      .map(([id, qty]) => ({ id, qty, card: lookup(id, owner) }))
+    // Na ordem do deck (1 = topo); o filtro mantém a posição de cada carta.
+    return counts
+      .map((id, i) => ({ id, position: i + 1, card: lookup(id, owner) }))
       .map((e) => ({ ...e, name: e.card ? nameOf(e.card) : e.id }))
-      .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.card?.name ?? '').toLowerCase().includes(q))
-      .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+      .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.card?.name ?? '').toLowerCase().includes(q));
   }, [counts, query, lookup, owner]);
 
   return (
     <Dialog open={open} onClose={onClose} title="Buscar no deck">
       <p className="text-sm text-muted">
-        Escolha uma carta para colocar na mão. Depois o deck é <strong className="text-text">embaralhado</strong>.
+        As cartas estão na ordem do deck, do topo (1) para o fundo. Escolha uma para colocar na mão. Depois o deck é{' '}
+        <strong className="text-text">embaralhado</strong>.
       </p>
       <input
         value={query}
@@ -75,8 +76,8 @@ export function SearchDeckDialog({
       {!counts && !error && <p className="text-sm text-muted">Carregando o deck…</p>}
       {counts && (
         <ul className="grid max-h-[55vh] grid-cols-3 gap-2 overflow-y-auto sm:grid-cols-4">
-          {entries.map(({ id, qty, card, name }) => (
-            <li key={id}>
+          {entries.map(({ id, position, card, name }) => (
+            <li key={position}>
               <button
                 type="button"
                 onClick={() => onPick(id)}
@@ -93,11 +94,12 @@ export function SearchDeckDialog({
                     className="aspect-[5/7] w-full overflow-hidden rounded object-cover ring-1 ring-border group-hover:ring-accent"
                   />
                 )}
-                {qty > 1 && (
-                  <span className="absolute right-2 top-2 rounded-full bg-accent px-1.5 text-xs font-bold text-bg">
-                    ×{qty}
-                  </span>
-                )}
+                <span
+                  className="absolute left-2 top-2 rounded-full bg-bg/85 px-1.5 text-xs font-bold ring-1 ring-border"
+                  title={position === 1 ? 'Topo do deck' : `${position}ª carta do topo`}
+                >
+                  {position}
+                </span>
                 <span className="truncate text-xs font-medium">{name}</span>
                 {card && <span className="text-[10px] text-muted">{CARD_TYPE_LABEL[card.type]}</span>}
               </button>

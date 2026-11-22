@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { CARDS, CARDS_BY_ID } from '../../data/cards.ts';
 import { cardImageUrl, type Card, type NinjaCard } from '../../models/card.ts';
-import { catalogDraft, toCatalogCard, withAltDesign, withoutLayout } from '../cardMaker/catalogEdit.ts';
+import { catalogDraft, toCatalogCard, withDesign, withoutLayout } from '../cardMaker/catalogEdit.ts';
 import { CHAKRA_ICON, ELEMENT_ICONS, TYPE_ICON_VARIANTS } from '../cardMaker/icons/index.ts';
 import { SEED_ICONS } from '../cardMaker/icons/seed.ts';
 import { LAYOUTS, LAYOUT_LIST } from '../cardMaker/layouts/index.ts';
@@ -126,7 +126,7 @@ test('aba Editar: carta sem layout começa no layout escolhido, com a impressa d
   assert.equal(toCatalogCard(plain, draft).layout?.layout, 'layout-02');
 });
 
-test('arte alternativa: vira o design padrão só com o visual da carta criada', () => {
+test('versão escolhida: a carta guarda o id e ganha só o visual da versão', () => {
   const card = CARDS_BY_ID.get('fx-n-001')!;
   const blob = `https://abc.public.blob.vercel-storage.com/naruto-ccg/art/${'a'.repeat(64)}.webp`;
   const alt = {
@@ -137,9 +137,10 @@ test('arte alternativa: vira o design padrão só com o visual da carta criada',
     nameSize: -3,
     art: { src: blob, x: 5, y: 6, zoom: 1.5 },
   };
-  const chosen = withAltDesign(card, alt);
-  const { layout: _a, ...data } = chosen;
-  const { layout: _b, ...original } = card;
+  const chosen = withDesign(card, alt);
+  assert.equal(chosen.design, alt.id);
+  const { layout: _a, design: _d, ...data } = chosen;
+  const { layout: _b, design: _e, ...original } = card;
   assert.deepEqual(data, original);
   assert.equal(chosen.layout?.layout, 'layout-02');
   assert.equal(chosen.layout?.nameSize, -3);

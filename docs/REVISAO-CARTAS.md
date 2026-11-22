@@ -50,7 +50,7 @@ npm run content:sync-cards -- <SET> --dry-run   # mostra as cartas que mudaram
 npm run content:sync-cards -- <SET>             # grava (o layout de cada carta fica o do Redis)
 ```
 
-O Redis é o das variáveis do `.env.local` (o local, por padrão). O `content:sync-cards` grava a carta com os textos em PT-BR (a tradução de `src/data/ptbr/`) e troca também o que foi editado pelo site nessa carta (a versão anterior fica no histórico). Para levar ao site publicado, rode depois `npm run content:push` (envia de uma vez o que mudou no Redis local; ver "Conteúdo do jogo" no README). O `dump_set.ts` lê os arquivos em inglês (`src/data/sets/`), não o Redis: a revisão compara com a imagem impressa.
+O Redis é o das variáveis do `.env.local` (o local, por padrão). O `content:sync-cards` grava a carta com os textos em PT-BR (a tradução de `src/data/ptbr/`) e troca também o que foi editado pelo site nessa carta (a versão anterior fica no histórico). Para gravar no site publicado, rode o `content:sync-cards` com as variáveis do Redis de produção. O `dump_set.ts` lê os arquivos em inglês (`src/data/sets/`), não o Redis: a revisão compara com a imagem impressa.
 
 - **A imagem impressa vale** sobre os dados.
 - **Erros de impressão óbvios** podem ser limpos quando atrapalham o uso. Ex.: S01 J-003 imprime `"Male""` e o TS guarda `"Male"`. Anote cada caso no relatório final.

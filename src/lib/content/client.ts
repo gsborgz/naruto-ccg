@@ -1,6 +1,9 @@
 'use client';
 
-import { CARDS, CARDS_BY_ID } from '@/data/cards';
+import { CARDS_BY_ID } from '@/data/cards';
+import type { CustomCard } from '@/lib/cardMaker/model';
+import { cloudRequest } from '@/lib/cloud/library';
+import { getIdentity } from '@/lib/rooms/client';
 import type { Card } from '@/models/card';
 import { applyChanges, type ConfigTarget, type ContentChange } from './changes';
 
@@ -25,16 +28,16 @@ export async function saveCardLayout(cardId: string, changes: ContentChange[]): 
 }
 
 /**
- * Grava uma carta do catálogo editada (aba Editar do detalhe) e troca a carta em memória pela gravada. Avise o
- * `ContentProvider` com `saved(version)`: as listas (`useCardCatalog`) são refeitas a cada versão.
+ * Grava uma carta do catálogo editada pelo site: os dados e os textos (`card`, sem o `layout`, que é montado pelo
+ * servidor) e o design. `card.design` escolhe uma versão existente (sem: a impressa); `version` (aba Editar) é o visual
+ * editado, gravado numa versão de quem editou. Depois, `useContent().reload()` traz a carta montada.
  */
-export async function saveCatalogCard(card: Card): Promise<{ version: number; card: Card }> {
-  const result = await post<{ version: number; card: Card }>(`/api/content/cards/${encodeURIComponent(card.id)}`, { card }, 'PUT');
-  const i = CARDS.findIndex((c) => c.id === card.id);
-  if (i >= 0) CARDS[i] = result.card;
-  else CARDS.push(result.card);
-  (CARDS_BY_ID as Map<string, Card>).set(card.id, result.card);
-  return result;
+export async function saveCatalogCard(card: Card, version?: CustomCard): Promise<{ version: number }> {
+  const { layout: _layout, ...data } = card;
+  return cloudRequest(`/api/content/cards/${encodeURIComponent(card.id)}`, {
+    method: 'PUT',
+    body: JSON.stringify({ card: data, ...(version && { version }), author: getIdentity().nickname }),
+  });
 }
 
 /** Cria um layout novo, cópia de `base`. Depois, `useContent().reload()` traz o layout novo. */

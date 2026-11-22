@@ -30,6 +30,7 @@ import {
   type Side,
 } from '@/lib/game/state';
 import type { RoomCards } from '@/lib/rooms/client';
+import { useKnownVersions } from '@/lib/deckDesigns';
 import { deckLookup } from '@/lib/rooms/model';
 import { isReinforcementCard, isTokenCard, permanentCoins } from '@/models/card';
 
@@ -47,6 +48,8 @@ const LABEL: Record<Side, string> = { host: 'Jogador 1', guest: 'Jogador 2' };
 interface SoloDeck {
   name: string;
   cards: Record<string, number>;
+  /** Design escolhido para cada carta do catálogo no deck (`Deck.designs`). */
+  designs?: Record<string, string>;
 }
 
 interface SoloSave {
@@ -146,7 +149,10 @@ function Setup({ onStart }: { onStart: (decks: Record<Side, SoloDeck>) => void }
           type="button"
           disabled={!host || !guest}
           onClick={() =>
-            host && guest && onStart({ host: { name: host.name, cards: host.cards }, guest: { name: guest.name, cards: guest.cards } })
+            host && guest && onStart({
+                host: { name: host.name, cards: host.cards, designs: host.designs },
+                guest: { name: guest.name, cards: guest.cards, designs: guest.designs },
+              })
           }
           className="rounded-lg bg-ok px-5 py-2 font-semibold text-bg hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
         >
@@ -167,6 +173,7 @@ export default function SoloPage() {
   const [error, setError] = useState<string | null>(null);
   const [searching, setSearching] = useState(false);
   const customCards = useCustomCards();
+  const knownVersions = useKnownVersions();
   const myTheme = useArenaTheme();
 
   useEffect(() => setSave(loadSave()), []);
@@ -182,9 +189,19 @@ export default function SoloPage() {
   );
   const { rules } = useMemo(() => rulesFor(custom), [custom]);
   // Cartas criadas dos dois lados.
-  const roomCards = useMemo<RoomCards | undefined>(() => (save ? { cards: custom } : undefined), [save, custom]);
+  // Cartas criadas dos dois lados e o design escolhido em cada deck (as versões vêm da biblioteca na nuvem).
+  const roomCards = useMemo<RoomCards | undefined>(() => {
+    if (!save) return undefined;
+    const designs = { host: save.decks.host.designs ?? {}, guest: save.decks.guest.designs ?? {} };
+    const versions: Record<string, CustomCard> = {};
+    for (const id of [...Object.values(designs.host), ...Object.values(designs.guest)]) {
+      const v = knownVersions(id);
+      if (v) versions[id] = v;
+    }
+    return { cards: custom, designs, versions };
+  }, [save, custom, knownVersions]);
   // Busca no deck do lado que você comanda (a referência só muda com a partida, para o diálogo não recarregar à toa).
-  const loadDeck = useCallback(async () => (save ? deckContents(save.game, save.viewing) : {}), [save]);
+  const loadDeck = useCallback(async () => (save ? deckContents(save.game, save.viewing) : []), [save]);
 
   const start = (decks: Record<Side, SoloDeck>) => {
     const { isReinforcement: reinf, isToken: token } = rulesFor(customCards ? customFor(decks, customCards) : {});

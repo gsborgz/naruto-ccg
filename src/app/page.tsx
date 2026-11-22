@@ -3,11 +3,13 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { AccountDialog } from '@/components/AccountDialog';
 import { ImportDialog } from '@/components/ImportDialog';
 import { ReturnToRoom } from '@/components/ReturnToRoom';
 import { ShareDialog, type ShareRequest } from '@/components/ShareDialog';
 import { hasCustomCards } from '@/lib/cardMaker/customIds';
 import { DECK_RULES, summarizeDeck } from '@/lib/deckRules';
+import { useLibraryError } from '@/lib/cloud/library';
 import { deckActions, useDecks } from '@/lib/deckStore';
 import { useCardCatalog } from '@/lib/useCardCatalog';
 
@@ -17,6 +19,8 @@ export default function HomePage() {
   const router = useRouter();
   const [share, setShare] = useState<ShareRequest | null>(null);
   const [importing, setImporting] = useState(false);
+  const [account, setAccount] = useState(false);
+  const loadError = useLibraryError();
 
   const newDeck = () => {
     const deck = deckActions.create();
@@ -30,10 +34,17 @@ export default function HomePage() {
         <div>
           <h1 className="text-2xl font-bold">Meus decks</h1>
           <p className="text-sm text-muted">
-            {DECK_RULES.size} cartas, até {DECK_RULES.copiesPerCard} cópias de cada carta. Salvos neste navegador.
+            {DECK_RULES.size} cartas, até {DECK_RULES.copiesPerCard} cópias de cada carta. Salvos na nuvem, no seu código da conta.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setAccount(true)}
+            className="rounded-lg px-4 py-2 font-semibold text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text"
+          >
+            Código da conta
+          </button>
           <button
             type="button"
             onClick={() => setImporting(true)}
@@ -63,7 +74,9 @@ export default function HomePage() {
       </div>
 
       {decks === null ? (
-        <p className="text-muted">Carregando…</p>
+        <p className={loadError ? 'text-danger' : 'text-muted'}>
+          {loadError ? `Não foi possível carregar os decks: ${loadError}` : 'Carregando…'}
+        </p>
       ) : decks.length === 0 ? (
         <div className="rounded-xl border border-dashed border-border p-10 text-center">
           <p className="text-lg font-semibold">Nenhum deck ainda</p>
@@ -148,6 +161,7 @@ export default function HomePage() {
 
       <ShareDialog request={share} onClose={() => setShare(null)} />
       <ImportDialog open={importing} onClose={() => setImporting(false)} />
+      <AccountDialog open={account} onClose={() => setAccount(false)} />
     </div>
   );
 }

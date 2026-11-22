@@ -5,19 +5,22 @@ import { useParams } from 'next/navigation';
 import { useCallback, useMemo, useState } from 'react';
 import { CardBrowser } from '@/components/CardBrowser';
 import { CardDetailModal } from '@/components/CardDetailModal';
+import { DeckDesignDialog } from '@/components/DeckDesignDialog';
 import { DeckPanel } from '@/components/DeckPanel';
 import { DeckSheet } from '@/components/DeckSheet';
 import { QtyControls } from '@/components/QtyControls';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { cannotAddReasonIn, DECK_RULES, indexDeck, summarizeDeck, type DeckCards } from '@/lib/deckRules';
+import { useDesignedLookup } from '@/lib/deckDesigns';
 import { deckActions, useDeck, type Deck } from '@/lib/deckStore';
 import { useCardCatalog } from '@/lib/useCardCatalog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import type { Card } from '@/models/card';
 
-type Draft = Pick<Deck, 'id' | 'name' | 'cards'>;
+type Draft = Pick<Deck, 'id' | 'name' | 'cards' | 'designs'>;
 
-function sameCards(a: DeckCards, b: DeckCards): boolean {
+/** Mesmas entradas (quantidades das cartas ou designs escolhidos). */
+function sameCards(a: Record<string, number | string>, b: Record<string, number | string>): boolean {
   const ka = Object.keys(a);
   return ka.length === Object.keys(b).length && ka.every((k) => a[k] === b[k]);
 }
@@ -26,15 +29,20 @@ export default function DeckBuilderPage() {
   const { id } = useParams<{ id: string }>();
   const stored = useDeck(id);
   const [selected, setSelected] = useState<Card | null>(null);
-  // Catálogo + cartas do criador (`/criar`) deste navegador.
+  // Catálogo + cartas do criador (`/criar`).
   const { cards: available, lookup } = useCardCatalog();
 
-  // Rascunho em memória: as edições só vão para o localStorage ao salvar.
+  // Rascunho em memória: as edições só vão para a nuvem ao salvar.
   const [draft, setDraft] = useState<Draft | null>(null);
-  if (stored && draft?.id !== stored.id) setDraft({ id: stored.id, name: stored.name, cards: stored.cards });
-  const deck = draft && stored ? { ...stored, name: draft.name, cards: draft.cards } : stored;
+  if (stored && draft?.id !== stored.id) {
+    setDraft({ id: stored.id, name: stored.name, cards: stored.cards, designs: stored.designs ?? {} });
+  }
+  const deck = draft && stored ? { ...stored, name: draft.name, cards: draft.cards, designs: draft.designs } : stored;
 
-  const dirty = !!draft && !!stored && (draft.name !== stored.name || !sameCards(draft.cards, stored.cards));
+  const dirty =
+    !!draft &&
+    !!stored &&
+    (draft.name !== stored.name || !sameCards(draft.cards, stored.cards) || !sameCards(draft.designs ?? {}, stored.designs ?? {}));
   const guard = useLeaveGuard(dirty);
 
   // Tudo derivado do conteúdo do deck é calculado uma vez por mudança, não uma vez por carta da grade.
@@ -54,10 +62,24 @@ export default function DeckBuilderPage() {
   }, []);
   const onRename = useCallback((name: string) => setDraft((d) => d && { ...d, name }), []);
   const onClear = useCallback(() => setDraft((d) => d && { ...d, cards: {} }), []);
+  // Design de cada carta neste deck (`Deck.designs`): a carta com o design escolhido é a que aparece e é impressa.
+  const designedLookup = useDesignedLookup(lookup, draft?.designs);
+  const [designFor, setDesignFor] = useState<Card | null>(null);
+  const onSetDesign = useCallback((cardId: string, choice: string | undefined) => {
+    setDraft((d) => {
+      if (!d) return d;
+      const designs = { ...d.designs };
+      if (choice) designs[cardId] = choice;
+      else delete designs[cardId];
+      return { ...d, designs };
+    });
+  }, []);
 
   const save = useCallback(() => {
     if (!draft) return;
-    deckActions.save(draft.id, draft);
+    // Só ficam os designs das cartas que estão no deck.
+    const designs = Object.fromEntries(Object.entries(draft.designs ?? {}).filter(([id]) => id in draft.cards));
+    void deckActions.save(draft.id, { ...draft, designs });
     // O nome salvo é normalizado (sem espaços nas pontas): alinha o rascunho para não ficar "não salvo".
     setDraft((d) => d && { ...d, name: d.name.trim() || 'Deck sem nome' });
   }, [draft]);
@@ -81,7 +103,7 @@ export default function DeckBuilderPage() {
 
   const panelProps = {
     deck,
-    lookup,
+    lookup: designedLookup,
     summary,
     dirty,
     blockedOf,
@@ -90,6 +112,7 @@ export default function DeckBuilderPage() {
     onRename,
     onClear,
     onSave: save,
+    onDesign: setDesignFor,
   };
 
   return (
@@ -148,6 +171,13 @@ export default function DeckBuilderPage() {
             <QtyControls card={selected} qty={countOf(selected)} blocked={blockedOf(selected)} onSetQty={onSetQty} />
           )
         }
+      />
+
+      <DeckDesignDialog
+        card={designFor}
+        choice={designFor ? draft?.designs?.[designFor.id] : undefined}
+        onChoose={(choice) => designFor && onSetDesign(designFor.id, choice)}
+        onClose={() => setDesignFor(null)}
       />
 
       <UnsavedChangesDialog

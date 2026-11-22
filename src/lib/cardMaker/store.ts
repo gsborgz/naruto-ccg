@@ -1,93 +1,70 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
-import { migrateCustomCard, type CustomCard } from './model.ts';
+import { useMemo } from 'react';
+import { cloudRequest, currentLibrary, updateLibrary, useLibrary } from '../cloud/library.ts';
+import { getIdentity } from '../rooms/client.ts';
+import type { CustomCard } from './model.ts';
 
 /**
- * Cartas do criador, no localStorage (gravadas pelo botão **Salvar** do criador). A arte é o endereço dela no Vercel
- * Blob; se o envio falhou ao salvar, fica como data URL tratada (`compressImage`) até o próximo **Salvar**.
+ * Cartas do criador, na nuvem (`src/lib/customCards/`; nada fica no navegador). As do jogador são gravadas pelo botão
+ * **Salvar** do criador, com as artes já no Vercel Blob; as de outros jogadores (de decks importados ou escolhidas como
+ * design num deck) vêm junto para serem desenhadas, mas não são editadas aqui.
  */
-interface StoredData {
-  version: 1;
-  cards: CustomCard[];
-}
 
-const STORAGE_KEY = 'naruto-ccg:custom-cards';
-
-let cache: CustomCard[] | null = null;
-const listeners = new Set<() => void>();
-
-function read(): CustomCard[] {
-  if (cache) return cache;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const parsed = raw ? (JSON.parse(raw) as StoredData) : null;
-    cache = parsed?.version === 1 && Array.isArray(parsed.cards) ? parsed.cards.map(migrateCustomCard) : [];
-  } catch {
-    cache = [];
-  }
-  return cache;
-}
-
-/** Grava e avisa quem está ouvindo. Retorna false se o navegador recusou (ex.: storage cheio). */
-function write(cards: CustomCard[]): boolean {
-  cache = cards;
-  let ok = true;
-  try {
-    const data: StoredData = { version: 1, cards };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  } catch {
-    ok = false; // Mantém em memória nesta sessão.
-  }
-  listeners.forEach((l) => l());
-  return ok;
-}
-
-/** Cartas criadas agora (fora do React). */
-export function readCustomCards(): CustomCard[] {
-  return read();
-}
-
-
-function subscribe(listener: () => void) {
-  listeners.add(listener);
-  const onStorage = (e: StorageEvent) => {
-    if (e.key === STORAGE_KEY) {
-      cache = null;
-      listener();
-    }
-  };
-  window.addEventListener('storage', onStorage);
-  return () => {
-    listeners.delete(listener);
-    window.removeEventListener('storage', onStorage);
-  };
-}
-
-/** Cartas criadas, sincronizadas entre abas. `null` durante o SSR. */
+/** Todas as cartas do criador conhecidas: as do jogador e as de outros que os decks usam. `null` enquanto carrega. */
 export function useCustomCards(): CustomCard[] | null {
-  return useSyncExternalStore<CustomCard[] | null>(subscribe, read, () => null);
+  const lib = useLibrary();
+  return useMemo(() => (lib ? [...lib.mine, ...[...lib.others.values()].map((o) => o.card)] : null), [lib]);
+}
+
+/** Só as cartas do jogador (as que ele edita no criador). `null` enquanto carrega. */
+export function useOwnCustomCards(): CustomCard[] | null {
+  return useLibrary()?.mine ?? null;
+}
+
+/** Cartas conhecidas agora (fora do React). */
+export function readCustomCards(): CustomCard[] {
+  const lib = currentLibrary();
+  return [...lib.mine, ...[...lib.others.values()].map((o) => o.card)];
+}
+
+/** A carta é do jogador (dá para abrir e editar no criador)? */
+export function isOwnCustomCard(id: string): boolean {
+  return currentLibrary().mine.some((c) => c.id === id);
 }
 
 export const customCardActions = {
-  /** Cria ou atualiza. Retorna false se não coube no armazenamento do navegador. */
-  save(card: CustomCard): boolean {
-    const cards = read();
-    const updated = { ...card, updatedAt: new Date().toISOString() };
-    const exists = cards.some((c) => c.id === card.id);
-    return write(exists ? cards.map((c) => (c.id === card.id ? updated : c)) : [updated, ...cards]);
-  },
   /**
-   * Cartas criadas que vieram de um deck importado (código compartilhado): entram no criador as que ainda não
-   * existem aqui. Uma carta com o mesmo id já existente fica como está (pode ter sido editada neste navegador).
+   * Cria ou atualiza uma carta do jogador na nuvem. As artes precisam estar no Blob (`uploadCardArt`). Resolve `false`
+   * se a gravação falhou (já avisado na tela).
    */
-  addMissing(incoming: CustomCard[]): boolean {
-    const cards = read();
-    const known = new Set(cards.map((c) => c.id));
-    const added = incoming.filter((c) => !known.has(c.id));
-    return added.length === 0 || write([...added, ...cards]);
+  save(card: CustomCard): Promise<boolean> {
+    const updated = { ...card, updatedAt: new Date().toISOString() };
+    const { reference: _reference, ...sent } = updated;
+    return updateLibrary(
+      (lib) => {
+        const exists = lib.mine.some((c) => c.id === card.id);
+        return { ...lib, mine: exists ? lib.mine.map((c) => (c.id === card.id ? updated : c)) : [updated, ...lib.mine] };
+      },
+      async () => {
+        const res = await cloudRequest<{ contentChanged: boolean }>('/api/me/cards', {
+          method: 'PUT',
+          body: JSON.stringify({ card: sent, author: getIdentity().nickname }),
+        });
+        // A carta é o design padrão de uma carta do catálogo: o conteúdo do jogo mudou.
+        if (res.contentChanged) window.dispatchEvent(new Event('naruto-ccg:content-changed'));
+      },
+    );
   },
-  remove(id: string) {
-    write(read().filter((c) => c.id !== id));
+
+  /** Exclui de vez: sai dos decks do jogador, e a arte sai do Blob se nada mais a usa. */
+  remove(id: string): Promise<boolean> {
+    return updateLibrary(
+      (lib) => ({ ...lib, mine: lib.mine.filter((c) => c.id !== id) }),
+      async () => {
+        const res = await cloudRequest<{ contentChanged: boolean }>('/api/me/cards', { method: 'DELETE', body: JSON.stringify({ id }) });
+        if (res.contentChanged) window.dispatchEvent(new Event('naruto-ccg:content-changed'));
+      },
+    );
   },
 };

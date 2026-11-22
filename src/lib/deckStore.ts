@@ -1,71 +1,19 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
+import { cloudRequest, currentLibrary, updateLibrary, useLibrary } from './cloud/library.ts';
 import type { DeckCards } from './deckRules.ts';
+import type { Deck } from './decks/types.ts';
 
-export interface Deck {
-  id: string;
-  name: string;
-  cards: DeckCards;
-  createdAt: string;
-  updatedAt: string;
-}
+export type { Deck };
 
 /**
- * Formato salvo no localStorage. O campo `version` permite migrar no futuro
- * (e é o mesmo payload que irá para o "código de backup" na próxima etapa).
+ * Decks do jogador, na nuvem (`src/lib/decks/store.ts`; nada fica no navegador). As telas usam estes hooks e ações; a
+ * memória muda na hora e a gravação vai para o servidor em seguida (`src/lib/cloud/library.ts`).
  */
-interface StoredData {
-  version: 1;
-  decks: Deck[];
-}
 
-const STORAGE_KEY = 'naruto-ccg:decks';
-
-let cache: Deck[] | null = null;
-const listeners = new Set<() => void>();
-
-function read(): Deck[] {
-  if (cache) return cache;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const parsed = raw ? (JSON.parse(raw) as StoredData) : null;
-    cache = parsed?.version === 1 && Array.isArray(parsed.decks) ? parsed.decks : [];
-  } catch {
-    cache = [];
-  }
-  return cache;
-}
-
-function write(decks: Deck[]) {
-  cache = decks;
-  try {
-    const data: StoredData = { version: 1, decks };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  } catch {
-    // Storage cheio ou bloqueado: mantém em memória nesta sessão.
-  }
-  listeners.forEach((l) => l());
-}
-
-function subscribe(listener: () => void) {
-  listeners.add(listener);
-  const onStorage = (e: StorageEvent) => {
-    if (e.key === STORAGE_KEY) {
-      cache = null;
-      listener();
-    }
-  };
-  window.addEventListener('storage', onStorage);
-  return () => {
-    listeners.delete(listener);
-    window.removeEventListener('storage', onStorage);
-  };
-}
-
-/** Lista de decks, sincronizada entre abas. Retorna `null` durante o SSR. */
+/** Lista de decks. `null` enquanto carrega (e no servidor). */
 export function useDecks(): Deck[] | null {
-  return useSyncExternalStore<Deck[] | null>(subscribe, read, () => null);
+  return useLibrary()?.decks ?? null;
 }
 
 export function useDeck(id: string): Deck | null | undefined {
@@ -78,51 +26,80 @@ function now() {
   return new Date().toISOString();
 }
 
+const putDecks = (decks: Deck[]) => () => cloudRequest('/api/me/decks', { method: 'PUT', body: JSON.stringify({ decks }) });
+
+function add(created: Deck[]) {
+  void updateLibrary((lib) => ({ ...lib, decks: [...created, ...lib.decks] }), putDecks(created));
+}
+
+function replace(changed: Deck[]) {
+  const byId = new Map(changed.map((d) => [d.id, d]));
+  return updateLibrary((lib) => ({ ...lib, decks: lib.decks.map((d) => byId.get(d.id) ?? d) }), putDecks(changed));
+}
+
 export const deckActions = {
-  create(name = 'Novo deck', cards: DeckCards = {}): Deck {
-    const deck: Deck = { id: crypto.randomUUID(), name, cards, createdAt: now(), updatedAt: now() };
-    write([deck, ...read()]);
+  create(name = 'Novo deck', cards: DeckCards = {}, designs?: Record<string, string>): Deck {
+    const deck: Deck = { id: crypto.randomUUID(), name, cards, ...(designs && { designs }), createdAt: now(), updatedAt: now() };
+    add([deck]);
     return deck;
   },
 
   /**
-   * Grava as alterações do montador. O montador edita um rascunho em memória e só chama isto
-   * no botão "Salvar" (ou ao confirmar "Salvar" ao sair da tela).
+   * Grava as alterações do montador. O montador edita um rascunho em memória e só chama isto no botão "Salvar" (ou ao
+   * confirmar "Salvar" ao sair da tela). Resolve `false` se a gravação na nuvem falhou.
    */
-  save(id: string, changes: Pick<Deck, 'name' | 'cards'>) {
+  save(id: string, changes: Pick<Deck, 'name' | 'cards' | 'designs'>): Promise<boolean> {
+    const current = currentLibrary().decks.find((d) => d.id === id);
+    if (!current) return Promise.resolve(false);
     const name = changes.name.trim() || 'Deck sem nome';
-    write(read().map((d) => (d.id === id ? { ...d, name, cards: { ...changes.cards }, updatedAt: now() } : d)));
+    const designs = changes.designs && Object.keys(changes.designs).length ? { ...changes.designs } : undefined;
+    const { designs: _old, ...rest } = current;
+    return replace([{ ...rest, name, cards: { ...changes.cards }, ...(designs && { designs }), updatedAt: now() }]);
   },
 
   /** Adiciona decks importados (de um código compartilhado) como decks novos, no topo da lista. */
-  importDecks(decks: Pick<Deck, 'name' | 'cards'>[]): Deck[] {
+  importDecks(decks: Pick<Deck, 'name' | 'cards' | 'designs'>[]): Deck[] {
     const created = decks.map(
-      (d): Deck => ({ id: crypto.randomUUID(), name: d.name, cards: { ...d.cards }, createdAt: now(), updatedAt: now() }),
+      (d): Deck => ({
+        id: crypto.randomUUID(),
+        name: d.name,
+        cards: { ...d.cards },
+        ...(d.designs && Object.keys(d.designs).length > 0 && { designs: { ...d.designs } }),
+        createdAt: now(),
+        updatedAt: now(),
+      }),
     );
-    write([...created, ...read()]);
+    add(created);
     return created;
   },
 
   duplicate(id: string): Deck | null {
-    const src = read().find((d) => d.id === id);
+    const src = currentLibrary().decks.find((d) => d.id === id);
     if (!src) return null;
-    return deckActions.create(`${src.name} (cópia)`, { ...src.cards });
+    return deckActions.create(`${src.name} (cópia)`, { ...src.cards }, src.designs && { ...src.designs });
   },
 
   remove(id: string) {
-    write(read().filter((d) => d.id !== id));
+    void updateLibrary(
+      (lib) => ({ ...lib, decks: lib.decks.filter((d) => d.id !== id) }),
+      () => cloudRequest('/api/me/decks', { method: 'DELETE', body: JSON.stringify({ id }) }),
+    );
   },
 
-  /** Tira a carta de todos os decks (carta criada excluída): os decks que a usavam ficam com menos cartas. */
-  removeCardEverywhere(cardId: string) {
-    const decks = read();
-    if (!decks.some((d) => cardId in d.cards)) return;
-    write(
-      decks.map((d) => {
-        if (!(cardId in d.cards)) return d;
-        const { [cardId]: _removed, ...cards } = d.cards;
-        return { ...d, cards, updatedAt: now() };
+  /** Tira a carta de todos os decks só na memória (o servidor já tirou: carta criada excluída). */
+  forgetCardEverywhere(cardId: string) {
+    const lib = currentLibrary();
+    if (!lib.decks.some((d) => cardId in d.cards)) return;
+    void updateLibrary(
+      (l) => ({
+        ...l,
+        decks: l.decks.map((d) => {
+          if (!(cardId in d.cards)) return d;
+          const { [cardId]: _removed, ...cards } = d.cards;
+          return { ...d, cards };
+        }),
       }),
+      async () => undefined,
     );
   },
 };

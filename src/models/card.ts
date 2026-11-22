@@ -37,8 +37,13 @@ interface BaseCard {
   /** Nome do arquivo da imagem, sem extensão (ver `cardImageUrl`). */
   image: string;
   /**
-   * Layout da carta e enquadramento das artes extraídas, para montá-la virtualmente (ver `cardLayout.ts`).
-   * Só nas cartas já escaneadas.
+   * Design padrão da carta: o id da versão escolhida (uma carta do criador importada desta, guardada na nuvem;
+   * `src/lib/customCards/`). É o que fica gravado no conteúdo do jogo. Sem valor: a imagem impressa.
+   */
+  design?: string;
+  /**
+   * Layout da carta e enquadramento das artes, para montá-la virtualmente (ver `cardLayout.ts`). Não fica gravado: o
+   * servidor monta a partir da versão escolhida (`design`) ao ler o conteúdo (`designLayout`).
    */
   layout?: CardLayoutInfo;
   /**
