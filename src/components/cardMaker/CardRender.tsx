@@ -197,12 +197,18 @@ function splitTrailingParentheses(name: string): [string, string | null] {
 const NAME_LINE_HEIGHT = 0.95;
 
 /** Fonte do nome em mais de uma linha, em relação ao tamanho de uma linha só. */
-const NAME_MULTILINE_SCALE = 0.78;
+const NAME_MULTILINE_SCALE = 0.9;
+
+/**
+ * Altura extra que o nome em mais de uma linha pode ocupar além da área do nome (`maxHeight`), centrado nela: sem isso,
+ * cada linha a mais encolhe muito a fonte.
+ */
+const NAME_MULTILINE_HEIGHT = 1.35;
 
 /**
  * Ajusta o nome: numa linha só, reduz a fonte até 80%; se ainda não couber (ou se o nome tiver
  * quebra manual), deixa quebrar linha, começa um pouco menor (`NAME_MULTILINE_SCALE`) e reduz até o
- * bloco caber em `maxWidth` × `maxHeight`. Os espaços digitados são mantidos (`pre`/`pre-wrap`).
+ * bloco caber em `maxWidth` × `maxHeight` (com a folga `NAME_MULTILINE_HEIGHT`). Os espaços digitados são mantidos (`pre`/`pre-wrap`).
  */
 function useFitName(
   ref: React.RefObject<HTMLElement | null>,
@@ -215,15 +221,15 @@ function useFitName(
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const fits = () => el.scrollWidth <= maxWidth + 0.5 && el.scrollHeight <= maxHeight + 0.5;
-    const shrink = (from: number, min: number) => {
+    const fits = (height = maxHeight) => el.scrollWidth <= maxWidth + 0.5 && el.scrollHeight <= height + 0.5;
+    const shrink = (from: number, min: number, height = maxHeight) => {
       let s = from;
       el.style.fontSize = `${s}px`;
-      while (s > min && !fits()) {
+      while (s > min && !fits(height)) {
         s -= 0.25;
         el.style.fontSize = `${s}px`;
       }
-      return fits();
+      return fits(height);
     };
     const fit = () => {
       const manualBreak = (el.textContent ?? '').includes('\n');
@@ -235,7 +241,7 @@ function useFitName(
       }
       el.style.whiteSpace = 'pre-wrap';
       el.style.lineHeight = String(NAME_LINE_HEIGHT);
-      shrink(size * NAME_MULTILINE_SCALE, size * 0.4);
+      shrink(size * NAME_MULTILINE_SCALE, size * 0.4, maxHeight * NAME_MULTILINE_HEIGHT);
     };
     fit();
     let alive = true;
@@ -743,6 +749,8 @@ export function CardRender({ card, width, referenceOpacity = 0, onArtMove, class
         )}
         <Flavor {...parts} />
         {panel && <Img src={panel} x={0} y={0} w={CARD_W} h={CARD_H} />}
+        {/* Linha acima do texto: logo por cima do painel e atrás dos ícones (Atributo de Combate, vila, custos...). */}
+        <TextDivider {...parts} />
         {/* Tipo e elementos por cima do painel (ex.: layout 3, cuja mancha do nome vem no painel). */}
         <NamedIcon icon={typeIcon(spec, type, card.typeVariant)} />
         {card.elements.slice(0, MAX_ELEMENTS).map((el, i) => (
@@ -778,7 +786,6 @@ export function CardRender({ card, width, referenceOpacity = 0, onArtMove, class
           })()}
         {type === 'jutsu' && <JutsuCost {...parts} />}
         {hasCharacteristics(type) && <Characteristics {...parts} />}
-        <TextDivider {...parts} />
         <EffectText {...parts} />
 
         {referenceOpacity > 0 && card.reference && (
