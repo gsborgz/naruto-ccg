@@ -41,7 +41,9 @@ export function hydrateContent(snapshot: ContentSnapshot): void {
     // Tipos com a mesma configuração voltam a dividir o objeto, como no código original (ver `linkSharedTypes`).
     const spec = linkSharedTypes(snapshot.layouts[id]) as LayoutSpec;
     // Linha acima do texto: os campos que o layout ainda não gravou ficam com o padrão (e aparecem no editor de layouts).
-    spec.textDivider = { ...TEXT_DIVIDER_DEFAULT, ...spec.textDivider };
+    // A cor fica em `textDividerColor` (um `textDivider.color` gravado antes é ignorado).
+    const { color: _color, ...divider } = (spec.textDivider ?? {}) as Partial<typeof TEXT_DIVIDER_DEFAULT> & { color?: unknown };
+    spec.textDivider = { ...TEXT_DIVIDER_DEFAULT, ...divider };
     LAYOUTS[id] = spec;
     LAYOUT_LIST.push(spec);
   }

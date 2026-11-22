@@ -15,6 +15,7 @@ import {
   costIcon,
   elementIcon,
   cardLayout,
+  TEXT_DIVIDER_COLOR,
   frameFor,
   panelFor,
   typeIcon,
@@ -415,6 +416,8 @@ function TextDivider({ card, spec }: PartProps) {
   const w = box.w - style.inset * 2;
   const h = style.thickness;
   if (w <= 0 || h <= 0) return null;
+  // Cor própria do layout (`textDividerColor`) ou a padrão.
+  const color = spec.textDividerColor || TEXT_DIVIDER_COLOR;
   return (
     <svg
       viewBox="0 0 1000 20"
@@ -422,9 +425,9 @@ function TextDivider({ card, spec }: PartProps) {
       style={{ position: 'absolute', left: box.x + style.inset, top: box.top - style.gap - h / 2, width: w, height: h, overflow: 'visible', pointerEvents: 'none' }}
     >
       {/* Traço principal: mais grosso no primeiro terço, afinando até as pontas. */}
-      <path d="M0,10 C60,5 260,1 450,2 C700,3 900,6 1000,10 C900,13 700,17 450,18 C260,19 60,15 0,10 Z" fill={style.color} />
+      <path d="M0,10 C60,5 260,1 450,2 C700,3 900,6 1000,10 C900,13 700,17 450,18 C260,19 60,15 0,10 Z" fill={color} />
       {/* Fiapo do pincel na borda de cima. */}
-      <path d="M20,9 C200,3 500,3 980,9" fill="none" stroke={style.color} strokeWidth={1.2} opacity={0.5} vectorEffect="non-scaling-stroke" />
+      <path d="M20,9 C200,3 500,3 980,9" fill="none" stroke={color} strokeWidth={1.2} opacity={0.5} vectorEffect="non-scaling-stroke" />
     </svg>
   );
 }

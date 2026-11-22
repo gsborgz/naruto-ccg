@@ -514,7 +514,7 @@ export function iconHandles(spec: LayoutSpec, card: CustomCard, c: IconChoice, h
 // ── Painel de campos ──────────────────────────────────────────────────────────
 
 /** Campos do layout que não são editados aqui (ids, nomes, imagens). */
-export const LAYOUT_SKIP = new Set(['id', 'label', 'types', 'frame', 'panel', 'panelVariants', 'panelLabel']);
+export const LAYOUT_SKIP = new Set(['id', 'label', 'types', 'frame', 'panel', 'panelVariants', 'panelLabel', 'textDividerColor']);
 /** Campos por tipo: só o do tipo da carta da prévia. */
 export const PER_TYPE = new Set(['typeIcon', 'name', 'textBox', 'markColor', 'flavor']);
 

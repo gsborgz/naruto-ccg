@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { CARDS, CARDS_BY_ID } from '@/data/cards';
-import { LAYOUTS, LAYOUT_LIST, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, frameFor, panelFor, type LayoutSpec } from '@/lib/cardMaker/layouts';
+import { LAYOUTS, LAYOUT_LIST, TEXT_DIVIDER_COLOR, MAX_ELEMENTS, TYPE_ICON_VARIANTS, elementVariants, frameFor, panelFor, type LayoutSpec } from '@/lib/cardMaker/layouts';
 import {
   MAX_VILLAGES,
   VILLAGES,
@@ -333,6 +333,22 @@ function LayoutProperties({ editor, spec, type, panelVariant }: { editor: Config
             onChange={(e) => set(['label'], e.target.value)}
             className={`w-48 rounded bg-surface-2 px-1.5 py-1 text-xs ring-1 ${dirty(['label']) ? 'ring-accent' : 'ring-border'}`}
           />
+        </Pick>
+        <Pick label="Cor da linha acima do texto">
+          <span className="flex items-center gap-1">
+            <input
+              type="color"
+              value={/^#[0-9a-f]{6}$/i.test(spec.textDividerColor ?? '') ? spec.textDividerColor : TEXT_DIVIDER_COLOR}
+              onChange={(e) => set(['textDividerColor'], e.target.value)}
+              className="h-6 w-7 cursor-pointer bg-transparent"
+            />
+            <input
+              value={spec.textDividerColor ?? ''}
+              placeholder={`${TEXT_DIVIDER_COLOR} (padrão)`}
+              onChange={(e) => set(['textDividerColor'], e.target.value)}
+              className={`w-36 rounded bg-surface-2 px-1.5 py-1 text-xs ring-1 ${dirty(['textDividerColor']) ? 'ring-accent' : 'ring-border'}`}
+            />
+          </span>
         </Pick>
         <p className="text-xs text-muted">Tipos de carta: {spec.types.map((t) => CARD_TYPE_LABEL[t]).join(', ')}.</p>
         <p className="text-xs font-semibold text-muted">Ícones que o layout usa por padrão</p>

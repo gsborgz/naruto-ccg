@@ -99,9 +99,8 @@ export interface TextDividerStyle {
   gap: number;
   /** Quanto a linha fica mais curta que a caixa de texto, de cada lado (negativo: mais comprida). */
   inset: number;
-  /** Espessura no meio do traço (as pontas afinam). */
+  /** Espessura no meio do traço (as pontas afinam). A cor fica em `LayoutSpec.textDividerColor`. */
   thickness: number;
-  color: string;
   /** Vem ligada nas cartas do layout (a carta pode ligar ou desligar: `CustomCard.textDivider`). */
   default: boolean;
 }
@@ -188,6 +187,11 @@ export interface LayoutSpec {
   nameBanner?: { cx: number; cy: number; w: number; default: boolean };
   /** Linha acima do texto de efeito. Sem valor: `TEXT_DIVIDER_DEFAULT` (layouts/index.ts). */
   textDivider?: TextDividerStyle;
+  /**
+   * Cor da linha acima do texto, própria de cada layout (gravada no registro do layout só quando alguém define no
+   * editor de layouts). Sem valor: `TEXT_DIVIDER_COLOR` (o vermelho).
+   */
+  textDividerColor?: string;
   /** Ícones de custo usados pelo layout (aplicados ao escolher o layout). */
   defaults: { entranceIcon: EntranceIcon; handIcon: HandIcon };
 }

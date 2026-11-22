@@ -31,7 +31,10 @@ const designVariant = (spec: LayoutSpec, variant: string | undefined) =>
   variant ? spec.panelVariants?.find((v) => v.id === variant) : undefined;
 
 /** Linha acima do texto de efeito nos layouts que ainda não têm a sua (`LayoutSpec.textDivider`). */
-export const TEXT_DIVIDER_DEFAULT: TextDividerStyle = { gap: 14, inset: 0, thickness: 6, color: '#8e2a1f', default: true };
+export const TEXT_DIVIDER_DEFAULT: TextDividerStyle = { gap: 14, inset: 0, thickness: 6, default: true };
+
+/** Cor da linha acima do texto nos layouts sem `textDividerColor`. */
+export const TEXT_DIVIDER_COLOR = '#8e2a1f';
 
 /** Caminho de um ajuste de posição da carta (`CustomCard.layoutOverrides`): campos do layout separados por ponto. */
 export const LAYOUT_OVERRIDE_PATH = /^[A-Za-z][A-Za-z0-9-]*(.[A-Za-z0-9-]+){1,5}$/;
