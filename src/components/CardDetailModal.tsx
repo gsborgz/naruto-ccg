@@ -13,7 +13,6 @@ import { CustomSourceContext, useIsLocalCustomCard } from '@/lib/useCardCatalog'
 import { CARD_TYPE_LABEL, isReinforcementCard, isTokenCard, type Card } from '@/models/card';
 import { CardCost } from './CardCost';
 import { CardFace } from './CardFace';
-import { NameSizeTuner } from './NameSizeTuner';
 import { ElementBadge } from './ElementBadge';
 
 /** Abas da coluna da direita: os dados da carta ou a edição da carta. */
@@ -21,9 +20,6 @@ type DetailTab = 'details' | 'edit';
 
 /** Aba Editar: carregada sob demanda (o editor do criador não pesa no detalhe da carta). */
 const CardEditTab = dynamic(() => import('./cardMaker/CardEditTab'), { ssr: false });
-
-/** Artes alternativas no fim do detalhe: carregadas sob demanda (montam cartas do criador). */
-const AltCardList = dynamic(() => import('./cardMaker/AltCardList'), { ssr: false });
 
 const UNSAVED = 'Descartar as alterações não salvas desta carta?';
 
@@ -94,9 +90,6 @@ function CardDetails({
   const localCustom = useIsLocalCustomCard(card.id);
   // Na partida (cartas vindas da sala) não se exclui nada: a carta é a cópia que foi para a sala.
   const inMatch = useContext(CustomSourceContext) !== null;
-  // Ajuste do tamanho do nome (atalho na carta montada), aplicado na carta antes de gravar.
-  const [sizeEdit, setSizeEdit] = useState<number | null>(null);
-  const shown = card.layout && sizeEdit !== null ? { ...card, layout: { ...card.layout, nameSize: sizeEdit } } : card;
   const [tab, setTab] = useState<DetailTab>('details');
   // Aba Editar: todas as cartas do catálogo, fora da partida; grava no conteúdo do jogo.
   const canEdit = !custom && !inMatch;
@@ -157,16 +150,8 @@ function CardDetails({
     <>
     <div className="grid gap-6 p-4 sm:grid-cols-[minmax(0,22rem)_1fr] sm:p-6">
       <div className="mx-auto flex w-full max-w-xs flex-col gap-2 self-start sm:max-w-none">
-        {/* O design padrão da carta: montada, se ela tem `layout` (escolhido na aba Editar ou nas artes alternativas); senão a impressa. */}
-        <CardFace card={shown} size="full" rendered className="rounded-lg shadow-xl" />
-        {canEdit && card.layout && (
-          <NameSizeTuner
-            cardId={card.id}
-            saved={card.layout.nameSize ?? 0}
-            value={sizeEdit ?? card.layout.nameSize ?? 0}
-            onChange={setSizeEdit}
-          />
-        )}
+        {/* As cartas do catálogo mostram sempre a imagem impressa; as criadas, a carta montada. */}
+        <CardFace card={card} size="full" className="rounded-lg shadow-xl" />
       </div>
       <div className="flex min-w-0 flex-col gap-4">
         {header}
@@ -260,7 +245,6 @@ function CardDetails({
         {actions && <div className="mt-auto">{actions}</div>}
       </div>
     </div>
-    {canEdit && <AltCardList card={card} />}
     </>
   );
 }

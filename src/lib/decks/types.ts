@@ -3,9 +3,9 @@ import type { DeckCards } from '../deckRules.ts';
 /**
  * Deck de um jogador, guardado na nuvem (`src/lib/decks/store.ts`). Usado pelo navegador e pelo servidor.
  *
- * `designs`: o design escolhido para cada carta do catálogo neste deck (id da carta → id da versão, uma carta do
- * criador importada dela, ou `original` = a imagem impressa). Sem escolha, a carta usa o design padrão dela (o mesmo
- * para todo mundo, `Card.design`).
+ * `designs`: a alter escolhida para cada carta do catálogo neste deck (id da carta → id da alter, uma carta do criador
+ * ligada a ela). Sem escolha (ou `original`, de decks antigos), a imagem impressa. Vale na tela, na impressão e na
+ * partida (`src/lib/deckDesigns.ts`).
  */
 export interface Deck {
   id: string;
@@ -16,7 +16,7 @@ export interface Deck {
   updatedAt: string;
 }
 
-/** Escolha de design que mostra a imagem impressa da carta, mesmo que ela tenha um design padrão. */
+/** Escolha da imagem impressa (decks antigos; hoje, sem escolha já é a impressa). */
 export const ORIGINAL_DESIGN = 'original';
 
 export const DECK_LIMITS = {

@@ -7,7 +7,6 @@ import { DECK_RULES, deckPartOf, type CardLookup, type DeckSummary } from '@/lib
 import { sortCost } from '@/lib/cardFilters';
 import type { Deck } from '@/lib/deckStore';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card, type CardType } from '@/models/card';
-import type { PrintDesign } from '@/lib/print/printDeck';
 import { CardFace } from './CardFace';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
@@ -73,7 +72,7 @@ function DeckCard({
         title={name}
       >
         {/* O design da carta neste deck: o escolhido, ou o padrão dela (montada se tem `layout`). */}
-        <CardFace card={card} size="thumb" rendered />
+        <CardFace card={card} size="thumb" />
       </button>
       {onDesign && !isCustomCardId(card.id) && (
         <button
@@ -122,36 +121,14 @@ function DeckCard({
   );
 }
 
-/** Design escolhido para imprimir (lembrado neste navegador). */
-const PRINT_DESIGN_KEY = 'naruto-ccg:print-design';
-
-function readPrintDesign(): PrintDesign {
-  try {
-    return localStorage.getItem(PRINT_DESIGN_KEY) === 'rendered' ? 'rendered' : 'original';
-  } catch {
-    return 'original';
-  }
-}
-
 /**
  * Baixa um PDF A4 com as cartas do deck (como está na tela, mesmo sem salvar) para imprimir e recortar.
- * O design vale para o deck inteiro: a imagem impressa ou a carta remontada (nas cartas já escaneadas).
+ * Cada carta sai com o design dela no deck: a imagem impressa ou a alter escolhida (montada).
  */
 function PrintButton({ deck, lookup }: { deck: Deck; lookup: CardLookup }) {
-  const [design, setDesign] = useState<PrintDesign>('original');
   const [progress, setProgress] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const customCards = useCustomCards();
-  useEffect(() => setDesign(readPrintDesign()), []);
-
-  const choose = (value: PrintDesign) => {
-    setDesign(value);
-    try {
-      localStorage.setItem(PRINT_DESIGN_KEY, value);
-    } catch {
-      // Sem storage: vale só nesta tela.
-    }
-  };
 
   async function print() {
     setProgress('');
@@ -165,11 +142,10 @@ function PrintButton({ deck, lookup }: { deck: Deck; lookup: CardLookup }) {
       ]);
       const needsRender = Object.keys(deck.cards).some((id) => {
         const card = lookup(id);
-        return card && printsRendered(card, design);
+        return card && printsRendered(card);
       });
       if (needsRender) renderer = createCardImageRenderer({ customCards: customCards ?? [] });
       await downloadDeckPdf(deck.name, deck.cards, {
-        design,
         lookup,
         renderCard: renderer ? (card) => renderer!.render(card) : undefined,
         onProgress: (done, total) => setProgress(`${done}/${total}`),
@@ -187,19 +163,6 @@ function PrintButton({ deck, lookup }: { deck: Deck; lookup: CardLookup }) {
   return (
     <div className="flex flex-wrap items-center justify-end gap-2">
       {error && <span className="text-xs text-danger">{error}</span>}
-      <label className="flex items-center gap-1.5 text-xs text-muted">
-        Design
-        <select
-          value={design}
-          onChange={(e) => choose(e.target.value as PrintDesign)}
-          disabled={busy}
-          title="Vale para todas as cartas do PDF. Remontado: as cartas ainda não escaneadas saem com a imagem original; as cartas criadas saem sempre montadas."
-          className="rounded-md border border-border bg-surface px-1.5 py-1 text-xs text-text"
-        >
-          <option value="original">Original</option>
-          <option value="rendered">Remontado</option>
-        </select>
-      </label>
       <button
         type="button"
         onClick={print}

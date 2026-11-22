@@ -69,8 +69,8 @@ const CardTile = memo(function CardTile({ card, eager, count, blocked, onSelect,
         className="relative overflow-hidden rounded-lg ring-1 ring-border transition hover:-translate-y-0.5 hover:ring-accent"
         aria-label={`Ver detalhes de ${name}`}
       >
-        {/* O design padrão da carta, como no detalhe: montada se ela tem `layout`, senão a impressa. */}
-        <CardFace card={card} size="thumb" rendered eager={eager} />
+        {/* A imagem impressa (as cartas criadas saem montadas). */}
+        <CardFace card={card} size="thumb" eager={eager} />
         {count > 0 && (
           <span className="absolute right-1.5 top-1.5 grid size-7 place-items-center rounded-full bg-accent text-sm font-bold text-bg shadow">
             {count}

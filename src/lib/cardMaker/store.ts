@@ -47,12 +47,10 @@ export const customCardActions = {
         return { ...lib, mine: exists ? lib.mine.map((c) => (c.id === card.id ? updated : c)) : [updated, ...lib.mine] };
       },
       async () => {
-        const res = await cloudRequest<{ contentChanged: boolean }>('/api/me/cards', {
+        await cloudRequest('/api/me/cards', {
           method: 'PUT',
           body: JSON.stringify({ card: sent, author: getIdentity().nickname }),
         });
-        // A carta é o design padrão de uma carta do catálogo: o conteúdo do jogo mudou.
-        if (res.contentChanged) window.dispatchEvent(new Event('naruto-ccg:content-changed'));
       },
     );
   },
@@ -62,8 +60,7 @@ export const customCardActions = {
     return updateLibrary(
       (lib) => ({ ...lib, mine: lib.mine.filter((c) => c.id !== id) }),
       async () => {
-        const res = await cloudRequest<{ contentChanged: boolean }>('/api/me/cards', { method: 'DELETE', body: JSON.stringify({ id }) });
-        if (res.contentChanged) window.dispatchEvent(new Event('naruto-ccg:content-changed'));
+        await cloudRequest('/api/me/cards', { method: 'DELETE', body: JSON.stringify({ id }) });
       },
     );
   },

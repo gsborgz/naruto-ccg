@@ -264,8 +264,7 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
   const customCards = useCustomCards();
   const [deckError, setDeckError] = useState<string | null>(null);
-  // As cartas criadas do deck vão junto (as artes já estão no Vercel Blob).
-  // neste navegador para as cartas do deck (README, "Artes alternativas").
+  // As cartas criadas do deck vão junto (as artes já estão no Vercel Blob); as alters escolhidas, pelo `designs` do deck.
   const changeDeck = async (deckId: string) => {
     const deck = decks?.find((d) => d.id === deckId);
     if (!deck) return;

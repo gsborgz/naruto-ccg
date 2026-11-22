@@ -83,7 +83,7 @@ export function ArenaCardImage({
   if (isCustomCardId(card.id) || card.layout) {
     return (
       <div role="img" aria-label={alt} className={className} style={{ pointerEvents: 'none', ...(className ? {} : { width: '100%', height: '100%' }) }}>
-        <CardFace card={card} size={size} rendered className="h-full" />
+        <CardFace card={card} size={size} className="h-full" />
       </div>
     );
   }

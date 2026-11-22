@@ -8,14 +8,14 @@ import { isBlobArt } from '../cardMaker/sharedCard.ts';
  * `naruto-ccg:`.
  *
  * - `naruto-ccg:custom-cards`: hash id da carta → `CustomCardEntry` (a carta, o dono e o apelido de quem criou). Os
- *   ids são UUIDs, então valem para todo mundo: o deck, a sala e a versão escolhida de uma carta do catálogo guardam só
- *   o id.
+ *   ids são UUIDs, então valem para todo mundo: o deck, a sala e a alter escolhida para uma carta do catálogo guardam
+ *   só o id.
  * - `naruto-ccg:custom-cards-of:<dono>`: conjunto com os ids das cartas do dono.
- * - `naruto-ccg:versions:<carta do catálogo>`: conjunto com os ids das versões dela (as cartas criadas importadas
- *   dela, `CustomCard.source`), listadas nas Artes alternativas do detalhe.
+ * - `naruto-ccg:versions:<carta do catálogo>`: conjunto com os ids das alters dela (as cartas do criador ligadas a
+ *   ela, `CustomCard.source`), listadas na escolha de design do montador.
  *
- * O dono é o hash do token da identidade anônima do jogador (o mesmo das salas) ou `system` (versões feitas a partir
- * do `layout` gravado nas cartas antes das versões, que qualquer um edita pela aba Editar).
+ * O dono é o hash do token da identidade anônima do jogador (o mesmo das salas). `system` era o dono das versões feitas
+ * do `layout` antigo das cartas (formato 3 do conteúdo), apagadas na conversão para o formato 4.
  */
 
 export interface CustomCardEntry {

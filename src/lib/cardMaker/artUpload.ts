@@ -51,8 +51,8 @@ export async function uploadCardArt(card: CustomCard): Promise<CustomCard> {
 
 /**
  * Exclui a carta criada de vez: o servidor tira dos decks do jogador (eles ficam inválidos até completar de novo), apaga
- * a carta e apaga do Blob as artes dela que nada mais usa. Se era o design padrão de uma carta do catálogo, ela volta
- * para a impressa.
+ * a carta e apaga do Blob as artes dela que nada mais usa. Uma alter excluída some dos decks que a escolheram (a carta
+ * volta para a impressa).
  */
 export async function deleteCustomCard(card: CustomCard): Promise<void> {
   deckActions.forgetCardEverywhere(customDeckCardId(card.id));

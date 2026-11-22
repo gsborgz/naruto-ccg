@@ -28,8 +28,10 @@ export function useCardCatalog(): CardCatalog {
   const custom = useCustomCards();
   const version = useOptionalContent()?.version;
   return useMemo(() => {
-    if (!custom?.length) return { cards: [...CARDS], lookup: lookupCatalog, customCount: 0 };
-    const converted = custom.map(customCardToCard);
+    // Alters (`source`) não são cartas do deck: são designs de uma carta do catálogo, escolhidos no 🎨 do montador.
+    const playable = custom?.filter((c) => !c.source) ?? [];
+    if (!playable.length) return { cards: [...CARDS], lookup: lookupCatalog, customCount: 0 };
+    const converted = playable.map(customCardToCard);
     const byId = new Map(converted.map((c) => [c.id, c]));
     return {
       cards: [...converted, ...CARDS],

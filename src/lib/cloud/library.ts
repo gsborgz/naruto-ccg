@@ -74,7 +74,7 @@ const LEGACY = {
   decks: 'naruto-ccg:decks',
   cards: 'naruto-ccg:custom-cards',
   /** Chaves antigas sem uso: apagadas junto. */
-  stale: ['naruto-ccg:art-refs-synced', 'naruto-ccg:card-design', 'naruto-ccg:art-choices'],
+  stale: ['naruto-ccg:art-refs-synced', 'naruto-ccg:card-design', 'naruto-ccg:art-choices', 'naruto-ccg:print-design'],
 } as const;
 
 function readLegacy(): { decks: Deck[]; cards: CustomCard[] } | null {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { withDesign, withoutLayout } from './cardMaker/catalogEdit.ts';
+import { withDesign } from './cardMaker/catalogEdit.ts';
 import { isCustomCardId } from './cardMaker/customIds.ts';
 import type { CustomCard } from './cardMaker/model.ts';
 import { useLibrary } from './cloud/library.ts';
@@ -10,15 +10,18 @@ import { ORIGINAL_DESIGN } from './decks/types.ts';
 import type { Card } from '../models/card.ts';
 
 /**
- * Design de cada carta num deck (`Deck.designs`): o jogador escolhe, carta a carta, a imagem impressa ou uma das versões
- * dela; sem escolha, vale o design padrão da carta (o mesmo para todo mundo). As versões vêm da nuvem (as do jogador e
- * as de outros, carregadas com a biblioteca: `src/lib/cloud/library.ts`).
+ * Design de cada carta num deck (`Deck.designs`): o jogador escolhe, carta a carta, a imagem impressa (o padrão) ou
+ * uma das alters dela (cartas do criador ligadas a ela, de qualquer jogador). Vale na tela, na impressão e na partida,
+ * para os dois jogadores. As alters vêm da nuvem (as do jogador e as de outros, carregadas com a biblioteca:
+ * `src/lib/cloud/library.ts`).
  */
 
-/** A carta como fica no deck, com o design escolhido. Versão que não existe mais: o design padrão. */
+/**
+ * A carta como fica no deck, com o design escolhido: a alter monta a carta (o visual da alter, os dados e os textos da
+ * carta). Sem escolha, `original` ou alter que não existe mais: a impressa.
+ */
 export function designedCard(card: Card, choice: string | undefined, versions: (id: string) => CustomCard | undefined): Card {
-  if (!choice || isCustomCardId(card.id)) return card;
-  if (choice === ORIGINAL_DESIGN) return withoutLayout(card);
+  if (!choice || choice === ORIGINAL_DESIGN || isCustomCardId(card.id)) return card;
   const version = versions(choice);
   return version ? withDesign(card, version) : card;
 }

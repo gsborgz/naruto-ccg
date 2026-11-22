@@ -6,26 +6,21 @@ import { buildCardSheetPdf, type JpegImage } from './cardSheetPdf.ts';
 
 const TYPE_ORDER: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 
-/**
- * Design das cartas no PDF, um só para o deck inteiro: `original` = a imagem impressa; `rendered` = a carta
- * montada (layout + ícones + textos), nas cartas já escaneadas (as outras saem com a impressa).
- * As cartas do criador não têm impressa: saem sempre montadas.
- */
-export type PrintDesign = 'original' | 'rendered';
-
 export interface PrintOptions {
-  design: PrintDesign;
   /** Procura as cartas do deck (catálogo + cartas criadas). */
   lookup: CardLookup;
-  /** Desenha a carta montada em PNG (null: não dá para montar). Necessário para `rendered` e cartas criadas. */
+  /** Desenha a carta montada em PNG (null: não dá para montar). Necessário para as alters e as cartas criadas. */
   renderCard?: (card: Card) => Promise<Blob | null>;
   /** Avisado a cada carta pronta. */
   onProgress?: (done: number, total: number) => void;
 }
 
-/** A carta sai montada no PDF (e não com a imagem impressa). */
-export function printsRendered(card: Card, design: PrintDesign): boolean {
-  return isCustomCardId(card.id) || (design === 'rendered' && card.layout !== undefined);
+/**
+ * A carta sai montada no PDF (e não com a imagem impressa): as cartas do criador (não têm impressa) e as cartas do
+ * catálogo com a alter escolhida no deck (`layout`, ver `src/lib/deckDesigns.ts`).
+ */
+export function printsRendered(card: Card): boolean {
+  return isCustomCardId(card.id) || card.layout !== undefined;
 }
 
 /** Cartas do deck na ordem de impressão: Deck por tipo e custo, depois o Baralho de Reforço. */
@@ -69,7 +64,7 @@ function fileName(deckName: string): string {
 
 /** Gera o PDF de impressão do deck (folhas A4, 3 × 3 cartas em tamanho real) e baixa o arquivo. */
 export async function downloadDeckPdf(deckName: string, cards: DeckCards, options: PrintOptions): Promise<void> {
-  const { design, lookup, renderCard, onProgress } = options;
+  const { lookup, renderCard, onProgress } = options;
   const entries = printOrder(cards, lookup);
   if (entries.length === 0) throw new Error('O deck está vazio');
 
@@ -77,7 +72,7 @@ export async function downloadDeckPdf(deckName: string, cards: DeckCards, option
   const tick = () => onProgress?.(++done, entries.length);
   // Impressas em paralelo; montadas uma de cada vez (cada uma é desenhada na página, fora da tela).
   const printed = entries.map((e) =>
-    printsRendered(e.card, design) ? null : loadAsJpeg(cardImageUrl(e.card, 'full')).finally(tick),
+    printsRendered(e.card) ? null : loadAsJpeg(cardImageUrl(e.card, 'full')).finally(tick),
   );
   // Se uma montada falhar antes, as impressas que ficaram sem `await` não viram rejeição sem tratamento.
   for (const p of printed) p?.catch(() => {});

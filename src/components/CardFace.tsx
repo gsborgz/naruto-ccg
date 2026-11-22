@@ -18,19 +18,17 @@ interface Props {
   card: Card;
   /** `thumb`: miniatura (grades); `full`: imagem em tamanho cheio (detalhe). */
   size: 'thumb' | 'full';
-  /** Mostra a carta montada quando ela tem `layout` (escolhido pela aba Editar ou pelas artes alternativas). Padrão: não (a imagem impressa). */
-  rendered?: boolean;
   /** Imagem original: prioridade de carregamento (primeiras linhas da grade). */
   eager?: boolean;
   className?: string;
 }
 
 /**
- * Face da carta em proporção 5:7: a imagem impressa ou, com `rendered` e a carta já escaneada, a carta montada
- * (layout + artes extraídas). As cartas do criador saem sempre montadas. A miniatura fica por baixo enquanto a montada ou a imagem grande carregam.
-
+ * Face da carta em proporção 5:7: a imagem impressa ou, se a carta tem `layout` (a alter escolhida no deck,
+ * `src/lib/deckDesigns.ts`), a carta montada. As cartas do catálogo não têm `layout`: saem sempre impressas. As cartas
+ * do criador saem sempre montadas. A miniatura fica por baixo enquanto a montada ou a imagem grande carregam.
  */
-export function CardFace({ card, size, rendered = false, eager = false, className = '' }: Props) {
+export function CardFace({ card, size, eager = false, className = '' }: Props) {
   // Carta do criador (montador de decks): não tem imagem impressa, é sempre montada.
   if (isCustomCardId(card.id)) {
     return (
@@ -39,11 +37,10 @@ export function CardFace({ card, size, rendered = false, eager = false, classNam
       </div>
     );
   }
-  return <CatalogCardFace card={card} size={size} rendered={rendered} eager={eager} className={className} />;
+  return <CatalogCardFace card={card} size={size} eager={eager} className={className} />;
 }
 
-function CatalogCardFace({ card, size, rendered = false, eager = false, className = '' }: Props) {
-  const showRendered = rendered && card.layout !== undefined;
+function CatalogCardFace({ card, size, eager = false, className = '' }: Props) {
   return (
     <div
       className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 bg-cover ${className}`}
@@ -52,14 +49,10 @@ function CatalogCardFace({ card, size, rendered = false, eager = false, classNam
         // Os cantos com o raio da moldura da carta, na montada e na impressa: as imagens impressas (e a miniatura por
         // trás da montada) têm o canto reto, preenchido com a cor da borda, que apareceria fora do canto da carta.
         // Carta sem layout (a impressa): o raio padrão.
-        borderRadius: cardCornerCss(
-          card.layout?.layout,
-          card.type,
-          card.layout?.panelVariant,
-        ),
+        borderRadius: cardCornerCss(card.layout?.layout, card.type, card.layout?.panelVariant),
       }}
     >
-      {showRendered ? (
+      {card.layout ? (
         <CatalogCardRender card={card} />
       ) : (
         <img

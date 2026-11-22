@@ -39,19 +39,19 @@ test('compartilhamento leva os designs escolhidos', () => {
   assert.equal(parseSharedDeck({ name: 'D', cards: {}, designs: 5 }, () => true), null);
 });
 
-test('design no deck: original, versão escolhida ou o padrão da carta', () => {
-  const card = CARDS_BY_ID.get('fx-n-001')!;
-  assert.ok(card.layout, 'a carta inventada tem design padrão');
-  const version = { ...versionOf(card, catalogDraft(withoutLayout(card), 'layout-02')), id: 'v1', nameSize: -2 };
+test('design no deck: a impressa ou a alter escolhida', () => {
+  const card = withoutLayout(CARDS_BY_ID.get('fx-n-001')!);
+  const version = { ...versionOf(card, catalogDraft(card, 'layout-02')), id: 'v1', nameSize: -2 };
   const versions = (id: string) => (id === 'v1' ? version : undefined);
+  // Sem escolha (ou `original`, de decks antigos): a impressa.
   assert.equal(designedCard(card, undefined, versions), card);
-  assert.equal(designedCard(card, ORIGINAL_DESIGN, versions).layout, undefined);
+  assert.equal(designedCard(card, ORIGINAL_DESIGN, versions), card);
   const chosen = designedCard(card, 'v1', versions);
   assert.equal(chosen.design, 'v1');
   assert.equal(chosen.layout?.layout, 'layout-02');
   assert.equal(chosen.layout?.nameSize, -2);
   assert.equal(chosen.name, card.name, 'os dados ficam os da carta');
-  // Versão que não existe mais: o padrão.
+  // Alter que não existe mais: a impressa.
   assert.equal(designedCard(card, 'sumiu', versions), card);
 });
 

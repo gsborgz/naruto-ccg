@@ -6,6 +6,7 @@ import { CardEditor } from '@/components/cardMaker/CardEditor';
 import { CardRender } from '@/components/cardMaker/CardRender';
 import { CARD_H, CARD_W } from '@/lib/cardMaker/layouts';
 import { CatalogImportDialog, importCatalogCard } from '@/components/cardMaker/CatalogImportDialog';
+import { Dialog } from '@/components/Dialog';
 import { CARDS_BY_ID } from '@/data/cards';
 import {
   moveArt,
@@ -17,11 +18,10 @@ import {
   type LayoutId,
 } from '@/lib/cardMaker/model';
 import { deleteCustomCard, hasPendingArt, uploadCardArt } from '@/lib/cardMaker/artUpload';
-import { customCardSource } from '@/lib/cardMaker/versions';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import { customCardActions, useOwnCustomCards } from '@/lib/cardMaker/store';
-import { CARD_TYPE_LABEL } from '@/models/card';
+import { CARD_TYPE_LABEL, type Card } from '@/models/card';
 import { elementToPng, pngFileName, saveBlob } from '@/lib/cardMaker/exportPng';
 
 /** Tamanho disponível de um elemento (para a prévia acompanhar a coluna). */
@@ -67,6 +67,8 @@ export default function CardMakerPage() {
   const cards = useOwnCustomCards();
   const [draft, setDraft] = useState<CustomCard | null>(null);
   const [importing, setImporting] = useState(false);
+  // Carta do catálogo escolhida para importar: falta dizer se é uma carta nova ou uma alter.
+  const [importChoice, setImportChoice] = useState<{ card: Card; layout?: LayoutId } | null>(null);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [reference, setReference] = useState(0);
@@ -102,23 +104,26 @@ export default function CardMakerPage() {
   const dirty = !!draft && (isNew || contentKey(draft) !== contentKey(stored));
   // Carta salva com a arte ainda só neste navegador (o envio falhou): o Salvar tenta enviar de novo.
   const pendingArt = !!draft && hasPendingArt(draft);
+  // Alter: carta ligada a uma carta do catálogo, em que só as artes mudam. Precisa de uma arte para salvar.
+  const isAlter = !!draft?.source;
+  const alterSource = isAlter ? CARDS_BY_ID.get(draft.source!) : undefined;
+  const missingArt = isAlter && !draft.art.src && !draft.artFront?.src;
   const guard = useLeaveGuard(dirty);
 
   /**
-   * Salva a carta na nuvem: envia ao servidor (Vercel Blob) as artes ainda não enviadas e grava a carta. Carta importada
-   * do catálogo: vira (ou atualiza) uma versão dela, nas Artes alternativas do detalhe. Se o envio da arte falhar, nada é
-   * gravado e o aviso pede para salvar de novo.
+   * Salva a carta na nuvem: envia ao servidor (Vercel Blob) as artes ainda não enviadas e grava a carta (a alter fica
+   * ligada à carta do catálogo pelo `source`). Se o envio da arte falhar, nada é gravado e o aviso pede para salvar de
+   * novo.
    */
   const save = async () => {
-    if (!draft || saving) return;
+    if (!draft || saving || missingArt) return;
     const sent = draft;
     setSaving(true);
     setSaveError(null);
     try {
       const uploaded = await uploadCardArt(sent);
-      const source = customCardSource(uploaded);
-      await customCardActions.save(source ? { ...uploaded, source } : uploaded);
-      setDraft((d) => d && { ...withUploadedArt(d, sent, uploaded), ...(source && d.id === sent.id && { source }) });
+      await customCardActions.save(uploaded);
+      setDraft((d) => d && withUploadedArt(d, sent, uploaded));
     } catch (e) {
       setSaveError(`A carta não foi salva: a arte não foi enviada ao servidor (${(e as Error).message}). Clique em Salvar de novo.`);
     } finally {
@@ -129,8 +134,8 @@ export default function CardMakerPage() {
   /** Troca de carta: com alterações não salvas, pergunta antes de descartar. */
   const confirmDiscard = () => !dirty || confirm('Descartar as alterações não salvas desta carta?');
 
-  // `/criar?importar=<id da carta>[&layout=layout-02]`: começa uma carta nova a partir de uma carta do catálogo
-  // (sem `layout`: o da carta, se ela já foi escaneada, ou o layout 1).
+  // `/criar?importar=<id da carta>[&layout=layout-02]`: começa uma carta a partir de uma carta do catálogo (pergunta se é
+  // uma carta nova ou uma alter; sem `layout`, o layout 1).
   const imported = useRef(false);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -139,7 +144,7 @@ export default function CardMakerPage() {
     if (!id || imported.current) return;
     imported.current = true;
     const source = CARDS_BY_ID.get(id);
-    if (source) create(importCatalogCard(source, layout));
+    if (source) setImportChoice({ card: source, layout });
     window.history.replaceState(null, '', '/criar');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -153,6 +158,23 @@ export default function CardMakerPage() {
 
   /** Carta nova (do zero, do catálogo ou duplicada): fica só no rascunho até o Salvar. */
   const create = (card: CustomCard) => open(card);
+
+  /**
+   * Importa a carta do catálogo escolhida. `new`: uma carta nova com os dados dela, tudo editável e sem ligação com a do
+   * catálogo (a imagem original fica só para comparar). `alter`: ligada à carta do catálogo (`source`), com os dados
+   * travados; só as artes mudam (começa sem arte).
+   */
+  const importAs = (kind: 'new' | 'alter') => {
+    if (!importChoice) return;
+    const imported = importCatalogCard(importChoice.card, importChoice.layout ?? draft?.layout);
+    setImportChoice(null);
+    if (kind === 'new') {
+      const { source: _source, ...rest } = imported;
+      create(rest);
+    } else {
+      create({ ...imported, art: { src: '', x: 0, y: 0, zoom: 1 }, artFront: undefined });
+    }
+  };
 
   // Exclui de vez: some também dos decks e a arte é apagada do Vercel Blob (como no detalhe da carta).
   const remove = () => {
@@ -235,8 +257,10 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
             <button
               type="button"
               onClick={save}
-              disabled={saving || (!dirty && !pendingArt)}
-              title={!dirty && !pendingArt ? 'Nenhuma alteração para salvar' : undefined}
+              disabled={saving || missingArt || (!dirty && !pendingArt)}
+              title={
+                missingArt ? 'Envie uma arte para a alter' : !dirty && !pendingArt ? 'Nenhuma alteração para salvar' : undefined
+              }
               className="rounded-lg bg-accent px-4 py-2 font-semibold text-bg hover:bg-accent-strong disabled:cursor-not-allowed disabled:opacity-50"
             >
               {saving ? 'Salvando…' : 'Salvar'}
@@ -259,7 +283,15 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
       {(draft || (cards && cards.length > 0)) && (
         <div ref={areaRef} className="grid min-h-0 flex-1 items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:grid-rows-[minmax(0,1fr)]">
           <div className="flex min-h-0 flex-col gap-6 lg:h-full lg:overflow-y-auto lg:pr-2">
-            {draft && <CardEditor card={draft} onChange={setDraft} artLayer={artLayer} onArtLayerChange={setArtLayer} />}
+            {draft && (
+              <CardEditor
+                card={draft}
+                onChange={setDraft}
+                artLayer={artLayer}
+                onArtLayerChange={setArtLayer}
+                mode={isAlter ? 'alter' : 'full'}
+              />
+            )}
             {cards && (cards.length > 0 || isNew) && (
               <section className="flex flex-col gap-3">
                 <h2 className="text-lg font-bold">Minhas cartas ({cards.length})</h2>
@@ -278,7 +310,7 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
                         <CardRender card={shown} width={128} />
                         <span className="w-full truncate text-center text-xs font-semibold">{shown.name || 'Sem nome'}</span>
                         <span className="text-[11px] text-muted">
-                          {CARD_TYPE_LABEL[shown.type]}
+                          {shown.source ? 'Alter' : CARD_TYPE_LABEL[shown.type]}
                           {c.id === draft?.id && dirty && <span className="text-accent"> · não salva</span>}
                         </span>
                       </button>
@@ -354,12 +386,30 @@ Ela sai de todos os seus decks (que ficam inválidos até completar de novo), e 
         onCancel={guard.cancel}
       />
 
-      <CatalogImportDialog
-        open={importing}
-        layout={draft?.layout ?? 'layout-01'}
-        onClose={() => setImporting(false)}
-        onPick={create}
-      />
+      <CatalogImportDialog open={importing} onClose={() => setImporting(false)} onPick={(card) => setImportChoice({ card })} />
+
+      <Dialog open={!!importChoice} onClose={() => setImportChoice(null)} title="Importar do catálogo">
+        {importChoice && (
+          <div className="flex flex-col gap-3 p-4">
+            <p className="text-sm">
+              O que você quer fazer com <strong>{importChoice.card.name}</strong>?
+            </p>
+            <button type="button" onClick={() => importAs('new')} className={`${button} text-left`}>
+              Criar uma carta nova a partir dela
+              <span className="block text-xs font-normal">
+                Os dados vêm preenchidos e tudo fica editável. A carta salva não tem ligação com a do catálogo.
+              </span>
+            </button>
+            <button type="button" onClick={() => importAs('alter')} className={`${button} text-left`}>
+              Criar uma alter para ela
+              <span className="block text-xs font-normal">
+                Os dados, os textos e o layout ficam travados; você envia só as artes novas. No montador de deck, a alter
+                pode ser escolhida como o design da carta.
+              </span>
+            </button>
+          </div>
+        )}
+      </Dialog>
     </div>
   );
 }

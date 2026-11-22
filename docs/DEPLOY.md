@@ -115,8 +115,8 @@ Como funciona (`src/lib/artStore.ts`, `src/app/api/art/route.ts`, `src/lib/cardM
 - **Públicas:** quem tiver o endereço exato vê a imagem, sem a senha do site (o endereço tem o hash, impossível de
   adivinhar).
 - **Só o que está em uso:** a mesma imagem pode estar em várias cartas, então cada uso é registrado no Redis
-  (`naruto-ccg:art-refs:<sha256>`: `custom:<dono>:<carta>` para as cartas criadas, inclusive as versões das cartas do
-  catálogo; `catalog:<carta>` era o das cartas do catálogo antes das versões). O servidor registra o uso ao gravar a
+  (`naruto-ccg:art-refs:<sha256>`: `custom:<dono>:<carta>` para as cartas criadas, inclusive as alters das cartas do
+  catálogo; `catalog:<carta>` era o das cartas do catálogo antes das alters). O servidor registra o uso ao gravar a
   carta na nuvem e tira ao trocar a arte ou excluir a carta (`src/lib/customCards/keys.ts`); a imagem é apagada do Blob
   quando não sobra nenhum. Uma imagem enviada que ninguém passou a usar em 24 h (envio que falhou no meio) é
   apagada (`naruto-ccg:art-pending`). `naruto-ccg:art-owner:<sha256>` (quem enviou primeiro) só vale para as imagens

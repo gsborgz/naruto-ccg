@@ -5,18 +5,16 @@ import { customDeckCardId } from '../cardMaker/customIds.ts';
 import type { Card } from '../../models/card.ts';
 import { printOrder, printsRendered } from './printDeck.ts';
 
-const scanned = CARDS.find((c) => c.layout)!;
-const unscanned = CARDS.find((c) => !c.layout)!;
+const withAlter = CARDS.find((c) => c.layout)!;
+const printed = { ...withAlter, layout: undefined };
 const custom: Card = { ...CARDS_BY_ID.get('fx-n-001')!, id: customDeckCardId('abc'), set: 'CUSTOM', layout: undefined };
 
-test('design do PDF: original usa a impressa, remontado monta as escaneadas', () => {
-  assert.equal(printsRendered(scanned, 'original'), false);
-  assert.equal(printsRendered(scanned, 'rendered'), true);
-  // Ainda sem layout: sai com a impressa mesmo no remontado.
-  assert.equal(printsRendered(unscanned, 'rendered'), false);
+test('design do PDF: a impressa, ou montada com a alter escolhida no deck', () => {
+  assert.equal(printsRendered(printed), false);
+  // Com a alter do deck (`layout` vindo de `designedCard`): montada.
+  assert.equal(printsRendered(withAlter), true);
   // Carta criada não tem impressa: sempre montada.
-  assert.equal(printsRendered(custom, 'original'), true);
-  assert.equal(printsRendered(custom, 'rendered'), true);
+  assert.equal(printsRendered(custom), true);
 });
 
 test('ordem de impressão inclui as cartas criadas pelo lookup', () => {

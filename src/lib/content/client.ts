@@ -19,25 +19,13 @@ async function post<T>(url: string, body: unknown, method = 'POST'): Promise<T> 
   return data;
 }
 
-/** Edições do layout de uma carta escaneada; a carta em memória recebe as mesmas edições. */
-export async function saveCardLayout(cardId: string, changes: ContentChange[]): Promise<number> {
-  const { version } = await post<{ version: number }>(`/api/content/cards/${encodeURIComponent(cardId)}/layout`, { changes });
-  const card = CARDS_BY_ID.get(cardId);
-  if (card?.layout) card.layout = applyChanges(card.layout, changes);
-  return version;
-}
-
 /**
- * Grava uma carta do catálogo editada pelo site: os dados e os textos (`card`, sem o `layout`, que é montado pelo
- * servidor) e o design. `card.design` escolhe uma versão existente (sem: a impressa); `version` (aba Editar) é o visual
- * editado, gravado numa versão de quem editou. Depois, `useContent().reload()` traz a carta montada.
+ * Grava uma carta do catálogo editada pelo site (aba Editar): os textos e os números, sem visual (as cartas do catálogo
+ * mostram sempre a impressa). Depois, `useContent().reload()` traz a carta nova.
  */
-export async function saveCatalogCard(card: Card, version?: CustomCard): Promise<{ version: number }> {
-  const { layout: _layout, ...data } = card;
-  return cloudRequest(`/api/content/cards/${encodeURIComponent(card.id)}`, {
-    method: 'PUT',
-    body: JSON.stringify({ card: data, ...(version && { version }), author: getIdentity().nickname }),
-  });
+export async function saveCatalogCard(card: Card): Promise<{ version: number }> {
+  const { layout: _layout, design: _design, ...data } = card;
+  return cloudRequest(`/api/content/cards/${encodeURIComponent(card.id)}`, { method: 'PUT', body: JSON.stringify({ card: data }) });
 }
 
 /** Cria um layout novo, cópia de `base`. Depois, `useContent().reload()` traz o layout novo. */

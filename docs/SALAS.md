@@ -166,9 +166,10 @@ Decks com cartas do **Criar carta** (`custom-<uuid>`) podem ir para a sala:
   `src/components/arena/arenaCards.tsx`). As imagens vêm direto do Blob.
 - O oponente vê as cartas criadas do seu deck (os textos, não a ordem) a partir do início da partida: elas são
   necessárias para desenhar as cartas que ele vê.
-- **Design de cada carta:** o deck leva o design escolhido para cada carta do catálogo (`designs`, ver o README,
-  "Montador"). Na partida, `GET .../custom-cards` traz também esses designs e as versões escolhidas (da nuvem; a
-  `RoomView` lista `design:<id>` em `customCardIds`), e a arena desenha cada carta com o design do deck do dono.
+- **Design de cada carta:** o deck leva a alter escolhida para cada carta do catálogo (`designs`, ver o README,
+  "Montador"; sem escolha, a impressa). Na partida, `GET .../custom-cards` traz também esses designs e as alters
+  escolhidas (da nuvem; a `RoomView` lista `design:<id>` em `customCardIds`), e a arena desenha cada carta com a alter
+  escolhida pelo dono do deck, para os dois jogadores.
 - Os compartilhamentos por código levam as cartas criadas e os designs do mesmo jeito; quem importa um código antigo
   fica com as cartas criadas que ainda não estavam na nuvem.
 

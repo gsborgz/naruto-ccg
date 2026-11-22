@@ -14,15 +14,14 @@ export function importCatalogCard(card: Card, layout?: LayoutId): CustomCard {
 interface Props {
   open: boolean;
   onClose: () => void;
-  onPick: (card: CustomCard) => void;
-  /** Layout da carta criada (o da carta aberta no criador). */
-  layout: LayoutId;
+  /** A carta do catálogo escolhida (o criador pergunta se é uma carta nova ou uma alter). */
+  onPick: (card: Card) => void;
 }
 
 const MAX_RESULTS = 40;
 
 /** Busca uma carta do catálogo para servir de ponto de partida . */
-export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
+export function CatalogImportDialog({ open, onClose, onPick }: Props) {
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
@@ -54,7 +53,7 @@ export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
             <button
               type="button"
               onClick={() => {
-                onPick(importCatalogCard(card, layout));
+                onPick(card);
                 onClose();
               }}
               className="flex w-full items-center gap-3 rounded-lg p-1.5 text-left hover:bg-surface-2"
@@ -72,7 +71,8 @@ export function CatalogImportDialog({ open, onClose, onPick, layout }: Props) {
         ))}
       </ul>
       <p className="text-xs text-muted">
-        Os dados vêm da carta escolhida; a arte você envia. A imagem original fica disponível para comparação.
+        Depois de escolher, diga se é uma carta nova (tudo editável, sem ligação com a do catálogo) ou uma alter (só as
+        artes mudam; escolhida como o design da carta no montador de deck).
       </p>
     </Dialog>
   );

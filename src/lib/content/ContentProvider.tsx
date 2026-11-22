@@ -62,10 +62,6 @@ export function ContentProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     void load();
-    // Uma carta do criador gravada é o design padrão de uma carta do catálogo: o conteúdo mudou de versão.
-    const onChanged = () => void load();
-    window.addEventListener('naruto-ccg:content-changed', onChanged);
-    return () => window.removeEventListener('naruto-ccg:content-changed', onChanged);
   }, [load]);
 
   const value = useMemo<ContentState | null>(() => {

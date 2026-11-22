@@ -391,9 +391,14 @@ interface Props {
   /** Camada que o arrastar na prévia move quando as camadas não estão ligadas. */
   artLayer: ArtLayer;
   onArtLayerChange: (layer: ArtLayer) => void;
+  /**
+   * `alter`: a carta é uma alter de uma carta do catálogo (`source`): os dados, os textos e o layout ficam travados
+   * (os da carta); só as artes (fundo e frente, com o enquadramento) mudam.
+   */
+  mode?: 'full' | 'alter';
 }
 
-export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props) {
+export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 'full' }: Props) {
   const set = <K extends keyof CustomCard>(key: K, value: CustomCard[K]) =>
     onChange({ ...card, [key]: value });
   const type = card.type;
@@ -427,6 +432,66 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
       'elements',
       card.elements.map((el, i) => (i === slot ? { ...el, variant } : el)),
     );
+
+  const artControls = (
+    <>
+      <ArtLayerControls
+        title="Fundo (atrás da moldura)"
+        card={card}
+        layer="back"
+        onChange={onChange}
+        onError={setArtError}
+      />
+      <ArtLayerControls
+        title="Frente (na frente da moldura, atrás do painel)"
+        hint="Use uma imagem com transparência (PNG), como o personagem recortado."
+        card={card}
+        layer="front"
+        onChange={onChange}
+        onError={setArtError}
+      />
+      {artError && <p className="text-xs text-danger">{artError}</p>}
+      {(card.art.src || card.artFront?.src) && (
+        <div className="flex flex-col gap-2">
+          <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+            <input
+              type="checkbox"
+              checked={card.artLinked ?? true}
+              onChange={(e) => set('artLinked', e.target.checked)}
+            />
+            Arrastar na prévia move as duas camadas juntas
+          </label>
+          {card.artLinked === false && (
+            <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-muted" role="radiogroup">
+              Arrastar na prévia:
+              {(['back', 'front'] as const).map((l) => (
+                <label key={l} className="flex items-center gap-1">
+                  <input type="radio" checked={artLayer === l} onChange={() => onArtLayerChange(l)} />
+                  {l === 'back' ? 'fundo' : 'frente'}
+                </label>
+              ))}
+            </div>
+          )}
+          <p className="text-xs text-muted">
+            Arraste a arte na prévia para enquadrar, ou use os controles de cada camada (só mexem nela).
+          </p>
+        </div>
+      )}
+    </>
+  );
+
+  if (mode === 'alter') {
+    return (
+      <div className="flex flex-col gap-4">
+        <p className="rounded-lg bg-surface-2 px-3 py-2 text-sm text-muted">
+          <strong className="text-text">Alter</strong> de uma carta do catálogo: os dados, os textos e o layout são os da
+          carta. Envie as artes novas e enquadre na prévia. No montador de deck, a alter pode ser escolhida como o design
+          da carta.
+        </p>
+        <Section title="Arte">{artControls}</Section>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-4">
@@ -644,48 +709,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
       </Section>
 
       <Section title="Arte">
-        <ArtLayerControls
-          title="Fundo (atrás da moldura)"
-          card={card}
-          layer="back"
-          onChange={onChange}
-          onError={setArtError}
-        />
-        <ArtLayerControls
-          title="Frente (na frente da moldura, atrás do painel)"
-          hint="Use uma imagem com transparência (PNG), como o personagem recortado."
-          card={card}
-          layer="front"
-          onChange={onChange}
-          onError={setArtError}
-        />
-        {artError && <p className="text-xs text-danger">{artError}</p>}
-        {(card.art.src || card.artFront?.src) && (
-          <div className="flex flex-col gap-2">
-            <label className="flex items-center gap-2 text-xs font-semibold text-muted">
-              <input
-                type="checkbox"
-                checked={card.artLinked ?? true}
-                onChange={(e) => set('artLinked', e.target.checked)}
-              />
-              Arrastar na prévia move as duas camadas juntas
-            </label>
-            {card.artLinked === false && (
-              <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-muted" role="radiogroup">
-                Arrastar na prévia:
-                {(['back', 'front'] as const).map((l) => (
-                  <label key={l} className="flex items-center gap-1">
-                    <input type="radio" checked={artLayer === l} onChange={() => onArtLayerChange(l)} />
-                    {l === 'back' ? 'fundo' : 'frente'}
-                  </label>
-                ))}
-              </div>
-            )}
-            <p className="text-xs text-muted">
-              Arraste a arte na prévia para enquadrar, ou use os controles de cada camada (só mexem nela).
-            </p>
-          </div>
-        )}
+        {artControls}
         <label className={label}>
           Frase
           <textarea
@@ -910,6 +934,130 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange }: Props
           <p className="text-xs text-muted">
             Este layout não tem texto de efeito.
           </p>
+        )}
+      </Section>
+    </div>
+  );
+}
+
+/**
+ * Aba Editar das cartas do catálogo: só os textos (PT-BR) e os números da carta, sem o design (a carta do catálogo
+ * mostra sempre a imagem impressa). Nos Jutsus, o custo pode ser o Chakra genérico (com um número) e/ou os ícones de
+ * elemento: dá para escolher quais e quantos de cada.
+ */
+export function CardDataEditor({ card, onChange }: { card: CustomCard; onChange: (card: CustomCard) => void }) {
+  const set = <K extends keyof CustomCard>(key: K, value: CustomCard[K]) => onChange({ ...card, [key]: value });
+  const type = card.type;
+  const [characteristicsRaw, setCharacteristicsRaw] = useState(card.characteristics.join(' | '));
+  useEffect(() => setCharacteristicsRaw(card.characteristics.join(' | ')), [card.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  const setJutsuCost = (jutsuCost: CustomCard['jutsuCost']) => set('jutsuCost', jutsuCost);
+
+  return (
+    <div className="flex flex-col gap-4">
+      <Section title="Textos">
+        <label className={label}>
+          Nome
+          <input className={input} value={card.name.replace(/\n/g, ' ')} onChange={(e) => set('name', e.target.value)} />
+        </label>
+        <label className={label}>
+          Texto (um bloco por linha)
+          <textarea
+            className={`${input} min-h-32 font-mono text-xs`}
+            value={card.text}
+            onChange={(e) => set('text', e.target.value)}
+          />
+          <span className="font-normal">
+            [negrito], {'{vermelho}'} e (azul) marcam trechos; dobrada ([[ ]], {'{{ }}'}, (( ))) a marcação aparece. Para
+            escrever o símbolo normal, use \ antes: \(3\).
+          </span>
+        </label>
+        <label className={label}>
+          Frase
+          <textarea className={`${input} min-h-16`} value={card.flavor} onChange={(e) => set('flavor', e.target.value)} />
+        </label>
+        {hasCharacteristics(type) && (
+          <label className={label}>
+            Características (separadas por |)
+            <input
+              className={input}
+              value={characteristicsRaw}
+              onChange={(e) => {
+                setCharacteristicsRaw(e.target.value);
+                set(
+                  'characteristics',
+                  e.target.value
+                    .split('|')
+                    .map((c) => c.trim())
+                    .filter(Boolean),
+                );
+              }}
+            />
+          </label>
+        )}
+        {type === 'ninja' && (
+          <AttributeSelects value={card.attribute.label} onChange={(value) => set('attribute', { ...card.attribute, label: value })} />
+        )}
+      </Section>
+
+      <Section title="Números">
+        {hasEntranceCost(type) && (
+          <div className="grid grid-cols-2 gap-3">
+            <label className={label}>
+              Custo de entrada
+              <input className={`${input} text-center`} value={card.entranceCost} onChange={(e) => set('entranceCost', e.target.value)} />
+            </label>
+            <label className={label}>
+              Custo de mão
+              <input className={`${input} text-center`} value={card.handCost} onChange={(e) => set('handCost', e.target.value)} />
+            </label>
+          </div>
+        )}
+        {type === 'ninja' && (
+          <div className="grid grid-cols-2 gap-3">
+            <label className={label}>
+              Saudável (Combate/Suporte)
+              <input className={input} value={card.healthy} onChange={(e) => set('healthy', e.target.value)} />
+            </label>
+            <label className={label}>
+              Ferido
+              <input className={input} value={card.injured} onChange={(e) => set('injured', e.target.value)} />
+            </label>
+          </div>
+        )}
+        {type === 'jutsu' && (
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-semibold text-muted">
+              Custo do Jutsu: ícones de elemento (quais e quantos de cada) e/ou o Chakra genérico com um número
+            </span>
+            <JutsuCostRow part={card.jutsuCost} onChange={(part) => setJutsuCost({ ...card.jutsuCost, ...part })} />
+            {(card.jutsuCost.alternatives ?? []).map((alt, i) => (
+              <div key={i} className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-semibold text-muted">ou</span>
+                <JutsuCostRow
+                  part={alt}
+                  onChange={(part) =>
+                    setJutsuCost({ ...card.jutsuCost, alternatives: card.jutsuCost.alternatives?.map((a, j) => (j === i ? part : a)) })
+                  }
+                />
+                <button
+                  type="button"
+                  onClick={() => setJutsuCost({ ...card.jutsuCost, alternatives: card.jutsuCost.alternatives?.filter((_, j) => j !== i) })}
+                  className="rounded-md px-2 py-1 text-xs text-muted ring-1 ring-border hover:text-danger"
+                >
+                  Remover
+                </button>
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={() =>
+                setJutsuCost({ ...card.jutsuCost, alternatives: [...(card.jutsuCost.alternatives ?? []), { symbols: [], generic: '1' }] })
+              }
+              className="self-start rounded-md px-2 py-1 text-xs text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text"
+            >
+              + custo alternativo (&quot;ou&quot;)
+            </button>
+          </div>
         )}
       </Section>
     </div>
