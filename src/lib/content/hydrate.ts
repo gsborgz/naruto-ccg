@@ -43,6 +43,8 @@ export function hydrateContent(snapshot: ContentSnapshot): void {
     LAYOUTS[id] = spec;
     LAYOUT_LIST.push(spec);
   }
+  // Seletores de layout em ordem alfabética do nome (com os números em ordem: "Layout 2" antes de "Layout 10").
+  LAYOUT_LIST.sort((a, b) => a.label.localeCompare(b.label, 'pt-BR', { numeric: true, sensitivity: 'base' }));
 
   installIcons(snapshot.icons);
   installAssets(snapshot.assets);
