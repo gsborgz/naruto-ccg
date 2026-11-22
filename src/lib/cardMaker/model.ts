@@ -476,6 +476,15 @@ export function withLayoutIcons(card: CustomCard): CustomCard {
   };
 }
 
+/**
+ * Troca de layout no criador: a carta passa para o layout escolhido com os ícones padrão dele (os definidos no editor
+ * de layouts: variante dos elementos, custos e moldura do Atributo de Combate). Escolher o mesmo layout não muda nada.
+ */
+export function switchLayout(card: CustomCard, layoutId: LayoutId): CustomCard {
+  const next = withLayout(card, layoutId);
+  return next.layout === card.layout ? next : withLayoutIcons(next);
+}
+
 /** Trecho de texto com o seu estilo. */
 export interface TextRun {
   text: string;

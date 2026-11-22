@@ -20,7 +20,7 @@ import {
   typeIconVariants,
 } from '@/lib/cardMaker/layouts';
 import {
-  withLayout,
+  switchLayout,
   VILLAGES,
   MAX_VILLAGES,
   cardVillages,
@@ -491,7 +491,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
         <Section title="Design">
           <label className={label}>
             Layout
-            <select className={input} value={spec.id} onChange={(e) => onChange(withLayout(card, e.target.value as LayoutId))}>
+            <select className={input} value={spec.id} onChange={(e) => onChange(switchLayout(card, e.target.value as LayoutId))}>
               {/* Só os layouts que têm o tipo da carta (a alter não muda o tipo). */}
               {LAYOUT_LIST.filter((l) => l.types.includes(type)).map((l) => (
                 <option key={l.id} value={l.id}>
@@ -531,7 +531,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
             className={input}
             value={spec.id}
             onChange={(e) =>
-              onChange(withLayout(card, e.target.value as LayoutId))
+              onChange(switchLayout(card, e.target.value as LayoutId))
             }
           >
             {LAYOUT_LIST.map((l) => (
@@ -544,7 +544,7 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
             ))}
           </select>
           <span className="font-normal">
-            Trocar de layout mantém os ícones escolhidos (dá para misturar estilos).
+            Trocar de layout carrega os ícones padrão dele (os do editor de layouts); depois dá para trocar cada um.
           </span>
         </label>
         <div

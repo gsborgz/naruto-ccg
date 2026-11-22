@@ -35,6 +35,7 @@ import {
   setArtImage,
   withLayout,
   withLayoutIcons,
+  switchLayout,
   wrapName,
   setArtFrame,
   resetArt,
@@ -281,7 +282,7 @@ test('criador: cartas antigas com uma vila só são lidas no formato novo', () =
   assert.deepEqual(cardVillages(card), [{ village: 'sand', rogue: false }]);
 });
 
-test('layouts: importar aplica os ícones do layout; trocar de layout mantém os ícones escolhidos', () => {
+test('layouts: importar aplica os ícones do layout; withLayout mantém os ícones escolhidos; switchLayout usa os do layout', () => {
   const fukasaku = fromCatalogCard(unscannedNinja({ elements: ['wind', 'fire'] }), NOW, 'layout-02');
   const l2 = (c: typeof fukasaku) => ({
     elements: c.elements.map((e) => e.variant),
@@ -304,6 +305,11 @@ test('layouts: importar aplica os ícones do layout; trocar de layout mantém os
 
   // Ícones padrão do layout 1 (carta nova / importada).
   assert.deepEqual(l2(withLayoutIcons(back)), defaults(L1));
+
+  // Trocar de layout no criador (switchLayout) carrega os ícones padrão do layout escolhido; o mesmo layout não muda nada.
+  assert.deepEqual(l2(switchLayout(fukasaku, 'layout-01')), defaults(L1));
+  const chosen = { ...fukasaku, entranceIcon: L1.defaults.entranceIcon };
+  assert.equal(switchLayout(chosen, 'layout-02').entranceIcon, L1.defaults.entranceIcon);
 
   // Custo alternativo ("or") vem do catálogo: "土 | 1 or 3".
   const mudFall = fromCatalogCard(jutsuCard({ symbols: ['earth'], generic: 1, alternatives: [{ symbols: [], generic: 3 }] }), NOW, 'layout-02');
