@@ -162,7 +162,11 @@ Se o passo 2 der "Não foi possível gerar o código", veja **Deployments → (d
 
 ## Pronto: como fica o dia a dia
 
-- **Publicar:** `git push` na `main` → deploy de produção automático.
+- **Publicar:** `git push` na `main` → deploy de produção automático. Uma aba aberta antes do deploy ainda roda o
+  código antigo e, ao abrir uma tela, pode pedir arquivos que não existem mais (`ChunkLoadError`, ex.:
+  `_next/static/chunks/8077.undefined.js`); o app recarrega a página sozinho uma vez nesse caso
+  (`src/components/ChunkReloader.tsx`). A *Skew Protection* da Vercel (Settings → Advanced) evita o erro na origem,
+  servindo à aba antiga os arquivos do deploy dela.
 - **Testar antes:** push em outra branch → a Vercel gera um link de *preview* só para aquela branch.
   Por padrão, previews só abrem com login na Vercel; produção é pública.
 - **Rodar local:** continua `npm run dev` com o Redis no Docker (`compose.yaml`). O banco local e o de

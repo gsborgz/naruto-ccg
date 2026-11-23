@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { ChunkReloader } from '@/components/ChunkReloader';
 import { FullscreenWatcher } from '@/components/FullscreenWatcher';
 import { NavLinks } from '@/components/NavLinks';
 import { ContentProvider } from '@/lib/content/ContentProvider';
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <body className="min-h-dvh">
           <FullscreenWatcher />
+          <ChunkReloader />
           <header className="app-header sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
             <nav className="relative flex h-14 items-center gap-3 px-4 sm:gap-6 lg:px-6">
               <Link href="/" className="flex shrink-0 items-center gap-2 font-bold tracking-tight" aria-label="Naruto CCG">

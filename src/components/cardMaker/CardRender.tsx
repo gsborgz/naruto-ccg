@@ -692,8 +692,12 @@ function CombatAttribute({ card, spec }: PartProps) {
   // Dois atributos com imagem de kanji: os dois kanjis lado a lado ("/" no meio) e os nomes um acima do outro.
   const pairUrls = labelLines.length === 2 ? attributeKanjiUrls(label) : null;
   const kanjiUrl = single ? attributeKanjiUrls(label)?.[0] : undefined;
-  const legacyKanji = single && !kanjiUrl ? kanji : undefined;
+  // Atributo que é só um símbolo (ex.: "?"): aparece só o "kanji" (a imagem dele ou, sem imagem, o próprio símbolo),
+  // sem o nome embaixo repetindo o mesmo símbolo.
+  const symbolOnly = single && label.trim() !== '' && !/\p{L}/u.test(label);
+  const legacyKanji = single && !kanjiUrl ? kanji || (symbolOnly ? label.trim() : undefined) : undefined;
   const hasKanji = Boolean(kanjiUrl || legacyKanji);
+  const showLabel = Boolean(label) && !(symbolOnly && hasKanji);
   // Vários atributos (sem kanji) têm o círculo todo para os nomes: fonte um pouco maior,
   // limitada para a linha mais comprida caber no círculo (~0,65 da fonte por letra).
   const longestLine = Math.max(...labelLines.map((line) => line.length), 1);
@@ -791,10 +795,10 @@ function CombatAttribute({ card, spec }: PartProps) {
             ...stroke(icon.kanji.textStroke, 2),
           }}
         >
-          {kanji}
+          {legacyKanji}
         </div>
       )}
-      {label && (
+      {showLabel && (
         <div
           style={{
             position: 'absolute',
