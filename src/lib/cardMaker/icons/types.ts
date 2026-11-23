@@ -144,6 +144,18 @@ export interface CombatAttributeIconConfig extends CreatedIconFields {
    * nomes). Sem valor (ícones gravados antes): `ATTRIBUTE_PAIR_DEFAULT`.
    */
   pair?: AttributePairStyle;
+  /**
+   * O texto de efeito contorna a silhueta do ícone (a parte opaca da imagem) quando ele invade a caixa de texto, em vez
+   * de passar por cima. Sem valor (ícones gravados antes): `ATTRIBUTE_TEXT_WRAP_DEFAULT`.
+   */
+  textWrap?: IconTextWrap;
+}
+
+/** Texto contornando o ícone (`CombatAttributeIconConfig.textWrap`). */
+export interface IconTextWrap {
+  on: boolean;
+  /** Distância entre o texto e a silhueta, em pixels da carta (750×1050). */
+  margin: number;
 }
 
 /** Medidas do Atributo de Combate com dois atributos, em frações do raio do círculo (`CombatAttributeIconConfig.pair`). */

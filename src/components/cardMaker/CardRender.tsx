@@ -31,6 +31,7 @@ import {
 import { cardCorner } from '@/lib/cardMaker/layouts/corners';
 import { ATTRIBUTE_SHADOW } from '@/lib/cardMaker/icons';
 import { assetUrl } from '@/lib/content/assets';
+import { getSilhouette, loadSilhouette, wrapFloat, type WrapFloat } from '@/lib/cardMaker/silhouette';
 import {
   cardVillages,
   hasCharacteristics,
@@ -411,12 +412,56 @@ function TextIconView({ icon }: { icon: TextIcon }) {
 /** Escala da fonte do texto de efeito sobre o tamanho do layout (vale para todas as cartas montadas). */
 const EFFECT_TEXT_SCALE = 0.92;
 
+/**
+ * Ícones que o texto de efeito contorna quando invadem a caixa de texto (hoje, o Atributo de Combate): a imagem e a
+ * caixa dela na carta.
+ */
+function textWrapIcons(card: CustomCard, spec: LayoutSpec): { url: string; box: { x: number; y: number; w: number; h: number }; margin: number }[] {
+  if (card.type !== 'ninja') return [];
+  const icon = attributeIcon(spec, card.attribute.frame);
+  if (!icon.textWrap.on) return [];
+  return [{ url: assetUrl(icon.url), box: icon.box, margin: icon.textWrap.margin }];
+}
+
+/** Calcula antes as silhuetas que a carta usa (ex.: antes de desenhar a carta para o PDF, que não espera). */
+export async function preloadCardShapes(card: CustomCard): Promise<void> {
+  await Promise.all(textWrapIcons(card, cardLayout(card)).map((i) => loadSilhouette(i.url)));
+}
+
+/** Os blocos que fazem o texto contornar os ícones; recalcula quando uma silhueta termina de carregar. */
+function useWrapFloats(card: CustomCard, spec: LayoutSpec): WrapFloat[] {
+  const style = spec.textBox[card.type];
+  const icons = style ? textWrapIcons(card, spec) : [];
+  const [, setLoaded] = useState(0);
+  const urls = icons.map((i) => i.url).join('|');
+  useLayoutEffect(() => {
+    let alive = true;
+    for (const i of icons) {
+      if (getSilhouette(i.url) === undefined) loadSilhouette(i.url).then(() => alive && setLoaded((n) => n + 1));
+    }
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [urls]);
+  if (!style) return [];
+  const floats: WrapFloat[] = [];
+  for (const i of icons) {
+    const s = getSilhouette(i.url);
+    const f = s && wrapFloat(s, i.box, style, i.margin);
+    if (f) floats.push(f);
+  }
+  return floats;
+}
+
 function EffectText({ card, spec }: PartProps) {
   const style = spec.textBox[card.type];
   const ref = useRef<HTMLDivElement>(null);
   const blocks = parseCardText(card.text);
   const size = (style?.size ?? 0) * EFFECT_TEXT_SCALE;
-  useFit(ref, size, [card.text, card.type, spec.id], undefined, style ? style.bottom - style.top : undefined);
+  const floats = useWrapFloats(card, spec);
+  const floatKey = floats.map((f) => `${f.side}${f.top}${f.shape}${f.margin}`).join('|');
+  useFit(ref, size, [card.text, card.type, spec.id, floatKey], undefined, style ? style.bottom - style.top : undefined);
   // Layouts sem texto de efeito (ex.: layout 5).
   if (!style) return null;
   return (
@@ -435,6 +480,24 @@ function EffectText({ card, spec }: PartProps) {
         ...(style.stroke ? stroke(style.stroke, 1.5) : {}),
       }}
     >
+      {/* Contorno dos ícones que invadem a caixa: um espaço vazio até o topo do ícone e, abaixo dele, o bloco com a
+          silhueta (`shape-outside`), no lado do ícone. A altura dos blocos não passa da caixa, para não mudar o ajuste
+          do tamanho do texto. */}
+      {floats.map((f, i) => (
+        <span key={i} style={{ display: 'contents' }}>
+          <span style={{ float: f.side, clear: f.side, width: 0, height: f.top }} />
+          <span
+            style={{
+              float: f.side,
+              clear: f.side,
+              width: f.width,
+              height: f.height,
+              shapeOutside: f.shape,
+              shapeMargin: f.margin,
+            }}
+          />
+        </span>
+      ))}
       {blocks.map((runs, i) => (
         <p key={i} style={{ margin: 0, marginTop: i > 0 ? `${style.gap / style.size}em` : 0 }}>
           {runs.map((run, j) =>

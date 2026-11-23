@@ -7,7 +7,7 @@ import { elementToPng } from '@/lib/cardMaker/exportPng';
 import { CARD_W } from '@/lib/cardMaker/layouts/shared';
 import { fromCatalogCard, type CustomCard } from '@/lib/cardMaker/model';
 import type { Card } from '@/models/card';
-import { CardRender } from './CardRender';
+import { CardRender, preloadCardShapes } from './CardRender';
 
 /** Data fixa: a carta montada não é salva, só desenhada. */
 const NOW = '2026-01-01T00:00:00.000Z';
@@ -43,6 +43,8 @@ export function createCardImageRenderer(options: {
     async render(card) {
       const shown = source(card);
       if (!shown) return null;
+      // As silhuetas que o texto contorna precisam estar prontas antes de desenhar (a conversão não espera).
+      await preloadCardShapes(shown);
       flushSync(() => root.render(<CardRender key={card.id} card={shown} width={CARD_W} />));
       const node = host.firstElementChild;
       if (!(node instanceof HTMLElement)) return null;

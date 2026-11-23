@@ -1,5 +1,5 @@
 import type { CardType } from '../../../models/card.ts';
-import { ATTRIBUTE_PAIR_DEFAULT } from '../icons/defaults.ts';
+import { ATTRIBUTE_PAIR_DEFAULT, ATTRIBUTE_TEXT_WRAP_DEFAULT } from '../icons/defaults.ts';
 import type { AttributeFrame, CardElement, ElementVariant, EntranceIcon, HandIcon, Village } from '../model.ts';
 import {
   CHAKRA_ICON,
@@ -363,6 +363,8 @@ export function attributeIcon(spec: LayoutSpec, frame: AttributeFrame) {
     kanji: icon.kanji,
     /** Dois atributos (frações do raio). */
     pair: { ...ATTRIBUTE_PAIR_DEFAULT, ...icon.pair },
+    /** Texto de efeito contornando a silhueta (`margin` em pixels da carta, sem escala). */
+    textWrap: { ...ATTRIBUTE_TEXT_WRAP_DEFAULT, ...icon.textWrap },
   };
 }
 

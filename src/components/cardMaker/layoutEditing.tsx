@@ -647,6 +647,9 @@ const FIELD_LABELS: Record<string, string> = {
   labelDy: 'posição dos nomes',
   labelScale: 'fonte dos nomes (× a de um atributo)',
   inset: 'recuo dos lados',
+  textWrap: 'texto de efeito contorna o ícone',
+  on: 'ligado',
+  margin: 'distância do texto',
   thickness: 'espessura',
   default: 'ligada por padrão',
 };
