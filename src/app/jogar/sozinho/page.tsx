@@ -262,6 +262,7 @@ export default function SoloPage() {
     onAdjustTurn: (delta) => play({ type: 'adjustTurn', delta }),
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
     onNextPhase: () => play({ type: 'nextPhase' }),
+    onCreateToken: (cardId) => play({ type: 'createToken', cardId }),
     // Passar o turno: com a troca automática, você passa a comandar o novo Atacante.
     onPassTurn: () =>
       run(() => {
@@ -275,6 +276,7 @@ export default function SoloPage() {
     zones: view.players[s],
     turn: view.turn[s],
     attacker: view.active === s,
+    ...(s === viewing && view.tokens ? { tokens: view.tokens } : {}),
   });
 
   const theme = myTheme ?? view.theme;

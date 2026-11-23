@@ -181,6 +181,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
     onNextPhase: () => play({ type: 'nextPhase' }),
     onPassTurn: () => play({ type: 'passTurn' }),
+    onCreateToken: (cardId) => play({ type: 'createToken', cardId }),
     busy: room.busy,
   };
   const side = (seat: SeatName, nickname: string | undefined): ArenaSide => ({
@@ -188,6 +189,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     zones: game.players[seat],
     turn: game.turn[seat],
     attacker: game.active === seat,
+    ...(seat === you && game.tokens ? { tokens: game.tokens } : {}),
   });
 
   const endGame = () => {

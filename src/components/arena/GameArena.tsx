@@ -10,6 +10,7 @@ import {
   COIN_SUGGESTIONS,
   coinKind,
   countTeams,
+  isTokenUid,
   PHASES,
   TEAM_MAX,
   teamGroups,
@@ -56,6 +57,8 @@ export interface ArenaSide {
   turn: number;
   /** É o jogador do turno (Atacante)? */
   attacker: boolean;
+  /** Tokens do deck (ids), só do seu lado: o botão **Tokens** baixa cópias deles na Vila. */
+  tokens?: string[];
 }
 
 /** Ações do jogador sobre as próprias cartas. Sem isto, a arena é só para ver. */
@@ -106,6 +109,8 @@ export interface ArenaControls {
   onNextPhase: () => void;
   /** Passa o turno para o oponente (só quando você é o Atacante). */
   onPassTurn: () => void;
+  /** Baixa uma cópia do Token `cardId` do seu deck na sua Vila (sem limite de cópias). */
+  onCreateToken?: (cardId: string) => void;
   busy?: boolean;
 }
 
@@ -527,6 +532,63 @@ function ZoneListDialog({
   );
 }
 
+/**
+ * Tokens do seu deck: cada um baixa uma cópia na sua Vila, quantas vezes precisar (no deck é 1 de cada; na partida não
+ * há limite). Depois, a cópia é arrastada como qualquer carta.
+ */
+function TokensDialog({
+  tokens,
+  side,
+  controls,
+  onInspect,
+  onClose,
+}: {
+  tokens: string[];
+  side: Side;
+  controls: ArenaControls;
+  onInspect: Inspect;
+  onClose: () => void;
+}) {
+  const lookup = useArenaLookup();
+  return (
+    <Dialog open onClose={onClose} title="Tokens">
+      <p className="mb-3 text-xs text-muted">
+        Baixe quantas cópias precisar: cada uma entra na sua Vila. Fora da Vila e do Campo de Batalha, a cópia sai do jogo.
+      </p>
+      <ul className="flex max-h-[60vh] flex-col gap-2 overflow-y-auto">
+        {tokens.map((id) => {
+          const card = lookup(id, side);
+          return (
+            <li key={id} className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => card && onInspect(card)}
+                className="w-12 shrink-0 overflow-hidden rounded ring-1 ring-border hover:ring-accent"
+                title={card?.name ?? id}
+              >
+                {card ? (
+                  <ArenaCardImage card={card} size="thumb" alt={card.name} className="aspect-[5/7] w-full object-cover" />
+                ) : (
+                  <div className="aspect-[5/7] w-full bg-surface-2" />
+                )}
+              </button>
+              <span className="min-w-0 flex-1 truncate text-sm font-medium">{card?.name ?? id}</span>
+              <button
+                type="button"
+                disabled={controls.busy}
+                onClick={() => controls.onCreateToken?.(id)}
+                className="shrink-0 rounded-md bg-accent px-3 py-1 text-sm font-semibold text-bg hover:opacity-90 disabled:opacity-40"
+              >
+                + Vila
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </Dialog>
+  );
+}
+
 /** Zona em que está a carta `uid` (só nas zonas em que você vê as cartas). */
 function zoneOf(zones: SideView, uid: string): ZoneName | null {
   for (const zone of ZONES) if (zones[zone].cards?.some((c) => c.uid === uid)) return zone;
@@ -547,8 +609,12 @@ function CardMoveActions({
   controls: ArenaControls;
   onDone: () => void;
 }) {
+  // Token baixado na partida: só existe na Vila e no Campo de Batalha (sair deles o tira do jogo).
+  const token = isTokenUid(inst.uid);
   const targets = (['hand', 'village', 'battlefield', 'chakra', 'deck', 'removed', 'reinforcement'] as const).filter(
-    (t) => t !== zone && (t !== 'reinforcement' || isReinforcementCard(card)),
+    (t) =>
+      t !== zone &&
+      (token ? t === 'village' || t === 'battlefield' : t !== 'reinforcement' || isReinforcementCard(card)),
   );
   const run = (fn: () => void) => {
     fn();
@@ -558,9 +624,26 @@ function CardMoveActions({
     'rounded-md bg-surface-2 px-2 py-1 text-xs font-semibold hover:bg-accent hover:text-bg disabled:opacity-40';
   return (
     <div className="flex flex-col gap-2 border-t border-border pt-3">
-      <p className="text-xs font-semibold uppercase tracking-wider text-muted">Está em: {ZONE_LABEL[zone]}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+        Está em: {ZONE_LABEL[zone]}
+        {token && ' · Token'}
+      </p>
+      {token && (
+        <p className="text-xs text-muted">Token: fica só na Vila e no Campo de Batalha. Fora deles, sai do jogo.</p>
+      )}
       <div className="flex flex-wrap gap-1.5">
-        {zone !== 'discard' && (
+        {token && (
+          <button
+            type="button"
+            disabled={controls.busy}
+            onClick={() => run(() => controls.onMove(inst.uid, 'removed'))}
+            className="rounded-md bg-accent px-3 py-1 text-sm font-semibold text-bg hover:opacity-90 disabled:opacity-40"
+            title="Tirar esta cópia do Token do jogo (dá para baixar outra em Tokens)"
+          >
+            Tirar do jogo
+          </button>
+        )}
+        {!token && zone !== 'discard' && (
           <button
             type="button"
             disabled={controls.busy}
@@ -594,15 +677,17 @@ function CardMoveActions({
             )}
           </Fragment>
         ))}
-        <button
-          type="button"
-          disabled={controls.busy}
-          onClick={() => run(() => controls.onGiveReward(inst.uid))}
-          className={chip}
-          title="Dar esta carta como Prêmio de Batalha ao oponente (face para baixo)"
-        >
-          → Prêmio do oponente
-        </button>
+        {!token && (
+          <button
+            type="button"
+            disabled={controls.busy}
+            onClick={() => run(() => controls.onGiveReward(inst.uid))}
+            className={chip}
+            title="Dar esta carta como Prêmio de Batalha ao oponente (face para baixo)"
+          >
+            → Prêmio do oponente
+          </button>
+        )}
       </div>
     </div>
   );
@@ -2338,6 +2423,9 @@ function LogLine({
     case 'passTurn':
       text = <>passou o turno</>;
       break;
+    case 'createToken':
+      text = <>baixou o Token {main} na Vila</>;
+      break;
     default:
       text = null;
   }
@@ -2631,6 +2719,8 @@ export function GameArena({
   const scale = useStageScale(rootRef);
   const [inspect, setInspect] = useState<{ card: Card; inst?: CardInstance } | null>(null);
   const [revealing, setRevealing] = useState(false);
+  const [tokensOpen, setTokensOpen] = useState(false);
+  const canCreateTokens = !!controls?.onCreateToken && !!you.tokens?.length;
   // Diálogo de olhar um Prêmio: de qual Área (pela sua perspectiva).
   const [peeking, setPeeking] = useState<'mine' | 'theirs' | null>(null);
   const arenaPeek: ArenaPeek | undefined = peek && {
@@ -2731,6 +2821,16 @@ export function GameArena({
             🪙 Moeda
           </button>
         )}
+        {canCreateTokens && (
+          <button
+            type="button"
+            className={styles.logToggle}
+            onClick={() => setTokensOpen(true)}
+            title="Baixar cópias dos Tokens do seu deck na sua Vila (sem limite)"
+          >
+            🧩 Tokens
+          </button>
+        )}
         <button
           type="button"
           className={cx(styles.logToggle, panel === 'keys' && styles.logToggleOpen)}
@@ -2796,6 +2896,15 @@ export function GameArena({
           controls={list.side === 'you' ? controls : undefined}
           onInspect={inspectCard}
           onClose={() => setList(null)}
+        />
+      )}
+      {tokensOpen && canCreateTokens && controls && (
+        <TokensDialog
+          tokens={you.tokens!}
+          side={yourSide}
+          controls={controls}
+          onInspect={inspectCard}
+          onClose={() => setTokensOpen(false)}
         />
       )}
       {revealing && controls && (

@@ -727,3 +727,34 @@ test('mão para o fundo do Deck: na ordem da mão, sem embaralhar; carta sozinha
   assert.deepEqual(parseGameAction({ type: 'returnHand', bottom: true }), { type: 'returnHand', bottom: true });
   assert.deepEqual(parseGameAction({ type: 'returnHand', bottom: 'x' }), { type: 'returnHand' });
 });
+
+test('Tokens: ficam fora do Deck, o dono baixa quantas cópias quiser na Vila e a cópia que sai de jogo some', () => {
+  const isToken = (id: string) => id === 'clone';
+  const game = createGame({ host: { ...decks.host, clone: 1 }, guest: decks.guest }, isReinforcement, seeded(), isToken);
+  const zones = game.players.host;
+  assert.ok(!Object.values(zones).flat().some((c) => c.cardId === 'clone'));
+  assert.deepEqual(game.tokens, { host: ['clone'], guest: [] });
+  // Só o dono vê a lista.
+  assert.deepEqual(gameView(game, 'host').tokens, ['clone']);
+  assert.equal(gameView(game, 'guest').tokens, undefined);
+
+  let g = applyGameAction(game, 'host', { type: 'createToken', cardId: 'clone' }, seeded());
+  g = applyGameAction(g, 'host', { type: 'createToken', cardId: 'clone' }, seeded());
+  const copies = g.players.host.village.filter((c) => c.cardId === 'clone');
+  assert.equal(copies.length, 2);
+  assert.notEqual(copies[0].uid, copies[1].uid);
+  assert.equal(g.log?.at(-1)?.type, 'createToken');
+  assert.deepEqual(gameView(g, 'guest').log.at(-1)?.cards, ['clone']);
+
+  // Vai para o Campo normalmente; para o Descarte (ou mão, Deck...), deixa de existir.
+  g = applyGameAction(g, 'host', { type: 'move', uid: copies[0].uid, to: 'battlefield' }, seeded());
+  assert.ok(g.players.host.battlefield.some((c) => c.uid === copies[0].uid));
+  g = applyGameAction(g, 'host', { type: 'move', uid: copies[1].uid, to: 'discard' }, seeded());
+  assert.ok(!Object.values(g.players.host).flat().some((c) => c.uid === copies[1].uid));
+  assert.throws(() => applyGameAction(g, 'host', { type: 'giveReward', uid: copies[0].uid }, seeded()), GameError);
+
+  // Token que não é do deck (ou do oponente): recusado.
+  assert.throws(() => applyGameAction(g, 'guest', { type: 'createToken', cardId: 'clone' }, seeded()), GameError);
+  assert.deepEqual(parseGameAction({ type: 'createToken', cardId: 'clone' }), { type: 'createToken', cardId: 'clone' });
+  assert.equal(parseGameAction({ type: 'createToken' }), null);
+});

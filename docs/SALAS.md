@@ -293,6 +293,7 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   - `{ type: 'flip' }`: jogar a Moeda Ninja (ver "Moeda Ninja");
   - `{ type: 'adjustTurn', delta }`: subir ou descer o SEU Marcador de Turnos (efeitos de cartas, como S02 M-043),
     entre 0 e 10. Na tela são o − e o + que aparecem ao passar o mouse na barra **Marcador** da sua placa.
+  - `{ type: 'createToken', cardId }`: baixar uma cópia de um Token do seu deck na sua Vila (ver "Tokens");
 - **Topo ou fundo do Deck pelo teclado:** com o mouse sobre uma carta sua (mão, Vila, Campo, Chakra, Descartes…),
   **T** a põe no topo e **F** no fundo do Deck, sem embaralhar (a mesma ação `move` do detalhe; Esquadrões não
   vão para o Deck).
@@ -383,6 +384,12 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   mesa não muda: o resultado vai para o registro (`LogEntry.result`) e aparece no meio da arena, para os dois,
   por 4,5 s: a moeda sobe girando, cai na face sorteada (表 Cara / 裏 Coroa) e quica; a face é o resultado, sem
   legenda (`CoinToss`, classes `toss*` no CSS; gira mesmo com "reduzir movimento" no sistema).
+- **Tokens**: as cartas da parte Tokens do deck (1 de cada no deck) não entram no Deck; ficam em `GameState.tokens`
+  (só o dono recebe a lista, em `GameView.tokens`). O botão **🧩 Tokens** no canto inferior direito lista os seus e
+  **+ Vila** baixa uma cópia (`createToken`), sem limite de cópias, com uid próprio (`htk1`, `gtk2`...,
+  `tokenUid`/`isTokenUid`). A cópia anda entre a Vila e o Campo como qualquer carta; se for para outra zona (mão,
+  Deck, Descartes, Removidos...) deixa de existir, e não pode virar Prêmio de Batalha. No detalhe da cópia, **Tirar
+  do jogo** a remove. Partidas criadas antes disso não têm a lista (só as novas).
 - **Encerrar partida** (`{ type: 'endGame' }`, qualquer um dos dois): volta para a escolha de decks (decks
   mantidos, ninguém pronto). Sair da sala no meio da partida também a encerra.
 - **Registro de jogo** (`GameState.log`, as últimas `LOG_MAX` = 80 jogadas): toda jogada que muda algo é

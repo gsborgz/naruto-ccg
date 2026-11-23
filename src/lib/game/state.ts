@@ -90,6 +90,23 @@ export interface GameState {
    * enquanto ela continuar naquela Área de Prêmios.
    */
   peek?: Partial<Record<Side, { owner: Side; uid: string }>>;
+  /**
+   * Tokens do deck de cada jogador (ids das cartas, a parte Tokens do deck): não entram no Deck. Na partida, o dono
+   * baixa quantas cópias quiser na Vila (`createToken`); só ele vê a lista.
+   */
+  tokens?: Partial<Record<Side, string[]>>;
+  /** Último número usado nos uids dos Tokens baixados (`tokenUid`). */
+  tokenSeq?: number;
+}
+
+/** Uid de uma cópia de Token baixada na partida (`createToken`): `htk1`, `gtk2`... */
+export function tokenUid(side: Side, n: number): string {
+  return `${side[0]}tk${n}`;
+}
+
+/** A carta é uma cópia de Token baixada na partida? */
+export function isTokenUid(uid: string): boolean {
+  return /^[hg]tk\d+$/.test(uid);
 }
 
 /** Quantas entradas do registro de jogo ficam guardadas na partida. */
@@ -202,6 +219,11 @@ export type GameAction =
   | { type: 'flip' }
   /** Subir (`delta` > 0) ou descer o SEU Marcador de Turnos (efeitos de cartas), entre 0 e `TURN_MAX`. */
   | { type: 'adjustTurn'; delta: number }
+  /**
+   * Baixar uma cópia de um Token do seu deck (`GameState.tokens`) na sua Vila: sem limite de cópias (no deck é 1 de
+   * cada). A cópia que sai da Vila e do Campo de Batalha (mão, Deck, Descarte, Removidos...) deixa de existir.
+   */
+  | { type: 'createToken'; cardId: string }
   /**
    * Passar o turno (docs/REGRAS.md 3.6 N): só o Atacante. Avança o próprio Marcador de Turnos 1 casa e o
    * oponente vira o Atacante. O limite de 6 cartas na mão (3.6 M) não é cobrado: os jogadores se policiam.
@@ -441,7 +463,8 @@ function emptyZones(): PlayerZones {
 /**
  * Prepara a partida: cada deck vira cartas na Área do Deck (embaralhadas) e as cartas do Baralho de
  * Reforço vão para a zona de Reforço. Cada jogador compra a mão inicial.
- * Os Tokens (`isToken`) ficam fora da partida por enquanto: ainda não há zona para eles.
+ * Os Tokens (`isToken`) não entram no Deck: ficam na lista de Tokens do jogador (`GameState.tokens`), de onde ele
+ * baixa cópias na Vila (`createToken`).
  */
 export function createGame(
   decks: Record<Side, Record<string, number>>,
@@ -450,12 +473,16 @@ export function createGame(
   isToken: (cardId: string) => boolean = () => false,
 ): GameState {
   const players = {} as Record<Side, PlayerZones>;
+  const tokens: Record<Side, string[]> = { host: [], guest: [] };
   for (const side of ['host', 'guest'] as const) {
     const zones = emptyZones();
     let n = 0;
     const main: CardInstance[] = [];
     for (const [cardId, qty] of Object.entries(decks[side])) {
-      if (isToken(cardId)) continue;
+      if (isToken(cardId)) {
+        if (qty > 0) tokens[side].push(cardId);
+        continue;
+      }
       for (let i = 0; i < qty; i++) {
         const card = { uid: `${side[0]}${++n}`, cardId };
         (isReinforcement(cardId) ? zones.reinforcement : main).push(card);
@@ -469,7 +496,16 @@ export function createGame(
   const active: Side = rng() < 0.5 ? 'host' : 'guest';
   // Tema da arena sorteado na partida (salvo nela, para os dois verem o mesmo).
   const theme = BOARD_THEME_IDS[Math.floor(rng() * BOARD_THEME_IDS.length)] ?? DEFAULT_BOARD_THEME;
-  return { version: 1, players, turn: { host: 0, guest: 0 }, active, turnNumber: 1, phase: 0, theme };
+  return {
+    version: 1,
+    players,
+    turn: { host: 0, guest: 0 },
+    active,
+    turnNumber: 1,
+    phase: 0,
+    theme,
+    ...(tokens.host.length || tokens.guest.length ? { tokens } : {}),
+  };
 }
 
 /**
@@ -481,6 +517,14 @@ function insertBefore(list: CardInstance[], cards: CardInstance[], before: strin
   const index = target ? list.findIndex((c) => groupKey(c) === groupKey(target)) : -1;
   if (index < 0) list.push(...cards);
   else list.splice(index, 0, ...cards);
+}
+
+/** Cópias de Token só existem na Vila e no Campo de Batalha: a que foi para outra zona deixa de existir. */
+function dropTokensOutOfPlay(zones: PlayerZones) {
+  for (const zone of ZONES) {
+    if (TEAM_ZONES.has(zone)) continue;
+    if (zones[zone].some((c) => isTokenUid(c.uid))) zones[zone] = zones[zone].filter((c) => !isTokenUid(c.uid));
+  }
 }
 
 function findCard(zones: PlayerZones, uid: string): { zone: ZoneName; index: number } | null {
@@ -663,6 +707,8 @@ function describe(
     }
     case 'adjustTurn':
       return { type: 'adjustTurn', delta: after.turn[who] - before.turn[who] };
+    case 'createToken':
+      return { type: 'createToken', cards: [action.cardId], to: 'village' };
     case 'flip':
     case 'shuffle':
     case 'passTurn':
@@ -678,10 +724,11 @@ function applyAction(
   rules: CardRules,
 ): GameState {
   const zones: PlayerZones = Object.fromEntries(ZONES.map((z) => [z, [...game.players[who][z]]])) as PlayerZones;
-  const done = (): GameState => {
+  const done = (extra?: Partial<GameState>): GameState => {
+    dropTokensOutOfPlay(zones);
     normalizeTeams(zones, rules);
     checkBattlefield(zones, rules);
-    return { ...game, players: { ...game.players, [who]: zones } };
+    return { ...game, ...extra, players: { ...game.players, [who]: zones } };
   };
   const mustFind = (uid: string) => {
     const at = findCard(zones, uid);
@@ -723,6 +770,12 @@ function applyAction(
       }
       else insertBefore(zones[action.to], [solo], action.before);
       return done();
+    }
+    case 'createToken': {
+      if (!game.tokens?.[who]?.includes(action.cardId)) throw new GameError('Esse Token não está no seu deck.');
+      const n = (game.tokenSeq ?? 0) + 1;
+      zones.village.push(card(tokenUid(who, n), action.cardId));
+      return done({ tokenSeq: n });
     }
     case 'draw': {
       const card = zones.deck.shift();
@@ -805,6 +858,7 @@ function applyAction(
     case 'giveReward': {
       let given: CardInstance | undefined;
       if (action.uid) {
+        if (isTokenUid(action.uid)) throw new GameError('Um Token não pode ser Prêmio de Batalha.');
         const at = mustFind(action.uid);
         if (at.zone === 'rewards') throw new GameError(REWARDS_LOCKED);
         given = zones[at.zone].splice(at.index, 1)[0];
@@ -947,6 +1001,8 @@ export interface GameView {
    * a posição (0 = o primeiro que entrou) e a carta. O oponente não recebe isto.
    */
   peek?: { owner: Side; index: number; card: CardInstance };
+  /** Os Tokens do deck DESTE jogador (ids), para baixar cópias na Vila. O oponente não recebe a lista. */
+  tokens?: string[];
 }
 
 /** Entrada do registro como um jogador a vê: sem `cards` (e com `hidden`) se ele não pode ver as cartas. */
@@ -993,6 +1049,7 @@ export function gameView(game: GameState, viewer: Side | null): GameView {
     // Entradas de tema gravadas quando o tema era da partida (antes de virar preferência de cada um) não aparecem.
     log: (game.log ?? []).filter((e) => (e.type as string) !== 'setTheme').map((e) => logView(e, viewer)),
     ...peekView(game, viewer),
+    ...(viewer && game.tokens?.[viewer]?.length ? { tokens: game.tokens[viewer] } : {}),
   };
 }
 
@@ -1085,6 +1142,9 @@ export function parseGameAction(x: unknown): GameAction | null {
   }
   if (a.type === 'adjustTurn' && Number.isInteger(a.delta) && a.delta !== 0 && Math.abs(a.delta as number) <= TURN_MAX) {
     return { type: 'adjustTurn', delta: a.delta as number };
+  }
+  if (a.type === 'createToken' && typeof a.cardId === 'string' && a.cardId.length <= 200) {
+    return { type: 'createToken', cardId: a.cardId };
   }
   if (a.type === 'giveReward' && (a.uid === undefined || typeof a.uid === 'string')) {
     return a.uid === undefined ? { type: 'giveReward' } : { type: 'giveReward', uid: a.uid };
