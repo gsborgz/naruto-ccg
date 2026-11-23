@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, Fragment, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { createContext, Fragment, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { CardDetailModal } from '@/components/CardDetailModal';
 import { Dialog } from '@/components/Dialog';
 import {
@@ -200,6 +200,110 @@ function cx(...names: (string | false | null | undefined)[]): string {
 const HoverContext = createContext<(hovered: HoveredCard | null) => void>(() => {});
 /** Os seus controles, para os atalhos de cada carta (T e F mandam a carta para o topo ou o fundo do Deck). */
 const ControlsContext = createContext<ArenaControls | undefined>(undefined);
+
+/** Uma linha do menu de contexto (botão direito): uma ação, um título de grupo ou um separador. */
+type MenuItem =
+  | { label: string; onSelect: () => void; disabled?: boolean; hint?: string }
+  | { heading: string }
+  | { separator: true };
+
+interface MenuApi {
+  /** Abre o menu no ponto do clique com estas linhas (sem nenhuma ação, não abre). */
+  open: (e: React.MouseEvent, items: MenuItem[]) => void;
+  /** As linhas do menu de uma carta (as suas ganham as ações; as do oponente, só ver). */
+  cardItems: (inst: CardInstance, mine: boolean) => MenuItem[];
+}
+const MenuContext = createContext<MenuApi>({ open: () => {}, cardItems: () => [] });
+
+/**
+ * `onContextMenu` que abre o menu com as linhas de `build` (e impede o menu do navegador e o da zona por baixo).
+ * Sem linhas, deixa o clique seguir (ex.: a zona abre o menu dela).
+ */
+function useContextMenu(build: () => MenuItem[] | null | undefined) {
+  const menu = useContext(MenuContext);
+  return (e: React.MouseEvent) => {
+    const items = build();
+    if (!items?.some((i) => 'label' in i)) return;
+    e.preventDefault();
+    e.stopPropagation();
+    menu.open(e, items);
+  };
+}
+
+/** Linhas de ações, com os separadores só entre grupos que têm alguma linha. */
+function menuGroups(...groups: (MenuItem[] | false | null | undefined)[]): MenuItem[] {
+  const out: MenuItem[] = [];
+  for (const g of groups) {
+    if (!g || !g.some((i) => 'label' in i)) continue;
+    if (out.length) out.push({ separator: true });
+    out.push(...g);
+  }
+  return out;
+}
+
+/** O menu de contexto aberto: fixo no ponto do clique, sem passar da janela; fecha ao escolher, Esc ou clicar fora. */
+function ContextMenu({ x, y, items, onClose }: { x: number; y: number; items: MenuItem[]; onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [pos, setPos] = useState({ x, y });
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    setPos({ x: Math.max(4, Math.min(x, window.innerWidth - r.width - 4)), y: Math.max(4, Math.min(y, window.innerHeight - r.height - 4)) });
+  }, [x, y, items]);
+  useEffect(() => {
+    const away = (e: Event) => {
+      if (!ref.current?.contains(e.target as Node)) onClose();
+    };
+    const key = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    window.addEventListener('pointerdown', away, true);
+    window.addEventListener('wheel', onClose, { passive: true });
+    window.addEventListener('resize', onClose);
+    window.addEventListener('blur', onClose);
+    window.addEventListener('keydown', key);
+    return () => {
+      window.removeEventListener('pointerdown', away, true);
+      window.removeEventListener('wheel', onClose);
+      window.removeEventListener('resize', onClose);
+      window.removeEventListener('blur', onClose);
+      window.removeEventListener('keydown', key);
+    };
+  }, [onClose]);
+  return (
+    <div
+      ref={ref}
+      role="menu"
+      onContextMenu={(e) => e.preventDefault()}
+      className="fixed z-[100] min-w-48 max-w-72 overflow-y-auto rounded-lg border border-border bg-surface py-1 text-sm text-text shadow-2xl"
+      style={{ left: pos.x, top: pos.y, maxHeight: 'calc(100vh - 8px)' }}
+    >
+      {items.map((item, i) =>
+        'separator' in item ? (
+          <div key={i} className="my-1 border-t border-border" />
+        ) : 'heading' in item ? (
+          <div key={i} className="px-3 pt-1 pb-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted">
+            {item.heading}
+          </div>
+        ) : (
+          <button
+            key={i}
+            type="button"
+            role="menuitem"
+            disabled={item.disabled}
+            onClick={() => {
+              onClose();
+              item.onSelect();
+            }}
+            className="flex w-full items-center justify-between gap-4 px-3 py-1.5 text-left hover:bg-accent hover:text-bg disabled:pointer-events-none disabled:opacity-40"
+          >
+            <span>{item.label}</span>
+            {item.hint && <kbd className="text-[10px] font-semibold opacity-60">{item.hint}</kbd>}
+          </button>
+        ),
+      )}
+    </div>
+  );
+}
 
 /** Escala do palco para caber inteiro no elemento (recalcula ao redimensionar). */
 function useStageScale(ref: React.RefObject<HTMLElement | null>): number {
@@ -430,11 +534,14 @@ function TableCard({
     t: toDeck ? () => controls.onMove(inst.uid, 'deck') : undefined,
     f: toDeck ? () => controls.onMoveToDeckBottom(inst.uid) : undefined,
   });
+  const menu = useContext(MenuContext);
+  const onContextMenu = useContextMenu(() => menu.cardItems(inst, mine));
   return (
     <div
       role="button"
       tabIndex={0}
       draggable={mine}
+      onContextMenu={onContextMenu}
       onMouseEnter={(e) => {
         hoverKeys.onMouseEnter();
         if (card) setHovered({ card, clientX: e.clientX });
@@ -1344,10 +1451,37 @@ function DeckZone({ side, mine, controls, onOpenReveal, shuffleKey }: RowProps) 
     r: ready && count >= 2 ? controls.onShuffle : undefined,
     f: ready && count > 0 ? controls.onSearch : undefined,
   });
+  const handCount = side.zones.hand.count;
+  const onContextMenu = useContextMenu(() => {
+    if (!controls) return null;
+    const busy = controls.busy;
+    return menuGroups(
+      [
+        { heading: 'Deck' },
+        { label: 'Comprar 1 carta', onSelect: controls.onDraw, disabled: busy || count === 0, hint: 'clique' },
+        { label: 'Buscar uma carta no Deck…', onSelect: controls.onSearch, disabled: busy || count === 0, hint: 'F' },
+        { label: 'Embaralhar', onSelect: controls.onShuffle, disabled: busy || count < 2, hint: 'R' },
+        ...(onOpenReveal
+          ? [{ label: 'Revelar cartas do topo ou do fundo…', onSelect: onOpenReveal, disabled: busy || count === 0 }]
+          : []),
+        { label: 'Topo como Prêmio do oponente', onSelect: () => controls.onGiveReward(), disabled: busy || count === 0 },
+      ],
+      [
+        { heading: 'Mão' },
+        {
+          label: 'Devolver a mão ao Deck e embaralhar',
+          onSelect: () => confirm('Devolver a mão inteira ao Deck e embaralhar?') && controls.onReturnHand(),
+          disabled: busy || handCount === 0,
+        },
+        { label: 'Devolver a mão ao fundo do Deck', onSelect: controls.onReturnHandToBottom, disabled: busy || handCount === 0 },
+      ],
+    );
+  });
   return (
     <div
       {...drop.handlers}
       {...hoverKeys}
+      onContextMenu={onContextMenu}
       className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.deck, drop.over && styles.over)}
       aria-label={mine ? 'Seu Deck' : `Deck de ${side.nickname}`}
     >
@@ -1435,9 +1569,14 @@ function DiscardZone({ side, mine, controls, onInspect, onOpenList }: RowProps) 
   const drop = useDrop('discard', controls);
   const { count, cards } = side.zones.discard;
   const top = cards?.at(-1);
+  const onContextMenu = useContextMenu(() => [
+    { heading: 'Descartes' },
+    { label: `Ver a pilha (${count})`, onSelect: () => onOpenList('discard') },
+  ]);
   return (
     <div
       {...drop.handlers}
+      onContextMenu={onContextMenu}
       onClick={() => onOpenList('discard')}
       className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.discard, styles.clickable, drop.over && styles.over)}
       title="Descartes [Discard Pile]: clique para ver a pilha"
@@ -1541,9 +1680,23 @@ function RewardZone({ side, mine, controls, rewardDrop, onOpenPeek }: RowProps) 
   const returnTitle = mine
     ? 'Devolver o último Prêmio recebido ao topo do Deck do oponente'
     : `Pegar de volta o último Prêmio dado a ${side.nickname} (volta ao topo do seu Deck)`;
+  const onContextMenu = useContextMenu(() =>
+    controls
+      ? [
+          { heading: 'Prêmios' },
+          ...(onOpenPeek ? [{ label: 'Olhar um Prêmio…', onSelect: onOpenPeek, disabled: controls.busy || count === 0 }] : []),
+          {
+            label: mine ? 'Devolver o último Prêmio recebido' : 'Pegar de volta o último Prêmio dado',
+            onSelect: () => controls.onReturnReward(mine ? 'mine' : 'theirs'),
+            disabled: controls.busy || count === 0,
+          },
+        ]
+      : null,
+  );
   return (
     <div
       {...drop.handlers}
+      onContextMenu={onContextMenu}
       className={cx(styles.zone, mine ? styles.zoneMine : styles.zoneOpp, styles.reward, drop.over && styles.over)}
       title={
         rewardDrop?.hint ??
@@ -2585,6 +2738,10 @@ const SHORTCUTS: { group: string; items: { keys?: string[]; where: string; does:
     group: 'Mouse',
     items: [
       { where: 'Clicar no topo do seu Deck', does: 'compra 1 carta' },
+      {
+        where: 'Botão direito numa carta, no Deck, nos Descartes ou nos Prêmios',
+        does: 'abre o menu com o que dá para fazer (mover, ferir/curar, buscar, embaralhar…)',
+      },
       { where: 'Clicar numa carta', does: 'abre o detalhe (nas suas, com Descartar e os botões de mover)' },
       { where: 'Passar o mouse no nome de uma carta no Registro', does: 'mostra a carta ampliada ao lado' },
       { where: 'Arrastar uma carta sua', does: 'move entre as zonas' },
@@ -2729,6 +2886,65 @@ export function GameArena({
     card: peek.card,
   };
   const inspectCard: Inspect = (card, inst) => setInspect({ card, inst });
+  // Menu de contexto (botão direito) aberto: onde e com quais linhas.
+  const [menu, setMenu] = useState<{ x: number; y: number; items: MenuItem[] } | null>(null);
+  const closeMenu = useCallback(() => setMenu(null), []);
+  const arenaLookup = useArenaLookup();
+  const menuApi: MenuApi = {
+    open: (e, items) => setMenu({ x: e.clientX, y: e.clientY, items }),
+    cardItems: (inst, mine) => cardMenuItems(inst, mine),
+  };
+  /** Linhas do menu de uma carta: ver; nas suas, ferir/curar, Time, Poder e para onde ela pode ir. */
+  function cardMenuItems(inst: CardInstance, mine: boolean): MenuItem[] {
+    const card = arenaLookup(inst.cardId, ownerOfUid(inst.uid));
+    if (!card) return [];
+    const view: MenuItem[] = [{ heading: card.name }, { label: 'Ver carta', onSelect: () => inspectCard(card, inst) }];
+    const zone = mine && controls ? zoneOf(you.zones, inst.uid) : null;
+    if (!controls || !zone || zone === 'rewards') return view;
+    const busy = controls.busy;
+    const act = (label: string, onSelect: () => void, hint?: string): MenuItem => ({ label, onSelect, disabled: busy, hint });
+    const token = isTokenUid(inst.uid);
+    const inPlay = zone === 'village' || zone === 'battlefield';
+    const ninja = card.type === 'ninja';
+    let team: MenuItem[] = [];
+    if (inPlay && ninja) {
+      const group = teamGroups(you.zones[zone].cards ?? []).find((g) => g.some((c) => c.uid === inst.uid)) ?? [inst];
+      const other = zone === 'village' ? 'battlefield' : 'village';
+      team = [
+        act(inst.injured ? 'Curar (Saudável)' : 'Ferir', () => controls.onSetInjured(inst.uid, !inst.injured), 'R'),
+        ...(group.length > 1 && group[0].uid !== inst.uid ? [act('Tornar Ninja Líder', () => controls.onSetLeader(inst.uid))] : []),
+        ...(group.length > 1 ? [act(`Mover o Time para ${ZONE_LABEL[other]}`, () => controls.onMoveTeam(inst.uid, other))] : []),
+        act('Poder do Time +1', () => controls.onAdjustPower(inst.uid, 1)),
+        act('Poder do Time −1', () => controls.onAdjustPower(inst.uid, -1)),
+      ];
+    }
+    const extras: MenuItem[] = inPlay ? [act('Moedas…', () => inspectCard(card, inst))] : [];
+    let moves: MenuItem[];
+    if (token) {
+      moves = [
+        { heading: 'Token' },
+        ...(['village', 'battlefield'] as const).filter((t) => t !== zone).map((t) => act(`→ ${ZONE_LABEL[t]}`, () => controls.onMove(inst.uid, t))),
+        act('Tirar do jogo', () => controls.onMove(inst.uid, 'removed')),
+      ];
+    } else {
+      const targets = (['hand', 'village', 'battlefield', 'chakra', 'discard', 'removed', 'reinforcement'] as const).filter(
+        (t) => t !== zone && (t !== 'reinforcement' || isReinforcementCard(card)),
+      );
+      const toDeck = !isReinforcementCard(card);
+      moves = [
+        { heading: 'Mover para' },
+        ...targets.map((t) => act(ZONE_LABEL[t], () => controls.onMove(inst.uid, t))),
+        ...(toDeck
+          ? [
+              act('Topo do Deck', () => controls.onMove(inst.uid, 'deck'), 'T'),
+              act('Fundo do Deck', () => controls.onMoveToDeckBottom(inst.uid), 'F'),
+            ]
+          : []),
+        act('Prêmio do oponente', () => controls.onGiveReward(inst.uid)),
+      ];
+    }
+    return menuGroups(view, team, extras, moves);
+  }
   // Carta sua na mesa (ou na mão): o detalhe ganha os botões de mover.
   const inspectZone = inspect?.inst && controls ? zoneOf(you.zones, inspect.inst.uid) : null;
   // A carta como está agora (as moedas mudam com o detalhe aberto).
@@ -2765,6 +2981,7 @@ export function GameArena({
   return (
     <HoverContext.Provider value={setHovered}>
     <ControlsContext.Provider value={controls}>
+    <MenuContext.Provider value={menuApi}>
     {/* Fonte do tema: o React move o <link> para o <head> (uma vez por endereço) e só carrega com a arena aberta. */}
     <link rel="stylesheet" href={look.fontHref} precedence="default" />
     <div ref={rootRef} className={styles.root} style={themeStyle} data-theme={look.id}>
@@ -2945,7 +3162,9 @@ export function GameArena({
 
       {/* Alt + mouse sobre uma carta: a carta ampliada, do lado oposto ao mouse (fora do palco, sem a escala). */}
       <CardZoom hovered={hovered} />
+      {menu && <ContextMenu x={menu.x} y={menu.y} items={menu.items} onClose={closeMenu} />}
     </div>
+    </MenuContext.Provider>
     </ControlsContext.Provider>
     </HoverContext.Provider>
   );

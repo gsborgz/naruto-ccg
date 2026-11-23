@@ -294,6 +294,11 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
   - `{ type: 'adjustTurn', delta }`: subir ou descer o SEU Marcador de Turnos (efeitos de cartas, como S02 M-043),
     entre 0 e 10. Na tela são o − e o + que aparecem ao passar o mouse na barra **Marcador** da sua placa.
   - `{ type: 'createToken', cardId }`: baixar uma cópia de um Token do seu deck na sua Vila (ver "Tokens");
+- **Menu de contexto (botão direito):** numa carta, no Deck, nos Descartes ou nos Prêmios, abre um menu com as
+  ações do elemento (as mesmas dos botões, do detalhe e dos atalhos, que aparecem ao lado da ação). Carta sua: ver,
+  ferir/curar, tornar Líder, mover o Time, Poder ±1, moedas e as zonas para onde pode ir (Token: Vila, Campo ou tirar
+  do jogo); carta do oponente: só ver. Seu Deck: comprar, buscar, embaralhar, revelar, topo como Prêmio do oponente e
+  devolver a mão. Fecha ao escolher, com Esc ou clicando fora (`ContextMenu`, `useContextMenu` e `MenuContext`).
 - **Topo ou fundo do Deck pelo teclado:** com o mouse sobre uma carta sua (mão, Vila, Campo, Chakra, Descartes…),
   **T** a põe no topo e **F** no fundo do Deck, sem embaralhar (a mesma ação `move` do detalhe; Esquadrões não
   vão para o Deck).

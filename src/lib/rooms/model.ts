@@ -96,7 +96,7 @@ export type RoomAction =
 export interface RoomEnv {
   rng: Rng;
   isReinforcement: (cardId: string) => boolean;
-  /** Tokens ficam fora da partida (ainda não há zona para eles). */
+  /** Tokens não entram no Deck: ficam na lista de Tokens do jogador, de onde ele baixa cópias (`createToken`). */
   isToken?: (cardId: string) => boolean;
   /** Só Ninjas formam Times. */
   isNinja: (cardId: string) => boolean;
