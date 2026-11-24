@@ -61,7 +61,8 @@ export default function PlayPage() {
             <h2 className="text-lg font-semibold">Entrar numa sala</h2>
             <p className="text-sm text-muted">Cole o código ou o link que seu amigo enviou.</p>
           </div>
-          <form onSubmit={enter} className="flex flex-col gap-3">
+          {/* No pé do card: o campo e o botão ficam na altura dos de "Criar sala" (que tem o rótulo Apelido em cima). */}
+          <form onSubmit={enter} className="mt-auto flex flex-col gap-3">
             <input
               value={code}
               onChange={(e) => {
