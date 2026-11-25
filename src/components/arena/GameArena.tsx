@@ -1140,7 +1140,7 @@ function powerTitle(power: TeamPower, members: number): string {
     return mod ? `Poder: ${leader} (Combate do Ninja)${mod} = ${formatTeamPower(power)}` : `Poder: ${leader} (Combate do Ninja)`;
   }
   return (
-    `Poder do Time (${members}/${TEAM_MAX} Ninjas): ${leader} (Combate do Líder) + ` +
+    `Poder do Time (${members} Ninjas${members > TEAM_MAX ? `, acima do limite de ${TEAM_MAX}` : ''}): ${leader} (Combate do Líder) + ` +
     `${supports.join(' + ')} (Suporte dos Apoios)${mod} = ${formatTeamPower(power)}`
   );
 }

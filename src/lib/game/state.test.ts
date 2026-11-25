@@ -145,7 +145,7 @@ function villageOfSix(): { g: GameState; uids: string[] } {
 
 const ninjas: CardRules = { isNinja: (id) => id !== 'e' };
 
-test('Times: arrastar um Ninja sobre outro forma o Time; o primeiro é o Líder; máximo de 3', () => {
+test('Times: arrastar um Ninja sobre outro forma o Time; o primeiro é o Líder; sem limite de Ninjas', () => {
   let { g, uids } = villageOfSix();
   const [a, b, c, d] = uids.filter((uid) => g.players.host.village.find((x) => x.uid === uid)?.cardId !== 'e');
   const act = (action: Parameters<typeof applyGameAction>[2]) => (g = applyGameAction(g, 'host', action, seeded(), ninjas));
@@ -155,15 +155,18 @@ test('Times: arrastar um Ninja sobre outro forma o Time; o primeiro é o Líder;
   const team = teamGroups(g.players.host.village).find((t) => t.length > 1)!;
   assert.deepEqual(team.map((x) => x.uid), [a, b, c], 'o alvo continua Líder; os outros entram atrás');
   assert.equal(TEAM_MAX, 3);
-  assert.throws(() => act({ type: 'joinTeam', uid: d, target: b }), /no máximo 3/);
+  // Efeitos de cartas permitem mais de 3: o quarto entra.
+  act({ type: 'joinTeam', uid: d, target: b });
+  assert.deepEqual(teamGroups(g.players.host.village).find((t) => t.length > 1)!.map((x) => x.uid), [a, b, c, d]);
 
   // Tornar outro Ninja o Líder.
   act({ type: 'setLeader', uid: c });
-  assert.deepEqual(teamGroups(g.players.host.village).find((t) => t.length > 1)!.map((x) => x.uid), [c, a, b]);
+  assert.deepEqual(teamGroups(g.players.host.village).find((t) => t.length > 1)!.map((x) => x.uid), [c, a, b, d]);
 
   // Arrastar um membro para a própria Vila o tira do Time; com 1 sobrando, o Time some.
   act({ type: 'move', uid: a, to: 'village' });
   act({ type: 'move', uid: b, to: 'village' });
+  act({ type: 'move', uid: d, to: 'village' });
   assert.ok(g.players.host.village.every((x) => !x.team));
 });
 

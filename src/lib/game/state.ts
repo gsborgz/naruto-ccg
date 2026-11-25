@@ -240,7 +240,10 @@ function otherSide(side: Side): Side {
   return side === 'host' ? 'guest' : 'host';
 }
 
-/** docs/REGRAS.md 3.4 F: cada Time tem de 1 a 3 Ninjas (na Vila, o número de Times é livre). */
+/**
+ * docs/REGRAS.md 3.4 F: cada Time tem de 1 a 3 Ninjas (na Vila, o número de Times é livre). É só referência:
+ * a arena não barra Times maiores, porque há efeitos que permitem mais Ninjas (ex.: Marionetes fora do limite).
+ */
 export const TEAM_MAX = 3;
 /** docs/REGRAS.md 3.5.1: até 3 Times enviados à Batalha por turno. */
 export const BATTLEFIELD_MAX_TEAMS = 3;
@@ -821,8 +824,7 @@ function applyAction(
       }
       const teamId = target.team ?? `t-${target.uid}`;
       if (joining.team === teamId) return game;
-      const size = zones[targetAt.zone].filter((c) => c.uid === target.uid || (!!target.team && c.team === target.team)).length;
-      if (size >= TEAM_MAX) throw new GameError(`Um Time tem no máximo ${TEAM_MAX} Ninjas.`);
+      // Sem limite de Ninjas: efeitos de cartas permitem Times com mais de TEAM_MAX (docs/REGRAS.md 6.2).
 
       zones[from.zone].splice(from.index, 1);
       const list = zones[targetAt.zone];

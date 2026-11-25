@@ -339,7 +339,9 @@ nas próprias cartas como numa mesa, e o servidor só garante quem pode ver e me
 - **Times** (docs/REGRAS.md 3.4 F e 3.5.1): soltar um Ninja sobre outro Ninja seu na Vila ou no Campo de
   Batalha forma um Time (ou aumenta o Time dele). Ações `joinTeam` (`uid` sobre `target`), `moveTeam` (o Time
   inteiro para outra zona, arrastando pela alça "Time n/3") e `setLeader` (botão ★).
-  - De **1 a 3 Ninjas** por Time (`TEAM_MAX`); na Vila o número de Times é livre (Ninja sozinho = Time de 1).
+  - A regra é de **1 a 3 Ninjas** por Time (`TEAM_MAX`), mas a arena não barra Times maiores, porque há efeitos
+    que permitem mais (ex.: Marionetes fora do limite); a dica do Poder avisa quando o Time passa de 3. Na Vila o
+    número de Times é livre (Ninja sozinho = Time de 1).
   - No máximo **3 Times no Campo de Batalha** (`BATTLEFIELD_MAX_TEAMS`); só Times de Ninjas contam.
   - O primeiro Ninja do Time é o **Ninja Líder** (por cima, com o anel brilhante); quem entra fica atrás, como Ninja de Apoio.
   - Arrastar um membro sozinho para fora (ou para um espaço vazio da mesma zona) o tira do Time; Time que
