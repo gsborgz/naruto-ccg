@@ -1,9 +1,10 @@
 /*
- * Arena da partida: design "Campo de Jogo", com os temas de TEMAS.md (madeira, nuvens, papel, folhas, bambu).
+ * Arena da partida: design "Campo de Jogo" genérico, vidro escuro sobre a imagem de fundo do tema do jogador.
  *
- * Mesmo layout em todos os temas: as cores, as sombras, a fonte e as texturas vêm das variáveis que o
- * GameArena põe na raiz (.root) a partir de `src/lib/game/boardThemes.ts`:
- * --color-*, --shadow-*, --board-font, --page-bg, --arena-border e --arena-bg.
+ * Um layout só. Os neutros, as superfícies e as sombras são fixos (abaixo, em .root). O tema do jogador
+ * (`src/lib/themes/types.ts`, cadastrado em /temas) põe na raiz, pelo GameArena: a escala de acento
+ * (--color-accent-100…900, --color-accent, --color-section, --color-section-glow), o fundo (--page-bg) e o
+ * véu e o desfoque do Campo de Batalha (--arena-dim, --arena-blur). Nenhum acento fica fixo aqui.
  *
  * Os tokens valem só dentro da arena: as cores do resto do app continuam as de globals.css. Como as
  * utilidades do Tailwind leem as mesmas variáveis (--color-accent, --color-surface…), os diálogos abertos
@@ -14,7 +15,26 @@
  */
 
 .root {
-  /* Derivados dos tokens do tema (usados pelas utilidades do Tailwind nos diálogos). */
+  /* Tokens fixos do layout genérico: neutros grafite e superfícies translúcidas, legíveis sobre qualquer imagem. */
+  --color-bg: #0e0f14;
+  --color-surface: rgba(18, 19, 26, 0.78);
+  --color-text: #f1f0f4;
+  --color-neutral-100: #f4f3f7;
+  --color-neutral-200: #e2e1e8;
+  --color-neutral-300: #c9c8d2;
+  --color-neutral-400: #a9a8b5;
+  --color-neutral-500: #8a8996;
+  --color-neutral-600: #6c6b78;
+  --color-neutral-700: #504f5b;
+  --color-neutral-800: #383741;
+  --color-neutral-900: #24232b;
+  --shadow-sm: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-md: 0 0 0 1px rgba(255, 255, 255, 0.16), 0 6px 16px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 0 0 1px rgba(255, 255, 255, 0.28), 0 16px 40px rgba(0, 0, 0, 0.65);
+  /* Vidro das zonas das linhas (Deck, Descartes, Chakra, Vila, Prêmios). */
+  --zone-fill: rgba(14, 15, 20, 0.62);
+
+  /* Derivados dos tokens (usados pelas utilidades do Tailwind nos diálogos). */
   --color-surface-2: var(--color-neutral-900);
   --color-muted: var(--color-neutral-400);
   --color-border: var(--color-neutral-800);
@@ -29,10 +49,10 @@
   justify-content: center;
   overflow: hidden;
   border-radius: 14px;
-  /* Fundo da mesa (fora do palco escalado), do tema. */
+  /* Fundo da mesa (fora do palco escalado): a imagem do tema (ou o padrão). */
   background: var(--page-bg);
   color: var(--color-text);
-  font-family: var(--board-font, serif);
+  font-family: var(--font-sans);
   user-select: none;
 }
 
@@ -160,17 +180,18 @@
     background-color 0.15s;
 }
 /*
- * Todas as zonas das linhas (Deck, Descartes, Chakra, Vila, Prêmios) têm o degradê de fundo, que separa as
- * cartas e os rótulos da textura da mesa. O do oponente escurece em cima; o seu, embaixo.
+ * Todas as zonas das linhas (Deck, Descartes, Chakra, Vila, Prêmios) são de vidro escuro (--zone-fill com
+ * desfoque), que separa as cartas e os rótulos da imagem de fundo, clara ou escura. A borda diz de quem é.
  */
-.zoneOpp {
-  --zone-fill: var(--zone-fill-opp, linear-gradient(180deg, var(--color-neutral-900), transparent));
+.zoneOpp,
+.zoneMine {
   background: var(--zone-fill);
+  backdrop-filter: blur(6px);
+}
+.zoneOpp {
   box-shadow: inset 0 0 0 1px var(--color-neutral-800);
 }
 .zoneMine {
-  --zone-fill: var(--zone-fill-mine, linear-gradient(0deg, var(--color-accent-900), transparent));
-  background: var(--zone-fill);
   box-shadow: inset 0 0 0 1px var(--color-accent-800);
 }
 .zone.over {
@@ -362,7 +383,7 @@
   width: 150px;
   gap: 12px;
 }
-/* O brilho do Chakra fica por cima do degradê da zona. */
+/* O brilho do Chakra fica por cima do vidro da zona. */
 .zoneOpp.chakra {
   background: radial-gradient(circle at 50% 60%, var(--color-section-glow), transparent 70%), var(--zone-fill);
 }
@@ -560,8 +581,13 @@
     0 calc(100% - 44px),
     0 44px
   );
-  /* Borda do octógono (1px), do tema. */
-  background: var(--arena-border);
+  /* Borda do octógono (1px): clara, com o acento embaixo. */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.1) 50%,
+    color-mix(in srgb, var(--color-accent-300) 50%, transparent)
+  );
 }
 .arenaInner {
   position: absolute;
@@ -576,8 +602,16 @@
     0 calc(100% - 43px),
     0 43px
   );
-  /* Miolo do Campo de Batalha, do tema. */
-  background: var(--arena-bg);
+  /* Miolo do Campo de Batalha: véu escuro (opacidade do tema) e desfoque da imagem de fundo. */
+  background:
+    radial-gradient(85% 95% at 50% 50%, transparent 40%, rgba(4, 4, 8, 0.45) 100%),
+    linear-gradient(
+      180deg,
+      rgba(14, 15, 20, var(--arena-dim, 0.5)),
+      rgba(14, 15, 20, var(--arena-dim, 0.5)) 50%,
+      rgba(24, 22, 38, var(--arena-dim, 0.5))
+    );
+  backdrop-filter: blur(var(--arena-blur, 4px));
 }
 .ring {
   position: absolute;
@@ -639,7 +673,7 @@
   );
   pointer-events: none;
 }
-.phasePill {
+.turnPill {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -656,11 +690,11 @@
     0 0 24px var(--color-accent-800);
   pointer-events: none;
 }
-.phasePill > span:first-child {
+.turnPill > span:first-child {
   font-size: 13px;
   color: var(--color-accent-400);
 }
-.phasePill > span:last-child {
+.turnPill > span:last-child {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -981,17 +1015,15 @@ button.counter:active:not(:disabled) {
     0 0 14px var(--color-accent-700);
 }
 
-/* Turno e fases num painel como as placas: legível sobre qualquer textura de mesa. */
+/* Turno num painel de vidro escuro: legível sobre qualquer imagem de fundo. */
 .turnBox {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 12px;
   border-radius: 8px;
-  background: var(--color-surface);
-  box-shadow:
-    var(--shadow-sm),
-    0 8px 24px rgba(0, 0, 0, 0.45);
+  background: rgba(14, 15, 20, 0.78);
+  box-shadow: inset 0 0 0 1px var(--color-neutral-800);
 }
 .turnHead {
   display: flex;
@@ -1018,47 +1050,6 @@ button.counter:active:not(:disabled) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.phases {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.phase {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 28px;
-  padding: 0 10px;
-  border-radius: 6px;
-  color: var(--color-neutral-300);
-}
-.phase > span:first-child {
-  width: 14px;
-  font-size: 12px;
-  color: var(--color-neutral-500);
-}
-.phase > span:last-child {
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.phaseDone {
-  color: var(--color-neutral-500);
-}
-.phaseActive {
-  background: var(--color-accent-900);
-  box-shadow:
-    0 0 0 1px var(--color-accent-500),
-    0 0 16px var(--color-accent-800);
-  color: var(--color-accent-100);
-}
-.phaseActive > span:first-child {
-  color: var(--color-accent-300);
-}
-
 .btn {
   display: inline-flex;
   width: 100%;
@@ -1730,7 +1721,7 @@ button.counter:active:not(:disabled) {
   line-height: 1;
 }
 .tossFace small {
-  font-family: var(--board-font, inherit);
+  font-family: inherit;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.2em;

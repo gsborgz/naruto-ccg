@@ -7,10 +7,18 @@ interface Props {
   onSave: () => void;
   onDiscard: () => void;
   onCancel: () => void;
+  /** O que foi alterado (padrão: o deck do montador). */
+  message?: string;
 }
 
-/** Pergunta o que fazer com as alterações não salvas ao sair do montador. */
-export function UnsavedChangesDialog({ open, onSave, onDiscard, onCancel }: Props) {
+/** Pergunta o que fazer com as alterações não salvas ao sair da tela (montador, temas). */
+export function UnsavedChangesDialog({
+  open,
+  onSave,
+  onDiscard,
+  onCancel,
+  message = 'Você alterou este deck. Quer salvar antes de sair?',
+}: Props) {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -36,7 +44,7 @@ export function UnsavedChangesDialog({ open, onSave, onDiscard, onCancel }: Prop
           <h2 id="unsaved-title" className="text-lg font-bold">
             Alterações não salvas
           </h2>
-          <p className="mt-1 text-sm text-muted">Você alterou este deck. Quer salvar antes de sair?</p>
+          <p className="mt-1 text-sm text-muted">{message}</p>
         </div>
         <div className="flex flex-wrap justify-end gap-2">
           <button

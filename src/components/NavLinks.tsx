@@ -9,6 +9,7 @@ const LINKS: { href: string; label: string; short: string; match: (path: string)
   { href: '/cards', label: 'Cartas', short: 'Cartas', match: (p) => p.startsWith('/cards') },
   { href: '/criar', label: 'Criar carta', short: 'Criar', match: (p) => p.startsWith('/criar') && !p.startsWith('/criar/layouts') },
   { href: '/criar/layouts', label: 'Layouts', short: 'Layouts', match: (p) => p.startsWith('/criar/layouts') },
+  { href: '/temas', label: 'Temas', short: 'Temas', match: (p) => p.startsWith('/temas') },
   { href: '/jogar', label: 'Jogar', short: 'Jogar', match: (p) => p.startsWith('/jogar') || p.startsWith('/salas') },
 ];
 

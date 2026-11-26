@@ -3,10 +3,11 @@ import { CustomCardError } from './customCards/store.ts';
 import { DeckError } from './decks/store.ts';
 import { ContentError } from './content/store.ts';
 import { ArtError } from './artStore.ts';
+import { ThemeError } from './themes/store.ts';
 import { hashToken } from './rooms/store.ts';
 
 /**
- * Rotas do jogador (decks e cartas criadas na nuvem). O jogador é a identidade anônima do navegador (a das salas):
+ * Rotas do jogador (decks, cartas criadas e temas da arena na nuvem). O jogador é a identidade anônima do navegador (a das salas):
  * `X-Player-Token` leva o token, e o servidor guarda só o hash dele.
  */
 
@@ -40,7 +41,7 @@ export async function readBody(request: NextRequest): Promise<Record<string, unk
 }
 
 export function playerErrorResponse(e: unknown): NextResponse {
-  if (e instanceof PlayerError || e instanceof CustomCardError || e instanceof DeckError || e instanceof ContentError || e instanceof ArtError) {
+  if (e instanceof PlayerError || e instanceof CustomCardError || e instanceof DeckError || e instanceof ContentError || e instanceof ArtError || e instanceof ThemeError) {
     return NextResponse.json({ message: e.message }, { status: e.status });
   }
   console.error(e);

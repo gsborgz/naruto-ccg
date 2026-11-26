@@ -5,14 +5,14 @@ import { useParams, useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import {
   ARENA_SCREEN,
-  ArenaThemePicker,
   GameArena,
   type ArenaControls,
   type ArenaSide,
 } from '@/components/arena/GameArena';
 import { ArenaCardsProvider } from '@/components/arena/arenaCards';
 import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
-import { setArenaTheme, useArenaTheme } from '@/lib/arenaTheme';
+import { ThemePicker } from '@/components/themes/ThemePicker';
+import { useActiveTheme } from '@/lib/themes/client';
 import { HeaderSlot } from '@/components/HeaderSlot';
 import { DeckSelect, NicknameForm, useValidDecks } from '@/components/PlayerSetup';
 import { DECK_RULES } from '@/lib/deckRules';
@@ -143,13 +143,12 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
   const play = useCallback((action: GameAction) => act({ type: 'game', action }), [act]);
   const loadDeck = useCallback(async () => (await roomApi.deck(view.id)).cards, [view.id]);
-  // Tema escolhido por você (só neste navegador); sem escolha, o sorteado na partida.
-  const myTheme = useArenaTheme();
+  // Tema escolhido por você (na sua conta); o oponente vê o dele.
+  const theme = useActiveTheme();
   // Cartas criadas dos dois decks (docs/SALAS.md, "Cartas criadas").
   const roomCards = useRoomCustomCards(view);
 
   if (!game || !you) return <p className="text-muted">Carregando a partida…</p>;
-  const theme = myTheme ?? game.theme;
 
   const controls: ArenaControls = {
     onMove: (uid, to, before, lane) =>
@@ -179,7 +178,6 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     onFlip: () => play({ type: 'flip' }),
     onAdjustTurn: (delta) => play({ type: 'adjustTurn', delta }),
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
-    onNextPhase: () => play({ type: 'nextPhase' }),
     onPassTurn: () => play({ type: 'passTurn' }),
     onCreateToken: (cardId) => play({ type: 'createToken', cardId }),
     busy: room.busy,
@@ -204,11 +202,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   // Os mesmos controles vão para o cabeçalho e, em tela cheia (sem cabeçalho), para o menu ⋯ da arena.
   const controlsBar = (
     <>
-      <ArenaThemePicker
-        value={theme}
-        onChange={setArenaTheme}
-        disabled={room.busy}
-      />
+      <ThemePicker />
       <button
         type="button"
         onClick={endGame}
@@ -234,7 +228,6 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
           opponent={side(opponentSeat, opponent?.nickname)}
           controls={controls}
           turnNumber={game.turnNumber}
-          phase={game.phase}
           theme={theme}
           fullscreenMenu={controlsBar}
           notice={room.actionError}

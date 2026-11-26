@@ -2,7 +2,7 @@
  * Estado de uma partida em funções puras (sem rede, sem Redis, sem Math.random direto).
  *
  * Por enquanto é um "tabuleiro manual": os jogadores movem as próprias cartas entre as zonas, compram,
- * embaralham e buscam cartas no deck. As regras de turno (fases, custos, batalha) virão por cima disto.
+ * embaralham e buscam cartas no deck. As regras de turno (custos, batalha) virão por cima disto.
  *
  * Visibilidade (docs/REGRAS.md, "Zonas"):
  * - Vila, Campo de Batalha, Chakra, Descartes e Removidos: face para cima, todos veem;
@@ -10,7 +10,6 @@
  * - Deck e Prêmios de Batalha: face para baixo, ninguém vê (nem o dono); só a contagem.
  */
 
-import { BOARD_THEME_IDS, DEFAULT_BOARD_THEME } from './boardThemes.ts';
 
 export type Side = 'host' | 'guest';
 
@@ -76,13 +75,6 @@ export interface GameState {
   active: Side;
   /** Número do turno da partida (começa em 1 e sobe a cada "passar turno"). */
   turnNumber: number;
-  /** Fase do turno do Atacante (índice em `PHASES`). Só referência: as regras de cada fase ainda não valem. */
-  phase?: number;
-  /**
-   * Tema da arena sorteado na partida (id em `BOARD_THEMES`): o padrão de quem ainda não escolheu um tema no
-   * seletor. A escolha de cada jogador fica no navegador dele (`src/lib/arenaTheme.ts`), não aqui.
-   */
-  theme?: string;
   /** Registro de jogo: as últimas jogadas (até `LOG_MAX`), da mais antiga para a mais nova. */
   log?: LogEntry[];
   /**
@@ -131,8 +123,6 @@ export interface LogEntry {
   target?: string;
   /** setInjured: ferido (true) ou curado (false). */
   injured?: boolean;
-  /** nextPhase: a fase nova. */
-  phase?: number;
   /** returnHand: quantas cartas voltaram (o oponente vê só isso, sem os nomes). */
   count?: number;
   /** adjustPower: quanto o Poder mudou (somado nas jogadas seguidas no mesmo Time). */
@@ -148,9 +138,6 @@ export interface LogEntry {
   /** flip: o lado sorteado da Moeda Ninja. */
   result?: 'heads' | 'tails';
 }
-
-/** Fases do turno (docs/REGRAS.md 3.2 a 3.6). */
-export const PHASES = ['Missão', 'Organização', 'Batalha'] as const;
 
 /** Gerador de números em [0, 1). No servidor é criptográfico; nos testes, previsível. */
 export type Rng = () => number;
@@ -181,8 +168,6 @@ export type GameAction =
   | { type: 'setLeader'; uid: string }
   /** Virar o Ninja `uid` para Ferido (horizontal) ou de volta para Saudável. */
   | { type: 'setInjured'; uid: string; injured: boolean }
-  /** Avançar para a próxima fase do turno (só o Atacante; a última, Batalha, termina com "passar turno"). */
-  | { type: 'nextPhase' }
   /**
    * Prêmio de Batalha para o OPONENTE (docs/REGRAS.md 3.5.4): uma carta sua vai para a Área de Prêmios
    * dele, face para baixo. Sem `uid`, vai a carta do topo do seu Deck (o caso normal).
@@ -497,16 +482,12 @@ export function createGame(
   }
   // Quem começa é sorteado (docs/REGRAS.md 2.3, passo 3).
   const active: Side = rng() < 0.5 ? 'host' : 'guest';
-  // Tema da arena sorteado na partida (salvo nela, para os dois verem o mesmo).
-  const theme = BOARD_THEME_IDS[Math.floor(rng() * BOARD_THEME_IDS.length)] ?? DEFAULT_BOARD_THEME;
   return {
     version: 1,
     players,
     turn: { host: 0, guest: 0 },
     active,
     turnNumber: 1,
-    phase: 0,
-    theme,
     ...(tokens.host.length || tokens.guest.length ? { tokens } : {}),
   };
 }
@@ -684,8 +665,6 @@ function describe(
       const c = action.uid ? at(action.uid) : zones.deck[0] ? { zone: 'deck' as const, card: zones.deck[0] } : null;
       return { type: 'giveReward', cards: c ? [c.card.cardId] : [], from: c?.zone, to: 'rewards' };
     }
-    case 'nextPhase':
-      return { type: 'nextPhase', phase: after.phase ?? 0 };
     case 'returnReward': {
       // Com `uid` (o Prêmio olhado), quem devolveu sabe qual foi: o registro guarda a carta (só ele vê).
       const c = action.uid ? before.players[action.owner].rewards.find((x) => x.uid === action.uid) : undefined;
@@ -946,14 +925,7 @@ function applyAction(
         turn: { ...game.turn, [who]: Math.min(TURN_MAX, game.turn[who] + 1) } as Record<Side, number>,
         active: otherSide(who),
         turnNumber: (game.turnNumber ?? 1) + 1,
-        phase: 0,
       };
-    }
-    case 'nextPhase': {
-      if (activeSide(game) !== who) throw new GameError('Só o Atacante (o jogador do turno) avança as fases.');
-      const phase = game.phase ?? 0;
-      if (phase >= PHASES.length - 1) throw new GameError('Esta é a última fase (Batalha): passe o turno.');
-      return { ...game, phase: phase + 1 };
     }
     case 'setInjured': {
       const at = mustFind(action.uid);
@@ -992,10 +964,6 @@ export interface GameView {
   /** Jogador do turno (Atacante). */
   active: Side;
   turnNumber: number;
-  /** Fase do turno (índice em `PHASES`). */
-  phase: number;
-  /** Tema visual da arena. */
-  theme: string;
   /** Registro de jogo, com o nome das cartas só quando o jogador pode vê-las. */
   log: LogEntryView[];
   /**
@@ -1032,6 +1000,9 @@ export function canSee(zone: ZoneName, owner: Side, viewer: Side | null): boolea
   return PUBLIC_ZONES.has(zone) || (OWNER_ZONES.has(zone) && owner === viewer);
 }
 
+/** Tipos de jogada que já existiram e saíram: as entradas antigas no registro das partidas salvas são ignoradas. */
+const RETIRED_LOG = new Set(['setTheme', 'nextPhase']);
+
 export function gameView(game: GameState, viewer: Side | null): GameView {
   const side = (owner: Side): SideView =>
     Object.fromEntries(
@@ -1045,11 +1016,8 @@ export function gameView(game: GameState, viewer: Side | null): GameView {
     turn: game.turn,
     active: activeSide(game),
     turnNumber: game.turnNumber ?? 1,
-    // Partidas de quando havia 5 fases (Inicial…Final) podem estar além da última.
-    phase: Math.min(game.phase ?? 0, PHASES.length - 1),
-    theme: game.theme ?? DEFAULT_BOARD_THEME,
-    // Entradas de tema gravadas quando o tema era da partida (antes de virar preferência de cada um) não aparecem.
-    log: (game.log ?? []).filter((e) => (e.type as string) !== 'setTheme').map((e) => logView(e, viewer)),
+    // Entradas de jogadas que saíram (o tema da partida e as fases do turno) não aparecem.
+    log: (game.log ?? []).filter((e) => !RETIRED_LOG.has(e.type as string)).map((e) => logView(e, viewer)),
     ...peekView(game, viewer),
     ...(viewer && game.tokens?.[viewer]?.length ? { tokens: game.tokens[viewer] } : {}),
   };
@@ -1084,7 +1052,6 @@ export function parseGameAction(x: unknown): GameAction | null {
     a.type === 'draw' ||
     a.type === 'shuffle' ||
     a.type === 'passTurn' ||
-    a.type === 'nextPhase' ||
     a.type === 'flip'
   ) {
     return { type: a.type };

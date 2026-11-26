@@ -11,7 +11,6 @@ import {
   coinKind,
   countTeams,
   isTokenUid,
-  PHASES,
   TEAM_MAX,
   teamGroups,
   TURN_MAX,
@@ -22,7 +21,7 @@ import {
   type SideView,
   type ZoneName,
 } from '@/lib/game/state';
-import { BOARD_THEMES, boardTheme } from '@/lib/game/boardThemes';
+import { themeVars, type BoardTheme } from '@/lib/themes/types';
 import { coinPower, formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
 import { isReinforcementCard, type Card } from '@/models/card';
 import { ArenaCardImage, ownerOfUid, useArenaLookup } from './arenaCards';
@@ -35,10 +34,10 @@ import styles from './GameArena.module.css';
  * - Tudo é desenhado num palco fixo de 1600×900, escalado para caber inteiro na área disponível
  *   (sem rolagem): `scale = min(largura / 1600, altura / 900)`.
  * - Em cima: a mão do oponente (só o verso) e a linha dele: Deck, Descartes, Chakra, Vila e Prêmios.
- * - No meio: o Campo de Batalha octogonal, com os Times dos dois e a fase atual no centro.
+ * - No meio: o Campo de Batalha octogonal, com os Times dos dois e, no centro, de quem é a vez.
  * - Embaixo: a sua linha, espelhada (Prêmios, Vila, Chakra, Descartes, Deck) e a sua mão em leque.
- * - À esquerda: a placa de cada jogador (Prêmios, Marcador de Turnos, mão, Reforço, Removidos), o turno
- *   e as fases, com o botão "Próxima fase" (ou "Passar turno" na última, Batalha) para o Atacante.
+ * - À esquerda: a placa de cada jogador (Prêmios, Marcador de Turnos, mão, Reforço, Removidos) e o turno,
+ *   com o botão "Passar turno" para o Atacante. Não há fases na tela (as do rulebook ficam com os jogadores).
  *
  * Você arrasta as SUAS cartas entre as SUAS zonas; o servidor confere e devolve o novo estado.
  * Cartas que você não pode ver (mão do oponente, Deck, Prêmios) chegam só como contagem.
@@ -105,8 +104,6 @@ export interface ArenaControls {
   onAdjustTurn: (delta: number) => void;
   /** Revela `count` cartas do topo ou do fundo do seu Deck: vão para a sua Vila, à vista dos dois. */
   onReveal: (from: 'top' | 'bottom', count: number) => void;
-  /** Avança para a próxima fase do turno (só quando você é o Atacante). */
-  onNextPhase: () => void;
   /** Passa o turno para o oponente (só quando você é o Atacante). */
   onPassTurn: () => void;
   /** Baixa uma cópia do Token `cardId` do seu deck na sua Vila (sem limite de cópias). */
@@ -167,9 +164,6 @@ function dragSource(mime: string, value: string, stop = false) {
 
 /** Prêmios de Batalha para vencer (docs/REGRAS.md, Condições de Vitória). */
 const REWARDS_TO_WIN = 10;
-
-/** Kanji de cada fase (na ordem de `PHASES`). */
-const PHASE_KANJI = ['任', '編', '戦'] as const;
 
 const ZONE_LABEL: Record<ZoneName, string> = {
   deck: 'Topo do Deck',
@@ -1850,13 +1844,11 @@ function FieldSide({
 function Arena({
   you,
   opponent,
-  phase,
   controls,
   onInspect,
 }: {
   you: ArenaSide;
   opponent: ArenaSide;
-  phase: number;
   controls?: ArenaControls;
   onInspect: Inspect;
 }) {
@@ -1882,9 +1874,9 @@ function Arena({
         <div className={styles.centerLine} />
         <Field side={opponent} mine={false} onInspect={onInspect} />
         <Field side={you} mine controls={controls} onInspect={onInspect} />
-        <div className={styles.phasePill} aria-label={`Fase ${PHASES[phase]}`}>
-          <span>{PHASE_KANJI[phase]}</span>
-          <span>{PHASES[phase]}</span>
+        <div className={styles.turnPill}>
+          <span aria-hidden>番</span>
+          <span>{you.attacker ? 'Sua vez' : 'Vez do oponente'}</span>
         </div>
       </div>
     </div>
@@ -2254,18 +2246,15 @@ function Plate({
 
 function TurnPanel({
   turnNumber,
-  phase,
   you,
   opponent,
   controls,
 }: {
   turnNumber: number;
-  phase: number;
   you: ArenaSide;
   opponent: ArenaSide;
   controls?: ArenaControls;
 }) {
-  const last = phase >= PHASES.length - 1;
   return (
     <div className={styles.turnBox} aria-label="Andamento do Jogo [Turn Sequence]">
       <div className={styles.turnHead}>
@@ -2273,32 +2262,16 @@ function TurnPanel({
         <b>{turnNumber}</b>
         <span className={styles.turnWho}>{you.attacker ? 'Seu turno' : opponent.attacker ? opponent.nickname : ''}</span>
       </div>
-      <ol className={styles.phases}>
-        {PHASES.map((p, i) => (
-          <li
-            key={p}
-            className={cx(styles.phase, i === phase && styles.phaseActive, i < phase && styles.phaseDone)}
-            aria-current={i === phase ? 'step' : undefined}
-          >
-            <span>{PHASE_KANJI[i]}</span>
-            <span>{p}</span>
-          </li>
-        ))}
-      </ol>
       {controls &&
         (you.attacker ? (
           <button
             type="button"
             className={styles.btn}
             disabled={controls.busy}
-            onClick={last ? controls.onPassTurn : controls.onNextPhase}
-            title={
-              last
-                ? 'Fim do turno: o seu Marcador de Turnos avança 1 casa e o oponente vira o Atacante (até 6 cartas na mão)'
-                : `Ir para a Fase ${PHASES[phase + 1]}`
-            }
+            onClick={controls.onPassTurn}
+            title="Fim do turno: o seu Marcador de Turnos avança 1 casa e o oponente vira o Atacante (até 6 cartas na mão)"
           >
-            {last ? 'Passar turno' : 'Próxima fase'}
+            Passar turno
           </button>
         ) : (
           <button type="button" className={styles.btn} disabled>
@@ -2497,9 +2470,6 @@ function LogLine({
           {!(e.hidden && e.from === 'deck') && from} como Prêmio de Batalha para {other}
         </>
       );
-      break;
-    case 'nextPhase':
-      text = <>avançou para a Fase {PHASES[e.phase ?? 0]}</>;
       break;
     case 'returnReward': {
       // Com a carta (um Prêmio olhado), só quem devolveu vê o nome.
@@ -2782,44 +2752,6 @@ function ShortcutsPanel({ onClose }: { onClose: () => void }) {
   );
 }
 
-/* ── Seletor de tema ────────────────────────────────────────────────────── */
-
-/**
- * Troca o tema da arena (fica fora da arena, no cabeçalho do site durante a partida). Vale só para quem
- * troca: a escolha fica neste navegador (`src/lib/arenaTheme.ts`) e o oponente continua com o tema dele.
- */
-export function ArenaThemePicker({
-  value,
-  onChange,
-  disabled,
-}: {
-  value: string | undefined;
-  onChange: (theme: string) => void;
-  disabled?: boolean;
-}) {
-  return (
-    <label
-      className="flex items-center gap-2 rounded-lg py-1 pl-3 pr-1 text-sm text-muted ring-1 ring-border"
-      title="Tema da arena (só para você; fica salvo neste navegador)"
-    >
-      <span aria-hidden>🎨</span>
-      <span className="sr-only">Tema da arena</span>
-      <select
-        value={boardTheme(value).id}
-        onChange={(e) => onChange(e.target.value)}
-        disabled={disabled}
-        className="rounded-md bg-bg px-2 py-1 text-text outline-none hover:bg-surface-2 focus-visible:ring-2 focus-visible:ring-accent disabled:opacity-50"
-      >
-        {BOARD_THEMES.map((t) => (
-          <option key={t.id} value={t.id}>
-            {t.name}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
 /* ── Arena ──────────────────────────────────────────────────────────────── */
 
 /**
@@ -2831,7 +2763,6 @@ export function GameArena({
   opponent,
   controls,
   turnNumber = 1,
-  phase = 0,
   theme,
   fullscreenMenu,
   notice,
@@ -2844,10 +2775,8 @@ export function GameArena({
   controls?: ArenaControls;
   /** Número do turno da partida. */
   turnNumber?: number;
-  /** Fase do turno (índice em `PHASES`). */
-  phase?: number;
-  /** Tema visual (id em `BOARD_THEMES`); sem tema, o padrão. */
-  theme?: string;
+  /** Tema do jogador (paleta e imagem de fundo, cadastrado em /temas); sem tema, o fundo padrão e a paleta Lilás. */
+  theme?: BoardTheme | null;
   /**
    * Controles da partida (tema, encerrar, sair) para a tela cheia, quando o cabeçalho do site some: ficam
    * no menu ⋯ do canto superior direito da arena. Fora da tela cheia, o menu não aparece.
@@ -2862,16 +2791,7 @@ export function GameArena({
   /** O Prêmio que você olhou por último (`GameView.peek`), se ainda estiver na Área. */
   peek?: { owner: Side; index: number; card: CardInstance };
 }) {
-  const look = boardTheme(theme);
-  const themeStyle = {
-    ...look.vars,
-    '--board-font': look.fontFamily,
-    '--page-bg': look.pageBg,
-    '--arena-border': look.arenaBorder,
-    '--arena-bg': look.arenaBg,
-    ...(look.zoneFillOpp ? { '--zone-fill-opp': look.zoneFillOpp } : {}),
-    ...(look.zoneFillMine ? { '--zone-fill-mine': look.zoneFillMine } : {}),
-  } as React.CSSProperties;
+  const themeStyle = themeVars(theme ?? null) as React.CSSProperties;
   const rootRef = useRef<HTMLDivElement>(null);
   const scale = useStageScale(rootRef);
   const [inspect, setInspect] = useState<{ card: Card; inst?: CardInstance } | null>(null);
@@ -2962,7 +2882,6 @@ export function GameArena({
   const listSide = list ? (list.side === 'you' ? you : opponent) : null;
   const openMine = (zone: ZoneName) => setList({ side: 'you', zone });
   const openTheirs = (zone: ZoneName) => setList({ side: 'opponent', zone });
-  const currentPhase = Math.max(0, Math.min(PHASES.length - 1, phase));
   const [hovered, setHovered] = useState<HoveredCard | null>(null);
   const [panel, setPanel] = useState<CornerPanel | null>(null);
   const togglePanel = (p: CornerPanel) => setPanel((cur) => (cur === p ? null : p));
@@ -2982,9 +2901,7 @@ export function GameArena({
     <HoverContext.Provider value={setHovered}>
     <ControlsContext.Provider value={controls}>
     <MenuContext.Provider value={menuApi}>
-    {/* Fonte do tema: o React move o <link> para o <head> (uma vez por endereço) e só carrega com a arena aberta. */}
-    <link rel="stylesheet" href={look.fontHref} precedence="default" />
-    <div ref={rootRef} className={styles.root} style={themeStyle} data-theme={look.id}>
+    <div ref={rootRef} className={styles.root} style={themeStyle}>
       <div className={styles.box} style={{ width: STAGE_W * scale, height: STAGE_H * scale, visibility: scale ? 'visible' : 'hidden' }}>
         <div className={styles.stage} style={{ transform: `scale(${scale})` }}>
           <OpponentHand side={opponent} />
@@ -3004,7 +2921,7 @@ export function GameArena({
               }
             }
           />
-          <Arena you={you} opponent={opponent} phase={currentPhase} controls={controls} onInspect={inspectCard} />
+          <Arena you={you} opponent={opponent} controls={controls} onInspect={inspectCard} />
           <ZoneRow
             side={you}
             mine
@@ -3018,7 +2935,7 @@ export function GameArena({
           <Hand side={you} controls={controls} onInspect={inspectCard} />
           <div className={styles.rail}>
             <Plate side={opponent} mine={false} onOpenList={openTheirs} />
-            <TurnPanel turnNumber={turnNumber} phase={currentPhase} you={you} opponent={opponent} controls={controls} />
+            <TurnPanel turnNumber={turnNumber} you={you} opponent={opponent} controls={controls} />
             <Plate side={you} mine controls={controls} onOpenList={openMine} />
           </div>
         </div>

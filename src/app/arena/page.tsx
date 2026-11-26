@@ -3,13 +3,12 @@
 import { useCallback, useEffect, useState } from 'react';
 import {
   ARENA_SCREEN,
-  ArenaThemePicker,
   GameArena,
   type ArenaControls,
 } from '@/components/arena/GameArena';
 import { HeaderSlot } from '@/components/HeaderSlot';
-import { setArenaTheme, useArenaTheme } from '@/lib/arenaTheme';
-import { BOARD_THEME_IDS } from '@/lib/game/boardThemes';
+import { ThemePicker } from '@/components/themes/ThemePicker';
+import { useActiveTheme, useThemes } from '@/lib/themes/client';
 import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
 import { CARDS } from '@/data/cards';
 import {
@@ -109,12 +108,13 @@ export default function ArenaPreviewPage() {
   const [game, setGame] = useState<GameState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [searching, setSearching] = useState(false);
-  // Tema: o da URL (`?tema=`), senão o escolhido neste navegador, senão o sorteado na partida.
-  const myTheme = useArenaTheme();
+  // Tema: o da URL (`?tema=<id>`, aberto pela tela de temas), senão o que você usa.
+  const myTheme = useActiveTheme();
+  const themes = useThemes();
   const [urlTheme, setUrlTheme] = useState<string | null>(null);
 
   // Criada só no navegador: embaralhar no servidor e de novo no cliente daria telas diferentes.
-  // `?tema=papel` abre a prévia num tema específico (até escolher outro no seletor);
+  // `?tema=<id>` abre a prévia num tema específico (até escolher outro no seletor);
   // `?mao=10` compra 10 cartas a mais (para testar mãos grandes).
   useEffect(() => {
     let game = newGame();
@@ -124,7 +124,7 @@ export default function ArenaPreviewPage() {
       game = applyGameAction(game, 'host', { type: 'draw' }, Math.random, rules);
     }
     const tema = params.get('tema');
-    if (tema && BOARD_THEME_IDS.includes(tema)) setUrlTheme(tema);
+    if (tema) setUrlTheme(tema);
     setGame(game);
   }, []);
 
@@ -171,7 +171,6 @@ export default function ArenaPreviewPage() {
     onFlip: () => play({ type: 'flip' }),
     onAdjustTurn: (delta) => play({ type: 'adjustTurn', delta }),
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
-    onNextPhase: () => play({ type: 'nextPhase' }),
     // Sem oponente de verdade: ele devolve o turno na hora.
     onPassTurn: () => {
       try {
@@ -185,15 +184,12 @@ export default function ArenaPreviewPage() {
     },
   };
 
-  const theme = urlTheme ?? myTheme ?? view.theme;
+  const theme = (urlTheme && themes?.find((t) => t.theme.id === urlTheme)?.theme) || myTheme;
+  // Trocar no seletor sai do tema da URL.
   const themePicker = (
-    <ArenaThemePicker
-      value={theme}
-      onChange={(t) => {
-        setUrlTheme(null);
-        setArenaTheme(t);
-      }}
-    />
+    <span onChangeCapture={() => setUrlTheme(null)}>
+      <ThemePicker />
+    </span>
   );
   const newGameButton = (
     <button
@@ -223,7 +219,6 @@ export default function ArenaPreviewPage() {
         opponent={{ nickname: 'Sasuke', zones: view.players.guest, turn: view.turn.guest, attacker: view.active === 'guest' }}
         controls={controls}
         turnNumber={view.turnNumber}
-        phase={view.phase}
         theme={theme}
         fullscreenMenu={
           <>

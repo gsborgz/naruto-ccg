@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ARENA_SCREEN,
-  ArenaThemePicker,
   GameArena,
   type ArenaControls,
   type ArenaSide,
@@ -12,9 +11,10 @@ import {
 import { ArenaCardsProvider } from '@/components/arena/arenaCards';
 import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
 import { HeaderSlot } from '@/components/HeaderSlot';
+import { ThemePicker } from '@/components/themes/ThemePicker';
+import { useActiveTheme } from '@/lib/themes/client';
 import { DeckSelect, useValidDecks } from '@/components/PlayerSetup';
 import { CARDS_BY_ID } from '@/data/cards';
-import { setArenaTheme, useArenaTheme } from '@/lib/arenaTheme';
 import { customDeckCardId, isCustomCardId } from '@/lib/cardMaker/customIds';
 import type { CustomCard } from '@/lib/cardMaker/model';
 import { useCustomCards } from '@/lib/cardMaker/store';
@@ -174,7 +174,7 @@ export default function SoloPage() {
   const [searching, setSearching] = useState(false);
   const customCards = useCustomCards();
   const knownVersions = useKnownVersions();
-  const myTheme = useArenaTheme();
+  const theme = useActiveTheme();
 
   useEffect(() => setSave(loadSave()), []);
 
@@ -261,7 +261,6 @@ export default function SoloPage() {
     onFlip: () => play({ type: 'flip' }),
     onAdjustTurn: (delta) => play({ type: 'adjustTurn', delta }),
     onReveal: (from, count) => play({ type: 'reveal', from, count }),
-    onNextPhase: () => play({ type: 'nextPhase' }),
     onCreateToken: (cardId) => play({ type: 'createToken', cardId }),
     // Passar o turno: com a troca automática, você passa a comandar o novo Atacante.
     onPassTurn: () =>
@@ -279,7 +278,6 @@ export default function SoloPage() {
     ...(s === viewing && view.tokens ? { tokens: view.tokens } : {}),
   });
 
-  const theme = myTheme ?? view.theme;
   const restart = () => {
     if (confirm('Começar outra partida com os mesmos decks? A atual é perdida.')) start(decks);
   };
@@ -300,7 +298,7 @@ export default function SoloPage() {
         <input type="checkbox" checked={save.autoSwap} onChange={(e) => update({ ...save, autoSwap: e.target.checked })} />
         Trocar ao passar o turno
       </label>
-      <ArenaThemePicker value={theme} onChange={setArenaTheme} />
+      <ThemePicker />
       <button type="button" onClick={restart} className={btn}>
         Nova partida
       </button>
@@ -327,7 +325,6 @@ export default function SoloPage() {
           opponent={side(other)}
           controls={controls}
           turnNumber={view.turnNumber}
-          phase={view.phase}
           theme={theme}
           fullscreenMenu={controlsBar}
           notice={error}

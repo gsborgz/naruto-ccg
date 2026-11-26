@@ -23,5 +23,5 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   // Arquivos estáticos (imagens das cartas, molduras, ícones) ficam de fora: são públicos e muitos.
-  matcher: ['/((?!_next/static|_next/image|cards/|card-layouts/|textures/|icon\\.svg|favicon\\.ico).*)'],
+  matcher: ['/((?!_next/static|_next/image|cards/|card-layouts/|icon\\.svg|favicon\\.ico).*)'],
 };

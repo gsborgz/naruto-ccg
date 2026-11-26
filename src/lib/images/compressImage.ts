@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Tratamento de toda imagem enviada pelo jogador (hoje: as artes do criador de cartas). A imagem é reduzida e
+ * Tratamento de toda imagem enviada pelo jogador (as artes do criador de cartas e as imagens de fundo dos temas). A imagem é reduzida e
  * recomprimida antes de ser guardada no navegador ou enviada ao servidor, para o localStorage e o Blob não
  * acumularem arquivos pesados.
  */
@@ -17,9 +17,12 @@ const QUALITIES = [0.85, 0.78, 0.7, 0.6, 0.5];
 const SHRINK = 0.8;
 const MAX_SHRINKS = 3;
 
+/** Imagem de fundo dos temas da arena: a tela inteira (até Full HD), sob o desfoque e o escurecimento do tema. */
+export const WALLPAPER_LIMITS = { maxSide: 1920, maxBytes: 380_000 } as const;
+
 export class ImageTooLargeError extends Error {
-  constructor() {
-    super(`A imagem continua acima de ${Math.round(IMAGE_LIMITS.maxBytes / 1000)} KB mesmo comprimida. Use uma imagem menor ou mais simples.`);
+  constructor(maxBytes: number = IMAGE_LIMITS.maxBytes) {
+    super(`A imagem continua acima de ${Math.round(maxBytes / 1000)} KB mesmo comprimida. Use uma imagem menor ou mais simples.`);
   }
 }
 
@@ -41,13 +44,20 @@ async function toBitmap(source: Blob | string): Promise<ImageBitmap> {
 
 /**
  * Reduz a imagem (lado maior até `maxSide`) e comprime em WebP, baixando a qualidade e, se preciso, o tamanho
- * até caber em `maxBytes`. WebP guarda a transparência (arte da frente). Navegador sem WebP no canvas: JPEG para
+ * até caber em `maxBytes` (por padrão, os de `IMAGE_LIMITS`). WebP guarda a transparência (arte da frente). Navegador sem WebP no canvas: JPEG para
  * imagens opacas, PNG para as transparentes. Lança `ImageTooLargeError` se não couber de jeito nenhum.
  */
-export async function compressImage(source: Blob | string, { transparent = false } = {}): Promise<string> {
+export async function compressImage(
+  source: Blob | string,
+  {
+    transparent = false,
+    maxSide = IMAGE_LIMITS.maxSide,
+    maxBytes = IMAGE_LIMITS.maxBytes,
+  }: { transparent?: boolean; maxSide?: number; maxBytes?: number } = {},
+): Promise<string> {
   const bitmap = await toBitmap(source);
   try {
-    let scale = Math.min(1, IMAGE_LIMITS.maxSide / Math.max(bitmap.width, bitmap.height));
+    let scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
     for (let shrink = 0; shrink <= MAX_SHRINKS; shrink++, scale *= SHRINK) {
       const canvas = document.createElement('canvas');
       canvas.width = Math.max(1, Math.round(bitmap.width * scale));
@@ -57,12 +67,12 @@ export async function compressImage(source: Blob | string, { transparent = false
         let url = canvas.toDataURL('image/webp', quality);
         // Sem WebP, o navegador devolve PNG: para imagens opacas, JPEG fica bem menor.
         if (!url.startsWith('data:image/webp') && !transparent) url = canvas.toDataURL('image/jpeg', quality);
-        if (dataUrlBytes(url) <= IMAGE_LIMITS.maxBytes) return url;
+        if (dataUrlBytes(url) <= maxBytes) return url;
         if (url.startsWith('data:image/png')) break; // PNG não tem qualidade: só diminuir ajuda
       }
     }
   } finally {
     bitmap.close();
   }
-  throw new ImageTooLargeError();
+  throw new ImageTooLargeError(maxBytes);
 }

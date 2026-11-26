@@ -10,7 +10,6 @@ import {
   LOG_MAX,
   NINJA_COIN,
   OPENING_HAND,
-  PHASES,
   parseGameAction,
   shuffle,
   TEAM_MAX,
@@ -20,7 +19,6 @@ import {
   type GameState,
   type Rng,
 } from './state.ts';
-import { BOARD_THEME_IDS, DEFAULT_BOARD_THEME } from './boardThemes.ts';
 
 /** Gerador previsível (LCG) para os testes. */
 function seeded(seed = 42): Rng {
@@ -406,17 +404,11 @@ test('partida: passTurn é uma ação válida', () => {
   assert.deepEqual(parseGameAction({ type: 'passTurn' }), { type: 'passTurn' });
 });
 
-test('fases: só o Atacante avança; a última (Batalha) termina passando o turno, que volta para a primeira (Missão)', () => {
-  const rng = seeded(5);
-  let g: GameState = { ...newGame(), active: 'host' };
-  assert.equal(gameView(g, 'guest').phase, 0);
-  assert.throws(() => applyGameAction(g, 'guest', { type: 'nextPhase' }, rng), /Atacante/);
-  for (let i = 1; i < PHASES.length; i++) g = applyGameAction(g, 'host', { type: 'nextPhase' }, rng);
-  assert.equal(g.phase, PHASES.length - 1);
-  assert.throws(() => applyGameAction(g, 'host', { type: 'nextPhase' }, rng), /passe o turno/);
-  g = applyGameAction(g, 'host', { type: 'passTurn' }, rng);
-  assert.equal(g.phase, 0);
-  assert.deepEqual(parseGameAction({ type: 'nextPhase' }), { type: 'nextPhase' });
+test('turno: não há fases; a jogada de avançar fase não existe mais e some do registro das partidas antigas', () => {
+  assert.equal(parseGameAction({ type: 'nextPhase' }), null);
+  const g: GameState = { ...newGame(), log: [{ n: 1, who: 'host', type: 'nextPhase' as never, turn: 1 }] };
+  assert.equal('phase' in gameView(g, 'host'), false);
+  assert.deepEqual(gameView(g, 'host').log, []);
 });
 
 test('Ninja Ferido: só Ninjas na Vila ou no Campo; continua ferido no Time e entre Vila e Campo; sai ao deixar o jogo', () => {
@@ -551,15 +543,11 @@ test('Campo de Batalha: cada Time numa das 3 colunas ("lane"), trocando com quem
   assert.deepEqual(parseGameAction({ type: 'move', uid: 'x', to: 'battlefield', lane: 5 }), { type: 'move', uid: 'x', to: 'battlefield' });
 });
 
-test('tema: sorteado na partida (padrão de quem não escolheu); não há jogada para mudar o tema do outro', () => {
+test('tema: a partida não guarda tema (cada jogador vê o dele) e não há jogada para trocar', () => {
   const g = newGame();
-  assert.ok(BOARD_THEME_IDS.includes(g.theme!), 'sorteado entre os temas');
-  assert.equal(gameView(g, 'host').theme, gameView(g, 'guest').theme);
-  // A escolha de cada um fica no navegador dele: o servidor não aceita trocar o tema da partida.
-  assert.equal(parseGameAction({ type: 'setTheme', theme: 'bambu' }), null);
-  // Partidas antigas, sem tema, abrem no padrão.
-  const { theme: _old, ...semTema } = g;
-  assert.equal(gameView(semTema as GameState, 'host').theme, DEFAULT_BOARD_THEME);
+  assert.equal('theme' in g, false);
+  assert.equal('theme' in gameView(g, 'host'), false);
+  assert.equal(parseGameAction({ type: 'setTheme', theme: 'x' }), null);
 });
 
 test('registro de jogo: anota cada jogada com a carta e o destino; esconde o que o jogador não pode ver', () => {
@@ -570,17 +558,15 @@ test('registro de jogo: anota cada jogada com a carta e o destino; esconde o que
 
   g = applyGameAction(g, 'host', { type: 'move', uid: card.uid, to: 'village' }, rng);
   g = applyGameAction(g, 'host', { type: 'draw' }, rng);
-  g = applyGameAction(g, 'host', { type: 'nextPhase' }, rng);
   const before = g.log!.length;
   assert.equal(applyGameAction(g, 'host', { type: 'move', uid: card.uid, to: 'village' }, rng).log!.length, before, 'jogada sem efeito não entra');
 
-  const [moved, drew, phase] = g.log!;
+  const [moved, drew] = g.log!;
   assert.deepEqual(
     { n: moved.n, who: moved.who, type: moved.type, cards: moved.cards, from: moved.from, to: moved.to, turn: moved.turn },
     { n: 1, who: 'host', type: 'move', cards: [card.cardId], from: 'hand', to: 'village', turn: 1 },
   );
   assert.deepEqual(drew.cards, [top.cardId]);
-  assert.equal(phase.phase, 1);
 
   // Mão → Vila: os dois veem. Compra (Deck → Mão): só quem comprou vê qual foi.
   const guestView = gameView(g, 'guest').log;

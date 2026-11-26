@@ -1,0 +1,291 @@
+/*
+ * Miniatura da arena (design "Campo de Jogo" genérico) para a tela de temas: as mesmas variáveis que o tema põe na
+ * arena (`themeVars`), com os tokens fixos do layout. As medidas são em % do palco de 1600×900 e os textos em cqw,
+ * então a miniatura escala com a largura.
+ */
+
+.board {
+  --color-text: #f1f0f4;
+  --color-surface: rgba(18, 19, 26, 0.78);
+  --color-neutral-300: #c9c8d2;
+  --color-neutral-400: #a9a8b5;
+  --color-neutral-800: #383741;
+  --color-neutral-900: #24232b;
+  --glass: rgba(14, 15, 20, 0.62);
+
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  container-type: inline-size;
+  border-radius: 10px;
+  background: var(--page-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  user-select: none;
+}
+
+.abs {
+  position: absolute;
+}
+
+/* Coluna da esquerda: placas e turno. */
+.rail {
+  left: 1.5%;
+  top: 4.9%;
+  width: 12.5%;
+  height: 90.2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plate {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5cqw;
+  padding: 0.75cqw;
+  border-radius: 0.5cqw;
+  background: var(--color-surface);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  font-size: 0.85cqw;
+}
+.plateMine {
+  box-shadow:
+    0 0 0 1px var(--color-accent-700),
+    0 0 1.5cqw var(--color-accent-900);
+}
+.pips {
+  display: flex;
+  gap: 0.2cqw;
+}
+.pip {
+  flex: 1;
+  height: 0.4cqw;
+  border-radius: 0.12cqw;
+  background: var(--color-neutral-800);
+}
+.pipOn {
+  background: var(--color-neutral-300);
+}
+.plateMine .pipOn {
+  background: var(--color-accent-400);
+}
+.turn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75cqw;
+  padding: 0.75cqw;
+  border-radius: 0.5cqw;
+  background: rgba(14, 15, 20, 0.78);
+  box-shadow: inset 0 0 0 1px var(--color-neutral-800);
+}
+.turnLabel {
+  font-size: 0.62cqw;
+  letter-spacing: 0.2em;
+  color: var(--color-neutral-400);
+}
+.turnNumber {
+  font-size: 2.5cqw;
+  font-weight: 500;
+  line-height: 1;
+}
+.button {
+  padding: 0.5cqw;
+  border-radius: 0.4cqw;
+  text-align: center;
+  font-size: 0.8cqw;
+  font-weight: 600;
+  color: var(--color-accent-200);
+  background: color-mix(in srgb, var(--color-accent-800) 60%, transparent);
+  box-shadow: inset 0 0 0 1px var(--color-accent-500);
+}
+
+/* Linhas de zonas (vidro escuro). */
+.row {
+  left: 15.25%;
+  width: 83.25%;
+  height: 14.2%;
+  display: flex;
+  gap: 0.6cqw;
+}
+.rowOpp {
+  top: 4.9%;
+}
+.rowMine {
+  top: 72.4%;
+  flex-direction: row-reverse;
+}
+.zone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6cqw;
+  border-radius: 0.5cqw;
+  background: var(--glass);
+  backdrop-filter: blur(6px);
+}
+.rowOpp .zone {
+  box-shadow: inset 0 0 0 1px var(--color-neutral-800);
+}
+.rowMine .zone {
+  box-shadow: inset 0 0 0 1px var(--color-accent-800);
+}
+.rowMine .chakra {
+  background:
+    radial-gradient(circle, var(--color-section-glow), transparent 72%),
+    var(--glass);
+  box-shadow:
+    inset 0 0 0 1px var(--color-accent-700),
+    0 0 1.25cqw var(--color-accent-900);
+}
+.zoneLabel {
+  position: absolute;
+  left: 0.5cqw;
+  top: 0.35cqw;
+  font-size: 0.56cqw;
+  letter-spacing: 0.14em;
+  color: var(--color-neutral-400);
+}
+.rowMine .zoneLabel {
+  color: var(--color-accent-300);
+}
+.reward {
+  width: 8.25cqw;
+}
+.village {
+  flex: 1;
+}
+.chakra {
+  width: 9.4cqw;
+}
+.discard {
+  width: 6.25cqw;
+}
+.deck {
+  width: 7.4cqw;
+}
+.count {
+  font-size: 2cqw;
+  font-weight: 500;
+  color: var(--color-accent-200);
+}
+
+/* Costas e frentes das cartas. */
+.back,
+.card {
+  flex: none;
+  width: 3.9cqw;
+  aspect-ratio: 62 / 87;
+  border-radius: 0.3cqw;
+}
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, var(--color-accent-800), var(--color-accent-900));
+  box-shadow: inset 0 0 0 1px var(--color-accent-600);
+  color: var(--color-accent-300);
+  font-size: 1.4cqw;
+}
+.card {
+  background: linear-gradient(160deg, #5a5866, #2a2933);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+/* Campo de Batalha: octógono com o véu e o desfoque do tema. */
+.arena {
+  left: 15.25%;
+  top: 20.4%;
+  width: 83.25%;
+  height: 50.7%;
+  clip-path: polygon(3.3% 0, 96.7% 0, 100% 9.6%, 100% 90.4%, 96.7% 100%, 3.3% 100%, 0 90.4%, 0 9.6%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.1) 50%,
+    color-mix(in srgb, var(--color-accent-300) 50%, transparent)
+  );
+}
+.arenaInner {
+  position: absolute;
+  inset: 1px;
+  clip-path: polygon(3.3% 0, 96.7% 0, 100% 9.6%, 100% 90.4%, 96.7% 100%, 3.3% 100%, 0 90.4%, 0 9.6%);
+  background:
+    radial-gradient(85% 95% at 50% 50%, transparent 40%, rgba(4, 4, 8, 0.45) 100%),
+    linear-gradient(
+      180deg,
+      rgba(14, 15, 20, var(--arena-dim)),
+      rgba(14, 15, 20, var(--arena-dim)) 50%,
+      rgba(24, 22, 38, var(--arena-dim))
+    );
+  backdrop-filter: blur(calc(var(--arena-blur) * 0.5));
+}
+.line {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-700) 20%, var(--color-accent-700) 80%, transparent);
+}
+.pill {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.4cqw 1.1cqw;
+  border-radius: 2cqw;
+  background: #0e0f14;
+  box-shadow:
+    0 0 0 1px var(--color-accent-600),
+    0 0 1.5cqw var(--color-accent-800);
+  font-size: 0.7cqw;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: var(--color-accent-200);
+  white-space: nowrap;
+}
+.team {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  gap: 3.5cqw;
+  transform: translateX(-50%);
+}
+.teamOpp {
+  top: 8%;
+}
+.teamMine {
+  bottom: 8%;
+}
+.team .card {
+  width: 6cqw;
+}
+.teamMine .leader {
+  box-shadow:
+    0 0 0 1px var(--color-accent-400),
+    0 0 1.4cqw var(--color-accent-800);
+}
+
+/* Mão: as cartas passam da borda de baixo. */
+.hand {
+  left: 15.25%;
+  width: 83.25%;
+  top: 88%;
+  display: flex;
+  justify-content: center;
+}
+.hand .card {
+  width: 7cqw;
+  margin-left: -1.4cqw;
+}
+.hand .card:first-child {
+  margin-left: 0;
+}
+.hand .hover {
+  transform: translateY(-1.5cqw);
+  box-shadow:
+    0 0 0 2px var(--color-accent-400),
+    0 0 1.75cqw var(--color-accent-700);
+}
