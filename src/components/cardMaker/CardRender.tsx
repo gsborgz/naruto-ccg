@@ -10,6 +10,7 @@ import {
   NAME_BANNER_URL,
   attributeIcon,
   attributeKanjiUrls,
+  attributeSymbolOnly,
   attributeNames,
   chakraIcon,
   costIcon,
@@ -694,7 +695,7 @@ function CombatAttribute({ card, spec }: PartProps) {
   const kanjiUrl = single ? attributeKanjiUrls(label)?.[0] : undefined;
   // Atributo que é só um símbolo (ex.: "?"): aparece só o "kanji" (a imagem dele ou, sem imagem, o próprio símbolo),
   // sem o nome embaixo repetindo o mesmo símbolo.
-  const symbolOnly = single && label.trim() !== '' && !/\p{L}/u.test(label);
+  const symbolOnly = attributeSymbolOnly(label);
   const legacyKanji = single && !kanjiUrl ? kanji || (symbolOnly ? label.trim() : undefined) : undefined;
   const hasKanji = Boolean(kanjiUrl || legacyKanji);
   const showLabel = Boolean(label) && !(symbolOnly && hasKanji);
@@ -702,8 +703,12 @@ function CombatAttribute({ card, spec }: PartProps) {
   // limitada para a linha mais comprida caber no círculo (~0,65 da fonte por letra).
   const longestLine = Math.max(...labelLines.map((line) => line.length), 1);
   const fontSize = single ? labelSize : Math.min(labelSize * icon.label.multiMax, (circle.r * 1.6) / (longestLine * 0.65));
-  const kanjiSize = circle.r * icon.kanji.size;
-  const kanjiCy = circle.cy + circle.r * icon.kanji.dy;
+  // O símbolo sozinho ("?") tem posição e tamanho próprios (`symbol`), separados dos do kanji com nome.
+  const place = symbolOnly ? icon.symbol : { size: icon.kanji.size, dx: 0, dy: icon.kanji.dy };
+  const kanjiSize = circle.r * place.size;
+  const kanjiCx = circle.cx + circle.r * place.dx;
+  const kanjiCy = circle.cy + circle.r * place.dy;
+  const kanjiTextSize = circle.r * icon.kanji.textSize * (place.size / icon.kanji.size);
   const [dy1, dy2, dy3] = icon.label.dyWithKanji;
   const shadow = ATTRIBUTE_SHADOW;
   const tight = circle.r * shadow.tight;
@@ -772,7 +777,7 @@ function CombatAttribute({ card, spec }: PartProps) {
       {kanjiUrl && (
         <Img
           src={kanjiUrl}
-          x={circle.cx - kanjiSize / 2}
+          x={kanjiCx - kanjiSize / 2}
           y={kanjiCy - kanjiSize / 2}
           w={kanjiSize}
           h={kanjiSize}
@@ -783,12 +788,12 @@ function CombatAttribute({ card, spec }: PartProps) {
         <div
           style={{
             position: 'absolute',
-            left: circle.cx,
+            left: kanjiCx,
             top: kanjiCy,
             transform: 'translate(-50%, -50%)',
             fontFamily: KANJI_FONT,
             fontWeight: 700,
-            fontSize: circle.r * icon.kanji.textSize,
+            fontSize: kanjiTextSize,
             lineHeight: 1,
             color: icon.kanji.textColor,
             textShadow,

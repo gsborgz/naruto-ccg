@@ -1,5 +1,5 @@
 import type { CardType } from '../../../models/card.ts';
-import { ATTRIBUTE_PAIR_DEFAULT, ATTRIBUTE_TEXT_WRAP_DEFAULT } from './defaults.ts';
+import { ATTRIBUTE_PAIR_DEFAULT, ATTRIBUTE_TEXT_WRAP_DEFAULT, attributeSymbolDefault } from './defaults.ts';
 import type { AttributeFrame, EntranceIcon, HandIcon } from '../model.ts';
 import type { ChakraIconConfig, CombatAttributeIconConfig, CostIconConfig, NamedIconConfig } from './types.ts';
 
@@ -89,6 +89,7 @@ export function installIcons(icons: IconsContent): void {
   for (const icon of Object.values(COMBAT_ATTRIBUTE_ICONS)) {
     icon.pair = { ...ATTRIBUTE_PAIR_DEFAULT, ...icon.pair };
     icon.textWrap = { ...ATTRIBUTE_TEXT_WRAP_DEFAULT, ...icon.textWrap };
+    icon.symbol = attributeSymbolDefault(icon);
   }
   replaceContents(CHAKRA_ICON as unknown as Record<string, unknown>, (icons['chakra:chakra-any'] ?? {}) as unknown as Record<string, unknown>);
   const variants = group<NamedIconConfig>('type-variant');

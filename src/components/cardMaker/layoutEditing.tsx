@@ -15,6 +15,7 @@ import {
   TYPE_ICON_VARIANTS,
   attributeIcon,
   attributeKanjiUrls,
+  attributeSymbolOnly,
   attributeNames,
   costArt,
   costIcon,
@@ -482,7 +483,25 @@ export function iconHandles(spec: LayoutSpec, card: CustomCard, c: IconChoice, h
     const pairW = r * p.kanjiGap + pairSize;
     const pairLabelH = a.label.size * p.labelScale * 1.1 * 2;
     const pairLabelCy = cy + r * p.labelDy;
-    const textHandles: Handle[] = pairMode
+    // Só um símbolo ("?"): uma caixa só, com posição e tamanho próprios (não mexe no kanji dos outros atributos).
+    const s = a.symbol;
+    const symbolSize = r * s.size;
+    const textHandles: Handle[] = attributeSymbolOnly(card.attribute.label)
+      ? [
+          {
+            ...base,
+            id: 'icon-symbol',
+            label: 'Símbolo sozinho, ex.: "?" (symbol: dx, dy, size)',
+            section: 'symbol',
+            box: { x: cx + r * s.dx - symbolSize / 2, y: cy + r * s.dy - symbolSize / 2, w: symbolSize, h: symbolSize },
+            move: [
+              { path: ['symbol', 'dx'], axis: 'x', k: 1 / r },
+              { path: ['symbol', 'dy'], axis: 'y', k: 1 / r },
+            ],
+            resize: [{ path: ['symbol', 'size'], axis: 'y', k: 1 / r }],
+          },
+        ]
+      : pairMode
       ? [
           {
             ...base,
@@ -648,6 +667,7 @@ const FIELD_LABELS: Record<string, string> = {
   labelScale: 'fonte dos nomes (× a de um atributo)',
   inset: 'recuo dos lados',
   textWrap: 'texto de efeito contorna o ícone',
+  symbol: 'só o símbolo, ex.: "?" (sem o nome)',
   on: 'ligado',
   margin: 'distância do texto',
   thickness: 'espessura',

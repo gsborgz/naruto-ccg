@@ -1,4 +1,11 @@
-import type { CombatAttributeIconConfig, IconNumberStyle, IconSideLabel, AttributePairStyle, IconTextWrap } from './types.ts';
+import type {
+  CombatAttributeIconConfig,
+  IconNumberStyle,
+  IconSideLabel,
+  AttributePairStyle,
+  AttributeSymbolStyle,
+  IconTextWrap,
+} from './types.ts';
 
 /** Pasta pública dos ícones (gerada por `npm run cards:layouts`). */
 export const ICON_ASSETS = '/card-layouts/icons';
@@ -40,6 +47,14 @@ export const ATTRIBUTE_PAIR_DEFAULT: AttributePairStyle = {
   labelDy: 0.56,
   labelScale: 0.8,
 };
+
+/** Símbolo sozinho ("?"), nos ícones que ainda não gravaram o seu: no lugar do kanji com nome. */
+export const attributeSymbolDefault = (icon: Pick<CombatAttributeIconConfig, 'kanji' | 'symbol'>): AttributeSymbolStyle => ({
+  size: icon.kanji.size,
+  dx: 0,
+  dy: icon.kanji.dy,
+  ...icon.symbol,
+});
 
 /** Texto contornando o Atributo de Combate, nos ícones que ainda não gravaram o seu (`CombatAttributeIconConfig.textWrap`). */
 export const ATTRIBUTE_TEXT_WRAP_DEFAULT: IconTextWrap = { on: true, margin: 6 };

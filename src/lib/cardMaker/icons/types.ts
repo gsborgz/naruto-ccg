@@ -145,6 +145,12 @@ export interface CombatAttributeIconConfig extends CreatedIconFields {
    */
   pair?: AttributePairStyle;
   /**
+   * Atributo que é só um símbolo (ex.: "?"): o símbolo sozinho no círculo, sem o nome, com posição e tamanho próprios
+   * (frações do raio), separados dos do kanji com nome. Sem valor (ícones gravados antes): os do kanji (`kanji.size`,
+   * `kanji.dy`, sem deslocamento horizontal).
+   */
+  symbol?: AttributeSymbolStyle;
+  /**
    * O texto de efeito contorna a silhueta do ícone (a parte opaca da imagem) quando ele invade a caixa de texto, em vez
    * de passar por cima. Sem valor (ícones gravados antes): `ATTRIBUTE_TEXT_WRAP_DEFAULT`.
    */
@@ -156,6 +162,15 @@ export interface IconTextWrap {
   on: boolean;
   /** Distância entre o texto e a silhueta, em pixels da carta (750×1050). */
   margin: number;
+}
+
+/** Atributo só com símbolo (`CombatAttributeIconConfig.symbol`), em frações do raio do círculo. */
+export interface AttributeSymbolStyle {
+  /** Tamanho do símbolo. */
+  size: number;
+  /** Centro em relação ao centro do círculo (negativo: para a esquerda / para cima). */
+  dx: number;
+  dy: number;
 }
 
 /** Medidas do Atributo de Combate com dois atributos, em frações do raio do círculo (`CombatAttributeIconConfig.pair`). */

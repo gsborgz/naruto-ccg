@@ -219,7 +219,8 @@ function hostFor(c: IconChoice): string {
 
 /** Carta de exemplo que mostra o ícone, no layout escolhido. */
 /** Atributos da carta de exemplo do Atributo de Combate, por quantidade (1, 2 ou 3). */
-const SAMPLE_ATTRIBUTES: Record<number, string> = { 1: 'Ninjutsu', 2: 'Ninjutsu/Taijutsu', 3: 'Ninjutsu/Taijutsu/Genjutsu' };
+/** 0: o atributo "?", que mostra só o símbolo. */
+const SAMPLE_ATTRIBUTES: Record<number, string> = { 0: '?', 1: 'Ninjutsu', 2: 'Ninjutsu/Taijutsu', 3: 'Ninjutsu/Taijutsu/Genjutsu' };
 
 function sampleCard(c: IconChoice, layout: LayoutId, attributes = 1): CustomCard {
   const type = cardTypeFor(c);
@@ -415,6 +416,7 @@ export function IconsEditor({ editor, initial }: { editor: ConfigEditor; initial
                 <option value={1}>1 (kanji e nome)</option>
                 <option value={2}>2 (dois kanjis e os nomes)</option>
                 <option value={3}>3 (só os nomes)</option>
+                <option value={0}>&quot;?&quot; (só o símbolo)</option>
               </select>
             </label>
           )}
