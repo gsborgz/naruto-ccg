@@ -1,6 +1,6 @@
 'use client';
 
-import { memo, useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { memo, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { CARDS } from '@/data/cards';
 import { CUSTOM_SET, isCustomCardId } from '@/lib/cardMaker/customIds';
 import { filterCards, INITIAL_FILTERS, type CardFilterState } from '@/lib/cardFilters';
@@ -12,6 +12,12 @@ import { QtyControls } from './QtyControls';
 
 /** Miniaturas carregadas de imediato (com prioridade): as primeiras linhas visíveis da grade. */
 const EAGER_THUMBS = 12;
+
+/**
+ * A grade cresce aos poucos: monta só as primeiras cartas e mais um lote quando o fim dela se aproxima. Montar as
+ * milhares de cartas do catálogo de uma vez trava o celular.
+ */
+const PAGE_SIZE = 60;
 
 /** Imagens grandes já pré-carregadas nesta sessão (ao passar o mouse ou focar uma carta). */
 const preloaded = new Set<string>();
@@ -123,6 +129,29 @@ export function CardBrowser({
   const cards = useMemo(() => filterCards(source, deferredFilters), [source, deferredFilters]);
   const extraSets = useMemo(() => (source.some((c) => c.set === CUSTOM_SET) ? [CUSTOM_SET] : []), [source]);
 
+  // Quantas cartas da lista filtrada estão montadas; volta ao início quando a lista muda.
+  const [shown, setShown] = useState(PAGE_SIZE);
+  const [shownFor, setShownFor] = useState(cards);
+  if (shownFor !== cards) {
+    setShownFor(cards);
+    setShown(PAGE_SIZE);
+  }
+  const visible = useMemo(() => cards.slice(0, shown), [cards, shown]);
+  const hasMore = shown < cards.length;
+  const sentinel = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = sentinel.current;
+    if (!el || !hasMore) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) setShown((n) => n + PAGE_SIZE);
+      },
+      { rootMargin: '0px 0px 1200px 0px' },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasMore, shown]);
+
   return (
     <div className="flex flex-col gap-3 md:gap-4">
       {/* No celular, a busca e os filtros ficam presos logo abaixo do cabeçalho enquanto a grade rola. */}
@@ -137,7 +166,7 @@ export function CardBrowser({
         </p>
       ) : (
         <ul className={gridClassName ?? 'grid grid-cols-2 gap-x-2.5 gap-y-4 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-6'}>
-          {cards.map((card, index) => (
+          {visible.map((card, index) => (
             <CardTile
               key={card.id}
               card={card}
@@ -150,6 +179,8 @@ export function CardBrowser({
           ))}
         </ul>
       )}
+      {/* Perto da tela: monta o próximo lote. */}
+      {hasMore && <div ref={sentinel} aria-hidden className="h-px" />}
     </div>
   );
 }

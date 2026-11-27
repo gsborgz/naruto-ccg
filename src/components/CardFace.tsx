@@ -45,7 +45,9 @@ function CatalogCardFace({ card, size, eager = false, className = '' }: Props) {
     <div
       className={`aspect-[5/7] w-full overflow-hidden bg-surface-2 bg-cover ${className}`}
       style={{
-        backgroundImage: `url(${cardImageUrl(card, 'thumb')})`,
+        // A miniatura por trás só serve à montada e à imagem grande: na miniatura impressa seria a mesma imagem, baixada
+        // sem esperar a carta chegar perto da tela (o `loading="lazy"` vale só para o <img>).
+        backgroundImage: card.layout || size === 'full' ? `url(${cardImageUrl(card, 'thumb')})` : undefined,
         // Os cantos com o raio da moldura da carta, na montada e na impressa: as imagens impressas (e a miniatura por
         // trás da montada) têm o canto reto, preenchido com a cor da borda, que apareceria fora do canto da carta.
         // Carta sem layout (a impressa): o raio padrão.
