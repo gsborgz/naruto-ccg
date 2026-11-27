@@ -162,3 +162,11 @@ test('compartilhamento por código leva as cartas criadas', () => {
   assert.ok(collection && collection.kind === 'collection');
   assert.deepEqual(collection.decks.map((d) => Object.keys(d.custom ?? {}).length), [4, 4]);
 });
+
+test('carta criada: ícone customizado só com imagem do Blob e tamanho na faixa', () => {
+  assert.deepEqual(parseSharedCustomCard(custom('z', { customIcon: { src: ART_A, size: 120 } }))?.customIcon, { src: ART_A, size: 120 });
+  assert.equal(parseSharedCustomCard(custom("z"))?.customIcon, undefined);
+  assert.equal(parseSharedCustomCard(custom('z', { customIcon: { src: 'data:image/webp;base64,AAAA', size: 120 } })), null);
+  assert.equal(parseSharedCustomCard(custom('z', { customIcon: { src: 'https://exemplo.com/a.png', size: 120 } })), null);
+  assert.equal(parseSharedCustomCard(custom('z', { customIcon: { src: ART_A, size: 9999 } })), null);
+});

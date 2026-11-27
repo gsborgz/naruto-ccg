@@ -2,6 +2,7 @@ import { ELEMENT_LABEL, type CardType, type ElementSymbol } from '../../models/c
 import { customDeckCardId } from './customIds.ts';
 import { LAYOUT_OVERRIDE_PATH } from './layouts/index.ts';
 import {
+  CUSTOM_ICON_SIZE,
   MAX_VILLAGES,
   VILLAGES,
   type CardElement,
@@ -148,6 +149,13 @@ export function parseSharedCustomCard(x: unknown): CustomCard | null {
       updatedAt: str(x.updatedAt, 40),
     };
     if (x.artFront !== undefined) card.artFront = art(x.artFront);
+    if (x.customIcon !== undefined) {
+      const icon = isRec(x.customIcon) ? x.customIcon : fail();
+      const src = str(icon.src, 300);
+      // Só imagem enviada ao Blob (o rascunho com data URL não sai do navegador).
+      if (!BLOB_ART_URL.test(src)) fail();
+      card.customIcon = { src, size: num(icon.size, CUSTOM_ICON_SIZE.min, CUSTOM_ICON_SIZE.max) };
+    }
     const optional = {
       artLinked: optBool(x.artLinked),
       nameBanner: optBool(x.nameBanner),

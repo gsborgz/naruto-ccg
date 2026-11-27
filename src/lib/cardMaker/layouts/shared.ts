@@ -126,6 +126,17 @@ export function elementBox(spec: LayoutSpec, el: CardElement, slot: number, firs
   return { ...box, x: anchor.x + anchor.w / 2 - box.w / 2, y };
 }
 
+/**
+ * Onde fica o ícone customizado (`CustomCard.customIcon`): no espaço logo abaixo do último elemento da carta (o 1º
+ * espaço, se ela não tem elemento), com o topo no topo do espaço e o centro alinhado com o do 1º elemento. `w` é a
+ * largura escolhida; a altura segue a proporção da imagem.
+ */
+export function customIconBox(spec: LayoutSpec, elements: CardElement[], size: number): { x: number; y: number; w: number } {
+  const slot = Math.min(elements.length, MAX_ELEMENTS);
+  const anchor = elements[0] ? firstSlotBox(spec, elements[0]) : boxOf(spec.elements.pos, 1);
+  return { x: anchor.x + anchor.w / 2 - size / 2, y: anchor.y + slot * spec.elements.slotDy, w: size };
+}
+
 /** Ícone do elemento no espaço `slot` (arte + nome), como em `elementBox`. */
 export function elementIcon(spec: LayoutSpec, el: CardElement, slot: number, first?: CardElement): PlacedIcon {
   return place(elementBox(spec, el, slot, first), elementConfig(el).icon);

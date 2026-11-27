@@ -22,6 +22,7 @@ import {
 import {
   switchLayout,
   VILLAGES,
+  CUSTOM_ICON_SIZE,
   MAX_VILLAGES,
   cardVillages,
   withVillages,
@@ -385,6 +386,87 @@ function ArtLayerControls({
   );
 }
 
+/**
+ * Ícone customizado: imagem enviada pelo jogador, desenhada logo abaixo do último elemento da carta, e a largura dela
+ * (`CustomCard.customIcon`). Começa com a largura do ícone de elemento do layout.
+ */
+function CustomIconControls({
+  card,
+  defaultSize,
+  onChange,
+  onError,
+}: {
+  card: CustomCard;
+  defaultSize: number;
+  onChange: (card: CustomCard) => void;
+  onError: (message: string | null) => void;
+}) {
+  const icon = card.customIcon;
+  const remove = () => {
+    const { customIcon: _removed, ...rest } = card;
+    onChange(rest);
+  };
+  return (
+    <div className="flex flex-col gap-2 rounded-lg border border-border p-3">
+      <label className={label}>
+        Ícone customizado (abaixo dos elementos)
+        <input
+          type="file"
+          accept="image/*"
+          className="text-sm text-muted file:mr-3 file:rounded-lg file:border-0 file:bg-surface-2 file:px-3 file:py-1.5 file:text-text"
+          onChange={async (e) => {
+            const file = e.target.files?.[0];
+            e.target.value = '';
+            if (!file) return;
+            try {
+              onError(null);
+              const src = await loadArt(file, true);
+              const size = Math.round(Math.min(CUSTOM_ICON_SIZE.max, Math.max(CUSTOM_ICON_SIZE.min, icon?.size ?? defaultSize)));
+              onChange({ ...card, customIcon: { src, size } });
+            } catch (err) {
+              onError(err instanceof ImageTooLargeError ? err.message : 'Não foi possível abrir essa imagem.');
+            }
+          }}
+        />
+        <span className="font-normal">
+          Fica logo abaixo do último ícone de elemento. Use uma imagem com transparência (PNG) para o fundo não aparecer.
+        </span>
+      </label>
+      {icon && (
+        <>
+          <label className={label}>
+            Tamanho ({Math.round(icon.size)})
+            <input
+              type="range"
+              min={CUSTOM_ICON_SIZE.min}
+              max={CUSTOM_ICON_SIZE.max}
+              step={1}
+              value={icon.size}
+              onChange={(e) => onChange({ ...card, customIcon: { ...icon, size: Number(e.target.value) } })}
+            />
+          </label>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => onChange({ ...card, customIcon: { ...icon, size: defaultSize } })}
+              className="rounded-lg px-3 py-1.5 text-sm text-muted ring-1 ring-border hover:bg-surface-2 hover:text-text"
+            >
+              Tamanho do elemento
+            </button>
+            <button
+              type="button"
+              onClick={remove}
+              className="rounded-lg px-3 py-1.5 text-sm text-muted ring-1 ring-border hover:bg-surface-2 hover:text-danger"
+            >
+              Remover
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 interface Props {
   card: CustomCard;
   onChange: (card: CustomCard) => void;
@@ -447,6 +529,12 @@ export function CardEditor({ card, onChange, artLayer, onArtLayerChange, mode = 
         hint="Use uma imagem com transparência (PNG), como o personagem recortado."
         card={card}
         layer="front"
+        onChange={onChange}
+        onError={setArtError}
+      />
+      <CustomIconControls
+        card={card}
+        defaultSize={Math.round(spec.elements.pos.size)}
         onChange={onChange}
         onError={setArtError}
       />

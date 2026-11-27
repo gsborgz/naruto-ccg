@@ -117,6 +117,8 @@ export interface CardLayoutInfo {
   villages?: { village: string; rogue: boolean }[];
   /** Sombreado atrás da frase sobre a impressa de fundo (`CustomCard.flavorShade`). Sem valor: ligado. */
   flavorShade?: boolean;
+  /** Ícone customizado abaixo dos elementos (`CustomCard.customIcon`, da alter): imagem no Blob e largura. */
+  customIcon?: { src: string; size: number };
   icons: CardIcons;
   /**
    * Artes extraídas da carta (card-layouts/arts/<set>/<id>/<camada>.png →

@@ -34,7 +34,7 @@ async function uploadLayer(art: CustomCardArt, transparent: boolean, cardId: str
 
 /** A carta tem arte que ainda não foi enviada ao servidor (só está na tela)? */
 export function hasPendingArt(card: CustomCard): boolean {
-  return !!card.art.src?.startsWith('data:') || !!card.artFront?.src?.startsWith('data:');
+  return [card.art.src, card.artFront?.src, card.customIcon?.src].some((src) => !!src?.startsWith('data:'));
 }
 
 /**
@@ -45,8 +45,16 @@ export function hasPendingArt(card: CustomCard): boolean {
 export async function uploadCardArt(card: CustomCard): Promise<CustomCard> {
   const art = await uploadLayer(card.art, false, card.id);
   const artFront = card.artFront && (await uploadLayer(card.artFront, true, card.id));
-  if (art === card.art && artFront === card.artFront) return card;
-  return { ...card, art, ...(artFront && { artFront }) };
+  const icon = card.customIcon;
+  const customIcon =
+    icon?.src.startsWith('data:')
+      ? {
+          ...icon,
+          src: await uploadArt(isCompressed(icon.src) ? icon.src : await compressImage(icon.src, { transparent: true }), card.id),
+        }
+      : icon;
+  if (art === card.art && artFront === card.artFront && customIcon === icon) return card;
+  return { ...card, art, ...(artFront && { artFront }), ...(customIcon && { customIcon }) };
 }
 
 /**

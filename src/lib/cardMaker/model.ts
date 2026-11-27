@@ -69,6 +69,19 @@ export interface CustomCardArt extends Omit<CardArtPlacement, 'src'> {
   src: string | null;
 }
 
+/**
+ * Ícone customizado (imagem enviada pelo jogador), logo abaixo do último ícone de elemento (`customIconBox` em
+ * layouts/shared.ts). `size` é a largura em pixels da carta; a altura segue a proporção da imagem.
+ */
+export interface CustomCardIcon {
+  /** Endereço no Vercel Blob, ou data URL tratado enquanto ainda não foi enviado (`artUpload.ts`). */
+  src: string;
+  size: number;
+}
+
+/** Faixa da largura do ícone customizado, em pixels da carta (750×1050). */
+export const CUSTOM_ICON_SIZE = { min: 30, max: 320 } as const;
+
 export interface CustomCard {
   id: string;
   layout: LayoutId;
@@ -115,6 +128,8 @@ export interface CustomCard {
   artFront?: CustomCardArt;
   /** Arrastar e zoom movem as duas camadas juntas (padrão: sim). */
   artLinked?: boolean;
+  /** Ícone customizado abaixo dos elementos (vale também nas alters). Sem valor: nenhum. */
+  customIcon?: CustomCardIcon;
   /** Mancha preta atrás do nome (layouts com o nome no topo). Sem valor: o padrão do layout. */
   nameBanner?: boolean;
   /** Linha acima do texto de efeito (`LayoutSpec.textDivider`). Sem valor: o padrão do layout. */
@@ -376,6 +391,7 @@ export function fromCatalogCard(card: Card, now = new Date().toISOString(), layo
     // Fundo = a impressa: a frase dela aparece por baixo da montada.
     ...(info.art.back?.print && !info.art.back.src && { printedFlavor: card.flavor ?? '' }),
     ...(info.flavorShade === false && { flavorShade: false }),
+    ...(info.customIcon && { customIcon: { ...info.customIcon } }),
     // O que a aba Editar do detalhe guarda além dos dados da carta.
     ...(info.nameText && { name: info.nameText }),
     ...(info.textMarkup !== undefined && { text: info.textMarkup }),

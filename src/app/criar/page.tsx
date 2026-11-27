@@ -64,6 +64,9 @@ function withUploadedArt(current: CustomCard, sent: CustomCard, uploaded: Custom
   if (current.artFront && uploaded.artFront && current.artFront.src === sent.artFront?.src) {
     next.artFront = { ...current.artFront, src: uploaded.artFront.src };
   }
+  if (current.customIcon && uploaded.customIcon && current.customIcon.src === sent.customIcon?.src) {
+    next.customIcon = { ...current.customIcon, src: uploaded.customIcon.src };
+  }
   return next;
 }
 

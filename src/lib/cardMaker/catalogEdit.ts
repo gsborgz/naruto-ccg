@@ -84,6 +84,7 @@ function visualLayout(original: Card, draft: CustomCard, type: Card['type']): Ca
   if (draft.nameSize) layout.nameSize = draft.nameSize;
   if (draft.nameWrap && draft.nameWrap !== 'auto') layout.nameWrap = draft.nameWrap;
   if (draft.flavorShade === false) layout.flavorShade = false;
+  if (draft.customIcon) layout.customIcon = { ...draft.customIcon };
   return layout;
 }
 

@@ -15,6 +15,7 @@ import {
   chakraIcon,
   costIcon,
   elementIcon,
+  customIconBox,
   cardLayout,
   TEXT_DIVIDER_COLOR,
   textDividerColor,
@@ -948,6 +949,19 @@ export function CardRender({ card, width, referenceOpacity = 0, onArtMove, class
         {card.elements.slice(0, MAX_ELEMENTS).map((el, i) => (
           <NamedIcon key={i} icon={elementIcon(spec, el, i, card.elements[0])} />
         ))}
+        {card.customIcon?.src &&
+          (() => {
+            const box = customIconBox(spec, card.elements, card.customIcon.size);
+            return (
+              // eslint-disable-next-line @next/next/no-img-element -- imagem do Blob ou data URL do rascunho
+              <img
+                src={assetUrl(card.customIcon.src)}
+                alt=""
+                draggable={false}
+                style={{ position: 'absolute', left: box.x, top: box.y, width: box.w, height: 'auto', maxWidth: 'none', pointerEvents: 'none' }}
+              />
+            );
+          })()}
 
         {type === 'ninja' && <CombatAttribute {...parts} />}
 

@@ -8,6 +8,8 @@ import {
   ATTRIBUTE_NAMES,
   attributeKanjiUrls,
   attributeSlug,
+  customIconBox,
+  elementBox,
   elementIcon,
   elementVariants,
   typeIcon,
@@ -454,4 +456,27 @@ test('ícones no texto: ~1~ vira o Chakra genérico e ~fire~ o símbolo do eleme
   assert.equal(runs.find((r) => r.icon?.kind === 'chakra')?.text, '~2~');
   // O que não é valor nem elemento sai como foi digitado.
   assert.ok(runs.some((r) => !r.icon && r.text.includes('~nada~ fica.')));
+});
+
+test('ícone customizado: logo abaixo do último elemento, centrado no 1º, com a largura escolhida', () => {
+  const fire = { element: 'fire' as const, variant: '01' as const };
+  const water = { element: 'water' as const, variant: '01' as const };
+  const first = elementBox(L1, fire, 0);
+  for (const elements of [[fire], [fire, water], [fire, water, fire]]) {
+    const box = customIconBox(L1, elements, 100);
+    assert.equal(box.w, 100);
+    assert.equal(box.y, first.y + elements.length * L1.elements.slotDy, `${elements.length} elemento(s)`);
+    assert.equal(box.x + box.w / 2, first.x + first.w / 2);
+  }
+  // Sem elemento: no 1º espaço; com mais de 3 (não acontece), fica abaixo do 3º.
+  assert.equal(customIconBox(L1, [], 80).y, L1.elements.pos.y);
+  assert.equal(customIconBox(L1, [fire, fire, fire, fire], 80).y, first.y + 3 * L1.elements.slotDy);
+});
+
+test('ícone customizado: a alter leva o ícone para o design no deck', () => {
+  const icon = { src: 'https://abc123.public.blob.vercel-storage.com/naruto-ccg/art/x.webp', size: 120 };
+  const card = scannedNinja();
+  const withIcon: NinjaCard = { ...card, layout: { ...card.layout!, customIcon: icon } };
+  assert.deepEqual(fromCatalogCard(withIcon, NOW).customIcon, icon);
+  assert.equal(fromCatalogCard(card, NOW).customIcon, undefined);
 });

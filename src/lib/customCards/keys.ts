@@ -56,7 +56,7 @@ export async function readCustomEntries(ids: readonly string[]): Promise<Map<str
 /** Endereços de arte no Blob que a carta usa. */
 export function customCardArts(card: CustomCard | null | undefined): string[] {
   if (!card) return [];
-  return [...new Set([card.art.src, card.artFront?.src].filter((s): s is string => !!s && isBlobArt(s)))];
+  return [...new Set([card.art.src, card.artFront?.src, card.customIcon?.src].filter((s): s is string => !!s && isBlobArt(s)))];
 }
 
 /** O uso das artes da carta (`src/lib/artStore.ts`): só fica no Blob a arte que alguma carta usa. */
