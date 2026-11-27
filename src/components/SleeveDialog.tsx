@@ -1,12 +1,27 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { prepareSleeveImage, sleeveActions, uploadSleeveImage, useSleeves, type SleeveItem } from '@/lib/sleeves/client';
-import { DEFAULT_BACK, SLEEVE_LIMITS, type Sleeve } from '@/lib/sleeves/types';
+import { useEffect, useRef, useState } from 'react';
+import { renderSleeveImage, sleeveActions, uploadSleeveImage, useSleeves, type SleeveItem } from '@/lib/sleeves/client';
+import { CENTERED, frameRect, SLEEVE_ZOOM, zoomFrame, type SleeveFrame } from '@/lib/sleeves/frame';
+import { DEFAULT_BACK, SLEEVE_LIMITS, SLEEVE_SIZE, type Sleeve } from '@/lib/sleeves/types';
 import { Dialog } from './Dialog';
 import { SleeveImage } from './SleeveImage';
 
-type Form = { id: string; name: string; image: string | null; createdAt: string; isNew: boolean };
+/** Imagem em enquadramento: o arquivo escolhido (`file`, com um `blob:` para a prévia) ou a imagem atual do sleeve. */
+type Source = { src: string; file?: Blob; w?: number; h?: number };
+
+type Form = {
+  id: string;
+  name: string;
+  /** Imagem gravada do sleeve (Blob); fica a mesma se o enquadramento não mudar. */
+  image: string | null;
+  source: Source | null;
+  frame: SleeveFrame;
+  /** O enquadramento ou a imagem mudou: o Salvar recorta e envia de novo. */
+  reframed: boolean;
+  createdAt: string;
+  isNew: boolean;
+};
 
 /**
  * Sleeve do deck (montador): escolhe o verso das cartas entre o padrão e os sleeves de todos os jogadores, e cadastra
@@ -32,6 +47,10 @@ export function SleeveDialog({
   const fileRef = useRef<HTMLInputElement>(null);
   const mineCount = sleeves?.filter((s) => s.mine).length ?? 0;
 
+  // O `blob:` da prévia do arquivo escolhido é liberado quando sai de uso.
+  const previewUrl = form?.source?.file ? form.source.src : null;
+  useEffect(() => (previewUrl ? () => URL.revokeObjectURL(previewUrl) : undefined), [previewUrl]);
+
   const close = () => {
     setForm(null);
     setError(null);
@@ -40,42 +59,55 @@ export function SleeveDialog({
 
   function startNew() {
     setError(null);
-    setForm({ id: crypto.randomUUID(), name: '', image: null, createdAt: new Date().toISOString(), isNew: true });
+    setForm({
+      id: crypto.randomUUID(),
+      name: '',
+      image: null,
+      source: null,
+      frame: CENTERED,
+      reframed: false,
+      createdAt: new Date().toISOString(),
+      isNew: true,
+    });
   }
 
   function startEdit(s: Sleeve) {
     setError(null);
-    setForm({ id: s.id, name: s.name, image: s.image, createdAt: s.createdAt, isNew: false });
+    setForm({
+      id: s.id,
+      name: s.name,
+      image: s.image,
+      source: { src: s.image },
+      frame: CENTERED,
+      reframed: false,
+      createdAt: s.createdAt,
+      isNew: false,
+    });
   }
 
-  async function pick(file: File | undefined) {
+  function pick(file: File | undefined) {
     if (!file || !form) return;
     if (!file.type.startsWith('image/')) {
       setError('Escolha uma imagem (JPEG, PNG ou WebP).');
       return;
     }
     setError(null);
-    setBusy(true);
-    try {
-      const image = await prepareSleeveImage(file);
-      setForm((f) => f && { ...f, image });
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Não foi possível ler a imagem.');
-    } finally {
-      setBusy(false);
-    }
+    setForm((f) => f && { ...f, source: { src: URL.createObjectURL(file), file }, frame: CENTERED, reframed: true });
   }
 
   async function save() {
     if (!form || busy) return;
-    if (!form.image) {
+    if (!form.source) {
       setError('Escolha a imagem do sleeve.');
       return;
     }
     setBusy(true);
     setError(null);
     try {
-      const image = form.image.startsWith('data:') ? await uploadSleeveImage(form.image) : form.image;
+      const image =
+        form.reframed || !form.image
+          ? await uploadSleeveImage(await renderSleeveImage(form.source.file ?? form.source.src, form.frame))
+          : form.image;
       const sleeve: Sleeve = {
         id: form.id,
         name: form.name.trim() || 'Sleeve sem nome',
@@ -111,20 +143,25 @@ export function SleeveDialog({
           }}
         >
           <div className="flex gap-4">
-            <button
-              type="button"
-              onClick={() => fileRef.current?.click()}
-              disabled={busy}
-              className="flex aspect-[5/7] w-28 shrink-0 items-center justify-center overflow-hidden rounded-md text-center text-xs text-muted ring-1 ring-border hover:ring-accent"
-              title="Escolher a imagem"
-            >
-              {form.image ? (
-                // eslint-disable-next-line @next/next/no-img-element -- data URL ou Blob, já tratada
-                <img src={form.image} alt="" className="size-full object-cover" />
-              ) : (
-                <span className="p-2">{busy ? 'Tratando…' : 'Escolher imagem'}</span>
-              )}
-            </button>
+            {form.source ? (
+              <SleeveFramer
+                source={form.source}
+                frame={form.frame}
+                disabled={busy}
+                onLoad={(w, h) => setForm((f) => (f?.source ? { ...f, source: { ...f.source, w, h } } : f))}
+                onFrame={(frame) => setForm((f) => f && { ...f, frame, reframed: true })}
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => fileRef.current?.click()}
+                disabled={busy}
+                className="flex aspect-[5/7] w-40 shrink-0 items-center justify-center overflow-hidden rounded-md text-center text-xs text-muted ring-1 ring-border hover:ring-accent"
+                title="Escolher a imagem"
+              >
+                <span className="p-2">Escolher imagem</span>
+              </button>
+            )}
             <div className="flex min-w-0 flex-1 flex-col gap-3">
               <label className="flex flex-col gap-1 text-sm">
                 <span className="text-muted">Nome</span>
@@ -143,9 +180,13 @@ export function SleeveDialog({
                 disabled={busy}
                 className="self-start rounded-lg px-3 py-1.5 text-sm ring-1 ring-border hover:bg-surface-2 disabled:opacity-50"
               >
-                {form.image ? 'Trocar imagem' : 'Escolher imagem'}
+                {form.source ? 'Trocar imagem' : 'Escolher imagem'}
               </button>
-              <p className="text-xs text-muted">A imagem é recortada no centro, na proporção da carta (5×7).</p>
+              <p className="text-xs text-muted">
+                {form.source
+                  ? 'Arraste a imagem para enquadrar e use o zoom (ou a roda do mouse). O sleeve fica com o que aparece na prévia, na proporção da carta (5×7).'
+                  : 'A imagem é recortada na proporção da carta (5×7); depois de escolher, dá para arrastar e dar zoom.'}
+              </p>
             </div>
             <input
               ref={fileRef}
@@ -153,7 +194,7 @@ export function SleeveDialog({
               accept="image/jpeg,image/png,image/webp"
               className="hidden"
               onChange={(e) => {
-                void pick(e.target.files?.[0]);
+                pick(e.target.files?.[0]);
                 e.target.value = '';
               }}
             />
@@ -225,6 +266,119 @@ export function SleeveDialog({
         </div>
       )}
     </Dialog>
+  );
+}
+
+/**
+ * Prévia do sleeve em enquadramento: arrastar move a imagem, a roda do mouse dá zoom em volta do ponteiro e o controle
+ * embaixo dá zoom em volta do centro. A conta é a do recorte (`frameRect`), em px da carta de 750×1050.
+ */
+function SleeveFramer({
+  source,
+  frame,
+  disabled,
+  onLoad,
+  onFrame,
+}: {
+  source: Source;
+  frame: SleeveFrame;
+  disabled?: boolean;
+  onLoad: (w: number, h: number) => void;
+  onFrame: (frame: SleeveFrame) => void;
+}) {
+  const boxRef = useRef<HTMLDivElement>(null);
+  const drag = useRef<{ id: number; x: number; y: number; frame: SleeveFrame } | null>(null);
+  const { w: iw, h: ih } = source;
+  const ready = !!iw && !!ih;
+  const r = ready ? frameRect(iw, ih, frame) : null;
+  // px da tela → px da carta.
+  const toCard = () => SLEEVE_SIZE.w / (boxRef.current?.clientWidth || SLEEVE_SIZE.w);
+
+  // A roda precisa de um ouvinte não passivo para não rolar o diálogo junto.
+  const wheel = useRef<(e: WheelEvent) => void>(() => {});
+  wheel.current = (e) => {
+    if (!ready || disabled || !boxRef.current) return;
+    e.preventDefault();
+    const box = boxRef.current.getBoundingClientRect();
+    const k = toCard();
+    const zoom = frame.zoom * Math.exp(-e.deltaY * 0.0015);
+    onFrame(zoomFrame(iw, ih, frame, zoom, (e.clientX - box.left) * k, (e.clientY - box.top) * k));
+  };
+  useEffect(() => {
+    const el = boxRef.current;
+    if (!el) return;
+    const on = (e: WheelEvent) => wheel.current(e);
+    el.addEventListener('wheel', on, { passive: false });
+    return () => el.removeEventListener('wheel', on);
+  }, []);
+
+  const pct = (v: number, of: number) => `${(v / of) * 100}%`;
+
+  return (
+    <div className="flex w-40 shrink-0 flex-col gap-2">
+      <div
+        ref={boxRef}
+        className={`relative aspect-[5/7] w-full touch-none overflow-hidden rounded-md bg-[#26262c] ring-1 ring-border select-none ${
+          ready && !disabled ? 'cursor-grab active:cursor-grabbing' : ''
+        }`}
+        title="Arraste para enquadrar; a roda do mouse dá zoom"
+        onPointerDown={(e) => {
+          if (!ready || disabled || e.button !== 0) return;
+          e.currentTarget.setPointerCapture(e.pointerId);
+          drag.current = { id: e.pointerId, x: e.clientX, y: e.clientY, frame };
+        }}
+        onPointerMove={(e) => {
+          const d = drag.current;
+          if (!d || d.id !== e.pointerId) return;
+          const k = toCard();
+          onFrame({ ...d.frame, x: d.frame.x + (e.clientX - d.x) * k, y: d.frame.y + (e.clientY - d.y) * k });
+        }}
+        onPointerUp={() => (drag.current = null)}
+        onPointerCancel={() => (drag.current = null)}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element -- arquivo local (blob:) ou imagem do Blob */}
+        <img
+          src={source.src}
+          alt=""
+          draggable={false}
+          onLoad={(e) => onLoad(e.currentTarget.naturalWidth, e.currentTarget.naturalHeight)}
+          className="pointer-events-none absolute max-w-none"
+          style={
+            r
+              ? {
+                  left: pct(r.left, SLEEVE_SIZE.w),
+                  top: pct(r.top, SLEEVE_SIZE.h),
+                  width: pct(r.width, SLEEVE_SIZE.w),
+                  height: pct(r.height, SLEEVE_SIZE.h),
+                }
+              : { visibility: 'hidden' }
+          }
+        />
+      </div>
+      <label className="flex items-center gap-2 text-xs text-muted" title="Zoom">
+        <span aria-hidden>−</span>
+        <input
+          type="range"
+          min={SLEEVE_ZOOM.min}
+          max={SLEEVE_ZOOM.max}
+          step={0.01}
+          value={frame.zoom}
+          disabled={!ready || disabled}
+          onChange={(e) => onFrame(zoomFrame(iw!, ih!, frame, Number(e.target.value)))}
+          aria-label="Zoom da imagem"
+          className="min-w-0 flex-1 accent-accent"
+        />
+        <span aria-hidden>+</span>
+      </label>
+      <button
+        type="button"
+        onClick={() => onFrame(CENTERED)}
+        disabled={!ready || disabled || (frame.x === 0 && frame.y === 0 && frame.zoom === 1)}
+        className="self-center rounded px-2 py-0.5 text-xs text-muted hover:bg-surface-2 hover:text-text disabled:opacity-40"
+      >
+        Centralizar
+      </button>
+    </div>
   );
 }
 

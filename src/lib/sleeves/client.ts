@@ -3,6 +3,7 @@
 import { cloudRequest, currentLibrary, updateLibrary, useLibrary, type SleeveItem } from '../cloud/library.ts';
 import { compressImage } from '../images/compressImage.ts';
 import { getIdentity } from '../rooms/client.ts';
+import { frameRect, type SleeveFrame } from './frame.ts';
 import { SLEEVE_SIZE, type Sleeve } from './types.ts';
 
 export type { SleeveItem };
@@ -49,16 +50,16 @@ export const sleeveActions = {
 };
 
 /**
- * Trata a imagem escolhida para o sleeve: recorta o centro na proporção da carta (5×7, "cobrir"), em 750×1050, e
- * comprime em WebP. Lança `ImageTooLargeError` se não couber.
+ * Recorta a imagem do sleeve no enquadramento escolhido (`src/lib/sleeves/frame.ts`), em 750×1050 (proporção da
+ * carta), e comprime em WebP. `source` é o arquivo escolhido ou o endereço da imagem atual (Blob, com CORS). Lança
+ * `ImageTooLargeError` se não couber.
  */
-export async function prepareSleeveImage(file: Blob): Promise<string> {
-  const bitmap = await createImageBitmap(file);
+export async function renderSleeveImage(source: Blob | string, frame: SleeveFrame): Promise<string> {
+  const blob = typeof source === 'string' ? await (await fetch(source)).blob() : source;
+  const bitmap = await createImageBitmap(blob);
   try {
     const { w, h } = SLEEVE_SIZE;
-    const scale = Math.max(w / bitmap.width, h / bitmap.height);
-    const sw = w / scale;
-    const sh = h / scale;
+    const r = frameRect(bitmap.width, bitmap.height, frame);
     const canvas = document.createElement('canvas');
     canvas.width = w;
     canvas.height = h;
@@ -66,7 +67,8 @@ export async function prepareSleeveImage(file: Blob): Promise<string> {
     // Fundo opaco: uma imagem com transparência deixaria o verso padrão (a camada de baixo, na arena) aparecer.
     ctx.fillStyle = '#26262c';
     ctx.fillRect(0, 0, w, h);
-    ctx.drawImage(bitmap, (bitmap.width - sw) / 2, (bitmap.height - sh) / 2, sw, sh, 0, 0, w, h);
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(bitmap, r.left, r.top, r.width, r.height);
     return await compressImage(canvas.toDataURL('image/png'));
   } finally {
     bitmap.close();
