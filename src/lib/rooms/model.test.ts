@@ -211,3 +211,20 @@ test('salas: a partida começa com os decks carregados, aceita jogadas e pode se
   assert.equal(left.game, null);
   assert.equal(left.status, 'waiting');
 });
+
+test('salas: o sleeve do deck vai para a visão dos dois jogadores', () => {
+  const image = `https://abc123.public.blob.vercel-storage.com/naruto-ccg/art/${'b'.repeat(64)}.webp`;
+  const sleeve = { id: '0f8fad5b-d9cb-469f-a165-70867728950e', image };
+  const deck = parseRoomDeck({ ...validDeck('Konoha'), sleeve }, lookup);
+  assert.deepEqual(deck.sleeve, sleeve);
+  let room = joinRoom(createRoom('r1', host, NOW), guest, NOW);
+  room = act(room, 'host', { type: 'changeDeck', deck });
+  room = act(room, 'guest', { type: 'changeDeck', deck: validDeck('Uchiha', 60) });
+  for (const viewer of ['host', 'guest'] as const) {
+    const players = toView(room, viewer, {}, Date.parse(NOW), lookup).players;
+    assert.equal(players.find((p) => p.seat === 'host')?.sleeve, image);
+    assert.equal(players.find((p) => p.seat === 'guest')?.sleeve, undefined, 'sem sleeve, o verso padrão');
+  }
+  // Imagem fora do Blob não passa.
+  expectRoomError(() => parseRoomDeck({ ...validDeck('Konoha'), sleeve: { ...sleeve, image: 'https://exemplo.com/x.png' } }, lookup), 400);
+});

@@ -236,15 +236,28 @@ tema, a arena usa o fundo padrão (degradê azul-escuro) e a paleta Lilás. A fo
   textura), com uma prévia ao vivo. Modelo e variáveis CSS em `src/lib/themes/types.ts` (`themeVars`).
 - **Os temas são de todos:** todo jogador vê e pode usar qualquer tema; só quem criou edita e exclui (os outros
   podem **Criar cópia**). Na nuvem: `naruto-ccg:themes` (hash id → tema, dono e apelido de quem criou) e
-  `naruto-ccg:themes-of:<dono>` (limite de 50 por jogador), em `src/lib/themes/store.ts`, rota `/api/me/themes`;
-  a lista vem em `GET /api/me`. A imagem conta o uso como as artes (`theme:<id>`, `src/lib/artStore.ts`) e sai do
+  `naruto-ccg:themes-of:<dono>` (limite de 50 por jogador), em `src/lib/themes/store.ts` (sobre o catálogo
+  compartilhado de `src/lib/cloud/sharedCatalog.ts`), rota `/api/me/themes`;
+  a lista vem em `GET /api/me`. A imagem conta o uso como as artes (`themes:<id>`, `src/lib/artStore.ts`) e sai do
   Blob quando o último tema que a usa troca de imagem ou é excluído.
 - **O tema em uso é de cada jogador** (`naruto-ccg:theme-active:<jogador>`, na conta: vale em qualquer navegador
   com o mesmo código da conta e em todas as partidas). Escolhido no seletor 🎨 do cabeçalho durante a partida (no
   menu ⋯ em tela cheia) ou no **Usar** da tela de temas. O oponente vê o dele; a partida não guarda tema e não há
   jogada para trocá-lo. Se o tema em uso for excluído, a arena volta ao padrão. Na prévia, `/arena?tema=<id>`
   (o **Ver na arena** da tela de temas) mostra um tema até escolher outro no seletor.
-- As costas das cartas usam a imagem da carta física (`public/cards/card-back.webp`) com qualquer tema.
+- **Sleeves (verso das cartas):** cada deck pode ter um sleeve (`Deck.sleeve`, escolhido e cadastrado no montador,
+  botão **Sleeve**). Os sleeves são de todos, como os temas (`naruto-ccg:sleeves`, `naruto-ccg:sleeves-of:<dono>`,
+  imagem no Blob com o uso `sleeves:<id>`; `src/lib/sleeves/`, rota `/api/me/sleeves`, lista em `GET /api/me`); só
+  quem criou edita e exclui. Ao escolher o deck na sala, o sleeve vai junto com a imagem (`SharedDeck.sleeve`:
+  `{ id, image }`, imagem conferida como do Blob) e a visão da sala mostra a imagem de cada jogador
+  (`PlayerView.sleeve`), então **os dois veem o verso das cartas de cada um com o sleeve do dono**. No Jogar sozinho,
+  a imagem fica na partida salva (`SoloDeck.sleeve`). Na arena, `ArenaSide.sleeve` vira a variável `--sleeve` (`.back`
+  no CSS): na linha de zonas e na mão do oponente, o sleeve do dono; nos Prêmios, o do outro jogador (eles vêm do
+  Deck dele), também no diálogo de olhar um Prêmio. O sleeve é uma camada por cima da carta física
+  (`public/cards/card-back.webp`): sem sleeve, ou se a imagem dele não carregar por qualquer motivo (ex.: o sleeve foi
+  excluído no meio da partida e a imagem saiu do Blob), aparece o verso padrão; as imagens soltas (`SleeveImage`)
+  fazem o mesmo ao falhar. A imagem do sleeve é opaca (o recorte preenche o fundo), para o verso padrão não vazar. Compartilhar o deck por código leva o sleeve; quem importa fica com o id (se o
+  sleeve foi excluído, o verso padrão).
 - **Tela cheia (F11):** a arena ocupa a tela inteira (sem o cabeçalho do site, sem barra e sem espaçamento;
   classe `arena-screen` em globals.css). Os controles da partida (tema, Encerrar partida, Sair da sala; na
   prévia, tema e Nova partida) ficam no menu **⋯** do canto superior direito da arena, e o erro da última
@@ -263,7 +276,7 @@ recalculado com ResizeObserver), sem rolagem em nenhum tamanho de janela.
   (deslocados), e o Ninja Ferido aparece girado 90°.
 - **Embaixo:** a sua linha, espelhada (Prêmios, Vila, Chakra, Descartes, Deck) e a sua mão em leque, saindo
   da borda (a carta sobe e cresce ao passar o mouse).
-- **À esquerda:** a placa de cada jogador (apelido, Prêmios n/10, Marcador de Turnos n/10, Mão, Reforço e
+- **À esquerda:** a placa de cada jogador (apelido, Prêmios n/10, Marcador de Turnos (sem limite de turnos; a barra desenha 10 casas e mostra o número), Mão, Reforço e
   Removidos), o número do turno e o botão **Passar turno** do Atacante (não há lista de fases).
 - Os tokens ficam escopados à arena (`GameArena.module.css`): o resto do app continua com o tema laranja,
   e os diálogos abertos pela arena herdam o tema da arena.

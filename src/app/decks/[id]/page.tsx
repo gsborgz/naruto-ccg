@@ -8,6 +8,7 @@ import { CardDetailModal } from '@/components/CardDetailModal';
 import { DeckDesignDialog } from '@/components/DeckDesignDialog';
 import { DeckPanel } from '@/components/DeckPanel';
 import { DeckSheet } from '@/components/DeckSheet';
+import { SleeveDialog } from '@/components/SleeveDialog';
 import { QtyControls } from '@/components/QtyControls';
 import { UnsavedChangesDialog } from '@/components/UnsavedChangesDialog';
 import { cannotAddReasonIn, DECK_RULES, indexDeck, summarizeDeck, type DeckCards } from '@/lib/deckRules';
@@ -17,7 +18,7 @@ import { useCardCatalog } from '@/lib/useCardCatalog';
 import { useLeaveGuard } from '@/lib/useLeaveGuard';
 import type { Card } from '@/models/card';
 
-type Draft = Pick<Deck, 'id' | 'name' | 'cards' | 'designs'>;
+type Draft = Pick<Deck, 'id' | 'name' | 'cards' | 'designs' | 'sleeve'>;
 
 /** Mesmas entradas (quantidades das cartas ou designs escolhidos). */
 function sameCards(a: Record<string, number | string>, b: Record<string, number | string>): boolean {
@@ -35,14 +36,18 @@ export default function DeckBuilderPage() {
   // Rascunho em memória: as edições só vão para a nuvem ao salvar.
   const [draft, setDraft] = useState<Draft | null>(null);
   if (stored && draft?.id !== stored.id) {
-    setDraft({ id: stored.id, name: stored.name, cards: stored.cards, designs: stored.designs ?? {} });
+    setDraft({ id: stored.id, name: stored.name, cards: stored.cards, designs: stored.designs ?? {}, sleeve: stored.sleeve });
   }
-  const deck = draft && stored ? { ...stored, name: draft.name, cards: draft.cards, designs: draft.designs } : stored;
+  const deck =
+    draft && stored ? { ...stored, name: draft.name, cards: draft.cards, designs: draft.designs, sleeve: draft.sleeve } : stored;
 
   const dirty =
     !!draft &&
     !!stored &&
-    (draft.name !== stored.name || !sameCards(draft.cards, stored.cards) || !sameCards(draft.designs ?? {}, stored.designs ?? {}));
+    (draft.name !== stored.name ||
+      !sameCards(draft.cards, stored.cards) ||
+      !sameCards(draft.designs ?? {}, stored.designs ?? {}) ||
+      draft.sleeve !== stored.sleeve);
   const guard = useLeaveGuard(dirty);
 
   // Tudo derivado do conteúdo do deck é calculado uma vez por mudança, não uma vez por carta da grade.
@@ -85,6 +90,9 @@ export default function DeckBuilderPage() {
   }, [draft]);
 
   const [sheetOpen, setSheetOpen] = useState(false);
+  // Sleeve do deck (verso das cartas na partida): a escolha entra no rascunho.
+  const [sleeveOpen, setSleeveOpen] = useState(false);
+  const onSetSleeve = useCallback((sleeve: string | undefined) => setDraft((d) => d && { ...d, sleeve }), []);
 
   if (deck === undefined) return <p className="text-muted">Carregando…</p>;
   if (deck === null) {
@@ -113,6 +121,7 @@ export default function DeckBuilderPage() {
     onClear,
     onSave: save,
     onDesign: setDesignFor,
+    onSleeve: () => setSleeveOpen(true),
   };
 
   return (
@@ -179,6 +188,8 @@ export default function DeckBuilderPage() {
         onChoose={(choice) => designFor && onSetDesign(designFor.id, choice)}
         onClose={() => setDesignFor(null)}
       />
+
+      <SleeveDialog open={sleeveOpen} onClose={() => setSleeveOpen(false)} value={draft?.sleeve} onChoose={onSetSleeve} />
 
       <UnsavedChangesDialog
         open={guard.pending}

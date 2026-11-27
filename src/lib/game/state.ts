@@ -426,8 +426,13 @@ export const POWER_MOD_MAX = 99;
 
 /** Cartas compradas na preparação (docs/REGRAS.md 2.3). */
 export const OPENING_HAND = 6;
-/** Última casa do Indicador de Turnos (o marcador começa em 0). */
-export const TURN_MAX = 10;
+/**
+ * Teto do Marcador de Turnos (começa em 0). O jogo não tem limite de turnos: isto só
+ * protege o estado de valores absurdos. A barra da arena mostra `TURN_PIPS` casas.
+ */
+export const TURN_MAX = 99;
+/** Casas desenhadas na barra do Marcador; acima disso, vale o número. */
+export const TURN_PIPS = 10;
 
 /** Jogador do turno. Partidas criadas antes do campo existir começam pelo anfitrião. */
 export function activeSide(game: GameState): Side {

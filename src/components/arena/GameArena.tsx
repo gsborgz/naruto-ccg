@@ -14,6 +14,7 @@ import {
   TEAM_MAX,
   teamGroups,
   TURN_MAX,
+  TURN_PIPS,
   ZONES,
   type CardInstance,
   type LogEntryView,
@@ -22,6 +23,8 @@ import {
   type ZoneName,
 } from '@/lib/game/state';
 import { themeVars, type BoardTheme } from '@/lib/themes/types';
+import { sleeveVar } from '@/lib/sleeves/types';
+import { SleeveImage } from '@/components/SleeveImage';
 import { coinPower, formatTeamPower, teamPower, type PowerLookup, type TeamPower } from '@/lib/game/teamPower';
 import { isReinforcementCard, type Card } from '@/models/card';
 import { ArenaCardImage, ownerOfUid, useArenaLookup } from './arenaCards';
@@ -58,6 +61,11 @@ export interface ArenaSide {
   attacker: boolean;
   /** Tokens do deck (ids), só do seu lado: o botão **Tokens** baixa cópias deles na Vila. */
   tokens?: string[];
+  /**
+   * Imagem do sleeve do deck deste jogador (`src/lib/sleeves/`): o verso das cartas DELE, para os dois (Deck, mão do
+   * oponente, Chakra e os Prêmios que ele deu). Sem sleeve, o verso da carta física.
+   */
+  sleeve?: string | null;
 }
 
 /** Ações do jogador sobre as próprias cartas. Sem isto, a arena é só para ver. */
@@ -812,6 +820,7 @@ function PeekRewardDialog({
   peek,
   controls,
   opponentName,
+  backImage,
   onClose,
 }: {
   area: 'mine' | 'theirs';
@@ -820,6 +829,8 @@ function PeekRewardDialog({
   peek?: ArenaPeek;
   controls: ArenaControls;
   opponentName: string;
+  /** Imagem do sleeve das cartas desta Área (sem sleeve, o verso da carta física). */
+  backImage?: string | null;
   onClose: () => void;
 }) {
   const nameOf = (c: { name: string }) => c.name;
@@ -890,9 +901,8 @@ function PeekRewardDialog({
                   className="group flex w-full flex-col items-center gap-1 rounded-lg p-1 hover:bg-surface-2 disabled:opacity-40"
                   title={`Olhar o ${ordinal(i)} Prêmio`}
                 >
-                  <img
-                    src="/cards/card-back.webp"
-                    alt=""
+                  <SleeveImage
+                    src={backImage}
                     className="aspect-[5/7] w-full rounded object-cover ring-1 ring-border group-hover:ring-accent"
                   />
                   <span className="text-xs text-muted">{ordinal(i)}</span>
@@ -1368,6 +1378,8 @@ interface RowProps {
   shuffleKey?: number;
   /** Abre a escolha de um Prêmio desta linha para olhar (e talvez recuperar). */
   onOpenPeek?: () => void;
+  /** Sleeve do outro jogador: os Prêmios desta linha vêm do Deck dele, então têm o verso dele. */
+  rewardSleeve?: string | null;
 }
 
 /** Jogadas que terminam embaralhando o Deck (e disparam a animação). */
@@ -1668,7 +1680,7 @@ function VillageZone({ side, mine, controls, onInspect }: RowProps) {
   );
 }
 
-function RewardZone({ side, mine, controls, rewardDrop, onOpenPeek }: RowProps) {
+function RewardZone({ side, mine, controls, rewardDrop, onOpenPeek, rewardSleeve }: RowProps) {
   const drop = useCustomDrop(rewardDrop);
   const count = side.zones.rewards.count;
   const returnTitle = mine
@@ -1698,7 +1710,7 @@ function RewardZone({ side, mine, controls, rewardDrop, onOpenPeek }: RowProps) 
       }
     >
       <ZoneLabel text="Prêmios" />
-      <div className={styles.rewardStack}>
+      <div className={styles.rewardStack} style={sleeveVar(rewardSleeve) as React.CSSProperties}>
         {count === 0 ? (
           <div className={styles.empty} style={{ width: 50, height: 70 }} />
         ) : (
@@ -1746,8 +1758,9 @@ function RewardZone({ side, mine, controls, rewardDrop, onOpenPeek }: RowProps) 
 
 /** Linha de zonas de um jogador. A do oponente vai da esquerda para a direita; a sua, espelhada. */
 function ZoneRow({ rewardControls, ...props }: RowProps & { rewardControls?: ArenaControls }) {
+  // O verso das cartas da linha é o sleeve do dono dela (os Prêmios trocam pelo do outro, em RewardZone).
   return (
-    <div className={cx(styles.row, props.mine ? styles.rowMine : styles.rowOpp)}>
+    <div className={cx(styles.row, props.mine ? styles.rowMine : styles.rowOpp)} style={sleeveVar(props.side.sleeve) as React.CSSProperties}>
       <DeckZone {...props} />
       <DiscardZone {...props} />
       <ChakraZone {...props} />
@@ -1888,7 +1901,11 @@ function Arena({
 function OpponentHand({ side }: { side: ArenaSide }) {
   const n = Math.min(side.zones.hand.count, 12);
   return (
-    <div className={styles.oppHand} title={`${side.zones.hand.count} cartas na mão de ${side.nickname}`}>
+    <div
+      className={styles.oppHand}
+      style={sleeveVar(side.sleeve) as React.CSSProperties}
+      title={`${side.zones.hand.count} cartas na mão de ${side.nickname}`}
+    >
       {Array.from({ length: n }, (_, i) => (
         <div key={i} className={styles.back} style={{ transform: `rotate(${(i - (n - 1) / 2) * -3}deg)` }} />
       ))}
@@ -2079,10 +2096,16 @@ function Pips({
   onAdjust,
   busy,
   what,
+  pips = max,
+  open,
 }: {
   label: string;
   value: number;
   max: number;
+  /** Casas desenhadas (padrão: `max`). */
+  pips?: number;
+  /** Sem fim definido no jogo: mostra só o número, sem "/max". */
+  open?: boolean;
   /** Com isto, a barra ganha −/+ (ex.: o seu Marcador de Turnos). */
   onAdjust?: (delta: number) => void;
   busy?: boolean;
@@ -2107,7 +2130,7 @@ function Pips({
             </button>
           )}
           <b>
-            {value}/{max}
+            {open ? value : `${value}/${max}`}
           </b>
           {onAdjust && (
             <button
@@ -2124,7 +2147,7 @@ function Pips({
         </span>
       </div>
       <div className={styles.pips}>
-        {Array.from({ length: max }, (_, i) => (
+        {Array.from({ length: pips }, (_, i) => (
           <i key={i} className={i < value ? styles.on : undefined} />
         ))}
       </div>
@@ -2200,6 +2223,8 @@ function Plate({
         label="Marcador"
         value={side.turn}
         max={TURN_MAX}
+        pips={TURN_PIPS}
+        open
         onAdjust={mine && controls ? controls.onAdjustTurn : undefined}
         busy={controls?.busy}
         what="Marcador de Turnos"
@@ -2913,6 +2938,7 @@ export function GameArena({
             shuffleKey={lastShuffle(log, yourSide === 'host' ? 'guest' : 'host')}
             onOpenPeek={controls && (() => setPeeking('theirs'))}
             rewardControls={controls}
+            rewardSleeve={you.sleeve}
             rewardDrop={
               controls && {
                 accept: [CARD_MIME, DECK_TOP_MIME],
@@ -2931,6 +2957,7 @@ export function GameArena({
             onOpenReveal={controls && (() => setRevealing(true))}
             shuffleKey={lastShuffle(log, yourSide)}
             onOpenPeek={controls && (() => setPeeking('mine'))}
+            rewardSleeve={opponent.sleeve}
           />
           <Hand side={you} controls={controls} onInspect={inspectCard} />
           <div className={styles.rail}>
@@ -3051,6 +3078,8 @@ export function GameArena({
           peek={arenaPeek}
           controls={controls}
           opponentName={opponent.nickname}
+          // Os Prêmios de uma Área vêm do Deck do outro jogador: o verso é o sleeve dele.
+          backImage={(peeking === 'mine' ? opponent : you).sleeve}
           onClose={() => setPeeking(null)}
         />
       )}

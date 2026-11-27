@@ -13,6 +13,9 @@ import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
 import { HeaderSlot } from '@/components/HeaderSlot';
 import { ThemePicker } from '@/components/themes/ThemePicker';
 import { useActiveTheme } from '@/lib/themes/client';
+import { currentLibrary } from '@/lib/cloud/library';
+import { findSleeve } from '@/lib/sleeves/client';
+import type { Deck } from '@/lib/deckStore';
 import { DeckSelect, useValidDecks } from '@/components/PlayerSetup';
 import { CARDS_BY_ID } from '@/data/cards';
 import { customDeckCardId, isCustomCardId } from '@/lib/cardMaker/customIds';
@@ -50,6 +53,14 @@ interface SoloDeck {
   cards: Record<string, number>;
   /** Design escolhido para cada carta do catálogo no deck (`Deck.designs`). */
   designs?: Record<string, string>;
+  /** Imagem do sleeve do deck no início da partida (o verso das cartas deste lado). */
+  sleeve?: string;
+}
+
+/** O deck como fica guardado na partida (com a imagem do sleeve, se ainda existir). */
+function soloDeck(deck: Deck): SoloDeck {
+  const sleeve = findSleeve(currentLibrary().sleeves, deck.sleeve)?.image;
+  return { name: deck.name, cards: deck.cards, designs: deck.designs, ...(sleeve && { sleeve }) };
 }
 
 interface SoloSave {
@@ -149,10 +160,7 @@ function Setup({ onStart }: { onStart: (decks: Record<Side, SoloDeck>) => void }
           type="button"
           disabled={!host || !guest}
           onClick={() =>
-            host && guest && onStart({
-                host: { name: host.name, cards: host.cards, designs: host.designs },
-                guest: { name: guest.name, cards: guest.cards, designs: guest.designs },
-              })
+            host && guest && onStart({ host: soloDeck(host), guest: soloDeck(guest) })
           }
           className="rounded-lg bg-ok px-5 py-2 font-semibold text-bg hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
         >
@@ -275,6 +283,7 @@ export default function SoloPage() {
     zones: view.players[s],
     turn: view.turn[s],
     attacker: view.active === s,
+    sleeve: decks[s].sleeve,
     ...(s === viewing && view.tokens ? { tokens: view.tokens } : {}),
   });
 

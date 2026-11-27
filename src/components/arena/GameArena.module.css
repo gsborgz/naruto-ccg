@@ -9,7 +9,7 @@
  * Os tokens valem só dentro da arena: as cores do resto do app continuam as de globals.css. Como as
  * utilidades do Tailwind leem as mesmas variáveis (--color-accent, --color-surface…), os diálogos abertos
  * pela arena também ficam no tema. As costas das cartas (.back, .backLayer) têm cores próprias, fora dos
- * tokens: são a imagem da carta física em qualquer tema.
+ * tokens: são o sleeve do deck do dono (--sleeve) ou a imagem da carta física, com qualquer tema.
  *
  * Tudo é desenhado num palco fixo de 1600×900 (.stage), escalado para caber inteiro (ver GameArena.tsx).
  */
@@ -117,8 +117,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  /* Costas da carta física (public/cards/card-back.webp). */
-  background: #26262c url('/cards/card-back.webp') center / cover no-repeat;
+  /*
+   * Verso: o sleeve do dono da carta (--sleeve, posto pelo GameArena na linha, na mão do oponente e nos Prêmios) numa
+   * camada por cima da carta física (public/cards/card-back.webp). Sem sleeve, ou se a imagem dele não carregar
+   * (excluída, fora do ar), aparece a carta física.
+   */
+  background:
+    var(--sleeve, none) center / cover no-repeat,
+    #26262c url('/cards/card-back.webp') center / cover no-repeat;
   box-shadow: 0 0 0 1px #55555e;
 }
 /* Camadas da pilha (Deck): a borda das cartas de baixo, no grafite das costas. */
@@ -581,6 +587,11 @@
     0 calc(100% - 44px),
     0 44px
   );
+  /*
+   * O desfoque da imagem de fundo fica AQUI, e não no miolo: o clip-path deste octógono isola os filhos (o
+   * backdrop-filter de um filho só enxergaria esta camada, e não a imagem, e não desfocaria nada).
+   */
+  backdrop-filter: blur(var(--arena-blur, 4px));
   /* Borda do octógono (1px): clara, com o acento embaixo. */
   background: linear-gradient(
     180deg,
@@ -602,7 +613,7 @@
     0 calc(100% - 43px),
     0 43px
   );
-  /* Miolo do Campo de Batalha: véu escuro (opacidade do tema) e desfoque da imagem de fundo. */
+  /* Miolo do Campo de Batalha: véu escuro (opacidade do tema), sobre a imagem desfocada pelo octógono (.arena). */
   background:
     radial-gradient(85% 95% at 50% 50%, transparent 40%, rgba(4, 4, 8, 0.45) 100%),
     linear-gradient(
@@ -611,7 +622,6 @@
       rgba(14, 15, 20, var(--arena-dim, 0.5)) 50%,
       rgba(24, 22, 38, var(--arena-dim, 0.5))
     );
-  backdrop-filter: blur(var(--arena-blur, 4px));
 }
 .ring {
   position: absolute;

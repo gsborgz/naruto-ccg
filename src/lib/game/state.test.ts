@@ -395,7 +395,9 @@ test('partida: o Atacante passa o turno com qualquer número de cartas na mão (
   assert.equal(applyGameAction(g, 'host', { type: 'passTurn' }, rng).active, 'guest');
 });
 
-test('partida: o Marcador de Turnos para na última casa', () => {
+test('partida: o Marcador de Turnos passa de 10 e só para no teto (TURN_MAX)', () => {
+  const ten: GameState = { ...newGame(), active: 'host', turn: { host: 10, guest: 0 } };
+  assert.equal(applyGameAction(ten, 'host', { type: 'passTurn' }, seeded()).turn.host, 11);
   const g: GameState = { ...newGame(), active: 'host', turn: { host: TURN_MAX, guest: 0 } };
   assert.equal(applyGameAction(g, 'host', { type: 'passTurn' }, seeded()).turn.host, TURN_MAX);
 });
@@ -681,7 +683,7 @@ test('Moeda Ninja: o servidor sorteia Cara ou Coroa e anota no registro para os 
   assert.deepEqual(parseGameAction({ type: 'flip' }), { type: 'flip' });
 });
 
-test('Marcador de Turnos: −/+ só no seu, entre 0 e 10', () => {
+test('Marcador de Turnos: −/+ só no seu, de 0 até o teto (TURN_MAX)', () => {
   let g = newGame();
   g = applyGameAction(g, 'guest', { type: 'adjustTurn', delta: 1 }, seeded());
   g = applyGameAction(g, 'guest', { type: 'adjustTurn', delta: 1 }, seeded());

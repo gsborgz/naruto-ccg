@@ -187,6 +187,8 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     zones: game.players[seat],
     turn: game.turn[seat],
     attacker: game.active === seat,
+    // O verso das cartas de cada um é o sleeve do deck dele (os dois veem o mesmo).
+    sleeve: view.players.find((p) => p.seat === seat)?.sleeve,
     ...(seat === you && game.tokens ? { tokens: game.tokens } : {}),
   });
 

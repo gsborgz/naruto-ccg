@@ -38,8 +38,16 @@ function replace(changed: Deck[]) {
 }
 
 export const deckActions = {
-  create(name = 'Novo deck', cards: DeckCards = {}, designs?: Record<string, string>): Deck {
-    const deck: Deck = { id: crypto.randomUUID(), name, cards, ...(designs && { designs }), createdAt: now(), updatedAt: now() };
+  create(name = 'Novo deck', cards: DeckCards = {}, designs?: Record<string, string>, sleeve?: string): Deck {
+    const deck: Deck = {
+      id: crypto.randomUUID(),
+      name,
+      cards,
+      ...(designs && { designs }),
+      ...(sleeve && { sleeve }),
+      createdAt: now(),
+      updatedAt: now(),
+    };
     add([deck]);
     return deck;
   },
@@ -48,23 +56,34 @@ export const deckActions = {
    * Grava as alterações do montador. O montador edita um rascunho em memória e só chama isto no botão "Salvar" (ou ao
    * confirmar "Salvar" ao sair da tela). Resolve `false` se a gravação na nuvem falhou.
    */
-  save(id: string, changes: Pick<Deck, 'name' | 'cards' | 'designs'>): Promise<boolean> {
+  save(id: string, changes: Pick<Deck, 'name' | 'cards' | 'designs' | 'sleeve'>): Promise<boolean> {
     const current = currentLibrary().decks.find((d) => d.id === id);
     if (!current) return Promise.resolve(false);
     const name = changes.name.trim() || 'Deck sem nome';
     const designs = changes.designs && Object.keys(changes.designs).length ? { ...changes.designs } : undefined;
-    const { designs: _old, ...rest } = current;
-    return replace([{ ...rest, name, cards: { ...changes.cards }, ...(designs && { designs }), updatedAt: now() }]);
+    const { designs: _old, sleeve: _oldSleeve, ...rest } = current;
+    return replace([
+      {
+        ...rest,
+        name,
+        cards: { ...changes.cards },
+        ...(designs && { designs }),
+        ...(changes.sleeve && { sleeve: changes.sleeve }),
+        updatedAt: now(),
+      },
+    ]);
   },
 
   /** Adiciona decks importados (de um código compartilhado) como decks novos, no topo da lista. */
-  importDecks(decks: Pick<Deck, 'name' | 'cards' | 'designs'>[]): Deck[] {
+  importDecks(decks: (Pick<Deck, 'name' | 'cards' | 'designs'> & { sleeve?: { id: string } })[]): Deck[] {
     const created = decks.map(
       (d): Deck => ({
         id: crypto.randomUUID(),
         name: d.name,
         cards: { ...d.cards },
         ...(d.designs && Object.keys(d.designs).length > 0 && { designs: { ...d.designs } }),
+        // O sleeve fica pelo id (o catálogo é de todos); se foi excluído, o deck usa o verso padrão.
+        ...(d.sleeve && { sleeve: d.sleeve.id }),
         createdAt: now(),
         updatedAt: now(),
       }),
@@ -76,7 +95,7 @@ export const deckActions = {
   duplicate(id: string): Deck | null {
     const src = currentLibrary().decks.find((d) => d.id === id);
     if (!src) return null;
-    return deckActions.create(`${src.name} (cópia)`, { ...src.cards }, src.designs && { ...src.designs });
+    return deckActions.create(`${src.name} (cópia)`, { ...src.cards }, src.designs && { ...src.designs }, src.sleeve);
   },
 
   remove(id: string) {

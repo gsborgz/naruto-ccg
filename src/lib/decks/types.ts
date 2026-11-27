@@ -1,4 +1,5 @@
 import type { DeckCards } from '../deckRules.ts';
+import { isSleeveId } from '../sleeves/types.ts';
 
 /**
  * Deck de um jogador, guardado na nuvem (`src/lib/decks/store.ts`). Usado pelo navegador e pelo servidor.
@@ -6,12 +7,16 @@ import type { DeckCards } from '../deckRules.ts';
  * `designs`: a alter escolhida para cada carta do catálogo neste deck (id da carta → id da alter, uma carta do criador
  * ligada a ela). Sem escolha (ou `original`, de decks antigos), a imagem impressa. Vale na tela, na impressão e na
  * partida (`src/lib/deckDesigns.ts`).
+ *
+ * `sleeve`: id do sleeve escolhido para o verso das cartas (`src/lib/sleeves/`). Sem sleeve (ou com um que foi
+ * excluído), o verso da carta física.
  */
 export interface Deck {
   id: string;
   name: string;
   cards: DeckCards;
   designs?: Record<string, string>;
+  sleeve?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -63,12 +68,14 @@ export function parseDeck(x: unknown): Deck | null {
   }
   const designs = parseDeckDesigns(x.designs);
   if (!designs) return null;
+  if (x.sleeve !== undefined && !isSleeveId(x.sleeve)) return null;
   const date = (v: unknown) => (typeof v === 'string' && v.length <= 40 ? v : new Date().toISOString());
   return {
     id: x.id.toLowerCase(),
     name: x.name.trim().slice(0, DECK_LIMITS.nameLength) || 'Deck sem nome',
     cards,
     ...(Object.keys(designs).length > 0 && { designs }),
+    ...(typeof x.sleeve === 'string' && { sleeve: x.sleeve.toLowerCase() }),
     createdAt: date(x.createdAt),
     updatedAt: date(x.updatedAt),
   };

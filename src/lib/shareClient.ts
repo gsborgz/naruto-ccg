@@ -4,6 +4,10 @@ import { CARDS_BY_ID } from '@/data/cards';
 import { withCustomCards } from '@/lib/cardMaker/customDeck';
 import { readCustomCards } from '@/lib/cardMaker/store';
 import { isValidShareId, parseSharePayload, type SharePayload } from './deckShare';
+import type { Deck } from './decks/types';
+
+/** O que compartilhar: decks da conta (o sleeve pelo id; vira o id e a imagem no envio). */
+export type ShareSource = { kind: 'deck'; deck: Deck } | { kind: 'collection'; decks: Deck[] };
 
 const isKnownCard = (id: string) => CARDS_BY_ID.has(id);
 
@@ -11,7 +15,7 @@ const isKnownCard = (id: string) => CARDS_BY_ID.has(id);
  * Envia uma cópia do deck/coleção para o servidor e devolve o UUID gerado. As cartas criadas vão junto (as artes
  * são enviadas antes para o Vercel Blob; ver `withCustomCards`).
  */
-export async function createShare(payload: SharePayload): Promise<string> {
+export async function createShare(payload: ShareSource): Promise<string> {
   const custom = readCustomCards();
   const body: SharePayload =
     payload.kind === 'deck'

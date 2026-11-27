@@ -5,6 +5,7 @@ import type { CustomCard } from '../cardMaker/model.ts';
 import { migrateCustomCard } from '../cardMaker/model.ts';
 import { ORIGINAL_DESIGN, type Deck } from '../decks/types.ts';
 import { getIdentity } from '../rooms/client.ts';
+import type { Sleeve } from '../sleeves/types.ts';
 import type { BoardTheme } from '../themes/types.ts';
 
 /** Tema da arena como o jogador o recebe (`src/lib/themes/store.ts`). */
@@ -15,9 +16,17 @@ export interface ThemeItem {
   mine: boolean;
 }
 
+/** Sleeve (verso das cartas) como o jogador o recebe (`src/lib/sleeves/store.ts`). */
+export interface SleeveItem {
+  sleeve: Sleeve;
+  author: string;
+  /** Criado por este jogador (só ele edita e exclui). */
+  mine: boolean;
+}
+
 /**
  * O que o jogador tem na nuvem, do lado do navegador: os decks, as cartas do criador (as dele e as de outros
- * jogadores que os decks usam) e os temas da arena (de todos, com o escolhido por este jogador). Nada disso fica no navegador: só a identidade anônima (`naruto-ccg:player`), que diz
+ * jogadores que os decks usam) os temas da arena (de todos, com o escolhido por este jogador) e os sleeves (de todos). Nada disso fica no navegador: só a identidade anônima (`naruto-ccg:player`), que diz
  * de quem são os dados (o "código da conta", ver `switchAccount`).
  *
  * Carrega uma vez (`GET /api/me`) quando alguma tela pede; as gravações atualizam a memória na hora e vão para o
@@ -42,6 +51,8 @@ export interface Library {
   themes: ThemeItem[];
   /** Id do tema em uso na arena por este jogador; `null` = o fundo padrão. */
   activeTheme: string | null;
+  /** Sleeves de todos os jogadores (`src/lib/sleeves/`), do mais novo para o mais antigo. */
+  sleeves: SleeveItem[];
 }
 
 export class CloudError extends Error {
@@ -140,6 +151,7 @@ async function fetchLibrary(): Promise<void> {
     others: OtherCard[];
     themes?: ThemeItem[];
     activeTheme?: string | null;
+    sleeves?: SleeveItem[];
   }>('/api/me');
   failed = null;
   set({
@@ -148,6 +160,7 @@ async function fetchLibrary(): Promise<void> {
     others: new Map(data.others.map((o) => [o.card.id, { ...o, card: migrateCustomCard(o.card) }])),
     themes: data.themes ?? [],
     activeTheme: data.activeTheme ?? null,
+    sleeves: data.sleeves ?? [],
   });
 }
 
@@ -185,7 +198,7 @@ export function useLibraryError(): string | null {
 
 /** A biblioteca agora (fora do React); vazia antes de carregar. */
 export function currentLibrary(): Library {
-  return state ?? { decks: [], mine: [], others: new Map(), themes: [], activeTheme: null };
+  return state ?? { decks: [], mine: [], others: new Map(), themes: [], activeTheme: null, sleeves: [] };
 }
 
 /**

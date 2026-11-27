@@ -61,6 +61,8 @@ export interface PlayerView {
   deckSize: number;
   /** Cartas no Baralho de Reforço: ficam viradas para baixo, mas qualquer jogador pode contá-las (docs/REGRAS.md 4.17). */
   reinforcementSize: number;
+  /** Imagem do sleeve do deck escolhido (o verso das cartas dele na partida, para os dois); ausente = o padrão. */
+  sleeve?: string;
   ready: boolean;
   online: boolean;
 }
@@ -356,6 +358,7 @@ export function toView(
       deckName: s.deck?.name ?? null,
       deckSize: summary?.total ?? 0,
       reinforcementSize: summary?.reinforcement ?? 0,
+      ...(s.deck?.sleeve && { sleeve: s.deck.sleeve.image }),
       ready: s.ready,
       online: nowMs - (seen[s.tokenHash] ?? 0) < ONLINE_WINDOW_MS,
     };

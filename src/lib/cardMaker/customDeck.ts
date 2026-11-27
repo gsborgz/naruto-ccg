@@ -1,5 +1,6 @@
 'use client';
 
+import { currentLibrary } from '../cloud/library.ts';
 import type { SharedDeck } from '../deckShare.ts';
 import { hasPendingArt } from './artUpload.ts';
 import { customDeckCardId, isCustomCardId } from './customIds.ts';
@@ -9,9 +10,11 @@ import { cardVillages, withVillages, type CustomCard } from './model.ts';
  * Deck para levar para fora deste navegador (sala de jogo ou compartilhamento por código): leva junto as cartas
  * criadas que ele usa (docs/SALAS.md, "Cartas criadas"). As artes têm que estar no Vercel Blob (enviadas pelo
  * **Salvar** do criador): se alguma ainda está só neste navegador, lança erro com a mensagem para mostrar na tela.
+ * O sleeve escolhido vai com a imagem (`SharedDeck.sleeve`), para o oponente ver o verso das cartas na sala; um sleeve
+ * que foi excluído fica de fora (o verso padrão).
  */
 export async function withCustomCards(
-  deck: { name: string; cards: Record<string, number>; designs?: Record<string, string> },
+  deck: { name: string; cards: Record<string, number>; designs?: Record<string, string>; sleeve?: string },
   customCards: CustomCard[],
 ): Promise<SharedDeck> {
   const custom: Record<string, CustomCard> = {};
@@ -26,11 +29,13 @@ export async function withCustomCards(
     }
     custom[id] = toSharedCard(source);
   }
+  const sleeve = deck.sleeve ? currentLibrary().sleeves.find((s) => s.sleeve.id === deck.sleeve)?.sleeve : undefined;
   return {
     name: deck.name,
     cards: deck.cards,
     ...(Object.keys(custom).length > 0 && { custom }),
     ...(deck.designs && Object.keys(deck.designs).length > 0 && { designs: deck.designs }),
+    ...(sleeve && { sleeve: { id: sleeve.id, image: sleeve.image } }),
   };
 }
 

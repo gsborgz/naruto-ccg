@@ -8,6 +8,8 @@ import { sortCost } from '@/lib/cardFilters';
 import type { Deck } from '@/lib/deckStore';
 import { CARD_TYPE_LABEL, cardImageUrl, type Card, type CardType } from '@/models/card';
 import { CardFace } from './CardFace';
+import { SleeveImage } from './SleeveImage';
+import { findSleeve, useSleeves } from '@/lib/sleeves/client';
 
 const TYPES: CardType[] = ['ninja', 'jutsu', 'mission', 'client'];
 
@@ -189,6 +191,7 @@ export function DeckPanel({
   onSave,
   onClose,
   onDesign,
+  onSleeve,
 }: {
   deck: Deck;
   /** Procura as cartas do deck (catálogo + cartas criadas). */
@@ -206,8 +209,11 @@ export function DeckPanel({
   onClose?: () => void;
   /** Abre a escolha do design da carta neste deck. */
   onDesign?: (card: Card) => void;
+  /** Abre a escolha do sleeve (verso das cartas) do deck. */
+  onSleeve?: () => void;
 }) {
   const [tab, setTab] = useState<Tab>('ninja');
+  const sleeve = findSleeve(useSleeves(), deck.sleeve);
   const nameOf = (c: { name: string }) => c.name;
 
   const entries = Object.entries(deck.cards)
@@ -261,6 +267,18 @@ export function DeckPanel({
             {summary.reinforcement}/{DECK_RULES.reinforcementMax}
           </span>
         </p>
+        {onSleeve && (
+          <button
+            type="button"
+            onClick={onSleeve}
+            className="-mt-1 flex items-center gap-2 self-start rounded-lg py-1 pr-3 pl-1 text-sm ring-1 ring-border hover:bg-surface-2"
+            title="Escolher ou cadastrar o sleeve (verso das cartas) deste deck"
+          >
+            <SleeveImage src={sleeve?.image} className="aspect-[5/7] w-6 rounded-sm object-cover" />
+            <span className="text-muted">Sleeve:</span>
+            <span className="max-w-40 truncate font-semibold">{sleeve?.name ?? 'Padrão'}</span>
+          </button>
+        )}
         {summary.isValid ? (
           <p className="rounded-lg bg-ok/15 px-3 py-1.5 text-sm font-semibold text-ok">✓ Deck válido para jogar</p>
         ) : (

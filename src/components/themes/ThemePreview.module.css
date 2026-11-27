@@ -200,6 +200,8 @@
   width: 83.25%;
   height: 50.7%;
   clip-path: polygon(3.3% 0, 96.7% 0, 100% 9.6%, 100% 90.4%, 96.7% 100%, 3.3% 100%, 0 90.4%, 0 9.6%);
+  /* O desfoque fica no octógono de fora: o clip-path dele isolaria o backdrop-filter do miolo (ver GameArena.module.css). */
+  backdrop-filter: blur(calc(var(--arena-blur) * 0.5));
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.34),
@@ -219,7 +221,6 @@
       rgba(14, 15, 20, var(--arena-dim)) 50%,
       rgba(24, 22, 38, var(--arena-dim))
     );
-  backdrop-filter: blur(calc(var(--arena-blur) * 0.5));
 }
 .line {
   position: absolute;

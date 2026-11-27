@@ -1,13 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { SharePayload } from '@/lib/deckShare';
-import { createShare } from '@/lib/shareClient';
+import { createShare, type ShareSource } from '@/lib/shareClient';
 import { Dialog } from './Dialog';
 
 export interface ShareRequest {
   title: string;
-  payload: SharePayload;
+  payload: ShareSource;
 }
 
 type State = { status: 'loading' } | { status: 'done'; id: string } | { status: 'error'; message: string };
