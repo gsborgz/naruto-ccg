@@ -11,7 +11,7 @@ const CARD_LINKS: Omit<NavLink, 'short'>[] = [
   { href: '/cards', label: 'Lista de Cartas', match: (p) => p.startsWith('/cards') },
   {
     href: '/criar',
-    label: 'Criar cartas',
+    label: 'Criar Cartas',
     match: (p) => p.startsWith('/criar') && !p.startsWith('/criar/layouts'),
   },
   { href: '/criar/layouts', label: 'Criar Layouts', match: (p) => p.startsWith('/criar/layouts') },
