@@ -33,6 +33,11 @@ export interface Seat {
   nickname: string;
   /** Cópia validada do deck escolhido na sala, ou `null` enquanto não escolheu (editar o deck depois não muda a sala). */
   deck: SharedDeck | null;
+  /**
+   * Id do deck do jogador de onde veio a cópia (`Deck.id`), para o navegador mandar a versão atual dele ao marcar Pronto
+   * (o deck pode ter sido editado depois de escolhido, por exemplo entre uma partida e outra).
+   */
+  deckId?: string;
   ready: boolean;
   joinedAt: string;
 }
@@ -75,6 +80,8 @@ export interface RoomView {
   you: SeatName | null;
   players: PlayerView[];
   yourDeck?: SharedDeck | null;
+  /** Id do deck escolhido por este jogador (`Seat.deckId`). */
+  yourDeckId?: string;
   /** A partida como este jogador a vê (cartas escondidas viram só contagem). */
   game?: GameView;
   /**
@@ -86,8 +93,9 @@ export interface RoomView {
 
 
 export type RoomAction =
-  | { type: 'setReady'; ready: boolean }
-  | { type: 'changeDeck'; deck: SharedDeck }
+  /** `deck`: a versão atual do deck escolhido, que troca a cópia da sala antes de marcar Pronto. */
+  | { type: 'setReady'; ready: boolean; deck?: SharedDeck }
+  | { type: 'changeDeck'; deck: SharedDeck; deckId?: string }
   | { type: 'leave' }
   /** Jogada na partida (mover carta, comprar, embaralhar, buscar). */
   | { type: 'game'; action: GameAction }
@@ -219,10 +227,22 @@ export function parseRoomDeck(x: unknown, lookup: CardLookup): SharedDeck {
   return deck;
 }
 
+function parseDeckId(x: unknown): string | undefined {
+  return typeof x === 'string' && x.length >= 1 && x.length <= 100 ? x : undefined;
+}
+
 export function parseRoomAction(x: unknown, lookup: CardLookup): RoomAction {
   const a = (typeof x === 'object' && x !== null ? x : {}) as Record<string, unknown>;
-  if (a.type === 'setReady' && typeof a.ready === 'boolean') return { type: 'setReady', ready: a.ready };
-  if (a.type === 'changeDeck') return { type: 'changeDeck', deck: parseRoomDeck(a.deck, lookup) };
+  if (a.type === 'setReady' && typeof a.ready === 'boolean') {
+    return a.ready && a.deck !== undefined
+      ? { type: 'setReady', ready: true, deck: parseRoomDeck(a.deck, lookup) }
+      : { type: 'setReady', ready: a.ready };
+  }
+  if (a.type === 'changeDeck') {
+    const deck = parseRoomDeck(a.deck, lookup);
+    const deckId = parseDeckId(a.deckId);
+    return deckId ? { type: 'changeDeck', deck, deckId } : { type: 'changeDeck', deck };
+  }
   if (a.type === 'leave') return { type: 'leave' };
   if (a.type === 'endGame') return { type: 'endGame' };
   if (a.type === 'rename') {
@@ -322,12 +342,12 @@ export function applyAction(
 
   const update = (s: Seat): Partial<Room> => (who === 'host' ? { host: s } : { guest: s });
 
-  if (action.type === 'changeDeck') {
-    // A mesma carta criada nos dois decks (um importou do outro) só vale se for igual: com versões diferentes, uma
-    // trocaria o desenho da carta do outro jogador.
+  // A mesma carta criada nos dois decks (um importou do outro) só vale se for igual: com versões diferentes, uma
+  // trocaria o desenho da carta do outro jogador.
+  const checkClash = (deck: SharedDeck) => {
     const other = who === 'host' ? room.guest : room.host;
     const theirs = other?.deck?.custom ?? {};
-    const clash = Object.entries(action.deck.custom ?? {}).find(
+    const clash = Object.entries(deck.custom ?? {}).find(
       ([id, card]) => Object.hasOwn(theirs, id) && cardContent(theirs[id]) !== cardContent(card),
     );
     if (clash) {
@@ -336,13 +356,20 @@ export function applyAction(
         `Vocês têm versões diferentes da carta criada "${clash[1].name || 'sem nome'}". Usem a mesma versão ou tirem do deck.`,
       );
     }
-    return bump(room, update({ ...me, deck: action.deck, ready: false }), now);
+  };
+
+  if (action.type === 'changeDeck') {
+    checkClash(action.deck);
+    const { deckId: _old, ...rest } = me;
+    return bump(room, update({ ...rest, deck: action.deck, ...(action.deckId && { deckId: action.deckId }), ready: false }), now);
   }
 
   // setReady
   if (action.ready && !me.deck) throw new RoomError(409, 'Escolha um deck antes de marcar Pronto.');
   if (me.ready === action.ready) return room;
-  const next = bump(room, update({ ...me, ready: action.ready }), now);
+  // Marcar Pronto com a versão atual do deck escolhido (editado depois da escolha) troca a cópia da sala.
+  if (action.deck) checkClash(action.deck);
+  const next = bump(room, update({ ...me, ...(action.deck && { deck: action.deck }), ready: action.ready }), now);
   const bothReady = next.host.ready && next.guest?.ready === true;
   if (!bothReady || !next.host.deck || !next.guest?.deck) return next;
   // Os dois prontos: a partida começa com os decks embaralhados e a mão inicial comprada.
@@ -384,6 +411,7 @@ export function toView(
     you,
     players,
     ...(mine ? { yourDeck: mine.deck } : {}),
+    ...(mine?.deckId ? { yourDeckId: mine.deckId } : {}),
     ...(room.status === 'starting' && room.game ? { game: gameView(room.game, you) } : {}),
     ...(room.status === 'starting' && room.game ? gameCustomView(room) : {}),
   };

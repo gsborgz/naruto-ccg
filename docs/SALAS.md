@@ -42,8 +42,10 @@ Também ficam de fora: chat, espectadores, busca de oponentes, contas/login e re
 - **Decks** precisam ser válidos pelas regras do montador (`summarizeDeck(...).isValid`: 50 cartas,
   até 3 cópias de cada carta, Baralho de Reforço com até 15, Tokens com 1 cópia de cada). O servidor valida de novo; não confia no navegador. Os dois jogadores veem
   quantas cartas o outro tem no Baralho de Reforço (`reinforcementSize`), mas não quais são.
-- **O deck é copiado ao ser escolhido.** Editar o deck no montador depois não muda a sala. Para usar a
-  versão nova, o jogador escolhe o deck de novo na sala.
+- **O deck é copiado ao ser escolhido**, e a sala guarda de qual deck veio a cópia (`deckId`). Ao marcar
+  **Pronto**, o navegador manda a versão atual desse deck, que troca a cópia: editar o deck no montador (por
+  exemplo entre uma partida e outra) vale na próxima partida sem escolher o deck de novo. Se o deck foi
+  excluído, fica a cópia da sala; se deixou de seguir as regras, o Pronto é recusado com o motivo.
 - **O deck de cada um é secreto:** o oponente vê só o nome do deck e a quantidade de cartas, nunca a lista.
 - **Sair sem querer não tira o jogador da sala.** Fechar a aba, ir para outra página, recarregar ou cair a
   conexão mantêm o lugar dele. O navegador lembra a última sala (`lastRoomId` em `naruto-ccg:player`), e as
@@ -108,6 +110,7 @@ interface Seat {
   tokenHash: string;          // SHA-256 do token; nunca sai do servidor
   nickname: string;           // 1–24 caracteres
   deck: { name: string; cards: Record<string, number>; custom?: Record<string, CustomCard> } | null; // cópia validada; null até escolher
+  deckId?: string;            // id do deck de onde veio a cópia (o Pronto manda a versão atual dele)
   ready: boolean;
   joinedAt: string;
 }

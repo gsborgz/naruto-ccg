@@ -101,6 +101,31 @@ test('salas: os dois prontos iniciam; trocar de deck desmarca o pronto', () => {
   expectRoomError(() => act(room, 'guest', { type: 'setReady', ready: false }), 409);
 });
 
+test('salas: o Pronto leva a versão atual do deck escolhido (editado depois da escolha)', () => {
+  let room = joinRoom(createRoom('r1', host, NOW), guest, NOW);
+  room = act(room, 'host', { type: 'changeDeck', deck: validDeck('Konoha'), deckId: 'deck-1' });
+  assert.equal(room.host.deckId, 'deck-1');
+  assert.equal(toView(room, 'host', {}, Date.parse(NOW), lookup).yourDeckId, 'deck-1');
+  assert.equal(toView(room, 'guest', {}, Date.parse(NOW), lookup).yourDeckId, undefined);
+
+  const edited = validDeck('Konoha editado', 5);
+  room = act(room, 'host', { type: 'setReady', ready: true, deck: edited });
+  assert.equal(room.host.ready, true);
+  assert.deepEqual(room.host.deck, edited);
+  assert.equal(room.host.deckId, 'deck-1');
+
+  // Trocar para um deck sem id esquece o anterior.
+  room = act(room, 'host', { type: 'changeDeck', deck: validDeck('Outro', 60) });
+  assert.equal(room.host.deckId, undefined);
+
+  // O deck do Pronto passa pela mesma validação da escolha; ao desmarcar, o deck é ignorado.
+  expectRoomError(() => parseRoomAction({ type: 'setReady', ready: true, deck: { name: 'x', cards: {} } }, lookup), 400);
+  assert.deepEqual(parseRoomAction({ type: 'setReady', ready: false, deck: { name: 'x', cards: {} } }, lookup), {
+    type: 'setReady',
+    ready: false,
+  });
+});
+
 test('salas: quem sai libera a vaga; quem fica vira anfitrião; o último a sair apaga a sala', () => {
   let room = lobbyWithDecks();
   room = act(room, 'host', { type: 'setReady', ready: true });

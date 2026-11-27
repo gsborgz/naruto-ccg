@@ -23,6 +23,7 @@ import { useRoom } from '@/lib/rooms/useRoom';
 import { useRoomCustomCards } from '@/lib/rooms/useRoomCustomCards';
 import { withCustomCards } from '@/lib/cardMaker/customDeck';
 import { useCustomCards } from '@/lib/cardMaker/store';
+import { useDecks } from '@/lib/deckStore';
 
 const card = 'flex flex-col gap-4 rounded-xl border border-border bg-surface p-5';
 
@@ -255,6 +256,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
 
 function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom> }) {
   const decks = useValidDecks();
+  const allDecks = useDecks();
   const host = view.players.find((p) => p.seat === 'host');
   const guest = view.players.find((p) => p.seat === 'guest');
   const me = view.you === 'host' ? host : guest;
@@ -269,7 +271,21 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     setDeckError(null);
     try {
       const shared = await withCustomCards(deck, customCards ?? []);
-      await room.act({ type: 'changeDeck', deck: shared });
+      await room.act({ type: 'changeDeck', deck: shared, deckId: deck.id });
+    } catch (e) {
+      setDeckError((e as Error).message);
+    }
+  };
+  // Pronto leva a versão atual do deck escolhido: a cópia da sala é de quando ele foi escolhido, e o deck pode ter sido
+  // editado depois (por exemplo entre uma partida e outra). Deck excluído: fica a cópia da sala; deck que deixou de
+  // seguir as regras: o servidor recusa e mostra o motivo.
+  const toggleReady = async () => {
+    if (me?.ready) return room.act({ type: 'setReady', ready: false });
+    setDeckError(null);
+    const deck = view.yourDeckId ? allDecks?.find((d) => d.id === view.yourDeckId) : undefined;
+    try {
+      const shared = deck ? await withCustomCards(deck, customCards ?? []) : undefined;
+      await room.act(shared ? { type: 'setReady', ready: true, deck: shared } : { type: 'setReady', ready: true });
     } catch (e) {
       setDeckError((e as Error).message);
     }
@@ -315,7 +331,7 @@ function Lobby({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
             <button
               type="button"
               disabled={room.busy || !me.deckName}
-              onClick={() => room.act({ type: 'setReady', ready: !me.ready })}
+              onClick={toggleReady}
               className={`rounded-lg px-5 py-2 font-semibold disabled:cursor-not-allowed disabled:opacity-50 ${
                 me.ready ? 'bg-surface-2 hover:bg-border' : 'bg-ok text-bg hover:brightness-110'
               }`}
