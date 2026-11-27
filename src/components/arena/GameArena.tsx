@@ -2283,14 +2283,17 @@ function TurnPanel({
   you,
   opponent,
   controls,
+  matchInfo,
 }: {
   turnNumber: number;
   you: ArenaSide;
   opponent: ArenaSide;
   controls?: ArenaControls;
+  matchInfo?: React.ReactNode;
 }) {
   return (
     <div className={styles.turnBox} aria-label="Andamento do Jogo [Turn Sequence]">
+      {matchInfo && <p className={styles.turnMatch}>{matchInfo}</p>}
       <div className={styles.turnHead}>
         <span>TURNO</span>
         <b>{turnNumber}</b>
@@ -2803,10 +2806,16 @@ export function GameArena({
   log,
   yourSide = 'host',
   peek,
+  matchInfo,
 }: {
   you: ArenaSide;
   opponent: ArenaSide;
   controls?: ArenaControls;
+  /**
+   * Quem joga a partida, no topo do card do turno (ex.: "Você × Oponente" na sala, "Comandando: Jogador 2" no Jogar
+   * sozinho). Fica aqui, e não no cabeçalho, para não cobrir os botões dele.
+   */
+  matchInfo?: React.ReactNode;
   /** Número do turno da partida. */
   turnNumber?: number;
   /** Tema do jogador (paleta e imagem de fundo, cadastrado em /temas); sem tema, o fundo padrão e a paleta Lilás. */
@@ -2971,7 +2980,7 @@ export function GameArena({
           <Hand side={you} controls={controls} onInspect={inspectCard} />
           <div className={styles.rail}>
             <Plate side={opponent} mine={false} onOpenList={openTheirs} />
-            <TurnPanel turnNumber={turnNumber} you={you} opponent={opponent} controls={controls} />
+            <TurnPanel turnNumber={turnNumber} you={you} opponent={opponent} controls={controls} matchInfo={matchInfo} />
             <Plate side={you} mine controls={controls} onOpenList={openMine} />
           </div>
         </div>

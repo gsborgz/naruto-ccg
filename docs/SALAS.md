@@ -64,7 +64,7 @@ O apelido fica no campo **Apelido** do cabeçalho, em todas as telas, e pode ser
 botão, grava sozinho 1 s depois que o jogador para de digitar (`NicknameField`, `saveNickname` em
 `src/lib/rooms/client.ts`). Vazio ou inválido (mais de 24 caracteres) não grava. Ele fica na conta
 (`naruto-ccg:nickname:<dono>`, `src/lib/profile/store.ts`, rota `/api/me/nickname`), então vale em outro navegador com o
-mesmo código da conta; a conta sem apelido recebe o que o navegador já usava. Criar e entrar numa sala usam esse
+mesmo código da conta; com a senha do site (`SITE_PASSWORD`), o card de entrada (`/entrar`) pede a senha e o apelido, e só entra com os dois; a conta sem apelido recebe o que o navegador já usava. Criar e entrar numa sala usam esse
 apelido (sem apelido, os botões ficam desligados). Trocar o apelido manda a jogada `rename` para a sala em que o jogador
 está (também no meio da partida), e a arena dos dois mostra o novo na consulta seguinte (~1 s). Temas, sleeves e cartas
 criadas mostram quem criou pelo apelido **atual** (`withCurrentAuthors`): o apelido gravado junto com o item só vale se
@@ -221,7 +221,7 @@ presença), ou seja ~16 mil comandos por hora com dois jogadores na sala. A cota
 | `src/app/api/rooms/...` | Rotas da tabela acima: validam a entrada, chamam `model` + `store`. |
 | `src/lib/rooms/client.ts` | Identidade do jogador (`playerId`/`token`/`nickname` no localStorage) e chamadas à API. |
 | `src/lib/rooms/useRoom.ts` | Hook de sincronização (consulta, ações, presença). |
-| `src/components/PlayerSetup.tsx` | `NicknameForm` (criar/entrar) e `DeckSelect` (decks válidos, usado na sala). |
+| `src/components/PlayerSetup.tsx` | `RoomEntryButton` (criar/entrar com o apelido do cabeçalho) e `DeckSelect` (decks válidos, usado na sala). |
 | `src/components/ReturnToRoom.tsx` | Aviso "Voltar para a sala" em Jogar e Meus decks. |
 | `src/app/jogar/page.tsx` | Criar sala / entrar com código ou link. |
 | `src/app/salas/[id]/page.tsx` | Sala de espera (e, no MVP 4, a partida). |

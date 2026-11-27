@@ -4,7 +4,7 @@ Esse projeto é uma versão digital do clássico Naruto CCG (publicado entre 200
 
 Hoje o app tem o catálogo de cartas e o montador de decks: o jogador monta quantos decks quiser com as cartas disponíveis, seguindo as regras de montagem do jogo original. Os decks e as cartas criadas ficam na nuvem (Redis), ligados ao **código da conta** do jogador (ver "Decks e cartas na nuvem"), e os decks podem ser compartilhados por um código (UUID), como no projeto pokedex.
 
-Publicado em <https://naruto-ccg.vercel.app> (deploy automático a cada push na `main`). O acesso é protegido por senha quando a variável `SITE_PASSWORD` existe: o navegador pede uma vez (`/entrar`) e guarda o acesso num cookie de 1 ano (`src/middleware.ts`, `src/lib/sitePassword.ts`; ver [docs/DEPLOY.md](docs/DEPLOY.md#senha-de-acesso)).
+Publicado em <https://naruto-ccg.vercel.app> (deploy automático a cada push na `main`). O acesso é protegido por senha quando a variável `SITE_PASSWORD` existe: o navegador pede uma vez (`/entrar`) a senha e o apelido do jogador (só entra com os dois) e guarda o acesso num cookie de 1 ano (`src/middleware.ts`, `src/lib/sitePassword.ts`; ver [docs/DEPLOY.md](docs/DEPLOY.md#senha-de-acesso)).
 
 Na pasta `docs/` estão os manuais oficiais (PDF), as regras consolidadas (`docs/REGRAS.md`), o guia de publicação (`docs/DEPLOY.md`), o processo de revisão das cartas contra as imagens e das frases (`docs/REVISAO-CARTAS.md`), as convenções da tradução PT-BR (`docs/TRADUCAO.md`) e a especificação da próxima etapa, as salas de jogo (`docs/SALAS.md`).
 

@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { NICKNAME_MAX, parseNickname } from '@/lib/rooms/model';
 import { saveNickname, syncNickname, useNickname } from '@/lib/rooms/client';
@@ -21,10 +22,12 @@ export function NicknameField() {
   const editing = value !== null;
   const shown = editing ? value : saved;
 
+  // Na tela da senha, o apelido é pedido no próprio card (e a conta ainda não responde sem a senha).
+  const onLogin = usePathname() === '/entrar';
   // Ao abrir o site: acerta com o apelido da conta (outro navegador com o mesmo código pode ter trocado).
   useEffect(() => {
-    void syncNickname().catch(() => undefined);
-  }, []);
+    if (!onLogin) void syncNickname().catch(() => undefined);
+  }, [onLogin]);
   useEffect(() => () => clearTimeout(timer.current ?? undefined), []);
   // O "✓" de salvo some depois de um tempo.
   useEffect(() => {
@@ -65,6 +68,7 @@ export function NicknameField() {
           ? 'Apelido salvo'
           : 'Seu apelido nas salas e como criador dos temas, sleeves e cartas. Salva sozinho ao parar de digitar.';
 
+  if (onLogin) return null;
   return (
     <label className="relative flex items-center" title={hint}>
       <span className="sr-only">Apelido</span>

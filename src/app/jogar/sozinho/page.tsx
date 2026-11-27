@@ -320,11 +320,6 @@ export default function SoloPage() {
   return (
     <ArenaCardsProvider roomCards={roomCards}>
       <div className={ARENA_SCREEN}>
-        <HeaderSlot name="center">
-          <p className="text-sm text-muted">
-            Comandando: <strong className="text-text">{LABEL[viewing]}</strong> ({decks[viewing].name})
-          </p>
-        </HeaderSlot>
         <HeaderSlot name="actions">
           {error && <span className="text-sm text-danger">{error}</span>}
           {controlsBar}
@@ -340,6 +335,12 @@ export default function SoloPage() {
           log={view.log}
           yourSide={viewing}
           peek={view.peek}
+          // Quem está no comando: no topo do card do turno (no cabeçalho, cobria os botões).
+          matchInfo={
+            <>
+              Comandando: <b>{LABEL[viewing]}</b> ({decks[viewing].name})
+            </>
+          }
         />
         <SearchDeckDialog
           open={searching}

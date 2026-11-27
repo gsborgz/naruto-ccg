@@ -105,7 +105,8 @@ export async function saveNickname(nickname: string): Promise<void> {
 
 /**
  * Acerta o apelido entre o navegador e a conta: o da conta vale (outro navegador com o mesmo código da conta pode ter
- * trocado); a conta sem apelido recebe o deste navegador (o que ele usava nas salas antes do apelido na conta).
+ * trocado); a conta sem apelido recebe o deste navegador (o informado ao entrar, em `/entrar`, ou o que ele usava nas
+ * salas antes do apelido na conta).
  */
 export async function syncNickname(): Promise<void> {
   const { nickname } = await request<{ nickname: string }>('/api/me/nickname');

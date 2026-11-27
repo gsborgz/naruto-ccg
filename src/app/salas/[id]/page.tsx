@@ -196,10 +196,11 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
     if (confirm('Encerrar a partida? Os dois voltam para a escolha de decks.')) act({ type: 'endGame' });
   };
 
+  // Quem joga: no topo do card do turno da arena (no cabeçalho, cobria os botões).
   const players = (
-    <p className="text-sm text-muted">
-      <strong className="text-text">{me?.nickname}</strong> × <strong className="text-text">{opponent?.nickname}</strong>
-    </p>
+    <>
+      <b>{me?.nickname ?? '…'}</b> × <b>{opponent?.nickname ?? '…'}</b>
+    </>
   );
   // Os mesmos controles vão para o cabeçalho e, em tela cheia (sem cabeçalho), para o menu ⋯ da arena.
   const controlsBar = (
@@ -220,7 +221,6 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
   return (
     <ArenaCardsProvider roomCards={roomCards}>
       <div className={ARENA_SCREEN}>
-        <HeaderSlot name="center">{players}</HeaderSlot>
         <HeaderSlot name="actions">
           {room.actionError && <span className="text-sm text-danger">{room.actionError}</span>}
           {controlsBar}
@@ -236,6 +236,7 @@ function Match({ view, room }: { view: RoomView; room: ReturnType<typeof useRoom
           log={game.log}
           yourSide={you}
           peek={game.peek}
+          matchInfo={players}
         />
         <SearchDeckDialog
           open={searching}
