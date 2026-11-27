@@ -5,7 +5,7 @@ import { THEME_LIMITS, type BoardTheme } from './types.ts';
 /**
  * Temas da arena na nuvem (só no servidor). Os temas são de todos: qualquer jogador vê e usa qualquer tema, mas só
  * quem criou edita e exclui (`sharedCatalog`: `naruto-ccg:themes`, `naruto-ccg:themes-of:<dono>`, imagem no Blob com o
- * uso `themes:<id>`). O tema em uso é de cada jogador: `naruto-ccg:theme-active:<jogador>` (sem a chave, o fundo
+ * uso `theme:<id>`). O tema em uso é de cada jogador: `naruto-ccg:theme-active:<jogador>` (sem a chave, o fundo
  * padrão).
  */
 
@@ -14,6 +14,9 @@ const catalog = sharedCatalog<BoardTheme>({
   images: (t) => [t.wallpaper],
   limit: THEME_LIMITS.themes,
   label: 'o tema',
+  // Temas gravados antes do catálogo compartilhado: `{ theme, owner, author }`, com o uso da imagem em `theme:<id>`.
+  legacyField: 'theme',
+  artRefPrefix: 'theme',
 });
 
 /** Tema como o jogador o recebe: sem o dono, só se é dele. */

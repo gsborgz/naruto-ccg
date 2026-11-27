@@ -41,6 +41,22 @@ export class CatalogError extends Error {
   }
 }
 
+/**
+ * A entrada como está no Redis, no formato atual. `legacyField` é o campo onde o item ficava antes do catálogo
+ * compartilhado (os temas gravavam `{ theme, owner, author }`); `null` se não for uma entrada.
+ */
+export function normalizeEntry<T extends CatalogItem>(raw: unknown, legacyField?: string): CatalogEntry<T> | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const e = raw as Record<string, unknown>;
+  const item = (e.item ?? (legacyField ? e[legacyField] : undefined)) as T | undefined;
+  if (!item || typeof item !== 'object' || typeof item.id !== 'string') return null;
+  return {
+    item: { ...item, createdAt: typeof item.createdAt === 'string' ? item.createdAt : '' },
+    owner: typeof e.owner === 'string' ? e.owner : '',
+    author: typeof e.author === 'string' ? e.author : '',
+  };
+}
+
 export function sharedCatalog<T extends CatalogItem>(options: {
   /** Nome das chaves (`naruto-ccg:<nome>`). */
   name: string;
@@ -50,10 +66,15 @@ export function sharedCatalog<T extends CatalogItem>(options: {
   limit: number;
   /** "o tema", "o sleeve": para as mensagens de erro. */
   label: string;
+  /** Prefixo do uso das imagens (`<prefixo>:<id>`, `src/lib/artStore.ts`); padrão: o nome. */
+  artRefPrefix?: string;
+  /** Campo do item nas entradas gravadas antes do catálogo compartilhado (ver `normalizeEntry`). */
+  legacyField?: string;
 }) {
   const KEY = `naruto-ccg:${options.name}`;
   const ofKey = (owner: string) => `naruto-ccg:${options.name}-of:${owner}`;
-  const artRef = (id: string) => `${options.name}:${id}`;
+  const artRef = (id: string) => `${options.artRefPrefix ?? options.name}:${id}`;
+  const normalize = (raw: unknown) => normalizeEntry<T>(raw, options.legacyField);
   const imagesOf = (item: T | undefined) => [...new Set(item ? options.images(item).filter((u): u is string => !!u) : [])];
 
   async function syncImages(id: string, now: T | undefined, before: T | undefined): Promise<void> {
@@ -64,7 +85,7 @@ export function sharedCatalog<T extends CatalogItem>(options: {
   }
 
   async function read(id: string): Promise<CatalogEntry<T> | null> {
-    return (await getRedis().hget<CatalogEntry<T>>(KEY, id)) ?? null;
+    return normalize(await getRedis().hget<unknown>(KEY, id));
   }
 
   return {
@@ -72,9 +93,10 @@ export function sharedCatalog<T extends CatalogItem>(options: {
 
     /** Todos os itens, do mais novo para o mais antigo (pela criação), marcando os do jogador. */
     async list(player: string): Promise<CatalogView<T>[]> {
-      const all = (await getRedis().hgetall<Record<string, CatalogEntry<T>>>(KEY)) ?? {};
+      const all = (await getRedis().hgetall<Record<string, unknown>>(KEY)) ?? {};
       return Object.values(all)
-        .filter((e) => e && typeof e === 'object' && e.item)
+        .map(normalize)
+        .filter((e): e is CatalogEntry<T> => !!e)
         .sort((a, b) => b.item.createdAt.localeCompare(a.item.createdAt))
         .map((e) => ({ item: e.item, author: e.author, mine: e.owner === player }));
     },

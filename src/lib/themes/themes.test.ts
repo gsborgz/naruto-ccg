@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { normalizeEntry } from '../cloud/sharedCatalog.ts';
 import { PALETTES, parseTheme, THEME_RANGES, themePageBackground, themeVars } from './types.ts';
 
 const ID = '0f8fad5b-d9cb-469f-a165-70867728950e';
@@ -42,4 +43,12 @@ test('tema: as variáveis trocam só a escala de acento e o fundo; sem tema, os 
   const none = themeVars(null);
   assert.equal(none['--color-accent'], PALETTES.lilas.ramp[4]);
   assert.doesNotMatch(none['--page-bg'], /url\(/);
+});
+
+test('tema: os gravados antes do catálogo compartilhado ({ theme, owner, author }) continuam aparecendo', () => {
+  const theme = { id: ID, name: 'Antigo', createdAt: '2026-11-20' };
+  assert.deepEqual(normalizeEntry({ theme, owner: 'o', author: 'a' }, 'theme'), { item: theme, owner: 'o', author: 'a' });
+  assert.deepEqual(normalizeEntry({ item: theme, owner: 'o', author: '' }, 'theme')?.item, theme);
+  assert.equal(normalizeEntry({ theme, owner: 'o' }), null, 'sem o campo antigo, não é entrada');
+  assert.equal(normalizeEntry('lixo', 'theme'), null);
 });
