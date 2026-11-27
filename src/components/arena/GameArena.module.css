@@ -965,10 +965,12 @@
   background: var(--color-neutral-800);
 }
 .pips > i.on {
-  background: var(--color-neutral-300);
+  --pip-on: var(--color-neutral-300);
+  /* --lap (posto pelo Pips): a cada volta da barra (dezena seguinte), a casa fica mais escura. */
+  background: color-mix(in oklab, var(--pip-on) max(30%, calc(100% - var(--lap, 0) * 22%)), black);
 }
 .plateMine .pips > i.on {
-  background: var(--color-accent-400);
+  --pip-on: var(--color-accent-400);
 }
 .counters {
   display: grid;

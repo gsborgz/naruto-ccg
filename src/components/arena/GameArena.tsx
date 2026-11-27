@@ -2147,9 +2147,18 @@ function Pips({
         </span>
       </div>
       <div className={styles.pips}>
-        {Array.from({ length: pips }, (_, i) => (
-          <i key={i} className={i < value ? styles.on : undefined} />
-        ))}
+        {Array.from({ length: pips }, (_, i) => {
+          // Volta da barra em que a casa foi acesa pela última vez (0 = primeira dezena):
+          // cada volta escurece a casa, da esquerda para a direita.
+          const lap = i < value ? Math.floor((value - 1 - i) / pips) : -1;
+          return (
+            <i
+              key={i}
+              className={lap >= 0 ? styles.on : undefined}
+              style={lap > 0 ? ({ '--lap': lap } as React.CSSProperties) : undefined}
+            />
+          );
+        })}
       </div>
     </div>
   );
