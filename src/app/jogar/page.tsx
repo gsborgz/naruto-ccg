@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { NicknameForm } from '@/components/PlayerSetup';
+import { RoomEntryButton } from '@/components/PlayerSetup';
 import { ReturnToRoom } from '@/components/ReturnToRoom';
 import { isValidShareId } from '@/lib/deckShare';
 import { roomApi } from '@/lib/rooms/client';
@@ -53,7 +53,7 @@ export default function PlayPage() {
             <h2 className="text-lg font-semibold">Criar sala</h2>
             <p className="text-sm text-muted">Você recebe um código para enviar ao oponente. O deck é escolhido dentro da sala.</p>
           </div>
-          <NicknameForm submitLabel="Criar sala" busy={busy} error={createError} onSubmit={create} />
+          <RoomEntryButton submitLabel="Criar sala" busy={busy} error={createError} onSubmit={create} />
         </section>
 
         <section className="flex flex-col gap-4 rounded-xl border border-border bg-surface p-5">
@@ -61,7 +61,7 @@ export default function PlayPage() {
             <h2 className="text-lg font-semibold">Entrar numa sala</h2>
             <p className="text-sm text-muted">Cole o código ou o link que seu amigo enviou.</p>
           </div>
-          {/* No pé do card: o campo e o botão ficam na altura dos de "Criar sala" (que tem o rótulo Apelido em cima). */}
+          {/* No pé do card: o campo e o botão ficam na altura dos de "Criar sala". */}
           <form onSubmit={enter} className="mt-auto flex flex-col gap-3">
             <input
               value={code}

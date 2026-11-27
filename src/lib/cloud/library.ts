@@ -4,7 +4,7 @@ import { useEffect, useSyncExternalStore } from 'react';
 import type { CustomCard } from '../cardMaker/model.ts';
 import { migrateCustomCard } from '../cardMaker/model.ts';
 import { ORIGINAL_DESIGN, type Deck } from '../decks/types.ts';
-import { getIdentity } from '../rooms/client.ts';
+import { getIdentity, rememberNickname } from '../rooms/client.ts';
 import type { Sleeve } from '../sleeves/types.ts';
 import type { BoardTheme } from '../themes/types.ts';
 
@@ -152,8 +152,11 @@ async function fetchLibrary(): Promise<void> {
     themes?: ThemeItem[];
     activeTheme?: string | null;
     sleeves?: SleeveItem[];
+    nickname?: string;
   }>('/api/me');
   failed = null;
+  // O apelido da conta vale (ex.: depois de usar o código da conta de outro navegador).
+  if (data.nickname) rememberNickname(data.nickname);
   set({
     decks: data.decks,
     mine: data.cards.map(migrateCustomCard),

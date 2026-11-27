@@ -228,3 +228,19 @@ test('salas: o sleeve do deck vai para a visão dos dois jogadores', () => {
   // Imagem fora do Blob não passa.
   expectRoomError(() => parseRoomDeck({ ...validDeck('Konoha'), sleeve: { ...sleeve, image: 'https://exemplo.com/x.png' } }, lookup), 400);
 });
+
+test('salas: trocar o apelido vale em qualquer fase, também no meio da partida', () => {
+  const lobby = lobbyWithDecks();
+  const renamed = act(lobby, 'guest', { type: 'rename', nickname: 'Itachi' });
+  assert.equal(renamed.guest?.nickname, 'Itachi');
+  assert.equal(renamed.host.nickname, 'Naruto');
+  assert.equal(renamed.rev, lobby.rev + 1);
+  assert.equal(act(renamed, 'guest', { type: 'rename', nickname: 'Itachi' }), renamed, 'o mesmo apelido não muda a sala');
+  let playing = act(lobby, 'host', { type: 'setReady', ready: true });
+  playing = act(playing, 'guest', { type: 'setReady', ready: true });
+  assert.equal(playing.status, 'starting');
+  assert.equal(act(playing, 'host', { type: 'rename', nickname: 'Hokage' }).host.nickname, 'Hokage');
+  assert.deepEqual(parseRoomAction({ type: 'rename', nickname: '  Kakashi   Hatake ' }, lookup), { type: 'rename', nickname: 'Kakashi Hatake' });
+  expectRoomError(() => parseRoomAction({ type: 'rename', nickname: '   ' }, lookup), 400);
+  expectRoomError(() => parseRoomAction({ type: 'rename', nickname: 'x'.repeat(40) }, lookup), 400);
+});

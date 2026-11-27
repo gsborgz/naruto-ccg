@@ -21,11 +21,11 @@ Também ficam de fora: chat, espectadores, busca de oponentes, contas/login e re
 
 ## Fluxo do usuário
 
-1. **Criar** (`/jogar`): o jogador informa um apelido e clica em **Criar sala**. Na sala, aparece o código
+1. **Criar** (`/jogar`): o jogador clica em **Criar sala** (entra com o apelido do cabeçalho, ver "Apelido"). Na sala, aparece o código
    com botões **Copiar código** e **Copiar link** (`/salas/<uuid>`).
 2. **Convidar:** o anfitrião envia o código ou o link para o amigo, por fora do app (WhatsApp, Discord…).
-3. **Entrar:** o amigo abre o link, ou cola o código em `/jogar` → **Entrar numa sala**. Ele informa o
-   apelido e entra.
+3. **Entrar:** o amigo abre o link, ou cola o código em `/jogar` → **Entrar numa sala**. Ele clica em
+   **Entrar na sala** (com o apelido do cabeçalho).
 4. **Sala de espera** (`/salas/<uuid>`): os dois veem a sala atualizada em ~1 s:
    - apelido de cada um, deck escolhido (ou "ainda sem deck") e se está online;
    - **seletor de deck** com os decks válidos do jogador (o anfitrião já pode escolher antes do oponente chegar);
@@ -58,13 +58,25 @@ Também ficam de fora: chat, espectadores, busca de oponentes, contas/login e re
 - **Expiração:** a sala some sozinha depois de **6 horas sem nenhuma ação** (o prazo renova a cada ação). É o
   que limpa salas abandonadas sem o botão Sair.
 
+## Apelido
+
+O apelido fica no campo **Apelido** do cabeçalho, em todas as telas, e pode ser trocado a qualquer momento: não tem
+botão, grava sozinho 1 s depois que o jogador para de digitar (`NicknameField`, `saveNickname` em
+`src/lib/rooms/client.ts`). Vazio ou inválido (mais de 24 caracteres) não grava. Ele fica na conta
+(`naruto-ccg:nickname:<dono>`, `src/lib/profile/store.ts`, rota `/api/me/nickname`), então vale em outro navegador com o
+mesmo código da conta; a conta sem apelido recebe o que o navegador já usava. Criar e entrar numa sala usam esse
+apelido (sem apelido, os botões ficam desligados). Trocar o apelido manda a jogada `rename` para a sala em que o jogador
+está (também no meio da partida), e a arena dos dois mostra o novo na consulta seguinte (~1 s). Temas, sleeves e cartas
+criadas mostram quem criou pelo apelido **atual** (`withCurrentAuthors`): o apelido gravado junto com o item só vale se
+o dono não tiver apelido na conta.
+
 ## Identidade sem login
 
 Na primeira vez que entra numa sala, o navegador gera e guarda no localStorage (`naruto-ccg:player`):
 
 - `playerId`: UUID público do jogador;
 - `token`: segredo aleatório (UUID) que prova que é ele;
-- `nickname`: último apelido usado (para preencher o campo da próxima vez).
+- `nickname`: o apelido (cópia do que está na conta, ver "Apelido").
 
 As requisições à API mandam o token no cabeçalho `X-Player-Token`. O servidor guarda só o **hash** (SHA-256)
 do token em cada vaga e nunca o devolve. Quem tem só o código da sala consegue **ver** a sala e **entrar

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ChunkReloader } from '@/components/ChunkReloader';
 import { FullscreenWatcher } from '@/components/FullscreenWatcher';
 import { NavLinks } from '@/components/NavLinks';
+import { NicknameField } from '@/components/NicknameField';
 import { ContentProvider } from '@/lib/content/ContentProvider';
 import './globals.css';
 
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <NavLinks />
               {/* Espaços que as páginas preenchem com <HeaderSlot> (ex.: jogadores e botões da partida). */}
               <div id="app-header-center" className="absolute left-1/2 hidden -translate-x-1/2 lg:block" />
-              <div id="app-header-actions" className="ml-auto flex items-center gap-2" />
+              <div className="ml-auto flex items-center gap-2">
+                <div id="app-header-actions" className="flex items-center gap-2" />
+                <NicknameField />
+              </div>
             </nav>
           </header>
           <main className="app-main px-4 py-6 lg:px-6">

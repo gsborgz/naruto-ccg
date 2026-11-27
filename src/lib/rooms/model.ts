@@ -92,7 +92,9 @@ export type RoomAction =
   /** Jogada na partida (mover carta, comprar, embaralhar, buscar). */
   | { type: 'game'; action: GameAction }
   /** Encerra a partida e volta para a escolha de decks. */
-  | { type: 'endGame' };
+  | { type: 'endGame' }
+  /** Troca o apelido do jogador na sala (o do cabeçalho mudou); vale também no meio da partida. */
+  | { type: 'rename'; nickname: string };
 
 /** Dependências de quem aplica as ações: sorteio (embaralhar) e quais cartas vão para o Reforço. */
 export interface RoomEnv {
@@ -223,6 +225,10 @@ export function parseRoomAction(x: unknown, lookup: CardLookup): RoomAction {
   if (a.type === 'changeDeck') return { type: 'changeDeck', deck: parseRoomDeck(a.deck, lookup) };
   if (a.type === 'leave') return { type: 'leave' };
   if (a.type === 'endGame') return { type: 'endGame' };
+  if (a.type === 'rename') {
+    const nickname = parseNickname(a.nickname);
+    if (nickname) return { type: 'rename', nickname };
+  }
   if (a.type === 'game') {
     const action = parseGameAction(a.action);
     if (action) return { type: 'game', action };
@@ -279,6 +285,11 @@ export function applyAction(
     if (!other) return null;
     // Sair no meio da partida a encerra.
     return bump(room, { host: { ...other, ready: false }, guest: null, status: 'waiting', game: null }, now);
+  }
+
+  if (action.type === 'rename') {
+    if (me.nickname === action.nickname) return room;
+    return bump(room, who === 'host' ? { host: { ...me, nickname: action.nickname } } : { guest: { ...me, nickname: action.nickname } }, now);
   }
 
 

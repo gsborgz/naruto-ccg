@@ -1,5 +1,6 @@
 'use client';
 
+import { useSyncExternalStore } from 'react';
 import type { CustomCard } from '@/lib/cardMaker/model';
 import type { RoomAction, RoomView } from './model';
 
@@ -69,10 +70,47 @@ export function setIdentityToken(token: string) {
   saveIdentity();
 }
 
-/** Lembra o último apelido usado, para preencher o campo da próxima vez. */
+const nicknameListeners = new Set<() => void>();
+
+/** Guarda o apelido neste navegador e avisa quem mostra (o campo do cabeçalho, as salas). */
 export function rememberNickname(nickname: string) {
+  if (getIdentity().nickname === nickname) return;
   getIdentity().nickname = nickname;
   saveIdentity();
+  nicknameListeners.forEach((l) => l());
+}
+
+/** O apelido atual (vazio no servidor e enquanto o jogador não escolheu um). */
+export function useNickname(): string {
+  return useSyncExternalStore(
+    (listener) => {
+      nicknameListeners.add(listener);
+      return () => nicknameListeners.delete(listener);
+    },
+    () => getIdentity().nickname,
+    () => '',
+  );
+}
+
+/**
+ * Grava o apelido na conta (`/api/me/nickname`: vale como criador dos temas, sleeves e cartas e nas salas novas) e
+ * troca o da sala em que o jogador está (jogada `rename`), para a arena mostrar o novo na hora.
+ */
+export async function saveNickname(nickname: string): Promise<void> {
+  rememberNickname(nickname);
+  await request<{ nickname: string }>('/api/me/nickname', { method: 'PUT', body: JSON.stringify({ nickname }) });
+  const room = lastRoomId();
+  if (room) await roomApi.act(room, { type: 'rename', nickname }).catch(() => undefined);
+}
+
+/**
+ * Acerta o apelido entre o navegador e a conta: o da conta vale (outro navegador com o mesmo código da conta pode ter
+ * trocado); a conta sem apelido recebe o deste navegador (o que ele usava nas salas antes do apelido na conta).
+ */
+export async function syncNickname(): Promise<void> {
+  const { nickname } = await request<{ nickname: string }>('/api/me/nickname');
+  if (nickname) rememberNickname(nickname);
+  else if (getIdentity().nickname) await saveNickname(getIdentity().nickname);
 }
 
 /** Guarda a sala em que o jogador está agora. */

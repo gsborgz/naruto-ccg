@@ -1,3 +1,4 @@
+import { withCurrentAuthors } from '../profile/store.ts';
 import { getRedis } from '../redis.ts';
 import type { CustomCard } from '../cardMaker/model.ts';
 import { parseSharedCustomCard } from '../cardMaker/sharedCard.ts';
@@ -36,6 +37,11 @@ const view = (entry: CustomCardEntry, requester: string | undefined): CustomCard
   owner: entry.owner === requester ? 'mine' : 'other',
 });
 
+/** As cartas como quem pediu as vê, com quem criou pelo apelido atual (`src/lib/profile/store.ts`). */
+async function views(entries: Iterable<CustomCardEntry>, requester: string | undefined): Promise<CustomCardView[]> {
+  return (await withCurrentAuthors([...entries])).map((e) => view(e, requester));
+}
+
 const byUpdated = (a: CustomCardView, b: CustomCardView) => b.card.updatedAt.localeCompare(a.card.updatedAt);
 
 /** As cartas do jogador, da mais nova para a mais antiga. */
@@ -48,7 +54,7 @@ export async function listOwnCards(owner: string): Promise<CustomCard[]> {
 /** Cartas pelo id (as que não existem ficam de fora). */
 export async function readCustomCards(ids: readonly string[], requester?: string): Promise<CustomCardView[]> {
   const entries = await readCustomEntries(ids.slice(0, 500));
-  return [...entries.values()].map((e) => view(e, requester));
+  return views(entries.values(), requester);
 }
 
 /** Grava uma carta do jogador (nova ou dele). A carta de outro jogador não pode ser gravada. */
@@ -83,7 +89,7 @@ export async function deleteOwnCard(requester: string, id: string): Promise<void
 export async function listVersions(catalogId: string, requester?: string): Promise<CustomCardView[]> {
   const ids = await getRedis().smembers(CUSTOM_KEY.versions(catalogId));
   const entries = await readCustomEntries(ids);
-  return [...entries.values()].filter((e) => e.card.source === catalogId).map((e) => view(e, requester)).sort(byUpdated);
+  return (await views([...entries.values()].filter((e) => e.card.source === catalogId), requester)).sort(byUpdated);
 }
 
 /**

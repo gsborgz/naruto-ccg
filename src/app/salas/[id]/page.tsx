@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   ARENA_SCREEN,
   GameArena,
@@ -14,10 +14,10 @@ import { SearchDeckDialog } from '@/components/arena/SearchDeckDialog';
 import { ThemePicker } from '@/components/themes/ThemePicker';
 import { useActiveTheme } from '@/lib/themes/client';
 import { HeaderSlot } from '@/components/HeaderSlot';
-import { DeckSelect, NicknameForm, useValidDecks } from '@/components/PlayerSetup';
+import { DeckSelect, RoomEntryButton, useValidDecks } from '@/components/PlayerSetup';
 import { DECK_RULES } from '@/lib/deckRules';
 import type { GameAction } from '@/lib/game/state';
-import { roomApi } from '@/lib/rooms/client';
+import { roomApi, useNickname } from '@/lib/rooms/client';
 import type { PlayerView, RoomView, SeatName } from '@/lib/rooms/model';
 import { useRoom } from '@/lib/rooms/useRoom';
 import { useRoomCustomCards } from '@/lib/rooms/useRoomCustomCards';
@@ -343,6 +343,12 @@ export default function RoomPage() {
   const { id } = useParams<{ id: string }>();
   const room = useRoom(id);
   const { view, loadError } = room;
+  // O apelido da sala acompanha o do cabeçalho (trocado aqui ou em outra tela enquanto o jogador estava fora).
+  const nickname = useNickname().trim();
+  const seated = view?.players.find((p) => p.seat === view.you)?.nickname;
+  useEffect(() => {
+    if (seated && nickname && seated !== nickname) void roomApi.act(id, { type: 'rename', nickname }).catch(() => undefined);
+  }, [id, seated, nickname]);
 
   if (!view) {
     if (loadError && loadError.status !== 0) return <Notice title={loadError.message} />;
@@ -356,10 +362,10 @@ export default function RoomPage() {
       <div className="mx-auto flex max-w-md flex-col gap-4">
         <div>
           <h1 className="text-2xl font-bold">Sala de {host?.nickname}</h1>
-          <p className="text-sm text-muted">Escolha seu apelido para entrar. O deck você escolhe lá dentro.</p>
+          <p className="text-sm text-muted">Entre na sala. O deck você escolhe lá dentro.</p>
         </div>
         <section className={card}>
-          <NicknameForm submitLabel="Entrar na sala" busy={room.busy} error={room.actionError} onSubmit={room.join} />
+          <RoomEntryButton submitLabel="Entrar na sala" busy={room.busy} error={room.actionError} onSubmit={room.join} />
         </section>
       </div>
     );

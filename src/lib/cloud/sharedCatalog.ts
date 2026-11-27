@@ -1,4 +1,5 @@
 import { setArtRefs } from '../artStore.ts';
+import { withCurrentAuthors } from '../profile/store.ts';
 import { getRedis } from '../redis.ts';
 
 /**
@@ -94,9 +95,11 @@ export function sharedCatalog<T extends CatalogItem>(options: {
     /** Todos os itens, do mais novo para o mais antigo (pela criação), marcando os do jogador. */
     async list(player: string): Promise<CatalogView<T>[]> {
       const all = (await getRedis().hgetall<Record<string, unknown>>(KEY)) ?? {};
-      return Object.values(all)
+      const entries = Object.values(all)
         .map(normalize)
-        .filter((e): e is CatalogEntry<T> => !!e)
+        .filter((e): e is CatalogEntry<T> => !!e);
+      // Quem criou aparece com o apelido atual.
+      return (await withCurrentAuthors(entries))
         .sort((a, b) => b.item.createdAt.localeCompare(a.item.createdAt))
         .map((e) => ({ item: e.item, author: e.author, mine: e.owner === player }));
     },

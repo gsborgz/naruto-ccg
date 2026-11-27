@@ -1,11 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { summarizeDeck } from '@/lib/deckRules';
 import { useDecks } from '@/lib/deckStore';
-import { NICKNAME_MAX } from '@/lib/rooms/model';
-import { getIdentity, rememberNickname } from '@/lib/rooms/client';
+import { useNickname } from '@/lib/rooms/client';
 import { useCardCatalog } from '@/lib/useCardCatalog';
 
 const field =
@@ -69,8 +68,11 @@ export function DeckSelect({
   );
 }
 
-/** Apelido, usado para criar e para entrar numa sala (o deck é escolhido dentro da sala). */
-export function NicknameForm({
+/**
+ * Criar ou entrar numa sala com o apelido do cabeçalho (`NicknameField`; o deck é escolhido dentro da sala). Sem
+ * apelido, o botão fica desligado e o aviso aponta para o campo.
+ */
+export function RoomEntryButton({
   submitLabel,
   busy,
   error,
@@ -81,39 +83,31 @@ export function NicknameForm({
   error: string | null;
   onSubmit: (nickname: string) => void;
 }) {
-  const [nickname, setNickname] = useState('');
-  // Preenche com o último apelido depois de montar (o localStorage não existe no servidor).
-  useEffect(() => setNickname((n) => n || getIdentity().nickname), []);
-  const canSubmit = !busy && nickname.trim().length > 0;
-
+  const nickname = useNickname().trim();
+  const canSubmit = !busy && nickname.length > 0;
   return (
-    <form
-      className="flex flex-col gap-3"
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (!canSubmit) return;
-        rememberNickname(nickname.trim());
-        onSubmit(nickname.trim());
-      }}
-    >
-      <label className="flex flex-col gap-1 text-sm text-muted">
-        Apelido
-        <input
-          value={nickname}
-          onChange={(e) => setNickname(e.target.value)}
-          maxLength={NICKNAME_MAX}
-          placeholder="Como o oponente vai te ver"
-          className={field}
-        />
-      </label>
+    <div className="flex flex-col gap-3">
+      <p className="text-sm text-muted">
+        {nickname ? (
+          <>
+            Você entra como <strong className="text-text">{nickname}</strong> (o apelido do topo da página; mude a
+            qualquer momento).
+          </>
+        ) : (
+          <>
+            Escolha seu apelido no campo <strong className="text-text">Apelido</strong>, no topo da página.
+          </>
+        )}
+      </p>
       {error && <p className="text-sm text-danger">{error}</p>}
       <button
-        type="submit"
+        type="button"
         disabled={!canSubmit}
+        onClick={() => canSubmit && onSubmit(nickname)}
         className="rounded-lg bg-accent px-4 py-2 font-semibold text-bg hover:bg-accent-strong disabled:cursor-not-allowed disabled:opacity-40"
       >
         {busy ? 'Aguarde…' : submitLabel}
       </button>
-    </form>
+    </div>
   );
 }
