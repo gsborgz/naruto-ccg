@@ -51,6 +51,18 @@ export async function listOwnCards(owner: string): Promise<CustomCard[]> {
   return [...entries.values()].map((e) => view(e, owner)).sort(byUpdated).map((v) => v.card);
 }
 
+/**
+ * As cartas criadas por outros jogadores que vão para o catálogo de todos (`/cards` e o montador): todas, menos as
+ * alters (que são designs de uma carta do catálogo, escolhidos no 🎨 do montador). Só quem criou edita e exclui.
+ */
+export async function listOthersCards(requester: string): Promise<CustomCardView[]> {
+  const all = (await getRedis().hgetall<Record<string, CustomCardEntry>>(CUSTOM_KEY.cards)) ?? {};
+  const entries = Object.values(all).filter(
+    (e) => e && typeof e === 'object' && e.card && !e.card.source && e.owner !== requester,
+  );
+  return (await views(entries, requester)).sort(byUpdated);
+}
+
 /** Cartas pelo id (as que não existem ficam de fora). */
 export async function readCustomCards(ids: readonly string[], requester?: string): Promise<CustomCardView[]> {
   const entries = await readCustomEntries(ids.slice(0, 500));

@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { CardBrowser } from '@/components/CardBrowser';
 import { CardDetailModal } from '@/components/CardDetailModal';
+import { useCardCatalog } from '@/lib/useCardCatalog';
 import { filtersFromSearchParams, filtersToSearchParams, type CardFilterState } from '@/lib/cardFilters';
 import type { Card } from '@/models/card';
 
@@ -20,7 +21,11 @@ function CardsBrowser({ onSelect }: { onSelect: (card: Card) => void }) {
   const searchParams = useSearchParams();
   // Lidos só na montagem: depois disso o estado do CardBrowser é a fonte e a URL só acompanha.
   const [initialFilters] = useState(() => filtersFromSearchParams(searchParams));
-  return <CardBrowser onSelect={onSelect} initialFilters={initialFilters} onFiltersChange={writeFiltersToUrl} />;
+  // O catálogo e as cartas criadas pelos jogadores (coleção "Cartas criadas"; as alters não entram).
+  const { cards } = useCardCatalog();
+  return (
+    <CardBrowser cards={cards} onSelect={onSelect} initialFilters={initialFilters} onFiltersChange={writeFiltersToUrl} />
+  );
 }
 
 export default function CardsPage() {

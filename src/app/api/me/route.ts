@@ -1,6 +1,6 @@
 import type { NextRequest } from 'next/server';
 import { isCustomCardId, customSourceId } from '@/lib/cardMaker/customIds';
-import { listOwnCards, readCustomCards } from '@/lib/customCards/store';
+import { listOthersCards, listOwnCards, readCustomCards } from '@/lib/customCards/store';
 import { listDecks } from '@/lib/decks/store';
 import { ORIGINAL_DESIGN } from '@/lib/decks/types';
 import { json, playerErrorResponse, playerOf } from '@/lib/player';
@@ -9,15 +9,16 @@ import { listSleeves } from '@/lib/sleeves/store';
 import { getNickname } from '@/lib/profile/store';
 
 /**
- * Tudo o que o jogador tem na nuvem: os decks, as cartas criadas dele e as de outros jogadores que os decks usam (decks
- * importados por código) ou que eles escolheram como design (`Deck.designs`), os temas da arena (todos, com o tema em uso deste jogador) e os sleeves (todos).
+ * Tudo o que o jogador tem na nuvem: os decks, as cartas criadas dele, as de outros jogadores (todas as que não são
+ * alters, para o catálogo e o montador) e as alters que os decks escolheram como design (`Deck.designs`), os temas da arena (todos, com o tema em uso deste jogador) e os sleeves (todos).
  */
 export async function GET(request: NextRequest) {
   try {
     const owner = playerOf(request);
-    const [decks, cards, themes, active, sleeves, nickname] = await Promise.all([
+    const [decks, cards, shared, themes, active, sleeves, nickname] = await Promise.all([
       listDecks(owner),
       listOwnCards(owner),
+      listOthersCards(owner),
       listThemes(owner),
       activeTheme(owner),
       listSleeves(owner),
@@ -29,7 +30,8 @@ export async function GET(request: NextRequest) {
       for (const id of Object.keys(d.cards)) if (isCustomCardId(id)) wanted.add(customSourceId(id));
       for (const v of Object.values(d.designs ?? {})) if (v !== ORIGINAL_DESIGN) wanted.add(v);
     }
-    const others = await readCustomCards([...wanted].filter((id) => !mine.has(id)), owner);
+    const known = new Set([...mine, ...shared.map((o) => o.card.id)]);
+    const others = [...shared, ...(await readCustomCards([...wanted].filter((id) => !known.has(id)), owner))];
     return json({
       decks,
       cards,
